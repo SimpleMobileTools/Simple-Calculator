@@ -135,22 +135,18 @@ public class MainActivity extends AppCompatActivity {
         lastKey = EQUALS;
     }
 
-    @OnClick(R.id.btn_decimal)
     public void decimalClicked() {
         String value = getDisplayedNumber();
         if (!value.contains("."))
             value += ".";
         result.setText(value);
-        lastKey = DIGIT;
     }
 
-    @OnClick(R.id.btn_0)
     public void zeroClicked() {
         String value = getDisplayedNumber();
         if (!value.isEmpty() && !value.equals("0"))
             value += "0";
         result.setText(value);
-        lastKey = DIGIT;
     }
 
     private void handleEquals() {
@@ -172,10 +168,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick({R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7, R.id.btn_8, R.id.btn_9})
-    public void digitClicked(View view) {
+    @OnClick({R.id.btn_decimal, R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7,
+            R.id.btn_8, R.id.btn_9})
+    public void numpadClicked(View view) {
+        if (lastKey == EQUALS)
+            lastOperation = EQUALS;
         lastKey = DIGIT;
+
         switch (view.getId()) {
+            case R.id.btn_decimal:
+                decimalClicked();
+                break;
+            case R.id.btn_0:
+                zeroClicked();
+                break;
             case R.id.btn_1:
                 addDigit(1);
                 break;
