@@ -11,11 +11,13 @@
     tools:context="calculator.simplemobiletools.com.simple_calculator.MainActivity">
 
     <TextView
-        android:id="@+id/display"
+        android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_margin"
         android:gravity="right"
+        android:lines="1"
+        android:maxLength="15"
         android:padding="@dimen/activity_margin"
         android:text="0"
         android:textSize="@dimen/display_text_size"/>
@@ -23,7 +25,7 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/display">
+        android:layout_below="@+id/result">
 
         <TableRow
             android:layout_width="match_parent"
