@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -26,23 +28,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String getFormattedValue(String str) {
-        return formatDouble(Double.parseDouble(str));
+        double doubleValue = Double.parseDouble(str);
+        return formatDouble(doubleValue);
     }
 
     private String formatDouble(double d) {
         if (d == (long) d) {
             return String.format("%d", (long) d);
         } else {
-            return String.format("%s", d);
+            final DecimalFormat formatter = new DecimalFormat("0.0############");
+            return formatter.format(d);
         }
     }
 
-    @OnClick({R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7, R.id.btn_8, R.id.btn_9})
+    @OnClick(R.id.btn_decimal)
+    public void decimalClicked() {
+        String value = result.getText().toString();
+        if (!value.contains("."))
+            value += ".";
+        result.setText(value);
+    }
+
+    @OnClick(R.id.btn_0)
+    public void zeroClicked() {
+        String value = result.getText().toString();
+        if (!value.isEmpty() && !value.equals("0"))
+            value += "0";
+        result.setText(value);
+    }
+
+    @OnClick({R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7, R.id.btn_8, R.id.btn_9})
     public void digitClicked(View view) {
         switch (view.getId()) {
-            case R.id.btn_0:
-                addDigit(0);
-                break;
             case R.id.btn_1:
                 addDigit(1);
                 break;
