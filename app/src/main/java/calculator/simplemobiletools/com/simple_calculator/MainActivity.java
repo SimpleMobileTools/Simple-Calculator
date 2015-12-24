@@ -103,10 +103,8 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_equals)
     public void equalsClicked() {
-        if (lastKey == EQUALS) {
+        if (lastKey == EQUALS)
             calculateResult();
-            return;
-        }
 
         if (lastKey != DIGIT)
             return;
