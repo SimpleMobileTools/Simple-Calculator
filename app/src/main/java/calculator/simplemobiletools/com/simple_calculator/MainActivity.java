@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int PLUS = 2;
     private static final int MINUS = 3;
     private static final int MULTIPLY = 4;
+    private static final int DIVIDE = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +77,15 @@ public class MainActivity extends AppCompatActivity {
         baseValue = resultValue;
     }
 
+    private void divideNumbers() {
+        double resultValue = 0;
+        if (secondValue != 0)
+            resultValue = baseValue / secondValue;
+
+        result.setText(Formatter.doubleToString(resultValue));
+        baseValue = resultValue;
+    }
+
     private void handleOperation(int operation) {
         if (lastKey == operation)
             return;
@@ -105,6 +115,11 @@ public class MainActivity extends AppCompatActivity {
         handleOperation(MULTIPLY);
     }
 
+    @OnClick(R.id.btn_divide)
+    public void divideClicked() {
+        handleOperation(DIVIDE);
+    }
+
     @OnClick(R.id.btn_equals)
     public void equalsClicked() {
         if (lastKey == EQUALS) {
@@ -118,15 +133,6 @@ public class MainActivity extends AppCompatActivity {
         secondValue = getDisplayedNumberAsDouble();
         handleEquals();
         lastKey = EQUALS;
-    }
-
-    private void handleEquals() {
-        if (lastOperation == PLUS)
-            addNumbers();
-        else if (lastOperation == MINUS)
-            subtractNumbers();
-        else if (lastOperation == MULTIPLY)
-            multiplyNumbers();
     }
 
     @OnClick(R.id.btn_decimal)
@@ -145,6 +151,25 @@ public class MainActivity extends AppCompatActivity {
             value += "0";
         result.setText(value);
         lastKey = DIGIT;
+    }
+
+    private void handleEquals() {
+        switch (lastOperation) {
+            case PLUS:
+                addNumbers();
+                break;
+            case MINUS:
+                subtractNumbers();
+                break;
+            case MULTIPLY:
+                multiplyNumbers();
+                break;
+            case DIVIDE:
+                divideNumbers();
+                break;
+            default:
+                break;
+        }
     }
 
     @OnClick({R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7, R.id.btn_8, R.id.btn_9})
