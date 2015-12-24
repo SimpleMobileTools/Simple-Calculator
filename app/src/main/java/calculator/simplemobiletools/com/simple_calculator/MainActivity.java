@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int EQUALS = 1;
     private static final int PLUS = 2;
     private static final int MINUS = 3;
+    private static final int MULTIPLY = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +70,12 @@ public class MainActivity extends AppCompatActivity {
         baseValue = resultValue;
     }
 
+    private void multiplyNumbers() {
+        final double resultValue = baseValue * secondValue;
+        result.setText(Formatter.doubleToString(resultValue));
+        baseValue = resultValue;
+    }
+
     private void handleOperation(int operation) {
         if (lastKey == operation)
             return;
@@ -93,6 +100,11 @@ public class MainActivity extends AppCompatActivity {
         handleOperation(MINUS);
     }
 
+    @OnClick(R.id.btn_multiply)
+    public void multiplyClicked() {
+        handleOperation(MULTIPLY);
+    }
+
     @OnClick(R.id.btn_equals)
     public void equalsClicked() {
         if (lastKey == EQUALS) {
@@ -113,6 +125,8 @@ public class MainActivity extends AppCompatActivity {
             addNumbers();
         else if (lastOperation == MINUS)
             subtractNumbers();
+        else if (lastOperation == MULTIPLY)
+            multiplyNumbers();
     }
 
     @OnClick(R.id.btn_decimal)
