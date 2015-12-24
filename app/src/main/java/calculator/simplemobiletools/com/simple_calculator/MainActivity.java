@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import java.text.DecimalFormat;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -39,16 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String getFormattedValue(String str) {
         final double doubleValue = Double.parseDouble(str);
-        return formatDouble(doubleValue);
-    }
-
-    private String formatDouble(double d) {
-        if (d == (long) d) {
-            return String.format("%d", (long) d);
-        } else {
-            final DecimalFormat formatter = new DecimalFormat("0.0#############");
-            return formatter.format(d);
-        }
+        return Formatter.doubleToString(doubleValue);
     }
 
     private String getDisplayedNumber() {
@@ -69,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void addNumbers() {
         final double resultValue = firstValue + secondValue;
-        result.setText(formatDouble(resultValue));
+        result.setText(Formatter.doubleToString(resultValue));
         firstValue = resultValue;
     }
 
