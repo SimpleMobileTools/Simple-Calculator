@@ -12,7 +12,7 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
     @Bind(R.id.result) TextView result;
 
-    private double firstValue;
+    private double baseValue;
     private double secondValue;
     private boolean resetValue;
     private int lastKey;
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int DIGIT = 0;
     private static final int EQUALS = 1;
     private static final int PLUS = 2;
+    private static final int MINUS = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void addDigit(int number) {
         final String currentValue = getDisplayedNumber();
-        final String newValue = getFormattedValue(currentValue + number);
+        final String newValue = removeLeadingZero(currentValue + number);
         result.setText(newValue);
     }
 
-    private String getFormattedValue(String str) {
+    private String removeLeadingZero(String str) {
         final double doubleValue = Double.parseDouble(str);
         return Formatter.doubleToString(doubleValue);
     }
@@ -57,24 +58,39 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addNumbers() {
-        final double resultValue = firstValue + secondValue;
+        final double resultValue = baseValue + secondValue;
         result.setText(Formatter.doubleToString(resultValue));
-        firstValue = resultValue;
+        baseValue = resultValue;
+    }
+
+    private void subtractNumbers() {
+        final double resultValue = baseValue - secondValue;
+        result.setText(Formatter.doubleToString(resultValue));
+        baseValue = resultValue;
+    }
+
+    private void handleOperation(int operation) {
+        if (lastKey == operation)
+            return;
+
+        if (lastKey == DIGIT) {
+            secondValue = getDisplayedNumberAsDouble();
+            handleEquals();
+            baseValue = getDisplayedNumberAsDouble();
+        }
+        resetValue = true;
+        lastKey = operation;
+        lastOperation = operation;
     }
 
     @OnClick(R.id.btn_plus)
     public void plusClicked() {
-        resetValue = true;
-        lastOperation = PLUS;
+        handleOperation(PLUS);
+    }
 
-        if (lastKey != DIGIT) {
-            lastKey = PLUS;
-            return;
-        }
-
-        secondValue = getDisplayedNumberAsDouble();
-        addNumbers();
-        lastKey = PLUS;
+    @OnClick(R.id.btn_minus)
+    public void minusClicked() {
+        handleOperation(MINUS);
     }
 
     @OnClick(R.id.btn_equals)
@@ -95,6 +111,8 @@ public class MainActivity extends AppCompatActivity {
     private void handleEquals() {
         if (lastOperation == PLUS)
             addNumbers();
+        else if (lastOperation == MINUS)
+            subtractNumbers();
     }
 
     @OnClick(R.id.btn_decimal)
