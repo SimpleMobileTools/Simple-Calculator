@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addDigit(int number) {
-        final String currentValue = result.getText().toString();
+        final String currentValue = getDisplayedNumber();
         final String newValue = getFormattedValue(currentValue + number);
         result.setText(newValue);
     }
@@ -41,9 +41,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private String getDisplayedNumber() {
+        return result.getText().toString();
+    }
+
     @OnClick(R.id.btn_decimal)
     public void decimalClicked() {
-        String value = result.getText().toString();
+        String value = getDisplayedNumber();
         if (!value.contains("."))
             value += ".";
         result.setText(value);
@@ -51,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_0)
     public void zeroClicked() {
-        String value = result.getText().toString();
+        String value = getDisplayedNumber();
         if (!value.isEmpty() && !value.equals("0"))
             value += "0";
         result.setText(value);
