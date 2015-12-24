@@ -31,6 +31,44 @@
             android:layout_weight="1">
 
             <Button
+                android:id="@+id/btn_modulo"
+                style="@style/MyButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="%"/>
+
+            <Button
+                android:id="@+id/btn_power"
+                style="@style/MyButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="^"/>
+
+            <Button
+                android:id="@+id/btn_root"
+                style="@style/MyButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="√"/>
+
+            <Button
+                android:id="@+id/btn_clear"
+                style="@style/MyButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="C"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
                 android:id="@+id/btn_7"
                 style="@style/MyButtonStyle"
                 android:layout_width="match_parent"
