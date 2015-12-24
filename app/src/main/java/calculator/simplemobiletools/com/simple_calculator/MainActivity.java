@@ -59,31 +59,12 @@ public class MainActivity extends AppCompatActivity {
         resetValue = false;
     }
 
-    private void addNumbers() {
-        final double resultValue = baseValue + secondValue;
-        result.setText(Formatter.doubleToString(resultValue));
-        baseValue = resultValue;
-    }
-
-    private void subtractNumbers() {
-        final double resultValue = baseValue - secondValue;
-        result.setText(Formatter.doubleToString(resultValue));
-        baseValue = resultValue;
-    }
-
-    private void multiplyNumbers() {
-        final double resultValue = baseValue * secondValue;
-        result.setText(Formatter.doubleToString(resultValue));
-        baseValue = resultValue;
-    }
-
     private void divideNumbers() {
         double resultValue = 0;
         if (secondValue != 0)
             resultValue = baseValue / secondValue;
 
-        result.setText(Formatter.doubleToString(resultValue));
-        baseValue = resultValue;
+        updateResult(resultValue);
     }
 
     private void handleOperation(int operation) {
@@ -92,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (lastKey == DIGIT) {
             secondValue = getDisplayedNumberAsDouble();
-            handleEquals();
+            calculateResult();
             baseValue = getDisplayedNumberAsDouble();
         }
         resetValue = true;
@@ -123,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_equals)
     public void equalsClicked() {
         if (lastKey == EQUALS) {
-            handleEquals();
+            calculateResult();
             return;
         }
 
@@ -131,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
             return;
 
         secondValue = getDisplayedNumberAsDouble();
-        handleEquals();
+        calculateResult();
         lastKey = EQUALS;
     }
 
@@ -144,21 +125,26 @@ public class MainActivity extends AppCompatActivity {
 
     public void zeroClicked() {
         String value = getDisplayedNumber();
-        if (!value.isEmpty() && !value.equals("0"))
+        if (!value.equals("0"))
             value += "0";
         result.setText(value);
     }
 
-    private void handleEquals() {
+    private void updateResult(double value) {
+        result.setText(Formatter.doubleToString(value));
+        baseValue = value;
+    }
+
+    private void calculateResult() {
         switch (lastOperation) {
             case PLUS:
-                addNumbers();
+                updateResult(baseValue + secondValue);
                 break;
             case MINUS:
-                subtractNumbers();
+                updateResult(baseValue - secondValue);
                 break;
             case MULTIPLY:
-                multiplyNumbers();
+                updateResult(baseValue * secondValue);
                 break;
             case DIVIDE:
                 divideNumbers();
