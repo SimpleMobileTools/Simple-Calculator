@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int MINUS = 3;
     private static final int MULTIPLY = 4;
     private static final int DIVIDE = 5;
+    private static final int MODULO = 6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +68,14 @@ public class MainActivity extends AppCompatActivity {
         updateResult(resultValue);
     }
 
+    private void moduloNumbers() {
+        double resultValue = 0;
+        if (secondValue != 0)
+            resultValue = baseValue % secondValue;
+
+        updateResult(resultValue);
+    }
+
     private void handleOperation(int operation) {
         if (lastKey == operation)
             return;
@@ -99,6 +108,11 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_divide)
     public void divideClicked() {
         handleOperation(DIVIDE);
+    }
+
+    @OnClick(R.id.btn_modulo)
+    public void moduloClicked() {
+        handleOperation(MODULO);
     }
 
     @OnClick(R.id.btn_equals)
@@ -146,6 +160,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case DIVIDE:
                 divideNumbers();
+                break;
+            case MODULO:
+                moduloNumbers();
                 break;
             default:
                 break;
