@@ -88,6 +88,13 @@ public class MainActivity extends AppCompatActivity {
         updateResult(resultValue);
     }
 
+    private void powerNumbers() {
+        double resultValue = Math.pow(baseValue, secondValue);
+        if (Double.isInfinite(resultValue) || Double.isNaN(resultValue))
+            resultValue = 0;
+        updateResult(resultValue);
+    }
+
     private void handleOperation(int operation) {
         if (lastKey == operation)
             return;
@@ -123,6 +130,11 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_modulo)
     public void moduloClicked() {
         handleOperation(MODULO);
+    }
+
+    @OnClick(R.id.btn_power)
+    public void powerClicked() {
+        handleOperation(POWER);
     }
 
     @OnClick(R.id.btn_root)
@@ -172,11 +184,6 @@ public class MainActivity extends AppCompatActivity {
         lastKey = EQUALS;
     }
 
-    @OnClick(R.id.btn_power)
-    public void powerClicked() {
-        handleOperation(POWER);
-    }
-
     public void decimalClicked() {
         String value = getDisplayedNumber();
         if (!value.contains("."))
@@ -220,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
                 moduloNumbers();
                 break;
             case POWER:
-                updateResult(Math.pow(baseValue, secondValue));
+                powerNumbers();
                 break;
             default:
                 break;
