@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int MULTIPLY = 4;
     private static final int DIVIDE = 5;
     private static final int MODULO = 6;
+    private static final int POWER = 7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,6 +129,11 @@ public class MainActivity extends AppCompatActivity {
         lastKey = EQUALS;
     }
 
+    @OnClick(R.id.btn_power)
+    public void powerClicked() {
+        handleOperation(POWER);
+    }
+
     public void decimalClicked() {
         String value = getDisplayedNumber();
         if (!value.contains("."))
@@ -163,6 +169,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case MODULO:
                 moduloNumbers();
+                break;
+            case POWER:
+                updateResult(Math.pow(baseValue, secondValue));
                 break;
             default:
                 break;
