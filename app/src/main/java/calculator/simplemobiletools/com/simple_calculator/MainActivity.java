@@ -82,9 +82,7 @@ public class MainActivity extends AppCompatActivity {
             return;
 
         if (lastKey == DIGIT) {
-            secondValue = getDisplayedNumberAsDouble();
-            calculateResult();
-            baseValue = getDisplayedNumberAsDouble();
+            getResult();
         }
         resetValue = true;
         lastKey = operation;
@@ -114,6 +112,13 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_modulo)
     public void moduloClicked() {
         handleOperation(MODULO);
+    }
+
+    @OnClick(R.id.btn_root)
+    public void rootClicked() {
+        getResult();
+        lastOperation = EQUALS;
+        updateResult(Math.sqrt(baseValue));
     }
 
     @OnClick(R.id.btn_equals)
@@ -151,6 +156,12 @@ public class MainActivity extends AppCompatActivity {
     private void updateResult(double value) {
         result.setText(Formatter.doubleToString(value));
         baseValue = value;
+    }
+
+    private void getResult() {
+        secondValue = getDisplayedNumberAsDouble();
+        calculateResult();
+        baseValue = getDisplayedNumberAsDouble();
     }
 
     private void calculateResult() {
