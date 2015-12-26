@@ -8,6 +8,7 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.OnLongClick;
 
 public class MainActivity extends AppCompatActivity {
     @Bind(R.id.result) TextView result;
@@ -32,6 +33,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        resetValues();
+    }
+
+    private void resetValues() {
+        baseValue = 0;
+        secondValue = 0;
+        resetValue = false;
+        lastKey = 0;
+        lastOperation = 0;
+        result.setText("0");
     }
 
     private void addDigit(int number) {
@@ -119,6 +130,33 @@ public class MainActivity extends AppCompatActivity {
         getResult();
         lastOperation = EQUALS;
         updateResult(Math.sqrt(baseValue));
+    }
+
+    @OnClick(R.id.btn_clear)
+    public void clearClicked() {
+        final String oldValue = getDisplayedNumber();
+        String newValue;
+        final int len = oldValue.length();
+        int minLen = 1;
+        if (oldValue.contains("-"))
+            minLen++;
+
+        if (len > minLen)
+            newValue = oldValue.substring(0, len - 1);
+        else
+            newValue = "0";
+
+        if (newValue.equals("-0"))
+            newValue = "0";
+
+        result.setText(newValue);
+        baseValue = Double.parseDouble(newValue);
+    }
+
+    @OnLongClick(R.id.btn_clear)
+    public boolean clearLongClicked() {
+        resetValues();
+        return true;
     }
 
     @OnClick(R.id.btn_equals)
