@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int DIVIDE = 5;
     public static final int MODULO = 6;
     public static final int POWER = 7;
+    public static final int ROOT = 8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,23 +37,28 @@ public class MainActivity extends AppCompatActivity {
         resetValues();
     }
 
-    private void resetValues() {
+    public void resetValues() {
         baseValue = 0;
         secondValue = 0;
         resetValue = false;
         lastKey = 0;
         lastOperation = 0;
-        setResult("0");
+        setValueDouble(0);
     }
 
     public void addDigit(int number) {
         final String currentValue = getDisplayedNumber();
         final String newValue = removeLeadingZero(currentValue + number);
-        setResult(newValue);
+        setValue(newValue);
     }
 
-    public void setResult(String value) {
+    public void setValue(String value) {
         result.setText(value);
+    }
+
+    public void setValueDouble(double d) {
+        setValue(Formatter.doubleToString(d));
+        lastKey = DIGIT;
     }
 
     private String removeLeadingZero(String str) {
@@ -60,17 +66,17 @@ public class MainActivity extends AppCompatActivity {
         return Formatter.doubleToString(doubleValue);
     }
 
-    private String getDisplayedNumber() {
+    public String getDisplayedNumber() {
         return result.getText().toString();
     }
 
-    public double getDisplayedNumberAsDouble() {
+    private double getDisplayedNumberAsDouble() {
         return Double.parseDouble(getDisplayedNumber());
     }
 
     private void resetValueIfNeeded() {
         if (resetValue)
-            setResult("0");
+            setValueDouble(0);
 
         resetValue = false;
     }
@@ -103,11 +109,50 @@ public class MainActivity extends AppCompatActivity {
             return;
 
         if (lastKey == DIGIT)
-            getResult();
+            handleResult();
 
         resetValue = true;
         lastKey = operation;
         lastOperation = operation;
+
+        if (operation == ROOT)
+            calculateResult();
+    }
+
+    public void handleClear() {
+        final String oldValue = getDisplayedNumber();
+        String newValue;
+        final int len = oldValue.length();
+        int minLen = 1;
+        if (oldValue.contains("-"))
+            minLen++;
+
+        if (len > minLen)
+            newValue = oldValue.substring(0, len - 1);
+        else
+            newValue = "0";
+
+        if (newValue.equals("-0"))
+            newValue = "0";
+
+        setValue(newValue);
+        baseValue = Double.parseDouble(newValue);
+    }
+
+    public void handleLongClear() {
+        resetValues();
+    }
+
+    public void handleEquals() {
+        if (lastKey == EQUALS)
+            calculateResult();
+
+        if (lastKey != DIGIT)
+            return;
+
+        secondValue = getDisplayedNumberAsDouble();
+        calculateResult();
+        lastKey = EQUALS;
     }
 
     @OnClick(R.id.btn_plus)
@@ -142,71 +187,45 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_root)
     public void rootClicked() {
-        getResult();
-        lastOperation = EQUALS;
-        updateResult(Math.sqrt(baseValue));
+        handleOperation(ROOT);
     }
 
     @OnClick(R.id.btn_clear)
     public void clearClicked() {
-        final String oldValue = getDisplayedNumber();
-        String newValue;
-        final int len = oldValue.length();
-        int minLen = 1;
-        if (oldValue.contains("-"))
-            minLen++;
-
-        if (len > minLen)
-            newValue = oldValue.substring(0, len - 1);
-        else
-            newValue = "0";
-
-        if (newValue.equals("-0"))
-            newValue = "0";
-
-        setResult(newValue);
-        baseValue = Double.parseDouble(newValue);
+        handleClear();
     }
 
     @OnLongClick(R.id.btn_clear)
     public boolean clearLongClicked() {
-        resetValues();
+        handleLongClear();
         return true;
     }
 
     @OnClick(R.id.btn_equals)
     public void equalsClicked() {
-        if (lastKey == EQUALS)
-            calculateResult();
-
-        if (lastKey != DIGIT)
-            return;
-
-        secondValue = getDisplayedNumberAsDouble();
-        calculateResult();
-        lastKey = EQUALS;
+        handleEquals();
     }
 
     public void decimalClicked() {
         String value = getDisplayedNumber();
         if (!value.contains("."))
             value += ".";
-        setResult(value);
+        setValue(value);
     }
 
     public void zeroClicked() {
         String value = getDisplayedNumber();
         if (!value.equals("0"))
             value += "0";
-        setResult(value);
+        setValue(value);
     }
 
     private void updateResult(double value) {
-        setResult(Formatter.doubleToString(value));
+        setValue(Formatter.doubleToString(value));
         baseValue = value;
     }
 
-    public void getResult() {
+    public void handleResult() {
         secondValue = getDisplayedNumberAsDouble();
         calculateResult();
         baseValue = getDisplayedNumberAsDouble();
@@ -231,6 +250,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case POWER:
                 powerNumbers();
+                break;
+            case ROOT:
+                updateResult(Math.sqrt(baseValue));
                 break;
             default:
                 break;
