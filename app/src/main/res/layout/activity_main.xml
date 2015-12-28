@@ -17,7 +17,6 @@
         android:layout_marginBottom="@dimen/activity_margin"
         android:gravity="right"
         android:lines="1"
-        android:maxLength="15"
         android:padding="@dimen/activity_margin"
         android:text="0"
         android:textSize="@dimen/display_text_size"/>

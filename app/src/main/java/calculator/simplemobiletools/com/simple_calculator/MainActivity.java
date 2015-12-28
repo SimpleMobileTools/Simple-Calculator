@@ -19,14 +19,14 @@ public class MainActivity extends AppCompatActivity {
     private int lastKey;
     private int lastOperation;
 
-    private static final int DIGIT = 0;
-    private static final int EQUALS = 1;
-    private static final int PLUS = 2;
-    private static final int MINUS = 3;
-    private static final int MULTIPLY = 4;
-    private static final int DIVIDE = 5;
-    private static final int MODULO = 6;
-    private static final int POWER = 7;
+    public static final int DIGIT = 0;
+    public static final int EQUALS = 1;
+    public static final int PLUS = 2;
+    public static final int MINUS = 3;
+    public static final int MULTIPLY = 4;
+    public static final int DIVIDE = 5;
+    public static final int MODULO = 6;
+    public static final int POWER = 7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,13 +42,17 @@ public class MainActivity extends AppCompatActivity {
         resetValue = false;
         lastKey = 0;
         lastOperation = 0;
-        result.setText("0");
+        setResult("0");
     }
 
-    private void addDigit(int number) {
+    public void addDigit(int number) {
         final String currentValue = getDisplayedNumber();
         final String newValue = removeLeadingZero(currentValue + number);
-        result.setText(newValue);
+        setResult(newValue);
+    }
+
+    public void setResult(String value) {
+        result.setText(value);
     }
 
     private String removeLeadingZero(String str) {
@@ -57,17 +61,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String getDisplayedNumber() {
-        resetValueIfNeeded();
         return result.getText().toString();
     }
 
-    private double getDisplayedNumberAsDouble() {
-        return Double.parseDouble(result.getText().toString());
+    public double getDisplayedNumberAsDouble() {
+        return Double.parseDouble(getDisplayedNumber());
     }
 
     private void resetValueIfNeeded() {
         if (resetValue)
-            result.setText("0");
+            setResult("0");
 
         resetValue = false;
     }
@@ -95,13 +98,13 @@ public class MainActivity extends AppCompatActivity {
         updateResult(resultValue);
     }
 
-    private void handleOperation(int operation) {
+    public void handleOperation(int operation) {
         if (lastKey == operation)
             return;
 
-        if (lastKey == DIGIT) {
+        if (lastKey == DIGIT)
             getResult();
-        }
+
         resetValue = true;
         lastKey = operation;
         lastOperation = operation;
@@ -161,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
         if (newValue.equals("-0"))
             newValue = "0";
 
-        result.setText(newValue);
+        setResult(newValue);
         baseValue = Double.parseDouble(newValue);
     }
 
@@ -188,28 +191,28 @@ public class MainActivity extends AppCompatActivity {
         String value = getDisplayedNumber();
         if (!value.contains("."))
             value += ".";
-        result.setText(value);
+        setResult(value);
     }
 
     public void zeroClicked() {
         String value = getDisplayedNumber();
         if (!value.equals("0"))
             value += "0";
-        result.setText(value);
+        setResult(value);
     }
 
     private void updateResult(double value) {
-        result.setText(Formatter.doubleToString(value));
+        setResult(Formatter.doubleToString(value));
         baseValue = value;
     }
 
-    private void getResult() {
+    public void getResult() {
         secondValue = getDisplayedNumberAsDouble();
         calculateResult();
         baseValue = getDisplayedNumberAsDouble();
     }
 
-    private void calculateResult() {
+    public void calculateResult() {
         switch (lastOperation) {
             case PLUS:
                 updateResult(baseValue + secondValue);
@@ -234,12 +237,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick({R.id.btn_decimal, R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7,
-            R.id.btn_8, R.id.btn_9})
+    @OnClick({R.id.btn_decimal, R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7, R.id.btn_8,
+            R.id.btn_9})
     public void numpadClicked(View view) {
         if (lastKey == EQUALS)
             lastOperation = EQUALS;
         lastKey = DIGIT;
+        resetValueIfNeeded();
 
         switch (view.getId()) {
             case R.id.btn_decimal:
