@@ -80,7 +80,6 @@ public class MainActivityTest {
     public void rootTest() {
         setDouble(16);
         handleOperation(MainActivity.ROOT);
-        activity.handleResult();
         assertEquals("4", getDisplayedNumber());
     }
 
