@@ -21,15 +21,17 @@
         android:text="0"
         android:textSize="@dimen/display_text_size"/>
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/result">
+        android:layout_below="@+id/result"
+        android:orientation="vertical">
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn_modulo"
@@ -62,12 +64,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="C"/>
-        </TableRow>
+        </LinearLayout>
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn_7"
@@ -100,12 +103,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="÷"/>
-        </TableRow>
+        </LinearLayout>
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn_4"
@@ -138,12 +142,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="*"/>
-        </TableRow>
+        </LinearLayout>
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn_1"
@@ -176,12 +181,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="-"/>
-        </TableRow>
+        </LinearLayout>
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn_0"
@@ -214,6 +220,6 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="+"/>
-        </TableRow>
-    </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>
