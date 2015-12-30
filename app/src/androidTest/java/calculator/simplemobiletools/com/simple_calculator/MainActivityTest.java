@@ -19,9 +19,18 @@ public class MainActivityTest {
     @Rule public final ActivityTestRule<MainActivity> activity = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void addSimpleDigit() {
+    public void addDigits() {
+        press(R.id.btn_1);
+        press(R.id.btn_2);
+        press(R.id.btn_3);
+        press(R.id.btn_4);
         press(R.id.btn_5);
-        checkResult("5");
+        press(R.id.btn_6);
+        press(R.id.btn_7);
+        press(R.id.btn_8);
+        press(R.id.btn_9);
+        press(R.id.btn_0);
+        checkResult("1234567890");
     }
 
     @Test
@@ -76,7 +85,7 @@ public class MainActivityTest {
     }
 
     @Test
-    public void divisionbyZeroTest() {
+    public void divisionByZeroTest() {
         press(R.id.btn_8);
         press(R.id.btn_divide);
         press(R.id.btn_0);
