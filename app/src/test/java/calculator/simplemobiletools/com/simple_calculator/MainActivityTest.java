@@ -148,11 +148,11 @@ public class MainActivityTest {
         activity.setValueDouble(d);
     }
 
-    private void handleOperation(int operation) {
+    private void handleOperation(String operation) {
         activity.getCalc().handleOperation(operation);
     }
 
-    private String calcResult(double baseValue, int operation, double secondValue) {
+    private String calcResult(double baseValue, String operation, double secondValue) {
         setDouble(baseValue);
         handleOperation(operation);
         setDouble(secondValue);

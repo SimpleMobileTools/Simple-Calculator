@@ -6,8 +6,8 @@ public class CalculatorImpl {
     private double baseValue;
     private double secondValue;
     private boolean resetValue;
-    private int lastKey;
-    private int lastOperation;
+    private String lastKey;
+    private String lastOperation;
     private Calculator callback;
 
     public CalculatorImpl(Calculator calculatorInterface) {
@@ -26,12 +26,12 @@ public class CalculatorImpl {
         baseValue = 0;
         secondValue = 0;
         resetValue = false;
-        lastKey = 0;
-        lastOperation = 0;
+        lastKey = "";
+        lastOperation = "";
         callback.setValue("0");
     }
 
-    public void setLastKey(int lastKey) {
+    public void setLastKey(String lastKey) {
         this.lastKey = lastKey;
     }
 
@@ -116,18 +116,18 @@ public class CalculatorImpl {
         updateResult(resultValue);
     }
 
-    public void handleOperation(int operation) {
-        if (lastKey == operation)
+    public void handleOperation(String operation) {
+        if (lastKey.equals(operation))
             return;
 
-        if (lastKey == Constants.DIGIT)
+        if (lastKey.equals(Constants.DIGIT))
             handleResult();
 
         resetValue = true;
         lastKey = operation;
         lastOperation = operation;
 
-        if (operation == Constants.ROOT)
+        if (operation.equals(Constants.ROOT))
             calculateResult();
     }
 
@@ -156,10 +156,10 @@ public class CalculatorImpl {
     }
 
     public void handleEquals() {
-        if (lastKey == Constants.EQUALS)
+        if (lastKey.equals(Constants.EQUALS))
             calculateResult();
 
-        if (lastKey != Constants.DIGIT)
+        if (!lastKey.equals(Constants.DIGIT))
             return;
 
         secondValue = getDisplayedNumberAsDouble();
@@ -182,7 +182,7 @@ public class CalculatorImpl {
     }
 
     public void numpadClicked(View view) {
-        if (lastKey == Constants.EQUALS)
+        if (lastKey.equals(Constants.EQUALS))
             lastOperation = Constants.EQUALS;
         lastKey = Constants.DIGIT;
         resetValueIfNeeded();
