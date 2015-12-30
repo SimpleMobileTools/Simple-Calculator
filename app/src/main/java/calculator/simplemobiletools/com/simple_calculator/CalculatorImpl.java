@@ -1,0 +1,224 @@
+package calculator.simplemobiletools.com.simple_calculator;
+
+import android.view.View;
+
+public class CalculatorImpl {
+    private double baseValue;
+    private double secondValue;
+    private boolean resetValue;
+    private int lastKey;
+    private int lastOperation;
+    private Calculator callback;
+
+    public CalculatorImpl(Calculator calculatorInterface) {
+        callback = calculatorInterface;
+        resetValues();
+    }
+
+    private void resetValueIfNeeded() {
+        if (resetValue)
+            callback.setValue("0");
+
+        resetValue = false;
+    }
+
+    private void resetValues() {
+        baseValue = 0;
+        secondValue = 0;
+        resetValue = false;
+        lastKey = 0;
+        lastOperation = 0;
+        callback.setValue("0");
+    }
+
+    public void addDigit(int number) {
+        final String currentValue = callback.getDisplayedNumber();
+        final String newValue = removeLeadingZero(currentValue + number);
+        callback.setValue(newValue);
+    }
+
+    private String removeLeadingZero(String str) {
+        final double doubleValue = Double.parseDouble(str);
+        return Formatter.doubleToString(doubleValue);
+    }
+
+    private void updateResult(double value) {
+        callback.setValue(Formatter.doubleToString(value));
+        baseValue = value;
+    }
+
+    public String getDisplayedNumber() {
+        return callback.getDisplayedNumber();
+    }
+
+    public double getDisplayedNumberAsDouble() {
+        return Double.parseDouble(getDisplayedNumber());
+    }
+
+    public void handleResult() {
+        secondValue = getDisplayedNumberAsDouble();
+        calculateResult();
+        baseValue = getDisplayedNumberAsDouble();
+    }
+
+    public void calculateResult() {
+        switch (lastOperation) {
+            case Constants.PLUS:
+                updateResult(baseValue + secondValue);
+                break;
+            case Constants.MINUS:
+                updateResult(baseValue - secondValue);
+                break;
+            case Constants.MULTIPLY:
+                updateResult(baseValue * secondValue);
+                break;
+            case Constants.DIVIDE:
+                divideNumbers();
+                break;
+            case Constants.MODULO:
+                moduloNumbers();
+                break;
+            case Constants.POWER:
+                powerNumbers();
+                break;
+            case Constants.ROOT:
+                updateResult(Math.sqrt(baseValue));
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void divideNumbers() {
+        double resultValue = 0;
+        if (secondValue != 0)
+            resultValue = baseValue / secondValue;
+
+        updateResult(resultValue);
+    }
+
+    private void moduloNumbers() {
+        double resultValue = 0;
+        if (secondValue != 0)
+            resultValue = baseValue % secondValue;
+
+        updateResult(resultValue);
+    }
+
+    private void powerNumbers() {
+        double resultValue = Math.pow(baseValue, secondValue);
+        if (Double.isInfinite(resultValue) || Double.isNaN(resultValue))
+            resultValue = 0;
+        updateResult(resultValue);
+    }
+
+    public void handleOperation(int operation) {
+        if (lastKey == operation)
+            return;
+
+        if (lastKey == Constants.DIGIT)
+            handleResult();
+
+        resetValue = true;
+        lastKey = operation;
+        lastOperation = operation;
+
+        if (operation == Constants.ROOT)
+            calculateResult();
+    }
+
+    public void handleClear() {
+        final String oldValue = getDisplayedNumber();
+        String newValue;
+        final int len = oldValue.length();
+        int minLen = 1;
+        if (oldValue.contains("-"))
+            minLen++;
+
+        if (len > minLen)
+            newValue = oldValue.substring(0, len - 1);
+        else
+            newValue = "0";
+
+        if (newValue.equals("-0"))
+            newValue = "0";
+
+        callback.setValue(newValue);
+        baseValue = Double.parseDouble(newValue);
+    }
+
+    public void handleLongClear() {
+        resetValues();
+    }
+
+    public void handleEquals() {
+        if (lastKey == Constants.EQUALS)
+            calculateResult();
+
+        if (lastKey != Constants.DIGIT)
+            return;
+
+        secondValue = getDisplayedNumberAsDouble();
+        calculateResult();
+        lastKey = Constants.EQUALS;
+    }
+
+    public void decimalClicked() {
+        String value = getDisplayedNumber();
+        if (!value.contains("."))
+            value += ".";
+        callback.setValue(value);
+    }
+
+    public void zeroClicked() {
+        String value = getDisplayedNumber();
+        if (!value.equals("0"))
+            value += "0";
+        callback.setValue(value);
+    }
+
+    public void numpadClicked(View view) {
+        if (lastKey == Constants.EQUALS)
+            lastOperation = Constants.EQUALS;
+        lastKey = Constants.DIGIT;
+        resetValueIfNeeded();
+
+        switch (view.getId()) {
+            case R.id.btn_decimal:
+                decimalClicked();
+                break;
+            case R.id.btn_0:
+                zeroClicked();
+                break;
+            case R.id.btn_1:
+                addDigit(1);
+                break;
+            case R.id.btn_2:
+                addDigit(2);
+                break;
+            case R.id.btn_3:
+                addDigit(3);
+                break;
+            case R.id.btn_4:
+                addDigit(4);
+                break;
+            case R.id.btn_5:
+                addDigit(5);
+                break;
+            case R.id.btn_6:
+                addDigit(6);
+                break;
+            case R.id.btn_7:
+                addDigit(7);
+                break;
+            case R.id.btn_8:
+                addDigit(8);
+                break;
+            case R.id.btn_9:
+                addDigit(9);
+                break;
+            default:
+                break;
+        }
+    }
+}
