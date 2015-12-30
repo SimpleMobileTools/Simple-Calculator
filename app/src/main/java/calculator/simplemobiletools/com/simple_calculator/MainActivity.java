@@ -23,11 +23,6 @@ public class MainActivity extends AppCompatActivity implements Calculator {
         calc = new CalculatorImpl(this);
     }
 
-    @Override
-    public String getDisplayedNumber() {
-        return result.getText().toString();
-    }
-
     @OnClick(R.id.btn_plus)
     public void plusClicked() {
         calc.handleOperation(Constants.PLUS);
@@ -82,11 +77,11 @@ public class MainActivity extends AppCompatActivity implements Calculator {
     @OnClick({R.id.btn_decimal, R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7, R.id.btn_8,
             R.id.btn_9})
     public void numpadClick(View view) {
-        numpadClicked(view);
+        numpadClicked(view.getId());
     }
 
-    public void numpadClicked(View view) {
-        calc.numpadClicked(view);
+    public void numpadClicked(int id) {
+        calc.numpadClicked(id);
     }
 
     @Override
@@ -97,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements Calculator {
     // used only by Robolectric
     @Override
     public void setValueDouble(double d) {
-        setValue(Formatter.doubleToString(d));
+        calc.setValue(Formatter.doubleToString(d));
         calc.setLastKey(Constants.DIGIT);
     }
 

@@ -1,8 +1,7 @@
 package calculator.simplemobiletools.com.simple_calculator;
 
-import android.view.View;
-
 public class CalculatorImpl {
+    private String displayedValue;
     private double baseValue;
     private double secondValue;
     private boolean resetValue;
@@ -17,7 +16,7 @@ public class CalculatorImpl {
 
     private void resetValueIfNeeded() {
         if (resetValue)
-            callback.setValue("0");
+            setValue("0");
 
         resetValue = false;
     }
@@ -28,7 +27,13 @@ public class CalculatorImpl {
         resetValue = false;
         lastKey = "";
         lastOperation = "";
-        callback.setValue("0");
+        displayedValue = "";
+        setValue("0");
+    }
+
+    public void setValue(String value) {
+        callback.setValue(value);
+        displayedValue = value;
     }
 
     public void setLastKey(String lastKey) {
@@ -36,9 +41,9 @@ public class CalculatorImpl {
     }
 
     public void addDigit(int number) {
-        final String currentValue = callback.getDisplayedNumber();
+        final String currentValue = getDisplayedNumber();
         final String newValue = removeLeadingZero(currentValue + number);
-        callback.setValue(newValue);
+        setValue(newValue);
     }
 
     private String removeLeadingZero(String str) {
@@ -47,12 +52,12 @@ public class CalculatorImpl {
     }
 
     private void updateResult(double value) {
-        callback.setValue(Formatter.doubleToString(value));
+        setValue(Formatter.doubleToString(value));
         baseValue = value;
     }
 
     public String getDisplayedNumber() {
-        return callback.getDisplayedNumber();
+        return displayedValue;
     }
 
     public double getDisplayedNumberAsDouble() {
@@ -147,7 +152,7 @@ public class CalculatorImpl {
         if (newValue.equals("-0"))
             newValue = "0";
 
-        callback.setValue(newValue);
+        setValue(newValue);
         baseValue = Double.parseDouble(newValue);
     }
 
@@ -171,23 +176,23 @@ public class CalculatorImpl {
         String value = getDisplayedNumber();
         if (!value.contains("."))
             value += ".";
-        callback.setValue(value);
+        setValue(value);
     }
 
     public void zeroClicked() {
         String value = getDisplayedNumber();
         if (!value.equals("0"))
             value += "0";
-        callback.setValue(value);
+        setValue(value);
     }
 
-    public void numpadClicked(View view) {
+    public void numpadClicked(int id) {
         if (lastKey.equals(Constants.EQUALS))
             lastOperation = Constants.EQUALS;
         lastKey = Constants.DIGIT;
         resetValueIfNeeded();
 
-        switch (view.getId()) {
+        switch (id) {
             case R.id.btn_decimal:
                 decimalClicked();
                 break;

@@ -161,6 +161,6 @@ public class MainActivityTest {
     }
 
     private String getDisplayedNumber() {
-        return activity.getDisplayedNumber();
+        return activity.getCalc().getDisplayedNumber();
     }
 }
