@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements Calculator {
 
     @OnLongClick(R.id.btn_clear)
     public boolean clearLongClicked() {
-        calc.handleLongClear();
+        calc.handleReset();
         return true;
     }
 

@@ -5,6 +5,7 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
+import android.view.View;
 import android.widget.RemoteViews;
 
 public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
@@ -19,6 +20,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         widgetManager = appWidgetManager;
         remoteViews = new RemoteViews(context.getPackageName(), R.layout.activity_main);
+        remoteViews.setViewVisibility(R.id.btn_reset, View.VISIBLE);
         calc = new CalculatorImpl(this);
         widgetIds = appWidgetIds;
         cxt = context;
@@ -45,6 +47,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
         setupIntent(Constants.POWER, R.id.btn_power);
         setupIntent(Constants.ROOT, R.id.btn_root);
         setupIntent(Constants.CLEAR, R.id.btn_clear);
+        setupIntent(Constants.RESET, R.id.btn_reset);
 
         appWidgetManager.updateAppWidget(appWidgetIds, remoteViews);
     }
@@ -97,6 +100,9 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
                 break;
             case Constants.CLEAR:
                 calc.handleClear();
+                break;
+            case Constants.RESET:
+                calc.handleReset();
                 break;
             case Constants.PLUS:
             case Constants.MINUS:

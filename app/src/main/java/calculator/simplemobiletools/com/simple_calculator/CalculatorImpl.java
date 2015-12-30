@@ -156,7 +156,7 @@ public class CalculatorImpl {
         baseValue = Double.parseDouble(newValue);
     }
 
-    public void handleLongClear() {
+    public void handleReset() {
         resetValues();
     }
 

@@ -12,6 +12,7 @@ public class Constants {
     public static final String ROOT = "root";
     public static final String DECIMAL = "decimal";
     public static final String CLEAR = "clear";
+    public static final String RESET = "reset";
 
     public static final String ZERO = "zero";
     public static final String ONE = "one";

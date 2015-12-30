@@ -102,7 +102,7 @@ public class MainActivityTest {
     @Test
     public void clearBtnLongClick_resetsEverything() {
         calcResult(-1.2, Constants.PLUS, 3.4);
-        activity.getCalc().handleLongClear();
+        activity.getCalc().handleReset();
         handleOperation(Constants.PLUS);
         setDouble(3);
         activity.getCalc().handleResult();

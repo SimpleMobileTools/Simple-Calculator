@@ -64,6 +64,15 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="C"/>
+
+            <Button
+                android:id="@+id/btn_reset"
+                style="@style/MyButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="AC"
+                android:visibility="gone"/>
         </LinearLayout>
 
         <LinearLayout
