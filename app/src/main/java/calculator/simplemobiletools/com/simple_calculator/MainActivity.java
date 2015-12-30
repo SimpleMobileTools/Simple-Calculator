@@ -81,6 +81,10 @@ public class MainActivity extends AppCompatActivity implements Calculator {
 
     @OnClick({R.id.btn_decimal, R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7, R.id.btn_8,
             R.id.btn_9})
+    public void numpadClick(View view) {
+        numpadClicked(view);
+    }
+
     public void numpadClicked(View view) {
         calc.numpadClicked(view);
     }
@@ -90,9 +94,14 @@ public class MainActivity extends AppCompatActivity implements Calculator {
         result.setText(value);
     }
 
+    // used only by Robolectric
     @Override
     public void setValueDouble(double d) {
         setValue(Formatter.doubleToString(d));
-        //lastKey = Constants.DIGIT;
+        calc.setLastKey(Constants.DIGIT);
+    }
+
+    public CalculatorImpl getCalc() {
+        return calc;
     }
 }

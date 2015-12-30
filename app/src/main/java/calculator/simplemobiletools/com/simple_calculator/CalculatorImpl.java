@@ -31,6 +31,10 @@ public class CalculatorImpl {
         callback.setValue("0");
     }
 
+    public void setLastKey(int lastKey) {
+        this.lastKey = lastKey;
+    }
+
     public void addDigit(int number) {
         final String currentValue = callback.getDisplayedNumber();
         final String newValue = removeLeadingZero(currentValue + number);
