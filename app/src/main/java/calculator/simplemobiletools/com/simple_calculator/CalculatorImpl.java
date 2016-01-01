@@ -122,9 +122,6 @@ public class CalculatorImpl {
     }
 
     public void handleOperation(String operation) {
-        if (lastKey.equals(operation))
-            return;
-
         if (lastKey.equals(Constants.DIGIT))
             handleResult();
 
