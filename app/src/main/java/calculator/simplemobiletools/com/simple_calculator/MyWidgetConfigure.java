@@ -1,14 +1,14 @@
 package calculator.simplemobiletools.com.simple_calculator;
 
-import android.app.Activity;
 import android.appwidget.AppWidgetManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MyWidgetConfigure extends Activity {
+public class MyWidgetConfigure extends AppCompatActivity {
     private int widgetId;
 
     @Override
