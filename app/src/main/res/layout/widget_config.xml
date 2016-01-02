@@ -32,6 +32,7 @@
             android:layout_alignParentRight="true"
             android:paddingLeft="@dimen/activity_margin"
             android:paddingRight="@dimen/activity_margin"
-            android:text="Save"/>
+            android:text="Save"
+            android:textSize="@dimen/config_text_size"/>
     </RelativeLayout>
 </RelativeLayout>

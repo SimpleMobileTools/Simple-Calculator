@@ -13,6 +13,7 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="background">@drawable/button</item>
         <item name="android:background">@drawable/button</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
     </style>
 
     <style name="MyWidgetConfigTheme" parent="@style/AppTheme">
