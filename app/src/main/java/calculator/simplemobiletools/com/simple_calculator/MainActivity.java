@@ -1,5 +1,6 @@
 package calculator.simplemobiletools.com.simple_calculator;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -21,6 +22,13 @@ public class MainActivity extends AppCompatActivity implements Calculator {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         calc = new CalculatorImpl(this);
+        setupResultView();
+    }
+
+    private void setupResultView() {
+        final Resources res = getResources();
+        result.setBackgroundColor(res.getColor(android.R.color.white));
+        result.setTextColor(res.getColor(R.color.dark_grey));
     }
 
     @OnClick(R.id.btn_plus)

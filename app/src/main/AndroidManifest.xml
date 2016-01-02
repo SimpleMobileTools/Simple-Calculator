@@ -31,7 +31,8 @@
         </receiver>
 
         <activity
-            android:name=".MyWidgetConfigure">
+            android:name=".MyWidgetConfigure"
+            android:theme="@style/MyWidgetConfigTheme">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
             </intent-filter>
