@@ -22,12 +22,6 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:actionBarStyle">@style/MyWidgetConfigActionBar</item>
 
-    </style>
-
-    <style name="MyWidgetConfigActionBar" parent="Widget.AppCompat.Light.ActionBar">
-        <item name="android:background">@color/colorPrimary</item>
-        <item name="background">@color/colorPrimary</item>
     </style>
 </resources>

@@ -1,9 +1,9 @@
 package calculator.simplemobiletools.com.simple_calculator;
 
+import android.app.Activity;
 import android.appwidget.AppWidgetManager;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -11,7 +11,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MyWidgetConfigure extends AppCompatActivity {
+public class MyWidgetConfigure extends Activity {
     @Bind(R.id.btn_reset) Button resetBtn;
     private int widgetId;
 

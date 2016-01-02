@@ -7,7 +7,7 @@
     android:layout_marginBottom="80dp"
     android:layout_marginLeft="@dimen/activity_margin"
     android:layout_marginRight="@dimen/activity_margin"
-    android:layout_marginTop="@dimen/activity_margin">
+    android:layout_marginTop="80dp">
 
     <include
         android:id="@+id/config_calc"
