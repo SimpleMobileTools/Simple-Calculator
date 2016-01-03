@@ -58,18 +58,20 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     }
 
     private void initVariables(Context context) {
-        prefs = initPrefs(context);
+        final int defaultColor = context.getResources().getColor(R.color.dark_grey);
+        final int newBgColor = prefs.getInt(Constants.WIDGET_BG_COLOR, defaultColor);
         final ComponentName component = new ComponentName(context, MyWidgetProvider.class);
+
+        prefs = initPrefs(context);
         remoteViews = new RemoteViews(context.getPackageName(), R.layout.activity_main);
         remoteViews.setViewVisibility(R.id.btn_reset, View.VISIBLE);
-        final int newBgColor = prefs.getInt(Constants.WIDGET_BG_COLOR, context.getResources().getColor(R.color.dark_grey));
         remoteViews.setInt(R.id.calculator_holder, "setBackgroundColor", newBgColor);
 
         widgetManager = AppWidgetManager.getInstance(context);
         widgetIds = widgetManager.getAppWidgetIds(component);
 
-        final String value = prefs.getString(Constants.VALUE, "0");
-        calc = new CalculatorImpl(this, value);
+        final String displayValue = prefs.getString(Constants.CALC_VALUE, "0");
+        calc = new CalculatorImpl(this, displayValue);
     }
 
     private SharedPreferences initPrefs(Context context) {
@@ -173,7 +175,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     public void setValue(String value) {
         remoteViews.setTextViewText(R.id.result, value);
         widgetManager.updateAppWidget(widgetIds, remoteViews);
-        prefs.edit().putString(Constants.VALUE, value).apply();
+        prefs.edit().putString(Constants.CALC_VALUE, value).apply();
     }
 
     @Override
@@ -187,6 +189,6 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
         if (prefs == null)
             prefs = initPrefs(context);
 
-        prefs.edit().remove(Constants.VALUE).apply();
+        prefs.edit().remove(Constants.CALC_VALUE).apply();
     }
 }
