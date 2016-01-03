@@ -58,11 +58,11 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     }
 
     private void initVariables(Context context) {
+        prefs = initPrefs(context);
         final int defaultColor = context.getResources().getColor(R.color.dark_grey);
         final int newBgColor = prefs.getInt(Constants.WIDGET_BG_COLOR, defaultColor);
         final ComponentName component = new ComponentName(context, MyWidgetProvider.class);
 
-        prefs = initPrefs(context);
         remoteViews = new RemoteViews(context.getPackageName(), R.layout.activity_main);
         remoteViews.setViewVisibility(R.id.btn_reset, View.VISIBLE);
         remoteViews.setInt(R.id.calculator_holder, "setBackgroundColor", newBgColor);
