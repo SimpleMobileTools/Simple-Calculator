@@ -3,7 +3,4 @@
     <item
         android:drawable="@drawable/button_pressed"
         android:state_pressed="true"/>
-    <item
-        android:drawable="@drawable/button_normal"
-        android:state_pressed="false"/>
 </selector>
