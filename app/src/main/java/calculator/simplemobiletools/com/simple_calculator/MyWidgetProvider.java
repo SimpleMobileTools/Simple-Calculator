@@ -3,26 +3,28 @@ package calculator.simplemobiletools.com.simple_calculator;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.RemoteViews;
 
 public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
+    private static final String PREFS = "prefs";
+    private static final String VALUE = "value";
+
+    private static int[] widgetIds;
     private static RemoteViews remoteViews;
     private static CalculatorImpl calc;
     private static AppWidgetManager widgetManager;
-    private static int[] widgetIds;
     private static Intent intent;
     private static Context cxt;
+    private static SharedPreferences prefs;
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-        widgetManager = appWidgetManager;
-        remoteViews = new RemoteViews(context.getPackageName(), R.layout.activity_main);
-        remoteViews.setViewVisibility(R.id.btn_reset, View.VISIBLE);
-        calc = new CalculatorImpl(this);
-        widgetIds = appWidgetIds;
+        initVariables(context);
         cxt = context;
 
         intent = new Intent(context, MyWidgetProvider.class);
@@ -58,9 +60,58 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
         remoteViews.setOnClickPendingIntent(id, pendingIntent);
     }
 
+    private void initVariables(Context context) {
+        final ComponentName component = new ComponentName(context, MyWidgetProvider.class);
+        remoteViews = new RemoteViews(context.getPackageName(), R.layout.activity_main);
+        remoteViews.setViewVisibility(R.id.btn_reset, View.VISIBLE);
+        widgetManager = AppWidgetManager.getInstance(context);
+        widgetIds = widgetManager.getAppWidgetIds(component);
+
+        prefs = initPrefs(context);
+        final String value = prefs.getString(VALUE, "0");
+        calc = new CalculatorImpl(this, value);
+    }
+
+    private SharedPreferences initPrefs(Context context) {
+        return context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
+    }
+
     @Override
     public void onReceive(Context context, Intent intent) {
-        String action = intent.getAction();
+        final String action = intent.getAction();
+        switch (action) {
+            case Constants.DECIMAL:
+            case Constants.ZERO:
+            case Constants.ONE:
+            case Constants.TWO:
+            case Constants.THREE:
+            case Constants.FOUR:
+            case Constants.FIVE:
+            case Constants.SIX:
+            case Constants.SEVEN:
+            case Constants.EIGHT:
+            case Constants.NINE:
+            case Constants.EQUALS:
+            case Constants.CLEAR:
+            case Constants.RESET:
+            case Constants.PLUS:
+            case Constants.MINUS:
+            case Constants.MULTIPLY:
+            case Constants.DIVIDE:
+            case Constants.MODULO:
+            case Constants.POWER:
+            case Constants.ROOT:
+                myAction(action, context);
+                break;
+            default:
+                super.onReceive(context, intent);
+        }
+    }
+
+    private void myAction(String action, Context context) {
+        if (calc == null)
+            initVariables(context);
+
         switch (action) {
             case Constants.DECIMAL:
                 calc.numpadClicked(R.id.btn_decimal);
@@ -114,7 +165,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
                 calc.handleOperation(action);
                 break;
             default:
-                super.onReceive(context, intent);
+                break;
         }
     }
 
@@ -122,10 +173,20 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     public void setValue(String value) {
         remoteViews.setTextViewText(R.id.result, value);
         widgetManager.updateAppWidget(widgetIds, remoteViews);
+        prefs.edit().putString(VALUE, value).apply();
     }
 
     @Override
     public void setValueDouble(double d) {
 
+    }
+
+    @Override
+    public void onDeleted(Context context, int[] appWidgetIds) {
+        super.onDeleted(context, appWidgetIds);
+        if (prefs == null)
+            prefs = initPrefs(context);
+
+        prefs.edit().remove(VALUE).apply();
     }
 }

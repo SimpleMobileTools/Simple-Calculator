@@ -12,11 +12,18 @@ public class CalculatorImpl {
     public CalculatorImpl(Calculator calculatorInterface) {
         callback = calculatorInterface;
         resetValues();
+        setValue("0");
+    }
+
+    public CalculatorImpl(Calculator calculatorInterface, String value) {
+        callback = calculatorInterface;
+        resetValues();
+        displayedValue = value;
     }
 
     private void resetValueIfNeeded() {
         if (resetValue)
-            setValue("0");
+            displayedValue = "0";
 
         resetValue = false;
     }
@@ -28,7 +35,6 @@ public class CalculatorImpl {
         lastKey = "";
         lastOperation = "";
         displayedValue = "";
-        setValue("0");
     }
 
     public void setValue(String value) {
@@ -155,6 +161,7 @@ public class CalculatorImpl {
 
     public void handleReset() {
         resetValues();
+        setValue("0");
     }
 
     public void handleEquals() {
