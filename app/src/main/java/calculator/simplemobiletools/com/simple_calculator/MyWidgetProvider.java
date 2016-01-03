@@ -11,9 +11,6 @@ import android.view.View;
 import android.widget.RemoteViews;
 
 public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
-    private static final String PREFS = "prefs";
-    private static final String VALUE = "value";
-
     private static int[] widgetIds;
     private static RemoteViews remoteViews;
     private static CalculatorImpl calc;
@@ -61,19 +58,22 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     }
 
     private void initVariables(Context context) {
+        prefs = initPrefs(context);
         final ComponentName component = new ComponentName(context, MyWidgetProvider.class);
         remoteViews = new RemoteViews(context.getPackageName(), R.layout.activity_main);
         remoteViews.setViewVisibility(R.id.btn_reset, View.VISIBLE);
+        final int newBgColor = prefs.getInt(Constants.WIDGET_BG_COLOR, context.getResources().getColor(R.color.dark_grey));
+        remoteViews.setInt(R.id.calculator_holder, "setBackgroundColor", newBgColor);
+
         widgetManager = AppWidgetManager.getInstance(context);
         widgetIds = widgetManager.getAppWidgetIds(component);
 
-        prefs = initPrefs(context);
-        final String value = prefs.getString(VALUE, "0");
+        final String value = prefs.getString(Constants.VALUE, "0");
         calc = new CalculatorImpl(this, value);
     }
 
     private SharedPreferences initPrefs(Context context) {
-        return context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
+        return context.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
     }
 
     @Override
@@ -109,7 +109,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     }
 
     private void myAction(String action, Context context) {
-        if (calc == null)
+        if (calc == null || remoteViews == null || widgetManager == null || widgetIds == null || prefs == null)
             initVariables(context);
 
         switch (action) {
@@ -173,7 +173,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     public void setValue(String value) {
         remoteViews.setTextViewText(R.id.result, value);
         widgetManager.updateAppWidget(widgetIds, remoteViews);
-        prefs.edit().putString(VALUE, value).apply();
+        prefs.edit().putString(Constants.VALUE, value).apply();
     }
 
     @Override
@@ -187,6 +187,6 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
         if (prefs == null)
             prefs = initPrefs(context);
 
-        prefs.edit().remove(VALUE).apply();
+        prefs.edit().remove(Constants.VALUE).apply();
     }
 }
