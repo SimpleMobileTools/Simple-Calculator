@@ -2,6 +2,7 @@ package calculator.simplemobiletools.com.simple_calculator;
 
 public class CalculatorImpl {
     private String displayedValue;
+    private String displayedFormula;
     private double baseValue;
     private double secondValue;
     private boolean resetValue;
@@ -38,6 +39,7 @@ public class CalculatorImpl {
         lastKey = "";
         lastOperation = "";
         displayedValue = "";
+        displayedFormula = "";
         isFirstOperation = true;
     }
 
@@ -48,6 +50,7 @@ public class CalculatorImpl {
 
     private void setFormula(String value) {
         callback.setFormula(value);
+        displayedFormula = value;
     }
 
     private void updateFormula() {
@@ -90,6 +93,10 @@ public class CalculatorImpl {
         return Double.parseDouble(getDisplayedNumber());
     }
 
+    public String getDisplayedFormula() {
+        return displayedFormula;
+    }
+
     public void handleResult() {
         secondValue = getDisplayedNumberAsDouble();
         calculateResult();
@@ -97,9 +104,8 @@ public class CalculatorImpl {
     }
 
     public void calculateResult() {
-        if (!isFirstOperation) {
+        if (!isFirstOperation)
             updateFormula();
-        }
 
         switch (lastOperation) {
             case Constants.PLUS:
