@@ -155,6 +155,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
                 calc.handleClear();
                 break;
             case Constants.RESET:
+                resetSavedValue(context);
                 calc.handleReset();
                 break;
             case Constants.PLUS:
@@ -186,6 +187,10 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
         super.onDeleted(context, appWidgetIds);
+        resetSavedValue(context);
+    }
+
+    private void resetSavedValue(Context context) {
         if (prefs == null)
             prefs = initPrefs(context);
 
