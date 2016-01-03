@@ -185,6 +185,12 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     }
 
     @Override
+    public void setFormula(String value) {
+        remoteViews.setTextViewText(R.id.formula, value);
+        widgetManager.updateAppWidget(widgetIds, remoteViews);
+    }
+
+    @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
         super.onDeleted(context, appWidgetIds);
         resetSavedValue(context);

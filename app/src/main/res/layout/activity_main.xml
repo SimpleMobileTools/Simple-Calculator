@@ -10,6 +10,18 @@
     tools:context="calculator.simplemobiletools.com.simple_calculator.MainActivity">
 
     <TextView
+        android:id="@+id/formula"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.1"
+        android:gravity="right|bottom"
+        android:lines="1"
+        android:paddingLeft="@dimen/activity_margin"
+        android:paddingRight="@dimen/activity_margin"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/formula_text_size"/>
+
+    <TextView
         android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

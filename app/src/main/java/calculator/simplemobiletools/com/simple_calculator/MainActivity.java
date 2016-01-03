@@ -13,6 +13,7 @@ import butterknife.OnLongClick;
 
 public class MainActivity extends AppCompatActivity implements Calculator {
     @Bind(R.id.result) TextView result;
+    @Bind(R.id.formula) TextView formula;
 
     private CalculatorImpl calc;
 
@@ -29,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements Calculator {
         final Resources res = getResources();
         result.setBackgroundColor(res.getColor(android.R.color.white));
         result.setTextColor(res.getColor(R.color.dark_grey));
+
+        formula.setBackgroundColor(res.getColor(android.R.color.white));
+        formula.setTextColor(res.getColor(R.color.dark_grey));
     }
 
     @OnClick(R.id.btn_plus)
@@ -102,6 +106,11 @@ public class MainActivity extends AppCompatActivity implements Calculator {
     public void setValueDouble(double d) {
         calc.setValue(Formatter.doubleToString(d));
         calc.setLastKey(Constants.DIGIT);
+    }
+
+    @Override
+    public void setFormula(String value) {
+        formula.setText(value);
     }
 
     public CalculatorImpl getCalc() {

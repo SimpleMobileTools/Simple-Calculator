@@ -8,17 +8,20 @@ public class CalculatorImpl {
     private String lastKey;
     private String lastOperation;
     private Calculator callback;
+    private boolean isFirstOperation;
 
     public CalculatorImpl(Calculator calculatorInterface) {
         callback = calculatorInterface;
         resetValues();
         setValue("0");
+        setFormula("");
     }
 
     public CalculatorImpl(Calculator calculatorInterface, String value) {
         callback = calculatorInterface;
         resetValues();
         displayedValue = value;
+        setFormula("");
     }
 
     private void resetValueIfNeeded() {
@@ -35,11 +38,28 @@ public class CalculatorImpl {
         lastKey = "";
         lastOperation = "";
         displayedValue = "";
+        isFirstOperation = true;
     }
 
     public void setValue(String value) {
         callback.setValue(value);
         displayedValue = value;
+    }
+
+    private void setFormula(String value) {
+        callback.setFormula(value);
+    }
+
+    private void updateFormula() {
+        final String first = Formatter.doubleToString(baseValue);
+        final String second = Formatter.doubleToString(secondValue);
+        final String sign = getSign(lastOperation);
+
+        if (sign.equals("√")) {
+            setFormula(sign + first);
+        } else if (!sign.isEmpty()) {
+            setFormula(first + sign + second);
+        }
     }
 
     public void setLastKey(String lastKey) {
@@ -77,6 +97,10 @@ public class CalculatorImpl {
     }
 
     public void calculateResult() {
+        if (!isFirstOperation) {
+            updateFormula();
+        }
+
         switch (lastOperation) {
             case Constants.PLUS:
                 updateResult(baseValue + secondValue);
@@ -102,6 +126,7 @@ public class CalculatorImpl {
             default:
                 break;
         }
+        isFirstOperation = false;
     }
 
     private void divideNumbers() {
@@ -162,6 +187,7 @@ public class CalculatorImpl {
     public void handleReset() {
         resetValues();
         setValue("0");
+        setFormula("");
     }
 
     public void handleEquals() {
@@ -188,6 +214,26 @@ public class CalculatorImpl {
         if (!value.equals("0"))
             value += "0";
         setValue(value);
+    }
+
+    private String getSign(String lastOperation) {
+        switch (lastOperation) {
+            case Constants.PLUS:
+                return "+";
+            case Constants.MINUS:
+                return "-";
+            case Constants.MULTIPLY:
+                return "*";
+            case Constants.DIVIDE:
+                return "/";
+            case Constants.MODULO:
+                return "%";
+            case Constants.POWER:
+                return "^";
+            case Constants.ROOT:
+                return "√";
+        }
+        return "";
     }
 
     public void numpadClicked(int id) {
