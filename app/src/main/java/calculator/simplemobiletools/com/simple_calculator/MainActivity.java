@@ -10,6 +10,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnLongClick;
+import me.grantland.widget.AutofitHelper;
 
 public class MainActivity extends AppCompatActivity implements Calculator {
     @Bind(R.id.result) TextView result;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements Calculator {
         ButterKnife.bind(this);
         calc = new CalculatorImpl(this);
         setupResultView();
+        AutofitHelper.create(result);
     }
 
     private void setupResultView() {

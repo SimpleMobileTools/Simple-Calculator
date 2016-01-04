@@ -13,7 +13,6 @@ public class Formatter {
             symbols.setDecimalSeparator('.');
 
             final DecimalFormat formatter = new DecimalFormat();
-            formatter.setMaximumIntegerDigits(12);
             formatter.setMaximumFractionDigits(12);
             formatter.setDecimalFormatSymbols(symbols);
             formatter.setGroupingUsed(false);
