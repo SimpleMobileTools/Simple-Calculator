@@ -1,4 +1,4 @@
-package calculator.simplemobiletools.com.simple_calculator;
+package calculator.simplemobiletools.com;
 
 import org.junit.runners.model.InitializationError;
 import org.robolectric.RobolectricTestRunner;

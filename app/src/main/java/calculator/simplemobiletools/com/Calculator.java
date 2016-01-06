@@ -1,4 +1,4 @@
-package calculator.simplemobiletools.com.simple_calculator;
+package calculator.simplemobiletools.com;
 
 public interface Calculator {
     void setValue(String value);

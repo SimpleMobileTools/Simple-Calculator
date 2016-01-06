@@ -12,7 +12,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion "22.0.1"
     defaultConfig {
-        applicationId "calculator.simplemobiletools.com.simple_calculator"
+        applicationId "calculator.simplemobiletools.com"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1

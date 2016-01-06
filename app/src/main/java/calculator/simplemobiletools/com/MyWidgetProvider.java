@@ -1,4 +1,4 @@
-package calculator.simplemobiletools.com.simple_calculator;
+package calculator.simplemobiletools.com;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
