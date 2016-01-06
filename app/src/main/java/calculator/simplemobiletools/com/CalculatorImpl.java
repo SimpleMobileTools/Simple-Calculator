@@ -11,8 +11,8 @@ public class CalculatorImpl {
     private Calculator callback;
     private boolean isFirstOperation;
 
-    public CalculatorImpl(Calculator calculatorInterface) {
-        callback = calculatorInterface;
+    public CalculatorImpl(Calculator calculator) {
+        callback = calculator;
         resetValues();
         setValue("0");
         setFormula("");
