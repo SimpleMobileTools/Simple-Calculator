@@ -4,5 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF0000</color>
     <color name="dark_grey">#88000000</color>
-    <color name="dark_grey_pressed">#22000000</color>
+    <color name="dark_grey_pressed">#aa000000</color>
+    <color name="dark_grey_pressed_mask">#22000000</color>
 </resources>

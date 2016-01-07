@@ -26,10 +26,10 @@
 
         <Button
             android:id="@+id/config_save"
-            style="@android:style/Widget.Holo.Light.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:background="@drawable/config_button"
             android:paddingLeft="@dimen/activity_margin"
             android:paddingRight="@dimen/activity_margin"
             android:text="Save"
