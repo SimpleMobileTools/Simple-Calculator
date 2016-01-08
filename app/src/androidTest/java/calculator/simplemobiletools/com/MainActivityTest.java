@@ -30,7 +30,7 @@ public class MainActivityTest {
         press(R.id.btn_8);
         press(R.id.btn_9);
         press(R.id.btn_0);
-        checkResult("1234567890");
+        checkResult("1,234,567,890");
     }
 
     @Test
@@ -139,6 +139,8 @@ public class MainActivityTest {
         checkResult("25");
         press(R.id.btn_clear);
         checkResult("2");
+        press(R.id.btn_clear);
+        checkResult("0");
         press(R.id.btn_clear);
         checkResult("0");
     }

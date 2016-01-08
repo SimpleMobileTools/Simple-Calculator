@@ -6,17 +6,19 @@ import java.util.Locale;
 
 public class Formatter {
     public static String doubleToString(double d) {
-        if (d == (long) d) {
-            return String.format("%d", (long) d);
-        } else {
-            final DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.US);
-            symbols.setDecimalSeparator('.');
+        final DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.US);
+        symbols.setDecimalSeparator('.');
+        symbols.setGroupingSeparator(',');
 
-            final DecimalFormat formatter = new DecimalFormat();
-            formatter.setMaximumFractionDigits(12);
-            formatter.setDecimalFormatSymbols(symbols);
-            formatter.setGroupingUsed(false);
-            return formatter.format(d);
-        }
+        final DecimalFormat formatter = new DecimalFormat();
+        formatter.setMaximumFractionDigits(12);
+        formatter.setDecimalFormatSymbols(symbols);
+        formatter.setGroupingUsed(true);
+        return formatter.format(d);
+    }
+
+    public static Double stringToDouble(String str) {
+        str = str.replaceAll(",", "");
+        return Double.parseDouble(str);
     }
 }

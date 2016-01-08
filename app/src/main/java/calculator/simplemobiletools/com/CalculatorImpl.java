@@ -71,12 +71,12 @@ public class CalculatorImpl {
 
     public void addDigit(int number) {
         final String currentValue = getDisplayedNumber();
-        final String newValue = removeLeadingZero(currentValue + number);
+        final String newValue = formatString(currentValue + number);
         setValue(newValue);
     }
 
-    private String removeLeadingZero(String str) {
-        final double doubleValue = Double.parseDouble(str);
+    private String formatString(String str) {
+        final double doubleValue = Formatter.stringToDouble(str);
         return Formatter.doubleToString(doubleValue);
     }
 
@@ -90,7 +90,7 @@ public class CalculatorImpl {
     }
 
     public double getDisplayedNumberAsDouble() {
-        return Double.parseDouble(getDisplayedNumber());
+        return Formatter.stringToDouble(getDisplayedNumber());
     }
 
     public String getDisplayedFormula() {
@@ -186,8 +186,9 @@ public class CalculatorImpl {
         if (newValue.equals("-0"))
             newValue = "0";
 
+        newValue = newValue.replaceAll(",$", "");
         setValue(newValue);
-        baseValue = Double.parseDouble(newValue);
+        baseValue = Formatter.stringToDouble(newValue);
     }
 
     public void handleReset() {
@@ -218,8 +219,7 @@ public class CalculatorImpl {
     public void zeroClicked() {
         String value = getDisplayedNumber();
         if (!value.equals("0"))
-            value += "0";
-        setValue(value);
+            addDigit(0);
     }
 
     private String getSign(String lastOperation) {
