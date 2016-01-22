@@ -188,6 +188,7 @@ public class CalculatorImpl {
         else
             newValue = "0";
 
+        newValue = newValue.replaceAll("\\.$", "");
         newValue = formatString(newValue);
         setValue(newValue);
         baseValue = Formatter.stringToDouble(newValue);
