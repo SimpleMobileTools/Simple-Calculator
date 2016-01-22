@@ -76,6 +76,11 @@ public class CalculatorImpl {
     }
 
     private String formatString(String str) {
+        // if the number contains a decimal, do not try removing the leading zero anymore, nor add group separator
+        // it would prevent writing values like 1.02
+        if (str.contains("."))
+            return str;
+
         final double doubleValue = Formatter.stringToDouble(str);
         return Formatter.doubleToString(doubleValue);
     }
@@ -183,10 +188,7 @@ public class CalculatorImpl {
         else
             newValue = "0";
 
-        if (newValue.equals("-0"))
-            newValue = "0";
-
-        newValue = newValue.replaceAll(",$", "");
+        newValue = formatString(newValue);
         setValue(newValue);
         baseValue = Formatter.stringToDouble(newValue);
     }
