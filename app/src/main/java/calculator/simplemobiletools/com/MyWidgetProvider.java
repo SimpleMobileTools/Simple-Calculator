@@ -196,6 +196,12 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
         resetSavedValue(context);
     }
 
+    @Override
+    public void onDisabled(Context context) {
+        super.onDisabled(context);
+        resetSavedValue(context);
+    }
+
     private void resetSavedValue(Context context) {
         if (prefs == null)
             prefs = initPrefs(context);
