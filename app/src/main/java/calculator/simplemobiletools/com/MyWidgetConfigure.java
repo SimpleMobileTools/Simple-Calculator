@@ -1,12 +1,12 @@
 package calculator.simplemobiletools.com;
 
-import android.app.Activity;
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RemoteViews;
 import android.widget.SeekBar;
@@ -15,7 +15,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MyWidgetConfigure extends Activity implements SeekBar.OnSeekBarChangeListener {
+public class MyWidgetConfigure extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
     @Bind(R.id.btn_reset) View resetBtn;
     @Bind(R.id.config_seekbar) SeekBar seekBar;
     @Bind(R.id.config_calc) View background;

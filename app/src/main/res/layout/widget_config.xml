@@ -4,10 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
-    android:layout_marginBottom="80dp"
-    android:layout_marginLeft="@dimen/activity_margin"
-    android:layout_marginRight="@dimen/activity_margin"
-    android:layout_marginTop="80dp">
+    android:layout_margin="@dimen/activity_margin">
 
     <include
         android:id="@+id/config_calc"
