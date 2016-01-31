@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RemoteViews;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -68,12 +69,6 @@ public class MyWidgetConfigure extends AppCompatActivity {
         updateTextColor();
     }
 
-    private void updateTextColor() {
-        textColorPicker.setBackgroundColor(textColor);
-
-        saveBtn.setTextColor(textColor);
-    }
-
     @OnClick(R.id.config_save)
     public void saveConfig() {
         final AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this);
@@ -93,6 +88,7 @@ public class MyWidgetConfigure extends AppCompatActivity {
     private void storeWidgetBackground() {
         final SharedPreferences prefs = getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
         prefs.edit().putInt(Constants.WIDGET_BG_COLOR, bgColor).apply();
+        prefs.edit().putInt(Constants.WIDGET_TEXT_COLOR, textColor).apply();
     }
 
     private void requestWidgetUpdate() {
@@ -106,6 +102,24 @@ public class MyWidgetConfigure extends AppCompatActivity {
         background.setBackgroundColor(bgColor);
         bgColorPicker.setBackgroundColor(bgColor);
         saveBtn.setBackgroundColor(bgColor);
+    }
+
+    private void updateTextColor() {
+        textColorPicker.setBackgroundColor(textColor);
+        saveBtn.setTextColor(textColor);
+
+        int[] viewIds =
+                new int[]{R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7, R.id.btn_8,
+                        R.id.btn_9, R.id.btn_modulo, R.id.btn_power, R.id.btn_root, R.id.btn_clear, R.id.btn_reset, R.id.btn_divide,
+                        R.id.btn_multiply, R.id.btn_minus, R.id.btn_plus, R.id.btn_decimal, R.id.btn_equals};
+        final TextView result = (TextView) findViewById(R.id.result);
+        result.setTextColor(textColor);
+
+        Button btn;
+        for (int i : viewIds) {
+            btn = (Button) findViewById(i);
+            btn.setTextColor(textColor);
+        }
     }
 
     @OnClick(R.id.config_bg_color)

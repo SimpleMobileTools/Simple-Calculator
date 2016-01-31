@@ -7,6 +7,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.view.View;
 import android.widget.RemoteViews;
 
@@ -59,14 +60,16 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
 
     private void initVariables(Context context) {
         prefs = initPrefs(context);
+        final ComponentName component = new ComponentName(context, MyWidgetProvider.class);
         final int defaultColor = context.getResources().getColor(R.color.dark_grey);
         final int newBgColor = prefs.getInt(Constants.WIDGET_BG_COLOR, defaultColor);
-        final ComponentName component = new ComponentName(context, MyWidgetProvider.class);
+        final int newTextColor = prefs.getInt(Constants.WIDGET_TEXT_COLOR, Color.WHITE);
 
         remoteViews = new RemoteViews(context.getPackageName(), R.layout.activity_main);
         remoteViews.setViewVisibility(R.id.btn_reset, View.VISIBLE);
         remoteViews.setInt(R.id.calculator_holder, "setBackgroundColor", newBgColor);
 
+        updateTextColors(newTextColor);
         widgetManager = AppWidgetManager.getInstance(context);
         widgetIds = widgetManager.getAppWidgetIds(component);
 
@@ -76,6 +79,17 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
 
     private SharedPreferences initPrefs(Context context) {
         return context.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
+    }
+
+    private void updateTextColors(int color) {
+        int[] viewIds =
+                new int[]{R.id.formula, R.id.result, R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6,
+                        R.id.btn_7, R.id.btn_8, R.id.btn_9, R.id.btn_modulo, R.id.btn_power, R.id.btn_root, R.id.btn_clear, R.id.btn_reset,
+                        R.id.btn_divide, R.id.btn_multiply, R.id.btn_minus, R.id.btn_plus, R.id.btn_decimal, R.id.btn_equals};
+
+        for (int i : viewIds) {
+            remoteViews.setInt(i, "setTextColor", color);
+        }
     }
 
     @Override
