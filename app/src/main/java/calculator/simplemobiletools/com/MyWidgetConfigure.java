@@ -25,6 +25,7 @@ public class MyWidgetConfigure extends AppCompatActivity implements SeekBar.OnSe
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setResult(RESULT_CANCELED);
         setContentView(R.layout.widget_config);
         ButterKnife.bind(this);
 
@@ -39,8 +40,6 @@ public class MyWidgetConfigure extends AppCompatActivity implements SeekBar.OnSe
 
         if (widgetId == AppWidgetManager.INVALID_APPWIDGET_ID)
             finish();
-
-        setResult(RESULT_CANCELED);
     }
 
     @OnClick(R.id.config_save)
