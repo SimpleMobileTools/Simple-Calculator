@@ -8,19 +8,28 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RemoteViews;
 import android.widget.SeekBar;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import yuku.ambilwarna.AmbilWarnaDialog;
 
-public class MyWidgetConfigure extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
+public class MyWidgetConfigure extends AppCompatActivity {
     @Bind(R.id.btn_reset) View resetBtn;
-    @Bind(R.id.config_seekbar) SeekBar seekBar;
+    @Bind(R.id.config_bg_color) View bgColorPicker;
+    @Bind(R.id.config_bg_seekbar) SeekBar bgSeekBar;
+    @Bind(R.id.config_text_color) View textColorPicker;
     @Bind(R.id.config_calc) View background;
+    @Bind(R.id.config_save) Button saveBtn;
     private int widgetId;
-    private int newBgColor;
+
+    private int bgColor;
+    private int bgColorWithoutTransparency;
+    private float bgAlpha;
+    private int textColor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,10 +37,7 @@ public class MyWidgetConfigure extends AppCompatActivity implements SeekBar.OnSe
         setResult(RESULT_CANCELED);
         setContentView(R.layout.widget_config);
         ButterKnife.bind(this);
-
-        resetBtn.setVisibility(View.VISIBLE);
-        seekBar.setOnSeekBarChangeListener(this);
-        seekBar.setProgress(50);
+        initVariables();
 
         final Intent intent = getIntent();
         final Bundle extras = intent.getExtras();
@@ -42,11 +48,37 @@ public class MyWidgetConfigure extends AppCompatActivity implements SeekBar.OnSe
             finish();
     }
 
+    private void initVariables() {
+        final SharedPreferences prefs = getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
+        bgColor = prefs.getInt(Constants.WIDGET_BG_COLOR, 0);
+        if (bgColor == 0) {
+            bgColor = Color.BLACK;
+            bgAlpha = .5f;
+        } else {
+            bgAlpha = Color.alpha(bgColor) / (float) 255;
+        }
+
+        resetBtn.setVisibility(View.VISIBLE);
+        bgColorWithoutTransparency = Color.rgb(Color.red(bgColor), Color.green(bgColor), Color.blue(bgColor));
+        bgSeekBar.setOnSeekBarChangeListener(bgSeekbarChangeListener);
+        bgSeekBar.setProgress((int) (bgAlpha * 100));
+        updateBackgroundColor();
+
+        textColor = prefs.getInt(Constants.WIDGET_TEXT_COLOR, Color.WHITE);
+        updateTextColor();
+    }
+
+    private void updateTextColor() {
+        textColorPicker.setBackgroundColor(textColor);
+
+        saveBtn.setTextColor(textColor);
+    }
+
     @OnClick(R.id.config_save)
     public void saveConfig() {
         final AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this);
         final RemoteViews views = new RemoteViews(getPackageName(), R.layout.activity_main);
-        views.setInt(R.id.calculator_holder, "setBackgroundColor", newBgColor);
+        views.setInt(R.id.calculator_holder, "setBackgroundColor", bgColor);
         appWidgetManager.updateAppWidget(widgetId, views);
 
         storeWidgetBackground();
@@ -60,7 +92,7 @@ public class MyWidgetConfigure extends AppCompatActivity implements SeekBar.OnSe
 
     private void storeWidgetBackground() {
         final SharedPreferences prefs = getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
-        prefs.edit().putInt(Constants.WIDGET_BG_COLOR, newBgColor).apply();
+        prefs.edit().putInt(Constants.WIDGET_BG_COLOR, bgColor).apply();
     }
 
     private void requestWidgetUpdate() {
@@ -69,19 +101,70 @@ public class MyWidgetConfigure extends AppCompatActivity implements SeekBar.OnSe
         sendBroadcast(intent);
     }
 
-    @Override
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-        final float percent = (float) progress / (float) 100;
-        final int alpha = (int) (255 * percent);
-        newBgColor = Color.argb(alpha, 0, 0, 0);
-        background.setBackgroundColor(newBgColor);
+    private void updateBackgroundColor() {
+        bgColor = adjustAlpha(bgColorWithoutTransparency, bgAlpha);
+        background.setBackgroundColor(bgColor);
+        bgColorPicker.setBackgroundColor(bgColor);
+        saveBtn.setBackgroundColor(bgColor);
     }
 
-    @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {
+    @OnClick(R.id.config_bg_color)
+    public void pickBackgroundColor() {
+        AmbilWarnaDialog dialog = new AmbilWarnaDialog(this, bgColorWithoutTransparency, new AmbilWarnaDialog.OnAmbilWarnaListener() {
+            @Override
+            public void onCancel(AmbilWarnaDialog dialog) {
+            }
+
+            @Override
+            public void onOk(AmbilWarnaDialog dialog, int color) {
+                bgColorWithoutTransparency = color;
+                updateBackgroundColor();
+            }
+        });
+
+        dialog.show();
     }
 
-    @Override
-    public void onStopTrackingTouch(SeekBar seekBar) {
+    @OnClick(R.id.config_text_color)
+    public void pickTextColor() {
+        AmbilWarnaDialog dialog = new AmbilWarnaDialog(this, textColor, new AmbilWarnaDialog.OnAmbilWarnaListener() {
+            @Override
+            public void onCancel(AmbilWarnaDialog dialog) {
+            }
+
+            @Override
+            public void onOk(AmbilWarnaDialog dialog, int color) {
+                textColor = color;
+                updateTextColor();
+            }
+        });
+
+        dialog.show();
+    }
+
+    private SeekBar.OnSeekBarChangeListener bgSeekbarChangeListener = new SeekBar.OnSeekBarChangeListener() {
+        @Override
+        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            bgAlpha = (float) progress / (float) 100;
+            updateBackgroundColor();
+        }
+
+        @Override
+        public void onStartTrackingTouch(SeekBar seekBar) {
+
+        }
+
+        @Override
+        public void onStopTrackingTouch(SeekBar seekBar) {
+
+        }
+    };
+
+    private int adjustAlpha(int color, float factor) {
+        final int alpha = Math.round(Color.alpha(color) * factor);
+        final int red = Color.red(color);
+        final int green = Color.green(color);
+        final int blue = Color.blue(color);
+        return Color.argb(alpha, red, green, blue);
     }
 }
