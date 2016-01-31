@@ -46,7 +46,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="%"/>
+            android:text="mod"
+            android:textAllCaps="false"
+            android:textSize="@dimen/mod_text_size"/>
 
         <Button
             android:id="@+id/btn_power"

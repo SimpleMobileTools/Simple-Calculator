@@ -2,6 +2,7 @@
     <dimen name="activity_margin">16dp</dimen>
     <dimen name="result_padding">64dp</dimen>
     <dimen name="config_text_size">18sp</dimen>
+    <dimen name="mod_text_size">22sp</dimen>
     <dimen name="button_text_size">28sp</dimen>
     <dimen name="formula_text_size">20sp</dimen>
     <dimen name="display_text_size">40sp</dimen>
