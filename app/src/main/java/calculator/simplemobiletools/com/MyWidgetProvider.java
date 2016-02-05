@@ -21,8 +21,8 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-        initVariables(context);
         cxt = context;
+        initVariables();
 
         intent = new Intent(context, MyWidgetProvider.class);
         setupIntent(Constants.DECIMAL, R.id.btn_decimal);
@@ -48,7 +48,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
         setupIntent(Constants.CLEAR, R.id.btn_clear);
         setupIntent(Constants.RESET, R.id.btn_reset);
 
-        updateWidget(context);
+        updateWidget();
         super.onUpdate(context, appWidgetManager, appWidgetIds);
     }
 
@@ -58,26 +58,26 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
         remoteViews.setOnClickPendingIntent(id, pendingIntent);
     }
 
-    private void initVariables(Context context) {
-        prefs = initPrefs(context);
-        final int defaultColor = context.getResources().getColor(R.color.dark_grey);
+    private void initVariables() {
+        prefs = initPrefs(cxt);
+        final int defaultColor = cxt.getResources().getColor(R.color.dark_grey);
         final int newBgColor = prefs.getInt(Constants.WIDGET_BG_COLOR, defaultColor);
         final int newTextColor = prefs.getInt(Constants.WIDGET_TEXT_COLOR, Color.WHITE);
 
-        remoteViews = new RemoteViews(context.getPackageName(), R.layout.activity_main);
+        remoteViews = new RemoteViews(cxt.getPackageName(), R.layout.activity_main);
         remoteViews.setViewVisibility(R.id.btn_reset, View.VISIBLE);
         remoteViews.setInt(R.id.calculator_holder, "setBackgroundColor", newBgColor);
 
         updateTextColors(newTextColor);
-        widgetManager = AppWidgetManager.getInstance(context);
+        widgetManager = AppWidgetManager.getInstance(cxt);
 
         final String displayValue = prefs.getString(Constants.CALC_VALUE, "0");
         calc = new CalculatorImpl(this, displayValue);
     }
 
-    private void updateWidget(Context context) {
-        final ComponentName thisWidget = new ComponentName(context, MyWidgetProvider.class);
-        AppWidgetManager.getInstance(context).updateAppWidget(thisWidget, remoteViews);
+    private void updateWidget() {
+        final ComponentName thisWidget = new ComponentName(cxt, MyWidgetProvider.class);
+        AppWidgetManager.getInstance(cxt).updateAppWidget(thisWidget, remoteViews);
     }
 
     private SharedPreferences initPrefs(Context context) {
@@ -121,16 +121,16 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
             case Constants.MODULO:
             case Constants.POWER:
             case Constants.ROOT:
-                myAction(action, context);
+                myAction(action);
                 break;
             default:
                 super.onReceive(context, intent);
         }
     }
 
-    private void myAction(String action, Context context) {
+    private void myAction(String action) {
         if (calc == null || remoteViews == null || widgetManager == null || prefs == null) {
-            initVariables(context);
+            initVariables();
         }
 
         switch (action) {
@@ -174,7 +174,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
                 calc.handleClear();
                 break;
             case Constants.RESET:
-                resetSavedValue(context);
+                resetSavedValue(cxt);
                 calc.handleReset();
                 break;
             case Constants.PLUS:
@@ -194,7 +194,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     @Override
     public void setValue(String value) {
         remoteViews.setTextViewText(R.id.result, value);
-        updateWidget(cxt);
+        updateWidget();
         prefs.edit().putString(Constants.CALC_VALUE, value).apply();
     }
 
@@ -206,7 +206,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     @Override
     public void setFormula(String value) {
         remoteViews.setTextViewText(R.id.formula, value);
-        updateWidget(cxt);
+        updateWidget();
     }
 
     @Override
