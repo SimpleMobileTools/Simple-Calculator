@@ -1,4 +1,4 @@
-package calculator.simplemobiletools.com;
+package com.simplemobiletools.calculator;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;

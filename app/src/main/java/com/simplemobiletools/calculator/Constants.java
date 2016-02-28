@@ -1,4 +1,4 @@
-package calculator.simplemobiletools.com;
+package com.simplemobiletools.calculator;
 
 public class Constants {
     public static final String DIGIT = "digit";

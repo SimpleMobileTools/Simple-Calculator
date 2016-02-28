@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:configure="calculator.simplemobiletools.com.MyWidgetConfigure"
+                    android:configure="com.simplemobiletools.calculator.MyWidgetConfigure"
                     android:initialLayout="@layout/activity_main"
                     android:updatePeriodMillis="36000000"
                     android:minHeight="250dp"

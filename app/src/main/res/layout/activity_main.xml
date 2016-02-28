@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/dark_grey"
     android:orientation="vertical"
-    tools:context="calculator.simplemobiletools.com.MainActivity">
+    tools:context="com.simplemobiletools.calculator.MainActivity">
 
     <TextView
         android:id="@+id/formula"

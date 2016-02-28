@@ -1,4 +1,4 @@
-package calculator.simplemobiletools.com;
+package com.simplemobiletools.calculator;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -7,7 +7,6 @@ import org.robolectric.Robolectric;
 import org.robolectric.annotation.Config;
 
 import butterknife.ButterKnife;
-import calculator.simplemobiletools.com.BuildConfig;
 
 import static junit.framework.Assert.assertEquals;
 

@@ -1,4 +1,4 @@
-package calculator.simplemobiletools.com;
+package com.simplemobiletools.calculator;
 
 import android.content.res.Resources;
 import android.os.Bundle;

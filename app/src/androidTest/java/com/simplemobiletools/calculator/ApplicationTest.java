@@ -1,4 +1,4 @@
-package calculator.simplemobiletools.com;
+package com.simplemobiletools.calculator;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
