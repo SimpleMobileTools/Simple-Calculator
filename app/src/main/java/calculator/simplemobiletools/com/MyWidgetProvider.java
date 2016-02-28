@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.RemoteViews;
 
 public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
+    private static int[] widgetIds;
     private static RemoteViews remoteViews;
     private static CalculatorImpl calc;
     private static AppWidgetManager widgetManager;
@@ -59,6 +60,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     }
 
     private void initVariables() {
+        updateWidgetIds();
         prefs = initPrefs(cxt);
         final int defaultColor = cxt.getResources().getColor(R.color.dark_grey);
         final int newBgColor = prefs.getInt(Constants.WIDGET_BG_COLOR, defaultColor);
@@ -75,9 +77,16 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
         calc = new CalculatorImpl(this, displayValue);
     }
 
+    private void updateWidgetIds() {
+        final ComponentName component = new ComponentName(cxt, MyWidgetProvider.class);
+        widgetManager = AppWidgetManager.getInstance(cxt);
+        widgetIds = widgetManager.getAppWidgetIds(component);
+    }
+
     private void updateWidget() {
-        final ComponentName thisWidget = new ComponentName(cxt, MyWidgetProvider.class);
-        AppWidgetManager.getInstance(cxt).updateAppWidget(thisWidget, remoteViews);
+        for (int widgetId : widgetIds) {
+            widgetManager.updateAppWidget(widgetId, remoteViews);
+        }
     }
 
     private SharedPreferences initPrefs(Context context) {
@@ -213,6 +222,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     public void onDeleted(Context context, int[] appWidgetIds) {
         super.onDeleted(context, appWidgetIds);
         resetSavedValue(context);
+        updateWidgetIds();
     }
 
     @Override
