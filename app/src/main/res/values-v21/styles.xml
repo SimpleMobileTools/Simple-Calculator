@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="MyButton" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+    </style>
+
+</resources>
