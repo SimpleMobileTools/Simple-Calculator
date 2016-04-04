@@ -73,7 +73,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
         updateTextColors(newTextColor);
         widgetManager = AppWidgetManager.getInstance(cxt);
 
-        final String displayValue = prefs.getString(Constants.CALC_VALUE, "0");
+        final String displayValue = "0";
         calc = new CalculatorImpl(this, displayValue);
     }
 
@@ -183,7 +183,6 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
                 calc.handleClear();
                 break;
             case Constants.RESET:
-                resetSavedValue(cxt);
                 calc.handleReset();
                 break;
             case Constants.PLUS:
@@ -204,7 +203,6 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     public void setValue(String value) {
         remoteViews.setTextViewText(R.id.result, value);
         updateWidget();
-        prefs.edit().putString(Constants.CALC_VALUE, value).apply();
     }
 
     @Override
@@ -221,20 +219,6 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
         super.onDeleted(context, appWidgetIds);
-        resetSavedValue(context);
         updateWidgetIds();
-    }
-
-    @Override
-    public void onDisabled(Context context) {
-        super.onDisabled(context);
-        resetSavedValue(context);
-    }
-
-    private void resetSavedValue(Context context) {
-        if (prefs == null)
-            prefs = initPrefs(context);
-
-        prefs.edit().remove(Constants.CALC_VALUE).apply();
     }
 }
