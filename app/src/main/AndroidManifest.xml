@@ -42,6 +42,7 @@
 
         <activity
             android:name="com.simplemobiletools.calculator.AboutActivity"
+            android:label="@string/about"
             android:screenOrientation="portrait"/>
     </application>
 </manifest>
