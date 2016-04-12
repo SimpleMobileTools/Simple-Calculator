@@ -134,8 +134,6 @@ public class MainActivityTest {
         press(R.id.btn_decimal);
         press(R.id.btn_7);
         press(R.id.btn_clear);
-        checkResult("25.");
-        press(R.id.btn_clear);
         checkResult("25");
         press(R.id.btn_clear);
         checkResult("2");
