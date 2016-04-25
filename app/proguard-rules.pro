@@ -16,6 +16,7 @@
 #   public *;
 #}
 
+# Butterknife
 -keep class butterknife.** { *; }
 -dontwarn butterknife.internal.**
 -keep class **$$ViewBinder { *; }

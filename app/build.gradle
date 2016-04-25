@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 23
     buildToolsVersion "22.0.1"
+
     defaultConfig {
         applicationId "com.simplemobiletools.calculator"
         minSdkVersion 16
