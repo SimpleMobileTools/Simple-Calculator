@@ -12,9 +12,11 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     signingConfigs {
         release
     }
+
     buildTypes {
         release {
             minifyEnabled true
