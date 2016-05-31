@@ -22,8 +22,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-        cxt = context;
-        initVariables();
+        initVariables(context);
 
         intent = new Intent(context, MyWidgetProvider.class);
         setupIntent(Constants.DECIMAL, R.id.btn_decimal);
@@ -59,7 +58,8 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
         remoteViews.setOnClickPendingIntent(id, pendingIntent);
     }
 
-    private void initVariables() {
+    private void initVariables(Context context) {
+        cxt = context;
         updateWidgetIds();
         prefs = initPrefs(cxt);
         final int defaultColor = cxt.getResources().getColor(R.color.dark_grey);
@@ -106,7 +106,6 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        cxt = context;
         final String action = intent.getAction();
         switch (action) {
             case Constants.DECIMAL:
@@ -130,16 +129,16 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
             case Constants.MODULO:
             case Constants.POWER:
             case Constants.ROOT:
-                myAction(action);
+                myAction(action, context);
                 break;
             default:
                 super.onReceive(context, intent);
         }
     }
 
-    private void myAction(String action) {
-        if (calc == null || remoteViews == null || widgetManager == null || prefs == null) {
-            initVariables();
+    private void myAction(String action, Context context) {
+        if (calc == null || remoteViews == null || widgetManager == null || prefs == null || cxt == null) {
+            initVariables(context);
         }
 
         switch (action) {
