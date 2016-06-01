@@ -54,10 +54,10 @@ public class MainActivity extends AppCompatActivity implements Calculator {
     private void setupResultView() {
         final Resources res = getResources();
         result.setBackgroundColor(res.getColor(android.R.color.white));
-        result.setTextColor(res.getColor(R.color.dark_grey));
+        result.setTextColor( res.getColor(R.color.text_grey));
 
         formula.setBackgroundColor(res.getColor(android.R.color.white));
-        formula.setTextColor(res.getColor(R.color.dark_grey));
+        formula.setTextColor(res.getColor(R.color.text_grey));
     }
 
     @OnClick(R.id.btn_plus)

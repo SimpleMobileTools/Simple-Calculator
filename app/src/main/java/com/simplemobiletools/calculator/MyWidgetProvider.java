@@ -62,7 +62,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
         cxt = context;
         updateWidgetIds();
         prefs = initPrefs(cxt);
-        final int defaultColor = cxt.getResources().getColor(R.color.dark_grey);
+        final int defaultColor = cxt.getResources().getColor(R.color.text_grey);
         final int newBgColor = prefs.getInt(Constants.WIDGET_BG_COLOR, defaultColor);
         final int newTextColor = prefs.getInt(Constants.WIDGET_TEXT_COLOR, Color.WHITE);
 

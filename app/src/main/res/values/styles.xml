@@ -11,9 +11,10 @@
     </style>
 
     <style name="MyButton" parent="Widget.AppCompat.Button">
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:background">@drawable/button</item>
         <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:fontFamily">sans-serif-light</item>
     </style>
 
     <style name="MyWidgetConfigTheme" parent="@style/AppTheme">

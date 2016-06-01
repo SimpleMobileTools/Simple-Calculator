@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF0000</color>
-    <color name="dark_grey">#88000000</color>
-    <color name="dark_grey_pressed">#aa000000</color>
-    <color name="dark_grey_pressed_mask">#22000000</color>
+    <color name="colorPrimary">#ffff6f00</color>
+    <color name="colorPrimaryDark">#ffe46300</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+    <color name="buttons_background">#05000000</color>
+    <color name="text_grey">#77000000</color>
+    <color name="dark_grey_pressed_mask">#11000000</color>
 </resources>
