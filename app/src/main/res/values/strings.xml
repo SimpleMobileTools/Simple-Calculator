@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Simple Calculator</string>
+
+    <!-- About -->
     <string name="about">About</string>
     <string name="website">For more simple apps please visit:\nhttp://simplemobiletools.com</string>
     <string name="email_label">You can send your feedback and new app suggestions at:</string>
