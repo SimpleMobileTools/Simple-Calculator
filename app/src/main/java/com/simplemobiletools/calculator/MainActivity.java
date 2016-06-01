@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements Calculator {
         calc = new CalculatorImpl(this);
         setupResultView();
         AutofitHelper.create(result);
+        AutofitHelper.create(formula);
     }
 
     @Override
