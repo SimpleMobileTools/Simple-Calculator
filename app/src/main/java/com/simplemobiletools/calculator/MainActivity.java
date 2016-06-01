@@ -10,15 +10,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnLongClick;
 import me.grantland.widget.AutofitHelper;
 
 public class MainActivity extends AppCompatActivity implements Calculator {
-    @Bind(R.id.result) TextView result;
-    @Bind(R.id.formula) TextView formula;
+    @BindView(R.id.result) TextView result;
+    @BindView(R.id.formula) TextView formula;
 
     private CalculatorImpl calc;
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements Calculator {
     private void setupResultView() {
         final Resources res = getResources();
         result.setBackgroundColor(res.getColor(android.R.color.white));
-        result.setTextColor( res.getColor(R.color.text_grey));
+        result.setTextColor(res.getColor(R.color.text_grey));
 
         formula.setBackgroundColor(res.getColor(android.R.color.white));
         formula.setTextColor(res.getColor(R.color.text_grey));
