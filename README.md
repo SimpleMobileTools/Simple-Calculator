@@ -16,4 +16,20 @@ A simple Android opensource calculator with a widget, functional and UI tests
 3. select Run 'Tests in 'calculator.simplemob...' to run all the tests
 4. if you are on Linux or Mac, go to Run -> Edit Configurations, select the new JUnit configuration and change the "Working Directory" item to "$MODULE_DIR" (without quotes)
 5. OK
-5. Run
+6. Run
+
+License
+-------
+    Copyright 2016 SimpleMobileTools
+    
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+       http://www.apache.org/licenses/LICENSE-2.0
+    
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
