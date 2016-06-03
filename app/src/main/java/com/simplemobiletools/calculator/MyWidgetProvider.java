@@ -218,6 +218,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
         super.onDeleted(context, appWidgetIds);
-        updateWidgetIds();
+        if (cxt != null)
+            updateWidgetIds();
     }
 }
