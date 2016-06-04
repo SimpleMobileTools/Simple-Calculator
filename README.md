@@ -1,5 +1,15 @@
-# Simple-Calculator
-A simple Android opensource calculator with a widget, functional and UI tests
+# Simple Calculator
+<img alt="Logo" src="app/src/main/res/mipmap-xxxhdpi/launcher.png" width="80">
+
+A simple calculator with the basic operations. Long press the result or formula to copy the value to clipboard.
+
+The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+
+<img alt="App image" src="screenshots/app.png" width="250">
+<img alt="App image" src="screenshots/widget_config.png" width="250">
+<img alt="App image" src="screenshots/widget.png" width="250">
+
+It contains a couple UI and unit tests, they can be ran with the following instructions.
 
 <h3>Running Espresso UI tests</h3>
 1. at Build Variants select "Android Instrumentation Tests"
