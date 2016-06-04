@@ -1,5 +1,7 @@
 package com.simplemobiletools.calculator;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -120,6 +122,32 @@ public class MainActivity extends AppCompatActivity implements Calculator {
 
     public void numpadClicked(int id) {
         calc.numpadClicked(id);
+    }
+
+    @OnLongClick(R.id.formula)
+    public boolean formulaLongPressed() {
+        copyToClipboard(false);
+        return true;
+    }
+
+    @OnLongClick(R.id.result)
+    public boolean resultLongPressed() {
+        copyToClipboard(true);
+        return true;
+    }
+
+    private void copyToClipboard(boolean copyResult) {
+        String value;
+        if (copyResult) {
+            value = result.getText().toString();
+        } else {
+            value = formula.getText().toString();
+        }
+
+        final ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        final ClipData clip = ClipData.newPlainText(getResources().getString(R.string.app_name), value);
+        clipboard.setPrimaryClip(clip);
+        Utils.showToast(getApplicationContext(), R.string.copied_to_clipboard);
     }
 
     @Override
