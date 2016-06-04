@@ -48,6 +48,9 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
         setupIntent(Constants.CLEAR, R.id.btn_clear);
         setupIntent(Constants.RESET, R.id.btn_reset);
 
+        setupAppOpenIntent(R.id.formula);
+        setupAppOpenIntent(R.id.result);
+
         updateWidget();
         super.onUpdate(context, appWidgetManager, appWidgetIds);
     }
@@ -55,6 +58,12 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     private void setupIntent(String action, int id) {
         intent.setAction(action);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(cxt, 0, intent, 0);
+        remoteViews.setOnClickPendingIntent(id, pendingIntent);
+    }
+
+    private void setupAppOpenIntent(int id) {
+        final Intent intent = new Intent(cxt, MainActivity.class);
+        final PendingIntent pendingIntent = PendingIntent.getActivity(cxt, 0, intent, 0);
         remoteViews.setOnClickPendingIntent(id, pendingIntent);
     }
 
