@@ -1,4 +1,4 @@
-package com.simplemobiletools.calculator;
+package com.simplemobiletools.calculator.activities;
 
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
@@ -13,12 +13,16 @@ import android.widget.RemoteViews;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.simplemobiletools.calculator.Constants;
+import com.simplemobiletools.calculator.MyWidgetProvider;
+import com.simplemobiletools.calculator.R;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import yuku.ambilwarna.AmbilWarnaDialog;
 
-public class MyWidgetConfigure extends AppCompatActivity {
+public class WidgetConfigureActivity extends AppCompatActivity {
     @BindView(R.id.btn_reset) View mResetBtn;
     @BindView(R.id.config_bg_color) View mBgColorPicker;
     @BindView(R.id.config_bg_seekbar) SeekBar mBgSeekBar;
