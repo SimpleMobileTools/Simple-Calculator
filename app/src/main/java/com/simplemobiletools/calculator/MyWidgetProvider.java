@@ -11,20 +11,23 @@ import android.graphics.Color;
 import android.view.View;
 import android.widget.RemoteViews;
 
+import com.simplemobiletools.calculator.activities.MainActivity;
+
 public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
-    private static int[] widgetIds;
-    private static RemoteViews remoteViews;
-    private static CalculatorImpl calc;
-    private static AppWidgetManager widgetManager;
-    private static Intent intent;
-    private static Context cxt;
-    private static SharedPreferences prefs;
+    private static RemoteViews mRemoteViews;
+    private static CalculatorImpl mCalc;
+    private static AppWidgetManager mWidgetManager;
+    private static Intent mIntent;
+    private static Context mContext;
+    private static SharedPreferences mPrefs;
+
+    private static int[] mWidgetIds;
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         initVariables(context);
 
-        intent = new Intent(context, MyWidgetProvider.class);
+        mIntent = new Intent(context, MyWidgetProvider.class);
         setupIntent(Constants.DECIMAL, R.id.btn_decimal);
         setupIntent(Constants.ZERO, R.id.btn_0);
         setupIntent(Constants.ONE, R.id.btn_1);
@@ -56,45 +59,45 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     }
 
     private void setupIntent(String action, int id) {
-        intent.setAction(action);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(cxt, 0, intent, 0);
-        remoteViews.setOnClickPendingIntent(id, pendingIntent);
+        mIntent.setAction(action);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, 0, mIntent, 0);
+        mRemoteViews.setOnClickPendingIntent(id, pendingIntent);
     }
 
     private void setupAppOpenIntent(int id) {
-        final Intent intent = new Intent(cxt, MainActivity.class);
-        final PendingIntent pendingIntent = PendingIntent.getActivity(cxt, 0, intent, 0);
-        remoteViews.setOnClickPendingIntent(id, pendingIntent);
+        final Intent intent = new Intent(mContext, MainActivity.class);
+        final PendingIntent pendingIntent = PendingIntent.getActivity(mContext, 0, intent, 0);
+        mRemoteViews.setOnClickPendingIntent(id, pendingIntent);
     }
 
     private void initVariables(Context context) {
-        cxt = context;
+        mContext = context;
         updateWidgetIds();
-        prefs = initPrefs(cxt);
-        final int defaultColor = cxt.getResources().getColor(R.color.text_grey);
-        final int newBgColor = prefs.getInt(Constants.WIDGET_BG_COLOR, defaultColor);
-        final int newTextColor = prefs.getInt(Constants.WIDGET_TEXT_COLOR, Color.WHITE);
+        mPrefs = initPrefs(mContext);
+        final int defaultColor = mContext.getResources().getColor(R.color.text_grey);
+        final int newBgColor = mPrefs.getInt(Constants.WIDGET_BG_COLOR, defaultColor);
+        final int newTextColor = mPrefs.getInt(Constants.WIDGET_TEXT_COLOR, Color.WHITE);
 
-        remoteViews = new RemoteViews(cxt.getPackageName(), R.layout.activity_main);
-        remoteViews.setViewVisibility(R.id.btn_reset, View.VISIBLE);
-        remoteViews.setInt(R.id.calculator_holder, "setBackgroundColor", newBgColor);
+        mRemoteViews = new RemoteViews(mContext.getPackageName(), R.layout.activity_main);
+        mRemoteViews.setViewVisibility(R.id.btn_reset, View.VISIBLE);
+        mRemoteViews.setInt(R.id.calculator_holder, "setBackgroundColor", newBgColor);
 
         updateTextColors(newTextColor);
-        widgetManager = AppWidgetManager.getInstance(cxt);
+        mWidgetManager = AppWidgetManager.getInstance(mContext);
 
         final String displayValue = "0";
-        calc = new CalculatorImpl(this, displayValue);
+        mCalc = new CalculatorImpl(this, displayValue);
     }
 
     private void updateWidgetIds() {
-        final ComponentName component = new ComponentName(cxt, MyWidgetProvider.class);
-        widgetManager = AppWidgetManager.getInstance(cxt);
-        widgetIds = widgetManager.getAppWidgetIds(component);
+        final ComponentName component = new ComponentName(mContext, MyWidgetProvider.class);
+        mWidgetManager = AppWidgetManager.getInstance(mContext);
+        mWidgetIds = mWidgetManager.getAppWidgetIds(component);
     }
 
     private void updateWidget() {
-        for (int widgetId : widgetIds) {
-            widgetManager.updateAppWidget(widgetId, remoteViews);
+        for (int widgetId : mWidgetIds) {
+            mWidgetManager.updateAppWidget(widgetId, mRemoteViews);
         }
     }
 
@@ -103,13 +106,13 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     }
 
     private void updateTextColors(int color) {
-        int[] viewIds =
+        final int[] viewIds =
                 new int[]{R.id.formula, R.id.result, R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6,
                         R.id.btn_7, R.id.btn_8, R.id.btn_9, R.id.btn_modulo, R.id.btn_power, R.id.btn_root, R.id.btn_clear, R.id.btn_reset,
                         R.id.btn_divide, R.id.btn_multiply, R.id.btn_minus, R.id.btn_plus, R.id.btn_decimal, R.id.btn_equals};
 
         for (int i : viewIds) {
-            remoteViews.setInt(i, "setTextColor", color);
+            mRemoteViews.setInt(i, "setTextColor", color);
         }
     }
 
@@ -146,52 +149,52 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     }
 
     private void myAction(String action, Context context) {
-        if (calc == null || remoteViews == null || widgetManager == null || prefs == null || cxt == null) {
+        if (mCalc == null || mRemoteViews == null || mWidgetManager == null || mPrefs == null || mContext == null) {
             initVariables(context);
         }
 
         switch (action) {
             case Constants.DECIMAL:
-                calc.numpadClicked(R.id.btn_decimal);
+                mCalc.numpadClicked(R.id.btn_decimal);
                 break;
             case Constants.ZERO:
-                calc.numpadClicked(R.id.btn_0);
+                mCalc.numpadClicked(R.id.btn_0);
                 break;
             case Constants.ONE:
-                calc.numpadClicked(R.id.btn_1);
+                mCalc.numpadClicked(R.id.btn_1);
                 break;
             case Constants.TWO:
-                calc.numpadClicked(R.id.btn_2);
+                mCalc.numpadClicked(R.id.btn_2);
                 break;
             case Constants.THREE:
-                calc.numpadClicked(R.id.btn_3);
+                mCalc.numpadClicked(R.id.btn_3);
                 break;
             case Constants.FOUR:
-                calc.numpadClicked(R.id.btn_4);
+                mCalc.numpadClicked(R.id.btn_4);
                 break;
             case Constants.FIVE:
-                calc.numpadClicked(R.id.btn_5);
+                mCalc.numpadClicked(R.id.btn_5);
                 break;
             case Constants.SIX:
-                calc.numpadClicked(R.id.btn_6);
+                mCalc.numpadClicked(R.id.btn_6);
                 break;
             case Constants.SEVEN:
-                calc.numpadClicked(R.id.btn_7);
+                mCalc.numpadClicked(R.id.btn_7);
                 break;
             case Constants.EIGHT:
-                calc.numpadClicked(R.id.btn_8);
+                mCalc.numpadClicked(R.id.btn_8);
                 break;
             case Constants.NINE:
-                calc.numpadClicked(R.id.btn_9);
+                mCalc.numpadClicked(R.id.btn_9);
                 break;
             case Constants.EQUALS:
-                calc.handleEquals();
+                mCalc.handleEquals();
                 break;
             case Constants.CLEAR:
-                calc.handleClear();
+                mCalc.handleClear();
                 break;
             case Constants.RESET:
-                calc.handleReset();
+                mCalc.handleReset();
                 break;
             case Constants.PLUS:
             case Constants.MINUS:
@@ -200,7 +203,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
             case Constants.MODULO:
             case Constants.POWER:
             case Constants.ROOT:
-                calc.handleOperation(action);
+                mCalc.handleOperation(action);
                 break;
             default:
                 break;
@@ -209,7 +212,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
 
     @Override
     public void setValue(String value) {
-        remoteViews.setTextViewText(R.id.result, value);
+        mRemoteViews.setTextViewText(R.id.result, value);
         updateWidget();
     }
 
@@ -218,16 +221,15 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
 
     }
 
-    @Override
     public void setFormula(String value) {
-        remoteViews.setTextViewText(R.id.formula, value);
+        mRemoteViews.setTextViewText(R.id.formula, value);
         updateWidget();
     }
 
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
         super.onDeleted(context, appWidgetIds);
-        if (cxt != null)
+        if (mContext != null)
             updateWidgetIds();
     }
 }

@@ -1,62 +1,63 @@
 package com.simplemobiletools.calculator;
 
 public class CalculatorImpl {
-    private String displayedValue;
-    private String displayedFormula;
-    private double baseValue;
-    private double secondValue;
-    private boolean resetValue;
-    private String lastKey;
-    private String lastOperation;
-    private Calculator callback;
-    private boolean isFirstOperation;
+    private String mDisplayedValue;
+    private String mDisplayedFormula;
+    private String mLastKey;
+    private String mLastOperation;
+    private Calculator mCallback;
+
+    private boolean mIsFirstOperation;
+    private boolean mResetValue;
+    private double mBaseValue;
+    private double mSecondValue;
 
     public CalculatorImpl(Calculator calculator) {
-        callback = calculator;
+        mCallback = calculator;
         resetValues();
         setValue("0");
         setFormula("");
     }
 
     public CalculatorImpl(Calculator calculatorInterface, String value) {
-        callback = calculatorInterface;
+        mCallback = calculatorInterface;
         resetValues();
-        displayedValue = value;
+        mDisplayedValue = value;
         setFormula("");
     }
 
     private void resetValueIfNeeded() {
-        if (resetValue)
-            displayedValue = "0";
+        if (mResetValue)
+            mDisplayedValue = "0";
 
-        resetValue = false;
+        mResetValue = false;
     }
 
     private void resetValues() {
-        baseValue = 0;
-        secondValue = 0;
-        resetValue = false;
-        lastKey = "";
-        lastOperation = "";
-        displayedValue = "";
-        displayedFormula = "";
-        isFirstOperation = true;
+        mBaseValue = 0;
+        mSecondValue = 0;
+        mResetValue = false;
+        mLastKey = "";
+        mLastOperation = "";
+        mDisplayedValue = "";
+        mDisplayedFormula = "";
+        mIsFirstOperation = true;
     }
 
     public void setValue(String value) {
-        callback.setValue(value);
-        displayedValue = value;
+        mCallback.setValue(value);
+        mDisplayedValue = value;
     }
 
     private void setFormula(String value) {
-        callback.setFormula(value);
-        displayedFormula = value;
+        mCallback.setFormula(value);
+        mDisplayedFormula = value;
     }
 
     private void updateFormula() {
-        final String first = Formatter.doubleToString(baseValue);
-        final String second = Formatter.doubleToString(secondValue);
-        final String sign = getSign(lastOperation);
+        final String first = Formatter.doubleToString(mBaseValue);
+        final String second = Formatter.doubleToString(mSecondValue);
+        final String sign = getSign(mLastOperation);
 
         if (sign.equals("√")) {
             setFormula(sign + first);
@@ -65,8 +66,8 @@ public class CalculatorImpl {
         }
     }
 
-    public void setLastKey(String lastKey) {
-        this.lastKey = lastKey;
+    public void setLastKey(String mLastKey) {
+        this.mLastKey = mLastKey;
     }
 
     public void addDigit(int number) {
@@ -87,11 +88,11 @@ public class CalculatorImpl {
 
     private void updateResult(double value) {
         setValue(Formatter.doubleToString(value));
-        baseValue = value;
+        mBaseValue = value;
     }
 
     public String getDisplayedNumber() {
-        return displayedValue;
+        return mDisplayedValue;
     }
 
     public double getDisplayedNumberAsDouble() {
@@ -99,28 +100,28 @@ public class CalculatorImpl {
     }
 
     public String getDisplayedFormula() {
-        return displayedFormula;
+        return mDisplayedFormula;
     }
 
     public void handleResult() {
-        secondValue = getDisplayedNumberAsDouble();
+        mSecondValue = getDisplayedNumberAsDouble();
         calculateResult();
-        baseValue = getDisplayedNumberAsDouble();
+        mBaseValue = getDisplayedNumberAsDouble();
     }
 
     public void calculateResult() {
-        if (!isFirstOperation)
+        if (!mIsFirstOperation)
             updateFormula();
 
-        switch (lastOperation) {
+        switch (mLastOperation) {
             case Constants.PLUS:
-                updateResult(baseValue + secondValue);
+                updateResult(mBaseValue + mSecondValue);
                 break;
             case Constants.MINUS:
-                updateResult(baseValue - secondValue);
+                updateResult(mBaseValue - mSecondValue);
                 break;
             case Constants.MULTIPLY:
-                updateResult(baseValue * secondValue);
+                updateResult(mBaseValue * mSecondValue);
                 break;
             case Constants.DIVIDE:
                 divideNumbers();
@@ -132,44 +133,44 @@ public class CalculatorImpl {
                 powerNumbers();
                 break;
             case Constants.ROOT:
-                updateResult(Math.sqrt(baseValue));
+                updateResult(Math.sqrt(mBaseValue));
                 break;
             default:
                 break;
         }
-        isFirstOperation = false;
+        mIsFirstOperation = false;
     }
 
     private void divideNumbers() {
         double resultValue = 0;
-        if (secondValue != 0)
-            resultValue = baseValue / secondValue;
+        if (mSecondValue != 0)
+            resultValue = mBaseValue / mSecondValue;
 
         updateResult(resultValue);
     }
 
     private void moduloNumbers() {
         double resultValue = 0;
-        if (secondValue != 0)
-            resultValue = baseValue % secondValue;
+        if (mSecondValue != 0)
+            resultValue = mBaseValue % mSecondValue;
 
         updateResult(resultValue);
     }
 
     private void powerNumbers() {
-        double resultValue = Math.pow(baseValue, secondValue);
+        double resultValue = Math.pow(mBaseValue, mSecondValue);
         if (Double.isInfinite(resultValue) || Double.isNaN(resultValue))
             resultValue = 0;
         updateResult(resultValue);
     }
 
     public void handleOperation(String operation) {
-        if (lastKey.equals(Constants.DIGIT))
+        if (mLastKey.equals(Constants.DIGIT))
             handleResult();
 
-        resetValue = true;
-        lastKey = operation;
-        lastOperation = operation;
+        mResetValue = true;
+        mLastKey = operation;
+        mLastOperation = operation;
 
         if (operation.equals(Constants.ROOT))
             calculateResult();
@@ -177,7 +178,7 @@ public class CalculatorImpl {
 
     public void handleClear() {
         final String oldValue = getDisplayedNumber();
-        String newValue;
+        String newValue = "0";
         final int len = oldValue.length();
         int minLen = 1;
         if (oldValue.contains("-"))
@@ -185,13 +186,11 @@ public class CalculatorImpl {
 
         if (len > minLen)
             newValue = oldValue.substring(0, len - 1);
-        else
-            newValue = "0";
 
         newValue = newValue.replaceAll("\\.$", "");
         newValue = formatString(newValue);
         setValue(newValue);
-        baseValue = Formatter.stringToDouble(newValue);
+        mBaseValue = Formatter.stringToDouble(newValue);
     }
 
     public void handleReset() {
@@ -201,15 +200,15 @@ public class CalculatorImpl {
     }
 
     public void handleEquals() {
-        if (lastKey.equals(Constants.EQUALS))
+        if (mLastKey.equals(Constants.EQUALS))
             calculateResult();
 
-        if (!lastKey.equals(Constants.DIGIT))
+        if (!mLastKey.equals(Constants.DIGIT))
             return;
 
-        secondValue = getDisplayedNumberAsDouble();
+        mSecondValue = getDisplayedNumberAsDouble();
         calculateResult();
-        lastKey = Constants.EQUALS;
+        mLastKey = Constants.EQUALS;
     }
 
     public void decimalClicked() {
@@ -246,9 +245,9 @@ public class CalculatorImpl {
     }
 
     public void numpadClicked(int id) {
-        if (lastKey.equals(Constants.EQUALS))
-            lastOperation = Constants.EQUALS;
-        lastKey = Constants.DIGIT;
+        if (mLastKey.equals(Constants.EQUALS))
+            mLastOperation = Constants.EQUALS;
+        mLastKey = Constants.DIGIT;
         resetValueIfNeeded();
 
         switch (id) {

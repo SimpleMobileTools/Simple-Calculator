@@ -8,7 +8,7 @@
     android:background="@color/buttons_background"
     android:orientation="vertical"
     android:theme="@style/MainTheme"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <TextView
         android:id="@+id/formula"

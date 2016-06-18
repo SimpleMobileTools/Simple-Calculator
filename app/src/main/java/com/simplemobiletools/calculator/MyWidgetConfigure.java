@@ -19,20 +19,20 @@ import butterknife.OnClick;
 import yuku.ambilwarna.AmbilWarnaDialog;
 
 public class MyWidgetConfigure extends AppCompatActivity {
-    @BindView(R.id.btn_reset) View resetBtn;
-    @BindView(R.id.config_bg_color) View bgColorPicker;
-    @BindView(R.id.config_bg_seekbar) SeekBar bgSeekBar;
-    @BindView(R.id.config_text_color) View textColorPicker;
-    @BindView(R.id.config_calc) View background;
-    @BindView(R.id.config_save) Button saveBtn;
-    @BindView(R.id.result) TextView result;
-    @BindView(R.id.formula) TextView formula;
-    private int widgetId;
+    @BindView(R.id.btn_reset) View mResetBtn;
+    @BindView(R.id.config_bg_color) View mBgColorPicker;
+    @BindView(R.id.config_bg_seekbar) SeekBar mBgSeekBar;
+    @BindView(R.id.config_text_color) View mTextColorPicker;
+    @BindView(R.id.config_calc) View mBackground;
+    @BindView(R.id.config_save) Button mSaveBtn;
+    @BindView(R.id.result) TextView mResult;
+    @BindView(R.id.formula) TextView mFormula;
 
-    private int bgColor;
-    private int bgColorWithoutTransparency;
-    private float bgAlpha;
-    private int textColor;
+    private int mBgColor;
+    private int mBgColorWithoutTransparency;
+    private int mWidgetId;
+    private int mTextColor;
+    private float mBgAlpha;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,98 +45,98 @@ public class MyWidgetConfigure extends AppCompatActivity {
         final Intent intent = getIntent();
         final Bundle extras = intent.getExtras();
         if (extras != null)
-            widgetId = extras.getInt(AppWidgetManager.EXTRA_APPWIDGET_ID, AppWidgetManager.INVALID_APPWIDGET_ID);
+            mWidgetId = extras.getInt(AppWidgetManager.EXTRA_APPWIDGET_ID, AppWidgetManager.INVALID_APPWIDGET_ID);
 
-        if (widgetId == AppWidgetManager.INVALID_APPWIDGET_ID)
+        if (mWidgetId == AppWidgetManager.INVALID_APPWIDGET_ID)
             finish();
     }
 
     private void initVariables() {
         final SharedPreferences prefs = getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
-        bgColor = prefs.getInt(Constants.WIDGET_BG_COLOR, 1);
-        if (bgColor == 1) {
-            bgColor = Color.BLACK;
-            bgAlpha = .2f;
+        mBgColor = prefs.getInt(Constants.WIDGET_BG_COLOR, 1);
+        if (mBgColor == 1) {
+            mBgColor = Color.BLACK;
+            mBgAlpha = .2f;
         } else {
-            bgAlpha = Color.alpha(bgColor) / (float) 255;
+            mBgAlpha = Color.alpha(mBgColor) / (float) 255;
         }
 
-        resetBtn.setVisibility(View.VISIBLE);
-        bgColorWithoutTransparency = Color.rgb(Color.red(bgColor), Color.green(bgColor), Color.blue(bgColor));
-        bgSeekBar.setOnSeekBarChangeListener(bgSeekbarChangeListener);
-        bgSeekBar.setProgress((int) (bgAlpha * 100));
+        mResetBtn.setVisibility(View.VISIBLE);
+        mBgColorWithoutTransparency = Color.rgb(Color.red(mBgColor), Color.green(mBgColor), Color.blue(mBgColor));
+        mBgSeekBar.setOnSeekBarChangeListener(bgSeekbarChangeListener);
+        mBgSeekBar.setProgress((int) (mBgAlpha * 100));
         updateBackgroundColor();
 
-        textColor = prefs.getInt(Constants.WIDGET_TEXT_COLOR, getResources().getColor(R.color.colorPrimary));
+        mTextColor = prefs.getInt(Constants.WIDGET_TEXT_COLOR, getResources().getColor(R.color.colorPrimary));
         updateTextColor();
 
-        formula.setText("15,937*5");
-        result.setText("79,685");
+        mFormula.setText("15,937*5");
+        mResult.setText("79,685");
     }
 
     @OnClick(R.id.config_save)
     public void saveConfig() {
         final AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this);
         final RemoteViews views = new RemoteViews(getPackageName(), R.layout.activity_main);
-        views.setInt(R.id.calculator_holder, "setBackgroundColor", bgColor);
-        appWidgetManager.updateAppWidget(widgetId, views);
+        views.setInt(R.id.calculator_holder, "setBackgroundColor", mBgColor);
+        appWidgetManager.updateAppWidget(mWidgetId, views);
 
         storeWidgetBackground();
         requestWidgetUpdate();
 
         final Intent resultValue = new Intent();
-        resultValue.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, widgetId);
+        resultValue.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, mWidgetId);
         setResult(RESULT_OK, resultValue);
         finish();
     }
 
     private void storeWidgetBackground() {
         final SharedPreferences prefs = getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
-        prefs.edit().putInt(Constants.WIDGET_BG_COLOR, bgColor).apply();
-        prefs.edit().putInt(Constants.WIDGET_TEXT_COLOR, textColor).apply();
+        prefs.edit().putInt(Constants.WIDGET_BG_COLOR, mBgColor).apply();
+        prefs.edit().putInt(Constants.WIDGET_TEXT_COLOR, mTextColor).apply();
     }
 
     private void requestWidgetUpdate() {
         final Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE, null, this, MyWidgetProvider.class);
-        intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, new int[]{widgetId});
+        intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, new int[]{mWidgetId});
         sendBroadcast(intent);
     }
 
     private void updateBackgroundColor() {
-        bgColor = adjustAlpha(bgColorWithoutTransparency, bgAlpha);
-        background.setBackgroundColor(bgColor);
-        bgColorPicker.setBackgroundColor(bgColor);
-        saveBtn.setBackgroundColor(bgColor);
+        mBgColor = adjustAlpha(mBgColorWithoutTransparency, mBgAlpha);
+        mBackground.setBackgroundColor(mBgColor);
+        mBgColorPicker.setBackgroundColor(mBgColor);
+        mSaveBtn.setBackgroundColor(mBgColor);
     }
 
     private void updateTextColor() {
-        textColorPicker.setBackgroundColor(textColor);
-        saveBtn.setTextColor(textColor);
+        mTextColorPicker.setBackgroundColor(mTextColor);
+        mSaveBtn.setTextColor(mTextColor);
 
         int[] viewIds =
                 new int[]{R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7, R.id.btn_8,
                         R.id.btn_9, R.id.btn_modulo, R.id.btn_power, R.id.btn_root, R.id.btn_clear, R.id.btn_reset, R.id.btn_divide,
                         R.id.btn_multiply, R.id.btn_minus, R.id.btn_plus, R.id.btn_decimal, R.id.btn_equals};
-        result.setTextColor(textColor);
-        formula.setTextColor(textColor);
+        mResult.setTextColor(mTextColor);
+        mFormula.setTextColor(mTextColor);
 
         Button btn;
         for (int i : viewIds) {
             btn = (Button) findViewById(i);
-            btn.setTextColor(textColor);
+            btn.setTextColor(mTextColor);
         }
     }
 
     @OnClick(R.id.config_bg_color)
     public void pickBackgroundColor() {
-        AmbilWarnaDialog dialog = new AmbilWarnaDialog(this, bgColorWithoutTransparency, new AmbilWarnaDialog.OnAmbilWarnaListener() {
+        AmbilWarnaDialog dialog = new AmbilWarnaDialog(this, mBgColorWithoutTransparency, new AmbilWarnaDialog.OnAmbilWarnaListener() {
             @Override
             public void onCancel(AmbilWarnaDialog dialog) {
             }
 
             @Override
             public void onOk(AmbilWarnaDialog dialog, int color) {
-                bgColorWithoutTransparency = color;
+                mBgColorWithoutTransparency = color;
                 updateBackgroundColor();
             }
         });
@@ -146,14 +146,14 @@ public class MyWidgetConfigure extends AppCompatActivity {
 
     @OnClick(R.id.config_text_color)
     public void pickTextColor() {
-        AmbilWarnaDialog dialog = new AmbilWarnaDialog(this, textColor, new AmbilWarnaDialog.OnAmbilWarnaListener() {
+        AmbilWarnaDialog dialog = new AmbilWarnaDialog(this, mTextColor, new AmbilWarnaDialog.OnAmbilWarnaListener() {
             @Override
             public void onCancel(AmbilWarnaDialog dialog) {
             }
 
             @Override
             public void onOk(AmbilWarnaDialog dialog, int color) {
-                textColor = color;
+                mTextColor = color;
                 updateTextColor();
             }
         });
@@ -164,7 +164,7 @@ public class MyWidgetConfigure extends AppCompatActivity {
     private SeekBar.OnSeekBarChangeListener bgSeekbarChangeListener = new SeekBar.OnSeekBarChangeListener() {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-            bgAlpha = (float) progress / (float) 100;
+            mBgAlpha = (float) progress / (float) 100;
             updateBackgroundColor();
         }
 
