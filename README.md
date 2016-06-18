@@ -5,6 +5,8 @@ A simple calculator with the basic operations. Long press the result or formula 
 
 The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
 
+<a href='https://play.google.com/store/apps/details?id=com.simplemobiletools.calculator'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height=60/></a>
+
 <img alt="App image" src="screenshots/app.png" width="250">
 <img alt="App image" src="screenshots/widget_config.png" width="250">
 <img alt="App image" src="screenshots/widget.png" width="250">
