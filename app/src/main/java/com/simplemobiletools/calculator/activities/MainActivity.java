@@ -132,26 +132,28 @@ public class MainActivity extends AppCompatActivity implements Calculator {
 
     @OnLongClick(R.id.formula)
     public boolean formulaLongPressed() {
-        copyToClipboard(false);
-        return true;
+        return copyToClipboard(false);
     }
 
     @OnLongClick(R.id.result)
     public boolean resultLongPressed() {
-        copyToClipboard(true);
-        return true;
+        return copyToClipboard(true);
     }
 
-    private void copyToClipboard(boolean copyResult) {
-        String value = mFormula.getText().toString();
+    private boolean copyToClipboard(boolean copyResult) {
+        String value = mFormula.getText().toString().trim();
         if (copyResult) {
-            value = mResult.getText().toString();
+            value = mResult.getText().toString().trim();
         }
+
+        if (value.isEmpty())
+            return false;
 
         final ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
         final ClipData clip = ClipData.newPlainText(getResources().getString(R.string.app_name), value);
         clipboard.setPrimaryClip(clip);
         Utils.showToast(getApplicationContext(), R.string.copied_to_clipboard);
+        return true;
     }
 
     @Override
