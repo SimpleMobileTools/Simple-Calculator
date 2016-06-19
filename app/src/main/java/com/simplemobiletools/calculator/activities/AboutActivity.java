@@ -5,11 +5,11 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.appcompat.BuildConfig;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
 
+import com.simplemobiletools.calculator.BuildConfig;
 import com.simplemobiletools.calculator.R;
 
 import java.util.Calendar;
