@@ -1,4 +1,4 @@
-Change Log
+Changelog
 ==========
 
 Version 1.3 *(2016-06-27)*
