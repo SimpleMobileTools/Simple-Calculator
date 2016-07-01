@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.simplemobiletools.calculator.Calculator;
 import com.simplemobiletools.calculator.CalculatorImpl;
+import com.simplemobiletools.calculator.Config;
 import com.simplemobiletools.calculator.Constants;
 import com.simplemobiletools.calculator.Formatter;
 import com.simplemobiletools.calculator.R;
@@ -40,6 +41,12 @@ public class MainActivity extends AppCompatActivity implements Calculator {
         setupResultView();
         AutofitHelper.create(mResult);
         AutofitHelper.create(mFormula);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Config.newInstance(getApplicationContext()).setIsFirstRun(false);
     }
 
     @Override
