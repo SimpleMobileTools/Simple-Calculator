@@ -1,6 +1,11 @@
 Changelog
 ==========
 
+Version 1.8 *(2016-07-07)*
+----------------------------
+
+ * Display the proper widget preview image
+
 Version 1.6 *(2016-07-05)*
 ----------------------------
 
