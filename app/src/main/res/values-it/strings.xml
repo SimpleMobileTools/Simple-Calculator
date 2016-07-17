@@ -19,5 +19,4 @@
     <string name="autofittextview_title"><u>AutoFitTextView (autoresizing textview)</u></string>
     <string name="robolectric_title"><u>Robolectric (unit testing framework)</u></string>
     <string name="espresso_title"><u>Espresso (UI testing framework)</u></string>
-
 </resources>
