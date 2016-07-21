@@ -1,7 +1,13 @@
 Changelog
 ==========
 
-Version 1.8 *(2016-07-07)*
+Version 1.8 *(2016-07-21)*
+----------------------------
+
+ * Added a Dark theme
+ * Added Swedish, Italian and Japanese translations
+
+Version 1.7 *(2016-07-07)*
 ----------------------------
 
  * Display the proper widget preview image
