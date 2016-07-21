@@ -102,7 +102,7 @@ public class MyWidgetProvider extends AppWidgetProvider implements Calculator {
     }
 
     private SharedPreferences initPrefs(Context context) {
-        return context.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
+        return context.getSharedPreferences(Constants.PREFS_KEY, Context.MODE_PRIVATE);
     }
 
     private void updateTextColors(int color) {

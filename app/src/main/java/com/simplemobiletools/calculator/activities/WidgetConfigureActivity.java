@@ -56,7 +56,7 @@ public class WidgetConfigureActivity extends AppCompatActivity {
     }
 
     private void initVariables() {
-        final SharedPreferences prefs = getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
+        final SharedPreferences prefs = getSharedPreferences(Constants.PREFS_KEY, Context.MODE_PRIVATE);
         mBgColor = prefs.getInt(Constants.WIDGET_BG_COLOR, 1);
         if (mBgColor == 1) {
             mBgColor = Color.BLACK;
@@ -95,7 +95,7 @@ public class WidgetConfigureActivity extends AppCompatActivity {
     }
 
     private void storeWidgetBackground() {
-        final SharedPreferences prefs = getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
+        final SharedPreferences prefs = getSharedPreferences(Constants.PREFS_KEY, Context.MODE_PRIVATE);
         prefs.edit().putInt(Constants.WIDGET_BG_COLOR, mBgColor).apply();
         prefs.edit().putInt(Constants.WIDGET_TEXT_COLOR, mTextColor).apply();
     }

@@ -3,9 +3,7 @@ package com.simplemobiletools.calculator.activities;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,7 +23,7 @@ import butterknife.OnClick;
 import butterknife.OnLongClick;
 import me.grantland.widget.AutofitHelper;
 
-public class MainActivity extends AppCompatActivity implements Calculator {
+public class MainActivity extends SimpleActivity implements Calculator {
     @BindView(R.id.result) TextView mResult;
     @BindView(R.id.formula) TextView mFormula;
 
@@ -38,7 +36,6 @@ public class MainActivity extends AppCompatActivity implements Calculator {
         ButterKnife.bind(this);
 
         mCalc = new CalculatorImpl(this);
-        setupResultView();
         AutofitHelper.create(mResult);
         AutofitHelper.create(mFormula);
     }
@@ -58,22 +55,15 @@ public class MainActivity extends AppCompatActivity implements Calculator {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.settings:
+                startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
+                return true;
             case R.id.about:
-                final Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(getApplicationContext(), AboutActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    private void setupResultView() {
-        final Resources res = getResources();
-        mResult.setBackgroundColor(res.getColor(android.R.color.white));
-        mResult.setTextColor(res.getColor(R.color.text_grey));
-
-        mFormula.setBackgroundColor(res.getColor(android.R.color.white));
-        mFormula.setTextColor(res.getColor(R.color.text_grey));
     }
 
     @OnClick(R.id.btn_plus)

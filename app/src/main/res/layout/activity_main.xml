@@ -5,9 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/buttons_background"
     android:orientation="vertical"
-    android:theme="@style/MainTheme"
     tools:context=".activities.MainActivity">
 
     <TextView
@@ -20,7 +18,6 @@
         android:maxLines="1"
         android:paddingLeft="@dimen/activity_margin"
         android:paddingRight="@dimen/activity_margin"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/formula_text_size"/>
 
     <TextView
@@ -34,7 +31,6 @@
         android:paddingLeft="@dimen/activity_margin"
         android:paddingRight="@dimen/activity_margin"
         android:text="0"
-        android:textColor="@android:color/white"
         android:textSize="@dimen/display_text_size"/>
 
     <LinearLayout
