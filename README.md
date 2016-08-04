@@ -1,7 +1,7 @@
 # Simple Calculator
 <img alt="Logo" src="app/src/main/res/mipmap-xxxhdpi/launcher.png" width="80">
 
-A simple calculator with the basic operations. Long press the result or formula to copy the value to clipboard.
+A simple calculator with the basic operations. Long press the result or formula to copy the value to clipboard. Contains no ads or unnecessary permissions. It is fully opensource, provides a Dark theme too.
 
 The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
 
@@ -9,7 +9,7 @@ The text color of the widget can be customized, as well as the color and the alp
 <a href="https://f-droid.org/app/com.simplemobiletools.calculator"><img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60"></a>
 
 <img alt="App image" src="screenshots/app.png" width="250">
-<img alt="App image" src="screenshots/widget_config.png" width="250">
+<img alt="App image" src="screenshots/app_2.png" width="250">
 <img alt="App image" src="screenshots/widget.png" width="250">
 
 It contains a couple UI and unit tests, they can be ran with the following instructions.
