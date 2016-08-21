@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 1.10 *(2016-08-21)*
+----------------------------
+
+ * Add an Invite friends button
+ * Make the buttons in About section easier to click
+
 Version 1.9 *(2016-07-26)*
 ----------------------------
 
