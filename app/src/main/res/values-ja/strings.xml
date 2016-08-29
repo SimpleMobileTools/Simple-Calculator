@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">シンプル電卓</string>
+    <string name="app_launcher_name">Calculator</string>
     <string name="copied_to_clipboard">値をクリップボードにコピーしました</string>
 
     <!-- About -->
