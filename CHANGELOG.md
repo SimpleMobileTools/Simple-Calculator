@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 1.11 *(2016-08-29)*
+----------------------------
+
+ * Rename the launcher to Calculator
+ * Update the launcher icon
+
 Version 1.10 *(2016-08-21)*
 ----------------------------
 
