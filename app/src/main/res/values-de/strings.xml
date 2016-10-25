@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Simple Calculator</string>
-    <string name="app_launcher_name">Calculator</string>
+    <string name="app_name">Schlichter Taschenrechner</string>
+    <string name="app_launcher_name">Taschenrechner</string>
     <string name="copied_to_clipboard">Wert in Zwischenablage kopiert</string>
 
     <!-- About -->
@@ -17,14 +17,14 @@
 
     <!-- Settings -->
     <string name="settings">Einstellungen</string>
-    <string name="dark_theme">Dunkles Thema</string>
+    <string name="dark_theme">Dunkles Design</string>
 
     <!--License-->
     <string name="notice">Diese App nutzt folgende Drittanbieterbibliotheken, die mein Leben einfacher machen. Danke.</string>
     <string name="third_party_licences">Drittanbieterlizenzen</string>
-    <string name="butterknife_title"><u>Butter Knife (view injector)</u></string>
-    <string name="ambilwarna_title"><u>AmbilWarna (color picker)</u></string>
-    <string name="autofittextview_title"><u>AutoFitTextView (autoresizing textview)</u></string>
-    <string name="robolectric_title"><u>Robolectric (unit testing framework)</u></string>
-    <string name="espresso_title"><u>Espresso (UI testing framework)</u></string>
+    <string name="butterknife_title"><u>Butter Knife (View Injector)</u></string>
+    <string name="ambilwarna_title"><u>AmbilWarna (Color Picker)</u></string>
+    <string name="autofittextview_title"><u>AutoFitTextView (Autoresizing Textview)</u></string>
+    <string name="robolectric_title"><u>Robolectric (Unit Testing Framework)</u></string>
+    <string name="espresso_title"><u>Espresso (UI Testing Framework)</u></string>
 </resources>
