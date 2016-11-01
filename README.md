@@ -7,7 +7,9 @@ You can copy the result or formula to clipboard by long pressing it.
 
 The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
 
-This app contains no ads or unnecessary permissions. It is fully opensource, provides a Dark theme too.
+Contains no ads or unnecessary permissions. It is fully opensource, provides a Dark theme too.
+
+This app is just one piece of a bigger series of apps. You can find the rest of them at http://www.simplemobiletools.com
 
 <a href='https://play.google.com/store/apps/details?id=com.simplemobiletools.calculator'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height=60/></a>
 <a href="https://f-droid.org/app/com.simplemobiletools.calculator"><img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60"></a>
