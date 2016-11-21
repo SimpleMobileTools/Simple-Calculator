@@ -20,7 +20,7 @@
     <string name="settings">Settings</string>
     <string name="dark_theme">Dark theme</string>
 
-    <!--License-->
+    <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
     <string name="third_party_licences">Third party licences</string>
     <string name="butterknife_title"><u>Butter Knife (view injector)</u></string>

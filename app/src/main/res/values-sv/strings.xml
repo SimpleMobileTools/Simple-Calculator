@@ -19,7 +19,7 @@
     <string name="settings">Inställningar</string>
     <string name="dark_theme">Mörkt tema</string>
 
-    <!--License-->
+    <!-- License -->
     <string name="notice">Denna app använder följande tredjepartsbibliotek för att göra mitt liv enklare. Tack.</string>
     <string name="third_party_licences">Tredjepartslicenser</string>
     <string name="butterknife_title"><u>Butter Knife (view injector)</u></string>
