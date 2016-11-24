@@ -27,4 +27,16 @@
     <string name="autofittextview_title"><u>AutoFitTextView (自動リサイズ テキストビュー)</u></string>
     <string name="robolectric_title"><u>Robolectric (ユニットテスト フレームワーク)</u></string>
     <string name="espresso_title"><u>Espresso (UI テスト フレームワーク)</u></string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <string name="app_short_description">A calculator with the basic functions and a customizable widget.</string>
+    <string name="app_long_description">
+        There is no unit converter, you can copy the result or formula to clipboard by long pressing it.
+
+        The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+
+        Contains no ads or unnecessary permissions. It is fully opensource, provides a Dark theme too.
+
+        This app is just one piece of a bigger series of apps. You can find the rest of them at http://www.simplemobiletools.com
+    </string>
 </resources>
