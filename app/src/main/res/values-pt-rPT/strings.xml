@@ -29,14 +29,14 @@
     <string name="espresso_title"><u>Espresso (infraestrutura de testes da interface)</u></string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <string name="app_short_description">A calculator with the basic functions and a customizable widget.</string>
+    <string name="app_short_description">Uma calculadora com funções básicas e um widget personalizável.</string>
     <string name="app_long_description">
-        There is no unit converter, you can copy the result or formula to clipboard by long pressing it.
+        Não existe conversor de unidades, mas pode copiar o resultado ou fórmula para a área de transferência com um clique longo.
 
-        The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+        Pode personalizar a cor do texto do widget, bem como a cor e o valor alfa do fundo. Prima no resultado ou fórmula do widget para abrir a aplicação.
 
-        Contains no ads or unnecessary permissions. It is fully opensource, provides a Dark theme too.
+        Não contém anúncios nem permissões desnecessárias. Disponibiliza um tema escuro e é totalmente 'open source'.
 
-        This app is just one piece of a bigger series of apps. You can find the rest of them at http://www.simplemobiletools.com
+        Esta aplicação é apenas parte de um conjunto mais vasto de aplicações. Saiba mais em http://www.simplemobiletools.com
     </string>
 </resources>
