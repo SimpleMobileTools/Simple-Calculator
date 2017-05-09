@@ -1,17 +1,20 @@
 package com.simplemobiletools.calculator;
 
+import com.simplemobiletools.calculator.activities.MainActivity;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
 import butterknife.ButterKnife;
 
 import static junit.framework.Assert.assertEquals;
 
-@RunWith(MyTestRunner.class)
-@Config(constants = BuildConfig.class, manifest = "app/src/main/AndroidManifest.xml", sdk = 21)
+@RunWith(RobolectricTestRunner.class)
+@Config(constants = BuildConfig.class, sdk = 21)
 public class MainActivityTest {
     MainActivity activity;
 
