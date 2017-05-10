@@ -1,5 +1,8 @@
 package com.simplemobiletools.calculator;
 
+import com.simplemobiletools.calculator.operation.OperationFactory;
+import com.simplemobiletools.calculator.operation.base.Operation;
+
 public class CalculatorImpl {
     private String mDisplayedValue;
     private String mDisplayedFormula;
@@ -110,58 +113,17 @@ public class CalculatorImpl {
     }
 
     public void calculateResult() {
-        if (!mIsFirstOperation)
+        if (!mIsFirstOperation) {
             updateFormula();
-
-        switch (mLastOperation) {
-            case Constants.PLUS:
-                updateResult(mBaseValue + mSecondValue);
-                break;
-            case Constants.MINUS:
-                updateResult(mBaseValue - mSecondValue);
-                break;
-            case Constants.MULTIPLY:
-                updateResult(mBaseValue * mSecondValue);
-                break;
-            case Constants.DIVIDE:
-                divideNumbers();
-                break;
-            case Constants.MODULO:
-                moduloNumbers();
-                break;
-            case Constants.POWER:
-                powerNumbers();
-                break;
-            case Constants.ROOT:
-                updateResult(Math.sqrt(mBaseValue));
-                break;
-            default:
-                break;
         }
+
+        Operation operation = OperationFactory.forId(mLastOperation, mBaseValue, mSecondValue);
+
+        if (operation != null) {
+            updateResult(operation.getResult());
+        }
+
         mIsFirstOperation = false;
-    }
-
-    private void divideNumbers() {
-        double resultValue = 0;
-        if (mSecondValue != 0)
-            resultValue = mBaseValue / mSecondValue;
-
-        updateResult(resultValue);
-    }
-
-    private void moduloNumbers() {
-        double resultValue = 0;
-        if (mSecondValue != 0)
-            resultValue = mBaseValue % mSecondValue;
-
-        updateResult(resultValue);
-    }
-
-    private void powerNumbers() {
-        double resultValue = Math.pow(mBaseValue, mSecondValue);
-        if (Double.isInfinite(resultValue) || Double.isNaN(resultValue))
-            resultValue = 0;
-        updateResult(resultValue);
     }
 
     public void handleOperation(String operation) {
