@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Simple Calculator</string>
-    <string name="app_launcher_name">Calculator</string>
+    <string name="app_launcher_name">Kalkylator</string>
     <string name="copied_to_clipboard">Värdet kopierat till urklippet</string>
 
     <!-- About -->
@@ -8,9 +8,9 @@
     <string name="website">Fler enkla appar och källkod här:\nhttp://simplemobiletools.com</string>
     <string name="email_label">Skicka feedback och förslag till:</string>
     <string name="third_party_licences_underlined"><u>Tredjepartslicenser</u></string>
-    <string name="invite_friends_underlined"><u>Invite friends</u></string>
-    <string name="share_text">Hey, come check out %1$s at %2$s</string>
-    <string name="invite_via">Invite via</string>
+    <string name="invite_friends_underlined"><u>Bjud in vänner</u></string>
+    <string name="share_text">Hej, läs om %1$s på %2$s</string>
+    <string name="invite_via">Bjud in via</string>
     <string name="rate_us_underlined"><u>Betygsätt oss i Play Butiken</u></string>
     <string name="follow_us">Följ oss:</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
@@ -22,21 +22,21 @@
     <!-- License -->
     <string name="notice">Denna app använder följande tredjepartsbibliotek för att göra mitt liv enklare. Tack.</string>
     <string name="third_party_licences">Tredjepartslicenser</string>
-    <string name="butterknife_title"><u>Butter Knife (view injector)</u></string>
-    <string name="ambilwarna_title"><u>AmbilWarna (color picker)</u></string>
-    <string name="autofittextview_title"><u>AutoFitTextView (autoresizing textview)</u></string>
-    <string name="robolectric_title"><u>Robolectric (unit testing framework)</u></string>
-    <string name="espresso_title"><u>Espresso (UI testing framework)</u></string>
+    <string name="butterknife_title"><u>Butter Knife (vyinjektor)</u></string>
+    <string name="ambilwarna_title"><u>AmbilWarna (färgväljare)</u></string>
+    <string name="autofittextview_title"><u>AutoFitTextView (textvy med automatisk storleksändring)</u></string>
+    <string name="robolectric_title"><u>Robolectric (ramverk för enhetstestning)</u></string>
+    <string name="espresso_title"><u>Espresso (ramverk för användargränssnittstestning)</u></string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <string name="app_short_description">A calculator with the basic functions and a customizable widget.</string>
+    <string name="app_short_description">En kalkylator med grundläggande funktioner och en anpassningsbar widget.</string>
     <string name="app_long_description">
-        There is no unit converter, you can copy the result or formula to clipboard by long pressing it.
+        Kalkylatorn har ingen enhetsomvandlare. Du kan kopiera resultatet eller formeln till urklipp genom att trycka länge.
 
-        The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+        Du kan anpassa widgetens textfärg, bakgrundens färg och bakgrundens genomskinlighet. Tryck på resultatet eller formeln i widgeten för att öppna appen.
 
-        Contains no ads or unnecessary permissions. It is fully opensource, provides a Dark theme too.
+        Innehåller ingen reklam eller onödiga behörigheter. Den har helt öppen källkod och har även ett Mörkt tema.
 
-        This app is just one piece of a bigger series of apps. You can find the rest of them at http://www.simplemobiletools.com
+        Denna app är bara en del av en större serie appar. Du hittar resten av dem på http://www.simplemobiletools.com
     </string>
 </resources>
