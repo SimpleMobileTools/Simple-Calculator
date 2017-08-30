@@ -13,8 +13,7 @@
     <string name="invite_via">Inviter via</string>
     <string name="rate_us_underlined"><u>Notez-nous dans le Play Store</u></string>
     <string name="follow_us">Suivez-nous:</string>
-    <string name="copyright">v %1$s\n
-  Copyright © Simple Mobile Tools %2$d</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
 
     <!-- Settings -->
     <string name="settings">Paramètres</string>
