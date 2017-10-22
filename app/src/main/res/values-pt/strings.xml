@@ -3,31 +3,6 @@
     <string name="app_launcher_name">Calculadora</string>
     <string name="copied_to_clipboard">Valor copiado para a área de transferência</string>
 
-    <!-- About -->
-    <string name="about">Acerca</string>
-    <string name="website">Mais aplicações Simple e código fonte em:\nhttp://simplemobiletools.com</string>
-    <string name="email_label">Envie os seus comentários ou sugestões para:</string>
-    <string name="third_party_licences_underlined"><u>Licenças de terceiros</u></string>
-    <string name="invite_friends_underlined"><u>Convidar amigos</u></string>
-    <string name="share_text">Olá, experimenta %1$s em %2$s</string>
-    <string name="invite_via">Convidar via</string>
-    <string name="rate_us_underlined"><u>Classifique-nos na Play Store</u></string>
-    <string name="follow_us">Siga-nos:</string>
-    <string name="copyright">V %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-
-    <!-- Settings -->
-    <string name="settings">Definições</string>
-    <string name="dark_theme">Tema escuro</string>
-
-    <!-- License -->
-    <string name="notice">Esta aplicação usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>
-    <string name="third_party_licences">Licenças de terceiros</string>
-    <string name="butterknife_title"><u>Butter Knife (injetor de vistas)</u></string>
-    <string name="ambilwarna_title"><u>AmbilWarna (seletor de cores)</u></string>
-    <string name="autofittextview_title"><u>AutoFitTextView (ajuste automático de texto)</u></string>
-    <string name="robolectric_title"><u>Robolectric (infraestrutura de teste de unidades)</u></string>
-    <string name="espresso_title"><u>Espresso (infraestrutura de testes da interface)</u></string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <string name="app_short_description">Uma calculadora com funções básicas e um widget personalizável.</string>
     <string name="app_long_description">
