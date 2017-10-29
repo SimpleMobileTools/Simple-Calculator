@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Schlichter Taschenrechner</string>
-    <string name="app_launcher_name">Taschenrechner</string>
+    <string name="app_name">Schlichter Rechner</string>
+    <string name="app_launcher_name">Rechner</string>
     <string name="copied_to_clipboard">Wert in Zwischenablage kopiert</string>
 
     <!-- About -->
@@ -29,14 +29,14 @@
     <string name="espresso_title"><u>Espresso (UI Testing Framework)</u></string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <string name="app_short_description">A calculator with the basic functions and a customizable widget.</string>
+    <string name="app_short_description">Ein Taschenrechner mit grundlegenden Funktionen und einem anpassbaren Widget.</string>
     <string name="app_long_description">
-        There is no unit converter, you can copy the result or formula to clipboard by long pressing it.
+        Diese App beinhaltet keinen Einheitenumrechner. Du kannst das Ergebnis oder die Formel durch längeres Drücken in die Zwischenablage kopieren.
 
-        The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+        Die Textfarbe des Widgets kann angepasst werden sowie die Farbe und Transparenz des Hintergrunds. Tippe auf das Ergebnis oder die Formel um die App zu öffnen.
 
-        Contains no ads or unnecessary permissions. It is fully opensource, provides a Dark theme too.
+        Beinhaltet keine Werbung und benötigt keine unnötigen Berechtigungen. Die App ist komplett Open Source und bietet nach Wunsch anpassbare Farben.
 
-        This app is just one piece of a bigger series of apps. You can find the rest of them at http://www.simplemobiletools.com
+        Diese App ist nur eine von vielen unserer Apps. Du kannst alle anderen hier finden: http://www.simplemobiletools.com
     </string>
 </resources>
