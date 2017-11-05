@@ -6,7 +6,6 @@ import android.appwidget.AppWidgetProvider
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.View
 import android.widget.RemoteViews
 import com.simplemobiletools.calculator.R
@@ -25,7 +24,6 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
     }
 
     private fun performUpdate(context: Context) {
-        Log.e("DEBUG", "perform update")
         val config = context.config
         val appWidgetManager = AppWidgetManager.getInstance(context)
         appWidgetManager.getAppWidgetIds(getComponentName(context)).forEach {
@@ -99,7 +97,6 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
     }
 
     private fun myAction(action: String, context: Context) {
-        Log.e("DEBUG", "myaction $calc")
         if (calc == null) {
             calc = CalculatorImpl(this, context)
         }
