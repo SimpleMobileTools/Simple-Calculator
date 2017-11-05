@@ -9,7 +9,7 @@
     tools:context=".activities.MainActivity"
     tools:ignore="HardcodedText">
 
-    <com.simplemobiletools.commons.views.MyTextView
+    <TextView
         android:id="@+id/formula"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,7 +21,7 @@
         android:paddingRight="@dimen/activity_margin"
         android:textSize="@dimen/actionbar_text_size"/>
 
-    <com.simplemobiletools.commons.views.MyTextView
+    <TextView
         android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -40,7 +40,7 @@
         android:layout_weight="2"
         android:orientation="horizontal">
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_modulo"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -50,7 +50,7 @@
             android:textAllCaps="false"
             android:textSize="@dimen/extra_big_text_size"/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_power"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -58,7 +58,7 @@
             android:layout_weight="1"
             android:text="^"/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_root"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -66,7 +66,7 @@
             android:layout_weight="1"
             android:text="√"/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_clear"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -74,7 +74,7 @@
             android:layout_weight="1"
             android:text="C"/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_reset"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -90,7 +90,7 @@
         android:layout_weight="2"
         android:orientation="horizontal">
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_7"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -98,7 +98,7 @@
             android:layout_weight="1"
             android:text="7"/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_8"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -106,7 +106,7 @@
             android:layout_weight="1"
             android:text="8"/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_9"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -114,7 +114,7 @@
             android:layout_weight="1"
             android:text="9"/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_divide"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -129,7 +129,7 @@
         android:layout_weight="2"
         android:orientation="horizontal">
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_4"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -137,7 +137,7 @@
             android:layout_weight="1"
             android:text="4"/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_5"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -145,7 +145,7 @@
             android:layout_weight="1"
             android:text="5"/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_6"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -153,7 +153,7 @@
             android:layout_weight="1"
             android:text="6"/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_multiply"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -168,7 +168,7 @@
         android:layout_weight="2"
         android:orientation="horizontal">
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_1"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -176,7 +176,7 @@
             android:layout_weight="1"
             android:text="1"/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_2"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -184,7 +184,7 @@
             android:layout_weight="1"
             android:text="2"/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_3"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -192,7 +192,7 @@
             android:layout_weight="1"
             android:text="3"/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_minus"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -207,7 +207,7 @@
         android:layout_weight="2"
         android:orientation="horizontal">
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_0"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -215,7 +215,7 @@
             android:layout_weight="1"
             android:text="0"/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_decimal"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -223,7 +223,7 @@
             android:layout_weight="1"
             android:text="."/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_equals"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -231,7 +231,7 @@
             android:layout_weight="1"
             android:text="="/>
 
-        <com.simplemobiletools.commons.views.MyButton
+        <Button
             android:id="@+id/btn_plus"
             style="@style/MyButton"
             android:layout_width="match_parent"

@@ -1,31 +1,24 @@
 package com.simplemobiletools.calculator.helpers
 
+import android.content.Context
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.operation.OperationFactory
 
-class CalculatorImpl {
+class CalculatorImpl(calculator: Calculator, val context: Context) {
     var displayedNumber: String? = null
     var displayedFormula: String? = null
-    private var mLastKey: String? = null
+    var lastKey: String? = null
     private var mLastOperation: String? = null
-    private var mCallback: Calculator? = null
+    private var mCallback: Calculator? = calculator
 
     private var mIsFirstOperation = false
     private var mResetValue = false
     private var mBaseValue = 0.0
     private var mSecondValue = 0.0
 
-    constructor(calculator: Calculator) {
-        mCallback = calculator
+    init {
         resetValues()
         setValue("0")
-        setFormula("")
-    }
-
-    constructor(calculatorInterface: Calculator, value: String) {
-        mCallback = calculatorInterface
-        resetValues()
-        displayedNumber = value
         setFormula("")
     }
 
@@ -40,20 +33,20 @@ class CalculatorImpl {
         mBaseValue = 0.0
         mSecondValue = 0.0
         mResetValue = false
-        mLastKey = ""
         mLastOperation = ""
         displayedNumber = ""
         displayedFormula = ""
         mIsFirstOperation = true
+        lastKey = ""
     }
 
     fun setValue(value: String) {
-        mCallback!!.setValue(value)
+        mCallback!!.setValue(value, context)
         displayedNumber = value
     }
 
     private fun setFormula(value: String) {
-        mCallback!!.setFormula(value)
+        mCallback!!.setFormula(value, context)
         displayedFormula = value
     }
 
@@ -69,10 +62,6 @@ class CalculatorImpl {
         }
     }
 
-    fun setLastKey(mLastKey: String) {
-        this.mLastKey = mLastKey
-    }
-
     fun addDigit(number: Int) {
         val currentValue = displayedNumber
         val newValue = formatString(currentValue!! + number)
@@ -82,8 +71,9 @@ class CalculatorImpl {
     private fun formatString(str: String): String {
         // if the number contains a decimal, do not try removing the leading zero anymore, nor add group separator
         // it would prevent writing values like 1.02
-        if (str.contains("."))
+        if (str.contains(".")) {
             return str
+        }
 
         val doubleValue = Formatter.stringToDouble(str)
         return Formatter.doubleToString(doubleValue)
@@ -102,7 +92,7 @@ class CalculatorImpl {
         mBaseValue = getDisplayedNumberAsDouble()
     }
 
-    fun calculateResult() {
+    private fun calculateResult() {
         if (!mIsFirstOperation) {
             updateFormula()
         }
@@ -117,11 +107,11 @@ class CalculatorImpl {
     }
 
     fun handleOperation(operation: String) {
-        if (mLastKey == DIGIT)
+        if (lastKey == DIGIT)
             handleResult()
 
         mResetValue = true
-        mLastKey = operation
+        lastKey = operation
         mLastOperation = operation
 
         if (operation == ROOT)
@@ -136,8 +126,9 @@ class CalculatorImpl {
         if (oldValue.contains("-"))
             minLen++
 
-        if (len > minLen)
+        if (len > minLen) {
             newValue = oldValue.substring(0, len - 1)
+        }
 
         newValue = newValue.replace("\\.$".toRegex(), "")
         newValue = formatString(newValue)
@@ -152,21 +143,22 @@ class CalculatorImpl {
     }
 
     fun handleEquals() {
-        if (mLastKey == EQUALS)
+        if (lastKey == EQUALS)
             calculateResult()
 
-        if (mLastKey != DIGIT)
+        if (lastKey != DIGIT)
             return
 
         mSecondValue = getDisplayedNumberAsDouble()
         calculateResult()
-        mLastKey = EQUALS
+        lastKey = EQUALS
     }
 
     private fun decimalClicked() {
         var value = displayedNumber
-        if (!value!!.contains("."))
+        if (!value!!.contains(".")) {
             value += "."
+        }
         setValue(value)
     }
 
@@ -188,11 +180,11 @@ class CalculatorImpl {
     }
 
     fun numpadClicked(id: Int) {
-        if (mLastKey == EQUALS) {
+        if (lastKey == EQUALS) {
             mLastOperation = EQUALS
         }
 
-        mLastKey = DIGIT
+        lastKey = DIGIT
         resetValueIfNeeded()
 
         when (id) {

@@ -6,7 +6,6 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.view.View
 import android.widget.Button
 import android.widget.RemoteViews
 import android.widget.SeekBar
@@ -15,6 +14,7 @@ import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.helpers.MyWidgetProvider
 import com.simplemobiletools.commons.dialogs.ColorPickerDialog
 import com.simplemobiletools.commons.extensions.adjustAlpha
+import com.simplemobiletools.commons.extensions.beVisible
 import com.simplemobiletools.commons.extensions.setBackgroundColor
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.widget_config.*
@@ -53,7 +53,7 @@ class WidgetConfigureActivity : AppCompatActivity() {
             mBgAlpha = Color.alpha(mBgColor) / 255.toFloat()
         }
 
-        btn_reset.visibility = View.VISIBLE
+        btn_reset.beVisible()
         mBgColorWithoutTransparency = Color.rgb(Color.red(mBgColor), Color.green(mBgColor), Color.blue(mBgColor))
         config_bg_seekbar.setOnSeekBarChangeListener(seekbarChangeListener)
         config_bg_seekbar.progress = (mBgAlpha * 100).toInt()

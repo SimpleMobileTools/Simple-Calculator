@@ -13,13 +13,13 @@ import org.robolectric.annotation.Config
 @RunWith(RobolectricTestRunner::class)
 @Config(constants = BuildConfig::class, sdk = intArrayOf(21))
 class MainActivityTest {
-    internal lateinit var activity: MainActivity
+    private lateinit var activity: MainActivity
 
     private val displayedNumber: String?
-        get() = activity.calc!!.displayedNumber
+        get() = activity.calc.displayedNumber
 
     private val displayedFormula: String?
-        get() = activity.calc!!.displayedFormula
+        get() = activity.calc.displayedFormula
 
     @Before
     fun setUp() {
@@ -28,14 +28,14 @@ class MainActivityTest {
 
     @Test
     fun addSimpleDigit() {
-        activity.calc!!.addDigit(2)
+        activity.calc.addDigit(2)
         assertEquals("2", displayedNumber)
     }
 
     @Test
     fun removeLeadingZero() {
-        activity.calc!!.addDigit(0)
-        activity.calc!!.addDigit(5)
+        activity.calc.addDigit(0)
+        activity.calc.addDigit(5)
         assertEquals("5", displayedNumber)
     }
 
@@ -99,26 +99,26 @@ class MainActivityTest {
     @Test
     fun clearBtnSimpleTest() {
         setDouble(156.0)
-        activity.calc!!.handleClear()
+        activity.calc.handleClear()
         assertEquals("15", displayedNumber)
     }
 
     @Test
     fun clearBtnComplexTest() {
         setDouble(-26.0)
-        activity.calc!!.handleClear()
+        activity.calc.handleClear()
         assertEquals("-2", displayedNumber)
-        activity.calc!!.handleClear()
+        activity.calc.handleClear()
         assertEquals("0", displayedNumber)
     }
 
     @Test
     fun clearBtnLongClick_resetsEverything() {
         calcResult(-1.2, PLUS, 3.4)
-        activity.calc!!.handleReset()
+        activity.calc.handleReset()
         handleOperation(PLUS)
         setDouble(3.0)
-        activity.calc!!.handleResult()
+        activity.calc.handleResult()
         assertEquals("3", displayedNumber)
         checkFormula("")
     }
@@ -133,10 +133,10 @@ class MainActivityTest {
         checkFormula("-12.2+21")
 
         setDouble(1.6)
-        activity.calc!!.handleEquals()
+        activity.calc.handleEquals()
         assertEquals("7.2", displayedNumber)
         checkFormula("8.8-1.6")
-        activity.calc!!.handleEquals()
+        activity.calc.handleEquals()
         assertEquals("5.6", displayedNumber)
         checkFormula("7.2-1.6")
 
@@ -161,7 +161,7 @@ class MainActivityTest {
         assertEquals("16", displayedNumber)
         checkFormula("√256")
 
-        activity.calc!!.handleClear()
+        activity.calc.handleClear()
         assertEquals("1", displayedNumber)
     }
 
@@ -170,7 +170,7 @@ class MainActivityTest {
     }
 
     private fun handleOperation(operation: String) {
-        activity.calc!!.handleOperation(operation)
+        activity.calc.handleOperation(operation)
     }
 
     private fun checkFormula(desired: String) {
@@ -181,7 +181,7 @@ class MainActivityTest {
         setDouble(baseValue)
         handleOperation(operation)
         setDouble(secondValue)
-        activity.calc!!.handleResult()
+        activity.calc.handleResult()
         return displayedNumber
     }
 }

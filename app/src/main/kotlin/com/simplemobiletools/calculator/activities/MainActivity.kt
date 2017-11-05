@@ -10,9 +10,9 @@ import android.view.MenuItem
 import com.simplemobiletools.calculator.BuildConfig
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.config
+import com.simplemobiletools.calculator.extensions.updateViewColors
 import com.simplemobiletools.calculator.helpers.*
 import com.simplemobiletools.commons.extensions.toast
-import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.extensions.value
 import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
 import com.simplemobiletools.commons.helpers.LICENSE_ESPRESSO
@@ -22,53 +22,48 @@ import kotlinx.android.synthetic.main.activity_main.*
 import me.grantland.widget.AutofitHelper
 
 class MainActivity : SimpleActivity(), Calculator {
-    private var mStoredTextColor = 0
-
-    companion object {
-        private lateinit var mCalc: CalculatorImpl
-    }
-
-    val calc: CalculatorImpl?
-        get() = mCalc
+    private var storedTextColor = 0
+    lateinit var calc: CalculatorImpl
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn_plus.setOnClickListener { mCalc.handleOperation(PLUS) }
-        btn_minus.setOnClickListener { mCalc.handleOperation(MINUS) }
-        btn_multiply.setOnClickListener { mCalc.handleOperation(MULTIPLY) }
-        btn_divide.setOnClickListener { mCalc.handleOperation(DIVIDE) }
-        btn_modulo.setOnClickListener { mCalc.handleOperation(MODULO) }
-        btn_power.setOnClickListener { mCalc.handleOperation(POWER) }
-        btn_root.setOnClickListener { mCalc.handleOperation(ROOT) }
+        calc = CalculatorImpl(this, applicationContext)
 
-        btn_clear.setOnClickListener { mCalc.handleClear() }
-        btn_clear.setOnLongClickListener { mCalc.handleReset(); true }
+        btn_plus.setOnClickListener { calc.handleOperation(PLUS) }
+        btn_minus.setOnClickListener { calc.handleOperation(MINUS) }
+        btn_multiply.setOnClickListener { calc.handleOperation(MULTIPLY) }
+        btn_divide.setOnClickListener { calc.handleOperation(DIVIDE) }
+        btn_modulo.setOnClickListener { calc.handleOperation(MODULO) }
+        btn_power.setOnClickListener { calc.handleOperation(POWER) }
+        btn_root.setOnClickListener { calc.handleOperation(ROOT) }
+
+        btn_clear.setOnClickListener { calc.handleClear() }
+        btn_clear.setOnLongClickListener { calc.handleReset(); true }
 
         getButtonIds().forEach {
-            it.setOnClickListener { mCalc.numpadClicked(it.id) }
+            it.setOnClickListener { calc.numpadClicked(it.id) }
         }
 
-        btn_equals.setOnClickListener { mCalc.handleEquals() }
+        btn_equals.setOnClickListener { calc.handleEquals() }
         formula.setOnLongClickListener { copyToClipboard(false) }
         result.setOnLongClickListener { copyToClipboard(true) }
 
-        mCalc = CalculatorImpl(this)
         AutofitHelper.create(result)
         AutofitHelper.create(formula)
     }
 
     override fun onResume() {
         super.onResume()
-        if (mStoredTextColor != config.textColor) {
-            updateTextColors(calculator_holder)
+        if (storedTextColor != config.textColor) {
+            updateViewColors(calculator_holder, config.textColor)
         }
     }
 
     override fun onPause() {
         super.onPause()
-        mStoredTextColor = config.textColor
+        storedTextColor = config.textColor
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -111,17 +106,17 @@ class MainActivity : SimpleActivity(), Calculator {
         return true
     }
 
-    override fun setValue(value: String) {
+    override fun setValue(value: String, context: Context) {
         result.text = value
     }
 
     // used only by Robolectric
     override fun setValueDouble(d: Double) {
-        mCalc.setValue(Formatter.doubleToString(d))
-        mCalc.setLastKey(DIGIT)
+        calc.setValue(Formatter.doubleToString(d))
+        calc.lastKey = DIGIT
     }
 
-    override fun setFormula(value: String) {
+    override fun setFormula(value: String, context: Context) {
         formula.text = value
     }
 }
