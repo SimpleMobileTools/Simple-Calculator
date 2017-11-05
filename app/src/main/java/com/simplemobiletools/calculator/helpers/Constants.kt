@@ -1,4 +1,4 @@
-package com.simplemobiletools.calculator
+package com.simplemobiletools.calculator.helpers
 
 val DIGIT = "digit"
 val EQUALS = "equals"
@@ -23,10 +23,3 @@ val SIX = "six"
 val SEVEN = "seven"
 val EIGHT = "eight"
 val NINE = "nine"
-
-// shared preferences
-val PREFS_KEY = "Calculator"
-val IS_FIRST_RUN = "is_first_run"
-val IS_DARK_THEME = "is_dark_theme"
-val WIDGET_BG_COLOR = "widget_bg_color"
-val WIDGET_TEXT_COLOR = "widget_text_color"

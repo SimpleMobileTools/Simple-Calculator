@@ -11,8 +11,12 @@ import android.view.View
 import android.widget.Button
 import android.widget.RemoteViews
 import android.widget.SeekBar
-import com.simplemobiletools.calculator.*
+import com.simplemobiletools.calculator.R
+import com.simplemobiletools.calculator.helpers.MyWidgetProvider
 import com.simplemobiletools.commons.dialogs.ColorPickerDialog
+import com.simplemobiletools.commons.helpers.PREFS_KEY
+import com.simplemobiletools.commons.helpers.WIDGET_BG_COLOR
+import com.simplemobiletools.commons.helpers.WIDGET_TEXT_COLOR
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.widget_config.*
 
@@ -75,7 +79,7 @@ class WidgetConfigureActivity : AppCompatActivity() {
         config_bg_seekbar.progress = (mBgAlpha * 100).toInt()
         updateBackgroundColor()
 
-        mTextColor = prefs.getInt(WIDGET_TEXT_COLOR, resources.getColor(R.color.colorPrimary))
+        mTextColor = prefs.getInt(WIDGET_TEXT_COLOR, resources.getColor(R.color.color_primary))
         updateTextColor()
 
         formula.text = "15,937*5"

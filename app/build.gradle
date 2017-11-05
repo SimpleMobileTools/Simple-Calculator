@@ -27,11 +27,17 @@ android {
             signingConfig signingConfigs.release
         }
     }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {
-    compile 'com.simplemobiletools:commons:2.35.4'
+    compile 'com.simplemobiletools:commons:2.35.5'
     compile 'me.grantland:autofittextview:0.2.1'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.robolectric:robolectric:3.3.2'
@@ -40,7 +46,18 @@ dependencies {
     androidTestCompile 'com.android.support.test:runner:0.5'
     androidTestCompile 'com.android.support.test:rules:0.5'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+}
+
+buildscript {
+    ext.kotlin_version = '1.1.51'
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+    }
 }
 
 def Properties props = new Properties()
@@ -48,12 +65,11 @@ def propFile = new File('signing.properties')
 if (propFile.canRead()) {
     props.load(new FileInputStream(propFile))
 
-    if (props != null && props.containsKey('STORE_FILE') && props.containsKey('STORE_PASSWORD') &&
-            props.containsKey('KEY_ALIAS') && props.containsKey('KEY_PASSWORD')) {
+    if (props != null && props.containsKey('STORE_FILE') && props.containsKey('KEY_ALIAS') && props.containsKey('PASSWORD')) {
         android.signingConfigs.release.storeFile = file(props['STORE_FILE'])
-        android.signingConfigs.release.storePassword = props['STORE_PASSWORD']
+        android.signingConfigs.release.storePassword = props['PASSWORD']
         android.signingConfigs.release.keyAlias = props['KEY_ALIAS']
-        android.signingConfigs.release.keyPassword = props['KEY_PASSWORD']
+        android.signingConfigs.release.keyPassword = props['PASSWORD']
     } else {
         println 'signing.properties found but some entries are missing'
         android.buildTypes.release.signingConfig = null
@@ -61,8 +77,4 @@ if (propFile.canRead()) {
 } else {
     println 'signing.properties not found'
     android.buildTypes.release.signingConfig = null
-}
-repositories {
-    mavenCentral()
-    maven { url "https://jitpack.io" }
 }

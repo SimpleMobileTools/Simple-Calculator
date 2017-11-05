@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-    package="com.simplemobiletools.calculator"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.simplemobiletools.calculator">
 
     <application
         android:allowBackup="true"
@@ -28,6 +28,11 @@
         </activity>
 
         <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName=".activities.MainActivity"/>
+
+        <activity
             android:name="com.simplemobiletools.commons.activities.AboutActivity"
             android:label="@string/about"
             android:parentActivityName=".activities.MainActivity"/>
@@ -38,18 +43,13 @@
             android:parentActivityName="com.simplemobiletools.commons.activities.AboutActivity"/>
 
         <activity
-            android:name=".activities.SettingsActivity"
-            android:label="@string/settings"
-            android:parentActivityName=".activities.MainActivity"/>
-
-        <activity
             android:name="com.simplemobiletools.commons.activities.CustomizationActivity"
             android:label="@string/customize_colors"
             android:parentActivityName=".activities.SettingsActivity"/>
 
         <receiver
-            android:name=".MyWidgetProvider"
-            android:icon="@mipmap/widget_preview">
+            android:name=".helpers.MyWidgetProvider"
+            android:icon="@drawable/img_widget_preview">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>

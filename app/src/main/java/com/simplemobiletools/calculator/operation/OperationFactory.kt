@@ -1,6 +1,6 @@
 package com.simplemobiletools.calculator.operation
 
-import com.simplemobiletools.calculator.*
+import com.simplemobiletools.calculator.helpers.*
 import com.simplemobiletools.calculator.operation.base.Operation
 
 object OperationFactory {

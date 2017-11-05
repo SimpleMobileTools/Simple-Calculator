@@ -3,42 +3,6 @@
     <string name="app_launcher_name">Hesap Makinesi</string>
     <string name="copied_to_clipboard">Panoya kopyalanan değer</string>
 
-    <!-- About -->
-    <string name="about">Hakkında</string>
-    <string name="website">Daha basit uygulamalar ve kaynak kodu:\nhttp://simplemobiletools.com</string>
-    <string name="email_label">Görüşlerinizi veya önerilerinizi şu adrese gönderin:</string>
-    <string name="email" translatable="false">hello@simplemobiletools.com</string>
-    <string name="third_party_licences_underlined"><u> Üçüncü taraf lisansları </u></string>
-    <string name="invite_friends_underlined"><u>Arkadaşlarınızı davet edin</u></string>
-    <string name="share_text">Hey, gel ve adresini ziyaret et %1$s de %2$s</string>
-    <string name="invite_via">aracılığıyla davet et</string>
-    <string name="rate_us_underlined"><u> Play Store da oy verin </u></string>
-    <string name="follow_us">Bizi takip edin:</string>
-    <string name="copyright">v %1$s\nTelif Hakkı © Simple Mobile Tools %2$d</string>
-
-    <!-- Settings -->
-    <string name="settings">Ayarlar</string>
-    <string name="dark_theme">Koyu Tema</string>
-
-    <!-- License -->
-    <string name="notice">Bu uygulama hayatımı kolaylaştırmak için aşağıdaki üçüncü parti kitaplıklarını kullanıyor. Teşekkür ederim.</string>
-    <string name="third_party_licences">Üçüncü taraf lisansları</string>
-    <string name="butterknife_title"><u>Butter Knife (görünüş enjektörü)</u></string>
-    <string name="butterknife_text" translatable="false">Telif Hakkı 2013 Jake Wharton\n\nApache Lisansı, Version 2.0 (\"Lisans\") kapsamında lisanslanmıştır; bu dosyayı Lisans\'a uygunluk dışında kullanamazsınız. Lisansın bir kopyasını aşağıdaki adresten edinebilirsiniz:\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nGeçerli yasalar tarafından talep edilmediği veya yazılı olarak kabul edilmedikçe, Lisans kapsamında dağıtılan yazılımlar, \"OLDUĞU GİBİ\" ESNASINDA, HİÇBİR GARANTİ VE KOŞULU HİÇBİR ZAMAN OLMAKSIZIN, \"açık ve kapalı\" olarak dağıtılır, izinleri ve sınırlamaları düzenleyen özel lisan için Lisans\'ı görüntüler. Lisans kapsamında.</string>
-    <string name="butterknife_url" translatable="false">https://github.com/JakeWharton/butterknife</string>
-    <string name="ambilwarna_title"><u> AmbilWarna (renk seçici) </u></string>
-    <string name="ambilwarna_text" translatable="false">2015 Yuku\n\nApache Lisansı, Version 2.0 (\"Lisans\") kapsamında lisanslanmıştır; bu dosyayı Lisans\'a uygunluğunuz dışında kullanamazsınız. Lisansın bir kopyasını aşağıdaki adresten edinebilirsiniz:\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nYürürlükteki kanunların gerektirmediği veya yazılı olarak kabul edilmediği sürece, Lisans kapsamında dağıtılan yazılımlar, açık veya zımni herhangi bir garanti veya koşul olmadan \"OLDUĞU GİBİ\" temelinde dağıtılır. Lisans altındaki izinler ve sınırlamalara tabi spesifik dil için Lisans\'a bakın.</string>
-    <string name="ambilwarna_url" translatable="false">https://github.com/yukuku/ambilwarna</string>
-    <string name="autofittextview_title"><u> AutoFitTextView (metin görüntüsünü otomatik küçültme) </u></string>
-    <string name="autofittextview_text" translatable="false">Telif hakkı 2014 Grantland Çiğneme\n\nApache Lisansı, Version 2.0 (\"Lisans\") kapsamında lisanslanmıştır; bu dosyayı Lisans\'a uygunluğunuz dışında kullanamazsınız. Lisansın bir kopyasını aşağıdaki adresten edinebilirsiniz:\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nYürürlükteki kanunların gerektirmediği veya yazılı olarak kabul edilmediği sürece, Lisans kapsamında dağıtılan yazılımlar, açık veya zımni herhangi bir garanti veya koşul olmadan \"OLDUĞU GİBİ\" temelinde dağıtılır. Lisans altındaki izinler ve sınırlamalara tabi spesifik dil için Lisans\'a bakın.</string>
-    <string name="autofittextview_url" translatable="false">https://github.com/grantland/android-autofittextview</string>
-    <string name="robolectric_title"><u>Robolectric (birim test çerçevesi)</u></string>
-    <string name="robolectric_text" translatable="false">MIT Lisansı\n\nTelif Hakkı (c) 2010 Xtreme Labs and Pivotal Labs\n\nYazılımın herhangi bir kimliğini ve ilgili dokümantasyon dosyalarını (\"Yazılım\") temin eden herhangi bir şahsa, sınırlama olmaksızın Yazılım\'da uğraşmak için, bunlarla sınırlı olmaksızın, bunlarla sınırlı olmaksızın, bunlarla sınırlı olmaksızın, , yayınlamayı, dağıtmayı, alt lisans almayı ve / veya satmayı ve Yazılım\'ın verildiği kişileri aşağıdaki koşullara tabi olarak izin vermeyi kabul ve taahhüt eder:\n\nYukarıdaki telif hakkı bildirimi ve bu izin bildirimi tüm kopyalarının veya Yazılımın önemli kısımlarına dahil edilecektir.\n\nYAZILIM HERHANGİ BİR AÇIK YA DA KAPALI, DAHİL ANCAK TİCARİ BİR AMACA UYGUNLUK VE HAK İHLALİ GARANTİLER SINIRLI DEĞİLDİR GARANTİ OLMAKSIZIN, \"OLDUĞU GİBİ\" SAĞLANIR. YAZARLAR VE TELİF HAKKI SAHİPLERİ SÖZLEŞME İHLALİ, OUT OF, VEYA YAZILIM VEYA KULLANIM VEYA DİĞER İŞLERİNDEN KAYNAKLANAN, HAKSIZ VEYA BAŞKA HERHANGİ BİR İDDİA, HASAR VEYA DİĞER SORUMLULUK SORUMLU TUTULAMAZ YAZILIM.</string>
-    <string name="robolectric_url" translatable="false">https://github.com/robolectric/robolectric</string>
-    <string name="espresso_title"><u>Espresso (UI test çerçevesi)</u></string>
-    <string name="espresso_text" translatable="false">Telif Hakkı 2014 Android Açık Kaynak Projesi\n\nApache Lisansı, Version 2.0 (\"Lisans\") kapsamında lisanslanmıştır; bu dosyayı Lisans\'a uygunluğunuz dışında kullanamazsınız. Lisansın bir kopyasını aşağıdaki adresten edinebilirsiniz:\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nYürürlükteki kanunların gerektirmediği veya yazılı olarak kabul edilmediği sürece, Lisans kapsamında dağıtılan yazılımlar, açık veya zımni herhangi bir garanti veya koşul olmadan \"OLDUĞU GİBİ\" temelinde dağıtılır. Lisans altındaki izinler ve sınırlamalara tabi spesifik dil için Lisans\'a bakın.</string>
-    <string name="espresso_url" translatable="false">https://google.github.io/android-testing-support-library/docs/espresso/index.html</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <string name="app_short_description">Temel fonksiyonları ve özelleştirilebilir bir araç\'lı bir hesap makinesi.</string>
     <string name="app_long_description">
@@ -46,8 +10,13 @@
 
         The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
 
-        Contains no ads or unnecessary permissions. It is fully opensource, provides a Dark theme too.
+        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
 
         This app is just one piece of a bigger series of apps. You can find the rest of them at http://www.simplemobiletools.com
     </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
 </resources>

@@ -7,7 +7,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import com.simplemobiletools.calculator.*
+import com.simplemobiletools.calculator.BuildConfig
+import com.simplemobiletools.calculator.R
+import com.simplemobiletools.calculator.helpers.*
 import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.extensions.value
 import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
@@ -18,9 +20,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import me.grantland.widget.AutofitHelper
 
 class MainActivity : SimpleActivity(), Calculator {
-
     companion object {
-
         private lateinit var mCalc: CalculatorImpl
     }
 
@@ -62,11 +62,19 @@ class MainActivity : SimpleActivity(), Calculator {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.settings -> startActivity(Intent(applicationContext, SettingsActivity::class.java))
-            R.id.about -> startAboutActivity(R.string.app_name, LICENSE_KOTLIN or LICENSE_AUTOFITTEXTVIEW or LICENSE_ROBOLECTRIC or LICENSE_ESPRESSO, BuildConfig.VERSION_NAME)
+            R.id.settings -> launchSettings()
+            R.id.about -> launchAbout()
             else -> return super.onOptionsItemSelected(item)
         }
         return true
+    }
+
+    private fun launchSettings() {
+        startActivity(Intent(applicationContext, SettingsActivity::class.java))
+    }
+
+    private fun launchAbout() {
+        startAboutActivity(R.string.app_name, LICENSE_KOTLIN or LICENSE_AUTOFITTEXTVIEW or LICENSE_ROBOLECTRIC or LICENSE_ESPRESSO, BuildConfig.VERSION_NAME)
     }
 
     private fun copyToClipboard(copyResult: Boolean): Boolean {

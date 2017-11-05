@@ -8,11 +8,15 @@
     <string name="app_long_description">
         No hay conversión de unidades, usted puede copiar el resultado o la fórmula en el portapapeles con una pulsación prolongada.
 
-
         El color del texto del widget puede ser personalizado, además del color y la transparencia del fondo. Presione el resultado o la fórmula en el widget para abrir la aplicación.
 
         No contiene anuncios ni permisos innecesarios. Es completamente OpenSource y además provee un tema oscuro.
 
         Esta aplicación es tan solo una pequeña parte de una serie de aplicaciones. Puede encontrar el resto en http://www.simplemobiletools.com
     </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
 </resources>

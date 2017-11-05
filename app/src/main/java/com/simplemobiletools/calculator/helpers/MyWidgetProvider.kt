@@ -1,4 +1,4 @@
-package com.simplemobiletools.calculator
+package com.simplemobiletools.calculator.helpers
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -10,8 +10,12 @@ import android.content.SharedPreferences
 import android.graphics.Color
 import android.view.View
 import android.widget.RemoteViews
+import com.simplemobiletools.calculator.R
 
 import com.simplemobiletools.calculator.activities.MainActivity
+import com.simplemobiletools.commons.helpers.PREFS_KEY
+import com.simplemobiletools.commons.helpers.WIDGET_BG_COLOR
+import com.simplemobiletools.commons.helpers.WIDGET_TEXT_COLOR
 
 class MyWidgetProvider : AppWidgetProvider(), Calculator {
 
@@ -103,9 +107,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
         }
     }
 
-    private fun initPrefs(context: Context?): SharedPreferences {
-        return context!!.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
-    }
+    private fun initPrefs(context: Context?) = context!!.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
     private fun updateTextColors(color: Int) {
         val viewIds = intArrayOf(R.id.formula, R.id.result, R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7, R.id.btn_8, R.id.btn_9, R.id.btn_modulo, R.id.btn_power, R.id.btn_root, R.id.btn_clear, R.id.btn_reset, R.id.btn_divide, R.id.btn_multiply, R.id.btn_minus, R.id.btn_plus, R.id.btn_decimal, R.id.btn_equals)

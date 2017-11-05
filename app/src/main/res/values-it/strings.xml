@@ -10,8 +10,13 @@
 
         The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
 
-        Contains no ads or unnecessary permissions. It is fully opensource, provides a Dark theme too.
+        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
 
         This app is just one piece of a bigger series of apps. You can find the rest of them at http://www.simplemobiletools.com
     </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
 </resources>

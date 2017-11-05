@@ -14,4 +14,9 @@
 
         Это только одно приложение из множества других в серии. Вы можете найти остальные на http://www.simplemobiletools.com
     </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
 </resources>

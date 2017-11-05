@@ -1,4 +1,4 @@
-package com.simplemobiletools.calculator
+package com.simplemobiletools.calculator.helpers
 
 interface Calculator {
     fun setValue(value: String)

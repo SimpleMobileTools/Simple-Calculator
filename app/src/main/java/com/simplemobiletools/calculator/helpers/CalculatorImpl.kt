@@ -1,5 +1,6 @@
-package com.simplemobiletools.calculator
+package com.simplemobiletools.calculator.helpers
 
+import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.operation.OperationFactory
 
 class CalculatorImpl {
@@ -81,7 +82,7 @@ class CalculatorImpl {
     private fun formatString(str: String): String {
         // if the number contains a decimal, do not try removing the leading zero anymore, nor add group separator
         // it would prevent writing values like 1.02
-        if (str.contains("."))
+        if (str.contains(""))
             return str
 
         val doubleValue = Formatter.stringToDouble(str)
@@ -93,13 +94,12 @@ class CalculatorImpl {
         mBaseValue = value
     }
 
-    val displayedNumberAsDouble: Double
-        get() = Formatter.stringToDouble(displayedNumber!!)
+    private fun getDisplayedNumberAsDouble() = Formatter.stringToDouble(displayedNumber!!)
 
     fun handleResult() {
-        mSecondValue = displayedNumberAsDouble
+        mSecondValue = getDisplayedNumberAsDouble()
         calculateResult()
-        mBaseValue = displayedNumberAsDouble
+        mBaseValue = getDisplayedNumberAsDouble()
     }
 
     fun calculateResult() {
@@ -158,40 +158,40 @@ class CalculatorImpl {
         if (mLastKey != DIGIT)
             return
 
-        mSecondValue = displayedNumberAsDouble
+        mSecondValue = getDisplayedNumberAsDouble()
         calculateResult()
         mLastKey = EQUALS
     }
 
-    fun decimalClicked() {
+    private fun decimalClicked() {
         var value = displayedNumber
-        if (!value!!.contains("."))
-            value += "."
+        if (!value!!.contains(""))
+            value += ""
         setValue(value)
     }
 
-    fun zeroClicked() {
+    private fun zeroClicked() {
         val value = displayedNumber
         if (value != "0")
             addDigit(0)
     }
 
-    private fun getSign(lastOperation: String?): String {
-        return when (lastOperation) {
-            PLUS -> "+"
-            MINUS -> "-"
-            MULTIPLY -> "*"
-            DIVIDE -> "/"
-            MODULO -> "%"
-            POWER -> "^"
-            ROOT -> "√"
-            else -> ""
-        }
+    private fun getSign(lastOperation: String?) = when (lastOperation) {
+        PLUS -> "+"
+        MINUS -> "-"
+        MULTIPLY -> "*"
+        DIVIDE -> "/"
+        MODULO -> "%"
+        POWER -> "^"
+        ROOT -> "√"
+        else -> ""
     }
 
     fun numpadClicked(id: Int) {
-        if (mLastKey == EQUALS)
+        if (mLastKey == EQUALS) {
             mLastOperation = EQUALS
+        }
+
         mLastKey = DIGIT
         resetValueIfNeeded()
 

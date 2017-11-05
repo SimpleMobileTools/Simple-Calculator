@@ -5,5 +5,18 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <string name="app_short_description">Une calculette avec les fonctions de base et un widget customisable.</string>
-    <string name="app_long_description">Pas de conversion d\'unité, restez appuyé sur le résultat d\'une formule pour le copier. La couleur du texte, du fond et la transparence peuvent être modifiés. Appuyez sur le résultat ou la formule du widget pour ouvrir l\'application.        Pas de pub ou d\'autorisations inutiles. Complètement opensource et fournit un thème sombre.          Cette application fait partie d\'une collection, disponibles sur http://www.simplemobiletools.com</string>
+    <string name="app_long_description">
+        Pas de conversion d\'unité, restez appuyé sur le résultat d\'une formule pour le copier.
+
+        La couleur du texte, du fond et la transparence peuvent être modifiés. Appuyez sur le résultat ou la formule du widget pour ouvrir l\'application.
+
+        Pas de pub ou d\'autorisations inutiles. Complètement opensource et fournit un thème sombre.
+
+        Cette application fait partie d\'une collection, disponibles sur http://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
 </resources>

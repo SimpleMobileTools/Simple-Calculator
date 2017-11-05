@@ -1,4 +1,4 @@
-package com.simplemobiletools.calculator
+package com.simplemobiletools.calculator.helpers
 
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
@@ -17,7 +17,5 @@ object Formatter {
         return formatter.format(d)
     }
 
-    fun stringToDouble(str: String): Double {
-        return str.replace(",".toRegex(), "").toDouble()
-    }
+    fun stringToDouble(str: String) = str.replace(",", "").toDouble()
 }
