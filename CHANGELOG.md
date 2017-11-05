@@ -1,6 +1,13 @@
 Changelog
 ==========
 
+Version 2.0.0 *(2017-11-05)*
+----------------------------
+
+ * Rewrote the app to kotlin
+ * Made the widget more reliable
+ * Added color customization
+
 Version 1.12 *(2016-09-07)*
 ----------------------------
 
