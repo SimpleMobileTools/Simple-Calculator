@@ -15,11 +15,7 @@ import org.robolectric.annotation.Config
 class MainActivityTest {
     private lateinit var activity: MainActivity
 
-    private val displayedNumber: String?
-        get() = activity.calc.displayedNumber
-
-    private val displayedFormula: String?
-        get() = activity.calc.displayedFormula
+    private fun getDisplayedNumber() = activity.calc.displayedNumber
 
     @Before
     fun setUp() {
@@ -29,14 +25,14 @@ class MainActivityTest {
     @Test
     fun addSimpleDigit() {
         activity.calc.addDigit(2)
-        assertEquals("2", displayedNumber)
+        assertEquals("2", getDisplayedNumber())
     }
 
     @Test
     fun removeLeadingZero() {
         activity.calc.addDigit(0)
         activity.calc.addDigit(5)
-        assertEquals("5", displayedNumber)
+        assertEquals("5", getDisplayedNumber())
     }
 
     @Test
@@ -92,7 +88,7 @@ class MainActivityTest {
     fun rootTest() {
         setDouble(16.0)
         handleOperation(ROOT)
-        assertEquals("4", displayedNumber)
+        assertEquals("4", getDisplayedNumber())
         checkFormula("√16")
     }
 
@@ -100,16 +96,16 @@ class MainActivityTest {
     fun clearBtnSimpleTest() {
         setDouble(156.0)
         activity.calc.handleClear()
-        assertEquals("15", displayedNumber)
+        assertEquals("15", getDisplayedNumber())
     }
 
     @Test
     fun clearBtnComplexTest() {
         setDouble(-26.0)
         activity.calc.handleClear()
-        assertEquals("-2", displayedNumber)
+        assertEquals("-2", getDisplayedNumber())
         activity.calc.handleClear()
-        assertEquals("0", displayedNumber)
+        assertEquals("0", getDisplayedNumber())
     }
 
     @Test
@@ -119,7 +115,7 @@ class MainActivityTest {
         handleOperation(PLUS)
         setDouble(3.0)
         activity.calc.handleResult()
-        assertEquals("3", displayedNumber)
+        assertEquals("3", getDisplayedNumber())
         checkFormula("")
     }
 
@@ -129,40 +125,40 @@ class MainActivityTest {
         handleOperation(PLUS)
         setDouble(21.0)
         handleOperation(MINUS)
-        assertEquals("8.8", displayedNumber)
+        assertEquals("8.8", getDisplayedNumber())
         checkFormula("-12.2+21")
 
         setDouble(1.6)
         activity.calc.handleEquals()
-        assertEquals("7.2", displayedNumber)
+        assertEquals("7.2", getDisplayedNumber())
         checkFormula("8.8-1.6")
         activity.calc.handleEquals()
-        assertEquals("5.6", displayedNumber)
+        assertEquals("5.6", getDisplayedNumber())
         checkFormula("7.2-1.6")
 
         handleOperation(MULTIPLY)
         setDouble(5.0)
         handleOperation(DIVIDE)
-        assertEquals("28", displayedNumber)
+        assertEquals("28", getDisplayedNumber())
         checkFormula("5.6*5")
 
         setDouble(4.0)
         handleOperation(MODULO)
-        assertEquals("7", displayedNumber)
+        assertEquals("7", getDisplayedNumber())
         checkFormula("28/4")
 
         setDouble(5.0)
         handleOperation(POWER)
-        assertEquals("2", displayedNumber)
+        assertEquals("2", getDisplayedNumber())
         checkFormula("7%5")
 
         setDouble(8.0)
         handleOperation(ROOT)
-        assertEquals("16", displayedNumber)
+        assertEquals("16", getDisplayedNumber())
         checkFormula("√256")
 
         activity.calc.handleClear()
-        assertEquals("1", displayedNumber)
+        assertEquals("1", getDisplayedNumber())
     }
 
     private fun setDouble(d: Double) {
@@ -174,7 +170,7 @@ class MainActivityTest {
     }
 
     private fun checkFormula(desired: String) {
-        assertEquals(desired, displayedFormula)
+        assertEquals(desired, activity.calc.displayedFormula)
     }
 
     private fun calcResult(baseValue: Double, operation: String, secondValue: Double): String? {
@@ -182,6 +178,6 @@ class MainActivityTest {
         handleOperation(operation)
         setDouble(secondValue)
         activity.calc.handleResult()
-        return displayedNumber
+        return getDisplayedNumber()
     }
 }
