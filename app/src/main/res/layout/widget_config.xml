@@ -57,6 +57,6 @@
         android:paddingRight="@dimen/activity_margin"
         android:text="OK"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/config_text_size"/>
+        android:textSize="@dimen/big_text_size"/>
 
 </RelativeLayout>
