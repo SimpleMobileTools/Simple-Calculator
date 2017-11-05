@@ -9,8 +9,10 @@ import android.view.Menu
 import android.view.MenuItem
 import com.simplemobiletools.calculator.BuildConfig
 import com.simplemobiletools.calculator.R
+import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.helpers.*
 import com.simplemobiletools.commons.extensions.toast
+import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.extensions.value
 import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
 import com.simplemobiletools.commons.helpers.LICENSE_ESPRESSO
@@ -20,6 +22,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import me.grantland.widget.AutofitHelper
 
 class MainActivity : SimpleActivity(), Calculator {
+    private var mStoredTextColor = 0
+
     companion object {
         private lateinit var mCalc: CalculatorImpl
     }
@@ -42,7 +46,7 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_clear.setOnClickListener { mCalc.handleClear() }
         btn_clear.setOnLongClickListener { mCalc.handleReset(); true }
 
-        arrayOf(btn_decimal, btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9).forEach {
+        getButtonIds().forEach {
             it.setOnClickListener { mCalc.numpadClicked(it.id) }
         }
 
@@ -53,6 +57,18 @@ class MainActivity : SimpleActivity(), Calculator {
         mCalc = CalculatorImpl(this)
         AutofitHelper.create(result)
         AutofitHelper.create(formula)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (mStoredTextColor != config.textColor) {
+            updateTextColors(calculator_holder)
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mStoredTextColor = config.textColor
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -76,6 +92,8 @@ class MainActivity : SimpleActivity(), Calculator {
     private fun launchAbout() {
         startAboutActivity(R.string.app_name, LICENSE_KOTLIN or LICENSE_AUTOFITTEXTVIEW or LICENSE_ROBOLECTRIC or LICENSE_ESPRESSO, BuildConfig.VERSION_NAME)
     }
+
+    private fun getButtonIds() = arrayOf(btn_decimal, btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9)
 
     private fun copyToClipboard(copyResult: Boolean): Boolean {
         var value = formula.value
