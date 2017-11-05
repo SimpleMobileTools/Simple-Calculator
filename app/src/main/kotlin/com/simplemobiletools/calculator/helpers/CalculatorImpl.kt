@@ -82,7 +82,7 @@ class CalculatorImpl {
     private fun formatString(str: String): String {
         // if the number contains a decimal, do not try removing the leading zero anymore, nor add group separator
         // it would prevent writing values like 1.02
-        if (str.contains(""))
+        if (str.contains("."))
             return str
 
         val doubleValue = Formatter.stringToDouble(str)
@@ -165,8 +165,8 @@ class CalculatorImpl {
 
     private fun decimalClicked() {
         var value = displayedNumber
-        if (!value!!.contains(""))
-            value += ""
+        if (!value!!.contains("."))
+            value += "."
         setValue(value)
     }
 
