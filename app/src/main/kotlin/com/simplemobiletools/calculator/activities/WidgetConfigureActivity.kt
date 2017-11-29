@@ -5,7 +5,6 @@ import android.appwidget.AppWidgetManager
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import android.widget.RemoteViews
 import android.widget.SeekBar
@@ -19,7 +18,7 @@ import com.simplemobiletools.commons.extensions.setBackgroundColor
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.widget_config.*
 
-class WidgetConfigureActivity : AppCompatActivity() {
+class WidgetConfigureActivity : SimpleActivity() {
     private var mBgColor = 0
     private var mBgColorWithoutTransparency = 0
     private var mWidgetId = 0
@@ -27,6 +26,7 @@ class WidgetConfigureActivity : AppCompatActivity() {
     private var mBgAlpha = 0f
 
     public override fun onCreate(savedInstanceState: Bundle?) {
+        useDynamicTheme = false
         super.onCreate(savedInstanceState)
         setResult(Activity.RESULT_CANCELED)
         setContentView(R.layout.widget_config)
