@@ -1,7 +1,9 @@
 ﻿<resources>
     <string name="app_name">シンプル電卓</string>
     <string name="app_launcher_name">電卓</string>
-    <string name="copied_to_clipboard">値をクリップボードにコピーしました</string>
+
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <string name="app_short_description">基本機能とカスタマイズ可能なウィジェットを備えた電卓。</string>

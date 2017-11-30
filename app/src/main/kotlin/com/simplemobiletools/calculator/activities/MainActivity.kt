@@ -1,18 +1,18 @@
 package com.simplemobiletools.calculator.activities
 
-import android.content.ClipData
-import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.simplemobiletools.calculator.BuildConfig
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.extensions.updateViewColors
 import com.simplemobiletools.calculator.helpers.*
-import com.simplemobiletools.commons.extensions.toast
+import com.simplemobiletools.commons.extensions.copyToClipboard
+import com.simplemobiletools.commons.extensions.performHapticFeedback
 import com.simplemobiletools.commons.extensions.value
 import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
 import com.simplemobiletools.commons.helpers.LICENSE_ESPRESSO
@@ -23,6 +23,8 @@ import me.grantland.widget.AutofitHelper
 
 class MainActivity : SimpleActivity(), Calculator {
     private var storedTextColor = 0
+    private var vibrateOnButtonPress = true
+
     lateinit var calc: CalculatorImpl
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,22 +33,22 @@ class MainActivity : SimpleActivity(), Calculator {
 
         calc = CalculatorImpl(this, applicationContext)
 
-        btn_plus.setOnClickListener { calc.handleOperation(PLUS) }
-        btn_minus.setOnClickListener { calc.handleOperation(MINUS) }
-        btn_multiply.setOnClickListener { calc.handleOperation(MULTIPLY) }
-        btn_divide.setOnClickListener { calc.handleOperation(DIVIDE) }
-        btn_modulo.setOnClickListener { calc.handleOperation(MODULO) }
-        btn_power.setOnClickListener { calc.handleOperation(POWER) }
-        btn_root.setOnClickListener { calc.handleOperation(ROOT) }
+        btn_plus.setOnClickListener { calc.handleOperation(PLUS); checkHaptic(it) }
+        btn_minus.setOnClickListener { calc.handleOperation(MINUS); checkHaptic(it) }
+        btn_multiply.setOnClickListener { calc.handleOperation(MULTIPLY); checkHaptic(it) }
+        btn_divide.setOnClickListener { calc.handleOperation(DIVIDE); checkHaptic(it) }
+        btn_modulo.setOnClickListener { calc.handleOperation(MODULO); checkHaptic(it) }
+        btn_power.setOnClickListener { calc.handleOperation(POWER); checkHaptic(it) }
+        btn_root.setOnClickListener { calc.handleOperation(ROOT); checkHaptic(it) }
 
-        btn_clear.setOnClickListener { calc.handleClear() }
+        btn_clear.setOnClickListener { calc.handleClear(); checkHaptic(it) }
         btn_clear.setOnLongClickListener { calc.handleReset(); true }
 
         getButtonIds().forEach {
-            it.setOnClickListener { calc.numpadClicked(it.id) }
+            it.setOnClickListener { calc.numpadClicked(it.id); checkHaptic(it) }
         }
 
-        btn_equals.setOnClickListener { calc.handleEquals() }
+        btn_equals.setOnClickListener { calc.handleEquals(); checkHaptic(it) }
         formula.setOnLongClickListener { copyToClipboard(false) }
         result.setOnLongClickListener { copyToClipboard(true) }
 
@@ -59,6 +61,7 @@ class MainActivity : SimpleActivity(), Calculator {
         if (storedTextColor != config.textColor) {
             updateViewColors(calculator_holder, config.textColor)
         }
+        vibrateOnButtonPress = config.vibrateOnButtonPress
     }
 
     override fun onPause() {
@@ -80,6 +83,12 @@ class MainActivity : SimpleActivity(), Calculator {
         return true
     }
 
+    private fun checkHaptic(view: View) {
+        if (vibrateOnButtonPress) {
+            view.performHapticFeedback()
+        }
+    }
+
     private fun launchSettings() {
         startActivity(Intent(applicationContext, SettingsActivity::class.java))
     }
@@ -96,14 +105,12 @@ class MainActivity : SimpleActivity(), Calculator {
             value = result.value
         }
 
-        if (value.isEmpty())
-            return false
-
-        val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        val clip = ClipData.newPlainText(resources.getString(R.string.app_name), value)
-        clipboard.primaryClip = clip
-        toast(R.string.copied_to_clipboard)
-        return true
+        return if (value.isEmpty()) {
+            false
+        } else {
+            copyToClipboard(value)
+            true
+        }
     }
 
     override fun setValue(value: String, context: Context) {

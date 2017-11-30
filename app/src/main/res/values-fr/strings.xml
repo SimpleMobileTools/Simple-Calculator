@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Simple Calculette</string>
     <string name="app_launcher_name">Calculette</string>
-    <string name="copied_to_clipboard">Valeur copiée dans le presse-papier</string>
+
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <string name="app_short_description">Une calculette avec les fonctions de base et un widget customisable.</string>

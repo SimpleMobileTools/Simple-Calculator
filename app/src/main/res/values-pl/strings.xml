@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Prosty Kalkulator</string>
     <string name="app_launcher_name">Kalkulator</string>
-    <string name="copied_to_clipboard">Wartość została skopiowana do schowka</string>
+
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <string name="app_short_description">Kalulator z podstawowymi funkcjami oraz konfiguralnym widżetem.</string>

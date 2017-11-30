@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Simple Calculator</string>
     <string name="app_launcher_name">Calculadora</string>
-    <string name="copied_to_clipboard">Valor copiado en el portapapeles</string>
+
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <string name="app_short_description">Una calculadora con funciones básicas y un widget personalizable.</string>

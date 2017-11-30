@@ -23,3 +23,6 @@ val SIX = "six"
 val SEVEN = "seven"
 val EIGHT = "eight"
 val NINE = "nine"
+
+// shared preferences
+val VIBRATE_ON_BUTTON_PRESS = "vibrate_on_button_press"

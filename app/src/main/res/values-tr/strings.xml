@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Basit Hesap Makinesi</string>
     <string name="app_launcher_name">Hesap Makinesi</string>
-    <string name="copied_to_clipboard">Panoya kopyalanan değer</string>
+
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <string name="app_short_description">Temel fonksiyonları ve özelleştirilebilir bir araç\'lı bir hesap makinesi.</string>
