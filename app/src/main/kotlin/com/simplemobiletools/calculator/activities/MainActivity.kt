@@ -11,9 +11,7 @@ import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.extensions.updateViewColors
 import com.simplemobiletools.calculator.helpers.*
-import com.simplemobiletools.commons.extensions.copyToClipboard
-import com.simplemobiletools.commons.extensions.performHapticFeedback
-import com.simplemobiletools.commons.extensions.value
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
 import com.simplemobiletools.commons.helpers.LICENSE_ESPRESSO
 import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
@@ -30,6 +28,7 @@ class MainActivity : SimpleActivity(), Calculator {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        appLaunched()
 
         calc = CalculatorImpl(this, applicationContext)
 
