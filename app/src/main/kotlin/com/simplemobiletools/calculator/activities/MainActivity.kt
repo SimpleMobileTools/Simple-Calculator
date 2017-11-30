@@ -22,6 +22,7 @@ import me.grantland.widget.AutofitHelper
 class MainActivity : SimpleActivity(), Calculator {
     private var storedTextColor = 0
     private var vibrateOnButtonPress = true
+    private var storedUseEnglish = false
 
     lateinit var calc: CalculatorImpl
 
@@ -53,10 +54,16 @@ class MainActivity : SimpleActivity(), Calculator {
 
         AutofitHelper.create(result)
         AutofitHelper.create(formula)
+        storeStateVariables()
     }
 
     override fun onResume() {
         super.onResume()
+        if (storedUseEnglish != config.useEnglish) {
+            restartActivity()
+            return
+        }
+
         if (storedTextColor != config.textColor) {
             updateViewColors(calculator_holder, config.textColor)
         }
@@ -65,7 +72,7 @@ class MainActivity : SimpleActivity(), Calculator {
 
     override fun onPause() {
         super.onPause()
-        storedTextColor = config.textColor
+        storeStateVariables()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -80,6 +87,13 @@ class MainActivity : SimpleActivity(), Calculator {
             else -> return super.onOptionsItemSelected(item)
         }
         return true
+    }
+
+    private fun storeStateVariables() {
+        config.apply {
+            storedTextColor = textColor
+            storedUseEnglish = useEnglish
+        }
     }
 
     private fun checkHaptic(view: View) {
