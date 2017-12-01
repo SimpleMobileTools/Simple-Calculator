@@ -3,7 +3,7 @@
     <string name="app_launcher_name">Rechner</string>
 
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <string name="app_short_description">Ein Taschenrechner mit grundlegenden Funktionen und einem anpassbaren Widget.</string>
