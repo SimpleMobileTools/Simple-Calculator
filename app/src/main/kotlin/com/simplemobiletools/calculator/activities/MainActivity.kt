@@ -55,6 +55,7 @@ class MainActivity : SimpleActivity(), Calculator {
         AutofitHelper.create(result)
         AutofitHelper.create(formula)
         storeStateVariables()
+        updateViewColors(calculator_holder, config.textColor)
     }
 
     override fun onResume() {
