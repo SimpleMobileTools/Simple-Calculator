@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 3.0.0 *(2017-12-04)*
+----------------------------
+
+ * Improved primary color customization
+ * Added optional haptic feedback on button presses
+
 Version 2.0.0 *(2017-11-05)*
 ----------------------------
 
