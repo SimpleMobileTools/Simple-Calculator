@@ -3,7 +3,7 @@
     <string name="app_launcher_name">Calculadora</string>
 
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="vibrate_on_button_press">Vibrar ao tocar nos botões</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <string name="app_short_description">Uma calculadora com funções básicas e um widget personalizável.</string>
