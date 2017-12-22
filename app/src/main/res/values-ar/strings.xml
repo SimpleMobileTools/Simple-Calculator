@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">الحاسبة البسيطة</string>
+    <string name="app_launcher_name">الحاسبة</string>
+
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">الاهتزاز عند الضغط على الازرار</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <string name="app_short_description">حاسبة بمهام بسيطة و ويدجيت قابلة لتخصيص.</string>
+    <string name="app_long_description">لا توجد ميزة تحويل الوحدات، يمكنك نسخ النتيجة أو الصيغة إلى الحافظة عن طريق الضغط لفترة طويلة عليها. يمكن تخصيص لون النص الخاص بالويدجيت ، وكذلك اللون و وشفافية الخلفية. اضغط على النتيجة أو الصيغة في الويدجيت لفتح التطبيق. لا يحتوي على إعلانات أو أذونات لا لزوم لها. وهو مفتوح المصدر بشكل كامل ، ويوفر الألوان للتخصيص. هذا التطبيق هو مجرد قطعة واحدة من سلسلة أكبر من التطبيقات. يمكنك العثور عليهم هنا\n
+ http://www.simplemobiletools.com</string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
