@@ -8,13 +8,13 @@
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <string name="app_short_description">Ein Taschenrechner mit grundlegenden Funktionen und einem anpassbaren Widget.</string>
     <string name="app_long_description">
-        Diese App beinhaltet keinen Einheitenumrechner. Du kannst das Ergebnis oder die Formel durch längeres Drücken in die Zwischenablage kopieren.
+        Diese App beinhaltet keinen Einheitenumrechner! Du kannst das Ergebnis oder die Formel durch längeres Drücken in die Zwischenablage kopieren.
 
-        Die Textfarbe des Widgets kann angepasst werden sowie die Farbe und Transparenz des Hintergrunds. Tippe auf das Ergebnis oder die Formel um die App zu öffnen.
+        Die Textfarbe des Widgets kann angepasst werden sowie die Farbe und Transparenz des Hintergrunds. Tippe auf das Ergebnis oder die Formel im Widget, um die App zu öffnen.
 
-        Beinhaltet keine Werbung und benötigt keine unnötigen Berechtigungen. Die App ist komplett Open Source und bietet nach Wunsch anpassbare Farben.
+        Beinhaltet keine Werbung oder unnötige Berechtigungen. Sie ist komplett Open Source, alle verwendeten Farben sind anpassbar.
 
-        Diese App ist nur eine von vielen unserer Apps. Du kannst alle anderen hier finden: http://www.simplemobiletools.com
+        Diese App ist nur eine aus einer größeren Serie von schlichten Apps. Der Rest davon findet sich auf http://www.simplemobiletools.com
     </string>
 
     <!--
