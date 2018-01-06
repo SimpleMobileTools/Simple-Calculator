@@ -127,21 +127,25 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun handleClear() {
-        val oldValue = displayedNumber
-        var newValue = "0"
-        val len = oldValue!!.length
-        var minLen = 1
-        if (oldValue.contains("-"))
-            minLen++
+        if (displayedNumber.equals(NAN)) {
+            handleReset()
+        } else {
+            val oldValue = displayedNumber
+            var newValue = "0"
+            val len = oldValue!!.length
+            var minLen = 1
+            if (oldValue.contains("-"))
+                minLen++
 
-        if (len > minLen) {
-            newValue = oldValue.substring(0, len - 1)
+            if (len > minLen) {
+                newValue = oldValue.substring(0, len - 1)
+            }
+
+            newValue = newValue.replace("\\.$".toRegex(), "")
+            newValue = formatString(newValue)
+            setValue(newValue)
+            mBaseValue = Formatter.stringToDouble(newValue)
         }
-
-        newValue = newValue.replace("\\.$".toRegex(), "")
-        newValue = formatString(newValue)
-        setValue(newValue)
-        mBaseValue = Formatter.stringToDouble(newValue)
     }
 
     fun handleReset() {
