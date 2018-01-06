@@ -13,6 +13,7 @@ val DECIMAL = "decimal"
 val CLEAR = "clear"
 val RESET = "reset"
 
+val NAN = "NaN"
 val ZERO = "zero"
 val ONE = "one"
 val TWO = "two"
