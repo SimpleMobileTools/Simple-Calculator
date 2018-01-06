@@ -92,6 +92,11 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         mBaseValue = getDisplayedNumberAsDouble()
     }
 
+    private fun handleRoot() {
+        mBaseValue = getDisplayedNumberAsDouble()
+        calculateResult()
+    }
+
     private fun calculateResult() {
         if (!mIsFirstOperation) {
             updateFormula()
@@ -107,15 +112,18 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun handleOperation(operation: String) {
-        if (lastKey == DIGIT)
+        if (lastKey == DIGIT && operation != ROOT)
             handleResult()
 
         mResetValue = true
         lastKey = operation
         mLastOperation = operation
 
-        if (operation == ROOT)
-            calculateResult()
+        if (operation == ROOT) {
+            handleRoot()
+            mResetValue = false
+        }
+
     }
 
     fun handleClear() {
