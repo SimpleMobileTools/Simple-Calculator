@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 3.1.0 *(2018-01-16)*
+----------------------------
+
+ * Made dark theme the default
+ * Improved some square root calculation behaviour
+
 Version 3.0.1 *(2017-12-07)*
 ----------------------------
 
