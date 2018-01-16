@@ -123,7 +123,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             handleRoot()
             mResetValue = false
         }
-
     }
 
     fun handleClear() {
