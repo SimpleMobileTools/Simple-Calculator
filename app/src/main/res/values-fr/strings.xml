@@ -6,6 +6,7 @@
     <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Une calculette avec les fonctions de base et un widget customisable.</string>
     <string name="app_long_description">
         Pas de conversion d\'unité, restez appuyé sur le résultat d\'une formule pour le copier.

@@ -6,6 +6,7 @@
     <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Kalkulačka so základnými funkciami a prispôsobiteľným widgetom.</string>
     <string name="app_long_description">
         Neobsahuje žiadny prevodník jednotiek, môžete skopírovať výsledok alebo vzorec do schránky dlhým stlačením.

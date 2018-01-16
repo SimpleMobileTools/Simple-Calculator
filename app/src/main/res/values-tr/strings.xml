@@ -6,6 +6,7 @@
     <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Temel fonksiyonları ve özelleştirilebilir bir araç\'lı bir hesap makinesi.</string>
     <string name="app_long_description">
         There is no unit converter, you can copy the result or formula to clipboard by long pressing it.

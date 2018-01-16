@@ -6,6 +6,7 @@
     <string name="vibrate_on_button_press">Вибрация при нажатии кнопок</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Калькулятор с базовым функционалом и настраиваемым виджетом.</string>
     <string name="app_long_description">
         Нет конвертера величин, можно скопировать результат или формулу долгим нажатием.

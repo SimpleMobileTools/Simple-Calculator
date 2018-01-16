@@ -6,6 +6,7 @@
     <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">En kalkylator med grundläggande funktioner och en anpassningsbar widget.</string>
     <string name="app_long_description">
         Kalkylatorn har ingen enhetsomvandlare. Du kan kopiera resultatet eller formeln till urklipp genom att trycka länge.

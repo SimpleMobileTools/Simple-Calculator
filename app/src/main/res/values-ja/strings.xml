@@ -6,6 +6,7 @@
     <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">基本機能とカスタマイズ可能なウィジェットを備えた電卓。</string>
     <string name="app_long_description">
         単位変換はありません。長押しして結果や数式をクリップボードにコピーすることができます。

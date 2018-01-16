@@ -6,6 +6,7 @@
     <string name="vibrate_on_button_press">Vibrar ao tocar nos botões</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Uma calculadora com funções básicas e um widget personalizável.</string>
     <string name="app_long_description">
         Não existe conversor de unidades, mas pode copiar o resultado ou fórmula para a área de transferência com um clique longo.
