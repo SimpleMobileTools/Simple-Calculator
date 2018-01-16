@@ -40,7 +40,7 @@ It contains a couple UI and unit tests, they can be ran with the following instr
 
 License
 -------
-    Copyright 2018 SimpleMobileTools
+    Copyright 2016-present SimpleMobileTools
     
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
