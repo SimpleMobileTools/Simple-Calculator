@@ -84,13 +84,13 @@ class MainActivityTest {
         checkFormula("3^6")
     }
 
-   /* @Test
+    @Test
     fun rootTest() {
         setDouble(16.0)
         handleOperation(ROOT)
         assertEquals("4", getDisplayedNumber())
         checkFormula("√16")
-    }*/
+    }
 
     @Test
     fun clearBtnSimpleTest() {
@@ -119,7 +119,7 @@ class MainActivityTest {
         checkFormula("")
     }
 
-    /*
+
     @Test
     fun complexTest() {
         setDouble(-12.2)
@@ -160,7 +160,7 @@ class MainActivityTest {
 
         activity.calc.handleClear()
         assertEquals("1", getDisplayedNumber())
-    }*/
+    }
 
     private fun setDouble(d: Double) {
         activity.setValueDouble(d)
