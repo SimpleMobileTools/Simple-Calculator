@@ -119,6 +119,7 @@ class MainActivityTest {
         checkFormula("")
     }
 
+
     @Test
     fun complexTest() {
         setDouble(-12.2)
