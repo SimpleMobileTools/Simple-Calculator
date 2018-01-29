@@ -19,7 +19,8 @@
 
         <activity
             android:name=".activities.SplashActivity"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -27,14 +28,18 @@
             </intent-filter>
         </activity>
 
+
+        <!--android:screenOrientation="portrait"-->
         <activity
             android:name=".activities.MainActivity"
-            android:screenOrientation="portrait"/>
+            android:configChanges="orientation|screenSize"
+            />
 
         <activity
             android:name=".activities.WidgetConfigureActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MyWidgetConfigTheme">
+            android:theme="@style/MyWidgetConfigTheme"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
             </intent-filter>
@@ -43,22 +48,26 @@
         <activity
             android:name=".activities.SettingsActivity"
             android:label="@string/settings"
-            android:parentActivityName=".activities.MainActivity"/>
+            android:parentActivityName=".activities.MainActivity"
+            android:configChanges="orientation|screenSize"/>
 
         <activity
             android:name="com.simplemobiletools.commons.activities.AboutActivity"
             android:label="@string/about"
-            android:parentActivityName=".activities.MainActivity"/>
+            android:parentActivityName=".activities.MainActivity"
+            android:configChanges="orientation|screenSize"/>
 
         <activity
             android:name="com.simplemobiletools.commons.activities.LicenseActivity"
             android:label="@string/third_party_licences"
-            android:parentActivityName="com.simplemobiletools.commons.activities.AboutActivity"/>
+            android:parentActivityName="com.simplemobiletools.commons.activities.AboutActivity"
+            android:configChanges="orientation|screenSize"/>
 
         <activity
             android:name="com.simplemobiletools.commons.activities.CustomizationActivity"
             android:label="@string/customize_colors"
-            android:parentActivityName=".activities.SettingsActivity"/>
+            android:parentActivityName=".activities.SettingsActivity"
+            android:configChanges="orientation|screenSize"/>
 
         <receiver
             android:name=".helpers.MyWidgetProvider"
