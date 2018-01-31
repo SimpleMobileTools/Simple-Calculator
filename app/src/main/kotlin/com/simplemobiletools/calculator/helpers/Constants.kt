@@ -12,6 +12,7 @@ val ROOT = "root"
 val DECIMAL = "decimal"
 val CLEAR = "clear"
 val RESET = "reset"
+val COS = "cosine"
 
 val NAN = "NaN"
 val ZERO = "zero"
