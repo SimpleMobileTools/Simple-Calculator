@@ -3,7 +3,7 @@
     <string name="app_launcher_name">Kalkylator</string>
 
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="vibrate_on_button_press">Vibrera när jag trycker på knapparna</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
@@ -11,9 +11,9 @@
     <string name="app_long_description">
         Kalkylatorn har ingen enhetsomvandlare. Du kan kopiera resultatet eller formeln till urklipp genom att trycka länge.
 
-        Du kan anpassa widgetens textfärg, bakgrundens färg och bakgrundens genomskinlighet. Tryck på resultatet eller formeln i widgeten för att öppna appen.
+        Du kan anpassa widgetens textfärg, bakgrundsfärg och bakgrundsgenomskinlighet. Tryck på resultatet eller formeln i widgeten för att öppna appen.
 
-        Innehåller ingen reklam eller onödiga behörigheter. Den har helt öppen källkod och har även ett Mörkt tema.
+        Innehåller ingen reklam eller onödiga behörigheter. Den har helt öppen källkod och anpassningsbara färger.
 
         Denna app är bara en del av en större serie appar. Du hittar resten av dem på http://www.simplemobiletools.com
     </string>
