@@ -3,6 +3,8 @@ package com.simplemobiletools.calculator.helpers
 import android.content.Context
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.operation.OperationFactory
+import com.fathzer.soft.javaluator.DoubleEvaluator
+import java.util.*
 
 class CalculatorImpl(calculator: Calculator, val context: Context) {
     var displayedNumber: String? = null
@@ -55,7 +57,9 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         val second = Formatter.doubleToString(mSecondValue)
         val sign = getSign(mLastOperation)
 
-        if (sign == "√") {
+        //setFormula(getSign(mLastOperation))
+
+        if (sign == "^.5") {
             setFormula(sign + first)
         } else if (!sign.isEmpty()) {
             setFormula(first + sign + second)
@@ -66,6 +70,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         val currentValue = displayedNumber
         val newValue = formatString(currentValue!! + number)
         setValue(newValue)
+        setFormula(number.toString())
     }
 
     private fun formatString(str: String): String {
@@ -88,41 +93,77 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     fun handleResult() {
         mSecondValue = getDisplayedNumberAsDouble()
-        calculateResult()
+        //calculateResult()
         mBaseValue = getDisplayedNumberAsDouble()
     }
 
     private fun handleRoot() {
         mBaseValue = getDisplayedNumberAsDouble()
-        calculateResult()
+        //calculateResult()
     }
 
-    private fun calculateResult() {
+
+    //-------------------------------------
+
+//    private fun calculateResult() {
+//        if (!mIsFirstOperation) {
+//            //updateFormula()
+//        }
+//
+//        val operation = OperationFactory.forId(mLastOperation!!, mBaseValue, mSecondValue)
+//
+//        if (operation != null) {
+//            updateResult(operation.getResult())
+//        }
+//
+//        mIsFirstOperation = false
+//    }
+
+    private fun calculateResult(str:String) {
         if (!mIsFirstOperation) {
-            updateFormula()
+            //updateFormula()
         }
+
+        val evaluator = DoubleEvaluator()
+        val expression = str
+        val result = evaluator.evaluate(expression)
+
 
         val operation = OperationFactory.forId(mLastOperation!!, mBaseValue, mSecondValue)
 
         if (operation != null) {
-            updateResult(operation.getResult())
+            updateResult(result)
         }
 
         mIsFirstOperation = false
     }
 
+
+    //--------------------------------------
+
+
+
+
+
+
+
+
+
+
     fun handleOperation(operation: String) {
-        if (lastKey == DIGIT && operation != ROOT)
-            handleResult()
+
+        setFormula(getSign(operation))
+//        if (lastKey == DIGIT && operation != ROOT)
+//            handleResult()
 
         mResetValue = true
         lastKey = operation
         mLastOperation = operation
 
-        if (operation == ROOT) {
+//        if (operation == ROOT) {
             handleRoot()
-            mResetValue = false
-        }
+//            mResetValue = false
+//        }
 
     }
 
@@ -154,15 +195,10 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         setFormula("")
     }
 
-    fun handleEquals() {
-        if (lastKey == EQUALS)
-            calculateResult()
-
-        if (lastKey != DIGIT)
-            return
+    fun handleEquals(str: String) {
 
         mSecondValue = getDisplayedNumberAsDouble()
-        calculateResult()
+        calculateResult(str)
         lastKey = EQUALS
     }
 
@@ -170,6 +206,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         var value = displayedNumber
         if (!value!!.contains(".")) {
             value += "."
+            setFormula(".")
         }
         setValue(value)
     }
@@ -187,9 +224,12 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         DIVIDE -> "/"
         MODULO -> "%"
         POWER -> "^"
-        ROOT -> "√"
+        ROOT -> "^.5"
         else -> ""
     }
+
+
+
 
     fun numpadClicked(id: Int) {
         if (lastKey == EQUALS) {
