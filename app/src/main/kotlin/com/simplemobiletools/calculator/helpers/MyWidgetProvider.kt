@@ -113,7 +113,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
             SEVEN -> calc!!.numpadClicked(R.id.btn_7)
             EIGHT -> calc!!.numpadClicked(R.id.btn_8)
             NINE -> calc!!.numpadClicked(R.id.btn_9)
-            EQUALS -> calc!!.handleEquals()
+            EQUALS -> calc!!.handleEquals(R.id.formula.toString())
             CLEAR -> calc!!.handleClear()
             RESET -> calc!!.handleReset()
             PLUS, MINUS, MULTIPLY, DIVIDE, MODULO, POWER, ROOT -> calc!!.handleOperation(action)

@@ -53,6 +53,7 @@ android {
 dependencies {
     implementation 'com.simplemobiletools:commons:3.3.12'
     implementation 'me.grantland:autofittextview:0.2.1'
+    implementation 'com.fathzer:javaluator:3.0.0'
 
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.robolectric:robolectric:3.6.1'

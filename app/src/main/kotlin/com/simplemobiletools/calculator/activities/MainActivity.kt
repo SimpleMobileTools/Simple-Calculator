@@ -48,7 +48,14 @@ class MainActivity : SimpleActivity(), Calculator {
             it.setOnClickListener { calc.numpadClicked(it.id); checkHaptic(it) }
         }
 
-        btn_equals.setOnClickListener { calc.handleEquals(); checkHaptic(it) }
+        btn_equals.setOnClickListener {
+            println("MMMMMMMIIIIKKKKKK" + formula.text.toString())
+            calc.handleEquals(formula.text.toString()); checkHaptic(it)
+
+        }
+
+
+
         formula.setOnLongClickListener { copyToClipboard(false) }
         result.setOnLongClickListener { copyToClipboard(true) }
 
@@ -138,6 +145,13 @@ class MainActivity : SimpleActivity(), Calculator {
     }
 
     override fun setFormula(value: String, context: Context) {
-        formula.text = value
+        if(value == ""){
+            formula.text = ""
+        }
+        else{
+            formula.text = formula.text.toString() + value
+        }
+
     }
+
 }
