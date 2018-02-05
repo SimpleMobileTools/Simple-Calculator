@@ -12,6 +12,8 @@ val ROOT = "root"
 val DECIMAL = "decimal"
 val CLEAR = "clear"
 val RESET = "reset"
+val LEFTBRACKET = "leftBracket"
+val RIGHTBRACKET = "rightBracket"
 
 val NAN = "NaN"
 val ZERO = "zero"

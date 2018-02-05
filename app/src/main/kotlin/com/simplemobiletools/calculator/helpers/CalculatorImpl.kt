@@ -2,9 +2,7 @@ package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
 import com.simplemobiletools.calculator.R
-import com.simplemobiletools.calculator.operation.OperationFactory
 import com.fathzer.soft.javaluator.DoubleEvaluator
-import java.util.*
 
 class CalculatorImpl(calculator: Calculator, val context: Context) {
     var displayedNumber: String? = null
@@ -12,7 +10,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     var lastKey: String? = null
     private var mLastOperation: String? = null
     private var mCallback: Calculator? = calculator
-
     private var mIsFirstOperation = false
     private var mResetValue = false
     private var mBaseValue = 0.0
@@ -52,20 +49,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         displayedFormula = value
     }
 
-    private fun updateFormula() {
-        val first = Formatter.doubleToString(mBaseValue)
-        val second = Formatter.doubleToString(mSecondValue)
-        val sign = getSign(mLastOperation)
-
-        //setFormula(getSign(mLastOperation))
-
-        if (sign == "^.5") {
-            setFormula(sign + first)
-        } else if (!sign.isEmpty()) {
-            setFormula(first + sign + second)
-        }
-    }
-
     fun addDigit(number: Int) {
         val currentValue = displayedNumber
         val newValue = formatString(currentValue!! + number)
@@ -93,53 +76,18 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     fun handleResult() {
         mSecondValue = getDisplayedNumberAsDouble()
-        //calculateResult()
         mBaseValue = getDisplayedNumberAsDouble()
     }
 
-    private fun handleRoot() {
-        mBaseValue = getDisplayedNumberAsDouble()
-        //calculateResult()
-    }
-
-
-    //-------------------------------------
-
-//    private fun calculateResult() {
-//        if (!mIsFirstOperation) {
-//            //updateFormula()
-//        }
-//
-//        val operation = OperationFactory.forId(mLastOperation!!, mBaseValue, mSecondValue)
-//
-//        if (operation != null) {
-//            updateResult(operation.getResult())
-//        }
-//
-//        mIsFirstOperation = false
-//    }
 
     private fun calculateResult(str:String) {
-        if (!mIsFirstOperation) {
-            //updateFormula()
-        }
 
         val evaluator = DoubleEvaluator()
         val expression = str
         val result = evaluator.evaluate(expression)
-
-
-        val operation = OperationFactory.forId(mLastOperation!!, mBaseValue, mSecondValue)
-
-        if (operation != null) {
-            updateResult(result)
-        }
-
+        updateResult(result)
         mIsFirstOperation = false
     }
-
-
-    //--------------------------------------
 
 
 
@@ -161,7 +109,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         mLastOperation = operation
 
 //        if (operation == ROOT) {
-            handleRoot()
+//            handleRoot()
 //            mResetValue = false
 //        }
 
@@ -197,7 +145,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     fun handleEquals(str: String) {
 
-        mSecondValue = getDisplayedNumberAsDouble()
+        //mSecondValue = getDisplayedNumberAsDouble()
         calculateResult(str)
         lastKey = EQUALS
     }
@@ -225,6 +173,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         MODULO -> "%"
         POWER -> "^"
         ROOT -> "^.5"
+        LEFTBRACKET -> "("
+        RIGHTBRACKET -> ")"
         else -> ""
     }
 
