@@ -41,6 +41,9 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_power.setOnClickListener { calc.handleOperation(POWER); checkHaptic(it) }
         btn_root.setOnClickListener { calc.handleOperation(ROOT); checkHaptic(it) }
 
+        btn_left_bracket.setOnClickListener { calc.handleOperation(LEFTBRACKET); checkHaptic(it) }
+        btn_right_bracket.setOnClickListener { calc.handleOperation(RIGHTBRACKET); checkHaptic(it) }
+
         btn_clear.setOnClickListener { calc.handleClear(); checkHaptic(it) }
         btn_clear.setOnLongClickListener { calc.handleReset(); true }
 
@@ -48,11 +51,7 @@ class MainActivity : SimpleActivity(), Calculator {
             it.setOnClickListener { calc.numpadClicked(it.id); checkHaptic(it) }
         }
 
-        btn_equals.setOnClickListener {
-            println("MMMMMMMIIIIKKKKKK" + formula.text.toString())
-            calc.handleEquals(formula.text.toString()); checkHaptic(it)
-
-        }
+        btn_equals.setOnClickListener { calc.handleEquals(formula.text.toString()); checkHaptic(it)}
 
 
 

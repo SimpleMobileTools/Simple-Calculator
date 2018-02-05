@@ -49,12 +49,13 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
             setupIntent(context, views, POWER, R.id.btn_power)
             setupIntent(context, views, ROOT, R.id.btn_root)
             setupIntent(context, views, CLEAR, R.id.btn_clear)
-           // setupIntent(context, views, RESET, R.id.btn_reset)
+            setupIntent(context, views, LEFTBRACKET, R.id.btn_left_bracket)
+            setupIntent(context, views, RIGHTBRACKET, R.id.btn_right_bracket)
+
 
             setupAppOpenIntent(context, views, R.id.formula)
             setupAppOpenIntent(context, views, R.id.result)
 
-           // views.setViewVisibility(R.id.btn_reset, View.VISIBLE)
             views.setBackgroundColor(R.id.calculator_holder, config.widgetBgColor)
 
             updateTextColors(views, config.widgetTextColor)
@@ -81,7 +82,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
     private fun updateTextColors(views: RemoteViews, color: Int) {
         val viewIds = intArrayOf(R.id.formula, R.id.result, R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6,
                 R.id.btn_7, R.id.btn_8, R.id.btn_9, R.id.btn_modulo, R.id.btn_power, R.id.btn_root, R.id.btn_clear, R.id.btn_divide,
-                R.id.btn_multiply, R.id.btn_minus, R.id.btn_plus, R.id.btn_decimal, R.id.btn_equals)
+                R.id.btn_multiply, R.id.btn_minus, R.id.btn_plus, R.id.btn_decimal, R.id.btn_equals, R.id.btn_left_bracket, R.id.btn_right_bracket)
 
         for (i in viewIds) {
             views.setTextColor(i, color)
@@ -91,7 +92,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
     override fun onReceive(context: Context, intent: Intent) {
         val action = intent.action
         when (action) {
-            DECIMAL, ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, EQUALS, CLEAR, RESET, PLUS, MINUS, MULTIPLY, DIVIDE, MODULO, POWER, ROOT -> myAction(action, context)
+            DECIMAL, ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, EQUALS, CLEAR, RESET, PLUS, MINUS, MULTIPLY, DIVIDE, MODULO, POWER, ROOT, LEFTBRACKET, RIGHTBRACKET -> myAction(action, context)
             else -> super.onReceive(context, intent)
         }
     }
@@ -113,6 +114,8 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
             SEVEN -> calc!!.numpadClicked(R.id.btn_7)
             EIGHT -> calc!!.numpadClicked(R.id.btn_8)
             NINE -> calc!!.numpadClicked(R.id.btn_9)
+            LEFTBRACKET -> calc!!.numpadClicked(R.id.btn_left_bracket)
+            RIGHTBRACKET -> calc!!.numpadClicked(R.id.btn_right_bracket)
             EQUALS -> calc!!.handleEquals(R.id.formula.toString())
             CLEAR -> calc!!.handleClear()
             RESET -> calc!!.handleReset()
