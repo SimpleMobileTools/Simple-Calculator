@@ -62,6 +62,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test:rules:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 }
 
 Properties props = new Properties()
