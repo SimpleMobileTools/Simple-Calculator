@@ -18,6 +18,7 @@ import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
 import com.simplemobiletools.commons.helpers.LICENSE_ROBOLECTRIC
 import kotlinx.android.synthetic.main.activity_main.*
 import me.grantland.widget.AutofitHelper
+import android.widget.Toast
 
 class MainActivity : SimpleActivity(), Calculator {
     private var storedTextColor = 0
@@ -51,7 +52,15 @@ class MainActivity : SimpleActivity(), Calculator {
             it.setOnClickListener { calc.numpadClicked(it.id); checkHaptic(it) }
         }
 
-        btn_equals.setOnClickListener { calc.handleEquals(formula.text.toString()); checkHaptic(it)}
+        btn_equals.setOnClickListener {
+
+            try {
+                calc.handleEquals(formula.text.toString()); checkHaptic(it)
+            } catch (e: IllegalArgumentException) {
+                Toast.makeText(this, e.localizedMessage, Toast.LENGTH_LONG).show()
+            }
+
+        }
 
 
 
