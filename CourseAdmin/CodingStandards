@@ -1,0 +1,61 @@
+Every code review should ensure that each commit upholds the following standards:
+
+---------Variables and Constants---------
+
+The difference: var is mutable and val is immutable. In other words, if you're not going to change
+the value, use val.
+
+Variables. (camel case)
+Good: var = thisIsCamelCase
+Good: var = result
+Bad: var = ThisIsNotCamelCase
+Bad: var = this_is_not_camel_case
+
+Values. (camel case, unless defined in Constants.kt)
+Good: val = iAmReadOnly
+Good: val = input
+Good: const val = THE_LIFE_OF_PI (when declaring mathematical constants in Constants.kt)
+Bad: val = IAmReadOnly
+Bad: val = i_am_read_only
+
+---------Naming Classes and Functions---------
+
+Classes. (Pascal case)
+Good: ThisIsPascalCase
+Good: Calculate
+Bad: thisIsCamelCase
+Bad: No_Underlines_Allowed
+
+Functions. (camel case)
+Good: seeVariables()
+Good: usefulFunction(str: String)
+Bad: Nope()
+Bad: what_do_i_do(d: Double)
+
+---------Brackets---------
+
+Whether it's class declarations, functions, conditional statements, or loops, we do not new-line
+when opening brackets and also we put a space between parameter and opening bracket. Don't forget to
+indent when needed.
+
+//Good
+fun calculate(str: String) {
+    return str.toDouble()
+}
+
+//Bad
+fun thisIsNotCPlusPlus(c: Integer)
+{
+    var bad = c
+    c++
+}
+
+//Bad
+fun dontForgetTheSpace(){
+    return "I forgot the space between parameter and opening bracket"
+}
+
+//Bad
+if(true) {
+return "I forgot to indent"
+}
