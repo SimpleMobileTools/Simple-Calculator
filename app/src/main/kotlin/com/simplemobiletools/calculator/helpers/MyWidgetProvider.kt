@@ -6,7 +6,6 @@ import android.appwidget.AppWidgetProvider
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.view.View
 import android.widget.RemoteViews
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.activities.MainActivity
@@ -49,8 +48,8 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
             setupIntent(context, views, POWER, R.id.btn_power)
             setupIntent(context, views, ROOT, R.id.btn_root)
             setupIntent(context, views, CLEAR, R.id.btn_clear)
-            setupIntent(context, views, LEFTBRACKET, R.id.btn_left_bracket)
-            setupIntent(context, views, RIGHTBRACKET, R.id.btn_right_bracket)
+            setupIntent(context, views, LEFT_BRACKET, R.id.btn_left_bracket)
+            setupIntent(context, views, RIGHT_BRACKET, R.id.btn_right_bracket)
 
 
             setupAppOpenIntent(context, views, R.id.formula)
@@ -92,7 +91,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
     override fun onReceive(context: Context, intent: Intent) {
         val action = intent.action
         when (action) {
-            DECIMAL, ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, EQUALS, CLEAR, RESET, PLUS, MINUS, MULTIPLY, DIVIDE, MODULO, POWER, ROOT, LEFTBRACKET, RIGHTBRACKET -> myAction(action, context)
+            DECIMAL, ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, EQUALS, CLEAR, RESET, PLUS, MINUS, MULTIPLY, DIVIDE, MODULO, POWER, ROOT, LEFT_BRACKET, RIGHT_BRACKET -> myAction(action, context)
             else -> super.onReceive(context, intent)
         }
     }
@@ -114,8 +113,8 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
             SEVEN -> calc!!.numpadClicked(R.id.btn_7)
             EIGHT -> calc!!.numpadClicked(R.id.btn_8)
             NINE -> calc!!.numpadClicked(R.id.btn_9)
-            LEFTBRACKET -> calc!!.numpadClicked(R.id.btn_left_bracket)
-            RIGHTBRACKET -> calc!!.numpadClicked(R.id.btn_right_bracket)
+            LEFT_BRACKET -> calc!!.numpadClicked(R.id.btn_left_bracket)
+            RIGHT_BRACKET -> calc!!.numpadClicked(R.id.btn_right_bracket)
             EQUALS -> calc!!.handleEquals(R.id.formula.toString())
             CLEAR -> calc!!.handleClear()
             RESET -> calc!!.handleReset()

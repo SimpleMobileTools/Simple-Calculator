@@ -4,8 +4,6 @@ import android.content.Context
 import com.simplemobiletools.calculator.R
 import com.fathzer.soft.javaluator.DoubleEvaluator
 
-import android.widget.Toast
-
 
 class CalculatorImpl(calculator: Calculator, val context: Context) {
     var displayedNumber: String? = null
@@ -17,9 +15,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private var mResetValue = false
     private var mBaseValue = 0.0
     private var mSecondValue = 0.0
-
-
-
 
     init {
         resetValues()
@@ -87,7 +82,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
 
-    private fun calculateResult(str:String) {
+    private fun calculateResult(str: String) {
 
         val evaluator = DoubleEvaluator()
         val expression = str
@@ -99,15 +94,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         }
         mIsFirstOperation = false
     }
-
-
-
-
-
-
-
-
-
 
     fun handleOperation(operation: String) {
 
@@ -184,13 +170,10 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         MODULO -> "%"
         POWER -> "^"
         ROOT -> "^.5"
-        LEFTBRACKET -> "("
-        RIGHTBRACKET -> ")"
+        LEFT_BRACKET -> "("
+        RIGHT_BRACKET -> ")"
         else -> ""
     }
-
-
-
 
     fun numpadClicked(id: Int) {
         if (lastKey == EQUALS) {
