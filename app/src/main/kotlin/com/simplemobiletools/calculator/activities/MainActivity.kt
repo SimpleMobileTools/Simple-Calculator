@@ -45,7 +45,8 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_left_bracket.setOnClickListener { calc.handleOperation(LEFT_BRACKET); checkHaptic(it) }
         btn_right_bracket.setOnClickListener { calc.handleOperation(RIGHT_BRACKET); checkHaptic(it) }
 
-        btn_clear.setOnClickListener {calc.handleClear(formula.text.toString()); checkHaptic(it) }
+        //TODO: Fix handleClear() to clear formula characters rather than input numbers
+        btn_clear.setOnClickListener { calc.handleClear(); checkHaptic(it) }
         btn_clear.setOnLongClickListener { calc.handleReset(); true }
 
         getButtonIds().forEach {
@@ -161,10 +162,5 @@ class MainActivity : SimpleActivity(), Calculator {
         }
 
     }
-
-
-
-
-
 
 }
