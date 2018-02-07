@@ -2,7 +2,6 @@ package com.simplemobiletools.calculator
 
 import com.fathzer.soft.javaluator.DoubleEvaluator
 import com.simplemobiletools.calculator.activities.MainActivity
-import com.simplemobiletools.calculator.helpers.*
 import junit.framework.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -11,12 +10,13 @@ import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 
+//TODO: Add tests for clear character, clear string, square root, more complex calculations
 @RunWith(RobolectricTestRunner::class)
 @Config(constants = BuildConfig::class, sdk = intArrayOf(21))
 class MainActivityTest {
     private lateinit var activity: MainActivity
 
-    private fun getDisplayedNumber() = activity.calc.displayedNumber
+    private val evaluator = DoubleEvaluator()
 
     @Before
     fun setUp() {
@@ -24,165 +24,38 @@ class MainActivityTest {
     }
 
     @Test
-    fun addSimpleDigit() {
-        activity.calc.addDigit(2)
-        assertEquals("2", getDisplayedNumber())
-    }
-
-    @Test
-    fun removeLeadingZero() {
-        activity.calc.addDigit(0)
-        activity.calc.addDigit(5)
-        assertEquals("5", getDisplayedNumber())
-    }
-
-    @Test
     fun additionTest() {
-        val res = calcResult(-1.2, PLUS, 3.4)
-        assertEquals("2.2", res)
-        checkFormula("-1.2+3.4")
+        val result = evaluator.evaluate("-1.2+3.4")
+        assertEquals(2.2, result)
     }
 
     @Test
     fun subtractionTest() {
-        val res = calcResult(7.8, MINUS, 2.5)
-        assertEquals("5.3", res)
-        checkFormula("7.8-2.5")
+        val result = evaluator.evaluate("7.8-2.5")
+        assertEquals(5.3, result)
     }
 
     @Test
     fun multiplyTest() {
-        val res = calcResult(-3.2, MULTIPLY, 6.6)
-        assertEquals("-21.12", res)
-        checkFormula("-3.2*6.6")
+        val result = evaluator.evaluate("-3.2*6.6")
+        assertEquals(-21.12, result)
     }
-
 
     @Test
     fun divisionTest() {
-        val evaluator = DoubleEvaluator()
-        val expression = "4/2"
-        val result = evaluator.evaluate(expression)
+        val result = evaluator.evaluate("4/2")
         assertEquals(2.0, result)
-    }
-
-
-    @Test
-    fun divisionByZero_returnsZero() {
-        val res = calcResult(6.0, DIVIDE, 0.0)
-        assertEquals("0", res)
-        checkFormula("6/0")
     }
 
     @Test
     fun moduloTest() {
-        val res = calcResult(6.5, MODULO, 3.0)
-        assertEquals("0.5", res)
-        checkFormula("6.5%3")
+        val result = evaluator.evaluate("6.5%3")
+        assertEquals(0.5, result)
     }
 
     @Test
     fun powerTest() {
-        val res = calcResult(3.0, POWER, 6.0)
-        assertEquals("729", res)
-        checkFormula("3^6")
-    }
-//
-//    @Test
-//    fun rootTest() {
-//        setDouble(16.0)
-//        handleOperation(ROOT)
-//        assertEquals("4", getDisplayedNumber())
-//        checkFormula("√16")
-//    }
-
-    @Test
-    fun clearBtnSimpleTest() {
-        setDouble(156.0)
-        activity.calc.handleClear()
-        assertEquals("15", getDisplayedNumber())
-    }
-
-    @Test
-    fun clearBtnComplexTest() {
-        setDouble(-26.0)
-        activity.calc.handleClear()
-        assertEquals("-2", getDisplayedNumber())
-        activity.calc.handleClear()
-        assertEquals("0", getDisplayedNumber())
-    }
-
-    @Test
-    fun clearBtnLongClick_resetsEverything() {
-        calcResult(-1.2, PLUS, 3.4)
-        activity.calc.handleReset()
-        handleOperation(PLUS)
-        setDouble(3.0)
-        activity.calc.handleResult()
-        assertEquals("3", getDisplayedNumber())
-        checkFormula("")
-    }
-
-
-//    @Test
-//    fun complexTest() {
-//        setDouble(-12.2)
-//        handleOperation(PLUS)
-//        setDouble(21.0)
-//        handleOperation(MINUS)
-//        assertEquals("8.8", getDisplayedNumber())
-//        checkFormula("-12.2+21")
-//
-//        setDouble(1.6)
-//        activity.calc.handleEquals()
-//        assertEquals("7.2", getDisplayedNumber())
-//        checkFormula("8.8-1.6")
-//        activity.calc.handleEquals()
-//        assertEquals("5.6", getDisplayedNumber())
-//        checkFormula("7.2-1.6")
-//
-//        handleOperation(MULTIPLY)
-//        setDouble(5.0)
-//        handleOperation(DIVIDE)
-//        assertEquals("28", getDisplayedNumber())
-//        checkFormula("5.6*5")
-//
-//        setDouble(4.0)
-//        handleOperation(MODULO)
-//        assertEquals("7", getDisplayedNumber())
-//        checkFormula("28/4")
-//
-//        setDouble(5.0)
-//        handleOperation(POWER)
-//        assertEquals("2", getDisplayedNumber())
-//        checkFormula("7%5")
-//
-//        setDouble(8.0)
-//        handleOperation(ROOT)
-//        assertEquals("16", getDisplayedNumber())
-//        checkFormula("√256")
-//
-//        activity.calc.handleClear()
-//        assertEquals("1", getDisplayedNumber())
-//    }
-
-    private fun setDouble(d: Double) {
-        activity.setValueDouble(d)
-    }
-
-    private fun handleOperation(operation: String) {
-        activity.calc.handleOperation(operation)
-    }
-
-    private fun checkFormula(desired: String) {
-        assertEquals(desired, activity.calc.displayedFormula)
-    }
-
-    private fun calcResult(baseValue: Double, operation: String, secondValue: Double): String? {
-        setDouble(baseValue)
-        handleOperation(operation)
-        setDouble(secondValue)
-        activity.calc.handleResult()
-        return getDisplayedNumber()
+        val result = evaluator.evaluate("3^6")
+        assertEquals(729.0, result)
     }
 }
