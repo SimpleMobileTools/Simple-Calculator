@@ -116,7 +116,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
             LEFT_BRACKET -> calc!!.numpadClicked(R.id.btn_left_bracket)
             RIGHT_BRACKET -> calc!!.numpadClicked(R.id.btn_right_bracket)
             EQUALS -> calc!!.handleEquals(R.id.formula.toString())
-            CLEAR -> calc!!.handleClear()
+            CLEAR -> calc!!.handleClear(R.id.formula.toString())
             RESET -> calc!!.handleReset()
             PLUS, MINUS, MULTIPLY, DIVIDE, MODULO, POWER, ROOT -> calc!!.handleOperation(action)
         }
