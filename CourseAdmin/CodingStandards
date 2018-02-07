@@ -1,5 +1,7 @@
 Every code review should ensure that each commit upholds the following standards:
 
+------------------Kotlin------------------
+
 ---------Variables and Constants---------
 
 The difference: var is mutable and val is immutable. In other words, if you're not going to change
@@ -59,3 +61,15 @@ fun dontForgetTheSpace(){
 if(true) {
 return "I forgot to indent"
 }
+
+------------------XML------------------
+
+---------Objects---------
+
+Try and name objects based on the activity they are based on. The following example would be the names of a
+TextView and Button for MainActivity.
+
++Good: main_activity_text_view
++Good: main_activity_clear_button
++Bad: mainButton
++Bad: MainButton
