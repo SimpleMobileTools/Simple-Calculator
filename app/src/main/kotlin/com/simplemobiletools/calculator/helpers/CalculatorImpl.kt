@@ -4,7 +4,7 @@ import android.content.Context
 import com.simplemobiletools.calculator.R
 import com.fathzer.soft.javaluator.DoubleEvaluator
 
-
+//TODO: Allow number to be placed immediately before opened bracket. 4(3+3) should work.
 class CalculatorImpl(calculator: Calculator, val context: Context) {
     var displayedNumber: String? = null
     var displayedFormula: String? = null
@@ -51,7 +51,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         displayedFormula = value
     }
 
-    fun addDigit(number: Int) {
+    private fun addDigit(number: Int) {
         val currentValue = displayedNumber
         val newValue = formatString(currentValue!! + number)
         setValue(newValue)
@@ -74,14 +74,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         mBaseValue = value
     }
 
-    private fun getDisplayedNumberAsDouble() = Formatter.stringToDouble(displayedNumber!!)
-
-    fun handleResult() {
-        mSecondValue = getDisplayedNumberAsDouble()
-        mBaseValue = getDisplayedNumberAsDouble()
-    }
-
-
     private fun calculateResult(str: String) {
 
         val evaluator = DoubleEvaluator()
@@ -98,18 +90,9 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     fun handleOperation(operation: String) {
 
         setFormula(getSign(operation))
-//        if (lastKey == DIGIT && operation != ROOT)
-//            handleResult()
-
         mResetValue = true
         lastKey = operation
         mLastOperation = operation
-
-//        if (operation == ROOT) {
-//            handleRoot()
-//            mResetValue = false
-//        }
-
     }
 
     fun handleClear() {
@@ -141,8 +124,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun handleEquals(str: String) {
-
-        //mSecondValue = getDisplayedNumberAsDouble()
         calculateResult(str)
         lastKey = EQUALS
     }
