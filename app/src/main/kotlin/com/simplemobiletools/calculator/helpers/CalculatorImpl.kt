@@ -112,25 +112,18 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     }
 
-    fun handleClear() {
-        if (displayedNumber.equals(NAN)) {
-            handleReset()
-        } else {
-            val oldValue = displayedNumber
-            var newValue = "0"
-            val len = oldValue!!.length
-            var minLen = 1
-            if (oldValue.contains("-"))
-                minLen++
+    fun handleClear(formula : String) {
 
-            if (len > minLen) {
-                newValue = oldValue.substring(0, len - 1)
-            }
-
-            newValue = newValue.replace("\\.$".toRegex(), "")
-            newValue = formatString(newValue)
-            setValue(newValue)
-            mBaseValue = Formatter.stringToDouble(newValue)
+        val oldValue = formula
+        val len = oldValue!!.length
+        var newValue = "0"
+        if(formula!!.length > 0)
+        {
+            var lastChar = oldValue.takeLast(1);
+            newValue = oldValue.substring(0, len - 1)
+            setFormula("")
+            setFormula(newValue)
+            setValue(lastChar)
         }
     }
 
