@@ -1,5 +1,6 @@
 package com.simplemobiletools.calculator
 
+import com.fathzer.soft.javaluator.DoubleEvaluator
 import com.simplemobiletools.calculator.activities.MainActivity
 import com.simplemobiletools.calculator.helpers.*
 import junit.framework.Assert.assertEquals
@@ -56,12 +57,15 @@ class MainActivityTest {
         checkFormula("-3.2*6.6")
     }
 
+
     @Test
     fun divisionTest() {
-        val res = calcResult(18.25, DIVIDE, 5.0)
-        assertEquals("3.65", res)
-        checkFormula("18.25/5")
+        val evaluator = DoubleEvaluator()
+        val expression = "4/2"
+        val result = evaluator.evaluate(expression)
+        assertEquals(2.0, result)
     }
+
 
     @Test
     fun divisionByZero_returnsZero() {
