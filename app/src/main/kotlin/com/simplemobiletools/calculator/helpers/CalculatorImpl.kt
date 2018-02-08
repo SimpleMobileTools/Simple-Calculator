@@ -3,6 +3,8 @@ package com.simplemobiletools.calculator.helpers
 import android.content.Context
 import com.simplemobiletools.calculator.R
 import com.fathzer.soft.javaluator.DoubleEvaluator
+import java.io.File
+import com.simplemobiletools.calculator.helpers.ONE
 
 //TODO: Allow number to be placed immediately before opened bracket. 4(3+3) should work.
 class CalculatorImpl(calculator: Calculator, val context: Context) {
@@ -15,6 +17,9 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private var mResetValue = false
     private var mBaseValue = 0.0
     private var mSecondValue = 0.0
+    private var mSavedValue1: File? = null
+    private var mSavedValue2: File? = null
+    private var mSavedValue3: File? = null
 
     init {
         resetValues()
@@ -87,12 +92,19 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         mIsFirstOperation = false
     }
 
-    fun handleOperation(operation: String) {
+    fun handleOperation(operation : String) {
 
         setFormula(getSign(operation))
         mResetValue = true
         lastKey = operation
         mLastOperation = operation
+    }
+    //TODO Finish the implementation
+    fun handleStore(value : String, id: String) {
+
+        when (id) {
+
+        }
     }
 
     fun handleClear(formula : String) {

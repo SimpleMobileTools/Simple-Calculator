@@ -1,5 +1,6 @@
 package com.simplemobiletools.calculator.activities
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -27,6 +28,7 @@ class MainActivity : SimpleActivity(), Calculator {
 
     lateinit var calc: CalculatorImpl
 
+    @SuppressLint("MissingSuperCall")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -47,6 +49,15 @@ class MainActivity : SimpleActivity(), Calculator {
 
         btn_clear.setOnClickListener {calc.handleClear(formula.text.toString()); checkHaptic(it) }
         btn_clear.setOnLongClickListener { calc.handleReset(); true }
+
+        btn_custom_1.setOnClickListener {calc.handleStore(result.text.toString(), ONE)}
+        //btn_custom_1.setOnLongClickListener{ calc.handleViewValue(); true}
+
+        btn_custom_2.setOnClickListener {calc.handleStore(result.text.toString(), TWO)}
+        //btn_custom_2.setOnLongClickListener{ calc.handleViewValue(); true}
+
+        btn_custom_3.setOnClickListener {calc.handleStore(result.text.toString(), THREE)}
+        //btn_custom_3.setOnLongClickListener{ calc.handleViewValue(); true}
 
         getButtonIds().forEach {
             it.setOnClickListener { calc.numpadClicked(it.id); checkHaptic(it) }
@@ -73,6 +84,7 @@ class MainActivity : SimpleActivity(), Calculator {
         updateViewColors(calculator_holder, config.textColor)
     }
 
+    @SuppressLint("MissingSuperCall")
     override fun onResume() {
         super.onResume()
         if (storedUseEnglish != config.useEnglish) {
