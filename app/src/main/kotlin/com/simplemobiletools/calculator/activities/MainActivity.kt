@@ -18,6 +18,7 @@ import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
 import com.simplemobiletools.commons.helpers.LICENSE_ROBOLECTRIC
 import kotlinx.android.synthetic.main.activity_main.*
 import me.grantland.widget.AutofitHelper
+import android.widget.Toast
 
 class MainActivity : SimpleActivity(), Calculator {
     private var storedTextColor = 0
@@ -41,14 +42,28 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_power.setOnClickListener { calc.handleOperation(POWER); checkHaptic(it) }
         btn_root.setOnClickListener { calc.handleOperation(ROOT); checkHaptic(it) }
 
-        btn_clear.setOnClickListener { calc.handleClear(); checkHaptic(it) }
+        btn_left_bracket.setOnClickListener { calc.handleOperation(LEFT_BRACKET); checkHaptic(it) }
+        btn_right_bracket.setOnClickListener { calc.handleOperation(RIGHT_BRACKET); checkHaptic(it) }
+
+        btn_clear.setOnClickListener {calc.handleClear(formula.text.toString()); checkHaptic(it) }
         btn_clear.setOnLongClickListener { calc.handleReset(); true }
 
         getButtonIds().forEach {
             it.setOnClickListener { calc.numpadClicked(it.id); checkHaptic(it) }
         }
 
-        btn_equals.setOnClickListener { calc.handleEquals(); checkHaptic(it) }
+        btn_equals.setOnClickListener {
+
+            try {
+                calc.handleEquals(formula.text.toString()); checkHaptic(it)
+            } catch (e: IllegalArgumentException) {
+                Toast.makeText(this, e.localizedMessage, Toast.LENGTH_LONG).show()
+            }
+
+        }
+
+
+
         formula.setOnLongClickListener { copyToClipboard(false) }
         result.setOnLongClickListener { copyToClipboard(true) }
 
@@ -138,6 +153,18 @@ class MainActivity : SimpleActivity(), Calculator {
     }
 
     override fun setFormula(value: String, context: Context) {
-        formula.text = value
+        if(value == ""){
+            formula.text = ""
+        }
+        else{
+            formula.text = formula.text.toString() + value
+        }
+
     }
+
+
+
+
+
+
 }

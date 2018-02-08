@@ -2,15 +2,15 @@ package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
 import com.simplemobiletools.calculator.R
-import com.simplemobiletools.calculator.operation.OperationFactory
+import com.fathzer.soft.javaluator.DoubleEvaluator
 
+//TODO: Allow number to be placed immediately before opened bracket. 4(3+3) should work.
 class CalculatorImpl(calculator: Calculator, val context: Context) {
     var displayedNumber: String? = null
     var displayedFormula: String? = null
     var lastKey: String? = null
     private var mLastOperation: String? = null
     private var mCallback: Calculator? = calculator
-
     private var mIsFirstOperation = false
     private var mResetValue = false
     private var mBaseValue = 0.0
@@ -38,6 +38,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         displayedFormula = ""
         mIsFirstOperation = true
         lastKey = ""
+
     }
 
     fun setValue(value: String) {
@@ -50,22 +51,11 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         displayedFormula = value
     }
 
-    private fun updateFormula() {
-        val first = Formatter.doubleToString(mBaseValue)
-        val second = Formatter.doubleToString(mSecondValue)
-        val sign = getSign(mLastOperation)
-
-        if (sign == "√") {
-            setFormula(sign + first)
-        } else if (!sign.isEmpty()) {
-            setFormula(first + sign + second)
-        }
-    }
-
-    fun addDigit(number: Int) {
+    private fun addDigit(number: Int) {
         val currentValue = displayedNumber
         val newValue = formatString(currentValue!! + number)
         setValue(newValue)
+        setFormula(number.toString())
     }
 
     private fun formatString(str: String): String {
@@ -84,67 +74,39 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         mBaseValue = value
     }
 
-    private fun getDisplayedNumberAsDouble() = Formatter.stringToDouble(displayedNumber!!)
+    private fun calculateResult(str: String) {
 
-    fun handleResult() {
-        mSecondValue = getDisplayedNumberAsDouble()
-        calculateResult()
-        mBaseValue = getDisplayedNumberAsDouble()
-    }
-
-    private fun handleRoot() {
-        mBaseValue = getDisplayedNumberAsDouble()
-        calculateResult()
-    }
-
-    private fun calculateResult() {
-        if (!mIsFirstOperation) {
-            updateFormula()
+        val evaluator = DoubleEvaluator()
+        val expression = str
+        try {
+            val result = evaluator.evaluate(expression)
+            updateResult(result)
+        } catch (e: IllegalArgumentException) {
+            throw e
         }
-
-        val operation = OperationFactory.forId(mLastOperation!!, mBaseValue, mSecondValue)
-
-        if (operation != null) {
-            updateResult(operation.getResult())
-        }
-
         mIsFirstOperation = false
     }
 
     fun handleOperation(operation: String) {
-        if (lastKey == DIGIT && operation != ROOT)
-            handleResult()
 
+        setFormula(getSign(operation))
         mResetValue = true
         lastKey = operation
         mLastOperation = operation
-
-        if (operation == ROOT) {
-            handleRoot()
-            mResetValue = false
-        }
-
     }
 
-    fun handleClear() {
-        if (displayedNumber.equals(NAN)) {
-            handleReset()
-        } else {
-            val oldValue = displayedNumber
-            var newValue = "0"
-            val len = oldValue!!.length
-            var minLen = 1
-            if (oldValue.contains("-"))
-                minLen++
+    fun handleClear(formula : String) {
 
-            if (len > minLen) {
-                newValue = oldValue.substring(0, len - 1)
-            }
-
-            newValue = newValue.replace("\\.$".toRegex(), "")
-            newValue = formatString(newValue)
-            setValue(newValue)
-            mBaseValue = Formatter.stringToDouble(newValue)
+        val oldValue = formula
+        val len = oldValue!!.length
+        var newValue = "0"
+        if(formula!!.length > 0)
+        {
+            var lastChar = oldValue.takeLast(1);
+            newValue = oldValue.substring(0, len - 1)
+            setFormula("")
+            setFormula(newValue)
+            setValue(lastChar)
         }
     }
 
@@ -154,15 +116,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         setFormula("")
     }
 
-    fun handleEquals() {
-        if (lastKey == EQUALS)
-            calculateResult()
-
-        if (lastKey != DIGIT)
-            return
-
-        mSecondValue = getDisplayedNumberAsDouble()
-        calculateResult()
+    fun handleEquals(str: String) {
+        calculateResult(str)
         lastKey = EQUALS
     }
 
@@ -170,6 +125,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         var value = displayedNumber
         if (!value!!.contains(".")) {
             value += "."
+            setFormula(".")
         }
         setValue(value)
     }
@@ -187,7 +143,9 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         DIVIDE -> "/"
         MODULO -> "%"
         POWER -> "^"
-        ROOT -> "√"
+        ROOT -> "^.5"
+        LEFT_BRACKET -> "("
+        RIGHT_BRACKET -> ")"
         else -> ""
     }
 
