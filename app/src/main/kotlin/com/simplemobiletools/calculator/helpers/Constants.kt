@@ -28,6 +28,10 @@ object CONSTANT {
     const val EIGHT = "eight"
     const val NINE = "nine"
 
+    const val MEMORY_ONE = "one"
+    const val MEMORY_TWO = "two"
+    const val MEMORY_THREE = "three"
+
     // shared preferences
     const val VIBRATE_ON_BUTTON_PRESS = "vibrate_on_button_press"
 }

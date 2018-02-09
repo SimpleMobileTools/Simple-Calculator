@@ -7,6 +7,9 @@ import com.simplemobiletools.calculator.helpers.CONSTANT.DIGIT
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
 import com.simplemobiletools.calculator.helpers.CONSTANT.EQUALS
 import com.simplemobiletools.calculator.helpers.CONSTANT.LEFT_BRACKET
+import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
+import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_THREE
+import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_TWO
 import com.simplemobiletools.calculator.helpers.CONSTANT.MINUS
 import com.simplemobiletools.calculator.helpers.CONSTANT.MODULO
 import com.simplemobiletools.calculator.helpers.CONSTANT.MULTIPLY
@@ -119,17 +122,17 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     //TODO Finish the implementation
     fun handleStore(value : String, id: String) {
         when (id) {
-            ONE -> { mSavedValue1!!.writeText(value); setFormula(""); setValue(value) }
-            TWO -> { mSavedValue2!!.writeText(value); setFormula(""); setValue(value)}
-            THREE -> { mSavedValue3!!.writeText(value); setFormula(""); setValue(value) }
+            MEMORY_ONE -> { mSavedValue1!!.writeText(value); setFormula(""); setValue(value) }
+            MEMORY_TWO -> { mSavedValue2!!.writeText(value); setFormula(""); setValue(value)}
+            MEMORY_THREE -> { mSavedValue3!!.writeText(value); setFormula(""); setValue(value) }
         }
     }
 
     fun handleViewValue(id: String) {
         when (id) {
-            ONE -> { setFormula(mSavedValue1!!.readText()) }
-            TWO -> { setFormula(mSavedValue2!!.readText()) }
-            THREE -> { setFormula(mSavedValue3!!.readText()) }
+            MEMORY_ONE -> { setFormula(mSavedValue1!!.readText()) }
+            MEMORY_TWO -> { setFormula(mSavedValue2!!.readText()) }
+            MEMORY_THREE -> { setFormula(mSavedValue3!!.readText()) }
         }
     }
 
