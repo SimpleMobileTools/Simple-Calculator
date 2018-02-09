@@ -34,9 +34,9 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private var mResetValue = false
     private var mBaseValue = 0.0
     private var mSecondValue = 0.0
-    private var mSavedValue1: File? = null
-    private var mSavedValue2: File? = null
-    private var mSavedValue3: File? = null
+    private var mSavedValue1: File
+    private var mSavedValue2: File
+    private var mSavedValue3: File
 
     init {
         resetValues()
@@ -45,6 +45,10 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         mSavedValue1 = createTempFile("one",".tmp")
         mSavedValue2 = createTempFile("two",".tmp")
         mSavedValue3 = createTempFile("three",".tmp")
+        mSavedValue1.deleteOnExit()
+        mSavedValue2.deleteOnExit()
+        mSavedValue3.deleteOnExit()
+
     }
 
     private fun resetValueIfNeeded() {
