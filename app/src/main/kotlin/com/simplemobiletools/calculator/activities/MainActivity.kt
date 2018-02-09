@@ -20,6 +20,19 @@ import com.simplemobiletools.commons.helpers.LICENSE_ROBOLECTRIC
 import kotlinx.android.synthetic.main.activity_main.*
 import me.grantland.widget.AutofitHelper
 import android.widget.Toast
+import com.simplemobiletools.calculator.helpers.CONSTANT.DIGIT
+import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
+import com.simplemobiletools.calculator.helpers.CONSTANT.LEFT_BRACKET
+import com.simplemobiletools.calculator.helpers.CONSTANT.MINUS
+import com.simplemobiletools.calculator.helpers.CONSTANT.MODULO
+import com.simplemobiletools.calculator.helpers.CONSTANT.MULTIPLY
+import com.simplemobiletools.calculator.helpers.CONSTANT.ONE
+import com.simplemobiletools.calculator.helpers.CONSTANT.PLUS
+import com.simplemobiletools.calculator.helpers.CONSTANT.POWER
+import com.simplemobiletools.calculator.helpers.CONSTANT.RIGHT_BRACKET
+import com.simplemobiletools.calculator.helpers.CONSTANT.ROOT
+import com.simplemobiletools.calculator.helpers.CONSTANT.THREE
+import com.simplemobiletools.calculator.helpers.CONSTANT.TWO
 
 class MainActivity : SimpleActivity(), Calculator {
     private var storedTextColor = 0
@@ -51,13 +64,13 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_clear.setOnLongClickListener { calc.handleReset(); true }
 
         btn_custom_1.setOnClickListener {calc.handleStore(result.text.toString(), ONE)}
-        //btn_custom_1.setOnLongClickListener{ calc.handleViewValue(); true}
+        btn_custom_1.setOnLongClickListener{ calc.handleViewValue(ONE); true }
 
         btn_custom_2.setOnClickListener {calc.handleStore(result.text.toString(), TWO)}
-        //btn_custom_2.setOnLongClickListener{ calc.handleViewValue(); true}
+        btn_custom_2.setOnLongClickListener{ calc.handleViewValue(TWO); true }
 
         btn_custom_3.setOnClickListener {calc.handleStore(result.text.toString(), THREE)}
-        //btn_custom_3.setOnLongClickListener{ calc.handleViewValue(); true}
+        btn_custom_3.setOnLongClickListener{ calc.handleViewValue(THREE); true }
 
         getButtonIds().forEach {
             it.setOnClickListener { calc.numpadClicked(it.id); checkHaptic(it) }

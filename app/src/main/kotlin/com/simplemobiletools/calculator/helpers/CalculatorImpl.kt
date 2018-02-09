@@ -3,8 +3,22 @@ package com.simplemobiletools.calculator.helpers
 import android.content.Context
 import com.simplemobiletools.calculator.R
 import com.fathzer.soft.javaluator.DoubleEvaluator
+import com.simplemobiletools.calculator.helpers.CONSTANT.DIGIT
+import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
+import com.simplemobiletools.calculator.helpers.CONSTANT.EQUALS
+import com.simplemobiletools.calculator.helpers.CONSTANT.LEFT_BRACKET
+import com.simplemobiletools.calculator.helpers.CONSTANT.MINUS
+import com.simplemobiletools.calculator.helpers.CONSTANT.MODULO
+import com.simplemobiletools.calculator.helpers.CONSTANT.MULTIPLY
+import com.simplemobiletools.calculator.helpers.CONSTANT.PLUS
+import com.simplemobiletools.calculator.helpers.CONSTANT.POWER
+import com.simplemobiletools.calculator.helpers.CONSTANT.RIGHT_BRACKET
+import com.simplemobiletools.calculator.helpers.CONSTANT.ROOT
+import com.simplemobiletools.calculator.helpers.CONSTANT.ONE
+import com.simplemobiletools.calculator.helpers.CONSTANT.THREE
+import com.simplemobiletools.calculator.helpers.CONSTANT.TWO
 import java.io.File
-import com.simplemobiletools.calculator.helpers.ONE
+
 
 //TODO: Allow number to be placed immediately before opened bracket. 4(3+3) should work.
 class CalculatorImpl(calculator: Calculator, val context: Context) {
@@ -25,6 +39,9 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         resetValues()
         setValue("0")
         setFormula("")
+        mSavedValue1 = createTempFile("one",".tmp")
+        mSavedValue2 = createTempFile("two",".tmp")
+        mSavedValue3 = createTempFile("three",".tmp")
     }
 
     private fun resetValueIfNeeded() {
@@ -101,9 +118,18 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
     //TODO Finish the implementation
     fun handleStore(value : String, id: String) {
-
         when (id) {
+            ONE -> { mSavedValue1!!.writeText(value); setFormula(""); setValue(value) }
+            TWO -> { mSavedValue2!!.writeText(value); setFormula(""); setValue(value)}
+            THREE -> { mSavedValue3!!.writeText(value); setFormula(""); setValue(value) }
+        }
+    }
 
+    fun handleViewValue(id: String) {
+        when (id) {
+            ONE -> { setFormula(mSavedValue1!!.readText()) }
+            TWO -> { setFormula(mSavedValue2!!.readText()) }
+            THREE -> { setFormula(mSavedValue3!!.readText()) }
         }
     }
 
