@@ -1,8 +1,9 @@
 package com.simplemobiletools.calculator.helpers
-
 import android.content.Context
 import com.simplemobiletools.calculator.R
-import com.fathzer.soft.javaluator.DoubleEvaluator
+import com.simplemobiletools.calculator.helpers.MyWidgetProvider
+import com.simplemobiletools.calculator.javaluator.*
+
 
 //TODO: Allow number to be placed immediately before opened bracket. 4(3+3) should work.
 class CalculatorImpl(calculator: Calculator, val context: Context) {
