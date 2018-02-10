@@ -106,7 +106,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             newValue = oldValue.substring(0, len - 1)
             setFormula("")
             setFormula(newValue)
-            setValue(lastChar)
+            setValue("")
         }
     }
 
