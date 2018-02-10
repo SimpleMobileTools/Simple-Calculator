@@ -1,7 +1,7 @@
 package com.simplemobiletools.calculator
 
-import com.fathzer.soft.javaluator.DoubleEvaluator
 import com.simplemobiletools.calculator.activities.MainActivity
+import com.simplemobiletools.calculator.javaluator.DoubleEvaluator
 import junit.framework.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -10,7 +10,7 @@ import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 
-//TODO: Add tests for clear character, clear string, square root, more complex calculations
+//TODO: Add tests for clear character, clear string, more complex calculations
 @RunWith(RobolectricTestRunner::class)
 @Config(constants = BuildConfig::class, sdk = intArrayOf(21))
 class MainActivityTest {
@@ -83,6 +83,7 @@ class MainActivityTest {
         assertEquals(4.0, result)
     }
 
+    //TODO: Evaluator should take number followed by open bracket to mean multiplication
     //@Test
     fun multiplyWithBracketsTest() {
         val result = evaluator.evaluate("2(3-1)")
