@@ -58,4 +58,34 @@ class MainActivityTest {
         val result = evaluator.evaluate("3^6")
         assertEquals(729.0, result)
     }
+
+    @Test
+    fun bracketsTest() {
+        val result = evaluator.evaluate("(3-2)*5")
+        assertEquals(5.0, result)
+    }
+
+    @Test
+    fun equationTest() {
+        val result = evaluator.evaluate("(4+3/1)*3+2")
+        assertEquals(23.0, result)
+    }
+
+    @Test
+    fun squareRootTest() {
+        val result = evaluator.evaluate("9^(1/2)")
+        assertEquals(3.0, result)
+    }
+
+    @Test
+    fun orderOfOperationsTest() {
+        val result = evaluator.evaluate("1+2*(3-1)-1")
+        assertEquals(4.0, result)
+    }
+
+    //@Test
+    fun multiplyWithBracketsTest() {
+        val result = evaluator.evaluate("2(3-1)")
+        assertEquals(4.0, result)
+    }//currently does not work, needs to be addressed
 }
