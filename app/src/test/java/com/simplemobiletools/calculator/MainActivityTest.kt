@@ -49,13 +49,19 @@ class MainActivityTest {
 
     @Test
     fun moduloTest() {
-        val result = evaluator.evaluate("6.5%3")
-        assertEquals(0.5, result)
+        val result = evaluator.evaluate("7%3")
+        assertEquals(1, result)
     }
 
     @Test
     fun powerTest() {
         val result = evaluator.evaluate("3^6")
         assertEquals(729.0, result)
+    }
+
+    @Test
+    fun storeTest(){ //test an operation then store it
+
+
     }
 }
