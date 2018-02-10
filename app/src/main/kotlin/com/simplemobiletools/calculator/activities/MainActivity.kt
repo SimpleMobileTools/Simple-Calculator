@@ -187,12 +187,7 @@ class MainActivity : SimpleActivity(), Calculator {
         else{
             formula.text = formula.text.toString() + value
         }
-
     }
-
-
-
-
 
 
 }

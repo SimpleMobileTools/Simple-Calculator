@@ -71,11 +71,12 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun setValue(value: String) {
+        //Big Text ANSWER
         mCallback!!.setValue(value, context)
         displayedNumber = value
     }
 
-    private fun setFormula(value: String) {
+    private fun setFormula(value: String) { //Small text OPERATIONS
         mCallback!!.setFormula(value, context)
         displayedFormula = value
     }
@@ -126,6 +127,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     //TODO Finish the implementation
     fun handleStore(value : String, id: String) {
         when (id) {
+            //SetFormula: small text, SetValue BIG TEXT
             MEMORY_ONE -> { mSavedValue1!!.writeText(value); setFormula(""); setValue(value) }
             MEMORY_TWO -> { mSavedValue2!!.writeText(value); setFormula(""); setValue(value)}
             MEMORY_THREE -> { mSavedValue3!!.writeText(value); setFormula(""); setValue(value) }
