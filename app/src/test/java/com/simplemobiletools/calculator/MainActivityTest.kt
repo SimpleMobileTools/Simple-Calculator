@@ -75,6 +75,6 @@ class MainActivityTest {
 
         calc.handleStore("5.0", "MEMORY_ONE")
         System.out.println("Loaded: " + calc.handleViewValue("MEMORY_ONE"))
-        assertEquals("5.0", calc.handleViewValue("MEMORY_ONE"))
+        assertEquals("5.0", calc.handleViewValue("MEMORY_ONE")) //currently loads null
     }
 }
