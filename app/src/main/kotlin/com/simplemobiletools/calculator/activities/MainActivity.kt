@@ -1,5 +1,6 @@
 package com.simplemobiletools.calculator.activities
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -19,6 +20,22 @@ import com.simplemobiletools.commons.helpers.LICENSE_ROBOLECTRIC
 import kotlinx.android.synthetic.main.activity_main.*
 import me.grantland.widget.AutofitHelper
 import android.widget.Toast
+import com.simplemobiletools.calculator.helpers.CONSTANT.DIGIT
+import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
+import com.simplemobiletools.calculator.helpers.CONSTANT.LEFT_BRACKET
+import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
+import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_THREE
+import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_TWO
+import com.simplemobiletools.calculator.helpers.CONSTANT.MINUS
+import com.simplemobiletools.calculator.helpers.CONSTANT.MODULO
+import com.simplemobiletools.calculator.helpers.CONSTANT.MULTIPLY
+import com.simplemobiletools.calculator.helpers.CONSTANT.ONE
+import com.simplemobiletools.calculator.helpers.CONSTANT.PLUS
+import com.simplemobiletools.calculator.helpers.CONSTANT.POWER
+import com.simplemobiletools.calculator.helpers.CONSTANT.RIGHT_BRACKET
+import com.simplemobiletools.calculator.helpers.CONSTANT.ROOT
+import com.simplemobiletools.calculator.helpers.CONSTANT.THREE
+import com.simplemobiletools.calculator.helpers.CONSTANT.TWO
 
 class MainActivity : SimpleActivity(), Calculator {
     private var storedTextColor = 0
@@ -27,6 +44,7 @@ class MainActivity : SimpleActivity(), Calculator {
 
     lateinit var calc: CalculatorImpl
 
+    @SuppressLint("MissingSuperCall")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -47,6 +65,15 @@ class MainActivity : SimpleActivity(), Calculator {
 
         btn_clear.setOnClickListener {calc.handleClear(formula.text.toString()); checkHaptic(it) }
         btn_clear.setOnLongClickListener { calc.handleReset(); true }
+
+        btn_custom_1.setOnClickListener { calc.handleViewValue(MEMORY_ONE)}
+        btn_custom_1.setOnLongClickListener{ calc.handleStore(result.text.toString(), MEMORY_ONE); true }
+
+        btn_custom_2.setOnClickListener { calc.handleViewValue(MEMORY_TWO)}
+        btn_custom_2.setOnLongClickListener{ calc.handleStore(result.text.toString(), MEMORY_TWO); true }
+
+        btn_custom_3.setOnClickListener { calc.handleViewValue(MEMORY_THREE) }
+        btn_custom_3.setOnLongClickListener{calc.handleStore(result.text.toString(), MEMORY_THREE); true }
 
         getButtonIds().forEach {
             it.setOnClickListener { calc.numpadClicked(it.id); checkHaptic(it) }
@@ -73,6 +100,7 @@ class MainActivity : SimpleActivity(), Calculator {
         updateViewColors(calculator_holder, config.textColor)
     }
 
+    @SuppressLint("MissingSuperCall")
     override fun onResume() {
         super.onResume()
         if (storedUseEnglish != config.useEnglish) {
@@ -159,12 +187,7 @@ class MainActivity : SimpleActivity(), Calculator {
         else{
             formula.text = formula.text.toString() + value
         }
-
     }
-
-
-
-
 
 
 }
