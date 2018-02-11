@@ -203,6 +203,7 @@ public class MainActivityTest {
         press(R.id.btn_clear);
         checkResult("0");
     }
+
     @Test
     public void storeValueAfterEquals(){
         //Verify if button store works (Have to press equals first)
@@ -230,10 +231,22 @@ public class MainActivityTest {
         press(R.id.btn_equals);
         press(R.id.btn_custom_2);
         checkResult("1");
-
-
     }
 
+    @Test
+    public void storeValueAndUseInFormula() {
+        //Verify if button store works (Have to press equals first)
+        press(R.id.btn_7);
+        press(R.id.btn_divide);
+        press(R.id.btn_2);
+        press(R.id.btn_equals);
+        press(R.id.btn_custom_1);
+
+        longPress(R.id.btn_clear);
+        longPress(R.id.btn_custom_1);
+        checkFormula("3.5");
+
+    }
 
     private void press(int id) {
         onView(withId(id)).perform(click());
