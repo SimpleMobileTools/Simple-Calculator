@@ -1,8 +1,6 @@
 package com.simplemobiletools.calculator.helpers
-
 import android.content.Context
 import com.simplemobiletools.calculator.R
-import com.fathzer.soft.javaluator.DoubleEvaluator
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIGIT
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
 import com.simplemobiletools.calculator.helpers.CONSTANT.EQUALS
@@ -19,10 +17,9 @@ import com.simplemobiletools.calculator.helpers.CONSTANT.PLUS
 import com.simplemobiletools.calculator.helpers.CONSTANT.POWER
 import com.simplemobiletools.calculator.helpers.CONSTANT.RIGHT_BRACKET
 import com.simplemobiletools.calculator.helpers.CONSTANT.ROOT
-import com.simplemobiletools.calculator.helpers.CONSTANT.ONE
-import com.simplemobiletools.calculator.helpers.CONSTANT.THREE
-import com.simplemobiletools.calculator.helpers.CONSTANT.TWO
 import java.io.File
+import com.simplemobiletools.calculator.helpers.MyWidgetProvider
+import com.simplemobiletools.calculator.javaluator.*
 
 
 //TODO: Allow number to be placed immediately before opened bracket. 4(3+3) should work.
@@ -186,7 +183,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             newValue = oldValue.substring(0, len - 1)
             setFormula("")
             setFormula(newValue)
-            setValue(lastChar)
+            setValue("")
         }
     }
 
