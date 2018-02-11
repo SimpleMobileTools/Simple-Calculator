@@ -1,7 +1,7 @@
 package com.simplemobiletools.calculator
 
-import com.fathzer.soft.javaluator.DoubleEvaluator
 import com.simplemobiletools.calculator.activities.MainActivity
+import com.simplemobiletools.calculator.javaluator.DoubleEvaluator
 import junit.framework.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -15,7 +15,7 @@ import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
 import com.simplemobiletools.calculator.helpers.Calculator
 import com.simplemobiletools.calculator.helpers.CalculatorImpl
 
-//TODO: Add tests for clear character, clear string, square root, more complex calculations
+//TODO: Add tests for clear character, clear string, more complex calculations
 @RunWith(RobolectricTestRunner::class)
 @Config(constants = BuildConfig::class, sdk = intArrayOf(21))
 class MainActivityTest {
@@ -67,6 +67,37 @@ class MainActivityTest {
         val result = evaluator.evaluate("3^6")
         assertEquals(729.0, result)
     }
+
+    @Test
+    fun bracketsTest() {
+        val result = evaluator.evaluate("(3-2)*5")
+        assertEquals(5.0, result)
+    }
+
+    @Test
+    fun equationTest() {
+        val result = evaluator.evaluate("(4+3/1)*3+2")
+        assertEquals(23.0, result)
+    }
+
+    @Test
+    fun squareRootTest() {
+        val result = evaluator.evaluate("9^(1/2)")
+        assertEquals(3.0, result)
+    }
+
+    @Test
+    fun orderOfOperationsTest() {
+        val result = evaluator.evaluate("1+2*(3-1)-1")
+        assertEquals(4.0, result)
+    }
+
+    //TODO: Evaluator should take number followed by open bracket to mean multiplication
+    //@Test
+    fun multiplyWithBracketsTest() {
+        val result = evaluator.evaluate("2(3-1)")
+        assertEquals(4.0, result)
+    }//currently does not work, needs to be addressed
 
     //TO-DO: Fix loading, test has to read from file. Added local data.json file to use for testing
     @Test
