@@ -19,9 +19,6 @@ import com.simplemobiletools.calculator.helpers.CONSTANT.PLUS
 import com.simplemobiletools.calculator.helpers.CONSTANT.POWER
 import com.simplemobiletools.calculator.helpers.CONSTANT.RIGHT_BRACKET
 import com.simplemobiletools.calculator.helpers.CONSTANT.ROOT
-import com.simplemobiletools.calculator.helpers.CONSTANT.ONE
-import com.simplemobiletools.calculator.helpers.CONSTANT.THREE
-import com.simplemobiletools.calculator.helpers.CONSTANT.TWO
 import java.io.File
 
 //TODO: Allow number to be placed immediately before opened bracket. 4(3+3) should work.
