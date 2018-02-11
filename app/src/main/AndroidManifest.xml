@@ -20,7 +20,7 @@
         <activity
             android:name=".activities.SplashActivity"
             android:theme="@style/SplashTheme"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -32,14 +32,14 @@
         <!--android:screenOrientation="portrait"-->
         <activity
             android:name=".activities.MainActivity"
-            android:configChanges="orientation|screenSize"
+            android:configChanges="screenSize"
             />
 
         <activity
             android:name=".activities.WidgetConfigureActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyWidgetConfigTheme"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="screenSize">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
             </intent-filter>
@@ -49,25 +49,25 @@
             android:name=".activities.SettingsActivity"
             android:label="@string/settings"
             android:parentActivityName=".activities.MainActivity"
-            android:configChanges="orientation|screenSize"/>
+            android:configChanges="screenSize"/>
 
         <activity
             android:name="com.simplemobiletools.commons.activities.AboutActivity"
             android:label="@string/about"
             android:parentActivityName=".activities.MainActivity"
-            android:configChanges="orientation|screenSize"/>
+            android:configChanges="screenSize"/>
 
         <activity
             android:name="com.simplemobiletools.commons.activities.LicenseActivity"
             android:label="@string/third_party_licences"
             android:parentActivityName="com.simplemobiletools.commons.activities.AboutActivity"
-            android:configChanges="orientation|screenSize"/>
+            android:configChanges="screenSize"/>
 
         <activity
             android:name="com.simplemobiletools.commons.activities.CustomizationActivity"
             android:label="@string/customize_colors"
             android:parentActivityName=".activities.SettingsActivity"
-            android:configChanges="orientation|screenSize"/>
+            android:configChanges="screenSize"/>
 
         <receiver
             android:name=".helpers.MyWidgetProvider"
