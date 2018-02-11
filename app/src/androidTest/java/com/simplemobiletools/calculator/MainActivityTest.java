@@ -159,6 +159,50 @@ public class MainActivityTest {
         checkFormula("");
     }
 
+    @Test
+    public void storeValueAfterEquals(){
+        //Verify if button store works (Have to press equals first)
+        press(R.id.btn_7);
+        press(R.id.btn_divide);
+        press(R.id.btn_2);
+        press(R.id.btn_equals);
+        longPress(R.id.btn_custom_1);
+        checkResult("3.5");
+
+        //Verify if button store works (Have to press equals first)
+        press(R.id.btn_3);
+        press(R.id.btn_power);
+        press(R.id.btn_2);
+        press(R.id.btn_equals);
+        longPress(R.id.btn_custom_2);
+        checkResult("9");
+
+
+        //Verify if button store works (Have to press equals first)
+        press(R.id.btn_1);
+        press(R.id.btn_0);
+        press(R.id.btn_modulo);
+        press(R.id.btn_3);
+        press(R.id.btn_equals);
+        longPress(R.id.btn_custom_2);
+        checkResult("1");
+    }
+
+    @Test
+    public void storeValueAndUseInFormula() {
+        //Verify if button store works (Have to press equals first)
+        press(R.id.btn_7);
+        press(R.id.btn_divide);
+        press(R.id.btn_2);
+        press(R.id.btn_equals);
+        longPress(R.id.btn_custom_1);
+
+        longPress(R.id.btn_clear);
+        press(R.id.btn_custom_1);
+        checkFormula("3.5");
+
+    }
+
     private void press(int id) {
         onView(withId(id)).perform(click());
     }

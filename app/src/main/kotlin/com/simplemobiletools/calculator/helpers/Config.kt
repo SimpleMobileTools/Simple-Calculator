@@ -1,6 +1,7 @@
 package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
+import com.simplemobiletools.calculator.helpers.CONSTANT.VIBRATE_ON_BUTTON_PRESS
 import com.simplemobiletools.commons.helpers.BaseConfig
 
 class Config(context: Context) : BaseConfig(context) {

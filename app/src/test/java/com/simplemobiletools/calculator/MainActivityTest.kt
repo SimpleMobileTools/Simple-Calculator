@@ -9,6 +9,11 @@ import org.junit.runner.RunWith
 import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
+import org.mockito.Mockito.*
+import android.content.Context
+import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
+import com.simplemobiletools.calculator.helpers.Calculator
+import com.simplemobiletools.calculator.helpers.CalculatorImpl
 
 //TODO: Add tests for clear character, clear string, more complex calculations
 @RunWith(RobolectricTestRunner::class)
@@ -17,6 +22,10 @@ class MainActivityTest {
     private lateinit var activity: MainActivity
 
     private val evaluator = DoubleEvaluator()
+
+    //var context = mock(Context::class.java)
+    var mockCalc = mock(Calculator::class.java)
+    var mockContext = mock(Context::class.java)
 
     @Before
     fun setUp() {
@@ -89,4 +98,14 @@ class MainActivityTest {
         val result = evaluator.evaluate("2(3-1)")
         assertEquals(4.0, result)
     }//currently does not work, needs to be addressed
+
+    //TO-DO: Fix loading, test has to read from file. Added local data.json file to use for testing
+    @Test
+    fun storageTest() {
+        var calc = CalculatorImpl(mockCalc,mockContext)
+        calc.handleStore("5.0", MEMORY_ONE)
+        System.out.println("Loaded: " + calc.displayedNumber)
+        calc.handleViewValue(MEMORY_ONE)
+        assertEquals("5.0", calc.displayedFormula) //currently loads null
+    }
 }

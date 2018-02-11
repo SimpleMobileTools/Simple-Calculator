@@ -1,9 +1,26 @@
 package com.simplemobiletools.calculator.helpers
 import android.content.Context
+import android.widget.Toast
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.helpers.MyWidgetProvider
 import com.simplemobiletools.calculator.javaluator.*
-
+import com.simplemobiletools.calculator.helpers.CONSTANT.DIGIT
+import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
+import com.simplemobiletools.calculator.helpers.CONSTANT.EQUALS
+import com.simplemobiletools.calculator.helpers.CONSTANT.ERROR_READ_VALUE
+import com.simplemobiletools.calculator.helpers.CONSTANT.ERROR_SAVE_VALUE
+import com.simplemobiletools.calculator.helpers.CONSTANT.LEFT_BRACKET
+import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
+import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_THREE
+import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_TWO
+import com.simplemobiletools.calculator.helpers.CONSTANT.MINUS
+import com.simplemobiletools.calculator.helpers.CONSTANT.MODULO
+import com.simplemobiletools.calculator.helpers.CONSTANT.MULTIPLY
+import com.simplemobiletools.calculator.helpers.CONSTANT.PLUS
+import com.simplemobiletools.calculator.helpers.CONSTANT.POWER
+import com.simplemobiletools.calculator.helpers.CONSTANT.RIGHT_BRACKET
+import com.simplemobiletools.calculator.helpers.CONSTANT.ROOT
+import java.io.File
 
 //TODO: Allow number to be placed immediately before opened bracket. 4(3+3) should work.
 class CalculatorImpl(calculator: Calculator, val context: Context) {
@@ -16,11 +33,21 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private var mResetValue = false
     private var mBaseValue = 0.0
     private var mSecondValue = 0.0
+    private var mSavedValue1: File
+    private var mSavedValue2: File
+    private var mSavedValue3: File
 
     init {
         resetValues()
         setValue("0")
         setFormula("")
+        mSavedValue1 = createTempFile("one",".tmp")
+        mSavedValue2 = createTempFile("two",".tmp")
+        mSavedValue3 = createTempFile("three",".tmp")
+        mSavedValue1.deleteOnExit()
+        mSavedValue2.deleteOnExit()
+        mSavedValue3.deleteOnExit()
+
     }
 
     private fun resetValueIfNeeded() {
@@ -43,11 +70,12 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun setValue(value: String) {
+        //Big Text ANSWER
         mCallback!!.setValue(value, context)
         displayedNumber = value
     }
 
-    private fun setFormula(value: String) {
+    private fun setFormula(value: String) { //Small text OPERATIONS
         mCallback!!.setFormula(value, context)
         displayedFormula = value
     }
@@ -88,12 +116,60 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         mIsFirstOperation = false
     }
 
-    fun handleOperation(operation: String) {
+    fun handleOperation(operation : String) {
 
         setFormula(getSign(operation))
         mResetValue = true
         lastKey = operation
         mLastOperation = operation
+    }
+    //TODO Finish the implementation
+    fun handleStore(value : String, id: String) {
+        if (lastKey == EQUALS && displayedNumber != "") {
+            when (id) {
+                //SetFormula: small text, SetValue BIG TEXT
+                MEMORY_ONE -> { mSavedValue1!!.writeText(value); setFormula(""); setValue(value) }
+                MEMORY_TWO -> { mSavedValue2!!.writeText(value); setFormula(""); setValue(value)}
+                MEMORY_THREE -> { mSavedValue3!!.writeText(value); setFormula(""); setValue(value) }
+            }
+        }
+        else {
+            var message = Toast.makeText(context, ERROR_SAVE_VALUE, Toast.LENGTH_SHORT)
+            message.show()
+        }
+    }
+
+    fun handleViewValue(id: String) {
+        var variable: String?
+        when (id) {
+            MEMORY_ONE -> { variable = mSavedValue1!!.readText()
+                if(variable == "") {
+                    var message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    message.show()
+                }
+                else {
+                    setFormula(variable)
+                }
+            }
+            MEMORY_TWO -> { variable = mSavedValue2!!.readText()
+                if(variable == "") {
+                    var message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    message.show()
+                }
+                else {
+                    setFormula(variable)
+                }
+            }
+            MEMORY_THREE -> { variable = mSavedValue3!!.readText();
+                if(variable == "") {
+                    var message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    message.show()
+                }
+                else {
+                    setFormula(variable)
+                }
+            }
+        }
     }
 
     fun handleClear(formula : String) {
