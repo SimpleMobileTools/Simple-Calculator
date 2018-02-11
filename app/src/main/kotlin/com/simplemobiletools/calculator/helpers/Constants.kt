@@ -34,4 +34,8 @@ object CONSTANT {
 
     // shared preferences
     const val VIBRATE_ON_BUTTON_PRESS = "vibrate_on_button_press"
+
+    // error messages
+    const val ERROR_SAVE_VALUE = "Error: No value saved"
+    const val ERROR_READ_VALUE = "Error: No value to read"
 }

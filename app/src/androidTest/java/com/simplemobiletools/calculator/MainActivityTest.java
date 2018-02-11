@@ -211,7 +211,7 @@ public class MainActivityTest {
         press(R.id.btn_divide);
         press(R.id.btn_2);
         press(R.id.btn_equals);
-        press(R.id.btn_custom_1);
+        longPress(R.id.btn_custom_1);
         checkResult("3.5");
 
         //Verify if button store works (Have to press equals first)
@@ -219,7 +219,7 @@ public class MainActivityTest {
         press(R.id.btn_power);
         press(R.id.btn_2);
         press(R.id.btn_equals);
-        press(R.id.btn_custom_2);
+        longPress(R.id.btn_custom_2);
         checkResult("9");
 
 
@@ -229,7 +229,7 @@ public class MainActivityTest {
         press(R.id.btn_modulo);
         press(R.id.btn_3);
         press(R.id.btn_equals);
-        press(R.id.btn_custom_2);
+        longPress(R.id.btn_custom_2);
         checkResult("1");
     }
 
@@ -240,10 +240,10 @@ public class MainActivityTest {
         press(R.id.btn_divide);
         press(R.id.btn_2);
         press(R.id.btn_equals);
-        press(R.id.btn_custom_1);
+        longPress(R.id.btn_custom_1);
 
         longPress(R.id.btn_clear);
-        longPress(R.id.btn_custom_1);
+        press(R.id.btn_custom_1);
         checkFormula("3.5");
 
     }

@@ -6,6 +6,8 @@ import com.fathzer.soft.javaluator.DoubleEvaluator
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIGIT
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
 import com.simplemobiletools.calculator.helpers.CONSTANT.EQUALS
+import com.simplemobiletools.calculator.helpers.CONSTANT.ERROR_READ_VALUE
+import com.simplemobiletools.calculator.helpers.CONSTANT.ERROR_SAVE_VALUE
 import com.simplemobiletools.calculator.helpers.CONSTANT.LEFT_BRACKET
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_THREE
@@ -126,19 +128,50 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
     //TODO Finish the implementation
     fun handleStore(value : String, id: String) {
-        when (id) {
-            //SetFormula: small text, SetValue BIG TEXT
-            MEMORY_ONE -> { mSavedValue1!!.writeText(value); setFormula(""); setValue(value) }
-            MEMORY_TWO -> { mSavedValue2!!.writeText(value); setFormula(""); setValue(value)}
-            MEMORY_THREE -> { mSavedValue3!!.writeText(value); setFormula(""); setValue(value) }
+        if (lastKey == EQUALS && displayedNumber != "") {
+            when (id) {
+                //SetFormula: small text, SetValue BIG TEXT
+                MEMORY_ONE -> { mSavedValue1!!.writeText(value); setFormula(""); setValue(value) }
+                MEMORY_TWO -> { mSavedValue2!!.writeText(value); setFormula(""); setValue(value)}
+                MEMORY_THREE -> { mSavedValue3!!.writeText(value); setFormula(""); setValue(value) }
+            }
+        }
+        else {
+            setFormula("")
+            setFormula(ERROR_SAVE_VALUE)
         }
     }
 
     fun handleViewValue(id: String) {
+        var variable: String?
         when (id) {
-            MEMORY_ONE -> { setFormula(mSavedValue1!!.readText()) }
-            MEMORY_TWO -> { setFormula(mSavedValue2!!.readText()) }
-            MEMORY_THREE -> { setFormula(mSavedValue3!!.readText()) }
+            MEMORY_ONE -> { variable = mSavedValue1!!.readText()
+                if(variable == "") {
+                    setFormula("")
+                    setFormula(ERROR_READ_VALUE)
+                }
+                else {
+                    setFormula(variable)
+                }
+            }
+            MEMORY_TWO -> { variable = mSavedValue2!!.readText()
+                if(variable == "") {
+                    setFormula("")
+                    setFormula(ERROR_READ_VALUE)
+                }
+                else {
+                    setFormula(variable)
+                }
+            }
+            MEMORY_THREE -> { variable = mSavedValue3!!.readText();
+                if(variable == "") {
+                    setFormula("")
+                    setFormula(ERROR_READ_VALUE)
+                }
+                else {
+                    setFormula(variable)
+                }
+            }
         }
     }
 
