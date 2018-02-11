@@ -1,5 +1,6 @@
 package com.simplemobiletools.calculator.helpers
 import android.content.Context
+import android.widget.Toast
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.helpers.MyWidgetProvider
 import com.simplemobiletools.calculator.javaluator.*
@@ -133,8 +134,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             }
         }
         else {
-            setFormula("")
-            setFormula(ERROR_SAVE_VALUE)
+            var message = Toast.makeText(context, ERROR_SAVE_VALUE, Toast.LENGTH_SHORT)
+            message.show()
         }
     }
 
@@ -143,8 +144,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         when (id) {
             MEMORY_ONE -> { variable = mSavedValue1!!.readText()
                 if(variable == "") {
-                    setFormula("")
-                    setFormula(ERROR_READ_VALUE)
+                    var message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    message.show()
                 }
                 else {
                     setFormula(variable)
@@ -152,8 +153,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             }
             MEMORY_TWO -> { variable = mSavedValue2!!.readText()
                 if(variable == "") {
-                    setFormula("")
-                    setFormula(ERROR_READ_VALUE)
+                    var message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    message.show()
                 }
                 else {
                     setFormula(variable)
@@ -161,8 +162,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             }
             MEMORY_THREE -> { variable = mSavedValue3!!.readText();
                 if(variable == "") {
-                    setFormula("")
-                    setFormula(ERROR_READ_VALUE)
+                    var message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    message.show()
                 }
                 else {
                     setFormula(variable)
