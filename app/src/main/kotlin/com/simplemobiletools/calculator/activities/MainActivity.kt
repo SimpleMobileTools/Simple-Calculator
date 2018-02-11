@@ -29,13 +29,10 @@ import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_TWO
 import com.simplemobiletools.calculator.helpers.CONSTANT.MINUS
 import com.simplemobiletools.calculator.helpers.CONSTANT.MODULO
 import com.simplemobiletools.calculator.helpers.CONSTANT.MULTIPLY
-import com.simplemobiletools.calculator.helpers.CONSTANT.ONE
 import com.simplemobiletools.calculator.helpers.CONSTANT.PLUS
 import com.simplemobiletools.calculator.helpers.CONSTANT.POWER
 import com.simplemobiletools.calculator.helpers.CONSTANT.RIGHT_BRACKET
 import com.simplemobiletools.calculator.helpers.CONSTANT.ROOT
-import com.simplemobiletools.calculator.helpers.CONSTANT.THREE
-import com.simplemobiletools.calculator.helpers.CONSTANT.TWO
 
 class MainActivity : SimpleActivity(), Calculator {
     private var storedTextColor = 0
