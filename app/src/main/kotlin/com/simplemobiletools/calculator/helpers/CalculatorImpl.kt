@@ -39,7 +39,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     init {
         resetValues()
-        setValue("0")
+        setValue("")
         setFormula("")
         mSavedValue1 = createTempFile("one",".tmp")
         mSavedValue2 = createTempFile("two",".tmp")
@@ -83,7 +83,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private fun addDigit(number: Int) {
         val currentValue = displayedNumber
         val newValue = formatString(currentValue!! + number)
-        setValue(newValue)
+       // setValue(newValue)
         setFormula(number.toString())
     }
 
@@ -189,7 +189,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     fun handleReset() {
         resetValues()
-        setValue("0")
+        setValue("")
         setFormula("")
     }
 
