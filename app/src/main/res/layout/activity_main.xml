@@ -5,13 +5,14 @@
     android:id="@+id/calculator_holder"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_grey_pressed_mask"
     tools:context=".activities.MainActivity"
     tools:ignore="HardcodedText"
     tools:layout_editor_absoluteY="81dp">
 
     <Button
         android:id="@+id/btn_custom_4"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -23,7 +24,7 @@
 
     <Button
         android:id="@+id/btn_custom_5"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -67,7 +68,7 @@
 
     <Button
         android:id="@+id/btn_0"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -79,7 +80,7 @@
 
     <Button
         android:id="@+id/btn_1"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -91,7 +92,7 @@
 
     <Button
         android:id="@+id/btn_2"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -103,7 +104,7 @@
 
     <Button
         android:id="@+id/btn_3"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -115,7 +116,7 @@
 
     <Button
         android:id="@+id/btn_4"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -127,7 +128,7 @@
 
     <Button
         android:id="@+id/btn_5"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -139,7 +140,7 @@
 
     <Button
         android:id="@+id/btn_6"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -151,7 +152,7 @@
 
     <Button
         android:id="@+id/btn_7"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -163,7 +164,7 @@
 
     <Button
         android:id="@+id/btn_8"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -175,7 +176,7 @@
 
     <Button
         android:id="@+id/btn_9"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -187,7 +188,7 @@
 
     <Button
         android:id="@+id/btn_decimal"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -199,7 +200,7 @@
 
     <Button
         android:id="@+id/btn_clear"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -211,7 +212,7 @@
 
     <Button
         android:id="@+id/btn_delete"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -223,7 +224,7 @@
 
     <Button
         android:id="@+id/btn_equals"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="120sp"
@@ -235,7 +236,7 @@
 
     <Button
         android:id="@+id/btn_right_bracket"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -247,7 +248,7 @@
 
     <Button
         android:id="@+id/btn_left_bracket"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -259,7 +260,7 @@
 
     <Button
         android:id="@+id/btn_plus_minus"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -271,7 +272,7 @@
 
     <Button
         android:id="@+id/btn_modulo"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -283,7 +284,7 @@
 
     <Button
         android:id="@+id/btn_power"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -295,7 +296,7 @@
 
     <Button
         android:id="@+id/btn_root"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -307,7 +308,7 @@
 
     <Button
         android:id="@+id/btn_divide"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -319,7 +320,7 @@
 
     <Button
         android:id="@+id/btn_multiply"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -331,7 +332,7 @@
 
     <Button
         android:id="@+id/btn_minus"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -343,7 +344,7 @@
 
     <Button
         android:id="@+id/btn_plus"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -355,7 +356,7 @@
 
     <Button
         android:id="@+id/btn_custom_1"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -367,7 +368,7 @@
 
     <Button
         android:id="@+id/btn_custom_2"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
@@ -379,7 +380,7 @@
 
     <Button
         android:id="@+id/btn_custom_3"
-        style="@style/Widget.AppCompat.Button"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="60sp"
