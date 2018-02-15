@@ -1,14 +1,15 @@
 package com.simplemobiletools.calculator.helpers
 import android.content.Context
+import android.os.Environment
 import android.widget.Toast
 import com.simplemobiletools.calculator.R
-import com.simplemobiletools.calculator.helpers.MyWidgetProvider
 import com.simplemobiletools.calculator.javaluator.*
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIGIT
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
 import com.simplemobiletools.calculator.helpers.CONSTANT.EQUALS
 import com.simplemobiletools.calculator.helpers.CONSTANT.ERROR_READ_VALUE
 import com.simplemobiletools.calculator.helpers.CONSTANT.ERROR_SAVE_VALUE
+import com.simplemobiletools.calculator.helpers.CONSTANT.HISTORY_FILE
 import com.simplemobiletools.calculator.helpers.CONSTANT.LEFT_BRACKET
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_THREE
@@ -20,7 +21,9 @@ import com.simplemobiletools.calculator.helpers.CONSTANT.PLUS
 import com.simplemobiletools.calculator.helpers.CONSTANT.POWER
 import com.simplemobiletools.calculator.helpers.CONSTANT.RIGHT_BRACKET
 import com.simplemobiletools.calculator.helpers.CONSTANT.ROOT
+import com.simplemobiletools.calculator.helpers.CONSTANT.TEMP_FILE
 import java.io.File
+import java.io.OutputStreamWriter
 
 //TODO: Allow number to be placed immediately before opened bracket. 4(3+3) should work.
 class CalculatorImpl(calculator: Calculator, val context: Context) {
@@ -36,17 +39,18 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private var mSavedValue1: File
     private var mSavedValue2: File
     private var mSavedValue3: File
+    private var mHistory: File
+    private var fileManager: FileHandler = FileHandler()
+    private var fileWriter: OutputStreamWriter? = null
 
     init {
         resetValues()
         setValue("0")
         setFormula("")
-        mSavedValue1 = createTempFile("one",".tmp")
-        mSavedValue2 = createTempFile("two",".tmp")
-        mSavedValue3 = createTempFile("three",".tmp")
-        mSavedValue1.deleteOnExit()
-        mSavedValue2.deleteOnExit()
-        mSavedValue3.deleteOnExit()
+        mSavedValue1 = fileManager.chooseFileType(TEMP_FILE, "one")
+        mSavedValue2 = fileManager.chooseFileType(TEMP_FILE, "two")
+        mSavedValue3 = fileManager.chooseFileType(TEMP_FILE, "three")
+        mHistory = fileManager.chooseFileType(HISTORY_FILE, "History")
 
     }
 
@@ -134,17 +138,19 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             }
         }
         else {
-            var message = Toast.makeText(context, ERROR_SAVE_VALUE, Toast.LENGTH_SHORT)
+            val message = Toast.makeText(context, ERROR_SAVE_VALUE, Toast.LENGTH_SHORT)
             message.show()
         }
     }
 
     fun handleViewValue(id: String) {
-        var variable: String?
+        val message: Toast?
+        val variable: String?
+
         when (id) {
             MEMORY_ONE -> { variable = mSavedValue1!!.readText()
                 if(variable == "") {
-                    var message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
                     message.show()
                 }
                 else {
@@ -153,7 +159,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             }
             MEMORY_TWO -> { variable = mSavedValue2!!.readText()
                 if(variable == "") {
-                    var message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
                     message.show()
                 }
                 else {
@@ -162,7 +168,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             }
             MEMORY_THREE -> { variable = mSavedValue3!!.readText();
                 if(variable == "") {
-                    var message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
                     message.show()
                 }
                 else {
@@ -195,7 +201,13 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     fun handleEquals(str: String) {
         calculateResult(str)
+        storeHistory()
         lastKey = EQUALS
+    }
+
+    //TODO: Finish history method that stores the information with the fie explorer
+    private fun storeHistory() {
+
     }
 
     private fun decimalClicked() {
