@@ -99,10 +99,10 @@ class MainActivityTest {
         assertEquals(4.0, result)
     }//currently does not work, needs to be addressed
 
-    //TO-DO: Fix loading, test has to read from file. Added local data.json file to use for testing
-    @Test
+    //TODO: Fix loading, test has to read from file. Added local data.json file to use for testing
+    //@Test
     fun storageTest() {
-        var calc = CalculatorImpl(mockCalc,mockContext)
+        val calc = CalculatorImpl(mockCalc,mockContext)
         calc.handleStore("5.0", MEMORY_ONE)
         System.out.println("Loaded: " + calc.displayedNumber)
         calc.handleViewValue(MEMORY_ONE)

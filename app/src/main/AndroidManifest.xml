@@ -36,16 +36,6 @@
             />
 
         <activity
-            android:name=".activities.WidgetConfigureActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/MyWidgetConfigTheme"
-            android:configChanges="orientation|screenSize">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
-            </intent-filter>
-        </activity>
-
-        <activity
             android:name=".activities.SettingsActivity"
             android:label="@string/settings"
             android:parentActivityName=".activities.MainActivity"
@@ -69,16 +59,5 @@
             android:parentActivityName=".activities.SettingsActivity"
             android:configChanges="orientation|screenSize"/>
 
-        <receiver
-            android:name=".helpers.MyWidgetProvider"
-            android:icon="@drawable/img_widget_preview">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
-            </intent-filter>
-
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/widget_info"/>
-        </receiver>
     </application>
 </manifest>
