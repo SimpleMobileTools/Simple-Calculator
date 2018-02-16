@@ -2,7 +2,6 @@ package com.simplemobiletools.calculator.helpers
 import android.content.Context
 import android.widget.Toast
 import com.simplemobiletools.calculator.R
-import com.simplemobiletools.calculator.helpers.MyWidgetProvider
 import com.simplemobiletools.calculator.javaluator.*
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIGIT
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
