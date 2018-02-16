@@ -2,7 +2,6 @@ package com.simplemobiletools.calculator.helpers
 import android.content.Context
 import android.widget.Toast
 import com.simplemobiletools.calculator.R
-import com.simplemobiletools.calculator.helpers.MyWidgetProvider
 import com.simplemobiletools.calculator.javaluator.*
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIGIT
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
@@ -23,7 +22,7 @@ import com.simplemobiletools.calculator.helpers.CONSTANT.ROOT
 import java.io.File
 
 //TODO: Allow number to be placed immediately before opened bracket. 4(3+3) should work.
-class CalculatorImpl(calculator: Calculator, val context: Context) {
+class CalculatorImpl(calculator: Calculator, private val context: Context) {
     var displayedNumber: String? = null
     var displayedFormula: String? = null
     var lastKey: String? = null
@@ -39,7 +38,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     init {
         resetValues()
-        setValue("0")
+        setValue("")
         setFormula("")
         mSavedValue1 = createTempFile("one",".tmp")
         mSavedValue2 = createTempFile("two",".tmp")
@@ -81,21 +80,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun addDigit(number: Int) {
-        val currentValue = displayedNumber
-        val newValue = formatString(currentValue!! + number)
-        setValue(newValue)
         setFormula(number.toString())
-    }
-
-    private fun formatString(str: String): String {
-        // if the number contains a decimal, do not try removing the leading zero anymore, nor add group separator
-        // it would prevent writing values like 1.02
-        if (str.contains(".")) {
-            return str
-        }
-
-        val doubleValue = Formatter.stringToDouble(str)
-        return Formatter.doubleToString(doubleValue)
     }
 
     private fun updateResult(value: Double) {
@@ -106,9 +91,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private fun calculateResult(str: String) {
 
         val evaluator = DoubleEvaluator()
-        val expression = str
         try {
-            val result = evaluator.evaluate(expression)
+            val result = evaluator.evaluate(str)
             updateResult(result)
         } catch (e: IllegalArgumentException) {
             throw e
@@ -123,46 +107,46 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         lastKey = operation
         mLastOperation = operation
     }
-    //TODO Finish the implementation
+
     fun handleStore(value : String, id: String) {
         if (lastKey == EQUALS && displayedNumber != "") {
             when (id) {
                 //SetFormula: small text, SetValue BIG TEXT
-                MEMORY_ONE -> { mSavedValue1!!.writeText(value); setFormula(""); setValue(value) }
-                MEMORY_TWO -> { mSavedValue2!!.writeText(value); setFormula(""); setValue(value)}
-                MEMORY_THREE -> { mSavedValue3!!.writeText(value); setFormula(""); setValue(value) }
+                MEMORY_ONE -> { mSavedValue1.writeText(value); setFormula(""); setValue(value) }
+                MEMORY_TWO -> { mSavedValue2.writeText(value); setFormula(""); setValue(value)}
+                MEMORY_THREE -> { mSavedValue3.writeText(value); setFormula(""); setValue(value) }
             }
         }
         else {
-            var message = Toast.makeText(context, ERROR_SAVE_VALUE, Toast.LENGTH_SHORT)
+            val message = Toast.makeText(context, ERROR_SAVE_VALUE, Toast.LENGTH_SHORT)
             message.show()
         }
     }
 
     fun handleViewValue(id: String) {
-        var variable: String?
+        val variable: String?
         when (id) {
-            MEMORY_ONE -> { variable = mSavedValue1!!.readText()
+            MEMORY_ONE -> { variable = mSavedValue1.readText()
                 if(variable == "") {
-                    var message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    val message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
                     message.show()
                 }
                 else {
                     setFormula(variable)
                 }
             }
-            MEMORY_TWO -> { variable = mSavedValue2!!.readText()
+            MEMORY_TWO -> { variable = mSavedValue2.readText()
                 if(variable == "") {
-                    var message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    val message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
                     message.show()
                 }
                 else {
                     setFormula(variable)
                 }
             }
-            MEMORY_THREE -> { variable = mSavedValue3!!.readText();
+            MEMORY_THREE -> { variable = mSavedValue3.readText()
                 if(variable == "") {
-                    var message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    val message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
                     message.show()
                 }
                 else {
@@ -174,13 +158,12 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     fun handleClear(formula : String) {
 
-        val oldValue = formula
-        val len = oldValue!!.length
-        var newValue = "0"
-        if(formula!!.length > 0)
+        val len = formula.length
+        val newValue: String
+        if(formula.isNotEmpty())
         {
-            var lastChar = oldValue.takeLast(1);
-            newValue = oldValue.substring(0, len - 1)
+            formula.takeLast(1)
+            newValue = formula.substring(0, len - 1)
             setFormula("")
             setFormula(newValue)
             setValue("")
@@ -189,7 +172,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     fun handleReset() {
         resetValues()
-        setValue("0")
+        setValue("")
         setFormula("")
     }
 

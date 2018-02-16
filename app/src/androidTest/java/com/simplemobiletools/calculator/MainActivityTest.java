@@ -32,14 +32,9 @@ public class MainActivityTest {
         press(R.id.btn_8);
         press(R.id.btn_9);
         press(R.id.btn_0);
+        checkFormula("1234567890");
+        press(R.id.btn_equals);
         checkResult("1,234,567,890");
-    }
-
-    @Test
-    public void removeLeadingZero() {
-        press(R.id.btn_0);
-        press(R.id.btn_5);
-        checkResult("5");
     }
 
     @Test
