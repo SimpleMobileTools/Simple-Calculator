@@ -80,21 +80,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun addDigit(number: Int) {
-        val currentValue = displayedNumber
-        val newValue = formatString(currentValue!! + number)
-       // setValue(newValue)
         setFormula(number.toString())
-    }
-
-    private fun formatString(str: String): String {
-        // if the number contains a decimal, do not try removing the leading zero anymore, nor add group separator
-        // it would prevent writing values like 1.02
-        if (str.contains(".")) {
-            return str
-        }
-
-        val doubleValue = Formatter.stringToDouble(str)
-        return Formatter.doubleToString(doubleValue)
     }
 
     private fun updateResult(value: Double) {
