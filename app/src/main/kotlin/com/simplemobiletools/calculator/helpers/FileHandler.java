@@ -1,5 +1,6 @@
 package com.simplemobiletools.calculator.helpers;
 
+import android.content.Context;
 import android.os.Environment;
 
 import java.io.File;
@@ -16,9 +17,12 @@ import static com.simplemobiletools.calculator.helpers.CONSTANT.TEMP_FILE;
 
 public class FileHandler {
     private HashMap<String, File> fileList = new HashMap<>();
+    private Context con;
+    private Calculator cal;
 
-    public FileHandler() {
-
+    public FileHandler(Calculator calculator, Context context) {
+        this.cal = calculator;
+        this.con = context;
     }
 
     //Setter to add to the list of files created.
@@ -56,7 +60,7 @@ public class FileHandler {
         File file;
         if (data)
         {
-            file = new File(Environment.getDataDirectory().getAbsolutePath()+"/"+path);
+            file = new File(con.getFilesDir()+"/"+path);
         }
         else {
             file = new File(path);

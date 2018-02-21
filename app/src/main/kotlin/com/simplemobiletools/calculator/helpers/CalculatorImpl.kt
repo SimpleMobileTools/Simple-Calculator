@@ -8,7 +8,7 @@ import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
 import com.simplemobiletools.calculator.helpers.CONSTANT.EQUALS
 import com.simplemobiletools.calculator.helpers.CONSTANT.ERROR_READ_VALUE
 import com.simplemobiletools.calculator.helpers.CONSTANT.ERROR_SAVE_VALUE
-import com.simplemobiletools.calculator.helpers.CONSTANT.FILE
+import com.simplemobiletools.calculator.helpers.CONSTANT.HISTORY_FILE
 import com.simplemobiletools.calculator.helpers.CONSTANT.LEFT_BRACKET
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_THREE
@@ -39,7 +39,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private var mSavedValue3: File
     private var mEquationHistory: File
     private var mResultHistory: File
-    private var fileManager: FileHandler = FileHandler()
+    private var fileManager: FileHandler = FileHandler(calculator, context)
 
     init {
         resetValues()
@@ -48,8 +48,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         mSavedValue1 = fileManager.chooseFileType(TEMP_FILE, "one")
         mSavedValue2 = fileManager.chooseFileType(TEMP_FILE, "two")
         mSavedValue3 = fileManager.chooseFileType(TEMP_FILE, "three")
-        mEquationHistory = fileManager.chooseFileType(FILE, "/History")
-        mResultHistory = fileManager.chooseFileType(FILE, "/Results")
+        mEquationHistory = fileManager.chooseFileType(HISTORY_FILE, "History")
+        mResultHistory = fileManager.chooseFileType(HISTORY_FILE, "Results")
     }
 
     private fun resetValueIfNeeded() {
@@ -291,5 +291,25 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             R.id.btn_8 -> addDigit(8)
             R.id.btn_9 -> addDigit(9)
         }
+    }
+
+    fun getHistoryFile() : File {
+        return mEquationHistory
+    }
+
+    fun getResultFile() : File {
+        return mResultHistory
+    }
+
+    fun setHistoryFile(file : File) {
+        mEquationHistory = file
+    }
+
+    fun setResultFile(file : File) {
+        mResultHistory = file
+    }
+
+    fun getFileManager() : FileHandler {
+        return fileManager
     }
 }

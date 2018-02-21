@@ -10,9 +10,11 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.mockito.Mockito.*
 import android.content.Context
+import com.simplemobiletools.calculator.helpers.CONSTANT.FILE
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
 import com.simplemobiletools.calculator.helpers.Calculator
 import com.simplemobiletools.calculator.helpers.CalculatorImpl
+import com.simplemobiletools.calculator.helpers.FileHandler
 import com.simplemobiletools.calculator.javaluator.DoubleEvaluator
 
 //TODO: Add tests for clear character, clear string, square root, more complex calculations
@@ -80,6 +82,10 @@ class MainActivityTest {
     @Test
     fun historyTest() {
         val calc = CalculatorImpl(mockCalc, mockContext)
+
+        calc.setHistoryFile(calc.getFileManager().chooseFileType(FILE, "/History"))
+        calc.setResultFile(calc.getFileManager().chooseFileType(FILE, "/Results"))
+
         calc.handleEquals("2+2")
         val history = calc.getHistoryEntries()
         val results = calc.getResults()
