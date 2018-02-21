@@ -1,6 +1,5 @@
 package com.simplemobiletools.calculator.helpers
 import android.content.Context
-import android.os.Environment
 import android.widget.Toast
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.javaluator.*
@@ -22,8 +21,7 @@ import com.simplemobiletools.calculator.helpers.CONSTANT.POWER
 import com.simplemobiletools.calculator.helpers.CONSTANT.RIGHT_BRACKET
 import com.simplemobiletools.calculator.helpers.CONSTANT.ROOT
 import com.simplemobiletools.calculator.helpers.CONSTANT.TEMP_FILE
-import java.io.File
-import java.io.OutputStreamWriter
+import java.io.*
 
 //TODO: Allow number to be placed immediately before opened bracket. 4(3+3) should work.
 class CalculatorImpl(calculator: Calculator, val context: Context) {
@@ -39,9 +37,9 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private var mSavedValue1: File
     private var mSavedValue2: File
     private var mSavedValue3: File
-    private var mHistory: File
+    private var mEquationHistory: File
+    private var mResultHistory: File
     private var fileManager: FileHandler = FileHandler()
-    private var fileWriter: OutputStreamWriter? = null
 
     init {
         resetValues()
@@ -50,8 +48,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         mSavedValue1 = fileManager.chooseFileType(TEMP_FILE, "one")
         mSavedValue2 = fileManager.chooseFileType(TEMP_FILE, "two")
         mSavedValue3 = fileManager.chooseFileType(TEMP_FILE, "three")
-        mHistory = fileManager.chooseFileType(HISTORY_FILE, "History")
-
+        mEquationHistory = fileManager.chooseFileType(HISTORY_FILE, "History")
+        mResultHistory = fileManager.chooseFileType(HISTORY_FILE, "Results")
     }
 
     private fun resetValueIfNeeded() {
@@ -114,6 +112,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         try {
             val result = evaluator.evaluate(expression)
             updateResult(result)
+            storeResult(result.toString())
         } catch (e: IllegalArgumentException) {
             throw e
         }
@@ -201,13 +200,46 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     fun handleEquals(str: String) {
         calculateResult(str)
-        storeHistory()
+        storeHistory(str)
         lastKey = EQUALS
     }
 
     //TODO: Finish history method that stores the information with the fie explorer
-    private fun storeHistory() {
+    private fun storeHistory(equation: String) {
+        val write: Writer = BufferedWriter(FileWriter(mEquationHistory, true))
+        write.write(equation)
+        write.appendln()
+        write.flush()
+        write.close()
+    }
 
+    //TODO: Finish the results history section
+    private fun storeResult(result: String) {
+        val writer: Writer = BufferedWriter(FileWriter(mResultHistory, true))
+        writer.write(result)
+        writer.appendln()
+        writer.flush()
+        writer.close()
+    }
+
+    private fun getHistoryEntries(): ArrayList<String> {
+        val reader: Reader = BufferedReader(FileReader(mEquationHistory))
+        val list: ArrayList<String> = ArrayList()
+        reader.forEachLine {
+            list.add(it)
+        }
+        reader.close()
+        return list
+    }
+
+    private fun getResults(): ArrayList<String> {
+        val reader: Reader = BufferedReader(FileReader(mResultHistory))
+        val list: ArrayList<String> = ArrayList()
+        reader.forEachLine {
+            list.add(it)
+        }
+        reader.close()
+        return list
     }
 
     private fun decimalClicked() {
