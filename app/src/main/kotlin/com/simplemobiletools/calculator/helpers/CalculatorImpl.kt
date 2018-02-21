@@ -8,7 +8,7 @@ import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
 import com.simplemobiletools.calculator.helpers.CONSTANT.EQUALS
 import com.simplemobiletools.calculator.helpers.CONSTANT.ERROR_READ_VALUE
 import com.simplemobiletools.calculator.helpers.CONSTANT.ERROR_SAVE_VALUE
-import com.simplemobiletools.calculator.helpers.CONSTANT.HISTORY_FILE
+import com.simplemobiletools.calculator.helpers.CONSTANT.FILE
 import com.simplemobiletools.calculator.helpers.CONSTANT.LEFT_BRACKET
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_THREE
@@ -48,8 +48,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         mSavedValue1 = fileManager.chooseFileType(TEMP_FILE, "one")
         mSavedValue2 = fileManager.chooseFileType(TEMP_FILE, "two")
         mSavedValue3 = fileManager.chooseFileType(TEMP_FILE, "three")
-        mEquationHistory = fileManager.chooseFileType(HISTORY_FILE, "History")
-        mResultHistory = fileManager.chooseFileType(HISTORY_FILE, "Results")
+        mEquationHistory = fileManager.chooseFileType(FILE, "/History")
+        mResultHistory = fileManager.chooseFileType(FILE, "/Results")
     }
 
     private fun resetValueIfNeeded() {
@@ -222,7 +222,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         writer.close()
     }
 
-    private fun getHistoryEntries(): ArrayList<String> {
+    fun getHistoryEntries(): ArrayList<String> {
         val reader: Reader = BufferedReader(FileReader(mEquationHistory))
         val list: ArrayList<String> = ArrayList()
         reader.forEachLine {
@@ -232,7 +232,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         return list
     }
 
-    private fun getResults(): ArrayList<String> {
+    fun getResults(): ArrayList<String> {
         val reader: Reader = BufferedReader(FileReader(mResultHistory))
         val list: ArrayList<String> = ArrayList()
         reader.forEachLine {

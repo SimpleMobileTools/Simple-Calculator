@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 
+import static com.simplemobiletools.calculator.helpers.CONSTANT.FILE;
 import static com.simplemobiletools.calculator.helpers.CONSTANT.HISTORY_FILE;
 import static com.simplemobiletools.calculator.helpers.CONSTANT.TEMP_FILE;
 
@@ -51,8 +52,15 @@ public class FileHandler {
     }
 
     //Private create file, not just the history file
-    private File createFile(String path) {
-        File file = new File(Environment.getDataDirectory().getAbsolutePath()+"/"+path);
+    private File createFile(String path, boolean data) {
+        File file;
+        if (data)
+        {
+            file = new File(Environment.getDataDirectory().getAbsolutePath()+"/"+path);
+        }
+        else {
+            file = new File(path);
+        }
         addFile(file, file.getAbsolutePath());
         return file;
     }
@@ -64,7 +72,9 @@ public class FileHandler {
             case TEMP_FILE:
                 return createTempFile(path);
             case HISTORY_FILE:
-                return createFile(path);
+                return createFile(path, true);
+            case FILE:
+                return createFile(path, false);
             default:
                 return null;
         }

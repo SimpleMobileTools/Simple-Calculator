@@ -1,6 +1,5 @@
 package com.simplemobiletools.calculator
 
-import com.fathzer.soft.javaluator.DoubleEvaluator
 import com.simplemobiletools.calculator.activities.MainActivity
 import junit.framework.Assert.assertEquals
 import org.junit.Before
@@ -14,6 +13,7 @@ import android.content.Context
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
 import com.simplemobiletools.calculator.helpers.Calculator
 import com.simplemobiletools.calculator.helpers.CalculatorImpl
+import com.simplemobiletools.calculator.javaluator.DoubleEvaluator
 
 //TODO: Add tests for clear character, clear string, square root, more complex calculations
 @RunWith(RobolectricTestRunner::class)
@@ -68,13 +68,23 @@ class MainActivityTest {
         assertEquals(729.0, result)
     }
 
-    //TO-DO: Fix loading, test has to read from file. Added local data.json file to use for testing
     @Test
     fun storageTest() {
-        var calc = CalculatorImpl(mockCalc,mockContext)
+        var calc = CalculatorImpl(mockCalc, mockContext)
         calc.handleStore("5.0", MEMORY_ONE)
         System.out.println("Loaded: " + calc.displayedNumber)
         calc.handleViewValue(MEMORY_ONE)
         assertEquals("5.0", calc.displayedFormula) //currently loads null
+    }
+
+    @Test
+    fun historyTest() {
+        val calc = CalculatorImpl(mockCalc, mockContext)
+        calc.handleEquals("2+2")
+        val history = calc.getHistoryEntries()
+        val results = calc.getResults()
+        assert(history.contains("2+2"))
+        assert(results.contains("4"))
+
     }
 }
