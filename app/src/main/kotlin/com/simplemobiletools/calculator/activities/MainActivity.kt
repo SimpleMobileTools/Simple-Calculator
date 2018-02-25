@@ -64,14 +64,14 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_clear.setOnClickListener {calc.handleClear(formula.text.toString()); checkHaptic(it) }
         btn_clear.setOnLongClickListener { calc.handleReset(); true }
 
-        btn_custom_1.setOnClickListener { calc.handleViewValue(MEMORY_ONE)}
-        btn_custom_1.setOnLongClickListener{ calc.handleStore(result.text.toString(), MEMORY_ONE); true }
+        btn_memory_1.setOnClickListener { calc.handleViewValue(MEMORY_ONE)}
+        btn_memory_1.setOnLongClickListener{ calc.handleStore(result.text.toString(), MEMORY_ONE); true }
 
-        btn_custom_2.setOnClickListener { calc.handleViewValue(MEMORY_TWO)}
-        btn_custom_2.setOnLongClickListener{ calc.handleStore(result.text.toString(), MEMORY_TWO); true }
+        btn_memory_2.setOnClickListener { calc.handleViewValue(MEMORY_TWO)}
+        btn_memory_2.setOnLongClickListener{ calc.handleStore(result.text.toString(), MEMORY_TWO); true }
 
-        btn_custom_3.setOnClickListener { calc.handleViewValue(MEMORY_THREE) }
-        btn_custom_3.setOnLongClickListener{calc.handleStore(result.text.toString(), MEMORY_THREE); true }
+        btn_memory_3.setOnClickListener { calc.handleViewValue(MEMORY_THREE) }
+        btn_memory_3.setOnLongClickListener{calc.handleStore(result.text.toString(), MEMORY_THREE); true }
 
         getButtonIds().forEach {
             it.setOnClickListener { calc.numpadClicked(it.id); checkHaptic(it) }
