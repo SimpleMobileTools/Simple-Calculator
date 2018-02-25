@@ -129,14 +129,14 @@ public class MainActivityTest {
         press(R.id.btn_5);
         press(R.id.btn_decimal);
         press(R.id.btn_7);
-        press(R.id.btn_clear);
-        press(R.id.btn_clear);
+        press(R.id.btn_all_clear);
+        press(R.id.btn_all_clear);
         checkFormula("25");
-        press(R.id.btn_clear);
+        press(R.id.btn_all_clear);
         checkFormula("2");
-        press(R.id.btn_clear);
+        press(R.id.btn_all_clear);
         checkFormula("");
-        press(R.id.btn_clear);
+        press(R.id.btn_all_clear);
         checkFormula("");
     }
 
@@ -149,7 +149,7 @@ public class MainActivityTest {
         press(R.id.btn_equals);
         checkResult("7");
         checkFormula("2+5");
-        longPress((R.id.btn_clear));
+        longPress((R.id.btn_all_clear));
         //checkResult("");
         checkFormula("");
     }
@@ -192,7 +192,7 @@ public class MainActivityTest {
         press(R.id.btn_equals);
         longPress(R.id.btn_memory_1);
 
-        longPress(R.id.btn_clear);
+        longPress(R.id.btn_all_clear);
         press(R.id.btn_memory_1);
         checkFormula("3.5");
 
