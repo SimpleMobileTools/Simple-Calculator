@@ -20,20 +20,25 @@ import com.simplemobiletools.commons.helpers.LICENSE_ROBOLECTRIC
 import kotlinx.android.synthetic.main.activity_main.*
 import me.grantland.widget.AutofitHelper
 import android.widget.Toast
+import com.simplemobiletools.calculator.helpers.CONSTANT.COSINE
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIGIT
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
 import com.simplemobiletools.calculator.helpers.CONSTANT.LEFT_BRACKET
+import com.simplemobiletools.calculator.helpers.CONSTANT.LOGARITHM
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_THREE
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_TWO
 import com.simplemobiletools.calculator.helpers.CONSTANT.MINUS
 import com.simplemobiletools.calculator.helpers.CONSTANT.MODULO
 import com.simplemobiletools.calculator.helpers.CONSTANT.MULTIPLY
+import com.simplemobiletools.calculator.helpers.CONSTANT.NATURAL_LOGARITHM
+import com.simplemobiletools.calculator.helpers.CONSTANT.PI
 import com.simplemobiletools.calculator.helpers.CONSTANT.PLUS
 import com.simplemobiletools.calculator.helpers.CONSTANT.POWER
 import com.simplemobiletools.calculator.helpers.CONSTANT.RIGHT_BRACKET
 import com.simplemobiletools.calculator.helpers.CONSTANT.ROOT
-
+import com.simplemobiletools.calculator.helpers.CONSTANT.SINE
+import com.simplemobiletools.calculator.helpers.CONSTANT.TANGENT
 
 class MainActivity : SimpleActivity(), Calculator {
     private var storedTextColor = 0
@@ -59,6 +64,12 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_root.setOnClickListener { calc.handleOperation(ROOT); checkHaptic(it) }
         btn_left_bracket.setOnClickListener { calc.handleOperation(LEFT_BRACKET); checkHaptic(it) }
         btn_right_bracket.setOnClickListener { calc.handleOperation(RIGHT_BRACKET); checkHaptic(it) }
+        btn_pi.setOnClickListener { calc.handleOperation(PI); checkHaptic(it) }
+        btn_sin.setOnClickListener { calc.handleOperation(SINE); checkHaptic(it) }
+        btn_cos.setOnClickListener { calc.handleOperation(COSINE); checkHaptic(it) }
+        btn_tan.setOnClickListener { calc.handleOperation(TANGENT); checkHaptic(it) }
+        btn_log.setOnClickListener { calc.handleOperation(LOGARITHM); checkHaptic(it) }
+        btn_ln.setOnClickListener { calc.handleOperation(NATURAL_LOGARITHM); checkHaptic(it) }
 
         btn_del.setOnClickListener {calc.handleClear(formula.text.toString()); checkHaptic(it) }
         btn_all_clear.setOnClickListener { calc.handleReset()}
@@ -183,6 +194,4 @@ class MainActivity : SimpleActivity(), Calculator {
             formula.text = formula.text.toString() + value
         }
     }
-
-
 }
