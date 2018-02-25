@@ -124,33 +124,32 @@ public class MainActivityTest {
     }
 
     @Test
-    public void clearTest() {
+    public void deleteTest() {
         press(R.id.btn_2);
         press(R.id.btn_5);
         press(R.id.btn_decimal);
         press(R.id.btn_7);
-        press(R.id.btn_all_clear);
-        press(R.id.btn_all_clear);
+        press(R.id.btn_del);
+        press(R.id.btn_del);
         checkFormula("25");
-        press(R.id.btn_all_clear);
+        press(R.id.btn_del);
         checkFormula("2");
-        press(R.id.btn_all_clear);
+        press(R.id.btn_del);
         checkFormula("");
-        press(R.id.btn_all_clear);
+        press(R.id.btn_del);
         checkFormula("");
     }
 
-    //TODO: Test fails if checkResult("") is uncommented, what does result contain when cleared?
     @Test
-    public void clearLongTest() {
+    public void allClearTest() {
         press(R.id.btn_2);
         press(R.id.btn_plus);
         press(R.id.btn_5);
         press(R.id.btn_equals);
         checkResult("7");
         checkFormula("2+5");
-        longPress((R.id.btn_all_clear));
-        //checkResult("");
+        press((R.id.btn_all_clear));
+        checkResult("");
         checkFormula("");
     }
 
@@ -192,7 +191,7 @@ public class MainActivityTest {
         press(R.id.btn_equals);
         longPress(R.id.btn_memory_1);
 
-        longPress(R.id.btn_all_clear);
+        press(R.id.btn_all_clear);
         press(R.id.btn_memory_1);
         checkFormula("3.5");
 

@@ -40,7 +40,7 @@ class MainActivity : SimpleActivity(), Calculator {
     private var vibrateOnButtonPress = true
     private var storedUseEnglish = false
 
-    lateinit var calc: CalculatorImpl
+    private lateinit var calc: CalculatorImpl
 
     @SuppressLint("MissingSuperCall")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,12 +57,11 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_modulo.setOnClickListener { calc.handleOperation(MODULO); checkHaptic(it) }
         btn_power.setOnClickListener { calc.handleOperation(POWER); checkHaptic(it) }
         btn_root.setOnClickListener { calc.handleOperation(ROOT); checkHaptic(it) }
-
         btn_left_bracket.setOnClickListener { calc.handleOperation(LEFT_BRACKET); checkHaptic(it) }
         btn_right_bracket.setOnClickListener { calc.handleOperation(RIGHT_BRACKET); checkHaptic(it) }
 
-        btn_all_clear.setOnClickListener {calc.handleClear(formula.text.toString()); checkHaptic(it) }
-        btn_all_clear.setOnLongClickListener { calc.handleReset(); true }
+        btn_del.setOnClickListener {calc.handleClear(formula.text.toString()); checkHaptic(it) }
+        btn_all_clear.setOnClickListener { calc.handleReset()}
 
         btn_memory_1.setOnClickListener { calc.handleViewValue(MEMORY_ONE)}
         btn_memory_1.setOnLongClickListener{ calc.handleStore(result.text.toString(), MEMORY_ONE); true }
@@ -86,8 +85,6 @@ class MainActivity : SimpleActivity(), Calculator {
             }
 
         }
-
-
 
         formula.setOnLongClickListener { copyToClipboard(false) }
         result.setOnLongClickListener { copyToClipboard(true) }
