@@ -19,6 +19,7 @@ import com.simplemobiletools.calculator.helpers.CONSTANT.PLUS
 import com.simplemobiletools.calculator.helpers.CONSTANT.POWER
 import com.simplemobiletools.calculator.helpers.CONSTANT.RIGHT_BRACKET
 import com.simplemobiletools.calculator.helpers.CONSTANT.ROOT
+import com.simplemobiletools.calculator.helpers.CONSTANT.SINE
 import java.io.File
 
 //TODO: Allow number to be placed immediately before opened bracket. 4(3+3) should work.
@@ -101,7 +102,6 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun handleOperation(operation : String) {
-
         setFormula(getSign(operation))
         mResetValue = true
         lastKey = operation
@@ -190,12 +190,6 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         setValue(value)
     }
 
-    private fun zeroClicked() {
-        val value = displayedNumber
-        if (value != "0")
-            addDigit(0)
-    }
-
     private fun getSign(lastOperation: String?) = when (lastOperation) {
         PLUS -> "+"
         MINUS -> "-"
@@ -206,6 +200,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         ROOT -> "^.5"
         LEFT_BRACKET -> "("
         RIGHT_BRACKET -> ")"
+        SINE -> "sin("
         else -> ""
     }
 
@@ -219,7 +214,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
         when (id) {
             R.id.btn_decimal -> decimalClicked()
-            R.id.btn_0 -> zeroClicked()
+            R.id.btn_0 -> addDigit(0)
             R.id.btn_1 -> addDigit(1)
             R.id.btn_2 -> addDigit(2)
             R.id.btn_3 -> addDigit(3)
