@@ -116,8 +116,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             if(listOfSpecialOperations.contains(operation) && (displayedFormula!![displayedFormula!!.length - 1].isDigit())) {
                 setFormula("*")
             }
-            setFormula(getSign(operation))
         }
+        setFormula(getSign(operation))
 
         mResetValue = true
         lastKey = operation

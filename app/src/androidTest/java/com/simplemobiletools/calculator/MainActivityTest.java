@@ -190,11 +190,9 @@ public class MainActivityTest {
         press(R.id.btn_2);
         press(R.id.btn_equals);
         longPress(R.id.btn_memory_1);
-
         press(R.id.btn_all_clear);
         press(R.id.btn_memory_1);
         checkFormula("3.5");
-
     }
 
     private void press(int id) {
