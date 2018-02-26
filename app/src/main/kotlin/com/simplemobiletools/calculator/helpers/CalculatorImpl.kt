@@ -2,6 +2,7 @@ package com.simplemobiletools.calculator.helpers
 import android.content.Context
 import android.widget.Toast
 import com.simplemobiletools.calculator.R
+import com.simplemobiletools.calculator.helpers.CONSTANT.COSINE
 import com.simplemobiletools.calculator.javaluator.*
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIGIT
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
@@ -9,20 +10,23 @@ import com.simplemobiletools.calculator.helpers.CONSTANT.EQUALS
 import com.simplemobiletools.calculator.helpers.CONSTANT.ERROR_READ_VALUE
 import com.simplemobiletools.calculator.helpers.CONSTANT.ERROR_SAVE_VALUE
 import com.simplemobiletools.calculator.helpers.CONSTANT.LEFT_BRACKET
+import com.simplemobiletools.calculator.helpers.CONSTANT.LOGARITHM
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_THREE
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_TWO
 import com.simplemobiletools.calculator.helpers.CONSTANT.MINUS
 import com.simplemobiletools.calculator.helpers.CONSTANT.MODULO
 import com.simplemobiletools.calculator.helpers.CONSTANT.MULTIPLY
+import com.simplemobiletools.calculator.helpers.CONSTANT.NATURAL_LOGARITHM
+import com.simplemobiletools.calculator.helpers.CONSTANT.PI
 import com.simplemobiletools.calculator.helpers.CONSTANT.PLUS
 import com.simplemobiletools.calculator.helpers.CONSTANT.POWER
 import com.simplemobiletools.calculator.helpers.CONSTANT.RIGHT_BRACKET
 import com.simplemobiletools.calculator.helpers.CONSTANT.ROOT
 import com.simplemobiletools.calculator.helpers.CONSTANT.SINE
+import com.simplemobiletools.calculator.helpers.CONSTANT.TANGENT
 import java.io.File
 
-//TODO: Allow number to be placed immediately before opened bracket. 4(3+3) should work.
 class CalculatorImpl(calculator: Calculator, private val context: Context) {
     var displayedNumber: String? = null
     var displayedFormula: String? = null
@@ -36,6 +40,11 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private var mSavedValue1: File
     private var mSavedValue2: File
     private var mSavedValue3: File
+
+    //If any digit precedes these operations, automatically add a * in between them. 4pi = 4*pi.
+    //See implementation in fun handleOperation(operation: String)
+    private val listOfSpecialOperations = listOf(LEFT_BRACKET, PI, SINE, COSINE,  TANGENT,
+                                                    LOGARITHM, NATURAL_LOGARITHM)
 
     init {
         resetValues()
@@ -90,7 +99,6 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     private fun calculateResult(str: String) {
-
         val evaluator = DoubleEvaluator()
         try {
             val result = evaluator.evaluate(str)
@@ -102,7 +110,15 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun handleOperation(operation : String) {
-        setFormula(getSign(operation))
+        //if the last character of our formula is a digit and an operation is called from the list,
+        //then add a multiplication before the operation
+        if(displayedFormula!!.isNotEmpty()){
+            if(listOfSpecialOperations.contains(operation) && (displayedFormula!![displayedFormula!!.length - 1].isDigit())) {
+                setFormula("*")
+            }
+            setFormula(getSign(operation))
+        }
+
         mResetValue = true
         lastKey = operation
         mLastOperation = operation
@@ -190,6 +206,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         setValue(value)
     }
 
+    //TODO: implement PLUS_MINUS
     private fun getSign(lastOperation: String?) = when (lastOperation) {
         PLUS -> "+"
         MINUS -> "-"
@@ -200,7 +217,12 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         ROOT -> "^.5"
         LEFT_BRACKET -> "("
         RIGHT_BRACKET -> ")"
+        PI -> "pi"
         SINE -> "sin("
+        COSINE -> "cos("
+        TANGENT -> "tan("
+        LOGARITHM -> "log("
+        NATURAL_LOGARITHM -> "ln("
         else -> ""
     }
 
@@ -226,4 +248,10 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             R.id.btn_9 -> addDigit(9)
         }
     }
+
+    //TODO: Implement reciprocal on final answer
+    /*
+    fun resultModifier(){
+    }
+    */
 }
