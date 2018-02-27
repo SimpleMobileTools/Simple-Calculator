@@ -23,6 +23,7 @@ class SettingsActivity : SimpleActivity() {
         setupUseEnglish()
         setupAvoidWhatsNew()
         setupVibrate()
+        setupPreventPhoneFromSleeping()
         updateTextColors(settings_scrollview)
     }
 
@@ -55,6 +56,14 @@ class SettingsActivity : SimpleActivity() {
         settings_vibrate_holder.setOnClickListener {
             settings_vibrate.toggle()
             config.vibrateOnButtonPress = settings_vibrate.isChecked
+        }
+    }
+
+    private fun setupPreventPhoneFromSleeping() {
+        settings_prevent_phone_from_sleeping.isChecked = config.preventPhoneFromSleeping
+        settings_prevent_phone_from_sleeping_holder.setOnClickListener {
+            settings_prevent_phone_from_sleeping.toggle()
+            config.preventPhoneFromSleeping = settings_prevent_phone_from_sleeping.isChecked
         }
     }
 }

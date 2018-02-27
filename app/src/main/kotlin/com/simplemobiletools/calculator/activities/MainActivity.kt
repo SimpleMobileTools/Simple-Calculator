@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.view.WindowManager
 import com.simplemobiletools.calculator.BuildConfig
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.config
@@ -69,12 +70,20 @@ class MainActivity : SimpleActivity(), Calculator {
         if (storedTextColor != config.textColor) {
             updateViewColors(calculator_holder, config.textColor)
         }
+
+        if (config.preventPhoneFromSleeping) {
+            window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
+
         vibrateOnButtonPress = config.vibrateOnButtonPress
     }
 
     override fun onPause() {
         super.onPause()
         storeStateVariables()
+        if (config.preventPhoneFromSleeping) {
+            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
