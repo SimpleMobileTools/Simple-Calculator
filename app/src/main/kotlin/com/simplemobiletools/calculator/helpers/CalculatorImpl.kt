@@ -174,9 +174,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
     }
 
-    //FIX
     fun handleClear(formula : String) {
-
         val newValue: String
         if(formula.isNotEmpty())
         {
@@ -205,6 +203,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         if (!value!!.contains(".")) {
             value += "."
             setFormula(".")
+            listOfInputLengths.add(1)
         }
         setValue(value)
     }
