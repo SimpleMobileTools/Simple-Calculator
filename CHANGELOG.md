@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 3.1.2 *(2018-02-27)*
+----------------------------
+
+ * Added a toggle for preventing the device from sleeping
+ * Added FAQ
+
 Version 3.1.1 *(2018-01-23)*
 ----------------------------
 
