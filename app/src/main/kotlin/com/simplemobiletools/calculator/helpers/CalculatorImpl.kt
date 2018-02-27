@@ -46,6 +46,12 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private val listOfSpecialOperations = listOf(LEFT_BRACKET, PI, SINE, COSINE,  TANGENT,
                                                     LOGARITHM, NATURAL_LOGARITHM)
 
+    //Every time a digit or operation is entered, we keep track of the length. In this way, when we
+    //delete digits or operations, our program will automatically delete the appropriate amount of
+    //characters in the formula string. Example: sin(90) would delete in the following order: ) ->
+    //0 -> 9 -> sin( ... This prevents user's from deleting an operation one letter at a time.
+    private val listOfInputLengths = mutableListOf<Int>()
+
     init {
         resetValues()
         setValue("")
@@ -91,6 +97,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
     private fun addDigit(number: Int) {
         setFormula(number.toString())
+        listOfInputLengths.add(1)
     }
 
     private fun updateResult(value: Double) {
@@ -115,9 +122,11 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         if(displayedFormula!!.isNotEmpty()){
             if(listOfSpecialOperations.contains(operation) && (displayedFormula!![displayedFormula!!.length - 1].isDigit())) {
                 setFormula("*")
+                listOfInputLengths.add(1)
             }
         }
         setFormula(getSign(operation))
+        listOfInputLengths.add(getSign(operation).length)
 
         mResetValue = true
         lastKey = operation
@@ -172,14 +181,15 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
     }
 
+    //FIX
     fun handleClear(formula : String) {
 
-        val len = formula.length
         val newValue: String
         if(formula.isNotEmpty())
         {
-            formula.takeLast(1)
-            newValue = formula.substring(0, len - 1)
+            val removeThisManyCharacters = listOfInputLengths[listOfInputLengths.size - 1]
+            newValue = formula.substring(0, (formula.length - removeThisManyCharacters))
+            listOfInputLengths.removeAt(listOfInputLengths.size - 1)
             setFormula("")
             setFormula(newValue)
             setValue("")
