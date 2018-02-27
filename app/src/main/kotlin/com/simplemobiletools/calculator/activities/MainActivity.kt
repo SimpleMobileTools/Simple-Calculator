@@ -18,6 +18,7 @@ import com.simplemobiletools.commons.helpers.LICENSE_ESPRESSO
 import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
 import com.simplemobiletools.commons.helpers.LICENSE_ROBOLECTRIC
 import com.simplemobiletools.commons.models.FAQItem
+import com.simplemobiletools.commons.models.Release
 import kotlinx.android.synthetic.main.activity_main.*
 import me.grantland.widget.AutofitHelper
 
@@ -58,6 +59,7 @@ class MainActivity : SimpleActivity(), Calculator {
         AutofitHelper.create(formula)
         storeStateVariables()
         updateViewColors(calculator_holder, config.textColor)
+        checkWhatsNewDialog()
     }
 
     override fun onResume() {
@@ -145,6 +147,13 @@ class MainActivity : SimpleActivity(), Calculator {
 
     override fun setValue(value: String, context: Context) {
         result.text = value
+    }
+
+    private fun checkWhatsNewDialog() {
+        arrayListOf<Release>().apply {
+            add(Release(18, R.string.release_18))
+            checkWhatsNew(this, BuildConfig.VERSION_CODE)
+        }
     }
 
     // used only by Robolectric
