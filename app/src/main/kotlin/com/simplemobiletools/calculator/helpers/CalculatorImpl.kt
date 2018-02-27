@@ -65,13 +65,6 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
     }
 
-    private fun resetValueIfNeeded() {
-        if (mResetValue)
-            displayedNumber = "0"
-
-        mResetValue = false
-    }
-
     private fun resetValues() {
         mBaseValue = 0.0
         mSecondValue = 0.0
@@ -242,7 +235,6 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
 
         lastKey = DIGIT
-        resetValueIfNeeded()
 
         when (id) {
             R.id.btn_decimal -> decimalClicked()
