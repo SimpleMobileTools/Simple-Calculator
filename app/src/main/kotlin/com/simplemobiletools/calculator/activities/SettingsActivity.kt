@@ -21,6 +21,7 @@ class SettingsActivity : SimpleActivity() {
 
         setupCustomizeColors()
         setupUseEnglish()
+        setupAvoidWhatsNew()
         setupVibrate()
         updateTextColors(settings_scrollview)
     }
@@ -38,6 +39,14 @@ class SettingsActivity : SimpleActivity() {
             settings_use_english.toggle()
             config.useEnglish = settings_use_english.isChecked
             useEnglishToggled()
+        }
+    }
+
+    private fun setupAvoidWhatsNew() {
+        settings_avoid_whats_new.isChecked = config.avoidWhatsNew
+        settings_avoid_whats_new_holder.setOnClickListener {
+            settings_avoid_whats_new.toggle()
+            config.avoidWhatsNew = settings_avoid_whats_new.isChecked
         }
     }
 
