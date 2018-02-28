@@ -28,13 +28,15 @@ import com.simplemobiletools.calculator.helpers.CONSTANT.TANGENT
 import java.io.File
 
 class CalculatorImpl(calculator: Calculator, private val context: Context) {
-    var displayedNumber: String? = null
-    var displayedFormula: String? = null
-    var lastKey: String? = null
+    var displayedFormula: String
+    var displayedNumber: String
+    var lastKey: String
+    private var canUseDecimal: Boolean
     private var mCallback: Calculator? = calculator
     private var mSavedValue1: File
     private var mSavedValue2: File
     private var mSavedValue3: File
+
 
     //If any digit precedes these operations, automatically add a * in between them. 4pi = 4*pi.
     //See implementation in fun handleOperation(operation: String)
@@ -48,16 +50,16 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private val listOfInputLengths = mutableListOf<Int>()
 
     init {
-        resetValues()
-        setValue("")
-        setFormula("")
+        displayedFormula = ""
+        displayedNumber = ""
+        lastKey = ""
+        canUseDecimal = true
         mSavedValue1 = createTempFile("one",".tmp")
         mSavedValue2 = createTempFile("two",".tmp")
         mSavedValue3 = createTempFile("three",".tmp")
         mSavedValue1.deleteOnExit()
         mSavedValue2.deleteOnExit()
         mSavedValue3.deleteOnExit()
-
     }
 
     private fun resetValues() {
@@ -79,7 +81,6 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
     private fun addDigit(number: Int) {
         setFormula(number.toString())
-        listOfInputLengths.add(1)
     }
 
     private fun updateResult(value: Double) {
@@ -99,15 +100,14 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     fun handleOperation(operation : String) {
         //if the last character of our formula is a digit and an operation is called from the list,
         //then add a multiplication before the operation
-        if(displayedFormula!!.isNotEmpty()){
-            if(listOfSpecialOperations.contains(operation) && (displayedFormula!![displayedFormula!!.length - 1].isDigit())) {
+        if(displayedFormula.isNotEmpty()){
+            if(listOfSpecialOperations.contains(operation) && (displayedFormula[displayedFormula.length - 1].isDigit())) {
                 setFormula("*")
                 listOfInputLengths.add(1)
             }
         }
         setFormula(getSign(operation))
-        listOfInputLengths.add(getSign(operation).length)
-
+        canUseDecimal = true
         lastKey = operation
     }
 
@@ -184,13 +184,9 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     private fun decimalClicked() {
-        var value = displayedNumber
-        if (!value!!.contains(".")) {
-            value += "."
+        if(canUseDecimal)
             setFormula(".")
-            listOfInputLengths.add(1)
-        }
-        setValue(value)
+            canUseDecimal = false
     }
 
     //TODO: implement PLUS_MINUS
@@ -214,6 +210,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun numpadClicked(id: Int) {
+        listOfInputLengths.add(1)
         lastKey = DIGIT
         when (id) {
             R.id.btn_decimal -> decimalClicked()
