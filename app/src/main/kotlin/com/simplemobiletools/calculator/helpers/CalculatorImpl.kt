@@ -31,12 +31,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     var displayedNumber: String? = null
     var displayedFormula: String? = null
     var lastKey: String? = null
-    private var mLastOperation: String? = null
     private var mCallback: Calculator? = calculator
-    private var mIsFirstOperation = false
-    private var mResetValue = false
-    private var mBaseValue = 0.0
-    private var mSecondValue = 0.0
     private var mSavedValue1: File
     private var mSavedValue2: File
     private var mSavedValue3: File
@@ -66,15 +61,9 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     private fun resetValues() {
-        mBaseValue = 0.0
-        mSecondValue = 0.0
-        mResetValue = false
-        mLastOperation = ""
         displayedNumber = ""
         displayedFormula = ""
-        mIsFirstOperation = true
         lastKey = ""
-
     }
 
     fun setValue(value: String) {
@@ -95,7 +84,6 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
     private fun updateResult(value: Double) {
         setValue(Formatter.doubleToString(value))
-        mBaseValue = value
     }
 
     private fun calculateResult(str: String) {
@@ -106,7 +94,6 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         } catch (e: IllegalArgumentException) {
             throw e
         }
-        mIsFirstOperation = false
     }
 
     fun handleOperation(operation : String) {
@@ -121,9 +108,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         setFormula(getSign(operation))
         listOfInputLengths.add(getSign(operation).length)
 
-        mResetValue = true
         lastKey = operation
-        mLastOperation = operation
     }
 
     fun handleStore(value : String, id: String) {
@@ -229,12 +214,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun numpadClicked(id: Int) {
-        if (lastKey == EQUALS) {
-            mLastOperation = EQUALS
-        }
-
         lastKey = DIGIT
-
         when (id) {
             R.id.btn_decimal -> decimalClicked()
             R.id.btn_0 -> addDigit(0)

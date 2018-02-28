@@ -92,12 +92,30 @@ class MainActivityTest {
         assertEquals(4.0, result)
     }
 
-    //TODO: Evaluator should take number followed by open bracket to mean multiplication
-    //@Test
-    fun multiplyWithBracketsTest() {
-        val result = evaluator.evaluate("2(3-1)")
-        assertEquals(4.0, result)
-    }//currently does not work, needs to be addressed
+
+    @Test
+    fun piTest(){
+        val result = evaluator.evaluate("pi")
+        assertEquals(3.1415, result, 0.001)
+    }
+
+    @Test
+    fun trigonometryTest(){
+        val result = evaluator.evaluate("sin(0)+cos(pi)+tan(pi)")
+        assertEquals(-1.0, result, 0.001)
+    }
+
+    @Test
+    fun logTest(){
+        val result = evaluator.evaluate("log(100)")
+        assertEquals(2.0, result)
+    }
+
+    @Test
+    fun lnTest(){
+        val result =  evaluator.evaluate("ln(2.7182)")
+        assertEquals(1.0, result, 0.001)
+    }
 
     //TODO: Fix loading, test has to read from file. Added local data.json file to use for testing
     //@Test
