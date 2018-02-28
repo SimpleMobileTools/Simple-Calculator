@@ -1,0 +1,1850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="md_ambers">
+        <item>@color/md_amber_100</item>
+        <item>@color/md_amber_200</item>
+        <item>@color/md_amber_300</item>
+        <item>@color/md_amber_400</item>
+        <item>@color/md_amber_500</item>
+        <item>@color/md_amber_600</item>
+        <item>@color/md_amber_700</item>
+        <item>@color/md_amber_800</item>
+        <item>@color/md_amber_900</item>
+    </array>
+    <array name="md_blue_greys">
+        <item>@color/md_blue_grey_100</item>
+        <item>@color/md_blue_grey_200</item>
+        <item>@color/md_blue_grey_300</item>
+        <item>@color/md_blue_grey_400</item>
+        <item>@color/md_blue_grey_500</item>
+        <item>@color/md_blue_grey_600</item>
+        <item>@color/md_blue_grey_700</item>
+        <item>@color/md_blue_grey_800</item>
+        <item>@color/md_blue_grey_900</item>
+    </array>
+    <array name="md_blues">
+        <item>@color/md_blue_100</item>
+        <item>@color/md_blue_200</item>
+        <item>@color/md_blue_300</item>
+        <item>@color/md_blue_400</item>
+        <item>@color/md_blue_500</item>
+        <item>@color/md_blue_600</item>
+        <item>@color/md_blue_700</item>
+        <item>@color/md_blue_800</item>
+        <item>@color/md_blue_900</item>
+    </array>
+    <array name="md_browns">
+        <item>@color/md_brown_100</item>
+        <item>@color/md_brown_200</item>
+        <item>@color/md_brown_300</item>
+        <item>@color/md_brown_400</item>
+        <item>@color/md_brown_500</item>
+        <item>@color/md_brown_600</item>
+        <item>@color/md_brown_700</item>
+        <item>@color/md_brown_800</item>
+        <item>@color/md_brown_900</item>
+    </array>
+    <array name="md_cyans">
+        <item>@color/md_cyan_100</item>
+        <item>@color/md_cyan_200</item>
+        <item>@color/md_cyan_300</item>
+        <item>@color/md_cyan_400</item>
+        <item>@color/md_cyan_500</item>
+        <item>@color/md_cyan_600</item>
+        <item>@color/md_cyan_700</item>
+        <item>@color/md_cyan_800</item>
+        <item>@color/md_cyan_900</item>
+    </array>
+    <array name="md_deep_oranges">
+        <item>@color/md_deep_orange_100</item>
+        <item>@color/md_deep_orange_200</item>
+        <item>@color/md_deep_orange_300</item>
+        <item>@color/md_deep_orange_400</item>
+        <item>@color/md_deep_orange_500</item>
+        <item>@color/md_deep_orange_600</item>
+        <item>@color/md_deep_orange_700</item>
+        <item>@color/md_deep_orange_800</item>
+        <item>@color/md_deep_orange_900</item>
+    </array>
+    <array name="md_deep_purples">
+        <item>@color/md_deep_purple_100</item>
+        <item>@color/md_deep_purple_200</item>
+        <item>@color/md_deep_purple_300</item>
+        <item>@color/md_deep_purple_400</item>
+        <item>@color/md_deep_purple_500</item>
+        <item>@color/md_deep_purple_600</item>
+        <item>@color/md_deep_purple_700</item>
+        <item>@color/md_deep_purple_800</item>
+        <item>@color/md_deep_purple_900</item>
+    </array>
+    <array name="md_greens">
+        <item>@color/md_green_100</item>
+        <item>@color/md_green_200</item>
+        <item>@color/md_green_300</item>
+        <item>@color/md_green_400</item>
+        <item>@color/md_green_500</item>
+        <item>@color/md_green_600</item>
+        <item>@color/md_green_700</item>
+        <item>@color/md_green_800</item>
+        <item>@color/md_green_900</item>
+    </array>
+    <array name="md_greys">
+        <item>@color/md_grey_white</item>
+        <item>@color/md_grey_200</item>
+        <item>@color/md_grey_300</item>
+        <item>@color/md_grey_400</item>
+        <item>@color/md_grey_500</item>
+        <item>@color/md_grey_600</item>
+        <item>@color/md_grey_700</item>
+        <item>@color/md_grey_800</item>
+        <item>@color/md_grey_black</item>
+    </array>
+    <array name="md_indigos">
+        <item>@color/md_indigo_100</item>
+        <item>@color/md_indigo_200</item>
+        <item>@color/md_indigo_300</item>
+        <item>@color/md_indigo_400</item>
+        <item>@color/md_indigo_500</item>
+        <item>@color/md_indigo_600</item>
+        <item>@color/md_indigo_700</item>
+        <item>@color/md_indigo_800</item>
+        <item>@color/md_indigo_900</item>
+    </array>
+    <array name="md_light_blues">
+        <item>@color/md_light_blue_100</item>
+        <item>@color/md_light_blue_200</item>
+        <item>@color/md_light_blue_300</item>
+        <item>@color/md_light_blue_400</item>
+        <item>@color/md_light_blue_500</item>
+        <item>@color/md_light_blue_600</item>
+        <item>@color/md_light_blue_700</item>
+        <item>@color/md_light_blue_800</item>
+        <item>@color/md_light_blue_900</item>
+    </array>
+    <array name="md_light_greens">
+        <item>@color/md_light_green_100</item>
+        <item>@color/md_light_green_200</item>
+        <item>@color/md_light_green_300</item>
+        <item>@color/md_light_green_400</item>
+        <item>@color/md_light_green_500</item>
+        <item>@color/md_light_green_600</item>
+        <item>@color/md_light_green_700</item>
+        <item>@color/md_light_green_800</item>
+        <item>@color/md_light_green_900</item>
+    </array>
+    <array name="md_limes">
+        <item>@color/md_lime_100</item>
+        <item>@color/md_lime_200</item>
+        <item>@color/md_lime_300</item>
+        <item>@color/md_lime_400</item>
+        <item>@color/md_lime_500</item>
+        <item>@color/md_lime_600</item>
+        <item>@color/md_lime_700</item>
+        <item>@color/md_lime_800</item>
+        <item>@color/md_lime_900</item>
+    </array>
+    <array name="md_oranges">
+        <item>@color/md_orange_100</item>
+        <item>@color/md_orange_200</item>
+        <item>@color/md_orange_300</item>
+        <item>@color/md_orange_400</item>
+        <item>@color/md_orange_500</item>
+        <item>@color/md_orange_600</item>
+        <item>@color/md_orange_700</item>
+        <item>@color/md_orange_800</item>
+        <item>@color/md_orange_900</item>
+    </array>
+    <array name="md_pinks">
+        <item>@color/md_pink_100</item>
+        <item>@color/md_pink_200</item>
+        <item>@color/md_pink_300</item>
+        <item>@color/md_pink_400</item>
+        <item>@color/md_pink_500</item>
+        <item>@color/md_pink_600</item>
+        <item>@color/md_pink_700</item>
+        <item>@color/md_pink_800</item>
+        <item>@color/md_pink_900</item>
+    </array>
+    <array name="md_primary_colors">
+        <item>@color/md_red</item>
+        <item>@color/md_pink</item>
+        <item>@color/md_purple</item>
+        <item>@color/md_deep_purple</item>
+        <item>@color/md_indigo</item>
+        <item>@color/md_blue</item>
+        <item>@color/md_light_blue</item>
+        <item>@color/md_cyan</item>
+        <item>@color/md_teal</item>
+        <item>@color/md_green</item>
+        <item>@color/md_light_green</item>
+        <item>@color/md_lime</item>
+        <item>@color/md_yellow</item>
+        <item>@color/md_amber</item>
+        <item>@color/md_orange</item>
+        <item>@color/md_deep_orange</item>
+        <item>@color/md_brown</item>
+        <item>@color/md_grey</item>
+        <item>@color/md_blue_grey</item>
+    </array>
+    <array name="md_purples">
+        <item>@color/md_purple_100</item>
+        <item>@color/md_purple_200</item>
+        <item>@color/md_purple_300</item>
+        <item>@color/md_purple_400</item>
+        <item>@color/md_purple_500</item>
+        <item>@color/md_purple_600</item>
+        <item>@color/md_purple_700</item>
+        <item>@color/md_purple_800</item>
+        <item>@color/md_purple_900</item>
+    </array>
+    <array name="md_reds">
+        <item>@color/md_red_100</item>
+        <item>@color/md_red_200</item>
+        <item>@color/md_red_300</item>
+        <item>@color/md_red_400</item>
+        <item>@color/md_red_500</item>
+        <item>@color/md_red_600</item>
+        <item>@color/md_red_700</item>
+        <item>@color/md_red_800</item>
+        <item>@color/md_red_900</item>
+    </array>
+    <array name="md_teals">
+        <item>@color/md_teal_100</item>
+        <item>@color/md_teal_200</item>
+        <item>@color/md_teal_300</item>
+        <item>@color/md_teal_400</item>
+        <item>@color/md_teal_500</item>
+        <item>@color/md_teal_600</item>
+        <item>@color/md_teal_700</item>
+        <item>@color/md_teal_800</item>
+        <item>@color/md_teal_900</item>
+    </array>
+    <array name="md_yellows">
+        <item>@color/md_yellow_100</item>
+        <item>@color/md_yellow_200</item>
+        <item>@color/md_yellow_300</item>
+        <item>@color/md_yellow_400</item>
+        <item>@color/md_yellow_500</item>
+        <item>@color/md_yellow_600</item>
+        <item>@color/md_yellow_700</item>
+        <item>@color/md_yellow_800</item>
+        <item>@color/md_yellow_900</item>
+    </array>
+    <color name="activated_item_foreground">@color/md_green</color>
+    <color name="color_accent">#FFFFFF</color>
+    <color name="color_primary">#FF1A475C</color>
+    <color name="color_primary_dark">#FF1A475C</color>
+    <color name="default_background_color">#FF1A475C</color>
+    <color name="default_text_color">@color/md_green</color>
+    <color name="divider_strong">#88cccccc</color>
+    <color name="divider_weak">#44cccccc</color>
+    <color name="gradient_grey_start">#AA000000</color>
+    <color name="md_amber">#FFC107</color>
+    <color name="md_amber_100">#FFECB3</color>
+    <color name="md_amber_100_dark">#FFE28A</color>
+    <color name="md_amber_200">#FFE082</color>
+    <color name="md_amber_200_dark">#FFD659</color>
+    <color name="md_amber_300">#FFD54F</color>
+    <color name="md_amber_300_dark">#FFCC26</color>
+    <color name="md_amber_400">#FFCA28</color>
+    <color name="md_amber_400_dark">#FFC100</color>
+    <color name="md_amber_500">#FFC107</color>
+    <color name="md_amber_500_dark">#DEA700</color>
+    <color name="md_amber_600">#FFB300</color>
+    <color name="md_amber_600_dark">#D79700</color>
+    <color name="md_amber_700">#FFA000</color>
+    <color name="md_amber_700_dark">#D78700</color>
+    <color name="md_amber_800">#FF8F00</color>
+    <color name="md_amber_800_dark">#D77800</color>
+    <color name="md_amber_900">#FF6F00</color>
+    <color name="md_amber_900_dark">#D75D00</color>
+    <color name="md_blue">#2196F3</color>
+    <color name="md_blue_100">#BBDEFB</color>
+    <color name="md_blue_100_dark">#94CCF9</color>
+    <color name="md_blue_200">#90CAF9</color>
+    <color name="md_blue_200_dark">#69B8F7</color>
+    <color name="md_blue_300">#64B5F6</color>
+    <color name="md_blue_300_dark">#3DA2F4</color>
+    <color name="md_blue_400">#42A5F5</color>
+    <color name="md_blue_400_dark">#1A92F3</color>
+    <color name="md_blue_500">#2196F3</color>
+    <color name="md_blue_500_dark">#0B82E0</color>
+    <color name="md_blue_600">#1E88E5</color>
+    <color name="md_blue_600_dark">#1673C4</color>
+    <color name="md_blue_700">#1976D2</color>
+    <color name="md_blue_700_dark">#1462AE</color>
+    <color name="md_blue_800">#1565C0</color>
+    <color name="md_blue_800_dark">#11529B</color>
+    <color name="md_blue_900">#0D47A1</color>
+    <color name="md_blue_900_dark">#09367B</color>
+    <color name="md_blue_grey">#607D8B</color>
+    <color name="md_blue_grey_100">#CFD8DC</color>
+    <color name="md_blue_grey_100_dark">#B8C5CB</color>
+    <color name="md_blue_grey_200">#B0BBC5</color>
+    <color name="md_blue_grey_200_dark">#99A7B4</color>
+    <color name="md_blue_grey_300">#90A4AE</color>
+    <color name="md_blue_grey_300_dark">#78919D</color>
+    <color name="md_blue_grey_400">#78909C</color>
+    <color name="md_blue_grey_400_dark">#647C88</color>
+    <color name="md_blue_grey_500">#607D8B</color>
+    <color name="md_blue_grey_500_dark">#4F6873</color>
+    <color name="md_blue_grey_600">#546E7A</color>
+    <color name="md_blue_grey_600_dark">#445962</color>
+    <color name="md_blue_grey_700">#455A64</color>
+    <color name="md_blue_grey_700_dark">#34454C</color>
+    <color name="md_blue_grey_800">#37474F</color>
+    <color name="md_blue_grey_800_dark">#263237</color>
+    <color name="md_blue_grey_900">#263238</color>
+    <color name="md_blue_grey_900_dark">#151C1F</color>
+    <color name="md_brown">#795548</color>
+    <color name="md_brown_100">#D7CCC8</color>
+    <color name="md_brown_100_dark">#C6B7B1</color>
+    <color name="md_brown_200">#BCAAA4</color>
+    <color name="md_brown_200_dark">#AB958D</color>
+    <color name="md_brown_300">#A1887F</color>
+    <color name="md_brown_300_dark">#8F7369</color>
+    <color name="md_brown_400">#8D6E63</color>
+    <color name="md_brown_400_dark">#755B52</color>
+    <color name="md_brown_500">#795548</color>
+    <color name="md_brown_500_dark">#5F4339</color>
+    <color name="md_brown_600">#6D4C41</color>
+    <color name="md_brown_600_dark">#533A31</color>
+    <color name="md_brown_700">#5D4037</color>
+    <color name="md_brown_700_dark">#432E28</color>
+    <color name="md_brown_800">#4E342E</color>
+    <color name="md_brown_800_dark">#34231F</color>
+    <color name="md_brown_900">#3E2723</color>
+    <color name="md_brown_900_dark">#241714</color>
+    <color name="md_cyan">#00BCD4</color>
+    <color name="md_cyan_100">#B2EBF2</color>
+    <color name="md_cyan_100_dark">#90E3ED</color>
+    <color name="md_cyan_200">#80DEEA</color>
+    <color name="md_cyan_200_dark">#5DD5E5</color>
+    <color name="md_cyan_300">#4DD0E1</color>
+    <color name="md_cyan_300_dark">#2AC7DB</color>
+    <color name="md_cyan_400">#26C6DA</color>
+    <color name="md_cyan_400_dark">#1FA7B8</color>
+    <color name="md_cyan_500">#00BCD4</color>
+    <color name="md_cyan_500_dark">#0098AB</color>
+    <color name="md_cyan_600">#00ACC1</color>
+    <color name="md_cyan_600_dark">#008898</color>
+    <color name="md_cyan_700">#0097A7</color>
+    <color name="md_cyan_700_dark">#00727E</color>
+    <color name="md_cyan_800">#00838F</color>
+    <color name="md_cyan_800_dark">#005E66</color>
+    <color name="md_cyan_900">#006064</color>
+    <color name="md_cyan_900_dark">#00393B</color>
+    <color name="md_deep_orange">#FF5722</color>
+    <color name="md_deep_orange_100">#FFCCBC</color>
+    <color name="md_deep_orange_100_dark">#FFAD93</color>
+    <color name="md_deep_orange_200">#FFAB91</color>
+    <color name="md_deep_orange_200_dark">#FF8C68</color>
+    <color name="md_deep_orange_300">#FF8A65</color>
+    <color name="md_deep_orange_300_dark">#FF6B3C</color>
+    <color name="md_deep_orange_400">#FF7043</color>
+    <color name="md_deep_orange_400_dark">#FF511A</color>
+    <color name="md_deep_orange_500">#FF5722</color>
+    <color name="md_deep_orange_500_dark">#F93C00</color>
+    <color name="md_deep_orange_600">#F4511E</color>
+    <color name="md_deep_orange_600_dark">#DF3D0A</color>
+    <color name="md_deep_orange_700">#E64A19</color>
+    <color name="md_deep_orange_700_dark">#C13E14</color>
+    <color name="md_deep_orange_800">#D84315</color>
+    <color name="md_deep_orange_800_dark">#B33710</color>
+    <color name="md_deep_orange_900">#BF360C</color>
+    <color name="md_deep_orange_900_dark">#992B09</color>
+    <color name="md_deep_purple">#673AB7</color>
+    <color name="md_deep_purple_100">#D1C4E9</color>
+    <color name="md_deep_purple_100_dark">#BAA6DE</color>
+    <color name="md_deep_purple_200">#B39DDB</color>
+    <color name="md_deep_purple_200_dark">#9C7FD0</color>
+    <color name="md_deep_purple_300">#9575CD</color>
+    <color name="md_deep_purple_300_dark">#7E56C2</color>
+    <color name="md_deep_purple_400">#7E57C2</color>
+    <color name="md_deep_purple_400_dark">#693FB0</color>
+    <color name="md_deep_purple_500">#673AB7</color>
+    <color name="md_deep_purple_500_dark">#563098</color>
+    <color name="md_deep_purple_600">#5E35B1</color>
+    <color name="md_deep_purple_600_dark">#4E2B92</color>
+    <color name="md_deep_purple_700">#512DA8</color>
+    <color name="md_deep_purple_700_dark">#412488</color>
+    <color name="md_deep_purple_800">#4527A0</color>
+    <color name="md_deep_purple_800_dark">#371F7F</color>
+    <color name="md_deep_purple_900">#311B92</color>
+    <color name="md_deep_purple_900_dark">#251470</color>
+    <color name="md_green">#4CAF50</color>
+    <color name="md_green_100">#C8E6C9</color>
+    <color name="md_green_100_dark">#ACDAAE</color>
+    <color name="md_green_200">#A5D6A7</color>
+    <color name="md_green_200_dark">#89CA8D</color>
+    <color name="md_green_300">#81C784</color>
+    <color name="md_green_300_dark">#65BB69</color>
+    <color name="md_green_400">#66BB6A</color>
+    <color name="md_green_400_dark">#4CAC51</color>
+    <color name="md_green_500">#4CAF50</color>
+    <color name="md_green_500_dark">#409343</color>
+    <color name="md_green_600">#43A047</color>
+    <color name="md_green_600_dark">#37833A</color>
+    <color name="md_green_700">#388E3C</color>
+    <color name="md_green_700_dark">#2C7130</color>
+    <color name="md_green_800">#2E7D32</color>
+    <color name="md_green_800_dark">#235F26</color>
+    <color name="md_green_900">#1B5E20</color>
+    <color name="md_green_900_dark">#113E15</color>
+    <color name="md_grey">#9E9E9E</color>
+    <color name="md_grey_200">#EEEEEE</color>
+    <color name="md_grey_200_dark">#DADADA</color>
+    <color name="md_grey_300">#E0E0E0</color>
+    <color name="md_grey_300_dark">#CCCCCC</color>
+    <color name="md_grey_400">#BDBDBD</color>
+    <color name="md_grey_400_dark">#A9A9A9</color>
+    <color name="md_grey_500">#9E9E9E</color>
+    <color name="md_grey_500_dark">#8A8A8A</color>
+    <color name="md_grey_600">#757575</color>
+    <color name="md_grey_600_dark">#606060</color>
+    <color name="md_grey_700">#616161</color>
+    <color name="md_grey_700_dark">#4C4C4C</color>
+    <color name="md_grey_800">#424242</color>
+    <color name="md_grey_800_dark">#2D2D2D</color>
+    <color name="md_grey_black">#000000</color>
+    <color name="md_grey_black_dark">#000000</color>
+    <color name="md_grey_white">#FFFFFF</color>
+    <color name="md_grey_white_dark">#DFDFDF</color>
+    <color name="md_indigo">#3F51B5</color>
+    <color name="md_indigo_100">#C5CAE9</color>
+    <color name="md_indigo_100_dark">#A8AFDE</color>
+    <color name="md_indigo_200">#9FA8DA</color>
+    <color name="md_indigo_200_dark">#828ECF</color>
+    <color name="md_indigo_300">#7986CB</color>
+    <color name="md_indigo_300_dark">#5B6CC0</color>
+    <color name="md_indigo_400">#5C6BC0</color>
+    <color name="md_indigo_400_dark">#4354B0</color>
+    <color name="md_indigo_500">#3F51B5</color>
+    <color name="md_indigo_500_dark">#344497</color>
+    <color name="md_indigo_600">#3949AB</color>
+    <color name="md_indigo_600_dark">#2E3C8C</color>
+    <color name="md_indigo_700">#303F9F</color>
+    <color name="md_indigo_700_dark">#263380</color>
+    <color name="md_indigo_800">#283593</color>
+    <color name="md_indigo_800_dark">#1F2973</color>
+    <color name="md_indigo_900">#1A237E</color>
+    <color name="md_indigo_900_dark">#12195C</color>
+    <color name="md_light_blue">#03A9F4</color>
+    <color name="md_light_blue_100">#B3E5FC</color>
+    <color name="md_light_blue_100_dark">#8BD8FB</color>
+    <color name="md_light_blue_200">#81D4fA</color>
+    <color name="md_light_blue_200_dark">#59C7F9</color>
+    <color name="md_light_blue_300">#4fC3F7</color>
+    <color name="md_light_blue_300_dark">#27B6F6</color>
+    <color name="md_light_blue_400">#29B6FC</color>
+    <color name="md_light_blue_400_dark">#02A7F9</color>
+    <color name="md_light_blue_500">#03A9F4</color>
+    <color name="md_light_blue_500_dark">#028DCC</color>
+    <color name="md_light_blue_600">#039BE5</color>
+    <color name="md_light_blue_600_dark">#0280BD</color>
+    <color name="md_light_blue_700">#0288D1</color>
+    <color name="md_light_blue_700_dark">#016EA9</color>
+    <color name="md_light_blue_800">#0277BD</color>
+    <color name="md_light_blue_800_dark">#015E95</color>
+    <color name="md_light_blue_900">#01579B</color>
+    <color name="md_light_blue_900_dark">#004072</color>
+    <color name="md_light_green">#8BC34A</color>
+    <color name="md_light_green_100">#DCEDC8</color>
+    <color name="md_light_green_100_dark">#C9E3A9</color>
+    <color name="md_light_green_200">#C5E1A5</color>
+    <color name="md_light_green_200_dark">#B2D787</color>
+    <color name="md_light_green_300">#AED581</color>
+    <color name="md_light_green_300_dark">#9BCB62</color>
+    <color name="md_light_green_400">#9CCC65</color>
+    <color name="md_light_green_400_dark">#89C246</color>
+    <color name="md_light_green_500">#8BC34A</color>
+    <color name="md_light_green_500_dark">#76AC38</color>
+    <color name="md_light_green_600">#7CB342</color>
+    <color name="md_light_green_600_dark">#679537</color>
+    <color name="md_light_green_700">#689F38</color>
+    <color name="md_light_green_700_dark">#54812D</color>
+    <color name="md_light_green_800">#558B2F</color>
+    <color name="md_light_green_800_dark">#426C24</color>
+    <color name="md_light_green_900">#33691E</color>
+    <color name="md_light_green_900_dark">#234915</color>
+    <color name="md_lime">#CDDC39</color>
+    <color name="md_lime_100">#F0F4C3</color>
+    <color name="md_lime_100_dark">#E8EEA0</color>
+    <color name="md_lime_200">#E6EE9C</color>
+    <color name="md_lime_200_dark">#DEE879</color>
+    <color name="md_lime_300">#DCE775</color>
+    <color name="md_lime_300_dark">#D3E152</color>
+    <color name="md_lime_400">#D4E157</color>
+    <color name="md_lime_400_dark">#CBDB34</color>
+    <color name="md_lime_500">#CDDC39</color>
+    <color name="md_lime_500_dark">#BAC923</color>
+    <color name="md_lime_600">#C0CA33</color>
+    <color name="md_lime_600_dark">#A2AA2A</color>
+    <color name="md_lime_700">#A4B42B</color>
+    <color name="md_lime_700_dark">#869323</color>
+    <color name="md_lime_800">#9E9D24</color>
+    <color name="md_lime_800_dark">#7D7D1C</color>
+    <color name="md_lime_900">#827717</color>
+    <color name="md_lime_900_dark">#5F5710</color>
+    <color name="md_orange">#FF9800</color>
+    <color name="md_orange_100">#FFE0B2</color>
+    <color name="md_orange_100_dark">#FFD089</color>
+    <color name="md_orange_200">#FFCC80</color>
+    <color name="md_orange_200_dark">#FFBC57</color>
+    <color name="md_orange_300">#FFB74D</color>
+    <color name="md_orange_300_dark">#FFA724</color>
+    <color name="md_orange_400">#FFA726</color>
+    <color name="md_orange_400_dark">#FD9600</color>
+    <color name="md_orange_500">#FF9800</color>
+    <color name="md_orange_500_dark">#D78000</color>
+    <color name="md_orange_600">#FB8C00</color>
+    <color name="md_orange_600_dark">#D37600</color>
+    <color name="md_orange_700">#F57C00</color>
+    <color name="md_orange_700_dark">#CD6800</color>
+    <color name="md_orange_800">#EF6C00</color>
+    <color name="md_orange_800_dark">#C65A00</color>
+    <color name="md_orange_900">#E65100</color>
+    <color name="md_orange_900_dark">#BD4200</color>
+    <color name="md_pink">#E91E63</color>
+    <color name="md_pink_100">#F8BBD0</color>
+    <color name="md_pink_100_dark">#F596B7</color>
+    <color name="md_pink_200">#F48FB1</color>
+    <color name="md_pink_200_dark">#F16998</color>
+    <color name="md_pink_300">#F06292</color>
+    <color name="md_pink_300_dark">#ED3C78</color>
+    <color name="md_pink_400">#EC407A</color>
+    <color name="md_pink_400_dark">#E91A60</color>
+    <color name="md_pink_500">#E91E63</color>
+    <color name="md_pink_500_dark">#CB1352</color>
+    <color name="md_pink_600">#D81B60</color>
+    <color name="md_pink_600_dark">#B4154F</color>
+    <color name="md_pink_700">#C2185B</color>
+    <color name="md_pink_700_dark">#9E134A</color>
+    <color name="md_pink_800">#AD1457</color>
+    <color name="md_pink_800_dark">#880F44</color>
+    <color name="md_pink_900">#880E4F</color>
+    <color name="md_pink_900_dark">#630A3A</color>
+    <color name="md_purple">#9C27B0</color>
+    <color name="md_purple_100">#E1BEE7</color>
+    <color name="md_purple_100_dark">#D3A0DC</color>
+    <color name="md_purple_200">#CE93D8</color>
+    <color name="md_purple_200_dark">#C175CD</color>
+    <color name="md_purple_300">#BA68C8</color>
+    <color name="md_purple_300_dark">#AC4ABD</color>
+    <color name="md_purple_400">#AB47BC</color>
+    <color name="md_purple_400_dark">#913AA0</color>
+    <color name="md_purple_500">#9C27B0</color>
+    <color name="md_purple_500_dark">#7F1F8F</color>
+    <color name="md_purple_600">#8E24AA</color>
+    <color name="md_purple_600_dark">#711C88</color>
+    <color name="md_purple_700">#7B1FA2</color>
+    <color name="md_purple_700_dark">#611880</color>
+    <color name="md_purple_800">#6A1B9A</color>
+    <color name="md_purple_800_dark">#521477</color>
+    <color name="md_purple_900">#4A148C</color>
+    <color name="md_purple_900_dark">#370E68</color>
+    <color name="md_red">#F44336</color>
+    <color name="md_red_100">#FFCDD2</color>
+    <color name="md_red_100_dark">#FFA4AE</color>
+    <color name="md_red_200">#EF9A9A</color>
+    <color name="md_red_200_dark">#EA7777</color>
+    <color name="md_red_300">#E57373</color>
+    <color name="md_red_300_dark">#DF5050</color>
+    <color name="md_red_400">#EF5350</color>
+    <color name="md_red_400_dark">#EC2E2A</color>
+    <color name="md_red_500">#F44336</color>
+    <color name="md_red_500_dark">#F21F0F</color>
+    <color name="md_red_600">#E53935</color>
+    <color name="md_red_600_dark">#D61F1A</color>
+    <color name="md_red_700">#D32F2F</color>
+    <color name="md_red_700_dark">#B32525</color>
+    <color name="md_red_800">#C62828</color>
+    <color name="md_red_800_dark">#A42020</color>
+    <color name="md_red_900">#B71C1C</color>
+    <color name="md_red_900_dark">#941616</color>
+    <color name="md_teal">#009688</color>
+    <color name="md_teal_100">#B2DFDB</color>
+    <color name="md_teal_100_dark">#95D3CE</color>
+    <color name="md_teal_200">#80CBC4</color>
+    <color name="md_teal_200_dark">#63BFB7</color>
+    <color name="md_teal_300">#4DB6AC</color>
+    <color name="md_teal_300_dark">#3F9B92</color>
+    <color name="md_teal_400">#26A69A</color>
+    <color name="md_teal_400_dark">#1E857C</color>
+    <color name="md_teal_500">#009688</color>
+    <color name="md_teal_500_dark">#006D63</color>
+    <color name="md_teal_600">#00897B</color>
+    <color name="md_teal_600_dark">#006056</color>
+    <color name="md_teal_700">#00796B</color>
+    <color name="md_teal_700_dark">#005047</color>
+    <color name="md_teal_800">#00695C</color>
+    <color name="md_teal_800_dark">#004038</color>
+    <color name="md_teal_900">#004D40</color>
+    <color name="md_teal_900_dark">#00241E</color>
+    <color name="md_yellow">#FFEB3B</color>
+    <color name="md_yellow_100">#FFF9C4</color>
+    <color name="md_yellow_100_dark">#FFF59B</color>
+    <color name="md_yellow_200">#FFF590</color>
+    <color name="md_yellow_200_dark">#FFF267</color>
+    <color name="md_yellow_300">#FFF176</color>
+    <color name="md_yellow_300_dark">#FFED4D</color>
+    <color name="md_yellow_400">#FFEE58</color>
+    <color name="md_yellow_400_dark">#FFEA2F</color>
+    <color name="md_yellow_500">#FFEB3B</color>
+    <color name="md_yellow_500_dark">#FFE712</color>
+    <color name="md_yellow_600">#FDD835</color>
+    <color name="md_yellow_600_dark">#FDD10B</color>
+    <color name="md_yellow_700">#FBC02D</color>
+    <color name="md_yellow_700_dark">#FBB504</color>
+    <color name="md_yellow_800">#F9A825</color>
+    <color name="md_yellow_800_dark">#EF9606</color>
+    <color name="md_yellow_900">#F57F17</color>
+    <color name="md_yellow_900_dark">#DA6B09</color>
+    <color name="pressed_item_foreground">#08000000</color>
+    <color name="radiobutton_disabled">#FF757575</color>
+    <color name="theme_dark_background_color">@color/md_grey_800</color>
+    <color name="theme_dark_red_primary_color">@color/md_red_700</color>
+    <color name="theme_dark_text_color">@color/md_grey_200</color>
+    <color name="theme_light_background_color">#FF1A475C</color>
+    <color name="theme_light_text_color">@color/white</color>
+    <color name="theme_solarized_background_color">@color/md_indigo_900_dark</color>
+    <color name="theme_solarized_primary_color">@color/md_indigo_900</color>
+    <color name="theme_solarized_text_color">@color/md_amber_700</color>
+    <color name="thumb_deactivated">#FFECECEC</color>
+    <color name="track_deactivated">#FFB2B2B2</color>
+    <dimen name="actionbar_text_size">20sp</dimen>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="big_margin">24dp</dimen>
+    <dimen name="big_text_size">18sp</dimen>
+    <dimen name="bigger_margin">20dp</dimen>
+    <dimen name="bigger_text_size">16sp</dimen>
+    <dimen name="color_sample_size">30dp</dimen>
+    <dimen name="colorpicker_color_width">70dp</dimen>
+    <dimen name="colorpicker_hue_width">30dp</dimen>
+    <dimen name="colorpicker_items_height">30dp</dimen>
+    <dimen name="colorpicker_size">240dp</dimen>
+    <dimen name="colorpicker_size_with_padding">272dp</dimen>
+    <dimen name="dragselect_hotspot_height">56dp</dimen>
+    <dimen name="extra_big_text_size">22sp</dimen>
+    <dimen name="fastscroll_bubble_offset">30dp</dimen>
+    <dimen name="fastscroll_height">40dp</dimen>
+    <dimen name="fastscroll_width">8dp</dimen>
+    <dimen name="fingerprint_icon_size">72dp</dimen>
+    <dimen name="line_color_picker_height">80dp</dimen>
+    <dimen name="line_color_picker_margin">10dp</dimen>
+    <dimen name="medium_margin">8dp</dimen>
+    <dimen name="middle_text_size">17sp</dimen>
+    <dimen name="normal_icon_size">48dp</dimen>
+    <dimen name="normal_margin">12dp</dimen>
+    <dimen name="normal_text_size">14sp</dimen>
+    <dimen name="selection_check_size">26dp</dimen>
+    <dimen name="small_margin">4dp</dimen>
+    <dimen name="small_text_size">10sp</dimen>
+    <dimen name="smaller_text_size">12sp</dimen>
+    <dimen name="social_logo">40dp</dimen>
+    <dimen name="tiny_margin">2dp</dimen>
+    <dimen name="tiny_text_size">8sp</dimen>
+    <dimen name="widget_colorpicker_size">50dp</dimen>
+    <item name="properties_file_count" type="id"/>
+    <item name="properties_last_modified" type="id"/>
+    <item name="properties_size" type="id"/>
+    <plurals name="hours">
+        <item quantity="one">%1$d hour</item>
+        <item quantity="other">%1$d hours</item>
+    </plurals>
+    <plurals name="items">
+        <item quantity="one">%1$d item</item>
+        <item quantity="other">%1$d items</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">%1$d second</item>
+        <item quantity="other">%1$d seconds</item>
+    </plurals>
+    <string name="about">About</string>
+    <string name="add_fingerprint">Add fingerprint</string>
+    <string name="additional_info">Additional info</string>
+    <string name="album">Album</string>
+    <string name="an_error_occurred">An error occurred: %s</string>
+    <string name="app_version">App version: %1$s</string>
+    <string name="append">Append with \'_1\'</string>
+    <string name="apply_to_all">Apply to all conflicts</string>
+    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
+    <string name="artist">Artist</string>
+    <string name="ascending">Ascending</string>
+    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="autofittextview_text">Copyright 2014 Grantland Chew\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="autofittextview_url">https://github.com/grantland/android-autofittextview</string>
+    <string name="background_color">Background color</string>
+    <string name="black_white">Black &amp; White</string>
+    <string name="camera">Camera</string>
+    <string name="cancel">Cancel</string>
+    <string name="change_filter">Change filter</string>
+    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
+    <string name="click_select_destination">Click here to select destination</string>
+    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_storage_access_text">Please choose the root folder of the SD card on the next screen, to grant write access</string>
+    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
+    <string name="confirm_storage_access_title">Confirm external storage access</string>
+    <string name="copy">Copy</string>
+    <string name="copy_failed">Could not copy the files</string>
+    <string name="copy_move">Copy / Move</string>
+    <string name="copy_move_failed">An error occurred</string>
+    <string name="copy_to">Copy to</string>
+    <string name="copying">Copying…</string>
+    <string name="copying_success">Files copied successfully</string>
+    <string name="copying_success_partial">Some files could not be copied</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="could_not_create_folder">Could not create folder %s</string>
+    <string name="create_new">Create new</string>
+    <string name="create_new_folder">Create new folder</string>
+    <string name="cropper_text">Copyright 2016, Arthur Teplitzki, 2013, Edmodo, Inc.\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
+    <string name="cropper_url">https://github.com/ArthurHub/Android-Image-Cropper</string>
+    <string name="custom">Custom</string>
+    <string name="customize_colors">Customize colors</string>
+    <string name="dark_red">Dark red</string>
+    <string name="dark_theme">Dark</string>
+    <string name="date_taken">Date taken</string>
+    <string name="delete">Delete</string>
+    <string name="descending">Descending</string>
+    <string name="destination">Destination</string>
+    <string name="device_os">Device OS: %1$s</string>
+    <string name="direct_children_count">Direct children count</string>
+    <string name="discard">Discard</string>
+    <string name="donate">Donate</string>
+    <string name="donate_please">
+        <![CDATA[
+            Hello,<br><br>
+            hope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
+            You can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.<br><br>
+            Thank you!
+        ]]>
+    </string>
+    <string name="donate_underlined"><u>Donate</u></string>
+    <string name="donate_url">http://simplemobiletools.com/donate</string>
+    <string name="duration">Duration</string>
+    <string name="email_label">Send your feedback or suggestions to</string>
+    <string name="empty_name">Please enter a name</string>
+    <string name="enter_pin">Enter PIN</string>
+    <string name="espresso_text">Copyright 2014 The Android Open Source Project\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="espresso_url">https://developer.android.com/training/testing/espresso/index.html</string>
+    <string name="exif">EXIF</string>
+    <string name="exposure_time">Exposure time</string>
+    <string name="extension">Extension</string>
+    <string name="extension_cannot_be_empty">Extension cannot be empty</string>
+    <string name="extra_large">Extra large</string>
+    <string name="f_number">F-number</string>
+    <string name="file">File</string>
+    <string name="file_already_exists">File %1$s already exists</string>
+    <string name="file_already_exists_overwrite">File %1$s already exists. Overwrite?</string>
+    <string name="file_saved">File saved successfully</string>
+    <string name="filename">Filename</string>
+    <string name="filename_cannot_be_empty">Filename cannot be empty</string>
+    <string name="filename_invalid_characters">Filename contains invalid characters</string>
+    <string name="files_count">Total files count</string>
+    <string name="filter">Filter</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="focal_length">Focal length</string>
+    <string name="folder">Folder</string>
+    <string name="follow_us">Follow us</string>
+    <string name="font_size">Font size</string>
+    <string name="gif_drawable_text">The MIT License (MIT)\n\nCopyright (c) 2016 Karol Wrótniak, Droids on Roids\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: \n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. \n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="gif_drawable_url">https://github.com/koral--/android-gif-drawable</string>
+    <string name="glide_text">Copyright 2014 Google, Inc. All rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY GOOGLE, INC. ``AS IS\'\' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL GOOGLE, INC. OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</string>
+    <string name="glide_title">Glide (image loading and caching)</string>
+    <string name="glide_url">https://github.com/bumptech/glide</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="gson_text">Copyright 2008 Google Inc.\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="gson_title">Gson (JSON parser)</string>
+    <string name="gson_url">https://github.com/google/gson</string>
+    <string name="hide">Hide</string>
+    <string name="hide_folder">Hide folder</string>
+    <string name="insert_pattern">Insert pattern</string>
+    <string name="internal">Internal</string>
+    <string name="invalid_destination">Could not write to the selected destination</string>
+    <string name="invalid_file_format">Invalid file format</string>
+    <string name="invalid_name">The name contains invalid characters</string>
+    <string name="invite_friends_underlined"><u>Invite friends</u></string>
+    <string name="invite_via">Invite via</string>
+    <string name="iso_speed">ISO speed</string>
+    <string name="items_selected">Items selected</string>
+    <string name="joda_text">Copyright 2013 JodaOrg\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="joda_title">Joda-Time (Java date replacement)</string>
+    <string name="joda_url">https://github.com/JodaOrg/joda-time</string>
+    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
+    <string name="kotlin_text">Copyright 2010 - 2016 JetBrains s.r.o.\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="kotlin_title">Kotlin (programming language)</string>
+    <string name="kotlin_url">https://github.com/JetBrains/kotlin</string>
+    <string name="large">Large</string>
+    <string name="last_modified">Last modified</string>
+    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="leakcanary_text">Copyright 2015 Square, Inc.\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="leakcanary_url">https://github.com/square/leakcanary</string>
+    <string name="light_theme">Light</string>
+    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="medium">Medium</string>
+    <string name="more_apps_underlined"><u>More apps</u></string>
+    <string name="move">Move</string>
+    <string name="move_to">Move to</string>
+    <string name="moving">Moving…</string>
+    <string name="moving_success">Files moved successfully</string>
+    <string name="moving_success_partial">Some files could not be moved</string>
+    <string name="multiselect_text">The MIT License (MIT)\n\nCopyright (c) 2014 Big Nerd Ranch\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: \n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. \n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
+    <string name="multiselect_url">https://github.com/bignerdranch/recyclerview-multiselect</string>
+    <string name="my_email">hello@simplemobiletools.com</string>
+    <string name="my_website">\nhttp://simplemobiletools.com</string>
+    <string name="name">Name</string>
+    <string name="name_taken">A file or folder with that name already exists</string>
+    <string name="no">No</string>
+    <string name="no_app_found">No valid app found</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_files_selected">No files selected</string>
+    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
+    <string name="no_items_found">No items found.</string>
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
+    <string name="ok">OK</string>
+    <string name="open_with">Open with</string>
+    <string name="otto_text">Copyright 2012 Square, Inc.\nCopyright 2010 Google, Inc.\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="otto_title">Otto (event bus)</string>
+    <string name="otto_url">https://github.com/square/otto</string>
+    <string name="out_of_memory_error">Out of memory error</string>
+    <string name="overwrite">Overwrite</string>
+    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
+    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="path">Path</string>
+    <string name="pattern">Pattern</string>
+    <string name="pattern_text">Copyright 2017 aritraroy\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="pattern_url">https://github.com/aritraroy/PatternLockView</string>
+    <string name="photoview_text">Copyright 2016 Chris Banes\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
+    <string name="photoview_url">https://github.com/chrisbanes/PhotoView</string>
+    <string name="picasso_text">Copyright 2013 Square, Inc.\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="picasso_title">Picasso (image loading and caching)</string>
+    <string name="picasso_url">https://github.com/square/picasso</string>
+    <string name="pin">PIN</string>
+    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
+    <string name="please_enter_pin">Please enter a PIN</string>
+    <string name="please_select_destination">Please select a destination</string>
+    <string name="primary_color">Primary color</string>
+    <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
+    <string name="progress">%1$s / %2$s</string>
+    <string name="properties">Properties</string>
+    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
+    <string name="purchase">Purchase</string>
+    <string name="purchase_thank_you">
+        <![CDATA[
+            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+        ]]>
+    </string>
+    <string name="rate_us_underlined"><u>Rate us</u></string>
+    <string name="rename">Rename</string>
+    <string name="rename_file">Rename file</string>
+    <string name="rename_file_error">Could not rename the file</string>
+    <string name="rename_folder">Rename folder</string>
+    <string name="rename_folder_empty">Folder name must not be empty</string>
+    <string name="rename_folder_error">Could not rename the folder</string>
+    <string name="rename_folder_exists">A folder with that name already exists</string>
+    <string name="rename_folder_ok">Folder renamed successfully</string>
+    <string name="rename_folder_root">Cannot rename the root folder of a storage</string>
+    <string name="renaming_folder">Renaming folder</string>
+    <string name="repeat_pattern">Repeat pattern</string>
+    <string name="repeat_pin">Repeat PIN</string>
+    <string name="reprint_text">Copyright 2015 - 2017 AJ Alt\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="reprint_url">https://github.com/ajalt/reprint</string>
+    <string name="resolution">Resolution</string>
+    <string name="restore_defaults">Restore defaults</string>
+    <string name="robolectric_text">The MIT License\n\nCopyright (c) 2010 Xtreme Labs and Pivotal Labs\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="robolectric_url">https://github.com/robolectric/robolectric</string>
+    <string name="root">Root</string>
+    <string name="rtl_viewpager_text">Copyright 2015 Diego Gómez Olvera\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="rtl_viewpager_url">https://github.com/diego-gomez-olvera/RtlViewPager</string>
+    <string name="save">Save</string>
+    <string name="save_as">Save as</string>
+    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
+    <string name="saving">Saving…</string>
+    <string name="sd_card">SD Card</string>
+    <string name="search">Search</string>
+    <string name="select_all">Select all</string>
+    <string name="select_an_action">Select an action</string>
+    <string name="select_destination">Select destination</string>
+    <string name="select_file">Select a file</string>
+    <string name="select_folder">Select a folder</string>
+    <string name="select_storage">Select storage</string>
+    <string name="set_as">Set as</string>
+    <string name="settings">Settings</string>
+    <string name="share">Share</string>
+    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="share_text">Hey, come check out %1$s at %2$s</string>
+    <string name="share_via">Share via</string>
+    <string name="shared">Shared</string>
+    <string name="show_hidden_items">Show hidden items</string>
+    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="simple_commons">Simple Commons</string>
+    <string name="size">Size</string>
+    <string name="skip">Skip</string>
+    <string name="small">Small</string>
+    <string name="solarized">Solarized</string>
+    <string name="sort_by">Sort by</string>
+    <string name="source">Source</string>
+    <string name="source_and_destination_same">Source and destination cannot be the same</string>
+    <string name="stetho_text">BSD License\n\nFor Stetho software\n\nCopyright (c) 2015, Facebook, Inc. All rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification,\nare permitted provided that the following conditions are met:\n\n * Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n * Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n * Neither the name Facebook nor the names of its contributors may be used to\n   endorse or promote products derived from this software without specific\n   prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND\nANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR\nANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON\nANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</string>
+    <string name="stetho_title">Stetho (debugging databases)</string>
+    <string name="stetho_url">https://github.com/facebook/stetho</string>
+    <string name="stop_showing_hidden">Stop showing hidden media</string>
+    <string name="subsampling_text">Copyright 2016 David Morrissey\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.You may obtain a copy of the License at\n\nhttps://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
+    <string name="subsampling_url">https://github.com/davemorrissey/subsampling-scale-image-view</string>
+    <string name="temporarily_show_hidden">Temporarily show hidden</string>
+    <string name="text_color">Text color</string>
+    <string name="thank_you_url">https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou</string>
+    <string name="theme">Theme</string>
+    <string name="third_party_licences">Third party licences</string>
+    <string name="third_party_licences_underlined"><u>Third party licences</u></string>
+    <string name="title">Title</string>
+    <string name="two_string_placeholder">%1$s%2$s</string>
+    <string name="undo_changes">Undo changes</string>
+    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
+    <string name="unhide">Unhide</string>
+    <string name="unhide_folder">Unhide folder</string>
+    <string name="unknown">Unknown</string>
+    <string name="unknown_error_occurred">An unknown error occurred</string>
+    <string name="use_english_language">Use English language</string>
+    <string name="use_for_this_folder">Use for this folder only</string>
+    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
+    <string name="website_label">For the source codes visit</string>
+    <string name="whats_new">What\'s new</string>
+    <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
+    <string name="wrong_pattern">Wrong pattern</string>
+    <string name="wrong_pin">Wrong PIN</string>
+    <string name="wrong_root_selected">Wrong folder selected, please select the root folder of your SD card</string>
+    <string name="yes">Yes</string>
+    <style name="AppTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/actionbar_text_size</item>
+    </style>
+    <style name="AppTheme.Amber_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_amber_100</item>
+        <item name="colorPrimaryDark">@color/md_amber_100_dark</item>
+        <item name="colorAccent">@color/md_amber_100</item>
+    </style>
+    <style name="AppTheme.Amber_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_amber_200</item>
+        <item name="colorPrimaryDark">@color/md_amber_200_dark</item>
+        <item name="colorAccent">@color/md_amber_200</item>
+    </style>
+    <style name="AppTheme.Amber_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_amber_300</item>
+        <item name="colorPrimaryDark">@color/md_amber_300_dark</item>
+        <item name="colorAccent">@color/md_amber_300</item>
+    </style>
+    <style name="AppTheme.Amber_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_amber_400</item>
+        <item name="colorPrimaryDark">@color/md_amber_400_dark</item>
+        <item name="colorAccent">@color/md_amber_400</item>
+    </style>
+    <style name="AppTheme.Amber_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_amber_500</item>
+        <item name="colorPrimaryDark">@color/md_amber_500_dark</item>
+        <item name="colorAccent">@color/md_amber_500</item>
+    </style>
+    <style name="AppTheme.Amber_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_amber_600</item>
+        <item name="colorPrimaryDark">@color/md_amber_600_dark</item>
+        <item name="colorAccent">@color/md_amber_600</item>
+    </style>
+    <style name="AppTheme.Amber_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_amber_700</item>
+        <item name="colorPrimaryDark">@color/md_amber_700_dark</item>
+        <item name="colorAccent">@color/md_amber_700</item>
+    </style>
+    <style name="AppTheme.Amber_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_amber_800</item>
+        <item name="colorPrimaryDark">@color/md_amber_800_dark</item>
+        <item name="colorAccent">@color/md_amber_800</item>
+    </style>
+    <style name="AppTheme.Amber_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_amber_900</item>
+        <item name="colorPrimaryDark">@color/md_amber_900_dark</item>
+        <item name="colorAccent">@color/md_amber_900</item>
+    </style>
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
+        <item name="spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
+        <item name="buttonStyle">@style/MyTransparentButton</item>
+        <item name="android:buttonStyle">@style/MyTransparentButton</item>
+    </style>
+    <style name="AppTheme.Blue_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_100</item>
+        <item name="colorPrimaryDark">@color/md_blue_100_dark</item>
+        <item name="colorAccent">@color/md_blue_100</item>
+    </style>
+    <style name="AppTheme.Blue_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_200</item>
+        <item name="colorPrimaryDark">@color/md_blue_200_dark</item>
+        <item name="colorAccent">@color/md_blue_200</item>
+    </style>
+    <style name="AppTheme.Blue_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_300</item>
+        <item name="colorPrimaryDark">@color/md_blue_300_dark</item>
+        <item name="colorAccent">@color/md_blue_300</item>
+    </style>
+    <style name="AppTheme.Blue_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_400</item>
+        <item name="colorPrimaryDark">@color/md_blue_400_dark</item>
+        <item name="colorAccent">@color/md_blue_400</item>
+    </style>
+    <style name="AppTheme.Blue_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_500</item>
+        <item name="colorPrimaryDark">@color/md_blue_500_dark</item>
+        <item name="colorAccent">@color/md_blue_500</item>
+    </style>
+    <style name="AppTheme.Blue_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_600</item>
+        <item name="colorPrimaryDark">@color/md_blue_600_dark</item>
+        <item name="colorAccent">@color/md_blue_600</item>
+    </style>
+    <style name="AppTheme.Blue_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_700</item>
+        <item name="colorPrimaryDark">@color/md_blue_700_dark</item>
+        <item name="colorAccent">@color/md_blue_700</item>
+    </style>
+    <style name="AppTheme.Blue_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_800</item>
+        <item name="colorPrimaryDark">@color/md_blue_800_dark</item>
+        <item name="colorAccent">@color/md_blue_800</item>
+    </style>
+    <style name="AppTheme.Blue_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_900</item>
+        <item name="colorPrimaryDark">@color/md_blue_900_dark</item>
+        <item name="colorAccent">@color/md_blue_900</item>
+    </style>
+    <style name="AppTheme.Blue_Grey_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_grey_100</item>
+        <item name="colorPrimaryDark">@color/md_blue_grey_100_dark</item>
+        <item name="colorAccent">@color/md_blue_grey_100</item>
+    </style>
+    <style name="AppTheme.Blue_Grey_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_grey_200</item>
+        <item name="colorPrimaryDark">@color/md_blue_grey_200_dark</item>
+        <item name="colorAccent">@color/md_blue_grey_200</item>
+    </style>
+    <style name="AppTheme.Blue_Grey_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_grey_300</item>
+        <item name="colorPrimaryDark">@color/md_blue_grey_300_dark</item>
+        <item name="colorAccent">@color/md_blue_grey_300</item>
+    </style>
+    <style name="AppTheme.Blue_Grey_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_grey_400</item>
+        <item name="colorPrimaryDark">@color/md_blue_grey_400_dark</item>
+        <item name="colorAccent">@color/md_blue_grey_400</item>
+    </style>
+    <style name="AppTheme.Blue_Grey_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_grey_500</item>
+        <item name="colorPrimaryDark">@color/md_blue_grey_500_dark</item>
+        <item name="colorAccent">@color/md_blue_grey_500</item>
+    </style>
+    <style name="AppTheme.Blue_Grey_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_grey_600</item>
+        <item name="colorPrimaryDark">@color/md_blue_grey_600_dark</item>
+        <item name="colorAccent">@color/md_blue_grey_600</item>
+    </style>
+    <style name="AppTheme.Blue_Grey_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_grey_700</item>
+        <item name="colorPrimaryDark">@color/md_blue_grey_700_dark</item>
+        <item name="colorAccent">@color/md_blue_grey_700</item>
+    </style>
+    <style name="AppTheme.Blue_Grey_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_grey_800</item>
+        <item name="colorPrimaryDark">@color/md_blue_grey_800_dark</item>
+        <item name="colorAccent">@color/md_blue_grey_800</item>
+    </style>
+    <style name="AppTheme.Blue_Grey_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_blue_grey_900</item>
+        <item name="colorPrimaryDark">@color/md_blue_grey_900_dark</item>
+        <item name="colorAccent">@color/md_blue_grey_900</item>
+    </style>
+    <style name="AppTheme.Brown_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_brown_100</item>
+        <item name="colorPrimaryDark">@color/md_brown_100_dark</item>
+        <item name="colorAccent">@color/md_brown_100</item>
+    </style>
+    <style name="AppTheme.Brown_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_brown_200</item>
+        <item name="colorPrimaryDark">@color/md_brown_200_dark</item>
+        <item name="colorAccent">@color/md_brown_200</item>
+    </style>
+    <style name="AppTheme.Brown_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_brown_300</item>
+        <item name="colorPrimaryDark">@color/md_brown_300_dark</item>
+        <item name="colorAccent">@color/md_brown_300</item>
+    </style>
+    <style name="AppTheme.Brown_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_brown_400</item>
+        <item name="colorPrimaryDark">@color/md_brown_400_dark</item>
+        <item name="colorAccent">@color/md_brown_400</item>
+    </style>
+    <style name="AppTheme.Brown_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_brown_500</item>
+        <item name="colorPrimaryDark">@color/md_brown_500_dark</item>
+        <item name="colorAccent">@color/md_brown_500</item>
+    </style>
+    <style name="AppTheme.Brown_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_brown_600</item>
+        <item name="colorPrimaryDark">@color/md_brown_600_dark</item>
+        <item name="colorAccent">@color/md_brown_600</item>
+    </style>
+    <style name="AppTheme.Brown_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_brown_700</item>
+        <item name="colorPrimaryDark">@color/md_brown_700_dark</item>
+        <item name="colorAccent">@color/md_brown_700</item>
+    </style>
+    <style name="AppTheme.Brown_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_brown_800</item>
+        <item name="colorPrimaryDark">@color/md_brown_800_dark</item>
+        <item name="colorAccent">@color/md_brown_800</item>
+    </style>
+    <style name="AppTheme.Brown_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_brown_900</item>
+        <item name="colorPrimaryDark">@color/md_brown_900_dark</item>
+        <item name="colorAccent">@color/md_brown_900</item>
+    </style>
+    <style name="AppTheme.Cyan_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_cyan_100</item>
+        <item name="colorPrimaryDark">@color/md_cyan_100_dark</item>
+        <item name="colorAccent">@color/md_cyan_100</item>
+    </style>
+    <style name="AppTheme.Cyan_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_cyan_200</item>
+        <item name="colorPrimaryDark">@color/md_cyan_200_dark</item>
+        <item name="colorAccent">@color/md_cyan_200</item>
+    </style>
+    <style name="AppTheme.Cyan_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_cyan_300</item>
+        <item name="colorPrimaryDark">@color/md_cyan_300_dark</item>
+        <item name="colorAccent">@color/md_cyan_300</item>
+    </style>
+    <style name="AppTheme.Cyan_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_cyan_400</item>
+        <item name="colorPrimaryDark">@color/md_cyan_400_dark</item>
+        <item name="colorAccent">@color/md_cyan_400</item>
+    </style>
+    <style name="AppTheme.Cyan_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_cyan_500</item>
+        <item name="colorPrimaryDark">@color/md_cyan_500_dark</item>
+        <item name="colorAccent">@color/md_cyan_500</item>
+    </style>
+    <style name="AppTheme.Cyan_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_cyan_600</item>
+        <item name="colorPrimaryDark">@color/md_cyan_600_dark</item>
+        <item name="colorAccent">@color/md_cyan_600</item>
+    </style>
+    <style name="AppTheme.Cyan_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_cyan_700</item>
+        <item name="colorPrimaryDark">@color/md_cyan_700_dark</item>
+        <item name="colorAccent">@color/md_cyan_700</item>
+    </style>
+    <style name="AppTheme.Cyan_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_cyan_800</item>
+        <item name="colorPrimaryDark">@color/md_cyan_800_dark</item>
+        <item name="colorAccent">@color/md_cyan_800</item>
+    </style>
+    <style name="AppTheme.Cyan_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_cyan_900</item>
+        <item name="colorPrimaryDark">@color/md_cyan_900_dark</item>
+        <item name="colorAccent">@color/md_cyan_900</item>
+    </style>
+    <style name="AppTheme.Deep_Orange_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_orange_100</item>
+        <item name="colorPrimaryDark">@color/md_deep_orange_100_dark</item>
+        <item name="colorAccent">@color/md_deep_orange_100</item>
+    </style>
+    <style name="AppTheme.Deep_Orange_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_orange_200</item>
+        <item name="colorPrimaryDark">@color/md_deep_orange_200_dark</item>
+        <item name="colorAccent">@color/md_deep_orange_200</item>
+    </style>
+    <style name="AppTheme.Deep_Orange_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_orange_300</item>
+        <item name="colorPrimaryDark">@color/md_deep_orange_300_dark</item>
+        <item name="colorAccent">@color/md_deep_orange_300</item>
+    </style>
+    <style name="AppTheme.Deep_Orange_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_orange_400</item>
+        <item name="colorPrimaryDark">@color/md_deep_orange_400_dark</item>
+        <item name="colorAccent">@color/md_deep_orange_400</item>
+    </style>
+    <style name="AppTheme.Deep_Orange_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_orange_500</item>
+        <item name="colorPrimaryDark">@color/md_deep_orange_500_dark</item>
+        <item name="colorAccent">@color/md_deep_orange_500</item>
+    </style>
+    <style name="AppTheme.Deep_Orange_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_orange_600</item>
+        <item name="colorPrimaryDark">@color/md_deep_orange_600_dark</item>
+        <item name="colorAccent">@color/md_deep_orange_600</item>
+    </style>
+    <style name="AppTheme.Deep_Orange_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_orange_700</item>
+        <item name="colorPrimaryDark">@color/md_deep_orange_700_dark</item>
+        <item name="colorAccent">@color/md_deep_orange_700</item>
+    </style>
+    <style name="AppTheme.Deep_Orange_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_orange_800</item>
+        <item name="colorPrimaryDark">@color/md_deep_orange_800_dark</item>
+        <item name="colorAccent">@color/md_deep_orange_800</item>
+    </style>
+    <style name="AppTheme.Deep_Orange_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_orange_900</item>
+        <item name="colorPrimaryDark">@color/md_deep_orange_900_dark</item>
+        <item name="colorAccent">@color/md_deep_orange_900</item>
+    </style>
+    <style name="AppTheme.Deep_Purple_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_purple_100</item>
+        <item name="colorPrimaryDark">@color/md_deep_purple_100_dark</item>
+        <item name="colorAccent">@color/md_deep_purple_100</item>
+    </style>
+    <style name="AppTheme.Deep_Purple_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_purple_200</item>
+        <item name="colorPrimaryDark">@color/md_deep_purple_200_dark</item>
+        <item name="colorAccent">@color/md_deep_purple_200</item>
+    </style>
+    <style name="AppTheme.Deep_Purple_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_purple_300</item>
+        <item name="colorPrimaryDark">@color/md_deep_purple_300_dark</item>
+        <item name="colorAccent">@color/md_deep_purple_300</item>
+    </style>
+    <style name="AppTheme.Deep_Purple_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_purple_400</item>
+        <item name="colorPrimaryDark">@color/md_deep_purple_400_dark</item>
+        <item name="colorAccent">@color/md_deep_purple_400</item>
+    </style>
+    <style name="AppTheme.Deep_Purple_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_purple_500</item>
+        <item name="colorPrimaryDark">@color/md_deep_purple_500_dark</item>
+        <item name="colorAccent">@color/md_deep_purple_500</item>
+    </style>
+    <style name="AppTheme.Deep_Purple_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_purple_600</item>
+        <item name="colorPrimaryDark">@color/md_deep_purple_600_dark</item>
+        <item name="colorAccent">@color/md_deep_purple_600</item>
+    </style>
+    <style name="AppTheme.Deep_Purple_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_purple_700</item>
+        <item name="colorPrimaryDark">@color/md_deep_purple_700_dark</item>
+        <item name="colorAccent">@color/md_deep_purple_700</item>
+    </style>
+    <style name="AppTheme.Deep_Purple_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_purple_800</item>
+        <item name="colorPrimaryDark">@color/md_deep_purple_800_dark</item>
+        <item name="colorAccent">@color/md_deep_purple_800</item>
+    </style>
+    <style name="AppTheme.Deep_Purple_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_deep_purple_900</item>
+        <item name="colorPrimaryDark">@color/md_deep_purple_900_dark</item>
+        <item name="colorAccent">@color/md_deep_purple_900</item>
+    </style>
+    <style name="AppTheme.Green_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_green_100</item>
+        <item name="colorPrimaryDark">@color/md_green_100_dark</item>
+        <item name="colorAccent">@color/md_green_100</item>
+    </style>
+    <style name="AppTheme.Green_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_green_200</item>
+        <item name="colorPrimaryDark">@color/md_green_200_dark</item>
+        <item name="colorAccent">@color/md_green_200</item>
+    </style>
+    <style name="AppTheme.Green_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_green_300</item>
+        <item name="colorPrimaryDark">@color/md_green_300_dark</item>
+        <item name="colorAccent">@color/md_green_300</item>
+    </style>
+    <style name="AppTheme.Green_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_green_400</item>
+        <item name="colorPrimaryDark">@color/md_green_400_dark</item>
+        <item name="colorAccent">@color/md_green_400</item>
+    </style>
+    <style name="AppTheme.Green_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_green_500</item>
+        <item name="colorPrimaryDark">@color/md_green_500_dark</item>
+        <item name="colorAccent">@color/md_green_500</item>
+    </style>
+    <style name="AppTheme.Green_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_green_600</item>
+        <item name="colorPrimaryDark">@color/md_green_600_dark</item>
+        <item name="colorAccent">@color/md_green_600</item>
+    </style>
+    <style name="AppTheme.Green_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_green_700</item>
+        <item name="colorPrimaryDark">@color/md_green_700_dark</item>
+        <item name="colorAccent">@color/md_green_700</item>
+    </style>
+    <style name="AppTheme.Green_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_green_800</item>
+        <item name="colorPrimaryDark">@color/md_green_800_dark</item>
+        <item name="colorAccent">@color/md_green_800</item>
+    </style>
+    <style name="AppTheme.Green_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_green_900</item>
+        <item name="colorPrimaryDark">@color/md_green_900_dark</item>
+        <item name="colorAccent">@color/md_green_900</item>
+    </style>
+    <style name="AppTheme.Grey_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_grey_white</item>
+        <item name="colorPrimaryDark">@color/md_grey_white_dark</item>
+        <item name="colorAccent">@color/md_grey_white</item>
+    </style>
+    <style name="AppTheme.Grey_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_grey_200</item>
+        <item name="colorPrimaryDark">@color/md_grey_200_dark</item>
+        <item name="colorAccent">@color/md_grey_200</item>
+    </style>
+    <style name="AppTheme.Grey_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_grey_300</item>
+        <item name="colorPrimaryDark">@color/md_grey_300_dark</item>
+        <item name="colorAccent">@color/md_grey_300</item>
+    </style>
+    <style name="AppTheme.Grey_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_grey_400</item>
+        <item name="colorPrimaryDark">@color/md_grey_400_dark</item>
+        <item name="colorAccent">@color/md_grey_400</item>
+    </style>
+    <style name="AppTheme.Grey_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_grey_500</item>
+        <item name="colorPrimaryDark">@color/md_grey_500_dark</item>
+        <item name="colorAccent">@color/md_grey_500</item>
+    </style>
+    <style name="AppTheme.Grey_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_grey_600</item>
+        <item name="colorPrimaryDark">@color/md_grey_600_dark</item>
+        <item name="colorAccent">@color/md_grey_600</item>
+    </style>
+    <style name="AppTheme.Grey_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_grey_700</item>
+        <item name="colorPrimaryDark">@color/md_grey_700_dark</item>
+        <item name="colorAccent">@color/md_grey_700</item>
+    </style>
+    <style name="AppTheme.Grey_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_grey_800</item>
+        <item name="colorPrimaryDark">@color/md_grey_800_dark</item>
+        <item name="colorAccent">@color/md_grey_800</item>
+    </style>
+    <style name="AppTheme.Grey_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_grey_black</item>
+        <item name="colorPrimaryDark">@color/md_grey_black_dark</item>
+        <item name="colorAccent">@color/md_grey_black</item>
+    </style>
+    <style name="AppTheme.Indigo_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_indigo_100</item>
+        <item name="colorPrimaryDark">@color/md_indigo_100_dark</item>
+        <item name="colorAccent">@color/md_indigo_100</item>
+    </style>
+    <style name="AppTheme.Indigo_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_indigo_200</item>
+        <item name="colorPrimaryDark">@color/md_indigo_200_dark</item>
+        <item name="colorAccent">@color/md_indigo_200</item>
+    </style>
+    <style name="AppTheme.Indigo_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_indigo_300</item>
+        <item name="colorPrimaryDark">@color/md_indigo_300_dark</item>
+        <item name="colorAccent">@color/md_indigo_300</item>
+    </style>
+    <style name="AppTheme.Indigo_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_indigo_400</item>
+        <item name="colorPrimaryDark">@color/md_indigo_400_dark</item>
+        <item name="colorAccent">@color/md_indigo_400</item>
+    </style>
+    <style name="AppTheme.Indigo_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_indigo_500</item>
+        <item name="colorPrimaryDark">@color/md_indigo_500_dark</item>
+        <item name="colorAccent">@color/md_indigo_500</item>
+    </style>
+    <style name="AppTheme.Indigo_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_indigo_600</item>
+        <item name="colorPrimaryDark">@color/md_indigo_600_dark</item>
+        <item name="colorAccent">@color/md_indigo_600</item>
+    </style>
+    <style name="AppTheme.Indigo_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_indigo_700</item>
+        <item name="colorPrimaryDark">@color/md_indigo_700_dark</item>
+        <item name="colorAccent">@color/md_indigo_700</item>
+    </style>
+    <style name="AppTheme.Indigo_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_indigo_800</item>
+        <item name="colorPrimaryDark">@color/md_indigo_800_dark</item>
+        <item name="colorAccent">@color/md_indigo_800</item>
+    </style>
+    <style name="AppTheme.Indigo_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_indigo_900</item>
+        <item name="colorPrimaryDark">@color/md_indigo_900_dark</item>
+        <item name="colorAccent">@color/md_indigo_900</item>
+    </style>
+    <style name="AppTheme.Light_Blue_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_blue_100</item>
+        <item name="colorPrimaryDark">@color/md_light_blue_100_dark</item>
+        <item name="colorAccent">@color/md_light_blue_100</item>
+    </style>
+    <style name="AppTheme.Light_Blue_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_blue_200</item>
+        <item name="colorPrimaryDark">@color/md_light_blue_200_dark</item>
+        <item name="colorAccent">@color/md_light_blue_200</item>
+    </style>
+    <style name="AppTheme.Light_Blue_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_blue_300</item>
+        <item name="colorPrimaryDark">@color/md_light_blue_300_dark</item>
+        <item name="colorAccent">@color/md_light_blue_300</item>
+    </style>
+    <style name="AppTheme.Light_Blue_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_blue_400</item>
+        <item name="colorPrimaryDark">@color/md_light_blue_400_dark</item>
+        <item name="colorAccent">@color/md_light_blue_400</item>
+    </style>
+    <style name="AppTheme.Light_Blue_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_blue_500</item>
+        <item name="colorPrimaryDark">@color/md_light_blue_500_dark</item>
+        <item name="colorAccent">@color/md_light_blue_500</item>
+    </style>
+    <style name="AppTheme.Light_Blue_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_blue_600</item>
+        <item name="colorPrimaryDark">@color/md_light_blue_600_dark</item>
+        <item name="colorAccent">@color/md_light_blue_600</item>
+    </style>
+    <style name="AppTheme.Light_Blue_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_blue_700</item>
+        <item name="colorPrimaryDark">@color/md_light_blue_700_dark</item>
+        <item name="colorAccent">@color/md_light_blue_700</item>
+    </style>
+    <style name="AppTheme.Light_Blue_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_blue_800</item>
+        <item name="colorPrimaryDark">@color/md_light_blue_800_dark</item>
+        <item name="colorAccent">@color/md_light_blue_800</item>
+    </style>
+    <style name="AppTheme.Light_Blue_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_blue_900</item>
+        <item name="colorPrimaryDark">@color/md_light_blue_900_dark</item>
+        <item name="colorAccent">@color/md_light_blue_900</item>
+    </style>
+    <style name="AppTheme.Light_Green_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_green_100</item>
+        <item name="colorPrimaryDark">@color/md_light_green_100_dark</item>
+        <item name="colorAccent">@color/md_light_green_100</item>
+    </style>
+    <style name="AppTheme.Light_Green_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_green_200</item>
+        <item name="colorPrimaryDark">@color/md_light_green_200_dark</item>
+        <item name="colorAccent">@color/md_light_green_200</item>
+    </style>
+    <style name="AppTheme.Light_Green_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_green_300</item>
+        <item name="colorPrimaryDark">@color/md_light_green_300_dark</item>
+        <item name="colorAccent">@color/md_light_green_300</item>
+    </style>
+    <style name="AppTheme.Light_Green_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_green_400</item>
+        <item name="colorPrimaryDark">@color/md_light_green_400_dark</item>
+        <item name="colorAccent">@color/md_light_green_400</item>
+    </style>
+    <style name="AppTheme.Light_Green_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_green_500</item>
+        <item name="colorPrimaryDark">@color/md_light_green_500_dark</item>
+        <item name="colorAccent">@color/md_light_green_500</item>
+    </style>
+    <style name="AppTheme.Light_Green_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_green_600</item>
+        <item name="colorPrimaryDark">@color/md_light_green_600_dark</item>
+        <item name="colorAccent">@color/md_light_green_600</item>
+    </style>
+    <style name="AppTheme.Light_Green_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_green_700</item>
+        <item name="colorPrimaryDark">@color/md_light_green_700_dark</item>
+        <item name="colorAccent">@color/md_light_green_700</item>
+    </style>
+    <style name="AppTheme.Light_Green_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_green_800</item>
+        <item name="colorPrimaryDark">@color/md_light_green_800_dark</item>
+        <item name="colorAccent">@color/md_light_green_800</item>
+    </style>
+    <style name="AppTheme.Light_Green_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_light_green_900</item>
+        <item name="colorPrimaryDark">@color/md_light_green_900_dark</item>
+        <item name="colorAccent">@color/md_light_green_900</item>
+    </style>
+    <style name="AppTheme.Lime_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_lime_100</item>
+        <item name="colorPrimaryDark">@color/md_lime_100_dark</item>
+        <item name="colorAccent">@color/md_lime_100</item>
+    </style>
+    <style name="AppTheme.Lime_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_lime_200</item>
+        <item name="colorPrimaryDark">@color/md_lime_200_dark</item>
+        <item name="colorAccent">@color/md_lime_200</item>
+    </style>
+    <style name="AppTheme.Lime_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_lime_300</item>
+        <item name="colorPrimaryDark">@color/md_lime_300_dark</item>
+        <item name="colorAccent">@color/md_lime_300</item>
+    </style>
+    <style name="AppTheme.Lime_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_lime_400</item>
+        <item name="colorPrimaryDark">@color/md_lime_400_dark</item>
+        <item name="colorAccent">@color/md_lime_400</item>
+    </style>
+    <style name="AppTheme.Lime_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_lime_500</item>
+        <item name="colorPrimaryDark">@color/md_lime_500_dark</item>
+        <item name="colorAccent">@color/md_lime_500</item>
+    </style>
+    <style name="AppTheme.Lime_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_lime_600</item>
+        <item name="colorPrimaryDark">@color/md_lime_600_dark</item>
+        <item name="colorAccent">@color/md_lime_600</item>
+    </style>
+    <style name="AppTheme.Lime_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_lime_700</item>
+        <item name="colorPrimaryDark">@color/md_lime_700_dark</item>
+        <item name="colorAccent">@color/md_lime_700</item>
+    </style>
+    <style name="AppTheme.Lime_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_lime_800</item>
+        <item name="colorPrimaryDark">@color/md_lime_800_dark</item>
+        <item name="colorAccent">@color/md_lime_800</item>
+    </style>
+    <style name="AppTheme.Lime_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_lime_900</item>
+        <item name="colorPrimaryDark">@color/md_lime_900_dark</item>
+        <item name="colorAccent">@color/md_lime_900</item>
+    </style>
+    <style name="AppTheme.Orange_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_orange_100</item>
+        <item name="colorPrimaryDark">@color/md_orange_100_dark</item>
+        <item name="colorAccent">@color/md_orange_100</item>
+    </style>
+    <style name="AppTheme.Orange_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_orange_200</item>
+        <item name="colorPrimaryDark">@color/md_orange_200_dark</item>
+        <item name="colorAccent">@color/md_orange_200</item>
+    </style>
+    <style name="AppTheme.Orange_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_orange_300</item>
+        <item name="colorPrimaryDark">@color/md_orange_300_dark</item>
+        <item name="colorAccent">@color/md_orange_300</item>
+    </style>
+    <style name="AppTheme.Orange_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_orange_400</item>
+        <item name="colorPrimaryDark">@color/md_orange_400_dark</item>
+        <item name="colorAccent">@color/md_orange_400</item>
+    </style>
+    <style name="AppTheme.Orange_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_orange_500</item>
+        <item name="colorPrimaryDark">@color/md_orange_500_dark</item>
+        <item name="colorAccent">@color/md_orange_500</item>
+    </style>
+    <style name="AppTheme.Orange_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_orange_600</item>
+        <item name="colorPrimaryDark">@color/md_orange_600_dark</item>
+        <item name="colorAccent">@color/md_orange_600</item>
+    </style>
+    <style name="AppTheme.Orange_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_orange_700</item>
+        <item name="colorPrimaryDark">@color/md_orange_700_dark</item>
+        <item name="colorAccent">@color/md_orange_700</item>
+    </style>
+    <style name="AppTheme.Orange_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_orange_800</item>
+        <item name="colorPrimaryDark">@color/md_orange_800_dark</item>
+        <item name="colorAccent">@color/md_orange_800</item>
+    </style>
+    <style name="AppTheme.Orange_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_orange_900</item>
+        <item name="colorPrimaryDark">@color/md_orange_900_dark</item>
+        <item name="colorAccent">@color/md_orange_900</item>
+    </style>
+    <style name="AppTheme.Pink_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_pink_100</item>
+        <item name="colorPrimaryDark">@color/md_pink_100_dark</item>
+        <item name="colorAccent">@color/md_pink_100</item>
+    </style>
+    <style name="AppTheme.Pink_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_pink_200</item>
+        <item name="colorPrimaryDark">@color/md_pink_200_dark</item>
+        <item name="colorAccent">@color/md_pink_200</item>
+    </style>
+    <style name="AppTheme.Pink_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_pink_300</item>
+        <item name="colorPrimaryDark">@color/md_pink_300_dark</item>
+        <item name="colorAccent">@color/md_pink_300</item>
+    </style>
+    <style name="AppTheme.Pink_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_pink_400</item>
+        <item name="colorPrimaryDark">@color/md_pink_400_dark</item>
+        <item name="colorAccent">@color/md_pink_400</item>
+    </style>
+    <style name="AppTheme.Pink_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_pink_500</item>
+        <item name="colorPrimaryDark">@color/md_pink_500_dark</item>
+        <item name="colorAccent">@color/md_pink_500</item>
+    </style>
+    <style name="AppTheme.Pink_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_pink_600</item>
+        <item name="colorPrimaryDark">@color/md_pink_600_dark</item>
+        <item name="colorAccent">@color/md_pink_600</item>
+    </style>
+    <style name="AppTheme.Pink_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_pink_700</item>
+        <item name="colorPrimaryDark">@color/md_pink_700_dark</item>
+        <item name="colorAccent">@color/md_pink_700</item>
+    </style>
+    <style name="AppTheme.Pink_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_pink_800</item>
+        <item name="colorPrimaryDark">@color/md_pink_800_dark</item>
+        <item name="colorAccent">@color/md_pink_800</item>
+    </style>
+    <style name="AppTheme.Pink_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_pink_900</item>
+        <item name="colorPrimaryDark">@color/md_pink_900_dark</item>
+        <item name="colorAccent">@color/md_pink_900</item>
+    </style>
+    <style name="AppTheme.Purple_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_purple_100</item>
+        <item name="colorPrimaryDark">@color/md_purple_100_dark</item>
+        <item name="colorAccent">@color/md_purple_100</item>
+    </style>
+    <style name="AppTheme.Purple_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_purple_200</item>
+        <item name="colorPrimaryDark">@color/md_purple_200_dark</item>
+        <item name="colorAccent">@color/md_purple_200</item>
+    </style>
+    <style name="AppTheme.Purple_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_purple_300</item>
+        <item name="colorPrimaryDark">@color/md_purple_300_dark</item>
+        <item name="colorAccent">@color/md_purple_300</item>
+    </style>
+    <style name="AppTheme.Purple_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_purple_400</item>
+        <item name="colorPrimaryDark">@color/md_purple_400_dark</item>
+        <item name="colorAccent">@color/md_purple_400</item>
+    </style>
+    <style name="AppTheme.Purple_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_purple_500</item>
+        <item name="colorPrimaryDark">@color/md_purple_500_dark</item>
+        <item name="colorAccent">@color/md_purple_500</item>
+    </style>
+    <style name="AppTheme.Purple_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_purple_600</item>
+        <item name="colorPrimaryDark">@color/md_purple_600_dark</item>
+        <item name="colorAccent">@color/md_purple_600</item>
+    </style>
+    <style name="AppTheme.Purple_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_purple_700</item>
+        <item name="colorPrimaryDark">@color/md_purple_700_dark</item>
+        <item name="colorAccent">@color/md_purple_700</item>
+    </style>
+    <style name="AppTheme.Purple_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_purple_800</item>
+        <item name="colorPrimaryDark">@color/md_purple_800_dark</item>
+        <item name="colorAccent">@color/md_purple_800</item>
+    </style>
+    <style name="AppTheme.Purple_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_purple_900</item>
+        <item name="colorPrimaryDark">@color/md_purple_900_dark</item>
+        <item name="colorAccent">@color/md_purple_900</item>
+    </style>
+    <style name="AppTheme.Red_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_red_100</item>
+        <item name="colorPrimaryDark">@color/md_red_100_dark</item>
+        <item name="colorAccent">@color/md_red_100</item>
+    </style>
+    <style name="AppTheme.Red_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_red_200</item>
+        <item name="colorPrimaryDark">@color/md_red_200_dark</item>
+        <item name="colorAccent">@color/md_red_200</item>
+    </style>
+    <style name="AppTheme.Red_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_red_300</item>
+        <item name="colorPrimaryDark">@color/md_red_300_dark</item>
+        <item name="colorAccent">@color/md_red_300</item>
+    </style>
+    <style name="AppTheme.Red_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_red_400</item>
+        <item name="colorPrimaryDark">@color/md_red_400_dark</item>
+        <item name="colorAccent">@color/md_red_400</item>
+    </style>
+    <style name="AppTheme.Red_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_red_500</item>
+        <item name="colorPrimaryDark">@color/md_red_500_dark</item>
+        <item name="colorAccent">@color/md_red_500</item>
+    </style>
+    <style name="AppTheme.Red_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_red_600</item>
+        <item name="colorPrimaryDark">@color/md_red_600_dark</item>
+        <item name="colorAccent">@color/md_red_600</item>
+    </style>
+    <style name="AppTheme.Red_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_red_700</item>
+        <item name="colorPrimaryDark">@color/md_red_700_dark</item>
+        <item name="colorAccent">@color/md_red_700</item>
+    </style>
+    <style name="AppTheme.Red_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_red_800</item>
+        <item name="colorPrimaryDark">@color/md_red_800_dark</item>
+        <item name="colorAccent">@color/md_red_800</item>
+    </style>
+    <style name="AppTheme.Red_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_red_900</item>
+        <item name="colorPrimaryDark">@color/md_red_900_dark</item>
+        <item name="colorAccent">@color/md_red_900</item>
+    </style>
+    <style name="AppTheme.Teal_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_teal_100</item>
+        <item name="colorPrimaryDark">@color/md_teal_100_dark</item>
+        <item name="colorAccent">@color/md_teal_100</item>
+    </style>
+    <style name="AppTheme.Teal_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_teal_200</item>
+        <item name="colorPrimaryDark">@color/md_teal_200_dark</item>
+        <item name="colorAccent">@color/md_teal_200</item>
+    </style>
+    <style name="AppTheme.Teal_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_teal_300</item>
+        <item name="colorPrimaryDark">@color/md_teal_300_dark</item>
+        <item name="colorAccent">@color/md_teal_300</item>
+    </style>
+    <style name="AppTheme.Teal_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_teal_400</item>
+        <item name="colorPrimaryDark">@color/md_teal_400_dark</item>
+        <item name="colorAccent">@color/md_teal_400</item>
+    </style>
+    <style name="AppTheme.Teal_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_teal_500</item>
+        <item name="colorPrimaryDark">@color/md_teal_500_dark</item>
+        <item name="colorAccent">@color/md_teal_500</item>
+    </style>
+    <style name="AppTheme.Teal_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_teal_600</item>
+        <item name="colorPrimaryDark">@color/md_teal_600_dark</item>
+        <item name="colorAccent">@color/md_teal_600</item>
+    </style>
+    <style name="AppTheme.Teal_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_teal_700</item>
+        <item name="colorPrimaryDark">@color/md_teal_700_dark</item>
+        <item name="colorAccent">@color/md_teal_700</item>
+    </style>
+    <style name="AppTheme.Teal_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_teal_800</item>
+        <item name="colorPrimaryDark">@color/md_teal_800_dark</item>
+        <item name="colorAccent">@color/md_teal_800</item>
+    </style>
+    <style name="AppTheme.Teal_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_teal_900</item>
+        <item name="colorPrimaryDark">@color/md_teal_900_dark</item>
+        <item name="colorAccent">@color/md_teal_900</item>
+    </style>
+    <style name="AppTheme.Yellow_100" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_yellow_100</item>
+        <item name="colorPrimaryDark">@color/md_yellow_100_dark</item>
+        <item name="colorAccent">@color/md_yellow_100</item>
+    </style>
+    <style name="AppTheme.Yellow_200" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_yellow_200</item>
+        <item name="colorPrimaryDark">@color/md_yellow_200_dark</item>
+        <item name="colorAccent">@color/md_yellow_200</item>
+    </style>
+    <style name="AppTheme.Yellow_300" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_yellow_300</item>
+        <item name="colorPrimaryDark">@color/md_yellow_300_dark</item>
+        <item name="colorAccent">@color/md_yellow_300</item>
+    </style>
+    <style name="AppTheme.Yellow_400" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_yellow_400</item>
+        <item name="colorPrimaryDark">@color/md_yellow_400_dark</item>
+        <item name="colorAccent">@color/md_yellow_400</item>
+    </style>
+    <style name="AppTheme.Yellow_500" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_yellow_500</item>
+        <item name="colorPrimaryDark">@color/md_yellow_500_dark</item>
+        <item name="colorAccent">@color/md_yellow_500</item>
+    </style>
+    <style name="AppTheme.Yellow_600" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_yellow_600</item>
+        <item name="colorPrimaryDark">@color/md_yellow_600_dark</item>
+        <item name="colorAccent">@color/md_yellow_600</item>
+    </style>
+    <style name="AppTheme.Yellow_700" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_yellow_700</item>
+        <item name="colorPrimaryDark">@color/md_yellow_700_dark</item>
+        <item name="colorAccent">@color/md_yellow_700</item>
+    </style>
+    <style name="AppTheme.Yellow_800" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_yellow_800</item>
+        <item name="colorPrimaryDark">@color/md_yellow_800_dark</item>
+        <item name="colorAccent">@color/md_yellow_800</item>
+    </style>
+    <style name="AppTheme.Yellow_900" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_yellow_900</item>
+        <item name="colorPrimaryDark">@color/md_yellow_900_dark</item>
+        <item name="colorAccent">@color/md_yellow_900</item>
+    </style>
+    <style name="MyBorderlessBackgroundStyle">
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/color_primary</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="MyDialogTheme.Dark" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/color_primary</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackground">@color/theme_dark_background_color</item>
+    </style>
+    <style name="MyTransparentButton" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="background">@drawable/transparent_button</item>
+        <item name="android:background">@drawable/transparent_button</item>
+    </style>
+    <style name="MyWidgetConfigTheme" parent="@style/AppTheme.Base">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+    <style name="PinNumberStyle" parent="PinNumberStyle.Base">
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+    <style name="PinNumberStyle.Base">
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/small_margin</item>
+        <item name="android:textSize">@dimen/big_text_size</item>
+    </style>
+    <style name="SpinnerItem" parent="@android:style/Widget.TextView">
+        <item name="android:paddingRight">@dimen/activity_margin</item>
+    </style>
+    <style name="SpinnerItem.DropDownItem" parent="@android:style/Widget.TextView">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">@dimen/medium_margin</item>
+        <item name="android:paddingBottom">@dimen/medium_margin</item>
+        <item name="android:paddingLeft">@dimen/activity_margin</item>
+        <item name="android:paddingRight">@dimen/activity_margin</item>
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+</resources>
