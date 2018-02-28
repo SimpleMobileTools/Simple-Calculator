@@ -235,7 +235,7 @@
     <color name="color_primary">#FF1A475C</color>
     <color name="color_primary_dark">#FF1A475C</color>
     <color name="default_background_color">#FF1A475C</color>
-    <color name="default_text_color">@color/md_green</color>
+    <color name="default_text_color">@color/white</color>
     <color name="divider_strong">#88cccccc</color>
     <color name="divider_weak">#44cccccc</color>
     <color name="gradient_grey_start">#AA000000</color>
