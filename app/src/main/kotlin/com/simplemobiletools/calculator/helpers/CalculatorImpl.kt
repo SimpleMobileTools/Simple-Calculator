@@ -2,73 +2,65 @@ package com.simplemobiletools.calculator.helpers
 import android.content.Context
 import android.widget.Toast
 import com.simplemobiletools.calculator.R
+import com.simplemobiletools.calculator.helpers.CONSTANT.COSINE
 import com.simplemobiletools.calculator.javaluator.*
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIGIT
 import com.simplemobiletools.calculator.helpers.CONSTANT.DIVIDE
 import com.simplemobiletools.calculator.helpers.CONSTANT.EQUALS
 import com.simplemobiletools.calculator.helpers.CONSTANT.ERROR_READ_VALUE
 import com.simplemobiletools.calculator.helpers.CONSTANT.ERROR_SAVE_VALUE
-import com.simplemobiletools.calculator.helpers.CONSTANT.HISTORY_FILE
 import com.simplemobiletools.calculator.helpers.CONSTANT.LEFT_BRACKET
+import com.simplemobiletools.calculator.helpers.CONSTANT.LOGARITHM
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_THREE
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_TWO
 import com.simplemobiletools.calculator.helpers.CONSTANT.MINUS
 import com.simplemobiletools.calculator.helpers.CONSTANT.MODULO
 import com.simplemobiletools.calculator.helpers.CONSTANT.MULTIPLY
+import com.simplemobiletools.calculator.helpers.CONSTANT.NATURAL_LOGARITHM
+import com.simplemobiletools.calculator.helpers.CONSTANT.PI
 import com.simplemobiletools.calculator.helpers.CONSTANT.PLUS
 import com.simplemobiletools.calculator.helpers.CONSTANT.POWER
 import com.simplemobiletools.calculator.helpers.CONSTANT.RIGHT_BRACKET
 import com.simplemobiletools.calculator.helpers.CONSTANT.ROOT
-import com.simplemobiletools.calculator.helpers.CONSTANT.TEMP_FILE
-import java.io.*
+import com.simplemobiletools.calculator.helpers.CONSTANT.SINE
+import com.simplemobiletools.calculator.helpers.CONSTANT.TANGENT
+import java.io.File
 
-//TODO: Allow number to be placed immediately before opened bracket. 4(3+3) should work.
-class CalculatorImpl(calculator: Calculator, val context: Context) {
-    var displayedNumber: String? = null
-    var displayedFormula: String? = null
-    var lastKey: String? = null
-    private var mLastOperation: String? = null
+class CalculatorImpl(calculator: Calculator, private val context: Context) {
+    var displayedFormula: String
+    var displayedNumber: String
+    var lastKey: String
+    private var canUseDecimal: Boolean
     private var mCallback: Calculator? = calculator
-    private var mIsFirstOperation = false
-    private var mResetValue = false
-    private var mBaseValue = 0.0
-    private var mSecondValue = 0.0
     private var mSavedValue1: File
     private var mSavedValue2: File
     private var mSavedValue3: File
-    private var mEquationHistory: File
-    private var mResultHistory: File
-    private var fileManager: FileHandler = FileHandler(calculator, context)
+
+
+    //If any listOfSpecialLastEntries precedes listOfSpecialOperations, automatically add a * in between them. 4pi = 4*pi.
+    //See implementation in fun handleOperation(operation: String)
+    private val listOfSpecialLastEntries = listOf(DIGIT, PI, RIGHT_BRACKET)
+    private val listOfSpecialOperations = listOf(LEFT_BRACKET, PI, SINE, COSINE,  TANGENT,
+                                                    LOGARITHM, NATURAL_LOGARITHM)
+
+    //Every time a digit or operation is entered, we keep track of the length. In this way, when we
+    //delete digits or operations, our program will automatically delete the appropriate amount of
+    //characters in the formula string. Example: sin(90) would delete in the following order: ) ->
+    //0 -> 9 -> sin( ... This prevents user's from deleting an operation one letter at a time.
+    private val listOfInputLengths = mutableListOf<Int>()
 
     init {
-        resetValues()
-        setValue("0")
-        setFormula("")
-        mSavedValue1 = fileManager.chooseFileType(TEMP_FILE, "one")
-        mSavedValue2 = fileManager.chooseFileType(TEMP_FILE, "two")
-        mSavedValue3 = fileManager.chooseFileType(TEMP_FILE, "three")
-        mEquationHistory = fileManager.chooseFileType(HISTORY_FILE, "History")
-        mResultHistory = fileManager.chooseFileType(HISTORY_FILE, "Results")
-    }
-
-    private fun resetValueIfNeeded() {
-        if (mResetValue)
-            displayedNumber = "0"
-
-        mResetValue = false
-    }
-
-    private fun resetValues() {
-        mBaseValue = 0.0
-        mSecondValue = 0.0
-        mResetValue = false
-        mLastOperation = ""
-        displayedNumber = ""
         displayedFormula = ""
-        mIsFirstOperation = true
+        displayedNumber = ""
         lastKey = ""
-
+        canUseDecimal = true
+        mSavedValue1 = createTempFile("one",".tmp")
+        mSavedValue2 = createTempFile("two",".tmp")
+        mSavedValue3 = createTempFile("three",".tmp")
+        mSavedValue1.deleteOnExit()
+        mSavedValue2.deleteOnExit()
+        mSavedValue3.deleteOnExit()
     }
 
     fun setValue(value: String) {
@@ -83,57 +75,45 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun addDigit(number: Int) {
-        val currentValue = displayedNumber
-        val newValue = formatString(currentValue!! + number)
-        setValue(newValue)
         setFormula(number.toString())
-    }
-
-    private fun formatString(str: String): String {
-        // if the number contains a decimal, do not try removing the leading zero anymore, nor add group separator
-        // it would prevent writing values like 1.02
-        if (str.contains(".")) {
-            return str
-        }
-
-        val doubleValue = Formatter.stringToDouble(str)
-        return Formatter.doubleToString(doubleValue)
     }
 
     private fun updateResult(value: Double) {
         setValue(Formatter.doubleToString(value))
-        mBaseValue = value
     }
 
     private fun calculateResult(str: String) {
-
         val evaluator = DoubleEvaluator()
-        val expression = str
         try {
-            val result = evaluator.evaluate(expression)
+            val result = evaluator.evaluate(str)
             updateResult(result)
-            storeResult(result.toString())
         } catch (e: IllegalArgumentException) {
             throw e
         }
-        mIsFirstOperation = false
     }
 
     fun handleOperation(operation : String) {
-
+        //if the last character of our formula is a digit and an operation is called from the list,
+        //then add a multiplication before the operation
+        if(displayedFormula.isNotEmpty()){
+            if(listOfSpecialOperations.contains(operation) && listOfSpecialLastEntries.contains(lastKey)) {
+                setFormula("*")
+                listOfInputLengths.add(1)
+            }
+        }
+        listOfInputLengths.add(getSign(operation).length)
         setFormula(getSign(operation))
-        mResetValue = true
+        canUseDecimal = true
         lastKey = operation
-        mLastOperation = operation
     }
-    //TODO Finish the implementation
+
     fun handleStore(value : String, id: String) {
         if (lastKey == EQUALS && displayedNumber != "") {
             when (id) {
                 //SetFormula: small text, SetValue BIG TEXT
-                MEMORY_ONE -> { mSavedValue1!!.writeText(value); setFormula(""); setValue(value) }
-                MEMORY_TWO -> { mSavedValue2!!.writeText(value); setFormula(""); setValue(value)}
-                MEMORY_THREE -> { mSavedValue3!!.writeText(value); setFormula(""); setValue(value) }
+                MEMORY_ONE -> { mSavedValue1.writeText(value); setFormula(""); setValue(value) }
+                MEMORY_TWO -> { mSavedValue2.writeText(value); setFormula(""); setValue(value)}
+                MEMORY_THREE -> { mSavedValue3.writeText(value); setFormula(""); setValue(value) }
             }
         }
         else {
@@ -143,31 +123,29 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun handleViewValue(id: String) {
-        val message: Toast?
         val variable: String?
-
         when (id) {
-            MEMORY_ONE -> { variable = mSavedValue1!!.readText()
+            MEMORY_ONE -> { variable = mSavedValue1.readText()
                 if(variable == "") {
-                    message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    val message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
                     message.show()
                 }
                 else {
                     setFormula(variable)
                 }
             }
-            MEMORY_TWO -> { variable = mSavedValue2!!.readText()
+            MEMORY_TWO -> { variable = mSavedValue2.readText()
                 if(variable == "") {
-                    message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    val message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
                     message.show()
                 }
                 else {
                     setFormula(variable)
                 }
             }
-            MEMORY_THREE -> { variable = mSavedValue3!!.readText();
+            MEMORY_THREE -> { variable = mSavedValue3.readText()
                 if(variable == "") {
-                    message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
+                    val message = Toast.makeText(context, ERROR_READ_VALUE, Toast.LENGTH_SHORT)
                     message.show()
                 }
                 else {
@@ -178,14 +156,12 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun handleClear(formula : String) {
-
-        val oldValue = formula
-        val len = oldValue!!.length
-        var newValue = "0"
-        if(formula!!.length > 0)
+        val newValue: String
+        if(formula.isNotEmpty())
         {
-            var lastChar = oldValue.takeLast(1);
-            newValue = oldValue.substring(0, len - 1)
+            val removeThisManyCharacters = listOfInputLengths[listOfInputLengths.size - 1]
+            newValue = formula.substring(0, (formula.length - removeThisManyCharacters))
+            listOfInputLengths.removeAt(listOfInputLengths.size - 1)
             setFormula("")
             setFormula(newValue)
             setValue("")
@@ -193,70 +169,24 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun handleReset() {
-        resetValues()
-        setValue("0")
+        lastKey = ""
+        canUseDecimal = true
+        setValue("")
         setFormula("")
     }
 
     fun handleEquals(str: String) {
         calculateResult(str)
-        storeHistory(str)
         lastKey = EQUALS
     }
 
-    //TODO: Finish history method that stores the information with the fie explorer
-    private fun storeHistory(equation: String) {
-        val write: Writer = BufferedWriter(FileWriter(mEquationHistory, true))
-        write.write(equation)
-        write.appendln()
-        write.flush()
-        write.close()
-    }
-
-    //TODO: Finish the results history section
-    private fun storeResult(result: String) {
-        val writer: Writer = BufferedWriter(FileWriter(mResultHistory, true))
-        writer.write(result)
-        writer.appendln()
-        writer.flush()
-        writer.close()
-    }
-
-    fun getHistoryEntries(): ArrayList<String> {
-        val reader: Reader = BufferedReader(FileReader(mEquationHistory))
-        val list: ArrayList<String> = ArrayList()
-        reader.forEachLine {
-            list.add(it)
-        }
-        reader.close()
-        return list
-    }
-
-    fun getResults(): ArrayList<String> {
-        val reader: Reader = BufferedReader(FileReader(mResultHistory))
-        val list: ArrayList<String> = ArrayList()
-        reader.forEachLine {
-            list.add(it)
-        }
-        reader.close()
-        return list
-    }
-
     private fun decimalClicked() {
-        var value = displayedNumber
-        if (!value!!.contains(".")) {
-            value += "."
+        if(canUseDecimal)
             setFormula(".")
-        }
-        setValue(value)
+            canUseDecimal = false
     }
 
-    private fun zeroClicked() {
-        val value = displayedNumber
-        if (value != "0")
-            addDigit(0)
-    }
-
+    //TODO: implement PLUS_MINUS
     private fun getSign(lastOperation: String?) = when (lastOperation) {
         PLUS -> "+"
         MINUS -> "-"
@@ -267,20 +197,21 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         ROOT -> "^.5"
         LEFT_BRACKET -> "("
         RIGHT_BRACKET -> ")"
+        PI -> "pi"
+        SINE -> "sin("
+        COSINE -> "cos("
+        TANGENT -> "tan("
+        LOGARITHM -> "log("
+        NATURAL_LOGARITHM -> "ln("
         else -> ""
     }
 
     fun numpadClicked(id: Int) {
-        if (lastKey == EQUALS) {
-            mLastOperation = EQUALS
-        }
-
+        listOfInputLengths.add(1)
         lastKey = DIGIT
-        resetValueIfNeeded()
-
         when (id) {
             R.id.btn_decimal -> decimalClicked()
-            R.id.btn_0 -> zeroClicked()
+            R.id.btn_0 -> addDigit(0)
             R.id.btn_1 -> addDigit(1)
             R.id.btn_2 -> addDigit(2)
             R.id.btn_3 -> addDigit(3)
@@ -293,23 +224,9 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         }
     }
 
-    fun getHistoryFile() : File {
-        return mEquationHistory
+    //TODO: Implement reciprocal on final answer
+    /*
+    fun resultModifier(){
     }
-
-    fun getResultFile() : File {
-        return mResultHistory
-    }
-
-    fun setHistoryFile(file : File) {
-        mEquationHistory = file
-    }
-
-    fun setResultFile(file : File) {
-        mResultHistory = file
-    }
-
-    fun getFileManager() : FileHandler {
-        return fileManager
-    }
+    */
 }

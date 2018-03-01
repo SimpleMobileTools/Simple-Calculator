@@ -236,17 +236,17 @@ public abstract class AbstractEvaluator<T> {
 			if (token.isOpenBracket()) {
 				// If the token is a left parenthesis, then push it onto the stack.
 				stack.push(token);
-				if (previous!=null && previous.isFunction()) {
+				if (previous != null && previous.isFunction()) {
 					if (!functionBrackets.containsKey(token.getBrackets().getOpen())) {
-						throw new IllegalArgumentException("Invalid bracket after function: "+strToken);
+						throw new IllegalArgumentException("Invalid bracket after function: " + strToken);
 					}
 				} else {
 					if (!expressionBrackets.containsKey(token.getBrackets().getOpen())) {
-						throw new IllegalArgumentException("Invalid bracket in expression: "+strToken);
+						throw new IllegalArgumentException("Invalid bracket in expression: " + strToken);
 					}
 				}
 			} else if (token.isCloseBracket()) {
-				if (previous==null) {
+				if (previous == null) {
 					throw new IllegalArgumentException("expression can't start with a close bracket");
 				}
 				if (previous.isFunctionArgumentSeparator()) {
@@ -264,7 +264,7 @@ public abstract class AbstractEvaluator<T> {
 							openBracketFound = true;
 							break;
 						} else {
-							throw new IllegalArgumentException("Invalid parenthesis match "+sc.getBrackets().getOpen()+brackets.getClose());
+							throw new IllegalArgumentException("Invalid parenthesis match " + sc.getBrackets().getOpen() + brackets.getClose());
 						}
 					} else {
 						output(values, sc, evaluationContext);
@@ -278,11 +278,11 @@ public abstract class AbstractEvaluator<T> {
 				if (!stack.isEmpty() && stack.peek().isFunction()) {
 					// If the token at the top of the stack is a function token, pop it
 					// onto the output queue.
-					int argCount = values.size()-previousValuesSize.pop();
-					doFunction(values, (Function)stack.pop().getFunction(), argCount, evaluationContext);
+					int argCount = values.size() - previousValuesSize.pop();
+					doFunction(values, (Function) stack.pop().getFunction(), argCount, evaluationContext);
 				}
 			} else if (token.isFunctionArgumentSeparator()) {
-				if (previous==null) {
+				if (previous == null) {
 					throw new IllegalArgumentException("expression can't start with a function argument separator");
 				}
 				// Verify that there was an argument before this separator
@@ -325,7 +325,7 @@ public abstract class AbstractEvaluator<T> {
 					// If 2 operators have equal priority then associativity decides.
 					if (sc.isOperator()
 							&& ((token.getAssociativity().equals(Operator.Associativity.LEFT) && (token.getPrecedence() <= sc.getPrecedence())) ||
-									(token.getPrecedence() < sc.getPrecedence()))) {
+							(token.getPrecedence() < sc.getPrecedence()))) {
 						// Pop o2 off the stack, onto the output queue;
 						output(values, stack.pop(), evaluationContext);
 					} else {

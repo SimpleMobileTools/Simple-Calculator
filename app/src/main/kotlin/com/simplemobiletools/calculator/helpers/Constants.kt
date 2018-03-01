@@ -1,6 +1,7 @@
 package com.simplemobiletools.calculator.helpers
 
 object CONSTANT {
+    //math constants
     const val DIGIT = "digit"
     const val EQUALS = "equals"
     const val PLUS = "plus"
@@ -10,24 +11,19 @@ object CONSTANT {
     const val MODULO = "modulo"
     const val POWER = "power"
     const val ROOT = "root"
-    const val DECIMAL = "decimal"
-    const val CLEAR = "clear"
-    const val RESET = "reset"
-    const val LEFT_BRACKET = "leftBracket"
-    const val RIGHT_BRACKET = "rightBracket"
+    const val LEFT_BRACKET = "left_bracket"
+    const val RIGHT_BRACKET = "right_bracket"
+    const val SHIFT = "shift"
+    const val PI = "pi"
+    const val SINE = "sine"
+    const val COSINE = "cosine"
+    const val TANGENT = "tangent"
+    const val RECIPROCAL = "reciprocal"
+    const val LOGARITHM = "logarithm"
+    const val PLUS_MINUS = "plus_minus"
+    const val NATURAL_LOGARITHM = "natural_logarithm"
 
-    const val NAN = "NaN"
-    const val ZERO = "zero"
-    const val ONE = "one"
-    const val TWO = "two"
-    const val THREE = "three"
-    const val FOUR = "four"
-    const val FIVE = "five"
-    const val SIX = "six"
-    const val SEVEN = "seven"
-    const val EIGHT = "eight"
-    const val NINE = "nine"
-
+    // memory constants
     const val MEMORY_ONE = "one"
     const val MEMORY_TWO = "two"
     const val MEMORY_THREE = "three"
