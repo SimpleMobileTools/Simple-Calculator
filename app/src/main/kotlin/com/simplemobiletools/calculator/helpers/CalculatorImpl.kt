@@ -106,6 +106,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
                 listOfInputLengths.add(1)
             }
         }
+        listOfInputLengths.add(getSign(operation).length)
         setFormula(getSign(operation))
         canUseDecimal = true
         lastKey = operation
