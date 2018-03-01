@@ -1,10 +1,7 @@
 <resources>
-
-    <style name="MyButton" parent="Widget.AppCompat.Button">
-        <item name="android:textColor">@color/color_primary</item>
-        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
-        <item name="android:textSize">@dimen/button_text_size</item>
-        <item name="android:fontFamily">sans-serif-light</item>
+    <style name="MyButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:colorButtonNormal">@color/white</item>
     </style>
 
 </resources>

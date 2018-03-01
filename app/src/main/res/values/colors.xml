@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="dark_grey_pressed_mask">#11000000</color>
+
+    <!--<color name="dark_grey_pressed_mask">#11000000</color> -->
+    <color name="noah_1">#ec4c77</color>
+    <color name="noah_2">#b5b5b5</color>
+    <color name="noah_3">#9b9b9b</color>
+    <color name="noah_4">#0b2433</color>
+    <color name="noah_5">#ffc928</color>
+    <color name="noah_6">#1a475c</color>
 </resources>

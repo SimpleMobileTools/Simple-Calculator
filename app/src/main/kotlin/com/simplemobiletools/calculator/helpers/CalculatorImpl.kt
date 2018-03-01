@@ -28,21 +28,19 @@ import com.simplemobiletools.calculator.helpers.CONSTANT.TANGENT
 import java.io.File
 
 class CalculatorImpl(calculator: Calculator, private val context: Context) {
-    var displayedNumber: String? = null
-    var displayedFormula: String? = null
-    var lastKey: String? = null
-    private var mLastOperation: String? = null
+    var displayedFormula: String
+    var displayedNumber: String
+    var lastKey: String
+    private var canUseDecimal: Boolean
     private var mCallback: Calculator? = calculator
-    private var mIsFirstOperation = false
-    private var mResetValue = false
-    private var mBaseValue = 0.0
-    private var mSecondValue = 0.0
     private var mSavedValue1: File
     private var mSavedValue2: File
     private var mSavedValue3: File
 
-    //If any digit precedes these operations, automatically add a * in between them. 4pi = 4*pi.
+
+    //If any listOfSpecialLastEntries precedes listOfSpecialOperations, automatically add a * in between them. 4pi = 4*pi.
     //See implementation in fun handleOperation(operation: String)
+    private val listOfSpecialLastEntries = listOf(DIGIT, PI, RIGHT_BRACKET)
     private val listOfSpecialOperations = listOf(LEFT_BRACKET, PI, SINE, COSINE,  TANGENT,
                                                     LOGARITHM, NATURAL_LOGARITHM)
 
@@ -53,35 +51,16 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private val listOfInputLengths = mutableListOf<Int>()
 
     init {
-        resetValues()
-        setValue("")
-        setFormula("")
+        displayedFormula = ""
+        displayedNumber = ""
+        lastKey = ""
+        canUseDecimal = true
         mSavedValue1 = createTempFile("one",".tmp")
         mSavedValue2 = createTempFile("two",".tmp")
         mSavedValue3 = createTempFile("three",".tmp")
         mSavedValue1.deleteOnExit()
         mSavedValue2.deleteOnExit()
         mSavedValue3.deleteOnExit()
-
-    }
-
-    private fun resetValueIfNeeded() {
-        if (mResetValue)
-            displayedNumber = "0"
-
-        mResetValue = false
-    }
-
-    private fun resetValues() {
-        mBaseValue = 0.0
-        mSecondValue = 0.0
-        mResetValue = false
-        mLastOperation = ""
-        displayedNumber = ""
-        displayedFormula = ""
-        mIsFirstOperation = true
-        lastKey = ""
-
     }
 
     fun setValue(value: String) {
@@ -97,12 +76,10 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
     private fun addDigit(number: Int) {
         setFormula(number.toString())
-        listOfInputLengths.add(1)
     }
 
     private fun updateResult(value: Double) {
         setValue(Formatter.doubleToString(value))
-        mBaseValue = value
     }
 
     private fun calculateResult(str: String) {
@@ -113,24 +90,21 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         } catch (e: IllegalArgumentException) {
             throw e
         }
-        mIsFirstOperation = false
     }
 
     fun handleOperation(operation : String) {
         //if the last character of our formula is a digit and an operation is called from the list,
         //then add a multiplication before the operation
-        if(displayedFormula!!.isNotEmpty()){
-            if(listOfSpecialOperations.contains(operation) && (displayedFormula!![displayedFormula!!.length - 1].isDigit())) {
+        if(displayedFormula.isNotEmpty()){
+            if(listOfSpecialOperations.contains(operation) && listOfSpecialLastEntries.contains(lastKey)) {
                 setFormula("*")
                 listOfInputLengths.add(1)
             }
         }
-        setFormula(getSign(operation))
         listOfInputLengths.add(getSign(operation).length)
-
-        mResetValue = true
+        setFormula(getSign(operation))
+        canUseDecimal = true
         lastKey = operation
-        mLastOperation = operation
     }
 
     fun handleStore(value : String, id: String) {
@@ -181,9 +155,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
     }
 
-    //FIX
     fun handleClear(formula : String) {
-
         val newValue: String
         if(formula.isNotEmpty())
         {
@@ -197,7 +169,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun handleReset() {
-        resetValues()
+        lastKey = ""
+        canUseDecimal = true
         setValue("")
         setFormula("")
     }
@@ -208,12 +181,9 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     private fun decimalClicked() {
-        var value = displayedNumber
-        if (!value!!.contains(".")) {
-            value += "."
+        if(canUseDecimal)
             setFormula(".")
-        }
-        setValue(value)
+            canUseDecimal = false
     }
 
     //TODO: implement PLUS_MINUS
@@ -237,13 +207,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun numpadClicked(id: Int) {
-        if (lastKey == EQUALS) {
-            mLastOperation = EQUALS
-        }
-
+        listOfInputLengths.add(1)
         lastKey = DIGIT
-        resetValueIfNeeded()
-
         when (id) {
             R.id.btn_decimal -> decimalClicked()
             R.id.btn_0 -> addDigit(0)
