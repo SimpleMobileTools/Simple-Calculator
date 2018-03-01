@@ -38,8 +38,9 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private var mSavedValue3: File
 
 
-    //If any digit precedes these operations, automatically add a * in between them. 4pi = 4*pi.
+    //If any listOfSpecialLastEntries precedes listOfSpecialOperations, automatically add a * in between them. 4pi = 4*pi.
     //See implementation in fun handleOperation(operation: String)
+    private val listOfSpecialLastEntries = listOf(DIGIT, PI, RIGHT_BRACKET)
     private val listOfSpecialOperations = listOf(LEFT_BRACKET, PI, SINE, COSINE,  TANGENT,
                                                     LOGARITHM, NATURAL_LOGARITHM)
 
@@ -60,12 +61,6 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         mSavedValue1.deleteOnExit()
         mSavedValue2.deleteOnExit()
         mSavedValue3.deleteOnExit()
-    }
-
-    private fun resetValues() {
-        displayedNumber = ""
-        displayedFormula = ""
-        lastKey = ""
     }
 
     fun setValue(value: String) {
@@ -101,7 +96,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         //if the last character of our formula is a digit and an operation is called from the list,
         //then add a multiplication before the operation
         if(displayedFormula.isNotEmpty()){
-            if(listOfSpecialOperations.contains(operation) && (displayedFormula[displayedFormula.length - 1].isDigit())) {
+            if(listOfSpecialOperations.contains(operation) && listOfSpecialLastEntries.contains(lastKey)) {
                 setFormula("*")
                 listOfInputLengths.add(1)
             }
@@ -174,7 +169,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun handleReset() {
-        resetValues()
+        lastKey = ""
+        canUseDecimal = true
         setValue("")
         setFormula("")
     }
