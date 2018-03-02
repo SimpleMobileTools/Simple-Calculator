@@ -11,6 +11,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.mockito.Mockito.*
 import android.content.Context
+import com.simplemobiletools.calculator.helpers.CONSTANT.FILE
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
 import com.simplemobiletools.calculator.helpers.Calculator
 import com.simplemobiletools.calculator.helpers.CalculatorImpl
@@ -118,12 +119,27 @@ class MainActivityTest {
     }
 
     //TODO: Fix loading, test has to read from file. Added local data.json file to use for testing
-    //@Test
+    @Test
     fun storageTest() {
-        val calc = CalculatorImpl(mockCalc,mockContext)
+        val calc = CalculatorImpl(mockCalc, mockContext)
         calc.handleStore("5.0", MEMORY_ONE)
         System.out.println("Loaded: " + calc.displayedNumber)
         calc.handleViewValue(MEMORY_ONE)
         assertEquals("5.0", calc.displayedFormula) //currently loads null
+    }
+
+    @Test
+    fun historyTest() {
+        val calc = CalculatorImpl(mockCalc, mockContext)
+
+        calc.setHistoryFile(calc.getFileManager().chooseFileType(FILE, "/History"))
+        calc.setResultFile(calc.getFileManager().chooseFileType(FILE, "/Results"))
+
+        calc.handleEquals("2+2")
+        val history = calc.getHistoryEntries()
+        val results = calc.getResults()
+        assert(history.contains("2+2"))
+        assert(results.contains("4"))
+
     }
 }

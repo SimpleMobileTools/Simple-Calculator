@@ -1,7 +1,6 @@
 package com.simplemobiletools.calculator.helpers;
 
 import android.content.Context;
-import android.os.Environment;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,10 +17,9 @@ import static com.simplemobiletools.calculator.helpers.CONSTANT.TEMP_FILE;
 public class FileHandler {
     private HashMap<String, File> fileList = new HashMap<>();
     private Context con;
-    private Calculator cal;
 
-    public FileHandler(Calculator calculator, Context context) {
-        this.cal = calculator;
+
+    public FileHandler(Context context) {
         this.con = context;
     }
 
