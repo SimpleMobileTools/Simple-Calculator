@@ -11,6 +11,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.mockito.Mockito.*
 import android.content.Context
+import com.simplemobiletools.calculator.helpers.CONSTANT.EQUALS
 import com.simplemobiletools.calculator.helpers.CONSTANT.FILE
 import com.simplemobiletools.calculator.helpers.CONSTANT.MEMORY_ONE
 import com.simplemobiletools.calculator.helpers.Calculator
@@ -122,6 +123,8 @@ class MainActivityTest {
     @Test
     fun storageTest() {
         val calc = CalculatorImpl(mockCalc, mockContext)
+        calc.displayedNumber = "5.0"
+        calc.lastKey = EQUALS
         calc.handleStore("5.0", MEMORY_ONE)
         System.out.println("Loaded: " + calc.displayedNumber)
         calc.handleViewValue(MEMORY_ONE)
