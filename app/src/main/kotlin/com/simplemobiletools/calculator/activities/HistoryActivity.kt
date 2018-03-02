@@ -27,10 +27,17 @@ class HistoryActivity : SimpleActivity(), Calculator {
         results = calc.getResults()
         equations = calc.getHistoryEntries()
 
-        val equationsText = findViewById<EditText>(R.id.EquationsHistory)
-        val resultsText = findViewById<EditText>(R.id.ResultsHistory)
-
-        //equationsText.setText(equations, 0, equations.size)
+        val equationsText = findViewById<TextView>(R.id.EquationsText)
+        val resultsText = findViewById<TextView>(R.id.ResultsText)
+        var temp1 = "" ; var temp2 = ""
+        results.forEach {
+            temp1 = temp1 + it + "\n"
+        }
+        resultsText.text = temp1
+        equations.forEach {
+            temp2 = temp2 + it + "\n"
+        }
+        equationsText.text = temp2
     }
 
     @SuppressLint("MissingSuperCall")

@@ -62,8 +62,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         mSavedValue1 = fileManager.chooseFileType(TEMP_FILE, "one")
         mSavedValue2 = fileManager.chooseFileType(TEMP_FILE, "two")
         mSavedValue3 = fileManager.chooseFileType(TEMP_FILE, "three")
-        mEquationHistory = fileManager.chooseFileType(FILE, "/History")
-        mResultHistory = fileManager.chooseFileType(FILE, "/Results")
+        mEquationHistory = fileManager.chooseFileType(FILE, "History")
+        mResultHistory = fileManager.chooseFileType(FILE, "Results")
     }
 
     fun setValue(value: String) {

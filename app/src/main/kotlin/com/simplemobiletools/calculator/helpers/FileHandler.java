@@ -74,9 +74,9 @@ public class FileHandler {
             case TEMP_FILE:
                 return createTempFile(path);
             case HISTORY_FILE:
-                return createFile(path, true);
-            case FILE:
                 return createFile(path, false);
+            case FILE:
+                return createFile(path, true);
             default:
                 return null;
         }
