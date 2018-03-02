@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".activities.HistoryActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".activities.HistoryActivity">
 
     <TableLayout
-        android:layout_width="368dp"
-        android:layout_height="495dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
             android:layout_width="match_parent"
@@ -30,40 +38,54 @@
 
     <EditText
         android:id="@+id/Equations"
-        android:layout_width="176dp"
-        android:layout_height="wrap_content"
+        android:layout_width="183dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="1dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:singleLine="false"
         android:text="@string/equations"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/Results"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        android:layout_marginLeft="1dp" />
 
     <EditText
         android:id="@+id/Results"
-        android:layout_width="191dp"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginTop="1dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/results"
-        tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/EquationsHistory"
+        app:layout_constraintTop_toTopOf="@+id/tableLayout"
+        android:layout_marginRight="9dp" />
 
     <EditText
         android:id="@+id/EquationsHistory"
-        android:layout_width="177dp"
+        android:layout_width="0dp"
         android:layout_height="440dp"
+        android:layout_marginStart="8dp"
         android:ems="10"
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="61dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/ResultsHistory"
+        app:layout_constraintEnd_toStartOf="@+id/Results"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="8dp" />
 
     <EditText
         android:id="@+id/ResultsHistory"
-        android:layout_width="189dp"
+        android:layout_width="0dp"
         android:layout_height="440dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="1dp"
         android:ems="10"
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="61dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="@+id/Results"
+        app:layout_constraintStart_toEndOf="@+id/EquationsHistory"
+        android:layout_marginRight="1dp" />
 </android.support.constraint.ConstraintLayout>
