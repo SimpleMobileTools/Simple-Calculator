@@ -49,7 +49,7 @@
 
         <activity
             android:name="com.simplemobiletools.calculator.activities.HistoryActivity"
-            android:label="History"
+            android:label="@string/history"
             android:parentActivityName=".activities.MainActivity"
             android:configChanges="orientation|screenSize"/>
 

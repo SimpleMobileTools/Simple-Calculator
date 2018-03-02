@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".activities.HistoryActivity"
     android:layout_width="match_parent"
@@ -36,7 +35,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:singleLine="false"
-        android:text="Equations"
+        android:text="@string/equations"
         tools:layout_editor_absoluteX="9dp"
         tools:layout_editor_absoluteY="16dp" />
 
@@ -46,7 +45,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Results"
+        android:text="@string/results"
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="16dp" />
 
