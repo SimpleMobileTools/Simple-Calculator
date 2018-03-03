@@ -268,7 +268,7 @@ class MainActivity : SimpleActivity(), Calculator {
         }
     }
 
-    fun String.isNum() = matches(Regex("(([0-9]+)|(,))+"))
+    fun String.isNum() = matches(Regex("(([0-9]+)|(,)|(.))+"))
 
     override fun setValue(value: String, context: Context) {
         result.text = value
