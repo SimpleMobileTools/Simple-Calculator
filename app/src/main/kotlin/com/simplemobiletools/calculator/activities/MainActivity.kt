@@ -1,6 +1,8 @@
 package com.simplemobiletools.calculator.activities
 
 import android.annotation.SuppressLint
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
@@ -99,6 +101,7 @@ class MainActivity : SimpleActivity(), Calculator {
         }
 
         formula.setOnLongClickListener { copyToClipboard(false) }
+        formula.setOnLongClickListener{ pasteFromClipBoard()}
         result.setOnLongClickListener { copyToClipboard(true) }
 
         AutofitHelper.create(result)
@@ -249,6 +252,23 @@ class MainActivity : SimpleActivity(), Calculator {
             true
         }
     }
+
+    private fun pasteFromClipBoard(): Boolean {
+        //check clipboard
+        var clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        if (clipboard.primaryClip.getItemAt(0).coerceToText(this).toString().isNum()){
+            setFormula(clipboard.primaryClip.getItemAt(0).coerceToText(this).toString(), this)
+            Toast.makeText(applicationContext,"Pasted from clipboard", 3).show()
+            return true
+        }
+        else {
+            //do nothing
+
+            return false
+        }
+    }
+
+    fun String.isNum() = matches(Regex("(([0-9]+)|(,))+"))
 
     override fun setValue(value: String, context: Context) {
         result.text = value
