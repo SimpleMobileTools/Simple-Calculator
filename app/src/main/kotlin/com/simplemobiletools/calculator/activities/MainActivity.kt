@@ -258,7 +258,7 @@ class MainActivity : SimpleActivity(), Calculator {
         var clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         if (clipboard.primaryClip.getItemAt(0).coerceToText(this).toString().isNum()){
             setFormula(clipboard.primaryClip.getItemAt(0).coerceToText(this).toString(), this)
-            Toast.makeText(applicationContext,"Pasted from clipboard", 3).show()
+            Toast.makeText(applicationContext,"Pasted from clipboard", Toast.LENGTH_LONG).show()
             return true
         }
         else {
