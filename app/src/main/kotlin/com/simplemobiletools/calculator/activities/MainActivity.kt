@@ -268,7 +268,7 @@ class MainActivity : SimpleActivity(), Calculator {
         }
     }
 
-    fun String.isNum() = matches(Regex("\\d{1}|\\d{2}|\\d{3}(\\d{3},)+(,|)(\\d{1})+"))
+    fun String.isNum() = matches(Regex("\\d{1}|\\d{2}|\\d{3}(\\d{3},)+(.|)(\\d{1})+"))
 
     override fun setValue(value: String, context: Context) {
         result.text = value
