@@ -195,6 +195,29 @@ public class MainActivityTest {
         checkFormula("3.5");
     }
 
+    @Test
+    public void pasteNumTest(){
+        press(R.id.btn_1);
+        press(R.id.btn_2);
+        press(R.id.btn_3);
+        press(R.id.btn_multiply);
+        press(R.id.btn_3);
+        press(R.id.btn_multiply);
+        press(R.id.btn_6);
+        press(R.id.btn_equals);
+        checkResult("2,214");
+        longPress(R.id.result);
+        press(R.id.btn_del);
+        press(R.id.btn_del);
+        press(R.id.btn_del);
+        press(R.id.btn_del);
+        press(R.id.btn_del);
+        press(R.id.btn_del);
+        press(R.id.btn_del);
+        longPress(R.id.formula);
+        checkFormula("2,214");
+    }
+
     private void press(int id) {
         onView(withId(id)).perform(click());
     }
