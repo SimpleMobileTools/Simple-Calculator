@@ -733,6 +733,7 @@
     <string name="email_label">Send your feedback or suggestions to</string>
     <string name="empty_name">Please enter a name</string>
     <string name="enter_pin">Enter PIN</string>
+    <string name="equations">Equations</string>
     <string name="espresso_text">Copyright 2014 The Android Open Source Project\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
     <string name="espresso_title">Espresso (testing helper)</string>
     <string name="espresso_url">https://developer.android.com/training/testing/espresso/index.html</string>
@@ -769,6 +770,7 @@
     <string name="gson_url">https://github.com/google/gson</string>
     <string name="hide">Hide</string>
     <string name="hide_folder">Hide folder</string>
+    <string name="history">History</string>
     <string name="insert_pattern">Insert pattern</string>
     <string name="internal">Internal</string>
     <string name="invalid_destination">Could not write to the selected destination</string>
@@ -869,6 +871,7 @@
     <string name="reprint_url">https://github.com/ajalt/reprint</string>
     <string name="resolution">Resolution</string>
     <string name="restore_defaults">Restore defaults</string>
+    <string name="results">Results</string>
     <string name="robolectric_text">The MIT License\n\nCopyright (c) 2010 Xtreme Labs and Pivotal Labs\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
     <string name="robolectric_title">Robolectric (testing framework)</string>
     <string name="robolectric_url">https://github.com/robolectric/robolectric</string>

@@ -28,6 +28,11 @@ object CONSTANT {
     const val MEMORY_TWO = "two"
     const val MEMORY_THREE = "three"
 
+    //Type of file
+    const val TEMP_FILE = "temp_file"
+    const val HISTORY_FILE = "history_file"
+    const val FILE = "file"
+
     // shared preferences
     const val VIBRATE_ON_BUTTON_PRESS = "vibrate_on_button_press"
 

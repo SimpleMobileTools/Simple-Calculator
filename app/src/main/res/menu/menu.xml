@@ -9,4 +9,8 @@
         android:id="@+id/about"
         android:title="@string/about"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/History"
+        android:title="@string/history"
+        app:showAsAction="never"/>
 </menu>

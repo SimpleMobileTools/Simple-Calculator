@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HistoryActivity">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/Equations"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/equations"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/ResultsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="1dp"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/Results"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/results"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Equations"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="9dp" />
+
+    <TextView
+        android:id="@+id/EquationsText"
+        android:layout_width="0dp"
+        android:layout_height="427dp"
+        android:layout_marginStart="10dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ResultsText"
+        app:layout_constraintEnd_toStartOf="@+id/ResultsText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp"
+        android:maxLines="100"
+        android:gravity="center|top" />
+
+    <TextView
+        android:id="@+id/ResultsText"
+        android:layout_width="0dp"
+        android:layout_height="427dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="9dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/EquationsText"
+        android:layout_marginRight="9dp"
+        android:maxLines="100"
+        android:gravity="center|top" />
+</android.support.constraint.ConstraintLayout>

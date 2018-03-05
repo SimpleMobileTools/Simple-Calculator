@@ -211,6 +211,7 @@ class MainActivity : SimpleActivity(), Calculator {
         when (item.itemId) {
             R.id.settings -> launchSettings()
             R.id.about -> launchAbout()
+            R.id.History -> launchHistory()
             else -> return super.onOptionsItemSelected(item)
         }
         return true
@@ -227,6 +228,10 @@ class MainActivity : SimpleActivity(), Calculator {
         if (vibrateOnButtonPress) {
             view.performHapticFeedback()
         }
+    }
+
+    private fun launchHistory() {
+        startActivity(Intent(applicationContext, HistoryActivity::class.java))
     }
 
     private fun launchSettings() {
