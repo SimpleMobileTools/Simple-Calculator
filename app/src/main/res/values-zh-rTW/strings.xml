@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">簡易計算機</string>
+    <string name="app_launcher_name">簡易計算機</string>
+
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">按下按鈕時震動</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">一個有基本功能和自訂小工具的計算機。</string>
+    <string name="app_long_description">
+        沒有單位轉換器，你可以長按來複製結果或公式到剪貼簿。
+
+        小工具的文字顏色以及背景顏色和透明度，都能夠自訂。按下小工具的結果或公式就能開啟應用程式。
+
+        不包含廣告及非必要的權限，而且完全開放原始碼，並提供自訂顏色。
+		
+        這程式只是一系列眾多應用程式的其中一項，你可以在這發現更多 http://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
