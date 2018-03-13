@@ -1,21 +1,21 @@
 <resources>
-    <string name="app_name">Simple Calculette</string>
-    <string name="app_launcher_name">Calculette</string>
+    <string name="app_name">Simple Calculatrice</string>
+    <string name="app_launcher_name">Calculatrice</string>
 
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="vibrate_on_button_press">Vibrer lors de l\'appui sur les boutons</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Une calculette avec les fonctions de base et un widget customisable.</string>
+    <string name="app_short_description">Une calculatrice avec les fonctions de base et un widget personnalisable.</string>
     <string name="app_long_description">
-        Pas de conversion d\'unité, restez appuyé sur le résultat d\'une formule pour le copier.
+        Cette calculatrice ne permet pas de faire des conversions. Le résultat ou l\'opération peuvent être copiés dans le presse-papier en effectuant un appui long dessus.
 
-        La couleur du texte, du fond et la transparence peuvent être modifiés. Appuyez sur le résultat ou la formule du widget pour ouvrir l\'application.
+        La couleur du texte, du fond et la transparence peuvent être modifiés. Appuyez sur le résultat ou l\'opération du widget pour ouvrir l\'application.
 
-        Pas de pub ou d\'autorisations inutiles. Complètement opensource et fournit un thème sombre.
+        Aucune publicité ou autorisation inutile. Complètement opensource, elle dispose aussi d\'un thème sombre.
 
-        Cette application fait partie d\'une collection, disponibles sur http://www.simplemobiletools.com
+        Cette application fait partie d\'une suite d\'applications, disponible sur http://www.simplemobiletools.com
     </string>
 
     <!--
