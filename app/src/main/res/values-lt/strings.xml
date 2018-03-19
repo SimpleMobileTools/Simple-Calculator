@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Paprastas skaičiuotuvas</string>
+    <string name="app_launcher_name">Skaičiuotuvas</string>
+
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">Vibruoti kai spaudžiami mygtukai</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Skaičiuotuvas su pagrindinėmis funkcijomis ir pritaikomu skydeliu.</string>
+    <string name="app_long_description">
+        Neturi matų konvertuoklio, Jūs galite nukopijuoti rezultatą arba formulę į iškarpinę arba ilgu paspaudimu.
+
+        Valdiklio teksto spalva gali būti pritaikyta, taip pat pagrindinė ir fono spalvos. Spauskite rezultatą arba formulę skydelyje, kad atit]darytumėte programėlę.
+
+        Neturi reklamų ar nereikalingų leidimų. Programėlė visiškai atviro kodo, yra galimybė keisti spalvas.
+
+        Ši programėle yra vienintelė iš keletos mūsų programėlių. Likusias Jūs galite rasti čia http://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
