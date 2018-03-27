@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Jednostavan kalkulator</string>
+    <string name="app_launcher_name">Kalkulator</string>
+
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">Vibriraj prilikom pritiska na gumb</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Kalkulator s osnovnim funkcijama i prilagodljivim widgetom.</string>
+    <string name="app_long_description">
+        Nema pretvarača jedinica, možete kopirati rezultat ili formulu u međuspremnik dugim pritiskom na isto.
+
+        Boja teksta widgeta može se prilagoditi, kao i boju pozadine. Pritisnite rezultat ili formulu u widgetu da biste otvorili aplikaciju.
+
+        Ne sadrži oglase ili nepotrebne dozvole. Aplikacije je otvorenog koda, pruža prilagodljive boje.
+
+        Ova je aplikacija samo dio većeg broja aplikacija. Možete pronaći ostatak na http://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
