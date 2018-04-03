@@ -15,7 +15,6 @@ import com.simplemobiletools.calculator.helpers.*
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
 import com.simplemobiletools.commons.helpers.LICENSE_ESPRESSO
-import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
 import com.simplemobiletools.commons.helpers.LICENSE_ROBOLECTRIC
 import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.Release
@@ -25,7 +24,6 @@ import me.grantland.widget.AutofitHelper
 class MainActivity : SimpleActivity(), Calculator {
     private var storedTextColor = 0
     private var vibrateOnButtonPress = true
-    private var storedUseEnglish = false
 
     lateinit var calc: CalculatorImpl
 
@@ -64,11 +62,6 @@ class MainActivity : SimpleActivity(), Calculator {
 
     override fun onResume() {
         super.onResume()
-        if (storedUseEnglish != config.useEnglish) {
-            restartActivity()
-            return
-        }
-
         if (storedTextColor != config.textColor) {
             updateViewColors(calculator_holder, config.textColor)
         }
@@ -105,7 +98,6 @@ class MainActivity : SimpleActivity(), Calculator {
     private fun storeStateVariables() {
         config.apply {
             storedTextColor = textColor
-            storedUseEnglish = useEnglish
         }
     }
 
@@ -122,11 +114,11 @@ class MainActivity : SimpleActivity(), Calculator {
     private fun launchAbout() {
         val faqItems = arrayListOf(
                 FAQItem(R.string.faq_1_title_commons, R.string.faq_1_text_commons),
-                FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons),
-                FAQItem(R.string.faq_4_title_commons, R.string.faq_4_text_commons)
+                FAQItem(R.string.faq_4_title_commons, R.string.faq_4_text_commons),
+                FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons)
         )
 
-        startAboutActivity(R.string.app_name, LICENSE_KOTLIN or LICENSE_AUTOFITTEXTVIEW or LICENSE_ROBOLECTRIC or LICENSE_ESPRESSO, BuildConfig.VERSION_NAME, faqItems)
+        startAboutActivity(R.string.app_name, LICENSE_AUTOFITTEXTVIEW or LICENSE_ROBOLECTRIC or LICENSE_ESPRESSO, BuildConfig.VERSION_NAME, faqItems)
     }
 
     private fun getButtonIds() = arrayOf(btn_decimal, btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9)
