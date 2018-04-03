@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 3.2.0 *(2018-04-03)*
+----------------------------
+
+ * Replaced Modulo with Percent
+ * Make sure the calculation formula is displayed properly after Root
+
 Version 3.1.2 *(2018-02-27)*
 ----------------------------
 
