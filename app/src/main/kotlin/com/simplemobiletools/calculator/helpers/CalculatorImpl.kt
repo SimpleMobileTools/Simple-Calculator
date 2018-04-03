@@ -98,12 +98,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun calculateResult() {
-        if (!mIsFirstOperation) {
-            updateFormula()
-        }
-
+        updateFormula()
         val operation = OperationFactory.forId(mLastOperation!!, mBaseValue, mSecondValue)
-
         if (operation != null) {
             updateResult(operation.getResult())
         }

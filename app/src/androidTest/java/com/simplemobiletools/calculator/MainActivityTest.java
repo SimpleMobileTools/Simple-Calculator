@@ -158,7 +158,7 @@ public class MainActivityTest {
         press(R.id.btn_2);
         press(R.id.btn_equals);
         checkResult("2");
-        checkFormula("");
+        checkFormula("0+2");
     }
 
     @Test
