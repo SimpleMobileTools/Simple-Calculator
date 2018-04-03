@@ -6,15 +6,15 @@ import com.simplemobiletools.calculator.operation.base.Operation
 object OperationFactory {
 
     fun forId(id: String, baseValue: Double, secondValue: Double): Operation? {
-        when (id) {
-            PLUS -> return PlusOperation(baseValue, secondValue)
-            MINUS -> return MinusOperation(baseValue, secondValue)
-            DIVIDE -> return DivideOperation(baseValue, secondValue)
-            MULTIPLY -> return MultiplyOperation(baseValue, secondValue)
-            MODULO -> return ModuloOperation(baseValue, secondValue)
-            POWER -> return PowerOperation(baseValue, secondValue)
-            ROOT -> return RootOperation(baseValue)
-            else -> return null
+        return when (id) {
+            PLUS -> PlusOperation(baseValue, secondValue)
+            MINUS -> MinusOperation(baseValue, secondValue)
+            DIVIDE -> DivideOperation(baseValue, secondValue)
+            MULTIPLY -> MultiplyOperation(baseValue, secondValue)
+            PERCENT -> PercentOperation(baseValue, secondValue)
+            POWER -> PowerOperation(baseValue, secondValue)
+            ROOT -> RootOperation(baseValue)
+            else -> null
         }
     }
 }

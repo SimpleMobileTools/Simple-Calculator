@@ -38,7 +38,7 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_minus.setOnClickListener { calc.handleOperation(MINUS); checkHaptic(it) }
         btn_multiply.setOnClickListener { calc.handleOperation(MULTIPLY); checkHaptic(it) }
         btn_divide.setOnClickListener { calc.handleOperation(DIVIDE); checkHaptic(it) }
-        btn_modulo.setOnClickListener { calc.handleOperation(MODULO); checkHaptic(it) }
+        btn_percent.setOnClickListener { calc.handleOperation(PERCENT); checkHaptic(it) }
         btn_power.setOnClickListener { calc.handleOperation(POWER); checkHaptic(it) }
         btn_root.setOnClickListener { calc.handleOperation(ROOT); checkHaptic(it) }
 

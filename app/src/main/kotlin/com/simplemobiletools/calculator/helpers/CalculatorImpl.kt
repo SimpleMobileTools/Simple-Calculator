@@ -112,8 +112,9 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun handleOperation(operation: String) {
-        if (lastKey == DIGIT && operation != ROOT)
+        if (lastKey == DIGIT && operation != ROOT) {
             handleResult()
+        }
 
         mResetValue = true
         lastKey = operation
@@ -175,8 +176,9 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     private fun zeroClicked() {
         val value = displayedNumber
-        if (value != "0")
+        if (value != "0") {
             addDigit(0)
+        }
     }
 
     private fun getSign(lastOperation: String?) = when (lastOperation) {
@@ -184,7 +186,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         MINUS -> "-"
         MULTIPLY -> "*"
         DIVIDE -> "/"
-        MODULO -> "%"
+        PERCENT -> "%"
         POWER -> "^"
         ROOT -> "√"
         else -> ""
