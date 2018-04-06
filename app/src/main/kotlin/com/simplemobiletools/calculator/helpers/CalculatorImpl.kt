@@ -1,8 +1,12 @@
 package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
+import android.os.CountDownTimer
+import android.os.Handler
+import android.widget.Toast
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.operation.OperationFactory
+import kotlin.concurrent.timer
 
 class CalculatorImpl(calculator: Calculator, val context: Context) {
     var displayedNumber: String? = null
@@ -97,15 +101,33 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         calculateResult()
     }
 
+
+    fun handleError() {
+        resetValues()
+        setValue("Can't divide by zero")
+        setFormula("")
+    }
+
     private fun calculateResult() {
         updateFormula()
         val operation = OperationFactory.forId(mLastOperation!!, mBaseValue, mSecondValue)
         if (operation != null) {
-            updateResult(operation.getResult())
+            if(mSecondValue==0.0 && mLastOperation== DIVIDE){
+                handleError()
+                val handler = Handler()
+                handler.postDelayed(Runnable {
+                    handleReset()
+                }, 1500)
+            }
+            else
+                updateResult(operation.getResult())
         }
 
         mIsFirstOperation = false
     }
+
+
+
 
     fun handleOperation(operation: String) {
         if (lastKey == DIGIT && operation != ROOT) {
