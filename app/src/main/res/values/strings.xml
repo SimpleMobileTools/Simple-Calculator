@@ -6,8 +6,8 @@
     <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">How does the C (Clear) button operate?</string>
-    <string name="faq_1_text">Tapping shortly on C will allow you to correct the input one character at a time. Pressing C for a longer time will clear all input at once.</string>
+    <string name="faq_1_title">How does the C (Clear) button work?</string>
+    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
