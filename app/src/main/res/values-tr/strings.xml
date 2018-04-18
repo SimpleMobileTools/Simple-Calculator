@@ -5,6 +5,10 @@
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrate on button press</string>
 
+    <!-- FAQ -->
+    <string name="faq_1_title">How does the C (Clear) button work?</string>
+    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Temel fonksiyonları ve özelleştirilebilir bir araç\'lı bir hesap makinesi.</string>
