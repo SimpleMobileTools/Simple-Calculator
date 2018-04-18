@@ -3,11 +3,11 @@
     <string name="app_launcher_name">Kalkulačka</string>
 
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="vibrate_on_button_press">Vibrovať pri stlačení tlačidla</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">How does the C (Clear) button work?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+    <string name="faq_1_title">Ako funguje tlačidlo C?</string>
+    <string name="faq_1_text">Jedným stlačením viete vymazať 1 znak. Dlhé podržanie vymaže všetky polia naraz.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
