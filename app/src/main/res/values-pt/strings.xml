@@ -6,8 +6,8 @@
     <string name="vibrate_on_button_press">Vibrar ao tocar nos botões</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">How does the C (Clear) button work?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+    <string name="faq_1_title">Como funciona o botão C (Clear)?</string>
+    <string name="faq_1_text">Ao tocar no botão, os caracteres serão removidos um a um. Um toque longo apaga todos os caracteres ao mesmo tempo.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
