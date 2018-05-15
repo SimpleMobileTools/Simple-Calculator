@@ -16,6 +16,7 @@ import com.simplemobiletools.commons.extensions.adjustAlpha
 import com.simplemobiletools.commons.extensions.beVisible
 import com.simplemobiletools.commons.extensions.setBackgroundColor
 import com.simplemobiletools.commons.extensions.setFillWithStroke
+import com.simplemobiletools.commons.helpers.IS_CUSTOMIZING_COLORS
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.widget_config.*
 
@@ -25,6 +26,7 @@ class WidgetConfigureActivity : SimpleActivity() {
     private var mWidgetId = 0
     private var mTextColor = 0
     private var mBgAlpha = 0f
+    private var mIsCustomizingColors = false
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         useDynamicTheme = false
@@ -33,12 +35,12 @@ class WidgetConfigureActivity : SimpleActivity() {
         setContentView(R.layout.widget_config)
         initVariables()
 
-        val extras = intent.extras
-        if (extras != null)
-            mWidgetId = extras.getInt(AppWidgetManager.EXTRA_APPWIDGET_ID, AppWidgetManager.INVALID_APPWIDGET_ID)
+        mIsCustomizingColors = intent.extras?.getBoolean(IS_CUSTOMIZING_COLORS) ?: false
+        mWidgetId = intent.extras?.getInt(AppWidgetManager.EXTRA_APPWIDGET_ID) ?: AppWidgetManager.INVALID_APPWIDGET_ID
 
-        if (mWidgetId == AppWidgetManager.INVALID_APPWIDGET_ID)
+        if (mWidgetId == AppWidgetManager.INVALID_APPWIDGET_ID && !mIsCustomizingColors) {
             finish()
+        }
 
         config_save.setOnClickListener { saveConfig() }
         config_bg_color.setOnClickListener { pickBackgroundColor() }

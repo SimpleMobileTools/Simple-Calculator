@@ -1,10 +1,12 @@
 package com.simplemobiletools.calculator.activities
 
+import android.content.Intent
 import android.os.Bundle
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.commons.extensions.beVisibleIf
 import com.simplemobiletools.commons.extensions.updateTextColors
+import com.simplemobiletools.commons.helpers.IS_CUSTOMIZING_COLORS
 import kotlinx.android.synthetic.main.activity_settings.*
 import java.util.*
 
@@ -23,6 +25,7 @@ class SettingsActivity : SimpleActivity() {
         setupAvoidWhatsNew()
         setupVibrate()
         setupPreventPhoneFromSleeping()
+        setupCustomizeWidgetColors()
         updateTextColors(settings_scrollview)
     }
 
@@ -63,6 +66,15 @@ class SettingsActivity : SimpleActivity() {
         settings_prevent_phone_from_sleeping_holder.setOnClickListener {
             settings_prevent_phone_from_sleeping.toggle()
             config.preventPhoneFromSleeping = settings_prevent_phone_from_sleeping.isChecked
+        }
+    }
+
+    private fun setupCustomizeWidgetColors() {
+        settings_customize_widget_colors_holder.setOnClickListener {
+            Intent(this, WidgetConfigureActivity::class.java).apply {
+                putExtra(IS_CUSTOMIZING_COLORS, true)
+                startActivity(this)
+            }
         }
     }
 }
