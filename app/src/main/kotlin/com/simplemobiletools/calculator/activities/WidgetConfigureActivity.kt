@@ -15,6 +15,7 @@ import com.simplemobiletools.commons.dialogs.ColorPickerDialog
 import com.simplemobiletools.commons.extensions.adjustAlpha
 import com.simplemobiletools.commons.extensions.beVisible
 import com.simplemobiletools.commons.extensions.setBackgroundColor
+import com.simplemobiletools.commons.extensions.setFillWithStroke
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.widget_config.*
 
@@ -99,15 +100,17 @@ class WidgetConfigureActivity : SimpleActivity() {
     private fun updateBackgroundColor() {
         mBgColor = mBgColorWithoutTransparency.adjustAlpha(mBgAlpha)
         config_calc.setBackgroundColor(mBgColor)
-        config_bg_color.setBackgroundColor(mBgColor)
+        config_bg_color.setFillWithStroke(mBgColor, Color.BLACK)
         config_save.setBackgroundColor(mBgColor)
     }
 
     private fun updateTextColor() {
-        config_text_color.setBackgroundColor(mTextColor)
+        config_text_color.setFillWithStroke(mTextColor, Color.BLACK)
         config_save.setTextColor(mTextColor)
 
-        val viewIds = intArrayOf(R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7, R.id.btn_8, R.id.btn_9, R.id.btn_percent, R.id.btn_power, R.id.btn_root, R.id.btn_clear, R.id.btn_reset, R.id.btn_divide, R.id.btn_multiply, R.id.btn_minus, R.id.btn_plus, R.id.btn_decimal, R.id.btn_equals)
+        val viewIds = intArrayOf(R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7, R.id.btn_8,
+                R.id.btn_9, R.id.btn_percent, R.id.btn_power, R.id.btn_root, R.id.btn_clear, R.id.btn_reset, R.id.btn_divide, R.id.btn_multiply,
+                R.id.btn_minus, R.id.btn_plus, R.id.btn_decimal, R.id.btn_equals)
         result.setTextColor(mTextColor)
         formula.setTextColor(mTextColor)
 
