@@ -1,25 +1,25 @@
 <resources>
-    <string name="app_name">Schlichter Rechner</string>
-    <string name="app_launcher_name">Rechner</string>
+    <string name="app_name">Simple Calculator</string>
+    <string name="app_launcher_name">Calculator</string>
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">How does the C (Clear) button work?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+    <string name="faq_1_title">Wie funktionjiert der C-(Clear)Button?</string>
+    <string name="faq_1_text">Auf ihn Klicken wird ein Zeichen entfernen. Lange Drücken setzt alle Felder auf einmal zurück.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Ein Taschenrechner mit grundlegenden Funktionen und einem anpassbaren Widget.</string>
     <string name="app_long_description">
-        Diese App beinhaltet keinen Einheitenumrechner! Du kannst das Ergebnis oder die Formel durch längeres Drücken in die Zwischenablage kopieren.
+        Diese Anwendung beinhaltet keinen Einheitenumrechner! Du kannst das Ergebnis oder die Formel durch längeres Drücken in die Zwischenablage kopieren.
 
-        Die Textfarbe des Widgets kann angepasst werden sowie die Farbe und Transparenz des Hintergrunds. Tippe auf das Ergebnis oder die Formel im Widget, um die App zu öffnen.
+        Die Textfarbe des Widgets kann angepasst werden sowie die Farbe und Transparenz des Hintergrunds. Tippe auf das Ergebnis oder die Formel im Widget, um die Anwendung zu öffnen.
 
         Beinhaltet keine Werbung oder unnötige Berechtigungen. Sie ist komplett Open Source, alle verwendeten Farben sind anpassbar.
 
-        Diese App ist nur eine aus einer größeren Serie von schlichten Apps. Der Rest davon findet sich auf http://www.simplemobiletools.com
+        Diese Anwendung ist nur eine aus einer größeren Serie. Der Rest davon findet sich auf http://www.simplemobiletools.com
     </string>
 
     <!--
