@@ -6,8 +6,8 @@
     <string name="vibrate_on_button_press">按下按鈕時震動</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">How does the C (Clear) button work?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+    <string name="faq_1_title">C(清除)按鈕如何使用?</string>
+    <string name="faq_1_text">點一次會刪除一個字元。長按會馬上重置全部欄位。</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
