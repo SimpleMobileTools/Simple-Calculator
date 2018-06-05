@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Schlichter Rechner</string>
-    <string name="app_launcher_name">Rechner</string>
+    <string name="app_launcher_name">Rechner</string>ng>
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">How does the C (Clear) button work?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+    <string name="faq_1_title">Wie funktionjiert der C-(Clear)Button?</string>
+    <string name="faq_1_text">Auf ihn Klicken wird ein Zeichen entfernen. Lange Drücken setzt alle Felder auf einmal zurück.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
