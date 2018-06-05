@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Simple Calculator</string>
-    <string name="app_launcher_name">Calculator</string>
+    <string name="app_name">Schlichter Rechner</string>
+    <string name="app_launcher_name">Rechner</string>ng>
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
@@ -13,13 +13,13 @@
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Ein Taschenrechner mit grundlegenden Funktionen und einem anpassbaren Widget.</string>
     <string name="app_long_description">
-        Diese Anwendung beinhaltet keinen Einheitenumrechner! Du kannst das Ergebnis oder die Formel durch längeres Drücken in die Zwischenablage kopieren.
+        Diese App beinhaltet keinen Einheitenumrechner! Du kannst das Ergebnis oder die Formel durch längeres Drücken in die Zwischenablage kopieren.
 
-        Die Textfarbe des Widgets kann angepasst werden sowie die Farbe und Transparenz des Hintergrunds. Tippe auf das Ergebnis oder die Formel im Widget, um die Anwendung zu öffnen.
+        Die Textfarbe des Widgets kann angepasst werden sowie die Farbe und Transparenz des Hintergrunds. Tippe auf das Ergebnis oder die Formel im Widget, um die App zu öffnen.
 
         Beinhaltet keine Werbung oder unnötige Berechtigungen. Sie ist komplett Open Source, alle verwendeten Farben sind anpassbar.
 
-        Diese Anwendung ist nur eine aus einer größeren Serie. Der Rest davon findet sich auf http://www.simplemobiletools.com
+        Diese App ist nur eine aus einer größeren Serie von schlichten Apps. Der Rest davon findet sich auf http://www.simplemobiletools.com
     </string>
 
     <!--
