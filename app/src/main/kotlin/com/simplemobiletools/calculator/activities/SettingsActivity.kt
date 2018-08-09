@@ -5,6 +5,8 @@ import android.os.Bundle
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.commons.extensions.beVisibleIf
+import com.simplemobiletools.commons.extensions.isThankYouInstalled
+import com.simplemobiletools.commons.extensions.launchPurchaseThankYouIntent
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.IS_CUSTOMIZING_COLORS
 import kotlinx.android.synthetic.main.activity_settings.*
@@ -20,6 +22,7 @@ class SettingsActivity : SimpleActivity() {
     override fun onResume() {
         super.onResume()
 
+        setupPurchaseThankYou()
         setupCustomizeColors()
         setupUseEnglish()
         setupAvoidWhatsNew()
@@ -27,6 +30,13 @@ class SettingsActivity : SimpleActivity() {
         setupPreventPhoneFromSleeping()
         setupCustomizeWidgetColors()
         updateTextColors(settings_scrollview)
+    }
+
+    private fun setupPurchaseThankYou() {
+        settings_purchase_thank_you_holder.beVisibleIf(config.appRunCount > 10 && !isThankYouInstalled())
+        settings_purchase_thank_you_holder.setOnClickListener {
+            launchPurchaseThankYouIntent()
+        }
     }
 
     private fun setupCustomizeColors() {
