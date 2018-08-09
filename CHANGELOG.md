@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 4.1.0 *(2018-08-09)*
+----------------------------
+
+ * Fixed some percentage related operations
+ * Couple other UX improvements
+
 Version 4.0.0 *(2018-05-16)*
 ----------------------------
 
