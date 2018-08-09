@@ -13,6 +13,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     private var mIsFirstOperation = false
     private var mResetValue = false
+    private var mWasPercentLast = false
     private var mBaseValue = 0.0
     private var mSecondValue = 0.0
 
@@ -58,7 +59,11 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         if (sign == "√") {
             setFormula(sign + first)
         } else if (!sign.isEmpty()) {
-            setFormula(first + sign + second)
+            var formula = first + sign + second
+            if (mWasPercentLast) {
+                formula += "%"
+            }
+            setFormula(formula)
         }
     }
 
@@ -99,6 +104,10 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     private fun calculateResult() {
         updateFormula()
+        if (mWasPercentLast) {
+            mSecondValue *= mBaseValue / 100
+        }
+
         val operation = OperationFactory.forId(mLastOperation!!, mBaseValue, mSecondValue)
         if (operation != null) {
             updateResult(operation.getResult())
@@ -108,6 +117,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun handleOperation(operation: String) {
+        mWasPercentLast = operation == PERCENT
         if (lastKey == DIGIT && operation != ROOT) {
             handleResult()
         }

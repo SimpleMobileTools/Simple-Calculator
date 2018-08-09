@@ -8,7 +8,7 @@ class PercentOperation(baseValue: Double, secondValue: Double) : BinaryOperation
     override fun getResult(): Double {
         var result = 0.0
         if (secondValue != 0.0) {
-            result = (baseValue / 100) * secondValue
+            result = baseValue / 100 * secondValue
         }
         return result
     }
