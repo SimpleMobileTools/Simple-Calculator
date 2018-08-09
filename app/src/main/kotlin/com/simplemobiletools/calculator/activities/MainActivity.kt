@@ -58,6 +58,7 @@ class MainActivity : SimpleActivity(), Calculator {
         storeStateVariables()
         updateViewColors(calculator_holder, config.textColor)
         checkWhatsNewDialog()
+        checkAppOnSDCard()
     }
 
     override fun onResume() {
@@ -112,6 +113,8 @@ class MainActivity : SimpleActivity(), Calculator {
     }
 
     private fun launchAbout() {
+        val licenses = LICENSE_AUTOFITTEXTVIEW or LICENSE_ROBOLECTRIC or LICENSE_ESPRESSO
+
         val faqItems = arrayListOf(
                 FAQItem(R.string.faq_1_title, R.string.faq_1_text),
                 FAQItem(R.string.faq_1_title_commons, R.string.faq_1_text_commons),
@@ -119,7 +122,7 @@ class MainActivity : SimpleActivity(), Calculator {
                 FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons)
         )
 
-        startAboutActivity(R.string.app_name, LICENSE_AUTOFITTEXTVIEW or LICENSE_ROBOLECTRIC or LICENSE_ESPRESSO, BuildConfig.VERSION_NAME, faqItems)
+        startAboutActivity(R.string.app_name, licenses, BuildConfig.VERSION_NAME, faqItems, true)
     }
 
     private fun getButtonIds() = arrayOf(btn_decimal, btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9)
