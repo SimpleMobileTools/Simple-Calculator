@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Sadə Kalkulyator</string>
+    <string name="app_launcher_name">Kalkulyator</string>
+
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">Düyməyə basdıqda titrə</string>
+
+    <!-- FAQ -->
+    <string name="faq_1_title">C (Sil) düyməsi necə işləyir?</string>
+    <string name="faq_1_text">Tək toxunur 1 rəqəmi siləcək. Basılı saxlamaq isə tamamilə rəqəmləri sıfırlayacaq.</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">A calculator with the basic functions and a customizable widget.</string>
+    <string name="app_long_description">
+        There is no unit converter, you can copy the result or formula to clipboard by long pressing it.
+
+        The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+
+        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
+
+        This app is just one piece of a bigger series of apps. You can find the rest of them at https://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
