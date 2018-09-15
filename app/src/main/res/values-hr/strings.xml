@@ -6,8 +6,8 @@
     <string name="vibrate_on_button_press">Vibriraj prilikom pritiska na gumb</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">How does the C (Clear) button work?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+    <string name="faq_1_title">Kako funkcionira gumb C (Očisti)?</string>
+    <string name="faq_1_text">Dodirom C gumba, uklanjate znak jedan po jedan. Dugim pritiskom ne njega resetirati će sva polja.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
