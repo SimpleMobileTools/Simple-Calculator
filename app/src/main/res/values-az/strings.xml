@@ -11,15 +11,15 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator with the basic functions and a customizable widget.</string>
+    <string name="app_short_description">Dəyişdirilə bilən vidjetə malik adi sadə kalkulyator.</string>
     <string name="app_long_description">
-        There is no unit converter, you can copy the result or formula to clipboard by long pressing it.
+        Bu tətbiqetmə vahid dəyişdirmir, düsturu yaxud nəticəni kopyalamaq üçün həmin düstur yaxud nəticənin üzərinə basılı tutun.
 
-        The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+        Arxa plan alfası və ümumi rəng kimi, vidjet rəngi də dəyişdirilə biləndir. Tətbiqetməni açmaq üçün vidjetdəki nəticəyə yaxud düstura toxunun.
 
-        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
+        Reklam ya da lazımsız icazələr mövcud deyil. Tamamilə açıqlisenziyalıdır və rəng dəyişmə parametrləri var.
 
-        This app is just one piece of a bigger series of apps. You can find the rest of them at https://www.simplemobiletools.com
+        Bu, böyük bir tətbiq seriyasının yalnız bir hissəsidir. Digər tətbiqləri buradan əldə edə bilərsiniz https://www.simplemobiletools.com
     </string>
 
     <!--
