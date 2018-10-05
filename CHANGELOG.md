@@ -1,6 +1,11 @@
 Changelog
 ==========
 
+Version 4.2.0 *(2018-10-05)*
+----------------------------
+
+ * Updating some libraries + translation updates
+
 Version 4.1.0 *(2018-08-09)*
 ----------------------------
 
