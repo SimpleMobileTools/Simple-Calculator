@@ -92,6 +92,7 @@ class MainActivity : SimpleActivity(), Calculator {
         when (item.itemId) {
             R.id.settings -> launchSettings()
             R.id.about -> launchAbout()
+            R.id.scientific -> launchScientific()
             else -> return super.onOptionsItemSelected(item)
         }
         return true
@@ -111,6 +112,9 @@ class MainActivity : SimpleActivity(), Calculator {
 
     private fun launchSettings() {
         startActivity(Intent(applicationContext, SettingsActivity::class.java))
+    }
+    private fun launchScientific() {
+        startActivity(Intent(applicationContext, ScientificActivity::class.java))
     }
 
     private fun launchAbout() {
