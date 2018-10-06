@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calcolatrice semplice</string>
+    <string name="app_name">Simple Calculator</string>
     <string name="app_launcher_name">Calcolatrice</string>
 
     <!-- Settings -->
@@ -19,7 +19,7 @@
 
         Non contiene pubblicità o permessi non necessari. È completamente opensource, fornisce colori personalizzabili.
         
-        Questa applicazione è solamente una di una serie. Puoi trovare le altre su http://www.simplemobiletools.com
+        Questa applicazione fa parte di una serie. Puoi trovare le altre su http://www.simplemobiletools.com
     </string>
 
     <!--
