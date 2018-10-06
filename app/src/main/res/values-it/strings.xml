@@ -1,25 +1,25 @@
 <resources>
-    <string name="app_name">Simple Calculator</string>
-    <string name="app_launcher_name">Calculator</string>
+    <string name="app_name">Calcolatrice semplice</string>
+    <string name="app_launcher_name">Calcolatrice</string>
 
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="vibrate_on_button_press">Vibra alla pressione di un tasto</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">How does the C (Clear) button work?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+    <string name="faq_1_title">Come funziona il tasto C (Pulisci)?</string>
+    <string name="faq_1_text">Premendolo una volta eliminerà un carattere alla volta. Tenendolo premuto eliminerà tutto insieme.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator with the basic functions and a customizable widget.</string>
+    <string name="app_short_description">Una calcolatrice con funzionalità essenziali ed un widget personalizzabile.</string>
     <string name="app_long_description">
-        There is no unit converter, you can copy the result or formula to clipboard by long pressing it.
+        Non c'è nessun convertitore di unità, si può copiare il risultato o la formula tendo premuto su essa.
 
-        The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+        Il colore del widget può essere personalizzato, come il colore e la trasparenza dello sfondo. Si può premere sul risultato o sulla formula nel widget per aprire l'applicazione.
 
-        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
-
-        This app is just one piece of a bigger series of apps. You can find the rest of them at http://www.simplemobiletools.com
+        Non contiene pubblicità o permessi non necessari. È completamente opensource, fornisce colori personalizzabili.
+        
+        Questa applicazione è solamente una di una serie. Puoi trovare le altre su http://www.simplemobiletools.com
     </string>
 
     <!--
