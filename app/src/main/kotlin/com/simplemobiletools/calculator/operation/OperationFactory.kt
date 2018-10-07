@@ -14,7 +14,7 @@ object OperationFactory {
             PERCENT -> PercentOperation(baseValue, secondValue)
             POWER -> PowerOperation(baseValue, secondValue)
             ROOT -> RootOperation(baseValue)
-            FACTORIAL -> ParOperation(baseValue)
+            FACTORIAL -> FactorialOperation(baseValue)
             else -> null
         }
     }

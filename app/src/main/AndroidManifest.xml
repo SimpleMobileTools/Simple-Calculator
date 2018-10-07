@@ -28,7 +28,7 @@
             android:name=".activities.ScientificActivity"
             android:screenOrientation="portrait"
             android:parentActivityName=".activities.MainActivity"
-            android:label="@string/scientific_name"/>
+            android:label="@string/app_launcher_name"/>
 
         <activity
             android:name=".activities.WidgetConfigureActivity"

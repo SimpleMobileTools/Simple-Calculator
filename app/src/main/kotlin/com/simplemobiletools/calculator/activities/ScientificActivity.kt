@@ -10,13 +10,10 @@ import com.simplemobiletools.commons.extensions.*
 
 class ScientificActivity : SimpleActivity() {
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.scientific_activity)
         appLaunched(BuildConfig.APPLICATION_ID)
-        
         updateViewColors(calculator_holder, config.textColor)
-
     }
 }
