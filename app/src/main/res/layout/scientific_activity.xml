@@ -32,7 +32,7 @@
         android:paddingLeft="@dimen/activity_margin"
         android:paddingRight="@dimen/activity_margin"
         android:textSize="@dimen/display_text_size"
-        tools:text="0"/>
+        android:text="0"/>
 
     <LinearLayout
         android:layout_width="match_parent"
