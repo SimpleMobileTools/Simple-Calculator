@@ -13,9 +13,9 @@
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Una calcolatrice con funzionalità essenziali ed un widget personalizzabile.</string>
     <string name="app_long_description">
-        Non c'è nessun convertitore di unità, si può copiare il risultato o la formula tendo premuto su essa.
+        Non c\'è nessun convertitore di unità, si può copiare il risultato o la formula tendo premuto su essa.
 
-        Il colore del widget può essere personalizzato, come il colore e la trasparenza dello sfondo. Si può premere sul risultato o sulla formula nel widget per aprire l'applicazione.
+        Il colore del widget può essere personalizzato, come il colore e la trasparenza dello sfondo. Si può premere sul risultato o sulla formula nel widget per aprire l\'applicazione.
 
         Non contiene pubblicità o permessi non necessari. È completamente opensource, fornisce colori personalizzabili.
         
