@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Sadə Kalkulyator</string>
     <string name="app_launcher_name">Kalkulyator</string>
+    <string name="scientific_calculator">Scientific Calculator</string>
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Düyməyə basdıqda titrə</string>

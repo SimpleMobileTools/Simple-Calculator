@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Schlichter Rechner</string>
     <string name="app_launcher_name">Rechner</string>ng>
+    <string name="scientific_calculator">Scientific Calculator</string>
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>

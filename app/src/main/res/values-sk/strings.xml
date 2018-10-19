@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Jednoduchá kalkulačka</string>
     <string name="app_launcher_name">Kalkulačka</string>
+    <string name="scientific_calculator">Vedecká kalkulačka</string>
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrovať pri stlačení tlačidla</string>

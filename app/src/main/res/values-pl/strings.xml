@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Prosty Kalkulator</string>
     <string name="app_launcher_name">Kalkulator</string>
+    <string name="scientific_calculator">Scientific Calculator</string>
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Wibracja po wciśnięciu przycisku</string>

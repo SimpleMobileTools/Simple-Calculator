@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Eenvoudige Rekenmachine</string>
     <string name="app_launcher_name">Rekenmachine</string>
+    <string name="scientific_calculator">Scientific Calculator</string>
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Trillen bij tikken.</string>

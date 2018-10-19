@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Simple Calculator</string>
     <string name="app_launcher_name">Calculator</string>
+    <string name="scientific_calculator">Scientific Calculator</string>
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrate on button press</string>
