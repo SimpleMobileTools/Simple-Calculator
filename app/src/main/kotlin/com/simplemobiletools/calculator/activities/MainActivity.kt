@@ -112,6 +112,7 @@ class MainActivity : SimpleActivity(), Calculator {
     private fun launchSettings() {
         startActivity(Intent(applicationContext, SettingsActivity::class.java))
     }
+
     private fun launchScientific() {
         startActivity(Intent(applicationContext, ScientificActivity::class.java))
     }

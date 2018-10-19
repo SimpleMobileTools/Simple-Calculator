@@ -58,7 +58,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
         if (sign == "√") {
             setFormula(sign + first)
-        } else if (sign == "!"){
+        } else if (sign == "!") {
             setFormula(first + sign)
         } else if (!sign.isEmpty()) {
             var formula = first + sign + second
@@ -125,7 +125,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     fun handleOperation(operation: String) {
         mWasPercentLast = operation == PERCENT
-        if (lastKey == DIGIT && operation != ROOT && operation!= FACTORIAL) {
+        if (lastKey == DIGIT && operation != ROOT && operation != FACTORIAL) {
             handleResult()
         }
 
