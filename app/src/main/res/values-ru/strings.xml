@@ -8,7 +8,7 @@
 
     <!-- FAQ -->
     <string name="faq_1_title">Как работает кнопка C (Очистка)?</string>
-    <string name="faq_1_text">Нкжатие на нее удалит один символ. Долгое нажатие сбросит все поля сразу.</string>
+    <string name="faq_1_text">Нажатие на нее удалит один символ. Долгое нажатие сбросит все поля сразу.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
