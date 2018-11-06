@@ -1,26 +1,26 @@
 <resources>
     <string name="app_name">Basit Hesap Makinesi</string>
     <string name="app_launcher_name">Hesap Makinesi</string>
-    <string name="scientific_calculator">Scientific Calculator</string>
+    <string name="scientific_calculator">Bilimsel Hesap Makinesi</string>
 
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="vibrate_on_button_press">Düğmeye basıldığında titret</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">How does the C (Clear) button work?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+    <string name="faq_1_title">C (Temizle) düğmesi nasıl çalışır?</string>
+    <string name="faq_1_text">Üzerine dokunmak, bir seferde bir karakteri kaldıracaktır. Uzun basma, tüm alanları bir kerede sıfırlayacaktır.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Temel fonksiyonları ve özelleştirilebilir bir araç\'lı bir hesap makinesi.</string>
+    <string name="app_short_description">Temel işlevler ve özelleştirilebilir bir widget\'lı hesap makinesi.</string>
     <string name="app_long_description">
-        There is no unit converter, you can copy the result or formula to clipboard by long pressing it.
+        Birim dönüştürücü yok, sonuca veya formüle uzun süre basarak panoya kopyalayabilirsiniz.
 
-        The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+        Widget\'ın metin rengi yanı sıra arka plan rengi ve alfa özelleştirilebilir. Uygulamayı açmak için widget\'taki sonuca veya formüle basın.
 
-        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
+        Reklam veya gereksiz izinler içermez. Tamamen açık kaynaktır, özelleştirilebilir renkler sunar.
 
-        This app is just one piece of a bigger series of apps. You can find the rest of them at http://www.simplemobiletools.com
+        Bu uygulama, daha büyük bir uygulama serisinden sadece bir parça. Geri kalanı https://www.simplemobiletools.com adresinde bulabilirsiniz
     </string>
 
     <!--
