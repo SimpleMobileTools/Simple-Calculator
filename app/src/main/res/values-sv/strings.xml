@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Simple Calculator</string>
     <string name="app_launcher_name">Kalkylator</string>
-    <string name="scientific_calculator">Scientific Calculator</string>
+    <string name="scientific_calculator">Avancerad kalkylator</string>
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrera när jag trycker på knapparna</string>
@@ -14,7 +14,7 @@
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">En kalkylator med grundläggande funktioner och en anpassningsbar widget.</string>
     <string name="app_long_description">
-        Kalkylatorn har ingen enhetsomvandlare. Du kan kopiera resultatet eller formeln till urklipp genom att trycka länge.
+        Appen har ingen enhetsomvandlare. Du kan kopiera resultat och formler till Urklipp genom att trycka länge på dem.
 
         Du kan anpassa widgetens textfärg, bakgrundsfärg och bakgrundsgenomskinlighet. Tryck på resultatet eller formeln i widgeten för att öppna appen.
 
