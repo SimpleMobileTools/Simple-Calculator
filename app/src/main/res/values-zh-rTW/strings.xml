@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">簡易計算機</string>
     <string name="app_launcher_name">簡易計算機</string>
-    <string name="scientific_calculator">Scientific Calculator</string>
+    <string name="scientific_calculator">工程計算機</string>
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">按下按鈕時震動</string>
