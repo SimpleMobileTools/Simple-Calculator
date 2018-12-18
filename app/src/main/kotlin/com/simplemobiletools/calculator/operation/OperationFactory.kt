@@ -21,8 +21,6 @@ object OperationFactory {
             Arcsin->ArcsinOperation(baseValue)
             Arccos->ArccosOperation(baseValue)
             Arctan->ArctanOperation(baseValue)
-
-
             else -> null
         }
     }

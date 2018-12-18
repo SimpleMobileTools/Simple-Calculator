@@ -70,7 +70,6 @@ class ScientificActivity : SimpleActivity(),Calculator {
         checkWhatsNewDialog()
         checkAppOnSDCard()
     }
-
     override fun onResume() {
         super.onResume()
         if (storedTextColor != config.textColor) {
@@ -83,7 +82,6 @@ class ScientificActivity : SimpleActivity(),Calculator {
 
         vibrateOnButtonPress = config.vibrateOnButtonPress
     }
-
     override fun onPause() {
         super.onPause()
         storeStateVariables()
@@ -91,13 +89,11 @@ class ScientificActivity : SimpleActivity(),Calculator {
             window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         }
     }
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         menu.findItem(R.id.scientific_calculator).isVisible = false // not implemented yet
         return true
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.settings -> launchSettings()
@@ -107,13 +103,11 @@ class ScientificActivity : SimpleActivity(),Calculator {
         }
         return true
     }
-
     private fun storeStateVariables() {
         config.apply {
             storedTextColor = textColor
         }
     }
-
     private fun checkHaptic(view: View) {
         if (vibrateOnButtonPress) {
             view.performHapticFeedback()
@@ -140,9 +134,7 @@ class ScientificActivity : SimpleActivity(),Calculator {
 
         startAboutActivity(R.string.app_name, licenses, BuildConfig.VERSION_NAME, faqItems, true)
     }
-
     private fun getButtonIds() = arrayOf(btn_decimal, btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9)
-
     private fun copyToClipboard(copyResult: Boolean): Boolean {
         var value = formula.value
         if (copyResult) {
@@ -160,20 +152,17 @@ class ScientificActivity : SimpleActivity(),Calculator {
     override fun setValue(value: String, context: Context) {
         result.text = value
     }
-
     private fun checkWhatsNewDialog() {
         arrayListOf<Release>().apply {
             add(Release(18, R.string.release_18))
             checkWhatsNew(this, BuildConfig.VERSION_CODE)
         }
     }
-
     // used only by Robolectric
     override fun setValueDouble(d: Double) {
         calc.setValue(Formatter.doubleToString(d))
         calc.lastKey = DIGIT
     }
-
     override fun setFormula(value: String, context: Context) {
         formula.text = value
     }

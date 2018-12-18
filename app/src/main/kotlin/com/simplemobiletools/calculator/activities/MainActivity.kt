@@ -45,7 +45,6 @@ class MainActivity : SimpleActivity(), Calculator {
             val anIntent = Intent(this@MainActivity, ScientificActivity::class.java)
             startActivity(anIntent)
         }
-
         btn_clear.setOnClickListener { calc.handleClear(); checkHaptic(it) }
         btn_clear.setOnLongClickListener { calc.handleReset(); true }
 
