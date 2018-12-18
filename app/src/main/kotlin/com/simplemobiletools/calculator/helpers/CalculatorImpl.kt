@@ -60,7 +60,23 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             setFormula(sign + first)
         } else if (sign == "!") {
             setFormula(first + sign)
-        } else if (!sign.isEmpty()) {
+        }
+          else if(sign == "Sin("){
+            setFormula("Sin("+first + ")")
+        }
+        else if(sign == "Tan("){
+            setFormula("Tan("+first + ")")
+        }
+        else if(sign == "Cos("){
+            setFormula("Cos("+first + ")")
+        }
+        else if(sign == "Arcsin("){
+            setFormula("Arcsin("+first + ")")
+        }else if(sign == "Arccos("){
+            setFormula("Arccos("+first + ")")
+        }else if(sign == "Arctan("){
+            setFormula("Arctan("+first + ")")
+        }else if (!sign.isEmpty()) {
             var formula = first + sign + second
             if (mWasPercentLast) {
                 formula += "%"
@@ -108,7 +124,30 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         mBaseValue = getDisplayedNumberAsDouble()
         calculateResult()
     }
-
+    private fun handleSin() {
+        mBaseValue = getDisplayedNumberAsDouble()
+        calculateResult()
+    }
+    private fun handleCos() {
+        mBaseValue = getDisplayedNumberAsDouble()
+        calculateResult()
+    }
+    private fun handleTan() {
+        mBaseValue = getDisplayedNumberAsDouble()
+        calculateResult()
+    }
+    private fun handleArcsin() {
+        mBaseValue = getDisplayedNumberAsDouble()
+        calculateResult()
+    }
+    private fun handleArccos() {
+        mBaseValue = getDisplayedNumberAsDouble()
+        calculateResult()
+    }
+    private fun handleArctan() {
+        mBaseValue = getDisplayedNumberAsDouble()
+        calculateResult()
+    }
     private fun calculateResult() {
         updateFormula()
         if (mWasPercentLast) {
@@ -125,7 +164,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     fun handleOperation(operation: String) {
         mWasPercentLast = operation == PERCENT
-        if (lastKey == DIGIT && operation != ROOT && operation != FACTORIAL) {
+        if (lastKey == DIGIT && operation != ROOT && operation != FACTORIAL&&operation!=Sin&&operation!=Cos&&operation!=Tan&&operation!= Arcsin&&operation!= Arccos&&operation!= Arctan) {
             handleResult()
         }
 
@@ -139,6 +178,36 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         }
         if (operation == FACTORIAL) {
             handleFactorial()
+            mResetValue = false
+        }
+        if(operation==Sin)
+        {
+            handleSin()
+            mResetValue = false
+        }
+        if(operation==Cos)
+        {
+            handleCos()
+            mResetValue = false
+        }
+        if(operation==Tan)
+        {
+            handleTan()
+            mResetValue = false
+        }
+        if(operation== Arcsin)
+        {
+            handleArcsin()
+            mResetValue = false
+        }
+        if(operation== Arccos)
+        {
+            handleArccos()
+            mResetValue = false
+        }
+        if(operation== Arctan)
+        {
+            handleArctan()
             mResetValue = false
         }
     }
@@ -207,6 +276,12 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         POWER -> "^"
         ROOT -> "√"
         FACTORIAL -> "!"
+        Sin->"Sin("
+        Cos->"Cos("
+        Tan->"Tan("
+        Arcsin->"Arcsin("
+        Arccos->"Arccos("
+        Arctan->"Arctan("
         else -> ""
     }
 

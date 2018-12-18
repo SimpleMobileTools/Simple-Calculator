@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.MainActivity"
+    tools:context=".activities.ScientificActivity"
     tools:ignore="HardcodedText">
 
     <TextView
@@ -61,6 +61,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="tan"/>
+
+
         <Button
             android:id="@+id/btn_parenthesis1"
             style="@style/MyButton"
@@ -75,6 +77,42 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text=")"/>
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_arctan"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Arctan"/>
+        <Button
+            android:id="@+id/btn_arcsin"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Arcsin"/>
+        <Button
+            android:id="@+id/btn_arccos"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Arccos"/>
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="back"/>
 
     </LinearLayout>
     <LinearLayout

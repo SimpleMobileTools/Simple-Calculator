@@ -49,6 +49,12 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
             setupIntent(context, views, POWER, R.id.btn_power)
             setupIntent(context, views, ROOT, R.id.btn_root)
             setupIntent(context, views, FACTORIAL, R.id.btn_factorial )
+            setupIntent(context, views, Sin, R.id.btn_sin)
+            setupIntent(context, views, Tan, R.id.btn_tan)
+            setupIntent(context, views, Cos, R.id.btn_cos)
+            setupIntent(context, views, Arcsin, R.id.btn_arcsin)
+            setupIntent(context, views, Arccos, R.id.btn_arccos)
+            setupIntent(context, views, Arctan, R.id.btn_arctan)
             setupIntent(context, views, CLEAR, R.id.btn_clear)
             setupIntent(context, views, RESET, R.id.btn_reset)
 
@@ -82,7 +88,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
     private fun updateTextColors(views: RemoteViews, color: Int) {
         val viewIds = intArrayOf(R.id.formula, R.id.result, R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6,
                 R.id.btn_7, R.id.btn_8, R.id.btn_9, R.id.btn_percent, R.id.btn_power, R.id.btn_root, R.id.btn_factorial, R.id.btn_clear, R.id.btn_reset, R.id.btn_divide,
-                R.id.btn_multiply, R.id.btn_minus, R.id.btn_plus, R.id.btn_decimal, R.id.btn_equals)
+                R.id.btn_multiply, R.id.btn_minus, R.id.btn_plus, R.id.btn_decimal, R.id.btn_equals,R.id.btn_sin,R.id.btn_cos,R.id.btn_tan,R.id.btn_arcsin,R.id.btn_arccos,R.id.btn_arctan)
 
         for (i in viewIds) {
             views.setTextColor(i, color)
@@ -92,7 +98,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
     override fun onReceive(context: Context, intent: Intent) {
         val action = intent.action
         when (action) {
-            DECIMAL, ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, EQUALS, CLEAR, RESET, PLUS, MINUS, MULTIPLY, DIVIDE, PERCENT, POWER, ROOT, FACTORIAL -> myAction(action, context)
+            DECIMAL, ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, EQUALS, CLEAR, RESET, PLUS, MINUS, MULTIPLY, DIVIDE, PERCENT, POWER, ROOT, FACTORIAL,Sin,Tan,Arcsin,Arccos,Arctan,Cos-> myAction(action, context)
             else -> super.onReceive(context, intent)
         }
     }
@@ -117,7 +123,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
             EQUALS -> calc!!.handleEquals()
             CLEAR -> calc!!.handleClear()
             RESET -> calc!!.handleReset()
-            PLUS, MINUS, MULTIPLY, DIVIDE, PERCENT, POWER, ROOT, FACTORIAL -> calc!!.handleOperation(action)
+            PLUS, MINUS, MULTIPLY, DIVIDE, PERCENT, POWER, ROOT, FACTORIAL ,Sin,Cos,Tan, Arcsin,Arccos,Arctan-> calc!!.handleOperation(action)
         }
     }
 

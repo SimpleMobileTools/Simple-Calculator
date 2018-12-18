@@ -33,7 +33,96 @@
         android:paddingRight="@dimen/activity_margin"
         android:textSize="@dimen/display_text_size"
         tools:text="0"/>
+    <LinearLayout
 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_sin"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="sin" />
+
+        <Button
+            android:id="@+id/btn_tan"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="tan" />
+        <Button
+            android:id="@+id/btn_sci"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:text="Scientific Calculator" />
+
+        <Button
+            android:id="@+id/btn_cos"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:text="cos"
+            android:textAlignment="center"
+            android:visibility="gone" />
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_arcsin"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Arcsin"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btn_arctan"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Arctan"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btn_arccos"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Arccos"
+            android:visibility="gone"
+            />
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="back"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -81,6 +170,7 @@
             android:text="AC"
             android:visibility="gone"/>
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"

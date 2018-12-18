@@ -41,6 +41,10 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_percent.setOnClickListener { calc.handleOperation(PERCENT); checkHaptic(it) }
         btn_power.setOnClickListener { calc.handleOperation(POWER); checkHaptic(it) }
         btn_root.setOnClickListener { calc.handleOperation(ROOT); checkHaptic(it) }
+        btn_sci.setOnClickListener { view ->
+            val anIntent = Intent(this@MainActivity, ScientificActivity::class.java)
+            startActivity(anIntent)
+        }
 
         btn_clear.setOnClickListener { calc.handleClear(); checkHaptic(it) }
         btn_clear.setOnLongClickListener { calc.handleReset(); true }

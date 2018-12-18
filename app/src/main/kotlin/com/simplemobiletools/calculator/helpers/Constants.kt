@@ -13,6 +13,13 @@ const val DECIMAL = "decimal"
 const val CLEAR = "clear"
 const val RESET = "reset"
 const val FACTORIAL = "factorial"
+const val Sin = "Sin"
+const val Cos = "Cos"
+const val Tan = "Tan"
+const val Arcsin = "Arcsin"
+const val Arccos = "Arccos"
+const val Arctan = "Arctan"
+
 
 const val NAN = "NaN"
 const val ZERO = "zero"
