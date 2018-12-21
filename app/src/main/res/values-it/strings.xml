@@ -7,20 +7,21 @@
     <string name="vibrate_on_button_press">Vibra alla pressione di un tasto</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">Come funziona il tasto C (Pulisci)?</string>
-    <string name="faq_1_text">Premendolo una volta eliminerà un carattere alla volta. Tenendolo premuto eliminerà tutto insieme.</string>
+    <string name="faq_1_title">Come funziona il tasto C (Cancella)?</string>
+    <string name="faq_1_text">Premendo il tasto una volta verrà eliminato un singolo carattere; tenendolo premuto invece eliminerà tutta la stringa.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Una calcolatrice con funzionalità essenziali ed un widget personalizzabile.</string>
+    <!-- The last two phrases should be translated the same way in other applications -->
+    <string name="app_short_description">Una calcolatrice con funzionalità essenziali e un widget personalizzabile.</string>
     <string name="app_long_description">
         Non c\'è nessun convertitore di unità, si può copiare il risultato o la formula tendo premuto su essa.
 
-        Il colore del widget può essere personalizzato, come il colore e la trasparenza dello sfondo. Si può premere sul risultato o sulla formula nel widget per aprire l\'applicazione.
+        Il widget e il suo sfondo possono essere personalizzati, con dei colori o con la trasparenza. Premendo sul risultato o su una formula inoltre aprirà l\'applicazione.
 
-        Non contiene pubblicità o permessi non necessari. È completamente opensource, fornisce colori personalizzabili.
+        L\'applicazione non contiene pubblicità o permessi non necessari; è completamente opensource e la si può personalizzare con i propri colori preferiti.
         
-        Questa applicazione fa parte di una serie. Puoi trovare le altre su http://www.simplemobiletools.com
+        Questa è solamente una delle tante applicazioni della serie Simple Mobile Tools. Si possono trovare le altre su http://www.simplemobiletools.com
     </string>
 
     <!--
