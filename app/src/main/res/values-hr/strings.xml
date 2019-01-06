@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Jednostavan kalkulator</string>
     <string name="app_launcher_name">Kalkulator</string>
-    <string name="scientific_calculator">Scientific Calculator</string>
+    <string name="scientific_calculator">Znanstveni kalkulator</string>
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibriraj prilikom pritiska na gumb</string>
