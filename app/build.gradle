@@ -14,8 +14,8 @@ android {
         applicationId "com.simplemobiletools.calculator"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 23
-        versionName "5.0.0"
+        versionCode 24
+        versionName "5.0.1"
         setProperty("archivesBaseName", "calculator")
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
