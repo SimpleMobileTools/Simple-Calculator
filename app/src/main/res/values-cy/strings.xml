@@ -12,7 +12,7 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Cyfrifiannell gyda'r swyddogaethau sylfaenol a theclyn gellir ei addasu.</string>
+    <string name="app_short_description">Cyfrifiannell gyda\'r swyddogaethau sylfaenol a theclyn gellir ei addasu.</string>
     <string name="app_long_description">
         Does dim trosydd unedau, ond gellir copïo\'r canlyniad neu fformiwla i\'r clipfwrdd gan ei ddal yn hir.
 
