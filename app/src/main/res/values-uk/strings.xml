@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Простий Калькулятор</string>
+    <string name="app_launcher_name">Калькулятор</string>
+    <string name="scientific_calculator">Науковий Калькулятор</string>
+
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">Вібрувати з натиском кнопок</string>
+
+    <!-- FAQ -->
+    <string name="faq_1_title">Як працює кнопка C (Очистити)?</string>
+    <string name="faq_1_text">Короткий натиск видалить один символ за раз. Тривалий натиск одразу видалить всі поля.</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Калькулятор з базовими функціями і віджетом, що легко налаштувати.</string>
+    <string name="app_long_description">
+        Немає функції перетворення одиниць вимірювань; натискаючи тривало на результат або формулу, ви можете їх скопіювати до буферу обміну.
+
+        Містить віджет, в якого можна налаштувати колір тексту, колір фону та прозорість. Натискаючи на результат або формулу у віджеті, ви відкриєте додаток.
+
+        Цей додаток не буде показувати рекламу; потрібні лише найнеобхідніші дозволи. Додаток має повністю відкритий програмний код, кольори оформлення можна легко налаштувати.
+
+        Простий Калькулятор - це один із ряду додатків від Simple Mobile Tools. Інші додатки можна знайти тут: https://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
