@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Simple Calculator</string>
+    <string name="app_launcher_name">Kalkulator</string>
+    <string name="scientific_calculator">Kalkulator Sains</string>
+
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">Getar saat tombol ditekan</string>
+
+    <!-- FAQ -->
+    <string name="faq_1_title">Bagaimana tombol C (Clear) bekerja?</string>
+    <string name="faq_1_text">Menyentuhnya sekali akan menghapus satu karakter. Menyentuhnya lama akan mengosongkan seluruh ruas sekaligus.</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Kalkulator dengan fungsi dasar dan widget yang bisa disesuaikan.</string>
+    <string name="app_long_description">
+        Tidak ada konverter unit, anda bisa menyalin hasil atau formula ke papan klip dengan cara menyentuhnya lama.
+
+        Warna teks widget bisa disesuaikan, begitu juga dengan warna dan transparansi latar belakang. Sentuh hasil atau formula yang ditampilkan widget untuk membuka aplikasi.
+
+        Sama sekali tidak berisi iklan dan tidak membutuhkan perizinan yang tidak perlu. Sepenuhnya sumber terbuka, dengan warna yang bisa disesuaikan.
+
+        Aplikasi ini hanya salah satu bagian dari rangkaian aplikasi yang lebih besar. Anda bisa menemukan yang lainnya di https://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
