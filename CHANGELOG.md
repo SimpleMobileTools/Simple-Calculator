@@ -1,6 +1,11 @@
 Changelog
 ==========
 
+Version 5.0.5 *(2019-07-23)*
+----------------------------
+
+ * Adding some bottom navigation bar color customization improvements
+
 Version 5.0.4 *(2019-07-23)*
 ----------------------------
 
