@@ -1,0 +1,1 @@
+En kalkylator med grundläggande funktioner och en anpassningsbar widget.

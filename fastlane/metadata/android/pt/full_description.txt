@@ -1,0 +1,7 @@
+Não existe conversor de unidades, mas pode copiar o resultado ou fórmula para a área de transferência com um clique longo.
+
+Pode personalizar a cor do texto do widget, bem como a cor e o valor alfa do fundo. Prima no resultado ou fórmula do widget para abrir a aplicação.
+
+Não contém anúncios nem permissões desnecessárias. Disponibiliza um tema escuro e é totalmente 'open source'.
+
+Esta aplicação é apenas parte de um conjunto mais vasto de aplicações. Saiba mais em https://www.simplemobiletools.com

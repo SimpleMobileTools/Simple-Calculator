@@ -1,0 +1,1 @@
+Kalkulačka so základnými funkciami a prispôsobiteľným widgetom.

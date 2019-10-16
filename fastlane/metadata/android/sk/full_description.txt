@@ -1,0 +1,7 @@
+Neobsahuje žiadny prevodník jednotiek, môžete skopírovať výsledok alebo vzorec do schránky dlhým stlačením.
+
+Farbu textu widgetu možno prispôsobiť, rovnako ako farbu a priehľadnosť pozadia. Ak chcete aplikáciu otvoriť, stlačte výsledok alebo vzorec v miniaplikácii.
+
+Neobsahuje žiadne reklamy a nepotrebné oprávnenia. Je opensource, poskytuje možnosť zmeny farieb.
+
+Táto aplikácia je iba jednou zo skupiny aplikácií. Ostatné viete nájsť na https://www.simplemobiletools.com

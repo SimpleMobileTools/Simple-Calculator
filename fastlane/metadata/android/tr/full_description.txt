@@ -1,0 +1,7 @@
+Birim dönüştürücü yok, sonuca veya formüle uzun süre basarak panoya kopyalayabilirsiniz.
+
+Widget'ın metin rengi yanı sıra arka plan rengi ve alfa özelleştirilebilir. Uygulamayı açmak için widget'taki sonuca veya formüle basın.
+
+Reklam veya gereksiz izinler içermez. Tamamen açık kaynaktır, özelleştirilebilir renkler sunar.
+
+Bu uygulama, daha büyük bir uygulama serisinden sadece bir parça. Geri kalanı https://www.simplemobiletools.com adresinde bulabilirsiniz

@@ -1,0 +1,7 @@
+Nema pretvarača jedinica, možete kopirati rezultat ili formulu u međuspremnik dugim pritiskom na isto.
+
+Boja teksta widgeta može se prilagoditi, kao i boju pozadine. Pritisnite rezultat ili formulu u widgetu da biste otvorili aplikaciju.
+
+Ne sadrži oglase ili nepotrebne dozvole. Aplikacije je otvorenog koda, pruža prilagodljive boje.
+
+Ova je aplikacija samo dio većeg broja aplikacija. Možete pronaći ostatak na https://www.simplemobiletools.com

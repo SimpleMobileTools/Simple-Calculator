@@ -1,0 +1,1 @@
+Temel işlevler ve özelleştirilebilir bir widget'lı hesap makinesi.
