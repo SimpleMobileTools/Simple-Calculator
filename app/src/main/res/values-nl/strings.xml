@@ -12,7 +12,7 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Een eenvoudige rekenmachine met aan te passen widget.</string>
+    <string name="app_short_description">A calculator for your quick calculations.</string>
     <string name="app_long_description">
         Er kunnen geen eenheden worden omgezet. Formules en uitkomsten kunnen naar het klembord worden gekopieerd door er lang op te drukken.
 

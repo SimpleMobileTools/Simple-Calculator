@@ -1,1 +1,1 @@
-Kalkulačka so základnými funkciami a prispôsobiteľným widgetom.
+Kalkulačka pre vaše rýchle výpočty.

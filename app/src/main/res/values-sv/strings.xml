@@ -12,7 +12,7 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">En kalkylator med grundläggande funktioner och en anpassningsbar widget.</string>
+    <string name="app_short_description">A calculator for your quick calculations.</string>
     <string name="app_long_description">
         Appen har ingen enhetsomvandlare. Du kan kopiera resultat och formler till Urklipp genom att trycka länge på dem.
 

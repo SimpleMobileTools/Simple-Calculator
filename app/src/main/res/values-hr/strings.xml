@@ -12,7 +12,7 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Kalkulator s osnovnim funkcijama i prilagodljivim widgetom.</string>
+    <string name="app_short_description">A calculator for your quick calculations.</string>
     <string name="app_long_description">
         Nema pretvarača jedinica, možete kopirati rezultat ili formulu u međuspremnik dugim pritiskom na isto.
 

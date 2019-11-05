@@ -12,7 +12,7 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Dəyişdirilə bilən vidjetə malik adi sadə kalkulyator.</string>
+    <string name="app_short_description">A calculator for your quick calculations.</string>
     <string name="app_long_description">
         Bu tətbiqetmə vahid dəyişdirmir, düsturu yaxud nəticəni kopyalamaq üçün həmin düstur yaxud nəticənin üzərinə basılı tutun.
 

@@ -12,7 +12,7 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Kalulator z podstawowymi funkcjami oraz konfiguralnym widżetem.</string>
+    <string name="app_short_description">A calculator for your quick calculations.</string>
     <string name="app_long_description">
         W tej aplikacji nie ma konwertora jednostek miar - możesz skopiować wynik lub formułę do schowka przez długie przytrzymanie.
 

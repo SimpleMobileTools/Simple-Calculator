@@ -1,1 +1,1 @@
-A calculator with the basic functions and a customizable widget.
+A calculator for your quick calculations.

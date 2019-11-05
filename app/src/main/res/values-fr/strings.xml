@@ -12,7 +12,7 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Une calculatrice avec les fonctions de base et un widget personnalisable.</string>
+    <string name="app_short_description">A calculator for your quick calculations.</string>
     <string name="app_long_description">
         Cette calculatrice ne permet pas de faire des conversions. Le résultat ou l\'opération peuvent être copiés dans le presse-papier en effectuant un appui long dessus.
 

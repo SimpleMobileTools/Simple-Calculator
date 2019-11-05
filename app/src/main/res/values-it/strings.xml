@@ -13,7 +13,7 @@
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
     <!-- The last two phrases should be translated the same way in other applications -->
-    <string name="app_short_description">Una calcolatrice con funzionalità essenziali e un widget personalizzabile.</string>
+    <string name="app_short_description">A calculator for your quick calculations.</string>
     <string name="app_long_description">
         Non c\'è nessun convertitore di unità, si può copiare il risultato o la formula tendo premuto su essa.
 

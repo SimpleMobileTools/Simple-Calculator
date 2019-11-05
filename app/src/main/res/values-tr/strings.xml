@@ -12,7 +12,7 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Temel işlevler ve özelleştirilebilir bir widget\'lı hesap makinesi.</string>
+    <string name="app_short_description">A calculator for your quick calculations.</string>
     <string name="app_long_description">
         Birim dönüştürücü yok, sonuca veya formüle uzun süre basarak panoya kopyalayabilirsiniz.
 

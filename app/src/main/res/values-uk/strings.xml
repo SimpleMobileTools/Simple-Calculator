@@ -12,7 +12,7 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Калькулятор з базовими функціями і віджетом, що легко налаштувати.</string>
+    <string name="app_short_description">A calculator for your quick calculations.</string>
     <string name="app_long_description">
         Немає функції перетворення одиниць вимірювань; натискаючи тривало на результат або формулу, ви можете їх скопіювати до буфера обміну.
 
