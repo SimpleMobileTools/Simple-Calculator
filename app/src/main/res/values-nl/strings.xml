@@ -1,18 +1,18 @@
 <resources>
     <string name="app_name">Eenvoudige Rekenmachine</string>
     <string name="app_launcher_name">Rekenmachine</string>
-    <string name="scientific_calculator">Wetenschappelijke Calculator</string>
+    <string name="scientific_calculator">Wetenschappelijke Rekenmachine</string>
 
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Trillen bij tikken</string>
+    <string name="vibrate_on_button_press">Trillen bij aanraken toetsen</string>
 
     <!-- FAQ -->
     <string name="faq_1_title">Hoe werkt de knop C (Clear)?</string>
-    <string name="faq_1_text">Kort tikken verwijdert een karakter per keer. Lang drukken wist alle velden ineens.</string>
+    <string name="faq_1_text">Kort indrukken verwijdert één karakter per keer. Lang drukken wist direct alle velden.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for your quick calculations.</string>
+    <string name="app_short_description">Een rekenmachine voor al je snelle berekeningen.</string>
     <string name="app_long_description">
         Er kunnen geen eenheden worden omgezet. Formules en uitkomsten kunnen naar het klembord worden gekopieerd door er lang op te drukken.
 
