@@ -1,1 +1,1 @@
-Een eenvoudige rekenmachine met aan te passen widget.
+Een rekenmachine voor al je snelle berekeningen.
