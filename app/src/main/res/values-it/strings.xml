@@ -11,8 +11,9 @@
     <string name="faq_1_text">Premendo il tasto una volta verrà eliminato un singolo carattere; tenendolo premuto invece eliminerà tutta la stringa.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
+    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
     <!-- Short description has to have less than 80 chars -->
-    <!-- The last two phrases should be translated the same way in other applications -->
     <string name="app_short_description">A calculator for your quick calculations.</string>
     <string name="app_long_description">
         Non c\'è nessun convertitore di unità, si può copiare il risultato o la formula tendo premuto su essa.

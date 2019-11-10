@@ -11,6 +11,8 @@
     <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
+    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">A calculator for your quick calculations.</string>
     <string name="app_long_description">لا توجد ميزة تحويل الوحدات، يمكنك نسخ النتيجة أو الصيغة إلى الحافظة عن طريق الضغط لفترة طويلة عليها. يمكن تخصيص لون النص الخاص بالويدجيت ، وكذلك اللون و وشفافية الخلفية. اضغط على النتيجة أو الصيغة في الويدجيت لفتح التطبيق. لا يحتوي على إعلانات أو أذونات لا لزوم لها. وهو مفتوح المصدر بشكل كامل ، ويوفر الألوان للتخصيص. هذا التطبيق هو مجرد قطعة واحدة من سلسلة أكبر من التطبيقات. يمكنك العثور عليهم هنا\n
