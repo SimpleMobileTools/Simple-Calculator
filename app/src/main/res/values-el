@@ -4,25 +4,25 @@
     <string name="scientific_calculator">Επιστημονική Αριθμομηχανή</string>
 
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="vibrate_on_button_press">Δόνηση στο πάτημα πλήκτρου</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">How does the C (Clear) button work?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+    <string name="faq_1_title">Πώς λειτουργεί το κουμπί C (Καθαρισμός);</string>
+    <string name="faq_1_text">Πατώντας θα αφαιρείται ένας χαρακτήρας τη φορά. Πατώντας παρατεταμένα θα γίνει επαναφορά όλων των πεδίων ταυτόχρονα.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Απλή Αριθμομηχανή - Γρήγοροι υπολογισμοί</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for your quick calculations.</string>
+    <string name="app_short_description">Αριθμομηχανή για γρήγορες πράξεις.</string>
     <string name="app_long_description">
-        There is no unit converter, you can copy the result or formula to clipboard by long pressing it.
+        Δεν υπάρχει μετατροπέας μονάδων, μπορείτε να αντιγράψετε το αποτέλεσμα ή τον τύπο στο Πρόχειρο, παρατεταμένα.
 
-        The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+        Το χρώμα κειμένου του widget και παρασκηνίου μπορεί να αλλάξει. Πατήστε το αποτέλεσμα ή τον τύπο στο widget για άνοιγμα εφαρμογής.
 
-        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
+        Χωρίς διαφημίσεις ή περιττά δικαιώματα. Είναι πλήρως ανοιχτού κώδικα, παρέχει προσαρμόσιμα χρώματα.
 
-        This app is just one piece of a bigger series of apps. You can find the rest of them at https://www.simplemobiletools.com
+        Αυτή η εφαρμογή είναι μόνο ένα μέρος περισσοτέρων εφαρμογών. Δείτε τις υπόλοιπες στο https://www.simplemobiletools.com
     </string>
 
     <!--
