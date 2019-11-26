@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.1.0 *(2019-11-26)*
+----------------------------
+
+ * Added some translation improvements
+ * Changed target SDK to 29 to target the latest OS version
+
 Version 5.0.5 *(2019-07-23)*
 ----------------------------
 

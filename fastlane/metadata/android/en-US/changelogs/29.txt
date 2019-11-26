@@ -1,0 +1,2 @@
+ * Added some translation improvements
+ * Changed target SDK to 29 to target the latest OS version
