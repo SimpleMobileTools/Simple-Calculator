@@ -12,9 +12,9 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Simple Calculator - Menghitung dengan cepat</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for your quick calculations.</string>
+    <string name="app_short_description">Aplikasi kalkulator untuk membantu anda menghitung dengan cepat.</string>
     <string name="app_long_description">
         Tidak ada konverter unit, anda bisa menyalin hasil atau formula ke papan klip dengan cara menyentuhnya lama.
 
