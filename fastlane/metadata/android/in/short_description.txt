@@ -1,1 +1,1 @@
-Kalkulator dengan fungsi dasar dan widget yang bisa disesuaikan.
+Aplikasi kalkulator untuk membantu anda menghitung dengan cepat.
