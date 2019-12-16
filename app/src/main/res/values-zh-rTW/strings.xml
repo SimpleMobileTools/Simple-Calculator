@@ -12,9 +12,9 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">簡易計算機 - 快速完成你的計算</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for your quick calculations.</string>
+    <string name="app_short_description">一個用於快速計算的計算機。</string>
     <string name="app_long_description">
         沒有單位轉換器，你可以長按來複製結果或公式到剪貼簿。
 
