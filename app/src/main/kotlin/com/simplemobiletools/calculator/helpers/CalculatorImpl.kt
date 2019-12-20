@@ -161,7 +161,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             newValue = newValue.replace("\\.$".toRegex(), "")
             newValue = formatString(newValue)
             setValue(newValue)
-            mBaseValue = Formatter.stringToDouble(newValue)
         }
     }
 

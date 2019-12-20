@@ -43,6 +43,22 @@ public class MainActivityTest {
     }
 
     @Test
+    public void clearComplexTest(){
+        press(R.id.btn_1);
+        press(R.id.btn_plus);
+        press(R.id.btn_1);
+        press(R.id.btn_decimal);
+        press(R.id.btn_5);
+        press(R.id.btn_5);
+        press(R.id.btn_clear);
+        press(R.id.btn_1);
+        press(R.id.btn_equals);
+        checkResult("2.51");
+        checkFormula("1+1.51");
+    }
+
+
+    @Test
     public void additionTest() {
         press(R.id.btn_minus);
         press(R.id.btn_2);
