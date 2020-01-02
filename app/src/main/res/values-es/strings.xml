@@ -1,20 +1,20 @@
 <resources>
     <string name="app_name">Simple Calculator</string>
     <string name="app_launcher_name">Calculadora</string>
-    <string name="scientific_calculator">Scientific Calculator</string>
+    <string name="scientific_calculator">Calculadora Científica</string>
 
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="vibrate_on_button_press">Vibrar al presionar un botón</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">How does the C (Clear) button work?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+    <string name="faq_1_title">¿Cómo funciona el botón C (Clear: Limpiar)?</string>
+    <string name="faq_1_text">Presionándolo una vez eliminará un solo caracter. Mantenerlo presionado reiniciará todos los campos.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Simple Calculator - Has tus cálculos rápido</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for your quick calculations.</string>
+    <string name="app_short_description">Una calculadora para tus cálculos rápidos.</string>
     <string name="app_long_description">
         No hay conversión de unidades, usted puede copiar el resultado o la fórmula en el portapapeles con una pulsación prolongada.
 
