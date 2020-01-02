@@ -1,1 +1,1 @@
-Una calculadora con funciones básicas y un widget personalizable.
+Una calculadora para tus cálculos rápidos.

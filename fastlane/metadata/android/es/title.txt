@@ -1,1 +1,1 @@
-Simple Calculator
+Simple Calculator - Has tus cálculos rápido
