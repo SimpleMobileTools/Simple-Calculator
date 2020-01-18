@@ -1,0 +1,7 @@
+Neobsahuje žádný převodník jednotek, dlouhým podržením můžete kopírovat výsledek či vzorec do schránky.
+
+Barvu textu widgetu lze přizpůsobit, stejně jako barvu a průhlednost pozadí. Stisknutím výsledku či vzorce otevřete aplikaci.
+
+Neobsahuje žádné reklamy ani nepotřebná oprávnění. Má otevřený zdrojový kód a možnost změny barev.
+
+Tato aplikace je jen jednou ze sady aplikací. Ostatní si můžete prohlédnout na https://www.simplemobiletools.com
