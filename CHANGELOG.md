@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.1.1 *(2020-02-15)*
+----------------------------
+
+ * Fixed percentage handling
+ * Couple UI translation improvements
+
 Version 5.1.0 *(2019-11-26)*
 ----------------------------
 
