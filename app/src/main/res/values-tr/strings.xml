@@ -12,9 +12,9 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Basit Hesap Makinesi-Hesaplamalarınızı hızla yapın</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for your quick calculations.</string>
+    <string name="app_short_description">Hızlı hesaplamalarınız için bir hesap makinesi.</string>
     <string name="app_long_description">
         Birim dönüştürücü yok, sonuca veya formüle uzun süre basarak panoya kopyalayabilirsiniz.
 
@@ -22,7 +22,7 @@
 
         Reklam veya gereksiz izinler içermez. Tamamen açık kaynaktır, özelleştirilebilir renkler sunar.
 
-        <b>Check out the full suite of Simple Tools here:</b>
+        <b>Tüm Basit Araçlar paketini buradan inceleyin:</b>
         https://www.simplemobiletools.com
 
         <b>Facebook:</b>
