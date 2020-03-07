@@ -15,8 +15,22 @@
     <string name="app_title">Simple Calculator - Do your calculations quickly</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">A calculator for your quick calculations.</string>
-    <string name="app_long_description">لا توجد ميزة تحويل الوحدات، يمكنك نسخ النتيجة أو الصيغة إلى الحافظة عن طريق الضغط لفترة طويلة عليها. يمكن تخصيص لون النص الخاص بالويدجيت ، وكذلك اللون و وشفافية الخلفية. اضغط على النتيجة أو الصيغة في الويدجيت لفتح التطبيق. لا يحتوي على إعلانات أو أذونات لا لزوم لها. وهو مفتوح المصدر بشكل كامل ، ويوفر الألوان للتخصيص. هذا التطبيق هو مجرد قطعة واحدة من سلسلة أكبر من التطبيقات. يمكنك العثور عليهم هنا\n
- https://www.simplemobiletools.com</string>
+    <string name="app_long_description">
+        There is no unit converter, you can copy the result or formula to clipboard by long pressing it.
+
+        The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+
+        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
+
+        <b>Check out the full suite of Simple Tools here:</b>
+        https://www.simplemobiletools.com
+
+        <b>Facebook:</b>
+        https://www.facebook.com/simplemobiletools
+
+        <b>Reddit:</b>
+        https://www.reddit.com/r/SimpleMobileTools
+    </string>
 
     <!--
         Haven't found some strings? There's more at
