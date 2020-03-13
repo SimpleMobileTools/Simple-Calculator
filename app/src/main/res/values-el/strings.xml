@@ -14,23 +14,23 @@
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple Calculator - Do your calculations quickly</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
+    <string name="app_short_description">Μια αριθμομηχανή για πράξεις με ωραίο περιβάλλον εργασίας και χωρίς διαφημίσεις</string>
     <string name="app_long_description">
-        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
+        Αυτός ο μοντέρνος μοντέρνος υπολογιστής προσφέρει εξαιρετική εμπειρία χρήστη την οποία θα λατρέψετε. Μπορείτε να αντιγράψετε το αποτέλεσμα ή τον τύπο στο πρόχειρο πατώντας παρατεταμένα.
 
-        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
+        Η εφαρμογή είναι ένας απλός βοηθός για γρήγορους υπολογισμούς με πολλές βασικές λειτουργίες, όπως πολλαπλασιασμό, διαίρεση, ρίζα και δυνάμεις.
 
-        You can make it vibrate on button presses to make you confident during inserting your values.
+        Μπορείτε να την κάνετε να δονείται σε πάτημα κουμπιών για να είστε σίγουροι για την εισαγωγή των τιμών σας.
 
-        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
+        Υπάρχει μια επιλογή για να αποτρέψετε την αδρανοποίηση της συσκευής ενώ χρησιμοποιείτε την εφαρμογή για άνετη χρήση.
 
-        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+        Μπορείτε να προσαρμόσετε το χρώμα κειμένου του widget με δυνατότητα αλλαγής μεγέθους, καθώς και το χρώμα και το άλφα του φόντου. Πατήστε το αποτέλεσμα ή τον τύπο στο widget για να ανοίξετε την εφαρμογή.
 
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
+        Διατίθεται με σχεδίαση υλικού και σκούρο θέμα από προεπιλογή, παρέχει εξαιρετική εμπειρία χρήστη για εύκολη χρήση. Η έλλειψη πρόσβασης στο διαδίκτυο σάς παρέχει περισσότερο απόρρητο, ασφάλεια και σταθερότητα από ό,τι άλλες εφαρμογές.
 
         Χωρίς διαφημίσεις ή περιττά δικαιώματα. Είναι πλήρως ανοιχτού κώδικα, παρέχει προσαρμόσιμα χρώματα.
 
-        <b>Check out the full suite of Simple Tools here:</b>
+        <b>Δείτε την πλήρη σειρά των Απλών Εργαλείων εδώ:</b>
         https://www.simplemobiletools.com
 
         <b>Facebook:</b>
