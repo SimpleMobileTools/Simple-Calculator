@@ -14,11 +14,19 @@
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple Calculator - Do your calculations quickly</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for your quick calculations.</string>
+    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
     <string name="app_long_description">
-        W tej aplikacji nie ma konwertora jednostek miar - możesz skopiować wynik lub formułę do schowka przez długie przytrzymanie.
+        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
 
-        Kolor tekstu widżetu może zostać skonfigurowany, jak również i kolor oraz przezroczystość tła. Naciśnij na wynik, aby otworzyć aplikację.
+        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
+
+        You can make it vibrate on button presses to make you confident during inserting your values.
+
+        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
+
+        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+
+        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
 
         Nie zawiera natomiast żadnych reklam i nie potrzebuje całej masy uprawnień. Jest w pełni otwartoźródłowa i w pełni podatna na kolorowanie.
 

@@ -14,11 +14,19 @@
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple Calculator - Do your calculations quickly</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for your quick calculations.</string>
+    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
     <string name="app_long_description">
-        Neturi matų konvertuoklio, Jūs galite nukopijuoti rezultatą arba formulę į iškarpinę arba ilgu paspaudimu.
+        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
 
-        Valdiklio teksto spalva gali būti pritaikyta, taip pat pagrindinė ir fono spalvos. Spauskite rezultatą arba formulę skydelyje, kad atit]darytumėte programėlę.
+        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
+
+        You can make it vibrate on button presses to make you confident during inserting your values.
+
+        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
+
+        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+
+        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
 
         Neturi reklamų ar nereikalingų leidimų. Programėlė visiškai atviro kodo, yra galimybė keisti spalvas.
 
