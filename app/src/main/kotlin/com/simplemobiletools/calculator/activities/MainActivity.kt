@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
+import androidx.lifecycle.Observer
 import com.simplemobiletools.calculator.BuildConfig
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.config
@@ -33,6 +34,9 @@ class MainActivity : SimpleActivity(), Calculator {
         appLaunched(BuildConfig.APPLICATION_ID)
 
         calc = CalculatorImpl(this, applicationContext)
+        calc.typedValues.observe(this, Observer {
+            if (calc.isFirstEntry()) formula.text = it.joinToString("")
+        })
 
         btn_plus.setOnClickListener { calc.handleOperation(PLUS); checkHaptic(it) }
         btn_minus.setOnClickListener { calc.handleOperation(MINUS); checkHaptic(it) }

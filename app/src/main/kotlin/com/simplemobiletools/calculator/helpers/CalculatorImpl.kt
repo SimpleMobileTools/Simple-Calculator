@@ -1,8 +1,9 @@
 package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
-import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import com.simplemobiletools.calculator.R
+import com.simplemobiletools.calculator.extensions.safeLet
 import com.simplemobiletools.calculator.operation.OperationFactory
 
 class CalculatorImpl(private val callback: Calculator, private val context: Context) {
@@ -16,10 +17,16 @@ class CalculatorImpl(private val callback: Calculator, private val context: Cont
     private var baseValue = 0.0
     private var secondValue = 0.0
 
+    val typedValues = MutableLiveData<MutableList<String>>()
+    private var performedCalculationCounter = 0
+
+    fun isFirstEntry(): Boolean = lastOperation.isNullOrEmpty() || performedCalculationCounter == 0
+
     init {
         resetValues()
         setValue("0")
         setFormula("")
+        typedValues.value = mutableListOf()
     }
 
     private fun resetValueIfNeeded() {
@@ -38,6 +45,8 @@ class CalculatorImpl(private val callback: Calculator, private val context: Cont
         displayedFormula = ""
         isFirstOperation = true
         lastKey = ""
+        typedValues.value = mutableListOf()
+        performedCalculationCounter = 0
     }
 
     fun setValue(value: String) {
@@ -46,7 +55,6 @@ class CalculatorImpl(private val callback: Calculator, private val context: Cont
     }
 
     private fun setFormula(value: String) {
-        Log.i("ANGELINA", "set formula $value")
         callback.setFormula(value, context)
         displayedFormula = value
     }
@@ -64,6 +72,7 @@ class CalculatorImpl(private val callback: Calculator, private val context: Cont
     }
 
     fun addDigit(number: Int) {
+        typedValues.value = typedValues.value?.apply { add(number.toString()) }
         val currentValue = displayedNumber
         val newValue = formatString(currentValue!! + number)
         setValue(newValue)
@@ -107,16 +116,26 @@ class CalculatorImpl(private val callback: Calculator, private val context: Cont
     }
 
     private fun calculateResult() {
-        val operation = OperationFactory.forId(lastOperation!!, baseValue, secondValue)
-
-        if (operation != null) {
-            updateResult(operation.getResult())
+        OperationFactory.forId(lastOperation!!, baseValue, secondValue)?.getResult()?.let {
+            updateResult(it)
+            performedCalculationCounter++
         }
 
         isFirstOperation = false
     }
 
     fun handleOperation(operation: String) {
+        safeLet(operation, getSign(operation), typedValues.value) { operation, sign, values ->
+            var newList = when {
+                values.last().toIntOrNull() == null && values.size > 1 -> {
+                    /* prevent multiple signs next to each other - overwrite the sign */
+                    values.subList(0, values.size - 1)
+                }
+                else -> values
+            }
+            if (sign != newList.last()) typedValues.value = newList.apply { add(sign) }
+        }
+
         if (lastKey == DIGIT && !lastOperation.isNullOrEmpty() && operation == PERCENT) {
             val tempOp = lastOperation
             handlePercent()
@@ -167,6 +186,7 @@ class CalculatorImpl(private val callback: Calculator, private val context: Cont
             newValue = newValue.replace("\\.$".toRegex(), "")
             newValue = formatString(newValue)
             setValue(newValue)
+            typedValues.value = newValue.split("").toMutableList()
         }
     }
 
@@ -177,9 +197,10 @@ class CalculatorImpl(private val callback: Calculator, private val context: Cont
     }
 
     fun handleEquals() {
-        if (lastKey == EQUALS)
+        if (lastKey == EQUALS) {
             updateFormula()
-        calculateResult()
+            calculateResult()
+        }
 
         if (lastKey != DIGIT)
             return
@@ -194,6 +215,7 @@ class CalculatorImpl(private val callback: Calculator, private val context: Cont
         var value = displayedNumber
         if (!value!!.contains(".")) {
             value += "."
+            typedValues.value = typedValues.value?.apply { add(".") }
         }
         setValue(value)
     }
