@@ -5,12 +5,11 @@ import android.util.Log
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.operation.OperationFactory
 
-class CalculatorImpl(calculator: Calculator, val context: Context) {
+class CalculatorImpl(private val callback: Calculator, private val context: Context) {
     var displayedNumber: String? = null
     var displayedFormula: String? = null
     var lastKey: String? = null
     private var lastOperation: String? = null
-    private var callback: Calculator? = calculator
 
     private var isFirstOperation = false
     private var resetValue = false
@@ -42,12 +41,13 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun setValue(value: String) {
-        callback!!.setValue(value, context)
+        callback.setValue(value, context)
         displayedNumber = value
     }
 
     private fun setFormula(value: String) {
-        callback!!.setFormula(value, context)
+        Log.i("ANGELINA", "set formula $value")
+        callback.setFormula(value, context)
         displayedFormula = value
     }
 
@@ -56,13 +56,10 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         val second = secondValue.format()
         val sign = getSign(lastOperation)
 
-        if (sign == "√") {
-            setFormula(sign + first)
-        } else if (sign == "!") {
-            setFormula(first + sign)
-        } else if (!sign.isEmpty()) {
-            var formula = first + sign + second
-            setFormula(formula)
+        when {
+            sign == "√" -> setFormula(sign + first)
+            sign == "!" -> setFormula(first + sign)
+            sign.isNotEmpty() -> setFormula(first + sign + second)
         }
     }
 
@@ -92,25 +89,26 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     fun handleResult() {
         secondValue = getDisplayedNumberAsDouble()
+        updateFormula()
         calculateResult()
         baseValue = getDisplayedNumberAsDouble()
     }
 
     private fun handleRoot() {
         baseValue = getDisplayedNumberAsDouble()
+        updateFormula()
         calculateResult()
     }
 
     private fun handleFactorial() {
         baseValue = getDisplayedNumberAsDouble()
+        updateFormula()
         calculateResult()
     }
 
-    private fun calculateResult(update: Boolean = true) {
-        if (update) updateFormula()
-
+    private fun calculateResult() {
         val operation = OperationFactory.forId(lastOperation!!, baseValue, secondValue)
-        Log.i("ANGELINA", "oper $lastOperation")
+
         if (operation != null) {
             updateResult(operation.getResult())
         }
@@ -147,7 +145,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             val result = it.getResult()
             setFormula("${baseValue.format()}${getSign(lastOperation)}${getDisplayedNumberAsDouble().format()}%")
             secondValue = result
-            calculateResult(false)
+            calculateResult()
         }
     }
 
@@ -180,12 +178,14 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     fun handleEquals() {
         if (lastKey == EQUALS)
-            calculateResult()
+            updateFormula()
+        calculateResult()
 
         if (lastKey != DIGIT)
             return
 
         secondValue = getDisplayedNumberAsDouble()
+        updateFormula()
         calculateResult()
         lastKey = EQUALS
     }

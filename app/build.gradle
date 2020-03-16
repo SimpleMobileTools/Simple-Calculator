@@ -68,4 +68,8 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.0-beta02'
     androidTestImplementation 'androidx.test:rules:1.1.0-beta02'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-beta02'
+
+    def lifecycle_version = "2.2.0"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 }
