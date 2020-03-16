@@ -1,6 +1,7 @@
 package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
+import android.util.Log
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.operation.OperationFactory
 
@@ -8,13 +9,13 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     var displayedNumber: String? = null
     var displayedFormula: String? = null
     var lastKey: String? = null
-    private var mLastOperation: String? = null
-    private var mCallback: Calculator? = calculator
+    private var lastOperation: String? = null
+    private var callback: Calculator? = calculator
 
-    private var mIsFirstOperation = false
-    private var mResetValue = false
-    private var mBaseValue = 0.0
-    private var mSecondValue = 0.0
+    private var isFirstOperation = false
+    private var resetValue = false
+    private var baseValue = 0.0
+    private var secondValue = 0.0
 
     init {
         resetValues()
@@ -23,37 +24,37 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun resetValueIfNeeded() {
-        if (mResetValue)
+        if (resetValue)
             displayedNumber = "0"
 
-        mResetValue = false
+        resetValue = false
     }
 
     private fun resetValues() {
-        mBaseValue = 0.0
-        mSecondValue = 0.0
-        mResetValue = false
-        mLastOperation = ""
+        baseValue = 0.0
+        secondValue = 0.0
+        resetValue = false
+        lastOperation = ""
         displayedNumber = ""
         displayedFormula = ""
-        mIsFirstOperation = true
+        isFirstOperation = true
         lastKey = ""
     }
 
     fun setValue(value: String) {
-        mCallback!!.setValue(value, context)
+        callback!!.setValue(value, context)
         displayedNumber = value
     }
 
     private fun setFormula(value: String) {
-        mCallback!!.setFormula(value, context)
+        callback!!.setFormula(value, context)
         displayedFormula = value
     }
 
     private fun updateFormula() {
-        val first = Formatter.doubleToString(mBaseValue)
-        val second = Formatter.doubleToString(mSecondValue)
-        val sign = getSign(mLastOperation)
+        val first = baseValue.format()
+        val second = secondValue.format()
+        val sign = getSign(lastOperation)
 
         if (sign == "√") {
             setFormula(sign + first)
@@ -79,59 +80,74 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         }
 
         val doubleValue = Formatter.stringToDouble(str)
-        return Formatter.doubleToString(doubleValue)
+        return doubleValue.format()
     }
 
     private fun updateResult(value: Double) {
-        setValue(Formatter.doubleToString(value))
-        mBaseValue = value
+        setValue(value.format())
+        baseValue = value
     }
 
     private fun getDisplayedNumberAsDouble() = Formatter.stringToDouble(displayedNumber!!)
 
     fun handleResult() {
-        mSecondValue = getDisplayedNumberAsDouble()
+        secondValue = getDisplayedNumberAsDouble()
         calculateResult()
-        mBaseValue = getDisplayedNumberAsDouble()
+        baseValue = getDisplayedNumberAsDouble()
     }
 
     private fun handleRoot() {
-        mBaseValue = getDisplayedNumberAsDouble()
+        baseValue = getDisplayedNumberAsDouble()
         calculateResult()
     }
 
     private fun handleFactorial() {
-        mBaseValue = getDisplayedNumberAsDouble()
+        baseValue = getDisplayedNumberAsDouble()
         calculateResult()
     }
 
-    private fun calculateResult() {
-        updateFormula()
+    private fun calculateResult(update: Boolean = true) {
+        if (update) updateFormula()
 
-        val operation = OperationFactory.forId(mLastOperation!!, mBaseValue, mSecondValue)
+        val operation = OperationFactory.forId(lastOperation!!, baseValue, secondValue)
+        Log.i("ANGELINA", "oper $lastOperation")
         if (operation != null) {
             updateResult(operation.getResult())
         }
 
-        mIsFirstOperation = false
+        isFirstOperation = false
     }
 
     fun handleOperation(operation: String) {
-        if (lastKey == DIGIT && operation != ROOT && operation != FACTORIAL) {
+        if (lastKey == DIGIT && !lastOperation.isNullOrEmpty() && operation == PERCENT) {
+            val tempOp = lastOperation
+            handlePercent()
+            lastKey = tempOp
+            lastOperation = tempOp
+        } else if (lastKey == DIGIT && operation != ROOT && operation != FACTORIAL) {
             handleResult()
         }
 
-        mResetValue = true
+        resetValue = true
         lastKey = operation
-        mLastOperation = operation
+        lastOperation = operation
 
         if (operation == ROOT) {
             handleRoot()
-            mResetValue = false
+            resetValue = false
         }
         if (operation == FACTORIAL) {
             handleFactorial()
-            mResetValue = false
+            resetValue = false
+        }
+    }
+
+    private fun handlePercent() {
+        OperationFactory.forId(PERCENT, baseValue, getDisplayedNumberAsDouble())?.let {
+            val result = it.getResult()
+            setFormula("${baseValue.format()}${getSign(lastOperation)}${getDisplayedNumberAsDouble().format()}%")
+            secondValue = result
+            calculateResult(false)
         }
     }
 
@@ -169,7 +185,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         if (lastKey != DIGIT)
             return
 
-        mSecondValue = getDisplayedNumberAsDouble()
+        secondValue = getDisplayedNumberAsDouble()
         calculateResult()
         lastKey = EQUALS
     }
@@ -203,7 +219,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     fun numpadClicked(id: Int) {
         if (lastKey == EQUALS) {
-            mLastOperation = EQUALS
+            lastOperation = EQUALS
         }
 
         lastKey = DIGIT
