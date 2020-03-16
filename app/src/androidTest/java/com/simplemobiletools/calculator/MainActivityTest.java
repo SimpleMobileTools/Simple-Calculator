@@ -203,7 +203,7 @@ public class MainActivityTest {
         checkFormula("40/5");
 
         press(R.id.btn_2);
-        press(R.id.btn_percent);
+        press(R.id.btn_equals);
         checkResult("64");
         checkFormula("8^2");
 
