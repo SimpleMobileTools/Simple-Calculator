@@ -60,6 +60,7 @@ public class MainActivityTest {
 
     @Test
     public void additionTest() {
+        press(R.id.btn_0);
         press(R.id.btn_minus);
         press(R.id.btn_2);
         press(R.id.btn_decimal);
@@ -127,6 +128,19 @@ public class MainActivityTest {
         press(R.id.btn_equals);
         checkResult("2");
         checkFormula("10%20");
+    }
+
+    @Test
+    public void percentTestInsideOtherOperation() {
+        press(R.id.btn_8);
+        press(R.id.btn_0);
+        press(R.id.btn_minus);
+        press(R.id.btn_1);
+        press(R.id.btn_0);
+        press(R.id.btn_percent);
+        press(R.id.btn_equals);
+        checkResult("72");
+        checkFormula("80-10%");
     }
 
     @Test

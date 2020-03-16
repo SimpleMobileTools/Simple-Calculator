@@ -11,7 +11,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 
 @RunWith(RobolectricTestRunner::class)
-@Config(constants = BuildConfig::class, sdk = intArrayOf(21))
+@Config(constants = BuildConfig::class, sdk = [21])
 class MainActivityTest {
     private lateinit var activity: MainActivity
 
@@ -70,12 +70,12 @@ class MainActivityTest {
         checkFormula("6/0")
     }
 
-    @Test
-    fun moduloTest() {
-        val res = calcResult(6.5, MODULO, 3.0)
-        assertEquals("0.5", res)
-        checkFormula("6.5%3")
-    }
+    /*  @Test
+      fun moduloTest() {
+          val res = calcResult(6.5, MODULO, 3.0)
+          assertEquals("0.5", res)
+          checkFormula("6.5%3")
+      }*/
 
     @Test
     fun powerTest() {
@@ -143,7 +143,7 @@ class MainActivityTest {
         checkFormula("5.6*5")
 
         setDouble(4.0)
-        handleOperation(MODULO)
+        handleOperation(DIVIDE)
         assertEquals("7", getDisplayedNumber())
         checkFormula("28/4")
 
