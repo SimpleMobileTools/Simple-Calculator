@@ -35,7 +35,7 @@ class MainActivity : SimpleActivity(), Calculator {
 
         calc = CalculatorImpl(this, applicationContext)
         calc.typedValues.observe(this, Observer {
-            if (calc.isFirstEntry()) formula.text = it.joinToString("")
+            if (calc.isFirstEntry() && it.isWithOperationSign()) formula.text = it.joinToString("")
         })
 
         btn_plus.setOnClickListener { calc.handleOperation(PLUS); checkHaptic(it) }
@@ -173,4 +173,8 @@ class MainActivity : SimpleActivity(), Calculator {
     override fun setFormula(value: String, context: Context) {
         formula.text = value
     }
+}
+
+private fun <E> List<E>.isWithOperationSign(): Boolean {
+    return joinToString("").toIntOrNull() == null
 }
