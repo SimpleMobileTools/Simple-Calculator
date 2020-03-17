@@ -3,6 +3,7 @@ package com.simplemobiletools.calculator.helpers
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import com.simplemobiletools.calculator.R
+import com.simplemobiletools.calculator.extensions.isWithOperationSign
 import com.simplemobiletools.calculator.extensions.safeLet
 import com.simplemobiletools.calculator.operation.OperationFactory
 
@@ -169,7 +170,13 @@ class CalculatorImpl(private val callback: Calculator, private val context: Cont
     }
 
     fun handleClear() {
-        if (displayedNumber.equals(NAN)) {
+        if (typedValues.value?.isWithOperationSign() == true && isFirstEntry()) {
+            /* remove the operation sign */
+            typedValues.value?.let { oldList ->
+                if (oldList?.size > 1) typedValues.value = oldList?.subList(0, oldList.lastIndex)
+                lastOperation = ""
+            }
+        } else if (displayedNumber.equals(NAN)) {
             handleReset()
         } else {
             val oldValue = displayedNumber

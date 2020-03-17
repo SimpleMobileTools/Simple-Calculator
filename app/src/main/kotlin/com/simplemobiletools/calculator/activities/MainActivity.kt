@@ -3,6 +3,7 @@ package com.simplemobiletools.calculator.activities
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.lifecycle.Observer
 import com.simplemobiletools.calculator.BuildConfig
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.config
+import com.simplemobiletools.calculator.extensions.isWithOperationSign
 import com.simplemobiletools.calculator.extensions.updateViewColors
 import com.simplemobiletools.calculator.helpers.*
 import com.simplemobiletools.commons.extensions.*
@@ -34,8 +36,9 @@ class MainActivity : SimpleActivity(), Calculator {
         appLaunched(BuildConfig.APPLICATION_ID)
 
         calc = CalculatorImpl(this, applicationContext)
-        calc.typedValues.observe(this, Observer {
-            if (calc.isFirstEntry() && it.isWithOperationSign()) formula.text = it.joinToString("")
+        calc.typedValues.observe(this, Observer { list ->
+            Log.i("ANGELINA", "observe: $list")
+            formula.text = if (calc.isFirstEntry() && list.isWithOperationSign()) list.joinToString("") else ""
         })
 
         btn_plus.setOnClickListener { calc.handleOperation(PLUS); checkHaptic(it) }
@@ -173,8 +176,4 @@ class MainActivity : SimpleActivity(), Calculator {
     override fun setFormula(value: String, context: Context) {
         formula.text = value
     }
-}
-
-private fun <E> List<E>.isWithOperationSign(): Boolean {
-    return joinToString("").toIntOrNull() == null
 }
