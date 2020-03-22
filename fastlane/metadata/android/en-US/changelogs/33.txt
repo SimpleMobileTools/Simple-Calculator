@@ -1,0 +1,2 @@
+ * Fixed the percentage handling
+ * Updated the app icon

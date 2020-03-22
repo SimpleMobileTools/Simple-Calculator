@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.1.3 *(2020-03-22)*
+----------------------------
+
+ * Fixed the percentage handling
+ * Updated the app icon
+
 Version 5.1.2 *(2020-03-05)*
 ----------------------------
 
