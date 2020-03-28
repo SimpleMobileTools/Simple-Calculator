@@ -84,7 +84,6 @@ class MainActivity : SimpleActivity(), Calculator {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
-        menu.findItem(R.id.scientific_calculator).isVisible = false // not implemented yet
         return true
     }
 
@@ -92,7 +91,6 @@ class MainActivity : SimpleActivity(), Calculator {
         when (item.itemId) {
             R.id.settings -> launchSettings()
             R.id.about -> launchAbout()
-            R.id.scientific_calculator -> launchScientific()
             else -> return super.onOptionsItemSelected(item)
         }
         return true
@@ -112,10 +110,6 @@ class MainActivity : SimpleActivity(), Calculator {
 
     private fun launchSettings() {
         startActivity(Intent(applicationContext, SettingsActivity::class.java))
-    }
-
-    private fun launchScientific() {
-        startActivity(Intent(applicationContext, ScientificActivity::class.java))
     }
 
     private fun launchAbout() {
