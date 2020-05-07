@@ -4,7 +4,7 @@
     <string name="scientific_calculator">Wetenschappelijke Rekenmachine</string>
 
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Trillen bij aanraken toetsen</string>
+    <string name="vibrate_on_button_press">Trillen bij toetsaanslagen</string>
 
     <!-- FAQ -->
     <string name="faq_1_title">Hoe werkt de knop C (Clear)?</string>
@@ -12,21 +12,21 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Eenvoudige Rekenmachine - Doe snel berekeningen</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
+    <string name="app_short_description">Rekenmachine voor snelle berekeningen, met fijne interface en zonder ads</string>
     <string name="app_long_description">
-        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
+        Deze stijlvolle moderne rekenmachine biedt een goede gebruikerservaring en is een lust voor het oog. De resultaten en de berekening zijn door lang drukken te kopiëren naar het klembord.
 
-        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
+        De app is een eenvoudige hulp bij het doen van snelle berekeningen, zoals vermenigvuldigen, delen, worteltrekken en machtsverheffen.
 
-        You can make it vibrate on button presses to make you confident during inserting your values.
+        Om er zeker van te zijn dat een toetsaanslag is geregistreerd, kan de optie om feedback via trillen worden gebruikt.
 
-        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
+        Er is ook een optie om te voorkomen dat het apparaat in slaapstand belandt als de app op de voorgrond staat.
 
-        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+        De tekstkleur van de in grootte aan te passen widget kan zelf worden gekozen, evenals de kleur en transparantie van de achtergrond. Druk op het resultaat of de berekening in de widget om de app te openen.
 
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
+        De app is ontworpen volgens material design en heeft standaard een donker thema. De app heeft geen toegang tot het internet nodig en voorziet van meer privacy, veiligheid en stabiliteit dan andere apps.
 		
         Bevat geen advertenties of onnodige machtigingen. Volledig open-source. Kleuren van de app kunnen worden aangepast.
 
