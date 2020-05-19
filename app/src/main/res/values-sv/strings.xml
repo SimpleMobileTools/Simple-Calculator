@@ -3,6 +3,9 @@
     <string name="app_launcher_name">Kalkylator</string>
     <string name="scientific_calculator">Avancerad kalkylator</string>
 
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">Fel: delning med noll</string>
+
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrera när jag trycker på knapparna</string>
 

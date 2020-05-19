@@ -3,6 +3,9 @@
     <string name="app_launcher_name">Hesap Makinesi</string>
     <string name="scientific_calculator">Bilimsel Hesap Makinesi</string>
 
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">Hata: sıfıra bölme</string>
+
     <!-- Settings -->
     <string name="vibrate_on_button_press">Düğmeye basıldığında titret</string>
 

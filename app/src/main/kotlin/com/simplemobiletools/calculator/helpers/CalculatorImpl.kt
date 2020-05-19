@@ -58,7 +58,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
         when {
             baseValue == 0.0 && secondValue == 0.0 && sign == "/" -> {
-                setFormula("Error: division by zero")
+                setFormula(context.getString(R.string.formula_divide_by_zero_error))
             }
 
             sign == "√" -> setFormula(sign + first)

@@ -3,6 +3,9 @@
     <string name="app_launcher_name">Kalkulator</string>
     <string name="scientific_calculator">Kalkulator Sains</string>
 
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">Kesalahan: pembagian dengan nol</string>
+
     <!-- Settings -->
     <string name="vibrate_on_button_press">Getar saat tombol ditekan</string>
 

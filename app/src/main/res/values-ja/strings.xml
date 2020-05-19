@@ -3,6 +3,9 @@
     <string name="app_launcher_name">電卓</string>
     <string name="scientific_calculator">Scientific Calculator</string>
 
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">エラー：ゼロによる除算</string>
+
     <!-- Settings -->
     <string name="vibrate_on_button_press">ボタンのタップ時に振動する</string>
 
