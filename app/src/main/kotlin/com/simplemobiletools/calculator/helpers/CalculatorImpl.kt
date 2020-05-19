@@ -58,18 +58,11 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         val sign = getSign(lastOperation)
 
         when {
-            sign == "√" -> {
-                setFormula(sign + first)
-            }
-            sign == "!" -> {
-                setFormula(first + sign)
-            }
+            sign == "√" -> setFormula(sign + first)
+            sign == "!" -> setFormula(first + sign)
             sign.isNotEmpty() -> {
                 if (secondValue == 0.0 && sign == "/") {
-                    Toast.makeText(
-                            context,
-                            context.getString(R.string.formula_divide_by_zero_error),
-                            Toast.LENGTH_SHORT).show()
+                    context.toast(context.getString(R.string.formula_divide_by_zero_error))
                 }
 
                 setFormula(first + sign + second)
