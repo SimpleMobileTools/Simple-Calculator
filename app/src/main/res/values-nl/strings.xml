@@ -3,6 +3,9 @@
     <string name="app_launcher_name">Rekenmachine</string>
     <string name="scientific_calculator">Wetenschappelijke Rekenmachine</string>
 
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">Fout: delen door nul</string>
+
     <!-- Settings -->
     <string name="vibrate_on_button_press">Trillen bij toetsaanslagen</string>
 

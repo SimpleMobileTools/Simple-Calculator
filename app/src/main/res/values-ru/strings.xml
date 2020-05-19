@@ -3,6 +3,9 @@
     <string name="app_launcher_name">Калькулятор</string>
     <string name="scientific_calculator">Научный калькулятор</string>
 
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">Ошибка: деление на ноль</string>
+
     <!-- Settings -->
     <string name="vibrate_on_button_press">Вибрация при нажатии кнопок</string>
 

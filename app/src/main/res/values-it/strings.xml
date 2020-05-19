@@ -3,6 +3,9 @@
     <string name="app_launcher_name">Calcolatrice</string>
     <string name="scientific_calculator">Calcolatrice scientifica</string>
 
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">Errore: divisione per zero</string>
+
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibra alla pressione di un tasto</string>
 

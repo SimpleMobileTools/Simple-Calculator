@@ -3,6 +3,9 @@
     <string name="app_launcher_name">Αριθμομηχανή</string>
     <string name="scientific_calculator">Επιστημονική Αριθμομηχανή</string>
 
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">Σφάλμα: διαίρεση με μηδέν</string>
+
     <!-- Settings -->
     <string name="vibrate_on_button_press">Δόνηση στο πάτημα πλήκτρου</string>
 

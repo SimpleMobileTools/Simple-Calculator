@@ -3,6 +3,9 @@
     <string name="app_launcher_name">Kalkulačka</string>
     <string name="scientific_calculator">Vědecká kalkulačka</string>
 
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">Chyba: dělení nulou</string>
+
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrovat při stisku tlačítka</string>
 

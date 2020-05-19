@@ -3,6 +3,9 @@
     <string name="app_launcher_name">الحاسبة</string>
     <string name="scientific_calculator">Scientific Calculator</string>
 
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">خطأ: القسمة على صفر</string>
+
     <!-- Settings -->
     <string name="vibrate_on_button_press">الاهتزاز عند الضغط على الازرار</string>
 

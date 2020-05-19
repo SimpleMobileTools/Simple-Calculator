@@ -56,13 +56,21 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         val second = secondValue.format()
         val sign = getSign(lastOperation)
 
-        if (sign == "√") {
-            setFormula(sign + first)
-        } else if (sign == "!") {
-            setFormula(first + sign)
-        } else if (!sign.isEmpty()) {
-            var formula = first + sign + second
-            setFormula(formula)
+        when {
+            baseValue == 0.0 && secondValue == 0.0 && sign == "/" -> {
+                setFormula(context.getString(R.string.formula_divide_by_zero_error))
+            }
+
+            sign == "√" -> setFormula(sign + first)
+
+            sign == "!" -> setFormula(first + sign)
+
+            else -> {
+                if (sign.isNotEmpty()) {
+                    val formula = first + sign + second
+                    setFormula(formula)
+                }
+            }
         }
     }
 
