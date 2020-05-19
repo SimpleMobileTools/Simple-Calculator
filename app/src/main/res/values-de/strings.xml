@@ -3,6 +3,9 @@
     <string name="app_launcher_name">Rechner</string>ng>
     <string name="scientific_calculator">Wissenschaftlicher Rechner</string>
 
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">Fehler: Division durch Null</string>
+
     <!-- Settings -->
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
 

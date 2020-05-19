@@ -3,6 +3,9 @@
     <string name="app_launcher_name">Cyfrifiannell</string>
     <string name="scientific_calculator">Cyfrifiannell Gwyddonol</string>
 
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">Gwall: rhannu â sero</string>
+
     <!-- Settings -->
     <string name="vibrate_on_button_press">Dirgrynu wrth wasgu botymau</string>
 
