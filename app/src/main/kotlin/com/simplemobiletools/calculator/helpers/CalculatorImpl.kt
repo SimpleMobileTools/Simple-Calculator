@@ -2,6 +2,7 @@ package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
 import android.util.Log
+import android.widget.Toast
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.operation.OperationFactory
 
@@ -57,19 +58,21 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         val sign = getSign(lastOperation)
 
         when {
-            baseValue == 0.0 && secondValue == 0.0 && sign == "/" -> {
-                setFormula(context.getString(R.string.formula_divide_by_zero_error))
+            sign == "√" -> {
+                setFormula(sign + first)
             }
-
-            sign == "√" -> setFormula(sign + first)
-
-            sign == "!" -> setFormula(first + sign)
-
-            else -> {
-                if (sign.isNotEmpty()) {
-                    val formula = first + sign + second
-                    setFormula(formula)
+            sign == "!" -> {
+                setFormula(first + sign)
+            }
+            sign.isNotEmpty() -> {
+                if (secondValue == 0.0 && sign == "/") {
+                    Toast.makeText(
+                            context,
+                            context.getString(R.string.formula_divide_by_zero_error),
+                            Toast.LENGTH_SHORT).show()
                 }
+
+                setFormula(first + sign + second)
             }
         }
     }
