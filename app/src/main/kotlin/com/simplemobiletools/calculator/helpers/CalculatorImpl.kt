@@ -2,9 +2,9 @@ package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
 import android.util.Log
-import android.widget.Toast
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.operation.OperationFactory
+import com.simplemobiletools.commons.extensions.toast
 
 class CalculatorImpl(calculator: Calculator, val context: Context) {
     var displayedNumber: String? = null
