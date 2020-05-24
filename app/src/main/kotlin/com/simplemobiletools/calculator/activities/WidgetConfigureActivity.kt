@@ -13,8 +13,8 @@ import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.helpers.MyWidgetProvider
 import com.simplemobiletools.commons.dialogs.ColorPickerDialog
 import com.simplemobiletools.commons.extensions.adjustAlpha
+import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.beVisible
-import com.simplemobiletools.commons.extensions.setBackgroundColor
 import com.simplemobiletools.commons.extensions.setFillWithStroke
 import com.simplemobiletools.commons.helpers.IS_CUSTOMIZING_COLORS
 import kotlinx.android.synthetic.main.activity_main.*
@@ -65,8 +65,10 @@ class WidgetConfigureActivity : SimpleActivity() {
 
     private fun saveConfig() {
         val appWidgetManager = AppWidgetManager.getInstance(this)
-        val views = RemoteViews(packageName, R.layout.activity_main)
-        views.setBackgroundColor(R.id.calculator_holder, mBgColor)
+        val views = RemoteViews(packageName, R.layout.widget).apply {
+            applyColorFilter(R.id.widget_background, mBgColor)
+        }
+
         appWidgetManager.updateAppWidget(mWidgetId, views)
 
         storeWidgetColors()
@@ -95,7 +97,7 @@ class WidgetConfigureActivity : SimpleActivity() {
 
     private fun updateBackgroundColor() {
         mBgColor = mBgColorWithoutTransparency.adjustAlpha(mBgAlpha)
-        config_calc.setBackgroundColor(mBgColor)
+        widget_background.applyColorFilter(mBgColor)
         config_save.setBackgroundColor(mBgColor)
         config_bg_color.setFillWithStroke(mBgColor, Color.BLACK)
     }

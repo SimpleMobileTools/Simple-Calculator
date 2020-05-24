@@ -11,6 +11,7 @@ import android.widget.RemoteViews
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.activities.MainActivity
 import com.simplemobiletools.calculator.extensions.config
+import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.setBackgroundColor
 import com.simplemobiletools.commons.extensions.setText
 
@@ -20,14 +21,9 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
     }
 
     override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {
-        performUpdate(context)
-    }
-
-    private fun performUpdate(context: Context) {
         val config = context.config
-        val appWidgetManager = AppWidgetManager.getInstance(context)
         appWidgetManager.getAppWidgetIds(getComponentName(context)).forEach {
-            val views = RemoteViews(context.packageName, R.layout.activity_main)
+            val views = RemoteViews(context.packageName, R.layout.widget)
             setupIntent(context, views, DECIMAL, R.id.btn_decimal)
             setupIntent(context, views, ZERO, R.id.btn_0)
             setupIntent(context, views, ONE, R.id.btn_1)
@@ -55,7 +51,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
             setupAppOpenIntent(context, views, R.id.result)
 
             views.setViewVisibility(R.id.btn_reset, View.VISIBLE)
-            views.setBackgroundColor(R.id.calculator_holder, config.widgetBgColor)
+            views.applyColorFilter(R.id.widget_background, config.widgetBgColor)
 
             updateTextColors(views, config.widgetTextColor)
             appWidgetManager.updateAppWidget(it, views)
@@ -123,7 +119,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
     override fun setValue(value: String, context: Context) {
         val appWidgetManager = AppWidgetManager.getInstance(context)
         appWidgetManager.getAppWidgetIds(getComponentName(context)).forEach {
-            val views = RemoteViews(context.packageName, R.layout.activity_main)
+            val views = RemoteViews(context.packageName, R.layout.widget)
             views.setText(R.id.result, value)
             appWidgetManager.partiallyUpdateAppWidget(it, views)
         }
@@ -135,7 +131,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
     override fun setFormula(value: String, context: Context) {
         val appWidgetManager = AppWidgetManager.getInstance(context)
         appWidgetManager.getAppWidgetIds(getComponentName(context)).forEach {
-            val views = RemoteViews(context.packageName, R.layout.activity_main)
+            val views = RemoteViews(context.packageName, R.layout.widget)
             views.setText(R.id.formula, value)
             appWidgetManager.partiallyUpdateAppWidget(it, views)
         }
