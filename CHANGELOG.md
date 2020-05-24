@@ -1,6 +1,15 @@
 Changelog
 ==========
 
+Version 5.2.0 *(2020-05-24)*
+----------------------------
+
+ * Use a nicer app icon on lower Android devices
+ * Allow making the widget smaller as before
+ * Use rounded corners at the widget
+ * Show a warning at dividing by zero (by ochagovdanil)
+ * Couple other translation and UI improvements
+
 Version 5.1.3 *(2020-03-22)*
 ----------------------------
 

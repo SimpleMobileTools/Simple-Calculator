@@ -1,0 +1,5 @@
+ * Use a nicer app icon on lower Android devices
+ * Allow making the widget smaller as before
+ * Use rounded corners at the widget
+ * Show a warning at dividing by zero (by ochagovdanil)
+ * Couple other translation and UI improvements
