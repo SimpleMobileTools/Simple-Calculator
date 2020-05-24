@@ -21,12 +21,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.widget_config.*
 
 class WidgetConfigureActivity : SimpleActivity() {
-    private var mBgColor = 0
-    private var mBgColorWithoutTransparency = 0
-    private var mWidgetId = 0
-    private var mTextColor = 0
     private var mBgAlpha = 0f
-    private var mIsCustomizingColors = false
+    private var mWidgetId = 0
+    private var mBgColor = 0
+    private var mTextColor = 0
+    private var mBgColorWithoutTransparency = 0
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         useDynamicTheme = false
@@ -35,7 +34,7 @@ class WidgetConfigureActivity : SimpleActivity() {
         setContentView(R.layout.widget_config)
         initVariables()
 
-        mIsCustomizingColors = intent.extras?.getBoolean(IS_CUSTOMIZING_COLORS) ?: false
+        val mIsCustomizingColors = intent.extras?.getBoolean(IS_CUSTOMIZING_COLORS) ?: false
         mWidgetId = intent.extras?.getInt(AppWidgetManager.EXTRA_APPWIDGET_ID) ?: AppWidgetManager.INVALID_APPWIDGET_ID
 
         if (mWidgetId == AppWidgetManager.INVALID_APPWIDGET_ID && !mIsCustomizingColors) {
@@ -49,12 +48,7 @@ class WidgetConfigureActivity : SimpleActivity() {
 
     private fun initVariables() {
         mBgColor = config.widgetBgColor
-        if (mBgColor == 1) {
-            mBgColor = Color.BLACK
-            mBgAlpha = .2f
-        } else {
-            mBgAlpha = Color.alpha(mBgColor) / 255.toFloat()
-        }
+        mBgAlpha = Color.alpha(mBgColor) / 255.toFloat()
 
         btn_reset.beVisible()
         mBgColorWithoutTransparency = Color.rgb(Color.red(mBgColor), Color.green(mBgColor), Color.blue(mBgColor))
@@ -102,8 +96,8 @@ class WidgetConfigureActivity : SimpleActivity() {
     private fun updateBackgroundColor() {
         mBgColor = mBgColorWithoutTransparency.adjustAlpha(mBgAlpha)
         config_calc.setBackgroundColor(mBgColor)
-        config_bg_color.setFillWithStroke(mBgColor, Color.BLACK)
         config_save.setBackgroundColor(mBgColor)
+        config_bg_color.setFillWithStroke(mBgColor, Color.BLACK)
     }
 
     private fun updateTextColor() {
@@ -111,8 +105,8 @@ class WidgetConfigureActivity : SimpleActivity() {
         config_save.setTextColor(mTextColor)
 
         val viewIds = intArrayOf(R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7, R.id.btn_8,
-                R.id.btn_9, R.id.btn_percent, R.id.btn_power, R.id.btn_root, R.id.btn_clear, R.id.btn_reset, R.id.btn_divide, R.id.btn_multiply,
-                R.id.btn_minus, R.id.btn_plus, R.id.btn_decimal, R.id.btn_equals)
+            R.id.btn_9, R.id.btn_percent, R.id.btn_power, R.id.btn_root, R.id.btn_clear, R.id.btn_reset, R.id.btn_divide, R.id.btn_multiply,
+            R.id.btn_minus, R.id.btn_plus, R.id.btn_decimal, R.id.btn_equals)
         result.setTextColor(mTextColor)
         formula.setTextColor(mTextColor)
 
@@ -145,12 +139,8 @@ class WidgetConfigureActivity : SimpleActivity() {
             updateBackgroundColor()
         }
 
-        override fun onStartTrackingTouch(seekBar: SeekBar) {
+        override fun onStartTrackingTouch(seekBar: SeekBar) {}
 
-        }
-
-        override fun onStopTrackingTouch(seekBar: SeekBar) {
-
-        }
+        override fun onStopTrackingTouch(seekBar: SeekBar) {}
     }
 }
