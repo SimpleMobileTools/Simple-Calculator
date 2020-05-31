@@ -11,25 +11,25 @@
 
     <!-- FAQ -->
     <string name="faq_1_title">如何使用 C (清除) 按钮？</string>
-    <string name="faq_1_text">点按它一次删除一个字母。长按它将立即重置所有区域。</string>
+    <string name="faq_1_text">点按它一次删除一个字母。长按它将立即重置所有字段。</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">简易计算器 - 帮你快速计算</string>
+    <string name="app_title">简易计算器 - 帮您快速计算</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">一个快速简易的计算器，包含友好的用户界面且没有广告</string>
     <string name="app_long_description">
-        这个现代化风格的计算器提供你必会爱上的用户体验。你可以长按复制结果或者方程。
+        这个现代化风格的计算器提供您必会爱上的用户体验。您可以长按复制结果或者方程。
 
-        本应用程序是一个帮助快速计算的简易助手，提供许多基本的功能包括乘法、处罚、平凡根和乘方。
+        本应用程序是一个帮助快速计算的简易助手，提供许多基本的功能包括乘法、除法、平凡根和乘方。
 
-        你可以令其在按下按钮时震动，这样你对于数值的输入保有信心。
+        您可以设定在按下按钮时震动，方便您确认数值的输入。
 
         有一个选项可以在使用应用时阻止手机进入休眠状态，便于长时间使用。
 
-        可改变大小的小工具文字颜色可以自定义，包括颜色和背景透明度。点按小工具上的结果或者方程将打开应用。
+        小工具大小可变，文字颜色也可以自定义，包括颜色和背景透明度。点按小工具上的结果或者方程将打开主应用。
 
-        它遵循质感设计且默认应用黑暗模式，提供便于使用的极佳的用户体验。相对于其他应用，不包含互联网访问给予你更佳的隐私、保密性和稳定性。
+        它遵循质感设计且默认应用黑暗模式，提供便于使用的极佳的用户体验。相对于其他应用，不包含互联网访问给予您更佳的隐私、保密性和稳定性。
 
         不包含广告和不必要的权限。它完全开放源代码，提供可自定义的颜色。
 
