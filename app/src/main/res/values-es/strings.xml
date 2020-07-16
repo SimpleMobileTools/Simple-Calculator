@@ -15,25 +15,25 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Calculadora Simple - Has tus cálculos rápido</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
+    <string name="app_short_description">Una calculadora para cálculos simples y rápidos, buena interfaz y sin anuncios</string>
     <string name="app_long_description">
-        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
+        Esta calculadora elegante y moderna ofrece una gran experiencia de usuario que amarás ver. Puedes copiar el resutado o la fórmula al portapapeles con una pulsación larga.
 
-        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
+        la aplicación es una ayuda simple para cálculos rápidos con funciones básicas variadas que que incluyen multiplicar, dividir, raíces y potencias.
 
-        You can make it vibrate on button presses to make you confident during inserting your values.
+        Puedes hacer que vibre al presionar un botón para darte confianza al ingresar tus valores.
 
-        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
+        Hay una opción para evitar que el celular se bloquee mientras se usa la palicación para un uso más cómodo.
 
-        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+        El color del texto del widget redimensionable puede ser personalizado, así como el color y opacidad del fondo. Presiona el resultado o fórmula en el widget para abrir la aplicación.
 
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
+        Incluye diseño material y tema obscuro por defecto, provee una gran experiencia de usuario para facilitar el uso. La falta del permiso de acceso a inernet te da más privacidad, seguridad y estabilidad que otras aplicaciones.
 
-        No contiene anuncios ni permisos innecesarios. Es completamente OpenSource y además provee un tema oscuro.
+        No contiene publicidad ni permisos innecesarios. Es totalmente de código abierto, proporciona colores personalizables.
 
-        <b>Check out the full suite of Simple Tools here:</b>
+        <b>Mira la suite completa de herramientas Simples aquí:</b>
         https://www.simplemobiletools.com
 
         <b>Facebook:</b>
