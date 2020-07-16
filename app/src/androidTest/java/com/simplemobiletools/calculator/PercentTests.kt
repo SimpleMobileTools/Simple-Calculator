@@ -6,7 +6,7 @@ import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.rule.ActivityTestRule
-import androidx.test.runner.AndroidJUnit4
+import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.simplemobiletools.calculator.activities.MainActivity
 import org.junit.Rule
 import org.junit.Test
@@ -74,11 +74,11 @@ class PercentTests {
     }
 
     private fun press(id: Int) {
-        Espresso.onView(ViewMatchers.withId(id)).perform(ViewActions.click())
+        Espresso.onView(withId(id)).perform(ViewActions.click())
     }
 
     private fun longPress(id: Int) {
-        Espresso.onView(ViewMatchers.withId(id)).perform(ViewActions.longClick())
+        Espresso.onView(withId(id)).perform(ViewActions.longClick())
     }
 
     private fun checkResult(desired: String) {

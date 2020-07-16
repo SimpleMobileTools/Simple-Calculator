@@ -2,13 +2,18 @@ package com.simplemobiletools.calculator.operation
 
 import com.simplemobiletools.calculator.operation.base.BinaryOperation
 import com.simplemobiletools.calculator.operation.base.Operation
+import java.math.BigDecimal
+import kotlin.math.pow
 
-class PowerOperation(baseValue: Double, secondValue: Double) : BinaryOperation(baseValue, secondValue), Operation {
+class PowerOperation(baseValue: BigDecimal, secondValue: BigDecimal) : BinaryOperation(baseValue, secondValue), Operation {
 
-    override fun getResult(): Double {
-        var result = Math.pow(baseValue, secondValue)
-        if (java.lang.Double.isInfinite(result) || java.lang.Double.isNaN(result))
-            result = 0.0
-        return result
+    override fun getResult(): BigDecimal {
+        val result = baseValue.toDouble().pow(secondValue.toDouble())
+
+        return if (java.lang.Double.isInfinite(result) || java.lang.Double.isNaN(result))
+            BigDecimal.ZERO
+        else {
+            BigDecimal(result)
+        }
     }
 }

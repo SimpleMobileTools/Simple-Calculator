@@ -5,6 +5,7 @@ import android.util.Log
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.operation.OperationFactory
 import com.simplemobiletools.commons.extensions.toast
+import java.math.BigDecimal
 
 class CalculatorImpl(calculator: Calculator, val context: Context) {
     var displayedNumber: String? = null
@@ -15,8 +16,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     private var isFirstOperation = false
     private var resetValue = false
-    private var baseValue = 0.0
-    private var secondValue = 0.0
+    private var baseValue: BigDecimal = BigDecimal.ZERO
+    private var secondValue: BigDecimal = BigDecimal.ZERO
 
     init {
         resetValues()
@@ -32,8 +33,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun resetValues() {
-        baseValue = 0.0
-        secondValue = 0.0
+        baseValue = BigDecimal.ZERO
+        secondValue = BigDecimal.ZERO
         resetValue = false
         lastOperation = ""
         displayedNumber = ""
@@ -61,7 +62,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             sign == "√" -> setFormula(sign + first)
             sign == "!" -> setFormula(first + sign)
             sign.isNotEmpty() -> {
-                if (secondValue == 0.0 && sign == "/") {
+                if (secondValue.compareTo(BigDecimal.ZERO) == 0 && sign == "/") {
                     context.toast(context.getString(R.string.formula_divide_by_zero_error))
                 }
 
@@ -83,16 +84,16 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             return str
         }
 
-        val doubleValue = Formatter.stringToDouble(str)
+        val doubleValue = Formatter.stringToBigDecimal(str)
         return doubleValue.format()
     }
 
-    private fun updateResult(value: Double) {
+    private fun updateResult(value: BigDecimal) {
         setValue(value.format())
         baseValue = value
     }
 
-    private fun getDisplayedNumberAsDouble() = Formatter.stringToDouble(displayedNumber!!)
+    private fun getDisplayedNumberAsDouble() = Formatter.stringToBigDecimal(displayedNumber!!)
 
     fun handleResult() {
         secondValue = getDisplayedNumberAsDouble()

@@ -2,10 +2,11 @@ package com.simplemobiletools.calculator.operation
 
 import com.simplemobiletools.calculator.helpers.*
 import com.simplemobiletools.calculator.operation.base.Operation
+import java.math.BigDecimal
 
 object OperationFactory {
 
-    fun forId(id: String, baseValue: Double, secondValue: Double): Operation? {
+    fun forId(id: String, baseValue: BigDecimal, secondValue: BigDecimal): Operation? {
         return when (id) {
             PLUS -> PlusOperation(baseValue, secondValue)
             MINUS -> MinusOperation(baseValue, secondValue)

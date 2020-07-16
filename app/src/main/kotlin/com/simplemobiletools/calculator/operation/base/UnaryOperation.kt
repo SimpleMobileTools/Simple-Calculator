@@ -1,3 +1,5 @@
 package com.simplemobiletools.calculator.operation.base
 
-open class UnaryOperation protected constructor(protected var value: Double)
+import java.math.BigDecimal
+
+open class UnaryOperation protected constructor(protected var value: BigDecimal)

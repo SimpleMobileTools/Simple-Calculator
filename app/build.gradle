@@ -61,9 +61,10 @@ dependencies {
     implementation 'com.simplemobiletools:commons:5.28.23'
     implementation 'me.grantland:autofittextview:0.2.1'
 
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'androidx.test.ext:junit:1.1.1'
     testImplementation 'org.robolectric:robolectric:3.8'
 
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.annotation:annotation:1.0.0'
     androidTestImplementation 'androidx.test:runner:1.1.0-beta02'
     androidTestImplementation 'androidx.test:rules:1.1.0-beta02'

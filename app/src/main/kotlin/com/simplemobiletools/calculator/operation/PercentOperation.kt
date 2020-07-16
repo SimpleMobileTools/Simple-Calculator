@@ -2,14 +2,15 @@ package com.simplemobiletools.calculator.operation
 
 import com.simplemobiletools.calculator.operation.base.BinaryOperation
 import com.simplemobiletools.calculator.operation.base.Operation
+import java.math.BigDecimal
 
-class PercentOperation(baseValue: Double, secondValue: Double) : BinaryOperation(baseValue, secondValue), Operation {
+class PercentOperation(baseValue: BigDecimal, secondValue: BigDecimal) : BinaryOperation(baseValue, secondValue), Operation {
 
-    override fun getResult(): Double {
-        var result = 0.0
-        if (secondValue != 0.0) {
-            result = baseValue / 100 * secondValue
+    override fun getResult(): BigDecimal {
+        return if (secondValue.compareTo(BigDecimal.ZERO) == 0) {
+            BigDecimal.ZERO
+        } else {
+            baseValue.divide(BigDecimal(100)).multiply(secondValue)
         }
-        return result
     }
 }

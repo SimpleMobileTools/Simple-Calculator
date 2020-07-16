@@ -20,7 +20,7 @@ This app is just one piece of a bigger series of apps. You can find the rest of 
 <img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/app_3.jpg" width="30%">
 </div>
 
-</br>
+<br>
 It contains a couple UI and unit tests, they can be ran with the following instructions.
 
 <h3>Running Espresso UI tests</h3>
