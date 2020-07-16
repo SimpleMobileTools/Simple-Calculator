@@ -12,7 +12,7 @@ object Formatter {
         symbols.groupingSeparator = ','
 
         val formatter = DecimalFormat()
-        formatter.maximumFractionDigits = 12
+        formatter.maximumFractionDigits = 50
         formatter.decimalFormatSymbols = symbols
         formatter.isGroupingUsed = true
         return formatter.format(d)
