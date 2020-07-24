@@ -10,7 +10,7 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     compileSdkVersion 29
-    buildToolsVersion '29.0.3'
+    buildToolsVersion '30.0.1'
 
     defaultConfig {
         applicationId "com.simplemobiletools.calculator"
@@ -58,14 +58,14 @@ android {
 }
 
 dependencies {
-    implementation 'com.simplemobiletools:commons:5.28.23'
+    implementation 'com.simplemobiletools:commons:5.28.24'
     implementation 'me.grantland:autofittextview:0.2.1'
 
-    testImplementation 'junit:junit:4.12'
-    testImplementation 'org.robolectric:robolectric:3.8'
+    testImplementation 'junit:junit:4.13'
+    testImplementation 'org.robolectric:robolectric:4.3.1'
 
-    androidTestImplementation 'androidx.annotation:annotation:1.0.0'
-    androidTestImplementation 'androidx.test:runner:1.1.0-beta02'
-    androidTestImplementation 'androidx.test:rules:1.1.0-beta02'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-beta02'
+    androidTestImplementation 'androidx.annotation:annotation:1.1.0'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test:rules:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
