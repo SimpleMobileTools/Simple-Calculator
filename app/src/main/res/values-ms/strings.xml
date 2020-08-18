@@ -15,11 +15,10 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Kalkulator Ringkas - Bantu anda mengira dengan cepat</string>
+    <string name="app_title">Kalkulator Ringkas - Mengira dengan cepat</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Kalkulator yang cepat dan mudah，Mengandungi antara muka pengguna yang mesra dan tanpa iklan.</string>
+    <string name="app_short_description">Kalkulator yang cepat dan mudah, Antara muka pengguna mesra dan tanpa iklan.</string>
     <string name="app_long_description">
-
         Kalkulator gaya moden ini memberikan pengalaman pengguna yang anda sukai. Anda boleh menyalin hasil atau formula ke papan keratan dengan menekannya lama
 
         Aplikasi ini adalah penolong ringkas untuk pengiraan pantas dengan banyak fungsi asas termasuk mengalikan, membahagi, mengakar dan mengaut kuasa.
