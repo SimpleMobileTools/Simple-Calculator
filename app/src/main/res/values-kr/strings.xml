@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">심플한 계산기</string>
+    <string name="app_launcher_name">계산기</string>
+    <string name="scientific_calculator">공학용 계산기</string>
+
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">에러: 공으로 나눌 할수 없어요</string>
+
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">버튼 탭시 진동</string>
+
+    <!-- FAQ -->
+    <string name="faq_1_title">C (Clear) 버튼을 어떻게 사용합니까?</string>
+    <string name="faq_1_text">탭하면 한 번에 한 문자가 제거됩니다. 길게 탭하면 모든 필드가 재설정됩니다.</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
+    <string name="app_title">심플한 계산기 - 계산을 빨리 해!</string>
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">멋진 사용자 인터페이스와 광고없이 빠르고 간단한 계산을위한 계산기</string>
+    <string name="app_long_description">
+        이 세련되고 현대적인 계산기는보고 싶은 멋진 사용자 경험을 제공합니다. 수식 결과를 길게 눌러 클립 보드에 복사 할 수 있습니다.
+
+        이 앱은 곱하기, 나누기, 루트 및 지수를 포함한 많은 기본 기능으로 빠른 계산을위한 간단한 도우미입니다.
+
+        진동을 켜서 입력 경험을 확인할 수 있습니다.
+
+        화면이 저절로 종료되는 것을 방지 할 수 있습니다.
+
+        텍스트 및 배경 색상을 사용자 정의 할 수 있습니다. 위젯에서 결과 또는 수식을 눌러 앱을 엽니 다.
+
+        기본적으로 머티리얼 디자인과 어두운 테마가 함께 제공됩니다. 인터넷 접속 부족으로 다른 앱보다 더 많은 개인 정보 보호, 보안 및 안정성 제공.
+
+        광고를 포함하지 않거나 불필요한 권한이 필요하지 않습니다. 오픈 소스 프로젝트입니다.
+
+        <b>우리의 다른 앱이 여기에 찾아서 있습니다:</b>
+        https://www.simplemobiletools.com
+
+        <b>Facebook:</b>
+        https://www.facebook.com/simplemobiletools
+
+        <b>Reddit:</b>
+        https://www.reddit.com/r/SimpleMobileTools
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
