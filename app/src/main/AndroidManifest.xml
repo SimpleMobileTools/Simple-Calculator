@@ -8,6 +8,10 @@
         android:name="android.permission.USE_BIOMETRIC"
         tools:node="remove" />
 
+    <uses-permission
+        android:name="android.permission.USE_FINGERPRINT"
+        tools:node="remove"/>
+
     <application
         android:name=".App"
         android:allowBackup="true"
