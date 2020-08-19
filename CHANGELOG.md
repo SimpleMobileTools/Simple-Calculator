@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.3.0 *(2020-08-19)*
+----------------------------
+
+ * Use larger precision at calculations (by vyasknellutla)
+ * Some translation and UX improvements
+
 Version 5.2.0 *(2020-05-24)*
 ----------------------------
 
