@@ -12,8 +12,8 @@ import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.activities.MainActivity
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.commons.extensions.applyColorFilter
-import com.simplemobiletools.commons.extensions.setBackgroundColor
 import com.simplemobiletools.commons.extensions.setText
+import java.math.BigDecimal
 
 class MyWidgetProvider : AppWidgetProvider(), Calculator {
     companion object {
@@ -85,8 +85,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
     }
 
     override fun onReceive(context: Context, intent: Intent) {
-        val action = intent.action
-        when (action) {
+        when (val action = intent.action) {
             DECIMAL, ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, EQUALS, CLEAR, RESET, PLUS, MINUS, MULTIPLY, DIVIDE, PERCENT, POWER, ROOT, FACTORIAL -> myAction(action, context)
             else -> super.onReceive(context, intent)
         }
@@ -125,7 +124,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
         }
     }
 
-    override fun setValueDouble(d: Double) {
+    override fun setValueBigDecimal(d: BigDecimal) {
     }
 
     override fun setFormula(value: String, context: Context) {

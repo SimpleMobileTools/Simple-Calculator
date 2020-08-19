@@ -1,23 +1,24 @@
 package com.simplemobiletools.calculator.helpers
 
+import java.math.BigDecimal
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 import java.util.*
 
 object Formatter {
-    fun doubleToString(d: Double): String {
+    fun bigDecimalToString(d: BigDecimal): String {
         val symbols = DecimalFormatSymbols(Locale.US)
         symbols.decimalSeparator = '.'
         symbols.groupingSeparator = ','
 
         val formatter = DecimalFormat()
-        formatter.maximumFractionDigits = 12
+        formatter.maximumFractionDigits = 50
         formatter.decimalFormatSymbols = symbols
         formatter.isGroupingUsed = true
         return formatter.format(d)
     }
 
-    fun stringToDouble(str: String) = str.replace(",", "").toDouble()
+    fun stringToBigDecimal(str: String): BigDecimal = BigDecimal(str.replace(",", ""))
 }
 
-fun Double.format(): String = Formatter.doubleToString(this)
+fun BigDecimal.format(): String = Formatter.bigDecimalToString(this)
