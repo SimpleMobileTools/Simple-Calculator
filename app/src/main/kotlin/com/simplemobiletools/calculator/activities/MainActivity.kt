@@ -2,6 +2,7 @@ package com.simplemobiletools.calculator.activities
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -25,6 +26,7 @@ import java.math.BigDecimal
 class MainActivity : SimpleActivity(), Calculator {
     private var storedTextColor = 0
     private var vibrateOnButtonPress = true
+    private var selectedOperation:String = ""
 
     lateinit var calc: CalculatorImpl
 
@@ -35,12 +37,12 @@ class MainActivity : SimpleActivity(), Calculator {
 
         calc = CalculatorImpl(this, applicationContext)
 
-        btn_plus.setOnClickListener { calc.handleOperation(PLUS); checkHaptic(it) }
-        btn_minus.setOnClickListener { calc.handleOperation(MINUS); checkHaptic(it) }
-        btn_multiply.setOnClickListener { calc.handleOperation(MULTIPLY); checkHaptic(it) }
-        btn_divide.setOnClickListener { calc.handleOperation(DIVIDE); checkHaptic(it) }
-        btn_percent.setOnClickListener { calc.handleOperation(PERCENT); checkHaptic(it) }
-        btn_power.setOnClickListener { calc.handleOperation(POWER); checkHaptic(it) }
+        btn_plus.setOnClickListener { handleOperatorClick(PLUS); checkHaptic(it) }
+        btn_minus.setOnClickListener { handleOperatorClick(MINUS); checkHaptic(it) }
+        btn_multiply.setOnClickListener { handleOperatorClick(MULTIPLY); checkHaptic(it) }
+        btn_divide.setOnClickListener { handleOperatorClick(DIVIDE); checkHaptic(it) }
+        btn_percent.setOnClickListener { handleOperatorClick(PERCENT); checkHaptic(it) }
+        btn_power.setOnClickListener { handleOperatorClick(POWER); checkHaptic(it) }
         btn_root.setOnClickListener { calc.handleOperation(ROOT); checkHaptic(it) }
 
         btn_clear.setOnClickListener { calc.handleClear(); checkHaptic(it) }
@@ -144,6 +146,8 @@ class MainActivity : SimpleActivity(), Calculator {
     }
 
     override fun setValue(value: String, context: Context) {
+        if (selectedOperation.isNotEmpty())
+            removeSelectFromOperator(selectedOperation)
         result.text = value
     }
 
@@ -163,5 +167,35 @@ class MainActivity : SimpleActivity(), Calculator {
 
     override fun setFormula(value: String, context: Context) {
         formula.text = value
+    }
+
+    private fun handleOperatorClick(operation: String) {
+        if (selectedOperation.isNotEmpty())
+            removeSelectFromOperator(selectedOperation)
+        selectedOperation = operation
+        selectOperator(operation)
+        calc.handleOperation(operation)
+    }
+
+    private fun selectOperator(operation: String) {
+        when(operation) {
+            PLUS -> btn_plus.typeface = Typeface.defaultFromStyle(Typeface.BOLD_ITALIC)
+            MINUS -> btn_minus.typeface = Typeface.defaultFromStyle(Typeface.BOLD_ITALIC)
+            MULTIPLY -> btn_multiply.typeface = Typeface.defaultFromStyle(Typeface.BOLD_ITALIC)
+            DIVIDE -> btn_divide.typeface = Typeface.defaultFromStyle(Typeface.BOLD_ITALIC)
+            POWER -> btn_power.typeface = Typeface.defaultFromStyle(Typeface.BOLD_ITALIC)
+            PERCENT -> btn_percent.typeface = Typeface.defaultFromStyle(Typeface.BOLD_ITALIC)
+        }
+    }
+
+    private fun removeSelectFromOperator(operation: String) {
+        when(operation) {
+            PLUS -> btn_plus.typeface = Typeface.DEFAULT
+            MINUS -> btn_minus.typeface = Typeface.DEFAULT
+            MULTIPLY -> btn_multiply.typeface = Typeface.DEFAULT
+            DIVIDE -> btn_divide.typeface = Typeface.DEFAULT
+            POWER -> btn_power.typeface = Typeface.DEFAULT
+            PERCENT -> btn_percent.typeface = Typeface.DEFAULT
+        }
     }
 }
