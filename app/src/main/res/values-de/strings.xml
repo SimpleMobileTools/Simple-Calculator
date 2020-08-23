@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Schlichter Rechner</string>
+    <string name="app_name">Simple Calculator</string>
     <string name="app_launcher_name">Rechner</string>ng>
     <string name="scientific_calculator">Wissenschaftlicher Rechner</string>
 
@@ -10,30 +10,28 @@
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">Wie funktionjiert der C-(Clear)Button?</string>
-    <string name="faq_1_text">Auf ihn Klicken wird ein Zeichen entfernen. Lange Drücken setzt alle Felder auf einmal zurück.</string>
+    <string name="faq_1_title">Wie funktioniert der C-(Clear)Button?</string>
+    <string name="faq_1_text">Auf ihn Klicken wird ein Zeichen entfernt. Langes Drücken setzt alle Felder auf einmal zurück.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Schlichter Rechner - Rechnen sie schneller</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
+    <string name="app_short_description">Ein Taschenrechner für schnelle und simple Rechnungen mit einem schöner Oberfläche und ohne Werbung</string>
     <string name="app_long_description">
-        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
+        Dieser moderne Taschenrechner bietet ein großartige Benutzererfahrung, die du lieben wirst. Du kannst das Ergebnis oder die Formel nur durch langes Drücken kopieren.
 
-        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
+        Diese App ist ein einfacher Helfer für schnelle Rechnungen mit vielen Funktionen wie Wurzeln und Potenzen.
 
-        You can make it vibrate on button presses to make you confident during inserting your values.
+        Für eine bequemere Nutzung ist es möglich, zu verhindern, dass das Smartphone in den Ruhezustand wechselt.
 
-        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
+        Die Textfarbe des Widgets mit veränderbarer Größe sowie die Farbe des Hintergrunds können angepasst werden. Drücken Sie auf das Ergebnis oder die Formel im Widget, um die App zu öffnen.
 
-        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
-
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
+        Diese App kommt standardmäßig mit Material Design und einem dunklen Thema. Es wird keine Internetverbindung gebraucht.
 
         Beinhaltet keine Werbung oder unnötige Berechtigungen. Sie ist komplett Open Source, alle verwendeten Farben sind anpassbar.
 
-        <b>Check out the full suite of Simple Tools here:</b>
+        <b>Hier sind weitere Simple Tools:</b>
         https://www.simplemobiletools.com
 
         <b>Facebook:</b>

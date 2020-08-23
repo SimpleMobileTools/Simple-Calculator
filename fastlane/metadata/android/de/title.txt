@@ -1,1 +1,1 @@
-Schlichter Rechner
+Simple Calculator
