@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Simple Calculator</string>
+    <string name="app_name">Schlichter Rechner</string>
     <string name="app_launcher_name">Rechner</string>ng>
     <string name="scientific_calculator">Wissenschaftlicher Rechner</string>
 
@@ -15,7 +15,7 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Rechnen sie schneller</string>
+    <string name="app_title">Schlichter Rechner - Rechnen sie schneller</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Ein Taschenrechner für schnelle und simple Rechnungen mit einer schöner Oberfläche und ohne Werbung</string>
     <string name="app_long_description">
