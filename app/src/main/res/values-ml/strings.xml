@@ -15,7 +15,7 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - കണക്കുകൂട്ടലുകൾ വേഗത്തിൽ ചെയ്യുക</string>
+    <string name="app_title">Simple Calculator - കണക്കുകൂട്ടലുകൾ ചെയ്യുക</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">നല്ല ഇന്റർഫേസുള്ള ലളിതമായ ഒരു കാൽക്കുലേറ്റർ</string>
     <string name="app_long_description">
