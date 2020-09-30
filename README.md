@@ -3,7 +3,7 @@
 
 A calculator with the basic functions and a customizable widget.
 
-You can copy the result or formula to clipboard by long pressing it.
+You can copy the result or formula to the clipboard by long-pressing it.
 
 The text color of the widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
 
@@ -21,7 +21,7 @@ This app is just one piece of a bigger series of apps. You can find the rest of 
 </div>
 
 <br>
-It contains a couple UI and unit tests, they can be ran with the following instructions.
+It contains a couple of UI and unit tests, they can be run with the following instructions.
 
 <h3>Running Espresso UI tests</h3>
 <p>1. Run -> Edit Configurations</p>
