@@ -1,4 +1,4 @@
-# Simple Calculator
+# Simple Calculator - An Awesome Project
 <img alt="Logo" src="fastlane/metadata/android/en-US/images/icon.png" width="120" />
 
 A calculator with the basic functions and a customizable widget.
