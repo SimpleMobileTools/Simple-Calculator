@@ -15,25 +15,23 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Semplice Calcolatrice - Fai i tuoi calcoli</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
+    <string name="app_short_description">Una calcolatrice per fare rapidamente dei semplici calcoli senza pubblicità</string>
     <string name="app_long_description">
-        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
-
-        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
-
-        You can make it vibrate on button presses to make you confident during inserting your values.
-
-        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
-
-        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
-
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
-
+        Questa calcolatrice curata e moderna offre un\'ottima esperienza utente che amerai. Puoi copiare il risultato la formula negli appunti tenendo premuto sopra.
+        
+        L\'app aiuta per dei rapidi calcoli con molte funzioni semplici, come la moltiplicazione, la divisione, la radice e le potenze.
+        
+        Puoi attivare la vibrazione al premere di un tasto per avere sicurezza quando inserisci i valori.
+        
+        Il colore del testo del widget ridimensionabile può essere personalizzato, come anche il colore e la trasparenza dello sfondo. Premi il risultato o la formula nel widget per aprire l\'applicazione.
+        
+        È costruita con il material designn e con un tema scuro predefinito, fornisce un\'ottima esperienza utente per un semplice utilizzo. Il fatto che non si connette a Internet da maggiore privacy, sicurezza e stabilità rispetto ad altre applicazioni.
+        
         L\'applicazione non contiene pubblicità o permessi non necessari; è completamente opensource e la si può personalizzare con i propri colori preferiti.
         
-        <b>Check out the full suite of Simple Tools here:</b>
+        <b>Dai un\'occhiata alle altre applicazioni della serie Simple Tools:</b>
         https://www.simplemobiletools.com
 
         <b>Facebook:</b>
