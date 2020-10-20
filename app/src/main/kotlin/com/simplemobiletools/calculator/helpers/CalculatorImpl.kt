@@ -11,6 +11,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     var displayedNumber: String? = null
     var displayedFormula: String? = null
     var lastKey: String? = null
+    private var inputDisplayedFormula: String? = null
     private var lastOperation: String? = null
     private var callback: Calculator? = calculator
 
@@ -18,11 +19,14 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private var resetValue = false
     private var baseValue: BigDecimal = BigDecimal.ZERO
     private var secondValue: BigDecimal = BigDecimal.ZERO
+    private val operations = listOf("+", "-", "*", "/", "^", "%")
+    private var moreOperationsInRaw = false
 
     init {
         resetValues()
         setValue("0")
         setFormula("")
+        inputDisplayedFormula = "0"
     }
 
     private fun resetValueIfNeeded() {
@@ -72,9 +76,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun addDigit(number: Int) {
-        val currentValue = displayedNumber
-        val newValue = formatString(currentValue!! + number)
-        setValue(newValue)
+        inputDisplayedFormula += number
+        setValue(inputDisplayedFormula.toString())
     }
 
     private fun formatString(str: String): String {
@@ -96,9 +99,15 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private fun getDisplayedNumberAsDouble() = Formatter.stringToBigDecimal(displayedNumber!!)
 
     fun handleResult() {
+        if(moreOperationsInRaw){
+            val index = displayedNumber!!.indexOfAny(operations,0,false)
+            displayedNumber = displayedNumber!!.substring(index + 1)
+        }
+        moreOperationsInRaw = false
         secondValue = getDisplayedNumberAsDouble()
         calculateResult()
         baseValue = getDisplayedNumberAsDouble()
+        setValue(inputDisplayedFormula!!)
     }
 
     private fun handleRoot() {
@@ -118,12 +127,25 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         Log.i("ANGELINA", "oper $lastOperation")
         if (operation != null) {
             updateResult(operation.getResult())
+            inputDisplayedFormula = displayedNumber
         }
 
         isFirstOperation = false
     }
 
     fun handleOperation(operation: String) {
+        if(operation != ROOT) {
+            if (inputDisplayedFormula!!.last() == '+' || inputDisplayedFormula!!.last() == '-' || inputDisplayedFormula!!.last() == '*' || inputDisplayedFormula!!.last() == '/' || inputDisplayedFormula!!.last() == '^' || inputDisplayedFormula!!.last() == '%') {
+                inputDisplayedFormula = inputDisplayedFormula!!.dropLast(1)
+                inputDisplayedFormula += getSign(operation)
+            } else {
+                if(!inputDisplayedFormula!!.contains('+') && !inputDisplayedFormula!!.contains('-') && !inputDisplayedFormula!!.contains('*') && !inputDisplayedFormula!!.contains('/') && !inputDisplayedFormula!!.contains('^') && !inputDisplayedFormula!!.contains('%')) {
+                    inputDisplayedFormula += getSign(operation)
+                }else{
+                    moreOperationsInRaw = true
+                }
+            }
+        }
         if (lastKey == DIGIT && !lastOperation.isNullOrEmpty() && operation == PERCENT) {
             val tempOp = lastOperation
             handlePercent()
@@ -136,6 +158,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         resetValue = true
         lastKey = operation
         lastOperation = operation
+        setValue(inputDisplayedFormula!!)
 
         if (operation == ROOT) {
             handleRoot()
@@ -172,8 +195,16 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             }
 
             newValue = newValue.replace("\\.$".toRegex(), "")
-            newValue = formatString(newValue)
+            if(!newValue.contains('+' ) && !newValue.contains('-' ) && !newValue.contains('*' ) && !newValue.contains('/' ) && !newValue.contains('%' ) && !newValue.contains('^' ) ){
+                newValue = formatString(newValue)
+            }
             setValue(newValue)
+            if(newValue!="0") {
+                inputDisplayedFormula = newValue
+            }else{
+                inputDisplayedFormula = ""
+            }
+
         }
     }
 
@@ -181,6 +212,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         resetValues()
         setValue("0")
         setFormula("")
+        inputDisplayedFormula=""
     }
 
     fun handleEquals() {
@@ -190,21 +222,32 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         if (lastKey != DIGIT)
             return
 
+        displayedNumber = displayedNumber!!.substring(displayedNumber!!.indexOfAny(operations,0,false) + 1)
         secondValue = getDisplayedNumberAsDouble()
         calculateResult()
         lastKey = EQUALS
+        inputDisplayedFormula = displayedNumber
     }
 
     private fun decimalClicked() {
         var value = displayedNumber
         if (!value!!.contains(".")) {
-            value += "."
+            if(value.toString().equals("0")){
+                inputDisplayedFormula = "0."
+            }else{
+                inputDisplayedFormula += "."
+            }
+        }else{
+            value = displayedNumber!!.substring(displayedNumber!!.indexOfAny(operations,0,false) + 1)
+            if (!value!!.contains(".")) {
+                    inputDisplayedFormula += "."
+                }
         }
-        setValue(value)
+        setValue(inputDisplayedFormula!!)
     }
 
     private fun zeroClicked() {
-        val value = displayedNumber
+        val value = inputDisplayedFormula
         if (value != "0") {
             addDigit(0)
         }
