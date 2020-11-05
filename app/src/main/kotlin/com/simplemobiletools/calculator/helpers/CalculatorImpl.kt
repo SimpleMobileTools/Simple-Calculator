@@ -79,6 +79,17 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             inputDisplayedFormula = ""
         }
 
+        val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
+            inputDisplayedFormula.substring(1)
+        } else {
+            inputDisplayedFormula
+        }
+
+        val value = valueToCheck.substring(valueToCheck.indexOfAny(operations, 0, false) + 1)
+        if (value == "0" && number.toString().areDigitsOnly()) {
+            inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
+        }
+
         inputDisplayedFormula += number
         setValue(inputDisplayedFormula)
     }
@@ -287,7 +298,13 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun zeroClicked() {
-        val value = inputDisplayedFormula
+        val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
+            inputDisplayedFormula.substring(1)
+        } else {
+            inputDisplayedFormula
+        }
+
+        val value = valueToCheck.substring(valueToCheck.indexOfAny(operations, 0, false) + 1)
         if (value != "0") {
             addDigit(0)
         }
