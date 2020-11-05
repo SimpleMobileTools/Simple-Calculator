@@ -249,13 +249,13 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             return
         }
 
-        val numberToCheck = if (inputDisplayedFormula.startsWith("-")) {
+        val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
             inputDisplayedFormula.substring(1)
         } else {
             inputDisplayedFormula
         }
 
-        displayedNumber = numberToCheck.substring(numberToCheck.indexOfAny(operations, 0, false) + 1)
+        displayedNumber = valueToCheck.substring(valueToCheck.indexOfAny(operations, 0, false) + 1)
         secondValue = getDisplayedNumberAsDouble()
         calculateResult()
         lastKey = EQUALS
@@ -264,15 +264,21 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun decimalClicked() {
-        var value = displayedNumber
-        if (!value!!.contains(".")) {
-            if (value.toString() == "0") {
-                inputDisplayedFormula = "0."
-            } else {
-                inputDisplayedFormula += "."
+        val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
+            inputDisplayedFormula.substring(1)
+        } else {
+            inputDisplayedFormula
+        }
+
+        var value = valueToCheck.substring(valueToCheck.indexOfAny(operations, 0, false) + 1)
+        if (!value.contains(".")) {
+            when (value) {
+                "0" -> inputDisplayedFormula = "0."
+                "" -> inputDisplayedFormula += "0."
+                else -> inputDisplayedFormula += "."
             }
         } else {
-            value = displayedNumber!!.substring(displayedNumber!!.indexOfAny(operations, 0, false) + 1)
+            value = valueToCheck.substring(valueToCheck.indexOfAny(operations, 0, false) + 1)
             if (!value.contains(".")) {
                 inputDisplayedFormula += "."
             }
