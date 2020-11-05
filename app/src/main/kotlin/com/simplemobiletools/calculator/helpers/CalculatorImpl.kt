@@ -124,7 +124,9 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun calculateResult(update: Boolean = true) {
-        if (update) updateFormula()
+        if (update) {
+            updateFormula()
+        }
 
         val operation = OperationFactory.forId(lastOperation!!, baseValue, secondValue)
         if (operation != null) {
@@ -140,12 +142,26 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun handleOperation(operation: String) {
+        if (inputDisplayedFormula.isEmpty()) {
+            inputDisplayedFormula = "0"
+        }
+
         if (operation != ROOT) {
-            if (inputDisplayedFormula.last() == '+' || inputDisplayedFormula.last() == '-' || inputDisplayedFormula.last() == '*' || inputDisplayedFormula.last() == '/' || inputDisplayedFormula.last() == '^' || inputDisplayedFormula.last() == '%') {
+            if (inputDisplayedFormula.last() == '+' ||
+                inputDisplayedFormula.last() == '-' ||
+                inputDisplayedFormula.last() == '*' ||
+                inputDisplayedFormula.last() == '/' ||
+                inputDisplayedFormula.last() == '^' ||
+                inputDisplayedFormula.last() == '%') {
                 inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
                 inputDisplayedFormula += getSign(operation)
             } else {
-                if (!inputDisplayedFormula.contains('+') && !inputDisplayedFormula.contains('-') && !inputDisplayedFormula.contains('*') && !inputDisplayedFormula.contains('/') && !inputDisplayedFormula.contains('^') && !inputDisplayedFormula.contains('%')) {
+                if (!inputDisplayedFormula.contains('+') &&
+                    !inputDisplayedFormula.substring(1).contains('-') &&
+                    !inputDisplayedFormula.contains('*') &&
+                    !inputDisplayedFormula.contains('/') &&
+                    !inputDisplayedFormula.contains('^') &&
+                    !inputDisplayedFormula.contains('%')) {
                     inputDisplayedFormula += getSign(operation)
                 } else {
                     moreOperationsInRaw = true
@@ -160,6 +176,14 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             lastOperation = tempOp
         } else if (lastKey == DIGIT && operation != ROOT && operation != FACTORIAL) {
             handleResult()
+            if (inputDisplayedFormula.last() != '+' &&
+                inputDisplayedFormula.last() != '-' &&
+                inputDisplayedFormula.last() != '*' &&
+                inputDisplayedFormula.last() != '/' &&
+                inputDisplayedFormula.last() != '^' &&
+                inputDisplayedFormula.last() != '%') {
+                inputDisplayedFormula += getSign(operation)
+            }
         }
 
         resetValue = true
@@ -170,8 +194,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         if (operation == ROOT) {
             handleRoot()
             resetValue = false
-        }
-        if (operation == FACTORIAL) {
+        } else if (operation == FACTORIAL) {
             handleFactorial()
             resetValue = false
         }
@@ -206,12 +229,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
                 newValue = formatString(newValue)
             }
             setValue(newValue)
-            if (newValue != "0") {
-                inputDisplayedFormula = newValue
-            } else {
-                inputDisplayedFormula = ""
-            }
-
+            inputDisplayedFormula = if (newValue != "0") newValue else ""
         }
     }
 
@@ -229,7 +247,13 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         if (lastKey != DIGIT)
             return
 
-        displayedNumber = displayedNumber!!.substring(displayedNumber!!.indexOfAny(operations, 0, false) + 1)
+        val numberToCheck = if (inputDisplayedFormula.startsWith("-")) {
+            inputDisplayedFormula.substring(1)
+        } else {
+            inputDisplayedFormula
+        }
+
+        displayedNumber = numberToCheck.substring(numberToCheck.indexOfAny(operations, 0, false) + 1)
         secondValue = getDisplayedNumberAsDouble()
         calculateResult()
         lastKey = EQUALS
