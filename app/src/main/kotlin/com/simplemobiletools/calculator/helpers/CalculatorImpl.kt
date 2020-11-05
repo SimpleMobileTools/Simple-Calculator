@@ -241,11 +241,13 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun handleEquals() {
-        if (lastKey == EQUALS)
+        if (lastKey == EQUALS) {
             calculateResult()
+        }
 
-        if (lastKey != DIGIT)
+        if (lastKey != DIGIT) {
             return
+        }
 
         val numberToCheck = if (inputDisplayedFormula.startsWith("-")) {
             inputDisplayedFormula.substring(1)
@@ -257,7 +259,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         secondValue = getDisplayedNumberAsDouble()
         calculateResult()
         lastKey = EQUALS
-        inputDisplayedFormula = displayedNumber ?: ""
+        inputDisplayedFormula = displayedNumber ?: "0"
+        baseValue = getDisplayedNumberAsDouble()
     }
 
     private fun decimalClicked() {
