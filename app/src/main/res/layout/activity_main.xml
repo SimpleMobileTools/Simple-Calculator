@@ -27,6 +27,7 @@
         android:layout_weight="1.8"
         android:fontFamily="sans-serif-light"
         android:gravity="center_vertical|end"
+        android:maxLength="20"
         android:maxLines="1"
         android:paddingLeft="@dimen/activity_margin"
         android:paddingRight="@dimen/activity_margin"
