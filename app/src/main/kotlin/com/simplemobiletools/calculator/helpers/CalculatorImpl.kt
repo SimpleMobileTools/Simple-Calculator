@@ -98,8 +98,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private fun getDisplayedNumberAsDouble() = Formatter.stringToBigDecimal(displayedNumber!!)
 
     fun handleResult() {
-        if(moreOperationsInRaw){
-            val index = displayedNumber!!.indexOfAny(operations,0,false)
+        if (moreOperationsInRaw) {
+            val index = displayedNumber!!.indexOfAny(operations, 0, false)
             displayedNumber = displayedNumber!!.substring(index + 1)
         }
         moreOperationsInRaw = false
@@ -136,14 +136,14 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun handleOperation(operation: String) {
-        if(operation != ROOT) {
+        if (operation != ROOT) {
             if (inputDisplayedFormula!!.last() == '+' || inputDisplayedFormula!!.last() == '-' || inputDisplayedFormula!!.last() == '*' || inputDisplayedFormula!!.last() == '/' || inputDisplayedFormula!!.last() == '^' || inputDisplayedFormula!!.last() == '%') {
                 inputDisplayedFormula = inputDisplayedFormula!!.dropLast(1)
                 inputDisplayedFormula += getSign(operation)
             } else {
-                if(!inputDisplayedFormula!!.contains('+') && !inputDisplayedFormula!!.contains('-') && !inputDisplayedFormula!!.contains('*') && !inputDisplayedFormula!!.contains('/') && !inputDisplayedFormula!!.contains('^') && !inputDisplayedFormula!!.contains('%')) {
+                if (!inputDisplayedFormula!!.contains('+') && !inputDisplayedFormula!!.contains('-') && !inputDisplayedFormula!!.contains('*') && !inputDisplayedFormula!!.contains('/') && !inputDisplayedFormula!!.contains('^') && !inputDisplayedFormula!!.contains('%')) {
                     inputDisplayedFormula += getSign(operation)
-                }else{
+                } else {
                     moreOperationsInRaw = true
                 }
             }
@@ -197,13 +197,13 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             }
 
             newValue = newValue.replace("\\.$".toRegex(), "")
-            if(!newValue.contains('+' ) && !newValue.contains('-' ) && !newValue.contains('*' ) && !newValue.contains('/' ) && !newValue.contains('%' ) && !newValue.contains('^' ) ){
+            if (!newValue.contains('+') && !newValue.contains('-') && !newValue.contains('*') && !newValue.contains('/') && !newValue.contains('%') && !newValue.contains('^')) {
                 newValue = formatString(newValue)
             }
             setValue(newValue)
-            if(newValue!="0") {
+            if (newValue != "0") {
                 inputDisplayedFormula = newValue
-            }else{
+            } else {
                 inputDisplayedFormula = ""
             }
 
@@ -214,7 +214,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         resetValues()
         setValue("0")
         setFormula("")
-        inputDisplayedFormula=""
+        inputDisplayedFormula = ""
     }
 
     fun handleEquals() {
@@ -224,7 +224,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         if (lastKey != DIGIT)
             return
 
-        displayedNumber = displayedNumber!!.substring(displayedNumber!!.indexOfAny(operations,0,false) + 1)
+        displayedNumber = displayedNumber!!.substring(displayedNumber!!.indexOfAny(operations, 0, false) + 1)
         secondValue = getDisplayedNumberAsDouble()
         calculateResult()
         lastKey = EQUALS
@@ -234,16 +234,16 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private fun decimalClicked() {
         var value = displayedNumber
         if (!value!!.contains(".")) {
-            if(value.toString().equals("0")){
+            if (value.toString() == "0") {
                 inputDisplayedFormula = "0."
-            }else{
+            } else {
                 inputDisplayedFormula += "."
             }
-        }else{
-            value = displayedNumber!!.substring(displayedNumber!!.indexOfAny(operations,0,false) + 1)
-            if (!value!!.contains(".")) {
-                    inputDisplayedFormula += "."
-                }
+        } else {
+            value = displayedNumber!!.substring(displayedNumber!!.indexOfAny(operations, 0, false) + 1)
+            if (!value.contains(".")) {
+                inputDisplayedFormula += "."
+            }
         }
         setValue(inputDisplayedFormula!!)
     }
