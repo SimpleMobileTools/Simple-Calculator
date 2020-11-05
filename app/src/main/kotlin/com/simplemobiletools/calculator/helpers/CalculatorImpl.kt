@@ -115,7 +115,11 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
         val operation = OperationFactory.forId(lastOperation!!, baseValue, secondValue)
         if (operation != null) {
-            updateResult(operation.getResult())
+            try {
+                updateResult(operation.getResult())
+            } catch (e: Exception) {
+                context.toast(R.string.unknown_error_occurred)
+            }
         }
 
         isFirstOperation = false
