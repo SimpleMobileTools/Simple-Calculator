@@ -1,7 +1,6 @@
 package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
-import android.util.Log
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.operation.OperationFactory
 import com.simplemobiletools.commons.extensions.toast
@@ -124,10 +123,13 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         if (update) updateFormula()
 
         val operation = OperationFactory.forId(lastOperation!!, baseValue, secondValue)
-        Log.i("ANGELINA", "oper $lastOperation")
         if (operation != null) {
-            updateResult(operation.getResult())
-            inputDisplayedFormula = displayedNumber
+            try {
+                updateResult(operation.getResult())
+                inputDisplayedFormula = displayedNumber
+            } catch (e: Exception) {
+                context.toast(R.string.unknown_error_occurred)
+            }
         }
 
         isFirstOperation = false
