@@ -3,6 +3,7 @@ package com.simplemobiletools.calculator.helpers
 import android.content.Context
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.operation.OperationFactory
+import com.simplemobiletools.commons.extensions.areDigitsOnly
 import com.simplemobiletools.commons.extensions.toast
 import java.math.BigDecimal
 
@@ -74,6 +75,10 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     fun addDigit(number: Int) {
+        if (inputDisplayedFormula == "0" && number.toString().areDigitsOnly()) {
+            inputDisplayedFormula = ""
+        }
+
         inputDisplayedFormula += number
         setValue(inputDisplayedFormula)
     }
