@@ -2,6 +2,7 @@ package com.simplemobiletools.calculator.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.commons.extensions.beVisibleIf
@@ -30,6 +31,11 @@ class SettingsActivity : SimpleActivity() {
         setupPreventPhoneFromSleeping()
         setupCustomizeWidgetColors()
         updateTextColors(settings_scrollview)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        updateMenuItemColors(menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
     private fun setupPurchaseThankYou() {
