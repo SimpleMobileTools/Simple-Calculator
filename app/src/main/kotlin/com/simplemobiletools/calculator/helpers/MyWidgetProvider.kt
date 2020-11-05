@@ -86,7 +86,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
 
     override fun onReceive(context: Context, intent: Intent) {
         when (val action = intent.action) {
-            DECIMAL, ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, EQUALS, CLEAR, RESET, PLUS, MINUS, MULTIPLY, DIVIDE, PERCENT, POWER, ROOT, FACTORIAL -> myAction(action, context)
+            DECIMAL, ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, EQUALS, CLEAR, RESET, PLUS, MINUS, MULTIPLY, DIVIDE, PERCENT, POWER, ROOT -> myAction(action, context)
             else -> super.onReceive(context, intent)
         }
     }
@@ -111,7 +111,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
             EQUALS -> calc!!.handleEquals()
             CLEAR -> calc!!.handleClear()
             RESET -> calc!!.handleReset()
-            PLUS, MINUS, MULTIPLY, DIVIDE, PERCENT, POWER, ROOT, FACTORIAL -> calc!!.handleOperation(action)
+            PLUS, MINUS, MULTIPLY, DIVIDE, PERCENT, POWER, ROOT -> calc!!.handleOperation(action)
         }
     }
 

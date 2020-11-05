@@ -129,11 +129,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         calculateResult()
     }
 
-    private fun handleFactorial() {
-        baseValue = getDisplayedNumberAsDouble()
-        calculateResult()
-    }
-
     private fun calculateResult(update: Boolean = true) {
         if (update) {
             updateFormula()
@@ -185,7 +180,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             handlePercent()
             lastKey = tempOp
             lastOperation = tempOp
-        } else if (lastKey == DIGIT && operation != ROOT && operation != FACTORIAL) {
+        } else if (lastKey == DIGIT && operation != ROOT) {
             handleResult()
             if (inputDisplayedFormula.last() != '+' &&
                 inputDisplayedFormula.last() != '-' &&
@@ -204,9 +199,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
         if (operation == ROOT) {
             handleRoot()
-            resetValue = false
-        } else if (operation == FACTORIAL) {
-            handleFactorial()
             resetValue = false
         }
     }
@@ -318,7 +310,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         PERCENT -> "%"
         POWER -> "^"
         ROOT -> "√"
-        FACTORIAL -> "!"
         else -> ""
     }
 
