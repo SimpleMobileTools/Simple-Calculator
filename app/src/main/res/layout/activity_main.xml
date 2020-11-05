@@ -15,6 +15,7 @@
         android:layout_weight="2.1"
         android:fontFamily="sans-serif-light"
         android:gravity="end|bottom"
+        android:maxLength="30"
         android:maxLines="1"
         android:paddingLeft="@dimen/activity_margin"
         android:paddingRight="@dimen/activity_margin"
