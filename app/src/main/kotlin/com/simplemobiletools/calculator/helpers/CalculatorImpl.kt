@@ -9,13 +9,12 @@ import net.objecthunter.exp4j.ExpressionBuilder
 
 class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private var displayedNumber: String? = null
-    private var lastKey: String? = null
     private var inputDisplayedFormula = "0"
     private var callback: Calculator? = calculator
 
-    private var isFirstOperation = false
     private var baseValue = 0.0
     private var secondValue = 0.0
+    private var lastKey = ""
     private var lastOperation = ""
     private val operations = listOf("+", "-", "*", "/", "^", "%", "√")
     private val operationsRegex = "[-+*/^%√]".toPattern()
@@ -28,30 +27,14 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private fun resetValues() {
         baseValue = 0.0
         secondValue = 0.0
-        lastOperation = ""
         displayedNumber = ""
         lastKey = ""
+        lastOperation = ""
     }
 
     fun setValue(value: String) {
         callback!!.setValue(value, context)
         displayedNumber = value
-    }
-
-    private fun updateFormula() {
-        var first = baseValue.format()
-        val second = secondValue.format()
-        val sign = getSign(lastOperation)
-
-        if (sign.isNotEmpty()) {
-            if (secondValue == 0.0 && sign == "/") {
-                context.toast(context.getString(R.string.formula_divide_by_zero_error))
-            }
-
-            if (sign == "√" && first == "0") {
-                first = ""
-            }
-        }
     }
 
     private fun addDigit(number: Int) {
