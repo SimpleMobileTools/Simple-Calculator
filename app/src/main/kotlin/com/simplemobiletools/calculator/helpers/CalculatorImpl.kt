@@ -61,12 +61,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
 
         if (lastKey != EQUALS) {
-            val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
-                inputDisplayedFormula.substring(1)
-            } else {
-                inputDisplayedFormula
-            }
-
+            val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
             val parts = valueToCheck.split(operationsRegex).filter { it.trim().isNotEmpty() }
             baseValue = parts.first().replace(",", "").toDouble()
             if (inputDisplayedFormula.startsWith("-")) {
@@ -108,8 +103,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             inputDisplayedFormula = "√"
         }
 
-        if (inputDisplayedFormula.last() == '+' ||
-            inputDisplayedFormula.last() == '-' ||
+        if (inputDisplayedFormula.last() == '-' ||
+            inputDisplayedFormula.last() == '+' ||
             inputDisplayedFormula.last() == '*' ||
             inputDisplayedFormula.last() == '/' ||
             inputDisplayedFormula.last() == '^' ||
@@ -118,8 +113,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
             inputDisplayedFormula += getSign(operation)
         } else {
-            if (!inputDisplayedFormula.contains('+') &&
-                !inputDisplayedFormula.substring(1).contains('-') &&
+            if (!inputDisplayedFormula.trimStart('-').contains('-') &&
+                !inputDisplayedFormula.contains('+') &&
                 !inputDisplayedFormula.contains('*') &&
                 !inputDisplayedFormula.contains('/') &&
                 !inputDisplayedFormula.contains('^') &&
@@ -136,8 +131,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             lastOperation = tempOperation
         } else if (lastKey == DIGIT) {
             handleResult()
-            if (inputDisplayedFormula.last() != '+' &&
-                inputDisplayedFormula.last() != '-' &&
+            if (inputDisplayedFormula.last() != '-' &&
+                inputDisplayedFormula.last() != '+' &&
                 inputDisplayedFormula.last() != '*' &&
                 inputDisplayedFormula.last() != '/' &&
                 inputDisplayedFormula.last() != '^' &&
@@ -192,12 +187,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     private fun getSecondValue(): Double {
-        val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
-            inputDisplayedFormula.substring(1)
-        } else {
-            inputDisplayedFormula
-        }.replace(",", "")
-
+        val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
         var value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
         if (value.isEmpty()) {
             value = "0"
@@ -207,12 +197,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     private fun decimalClicked() {
-        val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
-            inputDisplayedFormula.substring(1)
-        } else {
-            inputDisplayedFormula
-        }
-
+        val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
         val value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
         if (!value.contains(".")) {
             when {
