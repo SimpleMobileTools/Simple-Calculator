@@ -3,7 +3,6 @@ package com.simplemobiletools.calculator.helpers
 import android.content.Context
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.operation.PercentOperation
-import com.simplemobiletools.commons.extensions.areDigitsOnly
 import com.simplemobiletools.commons.extensions.toast
 import net.objecthunter.exp4j.ExpressionBuilder
 
@@ -23,13 +22,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     private fun addDigit(number: Int) {
-        if (inputDisplayedFormula == "0" && number.toString().areDigitsOnly()) {
+        if (inputDisplayedFormula == "0") {
             inputDisplayedFormula = ""
-        }
-
-        val value = getSecondValue().toString()
-        if (value == "0" && number.toString().areDigitsOnly()) {
-            inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
         }
 
         inputDisplayedFormula += number
