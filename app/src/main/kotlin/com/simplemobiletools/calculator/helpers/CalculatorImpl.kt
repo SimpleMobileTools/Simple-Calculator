@@ -19,7 +19,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private var resetValue = false
     private var baseValue: BigDecimal = BigDecimal.ZERO
     private var secondValue: BigDecimal = BigDecimal.ZERO
-    private val operations = listOf("+", "-", "*", "/", "^", "%")
+    private val operations = listOf("+", "-", "*", "/", "^", "%", "√")
     private var moreOperationsInRaw = false
 
     init {
@@ -57,19 +57,20 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun updateFormula() {
-        val first = baseValue.format()
+        var first = baseValue.format()
         val second = secondValue.format()
         val sign = getSign(lastOperation)
 
-        when {
-            sign == "√" -> setFormula(sign + first)
-            sign.isNotEmpty() -> {
-                if (secondValue.compareTo(BigDecimal.ZERO) == 0 && sign == "/") {
-                    context.toast(context.getString(R.string.formula_divide_by_zero_error))
-                }
-
-                setFormula(first + sign + second)
+        if (sign.isNotEmpty()) {
+            if (secondValue.compareTo(BigDecimal.ZERO) == 0 && sign == "/") {
+                context.toast(context.getString(R.string.formula_divide_by_zero_error))
             }
+
+            if (sign == "√" && first == "0") {
+                first = ""
+            }
+
+            setFormula(first + sign + second)
         }
     }
 
@@ -123,14 +124,13 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         setValue(inputDisplayedFormula)
     }
 
-    private fun handleRoot() {
-        baseValue = getDisplayedNumberAsDouble()
-        calculateResult()
-    }
-
     private fun calculateResult(update: Boolean = true) {
         if (update) {
             updateFormula()
+        }
+
+        if (lastOperation == ROOT && inputDisplayedFormula.startsWith("√")) {
+            baseValue = 1.toBigDecimal()
         }
 
         val operation = OperationFactory.forId(lastOperation!!, baseValue, secondValue)
@@ -151,26 +151,30 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             inputDisplayedFormula = "0"
         }
 
-        if (operation != ROOT) {
-            if (inputDisplayedFormula.last() == '+' ||
-                inputDisplayedFormula.last() == '-' ||
-                inputDisplayedFormula.last() == '*' ||
-                inputDisplayedFormula.last() == '/' ||
-                inputDisplayedFormula.last() == '^' ||
-                inputDisplayedFormula.last() == '%') {
-                inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
+        if (operation == ROOT && inputDisplayedFormula == "0") {
+            inputDisplayedFormula = "√"
+        }
+
+        if (inputDisplayedFormula.last() == '+' ||
+            inputDisplayedFormula.last() == '-' ||
+            inputDisplayedFormula.last() == '*' ||
+            inputDisplayedFormula.last() == '/' ||
+            inputDisplayedFormula.last() == '^' ||
+            inputDisplayedFormula.last() == '%' ||
+            inputDisplayedFormula.last() == '√') {
+            inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
+            inputDisplayedFormula += getSign(operation)
+        } else {
+            if (!inputDisplayedFormula.contains('+') &&
+                !inputDisplayedFormula.substring(1).contains('-') &&
+                !inputDisplayedFormula.contains('*') &&
+                !inputDisplayedFormula.contains('/') &&
+                !inputDisplayedFormula.contains('^') &&
+                !inputDisplayedFormula.contains('%') &&
+                !inputDisplayedFormula.contains('√')) {
                 inputDisplayedFormula += getSign(operation)
             } else {
-                if (!inputDisplayedFormula.contains('+') &&
-                    !inputDisplayedFormula.substring(1).contains('-') &&
-                    !inputDisplayedFormula.contains('*') &&
-                    !inputDisplayedFormula.contains('/') &&
-                    !inputDisplayedFormula.contains('^') &&
-                    !inputDisplayedFormula.contains('%')) {
-                    inputDisplayedFormula += getSign(operation)
-                } else {
-                    moreOperationsInRaw = true
-                }
+                moreOperationsInRaw = true
             }
         }
 
@@ -179,14 +183,15 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             handlePercent()
             lastKey = tempOp
             lastOperation = tempOp
-        } else if (lastKey == DIGIT && operation != ROOT) {
+        } else if (lastKey == DIGIT) {
             handleResult()
             if (inputDisplayedFormula.last() != '+' &&
                 inputDisplayedFormula.last() != '-' &&
                 inputDisplayedFormula.last() != '*' &&
                 inputDisplayedFormula.last() != '/' &&
                 inputDisplayedFormula.last() != '^' &&
-                inputDisplayedFormula.last() != '%') {
+                inputDisplayedFormula.last() != '%' &&
+                inputDisplayedFormula.last() != '√') {
                 inputDisplayedFormula += getSign(operation)
             }
         }
@@ -195,11 +200,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         lastKey = operation
         lastOperation = operation
         setValue(inputDisplayedFormula)
-
-        if (operation == ROOT) {
-            handleRoot()
-            resetValue = false
-        }
     }
 
     private fun handlePercent() {
@@ -227,7 +227,13 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             }
 
             newValue = newValue.replace("\\.$".toRegex(), "")
-            if (!newValue.contains('+') && !newValue.contains('-') && !newValue.contains('*') && !newValue.contains('/') && !newValue.contains('%') && !newValue.contains('^')) {
+            if (!newValue.contains('+') &&
+                !newValue.contains('-') &&
+                !newValue.contains('*') &&
+                !newValue.contains('/') &&
+                !newValue.contains('%') &&
+                !newValue.contains('^') &&
+                !newValue.contains('√')) {
                 newValue = formatString(newValue)
             }
             setValue(newValue)
