@@ -7,52 +7,35 @@ import com.simplemobiletools.commons.extensions.areDigitsOnly
 import com.simplemobiletools.commons.extensions.toast
 import net.objecthunter.exp4j.ExpressionBuilder
 
-class CalculatorImpl(calculator: Calculator, val context: Context) {
+class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private var displayedNumber: String? = null
     private var lastKey: String? = null
     private var inputDisplayedFormula = "0"
     private var callback: Calculator? = calculator
 
     private var isFirstOperation = false
-    private var resetValue = false
     private var baseValue = 0.0
     private var secondValue = 0.0
     private var lastOperation = ""
     private val operations = listOf("+", "-", "*", "/", "^", "%", "√")
     private val operationsRegex = "[-+*/^%√]".toPattern()
-    private var moreOperationsInRaw = false
 
     init {
         resetValues()
         setValue("0")
-        setFormula("")
-    }
-
-    private fun resetValueIfNeeded() {
-        if (resetValue)
-            displayedNumber = "0"
-
-        resetValue = false
     }
 
     private fun resetValues() {
         baseValue = 0.0
         secondValue = 0.0
-        resetValue = false
         lastOperation = ""
         displayedNumber = ""
-        isFirstOperation = true
         lastKey = ""
     }
 
     fun setValue(value: String) {
         callback!!.setValue(value, context)
         displayedNumber = value
-    }
-
-    private fun setFormula(value: String) {
-        /*callback!!.setFormula(value, context)
-        displayedFormula = value*/
     }
 
     private fun updateFormula() {
@@ -68,12 +51,10 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             if (sign == "√" && first == "0") {
                 first = ""
             }
-
-            setFormula(first + sign + second)
         }
     }
 
-    fun addDigit(number: Int) {
+    private fun addDigit(number: Int) {
         if (inputDisplayedFormula == "0" && number.toString().areDigitsOnly()) {
             inputDisplayedFormula = ""
         }
@@ -104,23 +85,13 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private fun getDisplayedNumberAsDouble() = Formatter.stringToDouble(displayedNumber!!)
 
     private fun handleResult() {
-        if (moreOperationsInRaw) {
-            val index = displayedNumber!!.indexOfAny(operations)
-            displayedNumber = displayedNumber!!.substring(index + 1)
-        }
-
-        moreOperationsInRaw = false
         secondValue = getSecondValue()
         calculateResult()
         baseValue = getDisplayedNumberAsDouble()
         setValue(inputDisplayedFormula)
     }
 
-    private fun calculateResult(update: Boolean = true) {
-        if (update) {
-            updateFormula()
-        }
-
+    private fun calculateResult() {
         if (lastOperation == ROOT && inputDisplayedFormula.startsWith("√")) {
             baseValue = 1.0
         }
@@ -142,8 +113,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         }
 
         if (lastOperation != "") {
+            val expression = "${baseValue.format()}${getSign(lastOperation)}${secondValue.format()}".replace("√", "sqrt")
             try {
-                val expression = "${baseValue.format()}${getSign(lastOperation)}${secondValue.format()}".replace("√", "sqrt")
                 val result = ExpressionBuilder(expression.replace(",", "")).build().evaluate()
                 updateResult(result)
                 baseValue = result
@@ -153,8 +124,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
                 context.toast(R.string.unknown_error_occurred)
             }
         }
-
-        isFirstOperation = false
     }
 
     // handle percents manually, it doesn't seem to be possible via net.objecthunter:exp4j. % is used only for modulo there
@@ -193,8 +162,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
                 !inputDisplayedFormula.contains('%') &&
                 !inputDisplayedFormula.contains('√')) {
                 inputDisplayedFormula += getSign(operation)
-            } else {
-                moreOperationsInRaw = true
             }
         }
 
@@ -216,7 +183,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             }
         }
 
-        resetValue = true
         lastKey = operation
         lastOperation = operation
         setValue(inputDisplayedFormula)
@@ -300,7 +266,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             inputDisplayedFormula.substring(1)
         } else {
             inputDisplayedFormula
-        }
+        }.replace(",", "")
 
         var value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
         if (value.isEmpty()) {
@@ -318,7 +284,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         }
 
         val value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
-        if (value != "0.0" || value.contains(".")) {
+        if (value != "0" || value.contains(".")) {
             addDigit(0)
         }
     }
@@ -340,7 +306,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         }
 
         lastKey = DIGIT
-        resetValueIfNeeded()
 
         when (id) {
             R.id.btn_decimal -> decimalClicked()
