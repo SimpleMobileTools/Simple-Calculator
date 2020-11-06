@@ -36,23 +36,12 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         showNewResult(inputDisplayedFormula)
     }
 
-    private fun updateResult(value: Double) {
-        showNewResult(value.format())
-        baseValue = value
-    }
-
     private fun showNewResult(value: String) {
         callback!!.showNewResult(value, context)
     }
 
     private fun showNewFormula(value: String) {
         callback!!.showNewFormula(value, context)
-    }
-
-    private fun handleResult() {
-        secondValue = getSecondValue()
-        calculateResult()
-        showNewResult(inputDisplayedFormula)
     }
 
     private fun calculateResult() {
@@ -75,7 +64,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             val expression = "${baseValue.format()}${getSign(lastOperation)}${secondValue.format()}".replace("√", "sqrt")
             try {
                 val result = ExpressionBuilder(expression.replace(",", "")).build().evaluate()
-                updateResult(result)
+                showNewResult(result.format())
                 baseValue = result
                 inputDisplayedFormula = result.format()
                 showNewFormula(expression.replace("sqrt", "√"))
@@ -85,13 +74,14 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
     }
 
-    // handle percents manually, it doesn't seem to be possible via net.objecthunter:exp4j. % is used only for modulo there
+    // handle percents manually, it doesn't seem to be possible via net.objecthunter:exp4j. "%" is used only for modulo there
     private fun handlePercent() {
         val operation = PercentOperation(baseValue, getSecondValue(), lastOperation)
         val result = operation.getResult()
         showNewFormula("${baseValue.format()}${getSign(lastOperation)}${getSecondValue().format()}%")
         inputDisplayedFormula = result.format()
-        updateResult(result)
+        showNewResult(result.format())
+        baseValue = result
     }
 
     fun handleOperation(operation: String) {
@@ -103,23 +93,11 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             inputDisplayedFormula = "√"
         }
 
-        if (inputDisplayedFormula.last() == '-' ||
-            inputDisplayedFormula.last() == '+' ||
-            inputDisplayedFormula.last() == '*' ||
-            inputDisplayedFormula.last() == '/' ||
-            inputDisplayedFormula.last() == '^' ||
-            inputDisplayedFormula.last() == '%' ||
-            inputDisplayedFormula.last() == '√') {
+        if (operations.contains(inputDisplayedFormula.last().toString())) {
             inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
             inputDisplayedFormula += getSign(operation)
         } else {
-            if (!inputDisplayedFormula.trimStart('-').contains('-') &&
-                !inputDisplayedFormula.contains('+') &&
-                !inputDisplayedFormula.contains('*') &&
-                !inputDisplayedFormula.contains('/') &&
-                !inputDisplayedFormula.contains('^') &&
-                !inputDisplayedFormula.contains('%') &&
-                !inputDisplayedFormula.contains('√')) {
+            if (!inputDisplayedFormula.trimStart('-').contains(operationsRegex.toRegex())) {
                 inputDisplayedFormula += getSign(operation)
             }
         }
@@ -130,14 +108,9 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             lastKey = tempOperation
             lastOperation = tempOperation
         } else if (lastKey == DIGIT) {
-            handleResult()
-            if (inputDisplayedFormula.last() != '-' &&
-                inputDisplayedFormula.last() != '+' &&
-                inputDisplayedFormula.last() != '*' &&
-                inputDisplayedFormula.last() != '/' &&
-                inputDisplayedFormula.last() != '^' &&
-                inputDisplayedFormula.last() != '%' &&
-                inputDisplayedFormula.last() != '√') {
+            secondValue = getSecondValue()
+            calculateResult()
+            if (!operations.contains(inputDisplayedFormula.last().toString())) {
                 inputDisplayedFormula += getSign(operation)
             }
         }
@@ -145,31 +118,6 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         lastKey = operation
         lastOperation = operation
         showNewResult(inputDisplayedFormula)
-    }
-
-    fun handleClear() {
-        var newValue = inputDisplayedFormula.dropLast(1)
-        if (newValue.isEmpty()) {
-            newValue = "0"
-        }
-
-        newValue = newValue.trimEnd(',')
-        inputDisplayedFormula = newValue
-        showNewResult(newValue)
-    }
-
-    fun handleReset() {
-        resetValues()
-        showNewResult("0")
-        showNewFormula("")
-        inputDisplayedFormula = ""
-    }
-
-    private fun resetValues() {
-        baseValue = 0.0
-        secondValue = 0.0
-        lastKey = ""
-        lastOperation = ""
     }
 
     fun handleEquals() {
@@ -211,16 +159,36 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     private fun zeroClicked() {
-        val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
-            inputDisplayedFormula.substring(1)
-        } else {
-            inputDisplayedFormula
-        }
-
+        val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
         val value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
         if (value != "0" || value.contains(".")) {
             addDigit(0)
         }
+    }
+
+    fun handleClear() {
+        var newValue = inputDisplayedFormula.dropLast(1)
+        if (newValue.isEmpty()) {
+            newValue = "0"
+        }
+
+        newValue = newValue.trimEnd(',')
+        inputDisplayedFormula = newValue
+        showNewResult(newValue)
+    }
+
+    fun handleReset() {
+        resetValues()
+        showNewResult("0")
+        showNewFormula("")
+        inputDisplayedFormula = ""
+    }
+
+    private fun resetValues() {
+        baseValue = 0.0
+        secondValue = 0.0
+        lastKey = ""
+        lastOperation = ""
     }
 
     private fun getSign(lastOperation: String) = when (lastOperation) {
