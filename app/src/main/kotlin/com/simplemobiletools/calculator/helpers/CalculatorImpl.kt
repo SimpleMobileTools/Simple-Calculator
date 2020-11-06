@@ -167,29 +167,14 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun handleClear() {
-        val oldValue = displayedNumber
-        var newValue = "0"
-        val len = oldValue.length
-        var minLen = 1
-        if (oldValue.contains("-"))
-            minLen++
-
-        if (len > minLen) {
-            newValue = oldValue.substring(0, len - 1)
+        var newValue = inputDisplayedFormula.dropLast(1)
+        if (newValue.isEmpty()) {
+            newValue = "0"
         }
 
-        newValue = newValue.replace("\\.$".toRegex(), "")
-        if (!newValue.contains('+') &&
-            !newValue.contains('-') &&
-            !newValue.contains('*') &&
-            !newValue.contains('/') &&
-            !newValue.contains('%') &&
-            !newValue.contains('^') &&
-            !newValue.contains('√')) {
-            newValue = formatString(newValue)
-        }
+        newValue = newValue.trimEnd(',')
+        inputDisplayedFormula = newValue
         showNewResult(newValue)
-        inputDisplayedFormula = if (newValue != "0") newValue else ""
     }
 
     fun handleReset() {
