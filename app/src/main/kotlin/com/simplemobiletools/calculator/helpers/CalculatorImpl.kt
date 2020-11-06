@@ -13,7 +13,6 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private var baseValue = 0.0
     private var secondValue = 0.0
     private var inputDisplayedFormula = "0"
-    private var displayedNumber = ""
     private var lastKey = ""
     private var lastOperation = ""
     private val operations = listOf("+", "-", "*", "/", "^", "%", "√")
@@ -37,15 +36,6 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         showNewResult(inputDisplayedFormula)
     }
 
-    private fun formatString(str: String): String {
-        if (str.contains(".")) {
-            return str
-        }
-
-        val doubleValue = Formatter.stringToDouble(str)
-        return doubleValue.format()
-    }
-
     private fun updateResult(value: Double) {
         showNewResult(value.format())
         baseValue = value
@@ -53,19 +43,15 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
     private fun showNewResult(value: String) {
         callback!!.showNewResult(value, context)
-        displayedNumber = value
     }
 
     private fun showNewFormula(value: String) {
         callback!!.showNewFormula(value, context)
     }
 
-    private fun getDisplayedNumberAsDouble() = Formatter.stringToDouble(displayedNumber)
-
     private fun handleResult() {
         secondValue = getSecondValue()
         calculateResult()
-        baseValue = getDisplayedNumberAsDouble()
         showNewResult(inputDisplayedFormula)
     }
 
@@ -187,7 +173,6 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private fun resetValues() {
         baseValue = 0.0
         secondValue = 0.0
-        displayedNumber = ""
         lastKey = ""
         lastOperation = ""
     }
@@ -202,11 +187,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
 
         secondValue = getSecondValue()
-        displayedNumber = secondValue.toString()
         calculateResult()
         lastKey = EQUALS
-        inputDisplayedFormula = displayedNumber
-        baseValue = getDisplayedNumberAsDouble()
     }
 
     private fun getSecondValue(): Double {
