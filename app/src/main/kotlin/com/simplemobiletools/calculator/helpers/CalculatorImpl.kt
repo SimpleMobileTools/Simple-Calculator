@@ -20,6 +20,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private var baseValue = 0.0
     private var secondValue = 0.0
     private val operations = listOf("+", "-", "*", "/", "^", "%", "√")
+    private val operationsRegex = "[+,-,*,/,^,%,√]".toRegex()
     private var moreOperationsInRaw = false
 
     init {
@@ -79,13 +80,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             inputDisplayedFormula = ""
         }
 
-        val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
-            inputDisplayedFormula.substring(1)
-        } else {
-            inputDisplayedFormula
-        }
-
-        val value = valueToCheck.substring(valueToCheck.indexOfAny(operations, 0, false) + 1)
+        val value = getSecondValue().toString()
         if (value == "0" && number.toString().areDigitsOnly()) {
             inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
         }
@@ -114,11 +109,12 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     fun handleResult() {
         if (moreOperationsInRaw) {
-            val index = displayedNumber!!.indexOfAny(operations, 0, false)
+            val index = displayedNumber!!.indexOfAny(operations)
             displayedNumber = displayedNumber!!.substring(index + 1)
         }
+
         moreOperationsInRaw = false
-        secondValue = getDisplayedNumberAsDouble()
+        secondValue = getSecondValue()
         calculateResult()
         baseValue = getDisplayedNumberAsDouble()
         setValue(inputDisplayedFormula)
@@ -179,10 +175,10 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         }
 
         if (lastKey == DIGIT && !lastOperation.isNullOrEmpty() && operation == PERCENT) {
-            val tempOp = lastOperation
+            val tempOperation = lastOperation
             handlePercent()
-            lastKey = tempOp
-            lastOperation = tempOp
+            lastKey = tempOperation
+            lastOperation = tempOperation
         } else if (lastKey == DIGIT) {
             handleResult()
             if (inputDisplayedFormula.last() != '+' &&
@@ -257,14 +253,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             return
         }
 
-        val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
-            inputDisplayedFormula.substring(1)
-        } else {
-            inputDisplayedFormula
-        }
-
-        displayedNumber = valueToCheck.substring(valueToCheck.indexOfAny(operations, 0, false) + 1)
-        secondValue = getDisplayedNumberAsDouble()
+        secondValue = getSecondValue()
+        displayedNumber = secondValue.toString()
         calculateResult()
         lastKey = EQUALS
         inputDisplayedFormula = displayedNumber ?: "0"
@@ -278,19 +268,15 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             inputDisplayedFormula
         }
 
-        var value = valueToCheck.substring(valueToCheck.indexOfAny(operations, 0, false) + 1)
+        val value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
         if (!value.contains(".")) {
-            when (value) {
-                "0" -> inputDisplayedFormula = "0."
-                "" -> inputDisplayedFormula += "0."
+            when {
+                value == "0" && !valueToCheck.contains(operationsRegex) -> inputDisplayedFormula = "0."
+                value == "" -> inputDisplayedFormula += "0."
                 else -> inputDisplayedFormula += "."
             }
-        } else {
-            value = valueToCheck.substring(valueToCheck.indexOfAny(operations, 0, false) + 1)
-            if (!value.contains(".")) {
-                inputDisplayedFormula += "."
-            }
         }
+
         setValue(inputDisplayedFormula)
     }
 
@@ -301,17 +287,16 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             inputDisplayedFormula
         }
 
-        return valueToCheck.substring(valueToCheck.indexOfAny(operations, 0, false) + 1).toDouble()
+        var value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
+        if (value.isEmpty()) {
+            value = "0"
+        }
+
+        return value.toDouble()
     }
 
     private fun zeroClicked() {
-        val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
-            inputDisplayedFormula.substring(1)
-        } else {
-            inputDisplayedFormula
-        }
-
-        val value = valueToCheck.substring(valueToCheck.indexOfAny(operations, 0, false) + 1)
+        val value = getSecondValue().toString()
         if (value != "0") {
             addDigit(0)
         }
