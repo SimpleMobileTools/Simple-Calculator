@@ -36,52 +36,26 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         showNewResult(inputDisplayedFormula)
     }
 
-    private fun showNewResult(value: String) {
-        callback!!.showNewResult(value, context)
+    private fun zeroClicked() {
+        val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
+        val value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
+        if (value != "0" || value.contains(".")) {
+            addDigit(0)
+        }
     }
 
-    private fun showNewFormula(value: String) {
-        callback!!.showNewFormula(value, context)
-    }
-
-    private fun calculateResult() {
-        if (lastOperation == ROOT && inputDisplayedFormula.startsWith("√")) {
-            baseValue = 1.0
-        }
-
-        if (lastKey != EQUALS) {
-            val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
-            val parts = valueToCheck.split(operationsRegex).filter { it.trim().isNotEmpty() }
-            baseValue = parts.first().replace(",", "").toDouble()
-            if (inputDisplayedFormula.startsWith("-")) {
-                baseValue *= -1
-            }
-
-            secondValue = parts.getOrNull(1)?.replace(",", "")?.toDouble() ?: secondValue
-        }
-
-        if (lastOperation != "") {
-            val expression = "${baseValue.format()}${getSign(lastOperation)}${secondValue.format()}".replace("√", "sqrt")
-            try {
-                val result = ExpressionBuilder(expression.replace(",", "")).build().evaluate()
-                showNewResult(result.format())
-                baseValue = result
-                inputDisplayedFormula = result.format()
-                showNewFormula(expression.replace("sqrt", "√"))
-            } catch (e: Exception) {
-                context.toast(R.string.unknown_error_occurred)
+    private fun decimalClicked() {
+        val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
+        val value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
+        if (!value.contains(".")) {
+            when {
+                value == "0" && !valueToCheck.contains(operationsRegex.toRegex()) -> inputDisplayedFormula = "0."
+                value == "" -> inputDisplayedFormula += "0."
+                else -> inputDisplayedFormula += "."
             }
         }
-    }
 
-    // handle percents manually, it doesn't seem to be possible via net.objecthunter:exp4j. "%" is used only for modulo there
-    private fun handlePercent() {
-        val operation = PercentOperation(baseValue, getSecondValue(), lastOperation)
-        val result = operation.getResult()
-        showNewFormula("${baseValue.format()}${getSign(lastOperation)}${getSecondValue().format()}%")
-        inputDisplayedFormula = result.format()
-        showNewResult(result.format())
-        baseValue = result
+        showNewResult(inputDisplayedFormula)
     }
 
     fun handleOperation(operation: String) {
@@ -117,6 +91,16 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         showNewResult(inputDisplayedFormula)
     }
 
+    // handle percents manually, it doesn't seem to be possible via net.objecthunter:exp4j. "%" is used only for modulo there
+    private fun handlePercent() {
+        val operation = PercentOperation(baseValue, getSecondValue(), lastOperation)
+        val result = operation.getResult()
+        showNewFormula("${baseValue.format()}${getSign(lastOperation)}${getSecondValue().format()}%")
+        inputDisplayedFormula = result.format()
+        showNewResult(result.format())
+        baseValue = result
+    }
+
     fun handleEquals() {
         if (lastKey == EQUALS) {
             calculateResult()
@@ -141,26 +125,42 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         return value.toDouble()
     }
 
-    private fun decimalClicked() {
-        val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
-        val value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
-        if (!value.contains(".")) {
-            when {
-                value == "0" && !valueToCheck.contains(operationsRegex.toRegex()) -> inputDisplayedFormula = "0."
-                value == "" -> inputDisplayedFormula += "0."
-                else -> inputDisplayedFormula += "."
+    private fun calculateResult() {
+        if (lastOperation == ROOT && inputDisplayedFormula.startsWith("√")) {
+            baseValue = 1.0
+        }
+
+        if (lastKey != EQUALS) {
+            val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
+            val parts = valueToCheck.split(operationsRegex).filter { it.trim().isNotEmpty() }
+            baseValue = parts.first().replace(",", "").toDouble()
+            if (inputDisplayedFormula.startsWith("-")) {
+                baseValue *= -1
+            }
+
+            secondValue = parts.getOrNull(1)?.replace(",", "")?.toDouble() ?: secondValue
+        }
+
+        if (lastOperation != "") {
+            val expression = "${baseValue.format()}${getSign(lastOperation)}${secondValue.format()}".replace("√", "sqrt")
+            try {
+                val result = ExpressionBuilder(expression.replace(",", "")).build().evaluate()
+                showNewResult(result.format())
+                baseValue = result
+                inputDisplayedFormula = result.format()
+                showNewFormula(expression.replace("sqrt", "√"))
+            } catch (e: Exception) {
+                context.toast(R.string.unknown_error_occurred)
             }
         }
-
-        showNewResult(inputDisplayedFormula)
     }
 
-    private fun zeroClicked() {
-        val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
-        val value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
-        if (value != "0" || value.contains(".")) {
-            addDigit(0)
-        }
+    private fun showNewResult(value: String) {
+        callback!!.showNewResult(value, context)
+    }
+
+    private fun showNewFormula(value: String) {
+        callback!!.showNewFormula(value, context)
     }
 
     fun handleClear() {
