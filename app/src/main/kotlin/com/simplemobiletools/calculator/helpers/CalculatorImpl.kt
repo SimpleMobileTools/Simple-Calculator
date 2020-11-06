@@ -8,19 +8,18 @@ import com.simplemobiletools.commons.extensions.toast
 import net.objecthunter.exp4j.ExpressionBuilder
 
 class CalculatorImpl(calculator: Calculator, private val context: Context) {
-    private var displayedNumber: String? = null
-    private var inputDisplayedFormula = "0"
     private var callback: Calculator? = calculator
 
     private var baseValue = 0.0
     private var secondValue = 0.0
+    private var inputDisplayedFormula = "0"
+    private var displayedNumber = ""
     private var lastKey = ""
     private var lastOperation = ""
     private val operations = listOf("+", "-", "*", "/", "^", "%", "√")
     private val operationsRegex = "[-+*/^%√]".toPattern()
 
     init {
-        resetValues()
         setValue("0")
     }
 
@@ -65,7 +64,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         baseValue = value
     }
 
-    private fun getDisplayedNumberAsDouble() = Formatter.stringToDouble(displayedNumber!!)
+    private fun getDisplayedNumberAsDouble() = Formatter.stringToDouble(displayedNumber)
 
     private fun handleResult() {
         secondValue = getSecondValue()
@@ -172,33 +171,29 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun handleClear() {
-        if (displayedNumber.equals(NAN)) {
-            handleReset()
-        } else {
-            val oldValue = displayedNumber
-            var newValue = "0"
-            val len = oldValue!!.length
-            var minLen = 1
-            if (oldValue.contains("-"))
-                minLen++
+        val oldValue = displayedNumber
+        var newValue = "0"
+        val len = oldValue.length
+        var minLen = 1
+        if (oldValue.contains("-"))
+            minLen++
 
-            if (len > minLen) {
-                newValue = oldValue.substring(0, len - 1)
-            }
-
-            newValue = newValue.replace("\\.$".toRegex(), "")
-            if (!newValue.contains('+') &&
-                !newValue.contains('-') &&
-                !newValue.contains('*') &&
-                !newValue.contains('/') &&
-                !newValue.contains('%') &&
-                !newValue.contains('^') &&
-                !newValue.contains('√')) {
-                newValue = formatString(newValue)
-            }
-            setValue(newValue)
-            inputDisplayedFormula = if (newValue != "0") newValue else ""
+        if (len > minLen) {
+            newValue = oldValue.substring(0, len - 1)
         }
+
+        newValue = newValue.replace("\\.$".toRegex(), "")
+        if (!newValue.contains('+') &&
+            !newValue.contains('-') &&
+            !newValue.contains('*') &&
+            !newValue.contains('/') &&
+            !newValue.contains('%') &&
+            !newValue.contains('^') &&
+            !newValue.contains('√')) {
+            newValue = formatString(newValue)
+        }
+        setValue(newValue)
+        inputDisplayedFormula = if (newValue != "0") newValue else ""
     }
 
     fun handleReset() {
@@ -221,7 +216,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         displayedNumber = secondValue.toString()
         calculateResult()
         lastKey = EQUALS
-        inputDisplayedFormula = displayedNumber ?: "0"
+        inputDisplayedFormula = displayedNumber
         baseValue = getDisplayedNumberAsDouble()
     }
 
