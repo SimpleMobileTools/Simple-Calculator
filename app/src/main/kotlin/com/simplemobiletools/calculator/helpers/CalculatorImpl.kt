@@ -103,7 +103,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     private fun getDisplayedNumberAsDouble() = Formatter.stringToDouble(displayedNumber!!)
 
-    fun handleResult() {
+    private fun handleResult() {
         if (moreOperationsInRaw) {
             val index = displayedNumber!!.indexOfAny(operations)
             displayedNumber = displayedNumber!!.substring(index + 1)
@@ -157,6 +157,15 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         isFirstOperation = false
     }
 
+    // handle percents manually, it doesn't seem to be possible via net.objecthunter:exp4j. % is used only for modulo there
+    private fun handlePercent() {
+        val operation = PercentOperation(baseValue, getSecondValue(), lastOperation)
+        val result = operation.getResult()
+        callback!!.setFormula("${baseValue.format()}${getSign(lastOperation)}${getSecondValue().format()}%", context)
+        inputDisplayedFormula = result.format()
+        updateResult(result)
+    }
+
     fun handleOperation(operation: String) {
         if (inputDisplayedFormula.isEmpty()) {
             inputDisplayedFormula = "0"
@@ -189,12 +198,12 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             }
         }
 
-        /*if (lastKey == DIGIT && lastOperation != "" && operation == PERCENT) {
+        if (lastKey == DIGIT && lastOperation != "" && operation == PERCENT) {
             val tempOperation = lastOperation
             handlePercent()
             lastKey = tempOperation
             lastOperation = tempOperation
-        } else */if (lastKey == DIGIT) {
+        } else if (lastKey == DIGIT) {
             handleResult()
             if (inputDisplayedFormula.last() != '+' &&
                 inputDisplayedFormula.last() != '-' &&
@@ -211,15 +220,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         lastKey = operation
         lastOperation = operation
         setValue(inputDisplayedFormula)
-    }
-
-    private fun handlePercent() {
-        val operation = PercentOperation(baseValue, getSecondValue(), lastOperation)
-        val result = operation.getResult()
-        setFormula("${baseValue.format()}${getSign(lastOperation)}${getSecondValue().format()}%")
-        secondValue = result
-        updateResult(result)
-        inputDisplayedFormula = displayedNumber ?: ""
     }
 
     fun handleClear() {
