@@ -2,14 +2,13 @@ package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
 import com.simplemobiletools.calculator.R
-import com.simplemobiletools.calculator.operation.OperationFactory
 import com.simplemobiletools.calculator.operation.PercentOperation
 import com.simplemobiletools.commons.extensions.areDigitsOnly
 import com.simplemobiletools.commons.extensions.toast
+import net.objecthunter.exp4j.ExpressionBuilder
 
 class CalculatorImpl(calculator: Calculator, val context: Context) {
     var displayedNumber: String? = null
-    var displayedFormula: String? = null
     var lastKey: String? = null
     private var inputDisplayedFormula = "0"
     private var callback: Calculator? = calculator
@@ -20,7 +19,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private var secondValue = 0.0
     private var lastOperation = ""
     private val operations = listOf("+", "-", "*", "/", "^", "%", "√")
-    private val operationsRegex = "[+,-,*,/,^,%,√]".toRegex()
+    private val operationsRegex = "[-+*/^%√]".toPattern()
     private var moreOperationsInRaw = false
 
     init {
@@ -42,7 +41,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         resetValue = false
         lastOperation = ""
         displayedNumber = ""
-        displayedFormula = ""
         isFirstOperation = true
         lastKey = ""
     }
@@ -53,8 +51,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun setFormula(value: String) {
-        callback!!.setFormula(value, context)
-        displayedFormula = value
+        /*callback!!.setFormula(value, context)
+        displayedFormula = value*/
     }
 
     private fun updateFormula() {
@@ -90,8 +88,6 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun formatString(str: String): String {
-        // if the number contains a decimal, do not try removing the leading zero anymore, nor add group separator
-        // it would prevent writing values like 1.02
         if (str.contains(".")) {
             return str
         }
@@ -129,11 +125,30 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             baseValue = 1.0
         }
 
-        val operation = OperationFactory.forId(lastOperation, baseValue, secondValue)
-        if (operation != null) {
+        if (lastKey != EQUALS) {
+            val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
+                inputDisplayedFormula.substring(1)
+            } else {
+                inputDisplayedFormula
+            }
+
+            val parts = valueToCheck.split(operationsRegex).filter { it.trim().isNotEmpty() }
+            baseValue = parts.first().replace(",", "").toDouble()
+            if (inputDisplayedFormula.startsWith("-")) {
+                baseValue *= -1
+            }
+
+            secondValue = parts.getOrNull(1)?.replace(",", "")?.toDouble() ?: secondValue
+        }
+
+        if (lastOperation != "") {
             try {
-                updateResult(operation.getResult())
-                inputDisplayedFormula = displayedNumber ?: ""
+                val expression = "${baseValue.format()}${getSign(lastOperation)}${secondValue.format()}".replace("√", "sqrt")
+                val result = ExpressionBuilder(expression.replace(",", "")).build().evaluate()
+                updateResult(result)
+                baseValue = result
+                inputDisplayedFormula = result.format()
+                callback!!.setFormula(expression.replace("sqrt", "√"), context)
             } catch (e: Exception) {
                 context.toast(R.string.unknown_error_occurred)
             }
@@ -174,12 +189,12 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             }
         }
 
-        if (lastKey == DIGIT && lastOperation != "" && operation == PERCENT) {
+        /*if (lastKey == DIGIT && lastOperation != "" && operation == PERCENT) {
             val tempOperation = lastOperation
             handlePercent()
             lastKey = tempOperation
             lastOperation = tempOperation
-        } else if (lastKey == DIGIT) {
+        } else */if (lastKey == DIGIT) {
             handleResult()
             if (inputDisplayedFormula.last() != '+' &&
                 inputDisplayedFormula.last() != '-' &&
@@ -240,7 +255,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     fun handleReset() {
         resetValues()
         setValue("0")
-        setFormula("")
+        callback!!.setFormula("", context)
         inputDisplayedFormula = ""
     }
 
@@ -271,7 +286,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         val value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
         if (!value.contains(".")) {
             when {
-                value == "0" && !valueToCheck.contains(operationsRegex) -> inputDisplayedFormula = "0."
+                value == "0" && !valueToCheck.contains(operationsRegex.toRegex()) -> inputDisplayedFormula = "0."
                 value == "" -> inputDisplayedFormula += "0."
                 else -> inputDisplayedFormula += "."
             }
@@ -296,8 +311,14 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun zeroClicked() {
-        val value = getSecondValue().toString()
-        if (value != "0") {
+        val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
+            inputDisplayedFormula.substring(1)
+        } else {
+            inputDisplayedFormula
+        }
+
+        val value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
+        if (value != "0.0" || value.contains(".")) {
             addDigit(0)
         }
     }
