@@ -53,7 +53,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun handleOperation(operation: String) {
-        if (inputDisplayedFormula.isEmpty()) {
+        if (inputDisplayedFormula == "") {
             inputDisplayedFormula = "0"
         }
 
@@ -112,7 +112,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private fun getSecondValue(): Double {
         val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
         var value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
-        if (value.isEmpty()) {
+        if (value == "") {
             value = "0"
         }
 
@@ -126,7 +126,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
         if (lastKey != EQUALS) {
             val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
-            val parts = valueToCheck.split(operationsRegex).filter { it.trim().isNotEmpty() }
+            val parts = valueToCheck.split(operationsRegex).filter { it != "" }
             baseValue = parts.first().replace(",", "").toDouble()
             if (inputDisplayedFormula.startsWith("-")) {
                 baseValue *= -1
@@ -159,7 +159,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
     fun handleClear() {
         var newValue = inputDisplayedFormula.dropLast(1)
-        if (newValue.isEmpty()) {
+        if (newValue == "") {
             newValue = "0"
         }
 
