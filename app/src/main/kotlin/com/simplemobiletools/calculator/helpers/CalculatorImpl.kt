@@ -3,6 +3,7 @@ package com.simplemobiletools.calculator.helpers
 import android.content.Context
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.operation.OperationFactory
+import com.simplemobiletools.calculator.operation.PercentOperation
 import com.simplemobiletools.commons.extensions.areDigitsOnly
 import com.simplemobiletools.commons.extensions.toast
 import java.math.BigDecimal
@@ -203,12 +204,12 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun handlePercent() {
-        OperationFactory.forId(PERCENT, baseValue, getDisplayedNumberAsDouble())?.let {
-            val result = it.getResult()
-            setFormula("${baseValue.format()}${getSign(lastOperation)}${getDisplayedNumberAsDouble().format()}%")
-            secondValue = result
-            calculateResult(false)
-        }
+        val operation = PercentOperation(baseValue, getSecondValue(), lastOperation ?: "")
+        val result = operation.getResult()
+        setFormula("${baseValue.format()}${getSign(lastOperation)}${getSecondValue()}%")
+        secondValue = result
+        updateResult(result)
+        inputDisplayedFormula = displayedNumber ?: ""
     }
 
     fun handleClear() {
@@ -292,6 +293,16 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             }
         }
         setValue(inputDisplayedFormula)
+    }
+
+    private fun getSecondValue(): BigDecimal {
+        val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
+            inputDisplayedFormula.substring(1)
+        } else {
+            inputDisplayedFormula
+        }
+
+        return valueToCheck.substring(valueToCheck.indexOfAny(operations, 0, false) + 1).toBigDecimal()
     }
 
     private fun zeroClicked() {

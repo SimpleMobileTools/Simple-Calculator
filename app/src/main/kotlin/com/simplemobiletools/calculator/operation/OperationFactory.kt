@@ -12,7 +12,6 @@ object OperationFactory {
             MINUS -> MinusOperation(baseValue, secondValue)
             DIVIDE -> DivideOperation(baseValue, secondValue)
             MULTIPLY -> MultiplyOperation(baseValue, secondValue)
-            PERCENT -> PercentOperation(baseValue, secondValue)
             POWER -> PowerOperation(baseValue, secondValue)
             ROOT -> RootOperation(baseValue, secondValue)
             else -> null
