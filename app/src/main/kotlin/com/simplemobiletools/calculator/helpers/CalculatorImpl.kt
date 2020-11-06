@@ -96,22 +96,19 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         if (operations.contains(inputDisplayedFormula.last().toString())) {
             inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
             inputDisplayedFormula += getSign(operation)
-        } else {
-            if (!inputDisplayedFormula.trimStart('-').contains(operationsRegex.toRegex())) {
-                inputDisplayedFormula += getSign(operation)
-            }
+        } else if (!inputDisplayedFormula.trimStart('-').contains(operationsRegex.toRegex())) {
+            inputDisplayedFormula += getSign(operation)
         }
 
-        if (lastKey == DIGIT && lastOperation != "" && operation == PERCENT) {
-            val tempOperation = lastOperation
-            handlePercent()
-            lastKey = tempOperation
-            lastOperation = tempOperation
-        } else if (lastKey == DIGIT) {
-            secondValue = getSecondValue()
-            calculateResult()
-            if (!operations.contains(inputDisplayedFormula.last().toString())) {
-                inputDisplayedFormula += getSign(operation)
+        if (lastKey == DIGIT) {
+            if (lastOperation != "" && operation == PERCENT) {
+                handlePercent()
+            } else {
+                secondValue = getSecondValue()
+                calculateResult()
+                if (!operations.contains(inputDisplayedFormula.last().toString())) {
+                    inputDisplayedFormula += getSign(operation)
+                }
             }
         }
 
