@@ -123,9 +123,6 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
         }
     }
 
-    override fun setValueDouble(d: Double) {
-    }
-
     override fun setFormula(value: String, context: Context) {
         val appWidgetManager = AppWidgetManager.getInstance(context)
         appWidgetManager.getAppWidgetIds(getComponentName(context)).forEach {

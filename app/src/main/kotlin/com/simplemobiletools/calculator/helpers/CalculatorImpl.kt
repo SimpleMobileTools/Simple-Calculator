@@ -8,8 +8,8 @@ import com.simplemobiletools.commons.extensions.toast
 import net.objecthunter.exp4j.ExpressionBuilder
 
 class CalculatorImpl(calculator: Calculator, val context: Context) {
-    var displayedNumber: String? = null
-    var lastKey: String? = null
+    private var displayedNumber: String? = null
+    private var lastKey: String? = null
     private var inputDisplayedFormula = "0"
     private var callback: Calculator? = calculator
 

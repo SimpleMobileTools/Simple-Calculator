@@ -20,20 +20,3 @@ This app is just one piece of a bigger series of apps. You can find the rest of 
 <img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/app_3.jpg" width="30%">
 </div>
 
-<br>
-It contains a couple UI and unit tests, they can be ran with the following instructions.
-
-<h3>Running Espresso UI tests</h3>
-<p>1. Run -> Edit Configurations</p>
-<p>2. Create a new "Android Instrumentation Tests" configuration, give it a name (i.e. "MainActivityEspressoTest")</p>
-<p>3. Choose the "app" module</p>
-<p>4. OK</p>
-<p>5. Make sure MainActivityEspressoTest is selected near the Run button</p>
-<p>6. Run</p>
-
-<h3>Running Robolectric tests</h3>
-<p>1. At the Project tab right click the folder containing the tests (i.e. "calculator.simplemobiletools.com.simple_calculator (test)")</p>
-<p>2. select Run 'Tests in 'calculator.simplemob...' to run all the tests</p>
-<p>3. if you are on Linux or Mac, go to Run -> Edit Configurations, select the new JUnit configuration and change the "Working Directory" item to "$MODULE_DIR$" (without quotes)</p>
-<p>4. OK</p>
-<p>5. Run</p>
