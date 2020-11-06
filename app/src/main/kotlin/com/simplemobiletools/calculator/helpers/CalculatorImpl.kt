@@ -12,13 +12,13 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     var displayedFormula: String? = null
     var lastKey: String? = null
     private var inputDisplayedFormula = "0"
-    private var lastOperation: String? = null
     private var callback: Calculator? = calculator
 
     private var isFirstOperation = false
     private var resetValue = false
     private var baseValue = 0.0
     private var secondValue = 0.0
+    private var lastOperation = ""
     private val operations = listOf("+", "-", "*", "/", "^", "%", "√")
     private val operationsRegex = "[+,-,*,/,^,%,√]".toRegex()
     private var moreOperationsInRaw = false
@@ -129,7 +129,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             baseValue = 1.0
         }
 
-        val operation = OperationFactory.forId(lastOperation!!, baseValue, secondValue)
+        val operation = OperationFactory.forId(lastOperation, baseValue, secondValue)
         if (operation != null) {
             try {
                 updateResult(operation.getResult())
@@ -174,7 +174,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             }
         }
 
-        if (lastKey == DIGIT && !lastOperation.isNullOrEmpty() && operation == PERCENT) {
+        if (lastKey == DIGIT && lastOperation != "" && operation == PERCENT) {
             val tempOperation = lastOperation
             handlePercent()
             lastKey = tempOperation
@@ -199,7 +199,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun handlePercent() {
-        val operation = PercentOperation(baseValue, getSecondValue(), lastOperation ?: "")
+        val operation = PercentOperation(baseValue, getSecondValue(), lastOperation)
         val result = operation.getResult()
         setFormula("${baseValue.format()}${getSign(lastOperation)}${getSecondValue().format()}%")
         secondValue = result
@@ -302,7 +302,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         }
     }
 
-    private fun getSign(lastOperation: String?) = when (lastOperation) {
+    private fun getSign(lastOperation: String) = when (lastOperation) {
         PLUS -> "+"
         MINUS -> "-"
         MULTIPLY -> "*"
