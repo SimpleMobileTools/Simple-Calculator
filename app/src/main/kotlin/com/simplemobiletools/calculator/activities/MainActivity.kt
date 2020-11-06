@@ -7,11 +7,11 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
+import com.simplemobiletools.calculator.BuildConfig
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.extensions.updateViewColors
 import com.simplemobiletools.calculator.helpers.*
-import com.simplemobiletools.calculator.BuildConfig
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
 import com.simplemobiletools.commons.helpers.LICENSE_ESPRESSO
@@ -20,7 +20,6 @@ import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.Release
 import kotlinx.android.synthetic.main.activity_main.*
 import me.grantland.widget.AutofitHelper
-import java.math.BigDecimal
 
 class MainActivity : SimpleActivity(), Calculator {
     private var storedTextColor = 0
@@ -157,8 +156,8 @@ class MainActivity : SimpleActivity(), Calculator {
     }
 
     // used only by Robolectric
-    override fun setValueBigDecimal(d: BigDecimal) {
-        calc.setValue(Formatter.bigDecimalToString(d))
+    override fun setValueDouble(d: Double) {
+        calc.setValue(Formatter.doubleToString(d))
         calc.lastKey = DIGIT
     }
 

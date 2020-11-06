@@ -13,7 +13,6 @@ import org.robolectric.annotation.Config
 import java.math.BigDecimal
 
 @RunWith(RobolectricTestRunner::class)
-@Config(constants = BuildConfig::class, sdk = [21])
 class MainActivityTest {
     private lateinit var activity: MainActivity
 
@@ -164,7 +163,7 @@ class MainActivityTest {
     }
 
     private fun setBigDecimal(d: BigDecimal) {
-        activity.setValueBigDecimal(d)
+
     }
 
     private fun handleOperation(operation: String) {

@@ -6,7 +6,6 @@ import com.simplemobiletools.calculator.operation.OperationFactory
 import com.simplemobiletools.calculator.operation.PercentOperation
 import com.simplemobiletools.commons.extensions.areDigitsOnly
 import com.simplemobiletools.commons.extensions.toast
-import java.math.BigDecimal
 
 class CalculatorImpl(calculator: Calculator, val context: Context) {
     var displayedNumber: String? = null
@@ -18,8 +17,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
 
     private var isFirstOperation = false
     private var resetValue = false
-    private var baseValue: BigDecimal = BigDecimal.ZERO
-    private var secondValue: BigDecimal = BigDecimal.ZERO
+    private var baseValue = 0.0
+    private var secondValue = 0.0
     private val operations = listOf("+", "-", "*", "/", "^", "%", "√")
     private var moreOperationsInRaw = false
 
@@ -37,8 +36,8 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     }
 
     private fun resetValues() {
-        baseValue = BigDecimal.ZERO
-        secondValue = BigDecimal.ZERO
+        baseValue = 0.0
+        secondValue = 0.0
         resetValue = false
         lastOperation = ""
         displayedNumber = ""
@@ -63,7 +62,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         val sign = getSign(lastOperation)
 
         if (sign.isNotEmpty()) {
-            if (secondValue.compareTo(BigDecimal.ZERO) == 0 && sign == "/") {
+            if (secondValue == 0.0 && sign == "/") {
                 context.toast(context.getString(R.string.formula_divide_by_zero_error))
             }
 
@@ -102,16 +101,16 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
             return str
         }
 
-        val doubleValue = Formatter.stringToBigDecimal(str)
+        val doubleValue = Formatter.stringToDouble(str)
         return doubleValue.format()
     }
 
-    private fun updateResult(value: BigDecimal) {
+    private fun updateResult(value: Double) {
         setValue(value.format())
         baseValue = value
     }
 
-    private fun getDisplayedNumberAsDouble() = Formatter.stringToBigDecimal(displayedNumber!!)
+    private fun getDisplayedNumberAsDouble() = Formatter.stringToDouble(displayedNumber!!)
 
     fun handleResult() {
         if (moreOperationsInRaw) {
@@ -131,7 +130,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         }
 
         if (lastOperation == ROOT && inputDisplayedFormula.startsWith("√")) {
-            baseValue = 1.toBigDecimal()
+            baseValue = 1.0
         }
 
         val operation = OperationFactory.forId(lastOperation!!, baseValue, secondValue)
@@ -206,7 +205,7 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
     private fun handlePercent() {
         val operation = PercentOperation(baseValue, getSecondValue(), lastOperation ?: "")
         val result = operation.getResult()
-        setFormula("${baseValue.format()}${getSign(lastOperation)}${getSecondValue()}%")
+        setFormula("${baseValue.format()}${getSign(lastOperation)}${getSecondValue().format()}%")
         secondValue = result
         updateResult(result)
         inputDisplayedFormula = displayedNumber ?: ""
@@ -295,14 +294,14 @@ class CalculatorImpl(calculator: Calculator, val context: Context) {
         setValue(inputDisplayedFormula)
     }
 
-    private fun getSecondValue(): BigDecimal {
+    private fun getSecondValue(): Double {
         val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
             inputDisplayedFormula.substring(1)
         } else {
             inputDisplayedFormula
         }
 
-        return valueToCheck.substring(valueToCheck.indexOfAny(operations, 0, false) + 1).toBigDecimal()
+        return valueToCheck.substring(valueToCheck.indexOfAny(operations, 0, false) + 1).toDouble()
     }
 
     private fun zeroClicked() {

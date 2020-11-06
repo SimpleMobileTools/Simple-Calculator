@@ -13,7 +13,6 @@ import com.simplemobiletools.calculator.activities.MainActivity
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.setText
-import java.math.BigDecimal
 
 class MyWidgetProvider : AppWidgetProvider(), Calculator {
     companion object {
@@ -124,7 +123,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
         }
     }
 
-    override fun setValueBigDecimal(d: BigDecimal) {
+    override fun setValueDouble(d: Double) {
     }
 
     override fun setFormula(value: String, context: Context) {

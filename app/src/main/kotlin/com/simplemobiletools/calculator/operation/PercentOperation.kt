@@ -6,32 +6,29 @@ import com.simplemobiletools.calculator.helpers.MULTIPLY
 import com.simplemobiletools.calculator.helpers.PLUS
 import com.simplemobiletools.calculator.operation.base.BinaryOperation
 import com.simplemobiletools.calculator.operation.base.Operation
-import java.math.BigDecimal
-import java.math.MathContext
 
-class PercentOperation(baseValue: BigDecimal, secondValue: BigDecimal, val sign: String) : BinaryOperation(baseValue, secondValue), Operation {
+class PercentOperation(baseValue: Double, secondValue: Double, val sign: String) : BinaryOperation(baseValue, secondValue), Operation {
 
-    override fun getResult(): BigDecimal {
-        return when {
-            secondValue.compareTo(BigDecimal.ZERO) == 0 -> BigDecimal.ZERO
-            sign == MULTIPLY -> {
-                val partial = BigDecimal(100).divide(secondValue, MathContext.DECIMAL32)
-                baseValue.divide(partial, MathContext.DECIMAL32)
+    override fun getResult(): Double {
+        return when (sign) {
+            MULTIPLY -> {
+                val partial = 100 / secondValue
+                baseValue / partial
             }
-            sign == DIVIDE -> {
-                val partial = BigDecimal(100).divide(secondValue, MathContext.DECIMAL32)
-                baseValue.multiply(partial, MathContext.DECIMAL32)
+            DIVIDE -> {
+                val partial = 100 / secondValue
+                baseValue * partial
             }
-            sign == PLUS -> {
-                val partial = baseValue.divide(100.toBigDecimal().divide(secondValue, MathContext.DECIMAL32), MathContext.DECIMAL32)
+            PLUS -> {
+                val partial = baseValue / (100 / secondValue)
                 baseValue.plus(partial)
             }
-            sign == MINUS -> {
-                val partial = baseValue.divide(100.toBigDecimal().divide(secondValue, MathContext.DECIMAL32), MathContext.DECIMAL32)
+            MINUS -> {
+                val partial = baseValue / (100 / secondValue)
                 baseValue.minus(partial)
             }
             else -> {
-                baseValue.divide(BigDecimal(100)).multiply(secondValue)
+                baseValue / (100 * secondValue)
             }
         }
     }
