@@ -3,7 +3,7 @@ package com.simplemobiletools.calculator.helpers
 import android.content.Context
 
 interface Calculator {
-    fun setValue(value: String, context: Context)
+    fun showNewResult(value: String, context: Context)
 
-    fun setFormula(value: String, context: Context)
+    fun showNewFormula(value: String, context: Context)
 }

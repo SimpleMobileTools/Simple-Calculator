@@ -20,20 +20,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private val operationsRegex = "[-+*/^%√]".toPattern()
 
     init {
-        setValue("0")
-    }
-
-    private fun resetValues() {
-        baseValue = 0.0
-        secondValue = 0.0
-        displayedNumber = ""
-        lastKey = ""
-        lastOperation = ""
-    }
-
-    fun setValue(value: String) {
-        callback!!.setValue(value, context)
-        displayedNumber = value
+        showNewResult("0")
     }
 
     private fun addDigit(number: Int) {
@@ -47,7 +34,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
 
         inputDisplayedFormula += number
-        setValue(inputDisplayedFormula)
+        showNewResult(inputDisplayedFormula)
     }
 
     private fun formatString(str: String): String {
@@ -60,8 +47,17 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     private fun updateResult(value: Double) {
-        setValue(value.format())
+        showNewResult(value.format())
         baseValue = value
+    }
+
+    private fun showNewResult(value: String) {
+        callback!!.showNewResult(value, context)
+        displayedNumber = value
+    }
+
+    private fun showNewFormula(value: String) {
+        callback!!.showNewFormula(value, context)
     }
 
     private fun getDisplayedNumberAsDouble() = Formatter.stringToDouble(displayedNumber)
@@ -70,7 +66,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         secondValue = getSecondValue()
         calculateResult()
         baseValue = getDisplayedNumberAsDouble()
-        setValue(inputDisplayedFormula)
+        showNewResult(inputDisplayedFormula)
     }
 
     private fun calculateResult() {
@@ -101,7 +97,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
                 updateResult(result)
                 baseValue = result
                 inputDisplayedFormula = result.format()
-                callback!!.setFormula(expression.replace("sqrt", "√"), context)
+                showNewFormula(expression.replace("sqrt", "√"))
             } catch (e: Exception) {
                 context.toast(R.string.unknown_error_occurred)
             }
@@ -112,7 +108,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private fun handlePercent() {
         val operation = PercentOperation(baseValue, getSecondValue(), lastOperation)
         val result = operation.getResult()
-        callback!!.setFormula("${baseValue.format()}${getSign(lastOperation)}${getSecondValue().format()}%", context)
+        showNewFormula("${baseValue.format()}${getSign(lastOperation)}${getSecondValue().format()}%")
         inputDisplayedFormula = result.format()
         updateResult(result)
     }
@@ -167,7 +163,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
         lastKey = operation
         lastOperation = operation
-        setValue(inputDisplayedFormula)
+        showNewResult(inputDisplayedFormula)
     }
 
     fun handleClear() {
@@ -192,15 +188,23 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             !newValue.contains('√')) {
             newValue = formatString(newValue)
         }
-        setValue(newValue)
+        showNewResult(newValue)
         inputDisplayedFormula = if (newValue != "0") newValue else ""
     }
 
     fun handleReset() {
         resetValues()
-        setValue("0")
-        callback!!.setFormula("", context)
+        showNewResult("0")
+        showNewFormula("")
         inputDisplayedFormula = ""
+    }
+
+    private fun resetValues() {
+        baseValue = 0.0
+        secondValue = 0.0
+        displayedNumber = ""
+        lastKey = ""
+        lastOperation = ""
     }
 
     fun handleEquals() {
@@ -220,6 +224,21 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         baseValue = getDisplayedNumberAsDouble()
     }
 
+    private fun getSecondValue(): Double {
+        val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
+            inputDisplayedFormula.substring(1)
+        } else {
+            inputDisplayedFormula
+        }.replace(",", "")
+
+        var value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
+        if (value.isEmpty()) {
+            value = "0"
+        }
+
+        return value.toDouble()
+    }
+
     private fun decimalClicked() {
         val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
             inputDisplayedFormula.substring(1)
@@ -236,22 +255,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             }
         }
 
-        setValue(inputDisplayedFormula)
-    }
-
-    private fun getSecondValue(): Double {
-        val valueToCheck = if (inputDisplayedFormula.startsWith("-")) {
-            inputDisplayedFormula.substring(1)
-        } else {
-            inputDisplayedFormula
-        }.replace(",", "")
-
-        var value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
-        if (value.isEmpty()) {
-            value = "0"
-        }
-
-        return value.toDouble()
+        showNewResult(inputDisplayedFormula)
     }
 
     private fun zeroClicked() {
@@ -268,14 +272,13 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     private fun getSign(lastOperation: String) = when (lastOperation) {
-        PLUS -> "+"
         MINUS -> "-"
         MULTIPLY -> "*"
         DIVIDE -> "/"
         PERCENT -> "%"
         POWER -> "^"
         ROOT -> "√"
-        else -> ""
+        else -> "+"
     }
 
     fun numpadClicked(id: Int) {

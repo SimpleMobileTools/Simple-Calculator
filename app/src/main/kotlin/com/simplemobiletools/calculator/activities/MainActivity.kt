@@ -143,7 +143,7 @@ class MainActivity : SimpleActivity(), Calculator {
         }
     }
 
-    override fun setValue(value: String, context: Context) {
+    override fun showNewResult(value: String, context: Context) {
         result.text = value
     }
 
@@ -155,7 +155,7 @@ class MainActivity : SimpleActivity(), Calculator {
         }
     }
 
-    override fun setFormula(value: String, context: Context) {
+    override fun showNewFormula(value: String, context: Context) {
         formula.text = value
     }
 }
