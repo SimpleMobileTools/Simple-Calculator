@@ -70,14 +70,16 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
 
         val lastChar = inputDisplayedFormula.last().toString()
-        if (operations.contains(lastChar) || lastChar == ".") {
+        if (lastChar == ".") {
+            inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
+        } else if (operations.contains(lastChar)/* || lastChar == "."*/) {
             inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
             inputDisplayedFormula += getSign(operation)
         } else if (!inputDisplayedFormula.trimStart('-').contains(operationsRegex.toRegex())) {
             inputDisplayedFormula += getSign(operation)
         }
 
-        if (lastKey == DIGIT) {
+        if (lastKey == DIGIT || lastKey == DECIMAL) {
             if (lastOperation != "" && operation == PERCENT) {
                 handlePercent()
             } else {
@@ -109,7 +111,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             calculateResult()
         }
 
-        if (lastKey != DIGIT) {
+        if (lastKey != DIGIT && lastKey != DECIMAL) {
             return
         }
 
