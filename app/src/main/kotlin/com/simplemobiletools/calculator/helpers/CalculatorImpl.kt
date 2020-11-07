@@ -2,7 +2,6 @@ package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
 import com.simplemobiletools.calculator.R
-import com.simplemobiletools.calculator.operation.PercentOperation
 import com.simplemobiletools.commons.extensions.toast
 import net.objecthunter.exp4j.ExpressionBuilder
 
@@ -106,8 +105,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
     // handle percents manually, it doesn't seem to be possible via net.objecthunter:exp4j. "%" is used only for modulo there
     private fun handlePercent() {
-        val operation = PercentOperation(baseValue, getSecondValue(), lastOperation)
-        val result = operation.getResult()
+        val result = calculatePercentage(baseValue, getSecondValue(), lastOperation)
         showNewFormula("${baseValue.format()}${getSign(lastOperation)}${getSecondValue().format()}%")
         inputDisplayedFormula = result.format()
         showNewResult(result.format())
@@ -165,6 +163,28 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             } catch (e: Exception) {
                 context.toast(R.string.unknown_error_occurred)
             }
+        }
+    }
+
+    private fun calculatePercentage(baseValue: Double, secondValue: Double, sign: String): Double {
+        return when (sign) {
+            MULTIPLY -> {
+                val partial = 100 / secondValue
+                baseValue / partial
+            }
+            DIVIDE -> {
+                val partial = 100 / secondValue
+                baseValue * partial
+            }
+            PLUS -> {
+                val partial = baseValue / (100 / secondValue)
+                baseValue.plus(partial)
+            }
+            MINUS -> {
+                val partial = baseValue / (100 / secondValue)
+                baseValue.minus(partial)
+            }
+            else -> baseValue / (100 * secondValue)
         }
     }
 
