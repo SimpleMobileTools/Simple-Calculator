@@ -49,6 +49,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             }
         }
 
+        lastKey = DECIMAL
         showNewResult(inputDisplayedFormula)
     }
 
@@ -61,7 +62,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             inputDisplayedFormula = "√"
         }
 
-        if (operations.contains(inputDisplayedFormula.last().toString())) {
+        val lastChar = inputDisplayedFormula.last().toString()
+        if (operations.contains(lastChar) || lastChar == ".") {
             inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
             inputDisplayedFormula += getSign(operation)
         } else if (!inputDisplayedFormula.trimStart('-').contains(operationsRegex.toRegex())) {
