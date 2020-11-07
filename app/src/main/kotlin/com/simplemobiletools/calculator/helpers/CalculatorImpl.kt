@@ -31,7 +31,14 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
         val valuesToCheck = numbersRegex.split(inputDisplayedFormula).filter { it.trim().isNotEmpty() }
         valuesToCheck.forEach {
-            inputDisplayedFormula = inputDisplayedFormula.replace(it, Formatter.addGroupingSeparators(it))
+            var newString = Formatter.addGroupingSeparators(it)
+
+            // allow writing numbers like 0.003
+            if (it.contains(".")) {
+                newString = newString.substringBefore(".") + ".${it.substringAfter(".")}"
+            }
+
+            inputDisplayedFormula = inputDisplayedFormula.replace(it, newString)
         }
 
         showNewResult(inputDisplayedFormula)
