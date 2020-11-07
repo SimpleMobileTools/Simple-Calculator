@@ -16,6 +16,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private var lastOperation = ""
     private val operations = listOf("+", "-", "*", "/", "^", "%", "√")
     private val operationsRegex = "[-+*/^%√]".toPattern()
+    private val numbersRegex = "[^0-9,.]".toRegex()
 
     init {
         showNewResult("0")
@@ -27,6 +28,12 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
 
         inputDisplayedFormula += number
+
+        val valuesToCheck = numbersRegex.split(inputDisplayedFormula).filter { it.trim().isNotEmpty() }
+        valuesToCheck.forEach {
+            inputDisplayedFormula = inputDisplayedFormula.replace(it, Formatter.addGroupingSeparators(it))
+        }
+
         showNewResult(inputDisplayedFormula)
     }
 
@@ -129,7 +136,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         if (lastKey != EQUALS) {
             val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
             val parts = valueToCheck.split(operationsRegex).filter { it != "" }
-            baseValue = parts.first().replace(",", "").toDouble()
+            baseValue = Formatter.stringToDouble(parts.first())
             if (inputDisplayedFormula.startsWith("-")) {
                 baseValue *= -1
             }

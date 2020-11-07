@@ -18,6 +18,8 @@ object Formatter {
     }
 
     fun stringToDouble(str: String) = str.replace(",", "").toDouble()
+
+    fun addGroupingSeparators(str: String) = doubleToString(stringToDouble(str))
 }
 
 fun Double.format(): String = Formatter.doubleToString(this)
