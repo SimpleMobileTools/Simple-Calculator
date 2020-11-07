@@ -1,0 +1,4 @@
+ * Show currently selected operator
+ * Properly handle percentage
+ * Enable vibrations by default
+ * Added some other UX, stability and translation improvements

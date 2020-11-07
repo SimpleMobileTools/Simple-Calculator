@@ -1,6 +1,14 @@
 Changelog
 ==========
 
+Version 5.4.0 *(2020-11-07)*
+----------------------------
+
+ * Show currently selected operator
+ * Properly handle percentage
+ * Enable vibrations by default
+ * Added some other UX, stability and translation improvements
+
 Version 5.3.0 *(2020-08-19)*
 ----------------------------
 
