@@ -28,19 +28,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
 
         inputDisplayedFormula += number
-
-        val valuesToCheck = numbersRegex.split(inputDisplayedFormula).filter { it.trim().isNotEmpty() }
-        valuesToCheck.forEach {
-            var newString = Formatter.addGroupingSeparators(it)
-
-            // allow writing numbers like 0.003
-            if (it.contains(".")) {
-                newString = newString.substringBefore(".") + ".${it.substringAfter(".")}"
-            }
-
-            inputDisplayedFormula = inputDisplayedFormula.replace(it, newString)
-        }
-
+        addThousandsDelimiter()
         showNewResult(inputDisplayedFormula)
     }
 
@@ -65,6 +53,19 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
         lastKey = DECIMAL
         showNewResult(inputDisplayedFormula)
+    }
+
+    private fun addThousandsDelimiter() {
+        val valuesToCheck = numbersRegex.split(inputDisplayedFormula).filter { it.trim().isNotEmpty() }
+        valuesToCheck.forEach {
+            var newString = Formatter.addGroupingSeparators(it)
+            // allow writing numbers like 0.003
+            if (it.contains(".")) {
+                newString = newString.substringBefore(".") + ".${it.substringAfter(".")}"
+            }
+
+            inputDisplayedFormula = inputDisplayedFormula.replace(it, newString)
+        }
     }
 
     fun handleOperation(operation: String) {
@@ -183,7 +184,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
         newValue = newValue.trimEnd(',')
         inputDisplayedFormula = newValue
-        showNewResult(newValue)
+        addThousandsDelimiter()
+        showNewResult(inputDisplayedFormula)
     }
 
     fun handleReset() {
