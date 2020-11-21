@@ -1,23 +1,23 @@
 <resources>
     <string name="app_name">Prosty Kalkulator</string>
     <string name="app_launcher_name">Kalkulator</string>
-    <string name="scientific_calculator">Scientific Calculator</string>
+    <string name="scientific_calculator">Kalkulator Naukowy</string>
 
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Błąd: dzielenie przez zero</string>
 
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Wibracja po wciśnięciu przycisku</string>
+    <string name="vibrate_on_button_press">Wibracja przy naciśnięciu przycisku</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">Jak działa przycisk czyszczenia (C)?</string>
-    <string name="faq_1_text">Naciśnięcie usuwa jeden znak. Przytrzymanie resetuje wszystkie pola.</string>
+    <string name="faq_1_title">Jak działa przycisk C (Wyczyść)?</string>
+    <string name="faq_1_text">Kliknięcie go usunie jeden znak. Przytrzymanie go zresetuje wszystkie pola jednocześnie.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Prosty Kalkulator - Wykonuj obliczenia szybko</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
+    <string name="app_short_description">Kalkulator do prostych obliczeń z przyjemnym UI i brakiem reklam</string>
     <string name="app_long_description">
         This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
 
