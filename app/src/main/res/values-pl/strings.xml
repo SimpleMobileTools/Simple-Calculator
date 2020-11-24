@@ -19,21 +19,21 @@
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Kalkulator do prostych obliczeń z przyjemnym UI i brakiem reklam</string>
     <string name="app_long_description">
-        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
+        Ten stylowy, nowoczesny kalkulator zapewnia wspaniałe wrażenia użytkownika, które pokochasz. Możesz skopiować wynik lub wzór do schowka przez długie naciśnięcie go.
 
-        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
+        Aplikacja jest prostym pomocnikiem do szybkich obliczeń z wieloma podstawowymi funkcjami, takimi jak mnożenie, dzielenie, pierwiastkowanie i potęgowanie.
 
-        You can make it vibrate on button presses to make you confident during inserting your values.
+        Możesz sprawić, że wibruje przy naciskaniu przycisków, abyś miał pewność podczas wstawiania swoich wartości.
 
-        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
+        Istnieje możliwość uniemożliwienia telefonowi zasypiania podczas korzystania z aplikacji w celu wygodnego użytkowania.
 
-        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
+        Kolor tekstu widżetu z możliwością zmiany rozmiaru można dostosować, jak również kolor i przeźroczystość tła. Naciśnij wynik lub wzór w widżecie, aby otworzyć aplikację.
 
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
+        Domyślnie jest wyposażony w materiałowy wygląd i ciemny motyw, zapewnia doskonałą obsługę dla łatwego użytkowania. Brak dostępu do Internetu zapewnia większą prywatność, bezpieczeństwo i stabilność niż inne aplikacje.
 
-        Nie zawiera natomiast żadnych reklam i nie potrzebuje całej masy uprawnień. Jest w pełni otwartoźródłowa i w pełni podatna na kolorowanie.
+        Nie zawiera reklam, ani niepotrzebnych uprawnień. Jest w pełni otwartoźródłowa i w pełni podatna na kolorowanie.
 
-        <b>Check out the full suite of Simple Tools here:</b>
+        <b>Sprawdź pełny zestaw Simple Tools tutaj:</b>
         https://www.simplemobiletools.com
 
         <b>Facebook:</b>
