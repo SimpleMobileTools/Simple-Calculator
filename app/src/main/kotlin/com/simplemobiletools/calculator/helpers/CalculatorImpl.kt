@@ -112,7 +112,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     // handle percents manually, it doesn't seem to be possible via net.objecthunter:exp4j. "%" is used only for modulo there
     private fun handlePercent() {
         var result = calculatePercentage(baseValue, getSecondValue(), lastOperation)
-        if (result == Double.POSITIVE_INFINITY || result == Double.NEGATIVE_INFINITY) {
+        if (result.isInfinite() || result.isNaN()) {
             result = 0.0
         }
 
