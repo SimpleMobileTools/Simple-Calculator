@@ -163,8 +163,14 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
 
         if (lastOperation != "") {
-            val expression = "${baseValue.format()}${getSign(lastOperation)}${secondValue.format()}".replace("√", "sqrt")
+            val sign = getSign(lastOperation)
+            val expression = "${baseValue.format()}$sign${secondValue.format()}".replace("√", "sqrt")
             try {
+                if (sign == "/" && secondValue == 0.0) {
+                    context.toast(R.string.formula_divide_by_zero_error)
+                    return
+                }
+
                 val result = ExpressionBuilder(expression.replace(",", "")).build().evaluate()
                 showNewResult(result.format())
                 baseValue = result
