@@ -98,8 +98,11 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             } else {
                 secondValue = getSecondValue()
                 calculateResult()
+
                 if (!operations.contains(inputDisplayedFormula.last().toString())) {
-                    inputDisplayedFormula += getSign(operation)
+                    if (!inputDisplayedFormula.contains("/")) {
+                        inputDisplayedFormula += getSign(operation)
+                    }
                 }
             }
         }
