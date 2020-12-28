@@ -73,7 +73,9 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
 
         if (operation == ROOT && inputDisplayedFormula == "0") {
-            inputDisplayedFormula = "√"
+            if (lastKey != DIGIT) {
+                inputDisplayedFormula = "1√"
+            }
         }
 
         val lastChar = inputDisplayedFormula.last().toString()
