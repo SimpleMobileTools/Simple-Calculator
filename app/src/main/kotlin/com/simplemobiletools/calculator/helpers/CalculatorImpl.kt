@@ -13,8 +13,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private var inputDisplayedFormula = "0"
     private var lastKey = ""
     private var lastOperation = ""
-    private val operations = listOf("+", "-", "*", "/", "^", "%", "√")
-    private val operationsRegex = "[-+*/^%√]".toPattern()
+    private val operations = listOf("+", "-", "×", "÷", "^", "%", "√")
+    private val operationsRegex = "[-+×÷^%√]".toPattern()
     private val numbersRegex = "[^0-9,.]".toRegex()
 
     init {
@@ -100,7 +100,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
                 calculateResult()
 
                 if (!operations.contains(inputDisplayedFormula.last().toString())) {
-                    if (!inputDisplayedFormula.contains("/")) {
+                    if (!inputDisplayedFormula.contains("÷")) {
                         inputDisplayedFormula += getSign(operation)
                     }
                 }
@@ -167,9 +167,9 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
         if (lastOperation != "") {
             val sign = getSign(lastOperation)
-            val expression = "${baseValue.format()}$sign${secondValue.format()}".replace("√", "sqrt")
+            val expression = "${baseValue.format()}$sign${secondValue.format()}".replace("√", "sqrt").replace("×", "*").replace("÷", "/")
             try {
-                if (sign == "/" && secondValue == 0.0) {
+                if (sign == "÷" && secondValue == 0.0) {
                     context.toast(R.string.formula_divide_by_zero_error)
                     return
                 }
@@ -178,7 +178,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
                 showNewResult(result.format())
                 baseValue = result
                 inputDisplayedFormula = result.format()
-                showNewFormula(expression.replace("sqrt", "√"))
+                showNewFormula(expression.replace("sqrt", "√").replace("*", "×").replace("/", "÷"))
             } catch (e: Exception) {
                 context.toast(R.string.unknown_error_occurred)
             }
@@ -243,8 +243,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
     private fun getSign(lastOperation: String) = when (lastOperation) {
         MINUS -> "-"
-        MULTIPLY -> "*"
-        DIVIDE -> "/"
+        MULTIPLY -> "×"
+        DIVIDE -> "÷"
         PERCENT -> "%"
         POWER -> "^"
         ROOT -> "√"
