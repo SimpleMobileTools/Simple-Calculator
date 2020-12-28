@@ -68,6 +68,10 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun handleOperation(operation: String) {
+        if (inputDisplayedFormula == Double.NaN.toString()) {
+            inputDisplayedFormula = "0"
+        }
+
         if (inputDisplayedFormula == "") {
             inputDisplayedFormula = "0"
         }
@@ -81,7 +85,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         val lastChar = inputDisplayedFormula.last().toString()
         if (lastChar == ".") {
             inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
-        } else if (operations.contains(lastChar)/* || lastChar == "."*/) {
+        } else if (operations.contains(lastChar)) {
             inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
             inputDisplayedFormula += getSign(operation)
         } else if (!inputDisplayedFormula.trimStart('-').contains(operationsRegex.toRegex())) {
@@ -107,7 +111,11 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
     // handle percents manually, it doesn't seem to be possible via net.objecthunter:exp4j. "%" is used only for modulo there
     private fun handlePercent() {
-        val result = calculatePercentage(baseValue, getSecondValue(), lastOperation)
+        var result = calculatePercentage(baseValue, getSecondValue(), lastOperation)
+        if (result == Double.POSITIVE_INFINITY || result == Double.NEGATIVE_INFINITY) {
+            result = 0.0
+        }
+
         showNewFormula("${baseValue.format()}${getSign(lastOperation)}${getSecondValue().format()}%")
         inputDisplayedFormula = result.format()
         showNewResult(result.format())
@@ -235,6 +243,10 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun numpadClicked(id: Int) {
+        if (inputDisplayedFormula == Double.NaN.toString()) {
+            inputDisplayedFormula = ""
+        }
+
         if (lastKey == EQUALS) {
             lastOperation = EQUALS
         }
