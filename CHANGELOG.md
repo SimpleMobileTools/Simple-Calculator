@@ -1,6 +1,13 @@
 Changelog
 ==========
 
+Version 5.5.0 *(2020-12-28)*
+----------------------------
+
+ * Changed some operator characters for consistency with other apps
+ * Fixed some crashes and other glitches
+ * Require a Simple Thank You purchase for color customization
+
 Version 5.4.0 *(2020-11-07)*
 ----------------------------
 
