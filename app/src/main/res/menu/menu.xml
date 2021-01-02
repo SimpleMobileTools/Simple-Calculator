@@ -6,6 +6,10 @@
         android:title="@string/settings"
         app:showAsAction="never"/>
     <item
+        android:id="@+id/converter"
+        android:title="@string/Converter"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/about"
         android:title="@string/about"
         app:showAsAction="never"/>

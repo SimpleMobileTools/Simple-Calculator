@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
 import com.simplemobiletools.calculator.BuildConfig
+import com.simplemobiletools.calculator.ConverterActivity
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.extensions.updateViewColors
@@ -91,6 +92,7 @@ class MainActivity : SimpleActivity(), Calculator {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.settings -> launchSettings()
+            R.id.converter -> launchConverter()
             R.id.about -> launchAbout()
             else -> return super.onOptionsItemSelected(item)
         }
@@ -111,6 +113,10 @@ class MainActivity : SimpleActivity(), Calculator {
 
     private fun launchSettings() {
         startActivity(Intent(applicationContext, SettingsActivity::class.java))
+    }
+
+    private fun launchConverter(){
+        startActivity(Intent(applicationContext, ConverterActivity::class.java))
     }
 
     private fun launchAbout() {

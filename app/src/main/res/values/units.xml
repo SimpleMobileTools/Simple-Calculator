@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="units">
+            <item>@string/Kilometer</item>
+            <item>@string/Meter</item>
+            <item>@string/Decimetre</item>
+            <item>@string/Centimeter</item>
+            <item>@string/Millimetre</item>
+            <item>@string/micrometres</item>
+            <item>@string/Nanometre</item>
+            <item>@string/Mile</item>
+            <item>@string/Yard</item>
+            <item>@string/Foot</item>
+            <item>@string/Inch</item>
+            <item>@string/NMile</item>
+        </string-array>
+</resources>
+

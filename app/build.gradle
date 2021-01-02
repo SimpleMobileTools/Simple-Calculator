@@ -58,4 +58,7 @@ dependencies {
     implementation 'com.simplemobiletools:commons:5.32.15'
     implementation 'me.grantland:autofittextview:0.2.1'
     implementation 'net.objecthunter:exp4j:0.4.8'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }

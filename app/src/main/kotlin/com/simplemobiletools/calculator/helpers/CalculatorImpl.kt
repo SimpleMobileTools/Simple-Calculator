@@ -3,6 +3,7 @@ package com.simplemobiletools.calculator.helpers
 import android.content.Context
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.commons.extensions.toast
+import kotlinx.android.synthetic.main.activity_converter.*
 import net.objecthunter.exp4j.ExpressionBuilder
 
 class CalculatorImpl(calculator: Calculator, private val context: Context) {
@@ -276,4 +277,6 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             R.id.btn_9 -> addDigit(9)
         }
     }
+
+
 }

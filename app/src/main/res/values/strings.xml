@@ -42,7 +42,19 @@
         <b>Reddit:</b>
         https://www.reddit.com/r/SimpleMobileTools
     </string>
-
+    <string name="Converter" translatable="false">Converter</string>
+    <string name="Kilometer" translatable="false">Kilometer</string>
+    <string name="Meter" translatable="false">Meter</string>
+    <string name="Decimetre" translatable="false">Decimetre</string>
+    <string name="Centimeter" translatable="false">Centimeter</string>
+    <string name="Millimetre" translatable="false">Millimetre</string>
+    <string name="micrometres" translatable="false">micrometres</string>
+    <string name="Nanometre" translatable="false">Nanometre</string>
+    <string name="Mile" translatable="false">Mile</string>
+    <string name="Yard" translatable="false">Yard</string>
+    <string name="Foot" translatable="false">Foot</string>
+    <string name="Inch" translatable="false">Inch</string>
+    <string name="NMile" translatable="false">Nautical Mile</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
