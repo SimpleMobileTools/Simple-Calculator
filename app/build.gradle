@@ -15,8 +15,8 @@ android {
         applicationId "com.simplemobiletools.calculator"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 38
-        versionName "5.5.0"
+        versionCode 39
+        versionName "5.5.1"
         setProperty("archivesBaseName", "calculator")
     }
 
