@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.5.1 *(2021-02-05)*
+----------------------------
+
+ * Added White theme
+ * Show an error at too big or weird results, do not crash
+
 Version 5.5.0 *(2020-12-28)*
 ----------------------------
 
