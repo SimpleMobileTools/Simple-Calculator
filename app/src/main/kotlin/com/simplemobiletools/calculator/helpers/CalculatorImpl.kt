@@ -175,7 +175,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
                 }
 
                 val result = ExpressionBuilder(expression.replace(",", "")).build().evaluate()
-                if (result.isInfinite()) {
+                if (result.isInfinite() || result.isNaN()) {
                     context.toast(R.string.unknown_error_occurred)
                     return
                 }
