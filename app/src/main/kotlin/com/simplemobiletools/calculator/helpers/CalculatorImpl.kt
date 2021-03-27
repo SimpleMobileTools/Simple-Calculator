@@ -96,7 +96,18 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             if (lastOperation != "" && operation == PERCENT) {
                 handlePercent()
             } else {
-                secondValue = getSecondValue()
+                // split to multiple lines just to see when does the crash happen
+                secondValue = when (operation) {
+                    PLUS -> getSecondValue()
+                    MINUS -> getSecondValue()
+                    MULTIPLY -> getSecondValue()
+                    DIVIDE -> getSecondValue()
+                    ROOT -> getSecondValue()
+                    POWER -> getSecondValue()
+                    PERCENT -> getSecondValue()
+                    else -> getSecondValue()
+                }
+
                 calculateResult()
 
                 if (!operations.contains(inputDisplayedFormula.last().toString())) {
