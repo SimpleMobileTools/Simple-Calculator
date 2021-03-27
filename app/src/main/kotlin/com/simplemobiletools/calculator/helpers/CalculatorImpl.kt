@@ -168,6 +168,10 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         if (lastKey != EQUALS) {
             val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
             val parts = valueToCheck.split(operationsRegex).filter { it != "" }
+            if (parts.isEmpty()) {
+                return
+            }
+
             baseValue = Formatter.stringToDouble(parts.first())
             if (inputDisplayedFormula.startsWith("-")) {
                 baseValue *= -1
