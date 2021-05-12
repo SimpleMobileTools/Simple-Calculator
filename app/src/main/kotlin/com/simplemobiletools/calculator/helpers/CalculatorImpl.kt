@@ -147,6 +147,10 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
         secondValue = getSecondValue()
         calculateResult()
+        if (lastOperation == DIVIDE && secondValue == 0.0){
+            lastKey = DIGIT
+            return
+        }
         lastKey = EQUALS
     }
 
