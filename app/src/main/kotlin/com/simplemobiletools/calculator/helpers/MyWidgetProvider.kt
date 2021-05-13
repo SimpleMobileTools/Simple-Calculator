@@ -115,7 +115,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
     }
 
     override fun showNewResult(value: String, context: Context) {
-        val appWidgetManager = AppWidgetManager.getInstance(context)
+        val appWidgetManager = AppWidgetManager.getInstance(context) ?: return
         appWidgetManager.getAppWidgetIds(getComponentName(context)).forEach {
             val views = RemoteViews(context.packageName, R.layout.widget)
             views.setText(R.id.result, value)
@@ -124,7 +124,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
     }
 
     override fun showNewFormula(value: String, context: Context) {
-        val appWidgetManager = AppWidgetManager.getInstance(context)
+        val appWidgetManager = AppWidgetManager.getInstance(context) ?: return
         appWidgetManager.getAppWidgetIds(getComponentName(context)).forEach {
             val views = RemoteViews(context.packageName, R.layout.widget)
             views.setText(R.id.formula, value)
