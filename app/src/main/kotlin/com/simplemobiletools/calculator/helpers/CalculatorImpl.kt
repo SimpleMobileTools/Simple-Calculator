@@ -223,6 +223,10 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
                 val partial = baseValue / (100 / secondValue)
                 baseValue.minus(partial)
             }
+            PERCENT -> {
+                val partial = (baseValue % secondValue) / 100
+                partial
+            }
             else -> baseValue / (100 * secondValue)
         }
     }
