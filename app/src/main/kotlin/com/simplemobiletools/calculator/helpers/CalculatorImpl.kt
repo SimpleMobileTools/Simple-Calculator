@@ -13,6 +13,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private var inputDisplayedFormula = "0"
     private var lastKey = ""
     private var lastOperation = ""
+    private var divisionByZero : Boolean = false
     private val operations = listOf("+", "-", "×", "÷", "^", "%", "√")
     private val operationsRegex = "[-+×÷^%√]".toPattern()
     private val numbersRegex = "[^0-9,.]".toRegex()
@@ -118,8 +119,12 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             }
         }
 
-        lastKey = operation
-        lastOperation = operation
+        if(divisionByZero) {
+            divisionByZero = false
+        }else{ // lastKey and lastOperation remain as division when divisionByZero
+            lastKey = operation
+            lastOperation = operation
+        }
         showNewResult(inputDisplayedFormula)
     }
 
@@ -147,7 +152,13 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
         secondValue = getSecondValue()
         calculateResult()
-        lastKey = EQUALS
+
+        //lastKey is division after attempt to divide by 0
+        if(divisionByZero){
+            divisionByZero = false
+        }else {
+            lastKey = EQUALS
+        }
     }
 
     private fun getSecondValue(): Double {
@@ -185,7 +196,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             val expression = "${baseValue.format()}$sign${secondValue.format()}".replace("√", "sqrt").replace("×", "*").replace("÷", "/")
             try {
                 if (sign == "÷" && secondValue == 0.0) {
-                    context.toast(R.string.formula_divide_by_zero_error)
+                    handleDivisionByZero()
                     return
                 }
 
@@ -203,6 +214,16 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
                 context.toast(R.string.unknown_error_occurred)
             }
         }
+        return
+    }
+
+    private fun handleDivisionByZero(){
+        context.toast(R.string.formula_divide_by_zero_error)
+        inputDisplayedFormula = inputDisplayedFormula.substring(0, inputDisplayedFormula.indexOfAny(operations) + 1)
+        showNewResult(inputDisplayedFormula)
+        lastOperation = DIVIDE
+        lastKey = DIVIDE
+        divisionByZero = true
     }
 
     private fun calculatePercentage(baseValue: Double, secondValue: Double, sign: String): Double {
