@@ -42,6 +42,10 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_power.setOnClickListener { calc.handleOperation(POWER); checkHaptic(it) }
         btn_root.setOnClickListener { calc.handleOperation(ROOT); checkHaptic(it) }
 
+        btn_minus.setOnLongClickListener {
+            calc.turnToNegative();
+        }
+
         btn_clear.setOnClickListener { calc.handleClear(); checkHaptic(it) }
         btn_clear.setOnLongClickListener { calc.handleReset(); true }
 

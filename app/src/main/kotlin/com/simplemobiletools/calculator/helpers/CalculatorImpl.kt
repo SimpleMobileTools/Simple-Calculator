@@ -123,6 +123,21 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         showNewResult(inputDisplayedFormula)
     }
 
+    fun turnToNegative() : Boolean{
+        // turn to negative only if there is a baseValue alone ( not 0 )
+        if (!inputDisplayedFormula.trimStart('-').any { it.toString() in operations } && inputDisplayedFormula.replace(",", "").toDouble() != 0.0){
+
+            if(inputDisplayedFormula.first() == '-') {
+                inputDisplayedFormula = inputDisplayedFormula.substring(1)
+            }else{
+                inputDisplayedFormula = "-$inputDisplayedFormula"
+            }
+            showNewResult(inputDisplayedFormula)
+            return true
+        }
+        return false
+    }
+
     // handle percents manually, it doesn't seem to be possible via net.objecthunter:exp4j. "%" is used only for modulo there
     private fun handlePercent() {
         var result = calculatePercentage(baseValue, getSecondValue(), lastOperation)
