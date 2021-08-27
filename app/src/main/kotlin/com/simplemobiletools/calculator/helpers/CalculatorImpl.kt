@@ -219,7 +219,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
     private fun handleDivisionByZero(){
         context.toast(R.string.formula_divide_by_zero_error)
-        inputDisplayedFormula = inputDisplayedFormula.substring(0, inputDisplayedFormula.indexOfAny(operations) + 1)
+        inputDisplayedFormula = inputDisplayedFormula.substring(0, inputDisplayedFormula.indexOf("÷") + 1)
         showNewResult(inputDisplayedFormula)
         lastOperation = DIVIDE
         lastKey = DIVIDE
