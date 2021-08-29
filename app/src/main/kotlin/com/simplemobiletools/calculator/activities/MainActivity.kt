@@ -43,7 +43,7 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_root.setOnClickListener { calc.handleOperation(ROOT); checkHaptic(it) }
 
         btn_minus.setOnLongClickListener {
-            calc.turnToNegative();
+            calc.turnToNegative()
         }
 
         btn_clear.setOnClickListener { calc.handleClear(); checkHaptic(it) }
