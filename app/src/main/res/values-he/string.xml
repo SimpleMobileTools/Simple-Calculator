@@ -10,7 +10,7 @@
     <string name="vibrate_on_button_press">לרטוט על לחיץ</string>
 
     <!-- FAQ -->
-    <string name="faq_1_title">?איך עובד לחצן (נקה)</string>
+    <string name="faq_1_title">\?איך עובד לחצן (נקה)</string>
     <string name="faq_1_text">הקשה עליו תסיר תו אחד בכל פעם. לחיצה ארוכה עליו תאפס את כל השדות בבת אחת.</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
