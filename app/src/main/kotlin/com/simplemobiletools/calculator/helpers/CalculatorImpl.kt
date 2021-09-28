@@ -111,15 +111,44 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
                 calculateResult()
 
                 if (!operations.contains(inputDisplayedFormula.last().toString())) {
-                    if (!inputDisplayedFormula.contains("÷")) {
+                    if (!inputDisplayedFormula.contains("÷") &&
+                        !inputDisplayedFormula.contains("%")) {
                         inputDisplayedFormula += getSign(operation)
                     }
                 }
             }
         }
+        when (getSecondValue()) {
+            0.0 -> {
+                when (inputDisplayedFormula.contains("÷")) {
+                    true -> {
+                        lastKey = DIVIDE
+                        lastOperation = DIVIDE
+                    }
+                    else -> {
+                        when (inputDisplayedFormula.contains("%")) {
+                            true -> {
+                                lastKey = PERCENT
+                                lastOperation = PERCENT
+                            }
+                            else -> {
+                                lastKey = operation
+                                lastOperation = operation
+                            }
+                        }
 
-        lastKey = operation
-        lastOperation = operation
+
+                    }
+                }
+            }
+            else-> {
+                lastKey = operation
+                lastOperation = operation
+            }
+         }
+
+
+
         showNewResult(inputDisplayedFormula)
     }
 
@@ -184,7 +213,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             val sign = getSign(lastOperation)
             val expression = "${baseValue.format()}$sign${secondValue.format()}".replace("√", "sqrt").replace("×", "*").replace("÷", "/")
             try {
-                if (sign == "÷" && secondValue == 0.0) {
+                if ((sign == "÷" || sign == "%") && secondValue == 0.0) {
                     context.toast(R.string.formula_divide_by_zero_error)
                     return
                 }
@@ -268,16 +297,13 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         PERCENT -> "%"
         POWER -> "^"
         ROOT -> "√"
-        else -> "+"
+        PLUS -> "+"
+        else -> lastOperation
     }
 
     fun numpadClicked(id: Int) {
         if (inputDisplayedFormula == Double.NaN.toString()) {
             inputDisplayedFormula = ""
-        }
-
-        if (lastKey == EQUALS) {
-            lastOperation = EQUALS
         }
 
         lastKey = DIGIT
