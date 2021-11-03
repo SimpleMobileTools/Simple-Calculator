@@ -124,12 +124,15 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun turnToNegative(): Boolean {
-        // turn to negative only if there is a baseValue alone ( not 0 )
+        if (inputDisplayedFormula.isEmpty()) {
+            return false
+        }
+
         if (!inputDisplayedFormula.trimStart('-').any { it.toString() in operations } && inputDisplayedFormula.replace(",", "").toDouble() != 0.0) {
-            if (inputDisplayedFormula.first() == '-') {
-                inputDisplayedFormula = inputDisplayedFormula.substring(1)
+            inputDisplayedFormula = if (inputDisplayedFormula.first() == '-') {
+                inputDisplayedFormula.substring(1)
             } else {
-                inputDisplayedFormula = "-$inputDisplayedFormula"
+                "-$inputDisplayedFormula"
             }
 
             showNewResult(inputDisplayedFormula)
