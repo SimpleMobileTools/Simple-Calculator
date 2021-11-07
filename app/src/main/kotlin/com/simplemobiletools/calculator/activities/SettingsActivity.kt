@@ -32,6 +32,10 @@ class SettingsActivity : SimpleActivity() {
         arrayOf(settings_color_customization_label, settings_general_settings_label).forEach {
             it.setTextColor(getAdjustedPrimaryColor())
         }
+
+        arrayOf(settings_color_customization_holder, settings_general_settings_holder).forEach {
+            it.background.applyColorFilter(baseConfig.backgroundColor.getContrastColor())
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -74,6 +74,12 @@ class MainActivity : SimpleActivity(), Calculator {
         }
 
         vibrateOnButtonPress = config.vibrateOnButtonPress
+
+        val adjustedPrimaryColor = getAdjustedPrimaryColor()
+        arrayOf(btn_percent, btn_power, btn_root, btn_clear, btn_reset, btn_divide, btn_multiply, btn_plus, btn_minus, btn_equals, btn_decimal).forEach{
+            it.setTextColor(adjustedPrimaryColor)
+        }
+
     }
 
     override fun onPause() {

@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="AppTheme" parent="AppTheme.Base"/>
+    <style name="AppTheme" parent="AppTheme.Base" />
 
     <style name="MyButton" parent="Widget.AppCompat.Button">
         <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>

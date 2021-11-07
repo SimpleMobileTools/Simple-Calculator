@@ -46,6 +46,7 @@
             android:layout_centerVertical="true"
             android:paddingLeft="@dimen/activity_margin"
             android:paddingRight="@dimen/activity_margin" />
+
     </RelativeLayout>
 
     <ImageView
