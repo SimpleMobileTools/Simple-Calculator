@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/settings_scrollview"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -112,19 +111,21 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/ripple_background"
                 android:paddingLeft="@dimen/normal_margin"
-                android:paddingTop="@dimen/bigger_margin"
+                android:paddingTop="@dimen/activity_margin"
                 android:paddingRight="@dimen/normal_margin"
-                android:paddingBottom="@dimen/bigger_margin">
+                android:paddingBottom="@dimen/activity_margin">
 
-                <com.simplemobiletools.commons.views.MySwitchCompat
+                <com.simplemobiletools.commons.views.MyAppCompatCheckbox
                     android:id="@+id/settings_use_english"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
+                    android:button="@null"
                     android:clickable="false"
+                    android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+                    android:drawablePadding="@dimen/activity_margin"
                     android:paddingStart="@dimen/medium_margin"
-                    android:text="@string/use_english_language"
-                    app:switchPadding="@dimen/medium_margin" />
+                    android:text="@string/use_english_language" />
 
             </RelativeLayout>
 
@@ -134,19 +135,21 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/ripple_background"
                 android:paddingLeft="@dimen/normal_margin"
-                android:paddingTop="@dimen/bigger_margin"
+                android:paddingTop="@dimen/activity_margin"
                 android:paddingRight="@dimen/normal_margin"
-                android:paddingBottom="@dimen/bigger_margin">
+                android:paddingBottom="@dimen/activity_margin">
 
-                <com.simplemobiletools.commons.views.MySwitchCompat
+                <com.simplemobiletools.commons.views.MyAppCompatCheckbox
                     android:id="@+id/settings_vibrate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
+                    android:button="@null"
                     android:clickable="false"
+                    android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+                    android:drawablePadding="@dimen/activity_margin"
                     android:paddingStart="@dimen/medium_margin"
-                    android:text="@string/vibrate_on_button_press"
-                    app:switchPadding="@dimen/medium_margin" />
+                    android:text="@string/vibrate_on_button_press" />
 
             </RelativeLayout>
 
@@ -156,19 +159,21 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/ripple_bottom_corners"
                 android:paddingLeft="@dimen/normal_margin"
-                android:paddingTop="@dimen/bigger_margin"
+                android:paddingTop="@dimen/activity_margin"
                 android:paddingRight="@dimen/normal_margin"
-                android:paddingBottom="@dimen/bigger_margin">
+                android:paddingBottom="@dimen/activity_margin">
 
-                <com.simplemobiletools.commons.views.MySwitchCompat
+                <com.simplemobiletools.commons.views.MyAppCompatCheckbox
                     android:id="@+id/settings_prevent_phone_from_sleeping"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
+                    android:button="@null"
                     android:clickable="false"
+                    android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+                    android:drawablePadding="@dimen/activity_margin"
                     android:paddingStart="@dimen/medium_margin"
-                    android:text="@string/prevent_phone_from_sleeping"
-                    app:switchPadding="@dimen/medium_margin" />
+                    android:text="@string/prevent_phone_from_sleeping" />
 
             </RelativeLayout>
         </LinearLayout>
