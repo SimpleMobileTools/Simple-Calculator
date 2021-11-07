@@ -14,8 +14,6 @@ import com.simplemobiletools.calculator.extensions.updateViewColors
 import com.simplemobiletools.calculator.helpers.*
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
-import com.simplemobiletools.commons.helpers.LICENSE_ESPRESSO
-import com.simplemobiletools.commons.helpers.LICENSE_ROBOLECTRIC
 import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.Release
 import kotlinx.android.synthetic.main.activity_main.*
@@ -118,7 +116,7 @@ class MainActivity : SimpleActivity(), Calculator {
     }
 
     private fun launchAbout() {
-        val licenses = LICENSE_AUTOFITTEXTVIEW or LICENSE_ROBOLECTRIC or LICENSE_ESPRESSO
+        val licenses = LICENSE_AUTOFITTEXTVIEW
 
         val faqItems = arrayListOf(
             FAQItem(R.string.faq_1_title, R.string.faq_1_text),
