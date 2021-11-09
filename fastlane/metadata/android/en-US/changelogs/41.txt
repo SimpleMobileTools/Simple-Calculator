@@ -1,0 +1,3 @@
+Redesigned a couple screens
+Allow turning current numbers into positives/negatives by long pressing Minus
+Couple other UX, stability and translation improvements

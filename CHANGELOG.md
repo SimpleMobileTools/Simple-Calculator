@@ -1,6 +1,13 @@
 Changelog
 ==========
 
+Version 5.6.0 *(2021-11-09)*
+----------------------------
+
+ * Redesigned a couple screens
+ * Allow turning current numbers into positives/negatives by long pressing Minus
+ * Couple other UX, stability and translation improvements
+
 Version 5.5.2 *(2021-03-27)*
 ----------------------------
 
