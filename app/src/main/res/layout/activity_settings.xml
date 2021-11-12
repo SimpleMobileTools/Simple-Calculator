@@ -117,14 +117,9 @@
 
                 <com.simplemobiletools.commons.views.MyAppCompatCheckbox
                     android:id="@+id/settings_use_english"
+                    style="@style/SettingsCheckboxStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:button="@null"
-                    android:clickable="false"
-                    android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                    android:drawablePadding="@dimen/activity_margin"
-                    android:paddingStart="@dimen/medium_margin"
                     android:text="@string/use_english_language" />
 
             </RelativeLayout>
@@ -141,14 +136,9 @@
 
                 <com.simplemobiletools.commons.views.MyAppCompatCheckbox
                     android:id="@+id/settings_vibrate"
+                    style="@style/SettingsCheckboxStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:button="@null"
-                    android:clickable="false"
-                    android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                    android:drawablePadding="@dimen/activity_margin"
-                    android:paddingStart="@dimen/medium_margin"
                     android:text="@string/vibrate_on_button_press" />
 
             </RelativeLayout>
@@ -165,14 +155,9 @@
 
                 <com.simplemobiletools.commons.views.MyAppCompatCheckbox
                     android:id="@+id/settings_prevent_phone_from_sleeping"
+                    style="@style/SettingsCheckboxStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:button="@null"
-                    android:clickable="false"
-                    android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                    android:drawablePadding="@dimen/activity_margin"
-                    android:paddingStart="@dimen/medium_margin"
                     android:text="@string/prevent_phone_from_sleeping" />
 
             </RelativeLayout>
