@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Enkel kalkulator</string>
+    <string name="app_launcher_name">Kalkulator</string>
+    <string name="scientific_calculator">Vitenskapelig kalkulator</string>
+    <string name="formula_divide_by_zero_error">FeiL: Deling på null</string>
+    <string name="vibrate_on_button_press">Vibrer ved knappetrykk</string>
+    <string name="app_short_description">En kalkulator for raske utregninger med enkelt grensesnitt, uten reklame</string>
+    <string name="faq_1_title">Hvordan fungerer C (Clear)-knappen\?</string>
+    <string name="faq_1_text">Å trykke på den fjerner ett tegn av gangen. Lang-trykk tilbakestiller alle felter.</string>
+    <string name="app_title">Enkel kalkulator – utfør utregninger raskt</string>
+</resources>
