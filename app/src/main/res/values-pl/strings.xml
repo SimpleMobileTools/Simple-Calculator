@@ -1,48 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Prosty Kalkulator</string>
+    <string name="app_name">Prosty kalkulator</string>
     <string name="app_launcher_name">Kalkulator</string>
-    <string name="scientific_calculator">Kalkulator Naukowy</string>
-
+    <string name="scientific_calculator">Kalkulator naukowy</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Błąd: dzielenie przez zero</string>
-
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Wibracja przy naciśnięciu przycisku</string>
-
+    <string name="vibrate_on_button_press">Wibracja przy naciśnięciu przycisku</string>
     <!-- FAQ -->
     <string name="faq_1_title">Jak działa przycisk C (Wyczyść)?</string>
-    <string name="faq_1_text">Kliknięcie go usunie jeden znak. Przytrzymanie go zresetuje wszystkie pola jednocześnie.</string>
-
+    <string name="faq_1_text">Naciśnięcie go usunie jeden znak naraz. Długie naciśnięcie zresetuje wszystkie pola jednocześnie.</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Prosty Kalkulator - Wykonuj obliczenia szybko</string>
+    <string name="app_title">Prosty kalkulator - Szybko wykonuj obliczenia</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Kalkulator do prostych obliczeń z przyjemnym UI i brakiem reklam</string>
-    <string name="app_long_description">
-        Ten stylowy, nowoczesny kalkulator zapewnia wspaniałe wrażenia użytkownika, które pokochasz. Możesz skopiować wynik lub wzór do schowka przez długie naciśnięcie go.
-
-        Aplikacja jest prostym pomocnikiem do szybkich obliczeń z wieloma podstawowymi funkcjami, takimi jak mnożenie, dzielenie, pierwiastkowanie i potęgowanie.
-
-        Możesz sprawić, że wibruje przy naciskaniu przycisków, abyś miał pewność podczas wstawiania swoich wartości.
-
-        Istnieje możliwość uniemożliwienia telefonowi zasypiania podczas korzystania z aplikacji w celu wygodnego użytkowania.
-
-        Kolor tekstu widżetu z możliwością zmiany rozmiaru można dostosować, jak również kolor i przeźroczystość tła. Naciśnij wynik lub wzór w widżecie, aby otworzyć aplikację.
-
-        Domyślnie jest wyposażony w materiałowy wygląd i ciemny motyw, zapewnia doskonałą obsługę dla łatwego użytkowania. Brak dostępu do Internetu zapewnia większą prywatność, bezpieczeństwo i stabilność niż inne aplikacje.
-
-        Nie zawiera reklam, ani niepotrzebnych uprawnień. Jest w pełni otwartoźródłowa i w pełni podatna na kolorowanie.
-
-        <b>Sprawdź pełny zestaw Simple Tools tutaj:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
-
+    <string name="app_short_description">Kalkulator do szybkich, prostych obliczeń z ładnym interfejsem i bez reklam</string>
+    <string name="app_long_description"> Ten stylowy, nowoczesny kalkulator oferuje wspaniałe wrażenia użytkownika, które pokochasz. Możesz skopiować wynik lub formułę do schowka przez długie ich naciśnięcie. Aplikacja jest prostym pomocnikiem do szybkich obliczeń z wieloma podstawowymi funkcjami, takimi jak mnożenie, dzielenie, pierwiastkowanie i potęgowanie. Możesz sprawić, że będzie wibrować przy naciskaniu przycisków, abyś miał(a) pewność podczas wstawiania swoich wartości. Istnieje opcja zapobiegania uśpieniu telefonu podczas korzystania z aplikacji w celu wygodnego użytkowania. Można dostosowywać kolor tekstu widżetu o zmiennym rozmiarze, jak również kolor i przezroczystość tła. Naciśnij wynik lub formułę w widżecie, aby otworzyć aplikację. Domyślnie jest wyposażony w Material Design i ciemny motyw, zapewniając doskonałe doświadczenie użytkownika dla łatwego użytkowania. Brak dostępu do Internetu zapewnia większą prywatność, bezpieczeństwo i stabilność niż inne aplikacje. Nie zawiera reklam ani niepotrzebnych uprawnień. Jest w pełni otwartoźródłowy, zapewnia konfigurowalną kolorystykę. <b>Sprawdź pełen zestaw od Simple Tools tutaj:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
