@@ -3,10 +3,15 @@
     <string name="app_name">Enkel kalkulator</string>
     <string name="app_launcher_name">Kalkulator</string>
     <string name="scientific_calculator">Vitenskapelig kalkulator</string>
+    <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">FeiL: Deling på null</string>
+    <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrer ved knappetrykk</string>
-    <string name="app_short_description">En kalkulator for raske utregninger med enkelt grensesnitt, uten reklame</string>
     <string name="faq_1_title">Hvordan fungerer C (Clear)-knappen\?</string>
     <string name="faq_1_text">Å trykke på den fjerner ett tegn av gangen. Lang-trykk tilbakestiller alle felter.</string>
+        <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Enkel kalkulator – utfør utregninger raskt</string>
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">En kalkulator for raske utregninger med enkelt grensesnitt, uten reklame</string>
 </resources>
