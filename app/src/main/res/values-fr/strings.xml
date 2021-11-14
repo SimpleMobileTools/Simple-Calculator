@@ -1,48 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Simple Calculatrice</string>
     <string name="app_launcher_name">Calculatrice</string>
-    <string name="scientific_calculator">Scientific Calculator</string>
-
+    <string name="scientific_calculator">Calculatrice scientifique</string>
     <!-- Calculator field -->
-    <string name="formula_divide_by_zero_error">Erreur: division par zéro</string>
-
+    <string name="formula_divide_by_zero_error">Erreur : division par zéro</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrer lors de l\'appui sur les boutons</string>
-
     <!-- FAQ -->
-    <string name="faq_1_title">Comment fonctionne le bouton C (Effacer)?</string>
-    <string name="faq_1_text">En tapant dessus, vous retirerez un caractère à la fois. Une pression prolongée sur le bouton réinitialisera tous les champs à la fois.</string>
-
+    <string name="faq_1_title">Comment fonctionne le bouton C (Effacer) \?</string>
+    <string name="faq_1_text">En tapotant dessus, vous retirerez un caractère à la fois. Une pression prolongée sur le bouton réinitialisera tous les champs à la fois.</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Calculatrice simple – Faites vos calculs rapidement</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
-    <string name="app_long_description">
-        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
-
-        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
-
-        You can make it vibrate on button presses to make you confident during inserting your values.
-
-        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
-
-        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
-
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
-
-        Aucune publicité ou autorisation inutile. Complètement opensource, elle dispose aussi d\'un thème sombre.
-
-        <b>Check out the full suite of Simple Tools here:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
-
+    <string name="app_short_description">Une calculatrice pour des calculs simples et rapides, avec une interface utilisateur agréable et sans publicité</string>
+    <string name="app_long_description"> Cette calculatrice moderne et élégante offre une expérience utilisateur exceptionnelle que vous apprécierez. Vous pouvez copier le résultat ou la formule dans le presse-papiers en appuyant longuement dessus. L\'application est une aide simple pour des calculs rapides avec de nombreuses fonctions de base, notamment la multiplication, la division, la racine et les puissances. Vous pouvez faire en sorte qu\'elle vibre lorsque vous appuyez sur un bouton pour vous mettre en confiance lorsque vous insérez vos valeurs. Il y a une option pour empêcher le téléphone de dormir pendant l\'utilisation de l\'application pour une utilisation confortable. La couleur du texte du widget redimensionnable peut être personnalisée, de même que la couleur et l\'alpha de l\'arrière-plan. Appuyez sur le résultat ou la formule dans le widget pour ouvrir l\'application. L\'application est livrée avec un design matériel et un thème sombre par défaut, ce qui offre une excellente expérience utilisateur pour une utilisation facile. L\'absence d\'accès à Internet vous offre plus de confidentialité, de sécurité et de stabilité que les autres applications. Ne contient pas de publicités ni de permissions inutiles. Il est entièrement opensource, fournit des couleurs personnalisables. <b>Découvrez la suite complète de Simple Tools ici :</b> https://www.simplemobiletools.com <b>Facebook :</b> https://www.facebook.com/simplemobiletools <b>Reddit :</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
