@@ -93,23 +93,27 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
 
         if (lastKey == DIGIT || lastKey == DECIMAL) {
-            // split to multiple lines just to see when does the crash happen
-            secondValue = when (operation) {
-                PLUS -> getSecondValue()
-                MINUS -> getSecondValue()
-                MULTIPLY -> getSecondValue()
-                DIVIDE -> getSecondValue()
-                ROOT -> getSecondValue()
-                POWER -> getSecondValue()
-                PERCENT -> getSecondValue()
-                else -> getSecondValue()
-            }
+            if (lastOperation != "" && operation == PERCENT) {
+                handlePercent()
+            } else {
+                // split to multiple lines just to see when does the crash happen
+                secondValue = when (operation) {
+                    PLUS -> getSecondValue()
+                    MINUS -> getSecondValue()
+                    MULTIPLY -> getSecondValue()
+                    DIVIDE -> getSecondValue()
+                    ROOT -> getSecondValue()
+                    POWER -> getSecondValue()
+                    PERCENT -> getSecondValue()
+                    else -> getSecondValue()
+                }
 
-            calculateResult()
+                calculateResult()
 
-            if (!operations.contains(inputDisplayedFormula.last().toString())) {
-                if (!inputDisplayedFormula.contains("÷")) {
-                    inputDisplayedFormula += getSign(operation)
+                if (!operations.contains(inputDisplayedFormula.last().toString())) {
+                    if (!inputDisplayedFormula.contains("÷")) {
+                        inputDisplayedFormula += getSign(operation)
+                    }
                 }
             }
         }
@@ -136,6 +140,20 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
 
         return false
+    }
+
+    // handle percents manually, it doesn't seem to be possible via net.objecthunter:exp4j. "%" is used only for modulo there
+    // handle cases like 10+200% here
+    private fun handlePercent() {
+        var result = calculatePercentage(baseValue, getSecondValue(), lastOperation)
+        if (result.isInfinite() || result.isNaN()) {
+            result = 0.0
+        }
+
+        showNewFormula("${baseValue.format()}${getSign(lastOperation)}${getSecondValue().format()}%")
+        inputDisplayedFormula = result.format()
+        showNewResult(result.format())
+        baseValue = result
     }
 
     fun handleEquals() {
@@ -203,6 +221,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
                 }
 
                 // handle percents manually, it doesn't seem to be possible via net.objecthunter:exp4j. "%" is used only for modulo there
+                // handle cases like 10%200 here
                 val result = if (sign == "%") {
                     val second = secondValue / 100f
                     ExpressionBuilder("${baseValue.format()}*${second.format()}").build().evaluate()
