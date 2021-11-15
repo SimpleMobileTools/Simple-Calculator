@@ -211,6 +211,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
                 }
 
                 if (result.isInfinite() || result.isNaN()) {
+                    // Update screen to prevent unwanted behavior
+                    inputDisplayedFormula = baseValue.format()
                     context.toast(R.string.unknown_error_occurred)
                     return
                 }
