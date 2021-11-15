@@ -55,7 +55,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.SimpleMobileTools:Simple-Commons:0684fdde38'
+    implementation 'com.github.SimpleMobileTools:Simple-Commons:3d04cf87bd'
     implementation 'me.grantland:autofittextview:0.2.1'
     implementation 'net.objecthunter:exp4j:0.4.8'
 }
