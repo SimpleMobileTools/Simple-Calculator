@@ -1,48 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">الحاسبة البسيطة</string>
     <string name="app_launcher_name">الحاسبة</string>
-    <string name="scientific_calculator">Scientific Calculator</string>
-
+    <string name="scientific_calculator">الحاسبة العلمية</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">خطأ: القسمة على صفر</string>
-
     <!-- Settings -->
     <string name="vibrate_on_button_press">الاهتزاز عند الضغط على الازرار</string>
-
     <!-- FAQ -->
-    <string name="faq_1_title">How does the C (Clear) button work?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
-
+    <string name="faq_1_title">كيف يعمل الزر C (مسح)؟</string>
+    <string name="faq_1_text">النقر على ذلك سوف يزيل حرف واحد في وقت واحد. الضغط لفترة طويلة سوف إعادة تعيين جميع الحقول في وقت واحد.</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">آلة حاسبة بسيطة - قم بإجراء العمليات الحسابية بسرعة</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
-    <string name="app_long_description">
-        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
-
-        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
-
-        You can make it vibrate on button presses to make you confident during inserting your values.
-
-        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
-
-        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
-
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
-
-        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
-
-        <b>Check out the full suite of Simple Tools here:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
-
+    <string name="app_short_description">آلة حاسبة لحسابات بسيطة سريعة مع واجهة مستخدم لطيفة ولا تحتوي اعلانات</string>
+    <string name="app_long_description">" توفر هذه الآلة الحاسبة العصرية الأنيقة تجربة مستخدم رائعة ستحب رؤيتها. يمكنك نسخ النتيجة أو الصيغة إلى الحافظة عن طريق الضغط عليها لفترة طويلة. التطبيق هو مساعد بسيط لإجراء العمليات الحسابية السريعة مع العديد من الوظائف الأساسية بما في ذلك الضرب والقسمة والجذر والقوى. يمكنك جعله يهتز عند الضغط على الأزرار لتجعلك واثقًا أثناء إدخال قيمك. هناك خيار لمنع الهاتف من النوم أثناء استخدام التطبيق للاستخدام المريح. يمكن تخصيص لون نص عنصر واجهة المستخدم الذي يمكن تغيير حجمه ، بالإضافة إلى لون الخلفية وألفاها. اضغط على النتيجة أو الصيغة في الأداة لفتح التطبيق. يأتي بتصميم مادي وسمة داكنة بشكل افتراضي ، مما يوفر تجربة مستخدم رائعة لسهولة الاستخدام. يمنحك نقص الوصول إلى الإنترنت مزيدًا من الخصوصية والأمان والاستقرار مقارنة بالتطبيقات الأخرى. لا يحتوي على إعلانات أو أذونات غير ضرورية. إنه مفتوح المصدر بالكامل ، ويوفر ألوانًا قابلة للتخصيص. &lt;b&gt; تحقق من المجموعة الكاملة من الأدوات البسيطة هنا: &lt;/b&gt; https://www.simplemobiletools.com &lt;b&gt; Facebook: &lt;/b&gt; https://www.facebook.com/simplemobiletools &lt;b&gt; Reddit: [ X1096X] https://www.reddit.com/r/SimpleMobileTools "</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
