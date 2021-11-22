@@ -1,21 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Schlichter Rechner</string>
-    <string name="app_launcher_name">Rechner</string>ng>
+    <string name="app_launcher_name">Rechner</string>ng&gt;
     <string name="scientific_calculator">Wissenschaftlicher Rechner</string>
-
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Fehler: Division durch Null</string>
-
     <!-- Settings -->
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
-
     <!-- FAQ -->
     <string name="faq_1_title">Wie funktioniert der C-(Clear)Button?</string>
     <string name="faq_1_text">Bei einmaliger Berührung wird ein Zeichen entfernt. Eine lange setzt alle Felder zurück.</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Schlichter Rechner - Rechnen sie schneller</string>
+    <string name="app_title">Schlichter Rechner – Rechnen Sie schneller</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Ein Taschenrechner für schnelle und simple Rechnungen mit einer schöner Oberfläche und ohne Werbung</string>
     <string name="app_long_description">
@@ -40,7 +37,6 @@
         <b>Reddit:</b>
         https://www.reddit.com/r/SimpleMobileTools
     </string>
-
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
