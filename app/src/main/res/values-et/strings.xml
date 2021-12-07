@@ -2,4 +2,11 @@
 <resources>
     <string name="app_launcher_name">Kalkulaator</string>
     <string name="app_name">Kalkulaator</string>
+    <string name="scientific_calculator">Teadusrežiim</string>
+    <string name="vibrate_on_button_press">Nupuvajutusel vibreeri</string>
+    <string name="faq_1_title">Kuidas C (Clear) nupp toimib\?</string>
+    <string name="app_title">Lihtne kalkulaator - kiire ja mugav tarvik arvutusteks</string>
+    <string name="formula_divide_by_zero_error">Viga: nulliga jagamine</string>
+    <string name="app_short_description">Vahva kasutajaliidesega reklaamivaba ning kiire ja mugav kalkulaator</string>
+    <string name="faq_1_text">Üks klõpsatus kustutab ühe numbri. Pikk vajutus eemaldab kogu sisestuse.</string>
 </resources>
