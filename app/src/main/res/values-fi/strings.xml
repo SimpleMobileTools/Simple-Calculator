@@ -1,23 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Simple Calculator</string>
     <string name="app_launcher_name">Laskin</string>
-    <string name="scientific_calculator">Tieteellinen Laskin</string>
-
+    <string name="scientific_calculator">Tieteellinen laskin</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Virhe: jakaminen nollalla</string>
-
     <!-- Settings -->
     <string name="vibrate_on_button_press">Värinä painikkeen painalluksella</string>
-
     <!-- FAQ -->
     <string name="faq_1_title">Kuinka C (Clear)-painike toimii?</string>
-    <string name="faq_1_text">Sen napauttaminen poistaa yhden merkin kerrallaan. Pitkä painallus nollaa kaikki kentät kerralla..</string>
-
+    <string name="faq_1_text">Napauttaminen poistaa yhden merkin kerrallaan. Pitkä painallus nollaa kaikki kentät kerralla.</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Simple Calculator - Laskutoimituksesi nopeasti</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
+    <string name="app_short_description">Laskin nopeita, simppeleitä laskuja varten. Kivalla ulkoasulla, ilman mainoksia</string>
     <string name="app_long_description">
         This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
 
@@ -42,7 +39,6 @@
         <b>Reddit:</b>
         https://www.reddit.com/r/SimpleMobileTools
     </string>
-
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

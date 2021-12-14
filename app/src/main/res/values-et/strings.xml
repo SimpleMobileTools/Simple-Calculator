@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kalkulaator</string>
+    <string name="app_launcher_name">Kalkulaator</string>
+    <string name="scientific_calculator">Teadusrežiim</string>
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">Viga: nulliga jagamine</string>
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">Nupuvajutusel vibreeri</string>
+    <!-- FAQ -->
+    <string name="faq_1_title">Kuidas C (Clear) nupp toimib\?</string>
+    <string name="faq_1_text">Üks klõpsatus kustutab ühe numbri. Pikk vajutus eemaldab kogu sisestuse.</string>
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
+    <string name="app_title">Lihtne kalkulaator - kiire ja mugav tarvik arvutusteks</string>
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Vahva kasutajaliidesega reklaamivaba ning kiire ja mugav kalkulaator</string>
+    <string name="app_long_description"> See lihtne tänapäevane taskuarvuti pakub just sellist kasutajakogemust, mis sulle meeldib. Pikka vajutusega saad kopeerida arvutustulemuse või valemi lõikelauale. Rakendus on lihtne abivahend kiireteks arvutusteks ning oskab kõiki põhilise aritmeetilisi funktsioone. Kui vajad tehtud klahvivajutustele tagasisidet , siis saad seadistada värina kasutamise. Et arvutamise ajal ekraan ei lukustuks, siis saad soovi korral selle keelata. Rakenduse teksti ja tausta värvi saad kohandada vastavalt oma vajadustele. Kui vidinast tahad avada rakendust, siis puuduta tulemust või valemit. Suurepärase kasutajakogemuse jaoks kasutab rakendus vaikimisi Material Design disainikeelt ning tumedat teemat. Võrreldes mõnede teiste sarnaste rakendustega ei vaja meie kalkulaator internetiühendust ning seega on ka turvalisem, privaatsem ja stabiilsem. Meie rakenduses pole reklaame ega asjatute õiguste eeldamist. Rakenduse lähtekood on avalikult saadaval ning välimust saad alati kohendada. <b>Teavet Lihtsate tarvikute rakendustest leiad siit:</b>https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
