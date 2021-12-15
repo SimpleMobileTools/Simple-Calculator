@@ -12,10 +12,10 @@
     <string name="faq_1_text">Kiekvieną kartą ant jo bakstelėjus, bus šalinama po vieną simbolį. Ilgai jį palaikius, bus iš karto atstatyti visi laukai.</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title"></string>
+    <string name="app_title">Paprastas skaičiuotuvas – atlikite skaičiavimus</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description"></string>
-    <string name="app_long_description"></string>
+    <string name="app_short_description">Skaičiuotuvas be reklamų, skirtas greitai atlikti paprastus skaičiavimus</string>
+    <string name="app_long_description"/>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
