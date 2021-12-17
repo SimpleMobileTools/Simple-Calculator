@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Simpla Kalkulilo</string>
+    <string name="app_launcher_name">Kalkulilo</string>
+    <string name="scientific_calculator">Sciena kalkulilo</string>
+    <string name="formula_divide_by_zero_error">Eraro: divido per nul</string>
+</resources>
