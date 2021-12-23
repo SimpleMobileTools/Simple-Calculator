@@ -4,4 +4,9 @@
     <string name="app_launcher_name">Kalkulilo</string>
     <string name="scientific_calculator">Sciena kalkulilo</string>
     <string name="formula_divide_by_zero_error">Eraro: divido per nul</string>
+    <string name="vibrate_on_button_press">Vibrigi je butonpremo</string>
+    <string name="faq_1_title">Kiel funkcias la butono C («Forviŝi»)\?</string>
+    <string name="app_title">Simpla Kalkulilo – Rapide kalkulu</string>
+    <string name="faq_1_text">Frapetado sur ĝi forviŝos signojn po unu por frapeto. Longa premado forviŝos ĉiujn kampojn samtempe.</string>
+    <string name="app_short_description">Kalkulilo por rapidaj simplaj kalkuloj kun bela fasado kaj sen reklamoj</string>
 </resources>
