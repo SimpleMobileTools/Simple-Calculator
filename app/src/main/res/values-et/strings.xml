@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Kalkulaator</string>
+    <string name="app_name">Lihtne kalkulaator</string>
     <string name="app_launcher_name">Kalkulaator</string>
     <string name="scientific_calculator">Teadusrežiim</string>
     <!-- Calculator field -->
