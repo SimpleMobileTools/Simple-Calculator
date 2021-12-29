@@ -118,8 +118,14 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             }
         }
 
-        lastKey = operation
-        lastOperation = operation
+        if (getSecondValue() == 0.0 && inputDisplayedFormula.contains("÷")) {
+            lastKey = DIVIDE
+            lastOperation = DIVIDE
+        } else {
+            lastKey = operation
+            lastOperation = operation
+        }
+
         showNewResult(inputDisplayedFormula)
     }
 
