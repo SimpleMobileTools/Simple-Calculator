@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.6.3 *(2021-12-29)*
+----------------------------
+
+ * Fixed percentage handling with bigger numbers
+ * Added some stability and translation improvements
+
 Version 5.6.2 *(2021-11-15)*
 ----------------------------
 
