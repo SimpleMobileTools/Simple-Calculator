@@ -224,7 +224,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
                 // handle cases like 10%200 here
                 val result = if (sign == "%") {
                     val second = secondValue / 100f
-                    ExpressionBuilder("${baseValue.format()}*${second.format()}").build().evaluate()
+                    ExpressionBuilder("${baseValue.format().replace(",", "")}*${second.format()}").build().evaluate()
                 } else {
                     ExpressionBuilder(expression.replace(",", "")).build().evaluate()
                 }
