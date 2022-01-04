@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Calculadora Simples</string>
+    <string name="app_launcher_name">Calculadora</string>
+    <string name="scientific_calculator">Calculadora Científica</string>
+    <string name="formula_divide_by_zero_error">Erro: divisão por zero</string>
+    <string name="vibrate_on_button_press">Vibrar ao pressionar um botão</string>
+    <string name="faq_1_title">Como funciona o botão C (Clear)\?</string>
+    <string name="faq_1_text">Um toque remove um caractere de cada vez. Um toque longo redefine todos os campos de uma vez.</string>
+    <string name="app_title">Calculadora Simples - Faça cálculos rapidamente</string>
+    <string name="app_short_description">Uma calculadora para cálculos simples e rápidos, boa interface e sem anúncios</string>
+    <string name="app_long_description"> Esta calculadora moderna e elegante oferece uma ótima experiência de usuário que você vai adorar ver. Você pode copiar o resultado ou fórmula para a área de transferência mantendo-o pressionado. O aplicativo é um auxiliar simples para cálculos rápidos com muitas funções básicas, incluindo multiplicação, divisão, raiz e potências. Você pode fazê-lo vibrar ao pressionar os botões para deixá-lo confiante durante a inserção de seus valores. Existe uma opção para evitar que o telefone hiberne durante o uso do aplicativo para um uso confortável. A cor do texto do widget redimensionável pode ser personalizada, assim como a cor e o alfa do fundo. Pressione o resultado ou fórmula no widget para abrir o aplicativo. Ele vem com Material Design e tema escuro por padrão, oferece ótima experiência do usuário para fácil utilização. A falta de acesso à Internet dá mais privacidade, segurança e estabilidade do que outros aplicativos. Não contém anúncios nem permissões desnecessárias. É totalmente de código aberto, oferece cores personalizáveis. <b>Veja a suíte completa de ferramentas simples aqui:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b>https://www.reddit.com/r/SimpleMobileTools </string>
+</resources>
