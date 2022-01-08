@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Egyszerű számológép</string>
+    <string name="app_launcher_name">Számológép</string>
+    <string name="scientific_calculator">Tudományos számológép</string>
+    <string name="formula_divide_by_zero_error">Hiba: nullával való osztás</string>
+    <string name="vibrate_on_button_press">Rezgés gombnyomáskor</string>
+    <string name="faq_1_title">Hogyan működik a C (törlés) gomb\?</string>
+    <string name="faq_1_text">A koppintás egyszerre egy karaktert töröl. A hosszú lenyomás egyszerre állítja vissza az összes mezőt.</string>
+    <string name="app_short_description">Egy számológép egyszerű és gyors számításokhoz, szép felülettel, reklámmentesen</string>
+    <string name="app_title">Egyszerű számológép – Számítások gyorsan</string>
+</resources>
