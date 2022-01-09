@@ -2,6 +2,7 @@ package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
 import com.simplemobiletools.calculator.R
+import com.simplemobiletools.calculator.models.History
 import com.simplemobiletools.commons.extensions.toast
 import net.objecthunter.exp4j.ExpressionBuilder
 
@@ -242,6 +243,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
                 showNewResult(result.format())
                 baseValue = result
+                HistoryHelper(context).insertOrUpdateHistoryEntry(History(null, inputDisplayedFormula, result.format(), System.currentTimeMillis()))
                 inputDisplayedFormula = result.format()
                 showNewFormula(expression.replace("sqrt", "√").replace("*", "×").replace("/", "÷"))
             } catch (e: Exception) {
@@ -344,5 +346,12 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             R.id.btn_8 -> addDigit(8)
             R.id.btn_9 -> addDigit(9)
         }
+    }
+
+    fun addNumberToFormula(number: String) {
+        lastKey = DIGIT
+        inputDisplayedFormula += number
+        addThousandsDelimiter()
+        showNewResult(inputDisplayedFormula)
     }
 }

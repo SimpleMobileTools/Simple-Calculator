@@ -9,6 +9,8 @@ import android.view.View
 import android.view.WindowManager
 import com.simplemobiletools.calculator.BuildConfig
 import com.simplemobiletools.calculator.R
+import com.simplemobiletools.calculator.databases.CalculatorDatabase
+import com.simplemobiletools.calculator.dialogs.HistoryDialog
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.extensions.updateViewColors
 import com.simplemobiletools.calculator.helpers.*
@@ -89,6 +91,13 @@ class MainActivity : SimpleActivity(), Calculator {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        if (!isChangingConfigurations) {
+            CalculatorDatabase.destroyInstance()
+        }
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         updateMenuItemColors(menu)
@@ -97,6 +106,7 @@ class MainActivity : SimpleActivity(), Calculator {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.history -> showHistory()
             R.id.settings -> launchSettings()
             R.id.about -> launchAbout()
             else -> return super.onOptionsItemSelected(item)
@@ -113,6 +123,16 @@ class MainActivity : SimpleActivity(), Calculator {
     private fun checkHaptic(view: View) {
         if (vibrateOnButtonPress) {
             view.performHapticFeedback()
+        }
+    }
+
+    private fun showHistory() {
+        HistoryHelper(this).getHistory {
+            if (it.isEmpty()) {
+                toast(R.string.history_empty)
+            } else {
+                HistoryDialog(this, it, calc)
+            }
         }
     }
 

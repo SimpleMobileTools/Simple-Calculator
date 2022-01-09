@@ -5,6 +5,11 @@
     <string name="scientific_calculator">Kalkulator naukowy</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Błąd: dzielenie przez zero</string>
+    <!-- History -->
+    <string name="history">Historia</string>
+    <string name="history_empty">Historia jest pusta</string>
+    <string name="clear_history">Wyczyść</string>
+    <string name="history_cleared">Historia została wyczyszczona</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Wibracja przy naciśnięciu przycisku</string>
     <!-- FAQ -->

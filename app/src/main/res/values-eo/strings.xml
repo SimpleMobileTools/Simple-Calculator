@@ -5,6 +5,11 @@
     <string name="scientific_calculator">Sciena kalkulilo</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Eraro: divido per nul</string>
+    <!-- History -->
+    <string name="history">History</string>
+    <string name="history_empty">History is empty</string>
+    <string name="clear_history">Clear</string>
+    <string name="history_cleared">History has been cleared</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrigi je butonpremo</string>
     <!-- FAQ -->
