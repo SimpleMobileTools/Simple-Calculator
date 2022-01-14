@@ -6,10 +6,10 @@
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Chyba: delenie nulou</string>
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
+    <string name="history">História</string>
+    <string name="history_empty">História je prázdna</string>
+    <string name="clear_history">Vymazať</string>
+    <string name="history_cleared">História bola vymazaná</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrovať pri stlačení tlačidla</string>
     <!-- FAQ -->
