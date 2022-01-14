@@ -33,7 +33,7 @@ android {
 
     buildTypes {
         debug {
-	        applicationIdSuffix ".debug"
+            applicationIdSuffix ".debug"
         }
         release {
             minifyEnabled true
@@ -42,6 +42,12 @@ android {
                 signingConfig signingConfigs.release
             }
         }
+    }
+
+    flavorDimensions "variants"
+    productFlavors {
+        core {}
+        fdroid {}
     }
 
     sourceSets {
@@ -55,7 +61,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.SimpleMobileTools:Simple-Commons:14033f9b50'
+    implementation 'com.github.SimpleMobileTools:Simple-Commons:02b48c0b4d'
     implementation 'me.grantland:autofittextview:0.2.1'
     implementation 'net.objecthunter:exp4j:0.4.8'
 }
