@@ -7,10 +7,10 @@
     <string name="formula_divide_by_zero_error">Fout: delen door nul</string>
 
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
+    <string name="history">Geschiedenis</string>
+    <string name="history_empty">Geschiedenis is leeg</string>
+    <string name="clear_history">Legen</string>
+    <string name="history_cleared">Geschiedenis is geleegd</string>
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Trillen bij toetsaanslagen</string>
