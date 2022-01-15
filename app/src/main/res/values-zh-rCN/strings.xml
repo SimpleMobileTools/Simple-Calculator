@@ -6,10 +6,10 @@
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">错误: 被零除</string>
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
+    <string name="history">历史记录</string>
+    <string name="history_empty">历史记录为空</string>
+    <string name="clear_history">清除</string>
+    <string name="history_cleared">已清除历史记录</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">按下按键后震动</string>
     <!-- FAQ -->
