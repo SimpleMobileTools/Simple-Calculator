@@ -6,10 +6,10 @@
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Error: divisió per zero</string>
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
+    <string name="history">Historial</string>
+    <string name="history_empty">L\'historial és buit</string>
+    <string name="clear_history">Neteja</string>
+    <string name="history_cleared">S\'ha netejat l\'historial</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibra en prémer el botó</string>
     <!-- FAQ -->
