@@ -6,10 +6,10 @@
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Klaida: dalyba iš nulio</string>
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
+    <string name="history">Istorija</string>
+    <string name="history_empty">Istorija tuščia</string>
+    <string name="clear_history">Išvalyti</string>
+    <string name="history_cleared">Istorija išvalyta</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibruoti, kai paspaudžiami mygtukai</string>
     <!-- FAQ -->
