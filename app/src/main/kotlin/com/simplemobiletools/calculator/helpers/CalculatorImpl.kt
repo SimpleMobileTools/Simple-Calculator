@@ -288,9 +288,26 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun handleClear() {
+        val lastDeletedValue = inputDisplayedFormula.last().toString()
         var newValue = inputDisplayedFormula.dropLast(1)
         if (newValue == "") {
             newValue = "0"
+        } else {
+            if (operations.contains(lastDeletedValue) || lastKey == EQUALS) {
+                lastOperation = ""
+            }
+            val lastValue = newValue.last().toString()
+            lastKey = when {
+                operations.contains(lastValue) -> {
+                    CLEAR
+                }
+                lastValue == "." -> {
+                    DECIMAL
+                }
+                else -> {
+                    DIGIT
+                }
+            }
         }
 
         newValue = newValue.trimEnd(',')
