@@ -1,0 +1,2 @@
+ * Added history (by Aga-C)
+ * Added some stability, translation and UX improvements

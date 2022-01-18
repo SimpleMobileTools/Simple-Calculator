@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.7.0 *(2022-01-18)*
+----------------------------
+
+ * Added history (by Aga-C)
+ * Added some stability, translation and UX improvements
+
 Version 5.6.3 *(2021-12-29)*
 ----------------------------
 
