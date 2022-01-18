@@ -1,6 +1,5 @@
 package com.simplemobiletools.calculator.adapters
 
-import android.app.Dialog
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,10 +11,9 @@ import com.simplemobiletools.calculator.models.History
 import com.simplemobiletools.commons.extensions.copyToClipboard
 import kotlinx.android.synthetic.main.history_view.view.*
 
-class HistoryAdapter(val activity: SimpleActivity, val items: List<History>, val calc: CalculatorImpl) :
+class HistoryAdapter(val activity: SimpleActivity, val items: List<History>, val calc: CalculatorImpl, val itemClick: () -> Unit) :
     RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
 
-    private lateinit var dialog: Dialog
     private var textColor = activity.config.textColor
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -30,10 +28,6 @@ class HistoryAdapter(val activity: SimpleActivity, val items: List<History>, val
 
     override fun getItemCount() = items.size
 
-    fun setDialog(dialog: Dialog) {
-        this.dialog = dialog
-    }
-
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bindView(item: History): View {
             itemView.apply {
@@ -44,7 +38,7 @@ class HistoryAdapter(val activity: SimpleActivity, val items: List<History>, val
 
                 setOnClickListener {
                     calc.addNumberToFormula(item.result)
-                    dialog.dismiss()
+                    itemClick()
                 }
                 setOnLongClickListener {
                     activity.baseContext.copyToClipboard(item.result)

@@ -15,19 +15,20 @@ import kotlinx.android.synthetic.main.dialog_history.view.*
 class HistoryDialog() {
     constructor(activity: SimpleActivity, items: List<History>, calculator: CalculatorImpl) : this() {
         val view = activity.layoutInflater.inflate(R.layout.dialog_history, null)
-        view.history_list.adapter = HistoryAdapter(activity, items, calculator)
 
-        AlertDialog.Builder(activity)
+        val dialog = AlertDialog.Builder(activity)
             .setPositiveButton(R.string.ok, null)
             .setNeutralButton(R.string.clear_history) { _, _ ->
                 ensureBackgroundThread {
                     activity.applicationContext.calculatorDB.deleteHistory()
                     activity.toast(R.string.history_cleared)
                 }
-            }
-            .create().apply {
+            }.create().apply {
                 activity.setupDialogStuff(view, this, R.string.history)
-                (view.history_list.adapter as HistoryAdapter).setDialog(this)
             }
+
+        view.history_list.adapter = HistoryAdapter(activity, items, calculator) {
+            dialog.dismiss()
+        }
     }
 }
