@@ -368,7 +368,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
 
     fun addNumberToFormula(number: String) {
         lastKey = DIGIT
-        inputDisplayedFormula += number
+        inputDisplayedFormula = number
         addThousandsDelimiter()
         showNewResult(inputDisplayedFormula)
     }
