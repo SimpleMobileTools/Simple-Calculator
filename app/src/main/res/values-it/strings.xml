@@ -6,10 +6,10 @@
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Errore: divisione per zero</string>
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
+    <string name="history">Cronologia</string>
+    <string name="history_empty">La cronologia è vuota</string>
+    <string name="clear_history">Cancella</string>
+    <string name="history_cleared">La cronologia è stata cancellata</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibra alla pressione di un tasto</string>
     <!-- FAQ -->
