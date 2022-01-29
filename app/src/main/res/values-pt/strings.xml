@@ -1,29 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Simple Calculator</string>
     <string name="app_launcher_name">Calculadora</string>
     <string name="scientific_calculator">Calculadora científica</string>
-
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Erro: divisão por zero</string>
-
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
-
+    <string name="history">Histórico</string>
+    <string name="history_empty">Histório vazio</string>
+    <string name="clear_history">Remover</string>
+    <string name="history_cleared">Histórico esvaziado</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrar ao tocar nos botões</string>
-
     <!-- FAQ -->
     <string name="faq_1_title">Como funciona o botão C (Clear)?</string>
     <string name="faq_1_text">Ao tocar no botão, os caracteres serão removidos um a um. Um toque longo apaga todos os caracteres ao mesmo tempo.</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Simple Calculator - Calculadora</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
+    <string name="app_short_description">Uma calculadora com interface simples e sem anúncios</string>
     <string name="app_long_description">
         This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
 
@@ -48,7 +44,6 @@
         <b>Reddit:</b>
         https://www.reddit.com/r/SimpleMobileTools
     </string>
-
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
