@@ -3,6 +3,7 @@ package com.simplemobiletools.calculator.helpers
 import android.content.Context
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.models.History
+import com.simplemobiletools.commons.extensions.showErrorToast
 import com.simplemobiletools.commons.extensions.toast
 import net.objecthunter.exp4j.ExpressionBuilder
 
@@ -189,7 +190,12 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             value = "0"
         }
 
-        return value.toDouble()
+        return try {
+            value.toDouble()
+        } catch (e: NumberFormatException) {
+            context.showErrorToast(e)
+            0.0
+        }
     }
 
     private fun calculateResult() {
