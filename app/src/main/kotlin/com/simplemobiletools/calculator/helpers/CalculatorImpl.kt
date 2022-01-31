@@ -288,7 +288,8 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     fun handleClear() {
-        val lastDeletedValue = inputDisplayedFormula.last().toString()
+        val lastDeletedValue = inputDisplayedFormula.lastOrNull().toString()
+
         var newValue = inputDisplayedFormula.dropLast(1)
         if (newValue == "") {
             newValue = "0"
