@@ -6,6 +6,7 @@ import com.simplemobiletools.calculator.models.History
 import com.simplemobiletools.commons.extensions.showErrorToast
 import com.simplemobiletools.commons.extensions.toast
 import net.objecthunter.exp4j.ExpressionBuilder
+import java.math.BigDecimal
 
 class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private var callback: Calculator? = calculator
@@ -239,7 +240,18 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
                     val second = secondValue / 100f
                     ExpressionBuilder("${baseValue.format().replace(",", "")}*${second.format()}").build().evaluate()
                 } else {
-                    ExpressionBuilder(expression.replace(",", "")).build().evaluate()
+                    // avoid Double rounding errors at expressions like 5250,74 + 14,98
+                    if (sign == "+" || sign == "-") {
+                        val first = BigDecimal.valueOf(baseValue)
+                        val second = BigDecimal.valueOf(secondValue)
+                        val bigDecimalResult = when (sign) {
+                            "-" -> first.minus(second)
+                            else -> first.plus(second)
+                        }
+                        bigDecimalResult.toDouble()
+                    } else {
+                        ExpressionBuilder(expression.replace(",", "")).build().evaluate()
+                    }
                 }
 
                 if (result.isInfinite() || result.isNaN()) {
