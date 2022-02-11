@@ -1,29 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">簡易計算機</string>
-    <string name="app_launcher_name">簡易計算機</string>
-    <string name="scientific_calculator">工程計算機</string>
-
+    <string name="app_launcher_name">計算機</string>
+    <string name="scientific_calculator">科學計算機</string>
     <!-- Calculator field -->
-    <string name="formula_divide_by_zero_error">錯誤：被零除</string>
-
+    <string name="formula_divide_by_zero_error">錯誤：除以零</string>
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
-
+    <string name="history">歷史紀錄</string>
+    <string name="history_empty">歷史紀錄為空</string>
+    <string name="clear_history">清除</string>
+    <string name="history_cleared">歷史紀錄已被清除</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">按下按鈕時震動</string>
-
     <!-- FAQ -->
-    <string name="faq_1_title">C(清除)按鈕如何使用?</string>
-    <string name="faq_1_text">點一次會刪除一個字元。長按會馬上重置全部欄位。</string>
-
+    <string name="faq_1_title">C（清除）按鈕如何使用？</string>
+    <string name="faq_1_text">按一次會刪除一個字元。長按會馬上重設全部欄位。</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Simple Calculator - 快速計算</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
+    <string name="app_short_description">有良好介面且無廣告的快速簡易計算機</string>
     <string name="app_long_description">
         This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
 
@@ -48,7 +44,6 @@
         <b>Reddit:</b>
         https://www.reddit.com/r/SimpleMobileTools
     </string>
-
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
