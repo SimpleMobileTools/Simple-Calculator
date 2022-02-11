@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.7.2 *(2022-02-11)*
+----------------------------
+
+ * Fixed some decimal rounding errors at plus and minus operations
+ * Added some stability, translation and UX improvements
+
 Version 5.7.1 *(2022-01-31)*
 ----------------------------
 
