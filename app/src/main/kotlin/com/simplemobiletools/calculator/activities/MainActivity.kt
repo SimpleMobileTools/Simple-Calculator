@@ -137,6 +137,7 @@ class MainActivity : SimpleActivity(), Calculator {
     }
 
     private fun launchSettings() {
+        hideKeyboard()
         startActivity(Intent(applicationContext, SettingsActivity::class.java))
     }
 
