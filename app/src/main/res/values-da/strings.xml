@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="scientific_calculator">Videnskabelig lommeregner</string>
+    <string name="app_name">Simpel lommeregner</string>
+    <string name="app_launcher_name">Lommeregner</string>
+    <string name="history_empty">Historien er tom</string>
+    <string name="app_short_description">En lommeregner til hurtige beregninger med en fin brugerflade og ingen annoncer</string>
+    <string name="vibrate_on_button_press">Vibrer ved knaptryk</string>
+    <string name="clear_history">Ryd</string>
+    <string name="formula_divide_by_zero_error">Fejl: division med nul</string>
+    <string name="faq_1_title">Hvordan virker knappen C (Slet)\?</string>
+    <string name="history">Historie</string>
+    <string name="history_cleared">Historien er blevet ryddet</string>
+    <string name="faq_1_text">Hvis du trykker på det, fjernes et tegn ad gangen. Langt tryk vil nulstille alle felter på én gang.</string>
+    <string name="app_title">Simpel lommeregner - Lav dine beregninger hurtigt</string>
+</resources>
