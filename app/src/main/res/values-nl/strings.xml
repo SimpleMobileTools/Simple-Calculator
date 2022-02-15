@@ -1,24 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Eenvoudige Rekenmachine</string>
     <string name="app_launcher_name">Rekenmachine</string>
     <string name="scientific_calculator">Wetenschappelijke Rekenmachine</string>
-
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Fout: delen door nul</string>
-
     <!-- History -->
     <string name="history">Geschiedenis</string>
     <string name="history_empty">Geschiedenis is leeg</string>
     <string name="clear_history">Legen</string>
     <string name="history_cleared">Geschiedenis is geleegd</string>
-
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Trillen bij toetsaanslagen</string>
-
+    <string name="vibrate_on_button_press">Trillen bij het indrukken van toetsen</string>
     <!-- FAQ -->
     <string name="faq_1_title">Hoe werkt de knop C (Clear)?</string>
     <string name="faq_1_text">Kort indrukken verwijdert één karakter per keer. Lang drukken wist direct alle velden.</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Eenvoudige Rekenmachine - Doe snel berekeningen</string>
@@ -48,7 +44,6 @@
         <b>Reddit:</b>
         https://www.reddit.com/r/SimpleMobileTools
     </string>
-
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
