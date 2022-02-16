@@ -1,54 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Simple Calculator</string>
     <string name="app_launcher_name">Kalkulator</string>
     <string name="scientific_calculator">Kalkulator Sains</string>
-
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Kesalahan: pembagian dengan nol</string>
-
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
-
+    <string name="history">Riwayat</string>
+    <string name="history_empty">Riwayat kosong</string>
+    <string name="clear_history">Haous</string>
+    <string name="history_cleared">Riwayat telah dihapus</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Getar saat tombol ditekan</string>
-
     <!-- FAQ -->
     <string name="faq_1_title">Bagaimana tombol C (Clear) bekerja?</string>
     <string name="faq_1_text">Menyentuhnya sekali akan menghapus satu karakter. Menyentuhnya lama akan mengosongkan seluruh ruas sekaligus.</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Simple Calculator - Lakukan penghitungan cepat</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
-    <string name="app_long_description">
-        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
-
-        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
-
-        You can make it vibrate on button presses to make you confident during inserting your values.
-
-        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
-
-        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
-
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
-
-        Sama sekali tidak berisi iklan dan tidak membutuhkan perizinan yang tidak perlu. Sepenuhnya sumber terbuka, dengan warna yang bisa disesuaikan.
-
-        <b>Check out the full suite of Simple Tools here:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
-
+    <string name="app_short_description">Sebuah kalkulator untuk penghitungan simpel cepat dengan antarmuka pengguna yang baik dan tanpa iklan</string>
+    <string name="app_long_description"> Kalkulator modern bergaya ini menawarkan pengalaman pengguna yang luar biasa yang akan Anda sukai. Anda dapat menyalin hasil atau rumus ke clipboard dengan menekan lama. Aplikasi ini adalah pembantu sederhana untuk perhitungan cepat dengan banyak fungsi dasar termasuk mengalikan, membagi, akar dan kekuasaan. Anda dapat membuatnya bergetar saat menekan tombol untuk membuat Anda percaya diri saat memasukkan nilai Anda. Ada opsi untuk mencegah ponsel tidur saat menggunakan aplikasi untuk penggunaan yang nyaman. Warna teks widget yang dapat diubah ukurannya dapat disesuaikan, serta warna dan alfa latar belakang. Tekan hasil atau rumus di widget untuk membuka aplikasi.
+\n
+\nMuncul dengan desain material dan tema gelap secara default, memberikan pengalaman pengguna yang luar biasa untuk penggunaan yang mudah. Kurangnya akses internet memberi Anda lebih banyak privasi, keamanan, dan stabilitas daripada aplikasi lain. Tidak mengandung iklan atau izin yang tidak perlu. Ini sepenuhnya sumber-terbuka, menyediakan warna yang dapat disesuaikan.
+\n
+\n<b>Lihat rangkaian lengkap Alat Sederhana di sini:</b> https://www.simplemobiletools.com
+\n<b>Facebook:</b> https://www.facebook.com/simplemobiletools
+\n<b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
