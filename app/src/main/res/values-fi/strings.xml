@@ -6,10 +6,10 @@
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Virhe: jakaminen nollalla</string>
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
+    <string name="history">Historia</string>
+    <string name="history_empty">Tyhjä historia</string>
+    <string name="clear_history">Tyhjennä</string>
+    <string name="history_cleared">Historia on tyhjennetty</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Värinä painikkeen painalluksella</string>
     <!-- FAQ -->
@@ -20,30 +20,7 @@
     <string name="app_title">Simple Calculator - Laskutoimituksesi nopeasti</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Laskin nopeita, simppeleitä laskuja varten. Kivalla ulkoasulla, ilman mainoksia</string>
-    <string name="app_long_description">
-        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
-
-        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
-
-        You can make it vibrate on button presses to make you confident during inserting your values.
-
-        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
-
-        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
-
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
-
-        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
-
-        <b>Check out the full suite of Simple Tools here:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
+    <string name="app_long_description"> Tämä tyylikäs, moderni laskin tarjoaa erinomaisen käyttökokemuksen, jota tulet rakastamaan. Voit kopioida tuloksen tai kaavan leikepöydälle painamalla sitä pitkään. Sovellus on yksinkertainen apuri nopeisiin laskutoimituksiin monilla perustoiminnoilla ml. kerto-, jako-, juuri- ja potenssilaskutoiminnot. Voit kytkeä värinän päälle varmistuaksesi painalluksistasi. Sovellus voi myös halutessasi estää puhelimen lepotilan, jotta käyttö olisi mahdollisimman mutkatonta. Kooltaan säädettävän pienoissovelluksen tekstin väriä voi mukauttaa, kuten myös taustavärin ja läpinäkyvyyden. Paina tulosta tai kaavaa pienoissovelluksessa avataksesi sovelluksen. Sovelluksessa on material design- ja tumma teema oletuksena, jotka tarjoavat erinomaisen ja helpon käytön. Sovellus ei käytä internetyhteyttä, joten yksityiseesi, turvallisuutesi ja sovellusten vakaus on varmistettu. Sovellus ei sisällä mainoksia eikä se pyydä tarpeettomia käyttöoikeuksia. Se on täysin vapaata lähdekoodia ja tarjoaa mukautettavat sovelluksen värit. <b>Luo katsaus koko Simple Tools-sovellusvalikoimaan täällä:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
