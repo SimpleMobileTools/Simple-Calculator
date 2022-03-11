@@ -20,30 +20,7 @@
     <string name="app_title">Eenvoudige Rekenmachine - Doe snel berekeningen</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Rekenmachine voor snelle berekeningen, met fijne interface en zonder ads</string>
-    <string name="app_long_description">
-        Deze stijlvolle moderne rekenmachine biedt een goede gebruikerservaring en is een lust voor het oog. De resultaten en de berekening zijn door lang drukken te kopiëren naar het klembord.
-
-        De app is een eenvoudige hulp bij het doen van snelle berekeningen, zoals vermenigvuldigen, delen, worteltrekken en machtsverheffen.
-
-        Om er zeker van te zijn dat een toetsaanslag is geregistreerd, kan de optie om feedback via trillen worden gebruikt.
-
-        Er is ook een optie om te voorkomen dat het apparaat in slaapstand belandt als de app op de voorgrond staat.
-
-        De tekstkleur van de in grootte aan te passen widget kan zelf worden gekozen, evenals de kleur en transparantie van de achtergrond. Druk op het resultaat of de berekening in de widget om de app te openen.
-
-        De app is ontworpen volgens material design en heeft standaard een donker thema. De app heeft geen toegang tot het internet nodig en voorziet van meer privacy, veiligheid en stabiliteit dan andere apps.
-		
-        Bevat geen advertenties of onnodige machtigingen. Volledig open-source. Kleuren van de app kunnen worden aangepast.
-
-        <b>Probeer ook eens de andere apps van Simple Tools:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
+    <string name="app_long_description"> Deze stijlvolle, moderne rekenmachine biedt een geweldige gebruikerservaring die u graag zult zien. U kunt het resultaat of de formule naar het klembord kopiëren door er lang op te drukken. De app is een eenvoudige hulp voor snelle berekeningen met veel basisfuncties, waaronder vermenigvuldigen, delen, wortel en machten. U kunt het laten trillen bij het indrukken van een knop om u zelfverzekerd te maken tijdens het invoegen van uw waarden. Er is een optie om te voorkomen dat de telefoon slaapt tijdens het gebruik van de app voor comfortabel gebruik. De tekstkleur van de aanpasbare widget kan worden aangepast, evenals de kleur en de alfa van de achtergrond. Druk op het resultaat of de formule in de widget om de app te openen. Het wordt standaard geleverd met materiaalontwerp en een donker thema, en biedt een geweldige gebruikerservaring voor eenvoudig gebruik. Het gebrek aan internettoegang geeft je meer privacy, veiligheid en stabiliteit dan andere apps. Bevat geen advertenties of onnodige machtigingen. Het is volledig openbrom en biedt aanpasbare kleuren. <b>Bekijk hier de volledige suite van Simple Tools:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
