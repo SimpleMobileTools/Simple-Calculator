@@ -2,4 +2,5 @@
 <resources>
     <bool name="default_vibrate_on_press">true</bool>
     <bool name="show_donate_in_about">true</bool>
+    <bool name="show_donate_in_help">false</bool>
 </resources>

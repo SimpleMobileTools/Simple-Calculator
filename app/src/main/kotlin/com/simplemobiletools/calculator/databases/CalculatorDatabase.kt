@@ -3,6 +3,7 @@ package com.simplemobiletools.calculator.databases
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
+import androidx.room.Roomy
 import androidx.room.RoomDatabase
 import com.simplemobiletools.calculator.interfaces.CalculatorDao
 import com.simplemobiletools.calculator.models.History
