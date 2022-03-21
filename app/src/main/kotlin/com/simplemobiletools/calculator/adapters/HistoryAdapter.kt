@@ -32,7 +32,7 @@ class HistoryAdapter(val activity: SimpleActivity, val items: List<History>, val
         fun bindView(item: History): View {
             itemView.apply {
                 item_formula.text = item.formula
-                item_result.text = "= ${item.result}"
+                item_result.text = item.result
                 item_formula.setTextColor(textColor)
                 item_result.setTextColor(textColor)
 
@@ -40,6 +40,7 @@ class HistoryAdapter(val activity: SimpleActivity, val items: List<History>, val
                     calc.addNumberToFormula(item.result)
                     itemClick()
                 }
+
                 setOnLongClickListener {
                     activity.baseContext.copyToClipboard(item.result)
                     true
