@@ -1,7 +1,16 @@
-Birim dönüştürücü yok, sonuca veya formüle uzun süre basarak panoya kopyalayabilirsiniz.
+ Bu şık ve modern hesap makinesi, görmeyi seveceğiniz harika bir kullanıcı deneyimi sunar. Uzun basarak sonucu veya formülü panoya kopyalayabilirsiniz. Uygulama; çarpma, bölme, kökünü ve üssünü alma gibi birçok temel işleve sahip hızlı hesaplamalar için basit bir yardımcıdır.
 
-Widget'ın metin rengi yanı sıra arka plan rengi ve alfa özelleştirilebilir. Uygulamayı açmak için widget'taki sonuca veya formüle basın.
+Değerlerinizi girerken emin olmanız için düğmeye basıldığında titretmesini etkinleştirebilirsiniz. Rahat kullanım için uygulamayı kullanırken telefonun uykuya geçmesini önleme seçeneği vardır.
 
-Reklam veya gereksiz izinler içermez. Tamamen açık kaynaktır, özelleştirilebilir renkler sunar.
+Yeniden boyutlandırılabilir widget\'ın metin renginin yanı sıra arka planın rengi ve saydamlığı da özelleştirilebilir. Uygulamayı açmak için widget\'taki sonuca veya formüle basın.
 
-Bu uygulama, daha büyük bir uygulama serisinden sadece bir parça. Geri kalanı https://www.simplemobiletools.com adresinde bulabilirsiniz
+Öntanımlı olarak materyal tasarım ve koyu tema ile birlikte gelir, kolay kullanım için harika bir kullanıcı deneyimi sağlar. İnternet erişiminin olmaması size diğer uygulamalardan daha fazla gizlilik, güvenlik ve istikrar sağlar. Reklam veya gereksiz izinler içermez. Tamamen açık kaynaktır, özelleştirilebilir renkler sunar. 
+
+<b>Tüm Basit Araçlar paketini buradan inceleyin:</b>
+https://www.simplemobiletools.com
+
+<b>Facebook:</b>
+https://www.facebook.com/simplemobiletools
+
+<b>Reddit:</b>
+https://www.reddit.com/r/SimpleMobileTools

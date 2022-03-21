@@ -1,7 +1,14 @@
-Tidak ada konverter unit, anda bisa menyalin hasil atau formula ke papan klip dengan cara menyentuhnya lama.
+Kalkulator modern bergaya ini menawarkan pengalaman pengguna yang luar biasa yang akan Anda sukai. Anda dapat menyalin hasil atau rumus ke clipboard dengan menekan lama. Aplikasi ini adalah pembantu sederhana untuk perhitungan cepat dengan banyak fungsi dasar termasuk mengalikan, membagi, akar dan kekuasaan. 
 
-Warna teks widget bisa disesuaikan, begitu juga dengan warna dan transparansi latar belakang. Sentuh hasil atau formula yang ditampilkan widget untuk membuka aplikasi.
+Anda dapat membuatnya bergetar saat menekan tombol untuk membuat Anda percaya diri saat memasukkan nilai Anda. Ada opsi untuk mencegah ponsel tidur saat menggunakan aplikasi untuk penggunaan yang nyaman. Warna teks widget yang dapat diubah ukurannya dapat disesuaikan, serta warna dan alfa latar belakang. Tekan hasil atau rumus di widget untuk membuka aplikasi.
 
-Sama sekali tidak berisi iklan dan tidak membutuhkan perizinan yang tidak perlu. Sepenuhnya sumber terbuka, dengan warna yang bisa disesuaikan.
+Muncul dengan desain material dan tema gelap secara default, memberikan pengalaman pengguna yang luar biasa untuk penggunaan yang mudah. Kurangnya akses internet memberi Anda lebih banyak privasi, keamanan, dan stabilitas daripada aplikasi lain. Tidak mengandung iklan atau izin yang tidak perlu. Ini sepenuhnya sumber-terbuka, menyediakan warna yang dapat disesuaikan.
 
-Aplikasi ini hanya salah satu bagian dari rangkaian aplikasi yang lebih besar. Anda bisa menemukan yang lainnya di https://www.simplemobiletools.com
+<b>Lihat rangkaian lengkap Alat Sederhana di sini:</b>
+https://www.simplemobiletools.com
+
+<b>Facebook:</b>
+https://www.facebook.com/simplemobiletools
+
+<b>Reddit:</b>
+https://www.reddit.com/r/SimpleMobileTools 

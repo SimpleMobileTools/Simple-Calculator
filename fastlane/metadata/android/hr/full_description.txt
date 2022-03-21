@@ -1,7 +1,19 @@
-Nema pretvarača jedinica, možete kopirati rezultat ili formulu u međuspremnik dugim pritiskom na isto.
+Ovaj elegantni moderni kalkulator nudi izvrsno korisničko iskustvo koje će van se svidjeti. Možete kopirati rezultat ili formulu u međuspremnik dugim pritiskom. 
 
-Boja teksta widgeta može se prilagoditi, kao i boju pozadine. Pritisnite rezultat ili formulu u widgetu da biste otvorili aplikaciju.
+Aplikacija je jednostavan pomoćnik za brze izračune s mnogim osnovnim funkcijama uključujući množenje, dijeljenje, korijen i moći. Možete učiniti da vibrira pri pritisku gumba kako biste bili sigurni tijekom umetanja vrijednosti.
 
-Ne sadrži oglase ili nepotrebne dozvole. Aplikacije je otvorenog koda, pruža prilagodljive boje.
+Postoji mogućnost sprječavanja spavanja telefona dok koristite aplikaciju za udobnu upotrebu. Boja teksta widgeta za promjenu veličine može se prilagoditi, kao i boja i alfa pozadine. Pritisnite rezultat ili formulu u widgetu da biste otvorili aplikaciju.
 
-Ova je aplikacija samo dio većeg broja aplikacija. Možete pronaći ostatak na https://www.simplemobiletools.com
+Dolazi s materijalnim dizajnom i tamnom temom prema zadanim postavkama, pruža izvrsno korisničko iskustvo za jednostavnu upotrebu.
+
+Nedostatak pristupa internetu daje vam više privatnosti, sigurnosti i stabilnosti od drugih aplikacija. Ne sadrži oglase niti nepotrebna dopuštenja. Potpuno je otvorenog koda, pruža prilagodljive boje.
+
+<b>Pogledajte cijeli paket Simple Tools ovdje:</b>
+https://www.simplemobiletools.com
+
+<b>Facebook:</b>
+https://www.facebook.com/simplemobiletools
+
+<b>Reddit:</b>
+https://www.reddit.com/r/SimpleMobileTools
+
