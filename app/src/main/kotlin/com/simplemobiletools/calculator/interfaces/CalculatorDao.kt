@@ -6,7 +6,7 @@ import com.simplemobiletools.calculator.models.History
 @Dao
 interface CalculatorDao {
     @Query("SELECT * FROM history ORDER BY timestamp DESC LIMIT :limit")
-    fun getHistory(limit: Int = 10): List<History>
+    fun getHistory(limit: Int = 20): List<History>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertOrUpdate(history: History): Long
