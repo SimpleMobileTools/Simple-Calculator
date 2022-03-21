@@ -1,54 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Jednostavan kalkulator</string>
+    <string name="app_name">Jednostavan Kalkulator</string>
     <string name="app_launcher_name">Kalkulator</string>
     <string name="scientific_calculator">Znanstveni kalkulator</string>
-
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Pogreška: podjela prema nuli</string>
-
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
-
+    <string name="history">Povijest</string>
+    <string name="history_empty">Povijest je prazna</string>
+    <string name="clear_history">Očisti</string>
+    <string name="history_cleared">Povijest je očišćena</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibriraj prilikom pritiska na gumb</string>
-
     <!-- FAQ -->
     <string name="faq_1_title">Kako funkcionira gumb C (Očisti)?</string>
     <string name="faq_1_text">Dodirom C gumba, uklanjate znak jedan po jedan. Dugim pritiskom ne njega resetirati će sva polja.</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Jednostavan Kalkulator - Brzo napravite izračune</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
-    <string name="app_long_description">
-        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
-
-        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
-
-        You can make it vibrate on button presses to make you confident during inserting your values.
-
-        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
-
-        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
-
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
-
-        Ne sadrži oglase ili nepotrebne dozvole. Aplikacije je otvorenog koda, pruža prilagodljive boje.
-
-        <b>Check out the full suite of Simple Tools here:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
-
+    <string name="app_short_description">Kalkulator za brze jednostavne izračune s lijepim korisničkim sučeljem i bez oglasa</string>
+    <string name="app_long_description"> Ovaj elegantni moderni kalkulator nudi izvrsno korisničko iskustvo koje će van se svidjeti. Možete kopirati rezultat ili formulu u međuspremnik dugim pritiskom. Aplikacija je jednostavan pomoćnik za brze izračune s mnogim osnovnim funkcijama uključujući množenje, dijeljenje, korijen i moći. Možete učiniti da vibrira pri pritisku gumba kako biste bili sigurni tijekom umetanja vrijednosti. Postoji mogućnost sprječavanja spavanja telefona dok koristite aplikaciju za udobnu upotrebu. Boja teksta widgeta za promjenu veličine može se prilagoditi, kao i boja i alfa pozadine. Pritisnite rezultat ili formulu u widgetu da biste otvorili aplikaciju. Dolazi s materijalnim dizajnom i tamnom temom prema zadanim postavkama, pruža izvrsno korisničko iskustvo za jednostavnu upotrebu. Nedostatak pristupa internetu daje vam više privatnosti, sigurnosti i stabilnosti od drugih aplikacija. Ne sadrži oglase niti nepotrebna dopuštenja. Potpuno je otvorenog koda, pruža prilagodljive boje. <b>Pogledajte cijeli paket Simple Tools ovdje:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

@@ -6,10 +6,10 @@
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Viga: nulliga jagamine</string>
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
+    <string name="history">Ajalugu</string>
+    <string name="history_empty">Ajalugu puudub</string>
+    <string name="clear_history">Kustuta</string>
+    <string name="history_cleared">Ajalugu on kustutatud</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Nupuvajutusel vibreeri</string>
     <!-- FAQ -->

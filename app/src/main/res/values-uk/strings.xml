@@ -1,54 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Простий Калькулятор</string>
     <string name="app_launcher_name">Калькулятор</string>
     <string name="scientific_calculator">Науковий Калькулятор</string>
-
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Помилка: ділення на нуль</string>
-
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
-
+    <string name="history">Історія</string>
+    <string name="history_empty">Історія порожня</string>
+    <string name="clear_history">Очистити</string>
+    <string name="history_cleared">Історію очищено</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Вібрувати з натиском кнопок</string>
-
     <!-- FAQ -->
     <string name="faq_1_title">Як працює кнопка C (Очистити)?</string>
     <string name="faq_1_text">Короткий натиск видалить один символ за раз. Тривалий натиск одразу очистить всі поля.</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Simple Calculator - Робіть свої розрахунки швидко</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
-    <string name="app_long_description">
-        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
-
-        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
-
-        You can make it vibrate on button presses to make you confident during inserting your values.
-
-        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
-
-        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
-
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
-
-        Цей додаток не буде показувати рекламу; потрібні лише найнеобхідніші дозволи. Додаток має повністю відкритий програмний код, кольори оформлення можна легко налаштувати.
-
-        <b>Check out the full suite of Simple Tools here:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
-
+    <string name="app_short_description">Калькулятор для швидких простих обчислень з приємним інтерфейсом та без реклами</string>
+    <string name="app_long_description"> This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it. The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers. You can make it vibrate on button presses to make you confident during inserting your values. There is an option to prevent the phone from sleeping while using the app for comfortable usage. The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app. It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps. Цей додаток не буде показувати рекламу; потрібні лише найнеобхідніші дозволи. Додаток має повністю відкритий програмний код, кольори оформлення можна легко налаштувати. <b>Check out the full suite of Simple Tools here:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
