@@ -1,6 +1,11 @@
 Changelog
 ==========
 
+Version 5.8.0 *(2022-03-29)*
+----------------------------
+
+ * Added support for Material You theme on Android 12+
+
 Version 5.7.3 *(2022-03-21)*
 ----------------------------
 
