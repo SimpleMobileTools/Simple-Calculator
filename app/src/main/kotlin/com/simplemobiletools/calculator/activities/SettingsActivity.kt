@@ -30,7 +30,7 @@ class SettingsActivity : SimpleActivity() {
         updateTextColors(settings_scrollview)
 
         arrayOf(settings_color_customization_label, settings_general_settings_label).forEach {
-            it.setTextColor(getAdjustedPrimaryColor())
+            it.setTextColor(getProperPrimaryColor())
         }
 
         arrayOf(settings_color_customization_holder, settings_general_settings_holder).forEach {
