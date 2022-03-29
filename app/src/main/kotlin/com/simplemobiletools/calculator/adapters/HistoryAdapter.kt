@@ -5,16 +5,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.activities.SimpleActivity
-import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.helpers.CalculatorImpl
 import com.simplemobiletools.calculator.models.History
 import com.simplemobiletools.commons.extensions.copyToClipboard
+import com.simplemobiletools.commons.extensions.getProperTextColor
 import kotlinx.android.synthetic.main.history_view.view.*
 
 class HistoryAdapter(val activity: SimpleActivity, val items: List<History>, val calc: CalculatorImpl, val itemClick: () -> Unit) :
     RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
 
-    private var textColor = activity.config.textColor
+    private var textColor = activity.getProperTextColor()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = activity.layoutInflater.inflate(R.layout.history_view, parent, false)

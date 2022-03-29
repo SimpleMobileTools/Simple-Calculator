@@ -60,7 +60,7 @@ class MainActivity : SimpleActivity(), Calculator {
         AutofitHelper.create(result)
         AutofitHelper.create(formula)
         storeStateVariables()
-        updateViewColors(calculator_holder, config.textColor)
+        updateViewColors(calculator_holder, getProperTextColor())
         checkWhatsNewDialog()
         checkAppOnSDCard()
     }
@@ -68,7 +68,7 @@ class MainActivity : SimpleActivity(), Calculator {
     override fun onResume() {
         super.onResume()
         if (storedTextColor != config.textColor) {
-            updateViewColors(calculator_holder, config.textColor)
+            updateViewColors(calculator_holder, getProperTextColor())
         }
 
         if (config.preventPhoneFromSleeping) {
@@ -77,7 +77,7 @@ class MainActivity : SimpleActivity(), Calculator {
 
         vibrateOnButtonPress = config.vibrateOnButtonPress
 
-        val adjustedPrimaryColor = getAdjustedPrimaryColor()
+        val adjustedPrimaryColor = getProperPrimaryColor()
         arrayOf(btn_percent, btn_power, btn_root, btn_clear, btn_reset, btn_divide, btn_multiply, btn_plus, btn_minus, btn_equals, btn_decimal).forEach {
             it.setTextColor(adjustedPrimaryColor)
         }

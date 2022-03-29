@@ -34,7 +34,7 @@ class SettingsActivity : SimpleActivity() {
         }
 
         arrayOf(settings_color_customization_holder, settings_general_settings_holder).forEach {
-            it.background.applyColorFilter(baseConfig.backgroundColor.getContrastColor())
+            it.background.applyColorFilter(getProperBackgroundColor().getContrastColor())
         }
     }
 
