@@ -30,13 +30,11 @@
 
         <activity
             android:name=".activities.MainActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
 
         <activity
             android:name=".activities.WidgetConfigureActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
             android:theme="@style/MyWidgetConfigTheme">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />

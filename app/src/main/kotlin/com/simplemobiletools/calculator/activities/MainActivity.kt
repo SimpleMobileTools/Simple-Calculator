@@ -2,6 +2,7 @@ package com.simplemobiletools.calculator.activities
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -31,6 +32,12 @@ class MainActivity : SimpleActivity(), Calculator {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         appLaunched(BuildConfig.APPLICATION_ID)
+
+        requestedOrientation = if (resources.getBoolean(R.bool.isTablet)) {
+            ActivityInfo.SCREEN_ORIENTATION_USER
+        } else {
+            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        }
 
         calc = CalculatorImpl(this, applicationContext)
 
