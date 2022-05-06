@@ -1,7 +1,10 @@
 package Assignment.Simple-Calculator_forked;
 
 public class JavaClass {
+
   int x, y, z;
+
+  int x;
 
   public int getX() {
     return x;
@@ -27,10 +30,11 @@ public class JavaClass {
   public void setY(int y) {
     this.y = y;
   }
+  int t;
 
-  public JavaClass(int x, int y) {
+
+  public JavaClass(int x) {
     this.x = x;
-    this.y = y;
   }
 
   public JavaClass(int z) {
