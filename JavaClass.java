@@ -1,7 +1,7 @@
 package Assignment.Simple-Calculator_forked;
 
 public class JavaClass {
-  int x, y;
+  int x;
 
   public int getX() {
     return x;
@@ -11,17 +11,10 @@ public class JavaClass {
     this.x = x;
   }
 
-  public int getY() {
-    return y;
-  }
+  
 
-  public void setY(int y) {
-    this.y = y;
-  }
-
-  public JavaClass(int x, int y) {
+  public JavaClass(int x) {
     this.x = x;
-    this.y = y;
   }
   
 
