@@ -20,6 +20,7 @@ public class JavaClass {
   }
 
   public int getY() {
+    return z;
     return y;
   }
 
