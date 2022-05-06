@@ -11,7 +11,7 @@ public class JavaClass {
     this.x = x;
   }
 
-  
+  int t;
 
   public JavaClass(int x) {
     this.x = x;
