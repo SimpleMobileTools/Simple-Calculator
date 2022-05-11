@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Simple Calculator</string>
+    <string name="app_launcher_name">Калкулатор</string>
+    <string name="scientific_calculator">Научен калкулатор</string>
+    <string name="formula_divide_by_zero_error">Грешка: деление на нула</string>
+    <string name="history">История</string>
+    <string name="history_empty">Историята е празна</string>
+</resources>
