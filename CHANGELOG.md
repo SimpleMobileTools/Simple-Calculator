@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.8.1 *(2022-05-20)*
+----------------------------
+
+ * Added some widget related improvements, but require Simple Thank You for using them
+ * Added some stabiliy and translation improvements
+
 Version 5.8.0 *(2022-03-29)*
 ----------------------------
 
