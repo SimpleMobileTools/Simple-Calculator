@@ -41,6 +41,9 @@ class WidgetConfigureActivity : SimpleActivity() {
         config_save.setOnClickListener { saveConfig() }
         config_bg_color.setOnClickListener { pickBackgroundColor() }
         config_text_color.setOnClickListener { pickTextColor() }
+
+        val primaryColor = getProperPrimaryColor()
+        config_bg_seekbar.setColors(mTextColor, primaryColor, primaryColor)
     }
 
     private fun initVariables() {
@@ -95,13 +98,11 @@ class WidgetConfigureActivity : SimpleActivity() {
     private fun updateBackgroundColor() {
         mBgColor = mBgColorWithoutTransparency.adjustAlpha(mBgAlpha)
         widget_background.applyColorFilter(mBgColor)
-        config_save.setBackgroundColor(mBgColor)
-        config_bg_color.setFillWithStroke(mBgColor, Color.BLACK)
+        config_bg_color.setFillWithStroke(mBgColor, mBgColor)
     }
 
     private fun updateTextColor() {
-        config_text_color.setFillWithStroke(mTextColor, Color.BLACK)
-        config_save.setTextColor(mTextColor)
+        config_text_color.setFillWithStroke(mTextColor, mTextColor)
 
         val viewIds = intArrayOf(
             R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7, R.id.btn_8,
