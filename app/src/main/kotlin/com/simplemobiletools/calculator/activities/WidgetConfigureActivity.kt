@@ -12,6 +12,7 @@ import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.helpers.MyWidgetProvider
 import com.simplemobiletools.commons.dialogs.ColorPickerDialog
+import com.simplemobiletools.commons.dialogs.WidgetLockedDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.IS_CUSTOMIZING_COLORS
 import kotlinx.android.synthetic.main.activity_main.*
@@ -23,6 +24,7 @@ class WidgetConfigureActivity : SimpleActivity() {
     private var mBgColor = 0
     private var mTextColor = 0
     private var mBgColorWithoutTransparency = 0
+    private var mWidgetLockedDialog: WidgetLockedDialog? = null
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         useDynamicTheme = false
@@ -31,10 +33,10 @@ class WidgetConfigureActivity : SimpleActivity() {
         setContentView(R.layout.widget_config)
         initVariables()
 
-        val mIsCustomizingColors = intent.extras?.getBoolean(IS_CUSTOMIZING_COLORS) ?: false
+        val isCustomizingColors = intent.extras?.getBoolean(IS_CUSTOMIZING_COLORS) ?: false
         mWidgetId = intent.extras?.getInt(AppWidgetManager.EXTRA_APPWIDGET_ID) ?: AppWidgetManager.INVALID_APPWIDGET_ID
 
-        if (mWidgetId == AppWidgetManager.INVALID_APPWIDGET_ID && !mIsCustomizingColors) {
+        if (mWidgetId == AppWidgetManager.INVALID_APPWIDGET_ID && !isCustomizingColors) {
             finish()
         }
 
@@ -44,6 +46,23 @@ class WidgetConfigureActivity : SimpleActivity() {
 
         val primaryColor = getProperPrimaryColor()
         config_bg_seekbar.setColors(mTextColor, primaryColor, primaryColor)
+
+        if (!isCustomizingColors && !isOrWasThankYouInstalled()) {
+            mWidgetLockedDialog = WidgetLockedDialog(this) {
+                if (!isOrWasThankYouInstalled()) {
+                    finish()
+                }
+            }
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        window.decorView.setBackgroundColor(0)
+
+        if (mWidgetLockedDialog != null && isOrWasThankYouInstalled()) {
+            mWidgetLockedDialog?.dismissDialog()
+        }
     }
 
     private fun initVariables() {
