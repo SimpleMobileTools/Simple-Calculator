@@ -1,54 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Calculator</string>
+    <string name="app_name">Simpel kalkylator</string>
     <string name="app_launcher_name">Kalkylator</string>
     <string name="scientific_calculator">Avancerad kalkylator</string>
-
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Fel: delning med noll</string>
-
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
-
+    <string name="history">Historik</string>
+    <string name="history_empty">Historik är tom</string>
+    <string name="clear_history">Rensa</string>
+    <string name="history_cleared">Historia har blivit rensad</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrera när jag trycker på knapparna</string>
-
     <!-- FAQ -->
-    <string name="faq_1_title">How does the C (Clear) button work?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
-
+    <string name="faq_1_title">Hur funkar C (Rensa) knappen\?</string>
+    <string name="faq_1_text">Om du trycker på den tar du bort ett tecken i taget. Om du trycker länge på den återställs alla fält på en gång.</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Simpel kalkylator - Gör dina beräkningar snabbt</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
-    <string name="app_long_description">
-        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
-
-        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
-
-        You can make it vibrate on button presses to make you confident during inserting your values.
-
-        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
-
-        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
-
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
-
-        Innehåller ingen reklam eller onödiga behörigheter. Den har helt öppen källkod och anpassningsbara färger.
-
-        <b>Check out the full suite of Simple Tools here:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
-
+    <string name="app_short_description">En kalkylator för snabba enkla beräkningar med ett trevligt användargränssnitt och utan annonser.</string>
+    <string name="app_long_description"> Den här snygga moderna kalkylatorn erbjuder en fantastisk användarupplevelse som du kommer att älska att se. Du kan kopiera resultatet eller formeln till urklipp genom att trycka länge på den. Appen är en enkel hjälpreda för snabba beräkningar med många grundläggande funktioner som multiplicering, division, rot och potenser. Du kan få den att vibrera vid knapptryckningar för att göra dig säker när du lägger in dina värden. Det finns ett alternativ för att förhindra att telefonen sover när du använder appen för bekväm användning. Textfärgen på den omställbara widgeten kan anpassas, liksom bakgrundens färg och alfa. Tryck på resultatet eller formeln i widgeten för att öppna appen. Den levereras med materialdesign och mörkt tema som standard, vilket ger en bra användarupplevelse för enkel användning. Avsaknaden av internetåtkomst ger dig mer integritet, säkerhet och stabilitet än andra appar. Innehåller ingen reklam eller onödiga behörigheter. Den har helt öppen källkod och anpassningsbara färger. <b>Kika på hela samlingen av Simple Tools här:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
