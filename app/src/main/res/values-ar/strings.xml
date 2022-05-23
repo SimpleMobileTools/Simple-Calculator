@@ -12,6 +12,7 @@
     <string name="history_cleared">History has been cleared</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">الاهتزاز عند الضغط على الازرار</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
     <!-- FAQ -->
     <string name="faq_1_title">كيف يعمل الزر C (مسح)؟</string>
     <string name="faq_1_text">النقر على ذلك سوف يزيل حرف واحد في وقت واحد. الضغط لفترة طويلة سوف إعادة تعيين جميع الحقول في وقت واحد.</string>

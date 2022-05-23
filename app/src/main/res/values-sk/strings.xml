@@ -12,6 +12,7 @@
     <string name="history_cleared">História bola vymazaná</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrovať pri stlačení tlačidla</string>
+    <string name="use_comma_as_decimal_mark">Používať čiarku na oddelenie desatinných čísel</string>
     <!-- FAQ -->
     <string name="faq_1_title">Ako funguje tlačidlo C?</string>
     <string name="faq_1_text">Jedným stlačením viete vymazať 1 znak. Dlhé podržanie vymaže všetky polia naraz.</string>

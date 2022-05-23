@@ -12,6 +12,7 @@
     <string name="history_cleared">Povijest je očišćena</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibriraj prilikom pritiska na gumb</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
     <!-- FAQ -->
     <string name="faq_1_title">Kako funkcionira gumb C (Očisti)?</string>
     <string name="faq_1_text">Dodirom C gumba, uklanjate znak jedan po jedan. Dugim pritiskom ne njega resetirati će sva polja.</string>

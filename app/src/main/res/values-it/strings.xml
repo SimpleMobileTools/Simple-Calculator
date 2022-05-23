@@ -12,6 +12,7 @@
     <string name="history_cleared">La cronologia è stata cancellata</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibra alla pressione di un tasto</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
     <!-- FAQ -->
     <string name="faq_1_title">Come funziona il tasto C (Cancella)?</string>
     <string name="faq_1_text">Premendo il tasto una volta verrà eliminato un singolo carattere; tenendolo premuto invece eliminerà tutta la stringa.</string>

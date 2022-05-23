@@ -15,6 +15,7 @@
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
 
     <!-- FAQ -->
     <string name="faq_1_title">How does the C (Clear) button work?</string>

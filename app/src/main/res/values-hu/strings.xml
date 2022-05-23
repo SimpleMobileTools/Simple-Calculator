@@ -12,6 +12,7 @@
     <string name="history_cleared">History has been cleared</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Rezgés gombnyomáskor</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
     <!-- FAQ -->
     <string name="faq_1_title">Hogyan működik a C (törlés) gomb\?</string>
     <string name="faq_1_text">A koppintás egyszerre egy karaktert töröl. A hosszú lenyomás egyszerre állítja vissza az összes mezőt.</string>

@@ -14,6 +14,7 @@
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrar ao tocar nos botóns</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
 
     <!-- FAQ -->
     <string name="faq_1_title">Como funciona o botón C (Borrar)?</string>

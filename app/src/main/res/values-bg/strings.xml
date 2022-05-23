@@ -12,6 +12,7 @@
     <string name="history_cleared">Историята беше изчистена</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Вибрация при натискане на бутон</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
     <!-- FAQ -->
     <string name="faq_1_title">Как работи бутонът C (Clear)\?</string>
     <string name="faq_1_text">Натискането му ще премахва по един символ. Дълго натискане ще изчисти наведнъж всички полета.</string>

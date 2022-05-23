@@ -12,6 +12,7 @@
     <string name="history_cleared">History has been cleared</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrer ved knappetrykk</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
     <string name="faq_1_title">Hvordan fungerer C (Clear)-knappen\?</string>
     <string name="faq_1_text">Å trykke på den fjerner ett tegn av gangen. Lang-trykk tilbakestiller alle felter.</string>
         <!-- Strings displayed only on Google Playstore. Optional, but good to have -->

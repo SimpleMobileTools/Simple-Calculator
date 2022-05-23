@@ -12,6 +12,7 @@
     <string name="history_cleared">Historie byla vymazána</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrovat při stisku tlačítka</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
     <!-- FAQ -->
     <string name="faq_1_title">Jak funguje tlačítko C?</string>
     <string name="faq_1_text">Stisknutím odmažete jeden znak. Dlouhým podržením smažete naráz všechna pole.</string>

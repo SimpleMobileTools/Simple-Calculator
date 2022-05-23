@@ -12,6 +12,7 @@
     <string name="history_cleared">Historia on tyhjennetty</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Värinä painikkeen painalluksella</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
     <!-- FAQ -->
     <string name="faq_1_title">Kuinka C (Clear)-painike toimii?</string>
     <string name="faq_1_text">Napauttaminen poistaa yhden merkin kerrallaan. Pitkä painallus nollaa kaikki kentät kerralla.</string>

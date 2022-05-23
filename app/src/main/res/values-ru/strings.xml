@@ -12,6 +12,7 @@
     <string name="history_cleared">История очищена</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Вибрация при нажатии кнопок</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
     <!-- FAQ -->
     <string name="faq_1_title">Как работает кнопка C (Очистка)?</string>
     <string name="faq_1_text">Нажатие на нее удалит один символ. Долгое нажатие сбросит все поля сразу.</string>

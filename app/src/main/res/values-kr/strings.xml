@@ -14,6 +14,7 @@
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">버튼 탭시 진동</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
 
     <!-- FAQ -->
     <string name="faq_1_title">C (Clear) 버튼을 어떻게 사용합니까?</string>

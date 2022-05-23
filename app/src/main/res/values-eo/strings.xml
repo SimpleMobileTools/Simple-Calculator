@@ -12,6 +12,7 @@
     <string name="history_cleared">History has been cleared</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrigi je butonpremo</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
     <!-- FAQ -->
     <string name="faq_1_title">Kiel funkcias la butono C («Forviŝi»)\?</string>
     <string name="faq_1_text">Frapetado sur ĝi forviŝos signojn po unu por frapeto. Longa premado forviŝos ĉiujn kampojn samtempe.</string>

@@ -12,6 +12,7 @@
     <string name="history_cleared">Istoricul a fost curățat</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrează la apăsarea butoanelor</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
     <!-- FAQ -->
     <string name="faq_1_title">Cum funcționează butonul C (Curăță)?</string>
     <string name="faq_1_text">Dacă apăsați pe el, veți elimina câte un caracter pe rând. Apăsarea prelungită a acestuia va reseta toate câmpurile deodată.</string>

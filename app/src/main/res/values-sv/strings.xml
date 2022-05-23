@@ -12,6 +12,7 @@
     <string name="history_cleared">Historia har blivit rensad</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrera när jag trycker på knapparna</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
     <!-- FAQ -->
     <string name="faq_1_title">Hur funkar C (Rensa) knappen\?</string>
     <string name="faq_1_text">Om du trycker på den tar du bort ett tecken i taget. Om du trycker länge på den återställs alla fält på en gång.</string>

@@ -12,6 +12,7 @@
     <string name="history_cleared">Historia została wyczyszczona</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Wibracja przy naciśnięciu przycisku</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
     <!-- FAQ -->
     <string name="faq_1_title">Jak działa przycisk C (Wyczyść)?</string>
     <string name="faq_1_text">Naciśnięcie go usunie jeden znak naraz. Długie naciśnięcie zresetuje wszystkie pola jednocześnie.</string>
