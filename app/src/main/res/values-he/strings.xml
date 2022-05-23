@@ -1,55 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">מחשבון פשוט</string>
     <string name="app_launcher_name">מחשבון</string>
     <string name="scientific_calculator">מחשבון מדעי</string>
-
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">שגיאה: חלוקה באפס</string>
-
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
-
+    <string name="history">היסטוריה</string>
+    <string name="history_empty">ההיסטוריה ריקה</string>
+    <string name="clear_history">ניקוי</string>
+    <string name="history_cleared">ההיסטוריה נוקתה</string>
     <!-- Settings -->
-    <string name="vibrate_on_button_press">לרטוט על לחיץ</string>
+    <string name="vibrate_on_button_press">רטט בעת לחיצה</string>
     <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
-
     <!-- FAQ -->
-    <string name="faq_1_title">\?איך עובד לחצן (נקה)</string>
+    <string name="faq_1_title">כיצד פועל לחצן C (ניקוי)\?</string>
     <string name="faq_1_text">הקשה עליו תסיר תו אחד בכל פעם. לחיצה ארוכה עליו תאפס את כל השדות בבת אחת.</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">מחשבון פשוט - לחשב במהירות</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">מחשבון לחישובים פשוטים ומהירים עם ממשק משתמש יפה ובלי פרסומות</string>
-    <string name="app_long_description">
-        This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
-
-        The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers.
-
-        You can make it vibrate on button presses to make you confident during inserting your values.
-
-        There is an option to prevent the phone from sleeping while using the app for comfortable usage.
-
-        The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app.
-
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
-
-        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
-
-        <b>Check out the full suite of Simple Tools here:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
-
+    <string name="app_long_description"> מחשבון מודרני מסוגנן זה מציע חווית משתמש נהדרת שתאהב לראות. אתה יכול להעתיק את התוצאה או הנוסחה ללוח על ידי לחיצה ארוכה עליה. האפליקציה עוזרת פשוטה לחישובים מהירים עם פונקציות בסיסיות רבות כולל כפל, חילוק, שורש וחזקות. אתה יכול לגרום לו לרטוט בלחיצות על הכפתורים כדי לגרום לך להיות בטוח במהלך הכנסת הערכים שלך. ישנה אפשרות למנוע מהטלפון לישון בזמן השימוש באפליקציה לשימוש נוח. ניתן להתאים את צבע הטקסט של הווידג\'ט הניתן לשינוי גודל, כמו גם את הצבע והאלפא של הרקע. הקש את התוצאה או הנוסחה בווידג\'ט כדי לפתוח את האפליקציה. זה מגיע עם עיצוב מוחשי וערכת נושא כהה כברירת מחדל, מספק חווית משתמש נהדרת לשימוש קל. היעדר גישה לאינטרנט נותן לך יותר פרטיות, אבטחה ויציבות מאשר אפליקציות אחרות. אינו מכיל פרסומות או הרשאות מיותרות. זה קוד פתוח לחלוטין, מספק צבעים הניתנים להתאמה אישית. <b>בדוק את החבילה המלאה של Simple Tools כאן: </b> https://www.simplemobiletools.com <b> פייסבוק: </b> https://www.facebook.com/simplemobiletools <b> רדיט: </b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
