@@ -12,7 +12,7 @@
     <string name="history_cleared">Історію очищено</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Вібрувати з натиском кнопок</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="use_comma_as_decimal_mark">Як десятковий знак використовувати кому</string>
     <!-- FAQ -->
     <string name="faq_1_title">Як працює кнопка C (Очистити)?</string>
     <string name="faq_1_text">Короткий натиск видалить один символ за раз. Тривалий натиск одразу очистить всі поля.</string>
