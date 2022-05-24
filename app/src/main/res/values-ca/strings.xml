@@ -12,7 +12,7 @@
     <string name="history_cleared">S\'ha netejat l\'historial</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibra en prémer els botons</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="use_comma_as_decimal_mark">Utilitza la coma com a marca decimal</string>
     <!-- FAQ -->
     <string name="faq_1_title">Com funciona el botó C (Esborra)\?</string>
     <string name="faq_1_text">En tocar-lo, s\'eliminarà un caràcter a la vegada. Si el premeu durant molt temps, es reiniciaran tots els camps de cop.</string>
