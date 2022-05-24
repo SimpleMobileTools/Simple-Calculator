@@ -12,7 +12,7 @@
     <string name="history_cleared">L\'historique a été effacé</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrer lors de l\'appui sur les boutons</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="use_comma_as_decimal_mark">Utiliser la virgule comme séparateur décimal</string>
     <!-- FAQ -->
     <string name="faq_1_title">Comment fonctionne le bouton C (Effacer) \?</string>
     <string name="faq_1_text">En tapotant dessus, vous retirerez un caractère à la fois. Une pression prolongée sur le bouton réinitialisera tous les champs à la fois.</string>
