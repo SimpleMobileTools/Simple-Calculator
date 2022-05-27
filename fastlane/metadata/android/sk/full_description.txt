@@ -1,7 +1,26 @@
-Neobsahuje žiadny prevodník jednotiek, môžete skopírovať výsledok alebo vzorec do schránky dlhým stlačením.
+Táto štýlová a moderná kalkulačka ponúka výborné používateľské rozhranie, ktoré ulahodí každému oku. Dlhým podržaním vzorca, alebo výsledku, ho skopírujete do schránky.
 
-Farbu textu widgetu možno prispôsobiť, rovnako ako farbu a priehľadnosť pozadia. Ak chcete aplikáciu otvoriť, stlačte výsledok alebo vzorec v miniaplikácii.
+Apka je jednoduchým pomocníkom pre rýchle výpočty s mnohými základnými funkciami vrátane násobenia, delenia a mocnín.
+
+Zadanie hodnoty môže byť po stlačení potvrdené vibrovaním, aby nedošlo k chybám.
+
+Ako možnosť máte k dispozícií aj prevenciu vypnutia displeja, ak je apka v popredí.
+
+Farba textu a widget sa dajú prispôsobiť vášmu želaniu, ako aj farba a priesvitnosť pozadia widget.
+
+Apku viete rýchlo spustiť aj kliknutím na výsledok na widgete.
+
+Poskytuje Material dizajn a štandardne tmavú tému, čo zlepšuje používateľskú skúsenosť.
+
+Chýbajúci prístup na internet poskytuje lepšie súkromie, bezpečnosť a stabilitu ako iné apky.
 
 Neobsahuje žiadne reklamy a nepotrebné oprávnenia. Je opensource, poskytuje možnosť zmeny farieb.
 
-Táto aplikácia je iba jednou zo skupiny aplikácií. Ostatné viete nájsť na https://www.simplemobiletools.com
+<b>Pozrite si celú sadu aplikácií na:</b>
+https://www.simplemobiletools.com
+
+<b>Facebook:</b>
+https://www.facebook.com/simplemobiletools
+
+<b>Reddit:</b>
+https://www.reddit.com/r/SimpleMobileTools

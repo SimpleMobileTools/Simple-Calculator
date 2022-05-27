@@ -21,7 +21,34 @@
     <string name="app_title">Jednoduchá kalkulačka</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Kalkulačka pre vaše rýchle výpočty s pekným užívateľským rozhraním a bez reklám</string>
-    <string name="app_long_description"> This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it. The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers. You can make it vibrate on button presses to make you confident during inserting your values. There is an option to prevent the phone from sleeping while using the app for comfortable usage. The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app. It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps. Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors. <b>Check out the full suite of Simple Tools here:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
+    <string name="app_long_description">
+        Táto štýlová a moderná kalkulačka ponúka výborné používateľské rozhranie, ktoré ulahodí každému oku. Dlhým podržaním vzorca, alebo výsledku, ho skopírujete do schránky.
+
+        Apka je jednoduchým pomocníkom pre rýchle výpočty s mnohými základnými funkciami vrátane násobenia, delenia a mocnín.
+
+        Zadanie hodnoty môže byť po stlačení potvrdené vibrovaním, aby nedošlo k chybám.
+
+        Ako možnosť máte k dispozícií aj prevenciu vypnutia displeja, ak je apka v popredí.
+
+        Farba textu a widget sa dajú prispôsobiť vášmu želaniu, ako aj farba a priesvitnosť pozadia widget.
+
+        Apku viete rýchlo spustiť aj kliknutím na výsledok na widgete.
+
+        Poskytuje Material dizajn a štandardne tmavú tému, čo zlepšuje používateľskú skúsenosť.
+
+        Chýbajúci prístup na internet poskytuje lepšie súkromie, bezpečnosť a stabilitu ako iné apky.
+
+        Neobsahuje žiadne reklamy a nepotrebné oprávnenia. Je opensource, poskytuje možnosť zmeny farieb.
+
+        <b>Pozrite si celú sadu aplikácií na:</b>
+        https://www.simplemobiletools.com
+
+        <b>Facebook:</b>
+        https://www.facebook.com/simplemobiletools
+
+        <b>Reddit:</b>
+        https://www.reddit.com/r/SimpleMobileTools
+    </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
