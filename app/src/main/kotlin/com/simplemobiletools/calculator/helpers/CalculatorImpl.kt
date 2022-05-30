@@ -8,7 +8,12 @@ import com.simplemobiletools.commons.extensions.toast
 import net.objecthunter.exp4j.ExpressionBuilder
 import java.math.BigDecimal
 
-class CalculatorImpl(calculator: Calculator, private val context: Context) {
+class CalculatorImpl(
+    calculator: Calculator,
+    private val context: Context,
+    private var decimalSeparator: String = DOT,
+    private var groupingSeparator: String = COMMA
+) {
     private var callback: Calculator? = calculator
 
     private var baseValue = 0.0
@@ -19,6 +24,10 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private val operations = listOf("+", "-", "×", "÷", "^", "%", "√")
     private val operationsRegex = "[-+×÷^%√]".toPattern()
     private val numbersRegex = "[^0-9,.]".toRegex()
+
+    private val formatter = NumberFormatHelper(
+        decimalSeparator = decimalSeparator, groupingSeparator = groupingSeparator
+    )
 
     init {
         showNewResult("0")
@@ -35,21 +44,21 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     private fun zeroClicked() {
-        val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
+        val valueToCheck = inputDisplayedFormula.trimStart('-').removeGroupSeparator()
         val value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
-        if (value != "0" || value.contains(".")) {
+        if (value != "0" || value.contains(decimalSeparator)) {
             addDigit(0)
         }
     }
 
     private fun decimalClicked() {
-        val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
+        val valueToCheck = inputDisplayedFormula.trimStart('-').replace(groupingSeparator, "")
         val value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
-        if (!value.contains(".")) {
+        if (!value.contains(decimalSeparator)) {
             when {
-                value == "0" && !valueToCheck.contains(operationsRegex.toRegex()) -> inputDisplayedFormula = "0."
-                value == "" -> inputDisplayedFormula += "0."
-                else -> inputDisplayedFormula += "."
+                value == "0" && !valueToCheck.contains(operationsRegex.toRegex()) -> inputDisplayedFormula = "0$decimalSeparator"
+                value == "" -> inputDisplayedFormula += "0$decimalSeparator"
+                else -> inputDisplayedFormula += decimalSeparator
             }
         }
 
@@ -60,10 +69,13 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     private fun addThousandsDelimiter() {
         val valuesToCheck = numbersRegex.split(inputDisplayedFormula).filter { it.trim().isNotEmpty() }
         valuesToCheck.forEach {
-            var newString = Formatter.addGroupingSeparators(it)
+            var newString = formatter.addGroupingSeparators(it)
+
             // allow writing numbers like 0.003
-            if (it.contains(".")) {
-                newString = newString.substringBefore(".") + ".${it.substringAfter(".")}"
+            if (it.contains(decimalSeparator)) {
+                val firstPart = newString.substringBefore(decimalSeparator)
+                val lastPart = it.substringAfter(decimalSeparator)
+                newString = "$firstPart$decimalSeparator$lastPart"
             }
 
             inputDisplayedFormula = inputDisplayedFormula.replace(it, newString)
@@ -86,7 +98,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
 
         val lastChar = inputDisplayedFormula.last().toString()
-        if (lastChar == ".") {
+        if (lastChar == decimalSeparator) {
             inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
         } else if (operations.contains(lastChar)) {
             inputDisplayedFormula = inputDisplayedFormula.dropLast(1)
@@ -137,7 +149,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             return false
         }
 
-        if (!inputDisplayedFormula.trimStart('-').any { it.toString() in operations } && inputDisplayedFormula.replace(",", "").toDouble() != 0.0) {
+        if (!inputDisplayedFormula.trimStart('-').any { it.toString() in operations } && inputDisplayedFormula.removeGroupSeparator().toDouble() != 0.0) {
             inputDisplayedFormula = if (inputDisplayedFormula.first() == '-') {
                 inputDisplayedFormula.substring(1)
             } else {
@@ -185,7 +197,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
     }
 
     private fun getSecondValue(): Double {
-        val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
+        val valueToCheck = inputDisplayedFormula.trimStart('-').removeGroupSeparator()
         var value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
         if (value == "") {
             value = "0"
@@ -205,23 +217,28 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         }
 
         if (lastKey != EQUALS) {
-            val valueToCheck = inputDisplayedFormula.trimStart('-').replace(",", "")
+            val valueToCheck = inputDisplayedFormula.trimStart('-').removeGroupSeparator()
             val parts = valueToCheck.split(operationsRegex).filter { it != "" }
             if (parts.isEmpty()) {
                 return
             }
 
-            baseValue = Formatter.stringToDouble(parts.first())
+            baseValue = parts.first().toDouble()
             if (inputDisplayedFormula.startsWith("-")) {
                 baseValue *= -1
             }
 
-            secondValue = parts.getOrNull(1)?.replace(",", "")?.toDouble() ?: secondValue
+            secondValue = parts.getOrNull(1)?.toDouble() ?: secondValue
         }
 
         if (lastOperation != "") {
             val sign = getSign(lastOperation)
-            val expression = "${baseValue.format()}$sign${secondValue.format()}".replace("√", "sqrt").replace("×", "*").replace("÷", "/")
+            val formattedBaseValue = baseValue.format().removeGroupSeparator()
+            val formatterSecondValue = secondValue.format().removeGroupSeparator()
+            val expression = "$formattedBaseValue$sign$formatterSecondValue"
+                .replace("√", "sqrt")
+                .replace("×", "*")
+                .replace("÷", "/")
 
             try {
                 if (sign == "÷" && secondValue == 0.0) {
@@ -229,16 +246,11 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
                     return
                 }
 
-                if (sign == "%") {
-                    val second = secondValue / 100f
-                    "${baseValue.format()}*${second.format()}".replace("√", "sqrt").replace("×", "*").replace("÷", "/")
-                }
-
                 // handle percents manually, it doesn't seem to be possible via net.objecthunter:exp4j. "%" is used only for modulo there
                 // handle cases like 10%200 here
                 val result = if (sign == "%") {
-                    val second = secondValue / 100f
-                    ExpressionBuilder("${baseValue.format().replace(",", "")}*${second.format()}").build().evaluate()
+                    val second = (secondValue / 100f).format().removeGroupSeparator()
+                    ExpressionBuilder("$formattedBaseValue*$second").build().evaluate()
                 } else {
                     // avoid Double rounding errors at expressions like 5250,74 + 14,98
                     if (sign == "+" || sign == "-") {
@@ -250,7 +262,7 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
                         }
                         bigDecimalResult.toDouble()
                     } else {
-                        ExpressionBuilder(expression.replace(",", "")).build().evaluate()
+                        ExpressionBuilder(expression).build().evaluate()
                     }
                 }
 
@@ -317,19 +329,13 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
             }
             val lastValue = newValue.last().toString()
             lastKey = when {
-                operations.contains(lastValue) -> {
-                    CLEAR
-                }
-                lastValue == "." -> {
-                    DECIMAL
-                }
-                else -> {
-                    DIGIT
-                }
+                operations.contains(lastValue) -> CLEAR
+                lastValue == decimalSeparator -> DECIMAL
+                else -> DIGIT
             }
         }
 
-        newValue = newValue.trimEnd(',')
+        newValue = newValue.trimEnd(groupingSeparator.single())
         inputDisplayedFormula = newValue
         addThousandsDelimiter()
         showNewResult(inputDisplayedFormula)
@@ -391,4 +397,19 @@ class CalculatorImpl(calculator: Calculator, private val context: Context) {
         addThousandsDelimiter()
         showNewResult(inputDisplayedFormula)
     }
+
+    fun updateSeparators(decimalSeparator: String, groupingSeparator: String) {
+        if (this.decimalSeparator != decimalSeparator || this.groupingSeparator != groupingSeparator) {
+            this.decimalSeparator = decimalSeparator
+            this.groupingSeparator = groupingSeparator
+            formatter.decimalSeparator = decimalSeparator
+            formatter.groupingSeparator = groupingSeparator
+            // future: maybe update the formulas with new separators instead of resetting the whole thing
+            handleReset()
+        }
+    }
+
+    private fun Double.format() = formatter.doubleToString(this)
+
+    private fun String.removeGroupSeparator() = formatter.removeGroupingSeparator(this)
 }

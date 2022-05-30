@@ -24,8 +24,11 @@ import me.grantland.widget.AutofitHelper
 class MainActivity : SimpleActivity(), Calculator {
     private var storedTextColor = 0
     private var vibrateOnButtonPress = true
+    private var storedUseCommaAsDecimalMark = false
+    private var decimalSeparator = DOT
+    private var groupingSeparator = COMMA
 
-    lateinit var calc: CalculatorImpl
+    private lateinit var calc: CalculatorImpl
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +53,9 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_clear.setOnLongClickListener { calc.handleReset(); true }
 
         getButtonIds().forEach {
-            it.setOnClickListener { calc.numpadClicked(it.id); checkHaptic(it) }
+            it.setOnClickListener { view ->
+                calc.numpadClicked(view.id); checkHaptic(view)
+            }
         }
 
         btn_equals.setOnClickListener { calc.handleEquals(); checkHaptic(it) }
@@ -61,6 +66,7 @@ class MainActivity : SimpleActivity(), Calculator {
         AutofitHelper.create(formula)
         storeStateVariables()
         updateViewColors(calculator_holder, getProperTextColor())
+        setupDecimalSeparator()
         checkWhatsNewDialog()
         checkAppOnSDCard()
     }
@@ -73,6 +79,10 @@ class MainActivity : SimpleActivity(), Calculator {
 
         if (config.preventPhoneFromSleeping) {
             window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
+
+        if (storedUseCommaAsDecimalMark != config.useCommaAsDecimalMark) {
+            setupDecimalSeparator()
         }
 
         vibrateOnButtonPress = config.vibrateOnButtonPress
@@ -117,6 +127,7 @@ class MainActivity : SimpleActivity(), Calculator {
     private fun storeStateVariables() {
         config.apply {
             storedTextColor = textColor
+            storedUseCommaAsDecimalMark = useCommaAsDecimalMark
         }
     }
 
@@ -185,5 +196,18 @@ class MainActivity : SimpleActivity(), Calculator {
 
     override fun showNewFormula(value: String, context: Context) {
         formula.text = value
+    }
+
+    private fun setupDecimalSeparator() {
+        storedUseCommaAsDecimalMark = config.useCommaAsDecimalMark
+        if (storedUseCommaAsDecimalMark) {
+            decimalSeparator = COMMA
+            groupingSeparator = DOT
+        } else {
+            decimalSeparator = DOT
+            groupingSeparator = COMMA
+        }
+        calc.updateSeparators(decimalSeparator, groupingSeparator)
+        btn_decimal.text = decimalSeparator
     }
 }

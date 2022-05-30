@@ -26,6 +26,7 @@ class SettingsActivity : SimpleActivity() {
         setupUseEnglish()
         setupVibrate()
         setupPreventPhoneFromSleeping()
+        setupUseCommaAsDecimalMark()
         setupCustomizeWidgetColors()
         updateTextColors(settings_scrollview)
 
@@ -91,6 +92,14 @@ class SettingsActivity : SimpleActivity() {
         settings_prevent_phone_from_sleeping_holder.setOnClickListener {
             settings_prevent_phone_from_sleeping.toggle()
             config.preventPhoneFromSleeping = settings_prevent_phone_from_sleeping.isChecked
+        }
+    }
+
+    private fun setupUseCommaAsDecimalMark() {
+        settings_use_comma_as_decimal_mark.isChecked = config.useCommaAsDecimalMark
+        settings_use_comma_as_decimal_mark_holder.setOnClickListener {
+            settings_use_comma_as_decimal_mark.toggle()
+            config.useCommaAsDecimalMark = settings_use_comma_as_decimal_mark.isChecked
         }
     }
 
