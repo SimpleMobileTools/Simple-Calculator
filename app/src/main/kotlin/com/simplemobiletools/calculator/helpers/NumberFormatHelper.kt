@@ -21,10 +21,11 @@ class NumberFormatHelper(
         return formatter.format(d)
     }
 
-    fun addGroupingSeparators(str: String) = doubleToString(
-        removeGroupingSeparator(str).toDouble()
-    )
+    fun addGroupingSeparators(str: String): String {
+        return doubleToString(removeGroupingSeparator(str).toDouble())
+    }
 
-    fun removeGroupingSeparator(str: String) =
-        str.replace(groupingSeparator, "").replace(decimalSeparator, DOT)
+    fun removeGroupingSeparator(str: String): String {
+        return str.replace(groupingSeparator, "").replace(decimalSeparator, DOT)
+    }
 }

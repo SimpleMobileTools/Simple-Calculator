@@ -37,28 +37,28 @@ class MainActivity : SimpleActivity(), Calculator {
 
         calc = CalculatorImpl(this, applicationContext)
 
-        btn_plus.setOnClickListener { calc.handleOperation(PLUS); checkHaptic(it) }
-        btn_minus.setOnClickListener { calc.handleOperation(MINUS); checkHaptic(it) }
-        btn_multiply.setOnClickListener { calc.handleOperation(MULTIPLY); checkHaptic(it) }
-        btn_divide.setOnClickListener { calc.handleOperation(DIVIDE); checkHaptic(it) }
-        btn_percent.setOnClickListener { calc.handleOperation(PERCENT); checkHaptic(it) }
-        btn_power.setOnClickListener { calc.handleOperation(POWER); checkHaptic(it) }
-        btn_root.setOnClickListener { calc.handleOperation(ROOT); checkHaptic(it) }
+        btn_plus.setOnClickOperation(PLUS)
+        btn_minus.setOnClickOperation(MINUS)
+        btn_multiply.setOnClickOperation(MULTIPLY)
+        btn_divide.setOnClickOperation(DIVIDE)
+        btn_percent.setOnClickOperation(PERCENT)
+        btn_power.setOnClickOperation(POWER)
+        btn_root.setOnClickOperation(ROOT)
+        btn_minus.setOnLongClickListener { calc.turnToNegative() }
 
-        btn_minus.setOnLongClickListener {
-            calc.turnToNegative()
+        btn_clear.setVibratingOnClick { calc.handleClear() }
+        btn_clear.setOnLongClickListener {
+            calc.handleReset()
+            true
         }
 
-        btn_clear.setOnClickListener { calc.handleClear(); checkHaptic(it) }
-        btn_clear.setOnLongClickListener { calc.handleReset(); true }
-
         getButtonIds().forEach {
-            it.setOnClickListener { view ->
-                calc.numpadClicked(view.id); checkHaptic(view)
+            it.setVibratingOnClick { view ->
+                calc.numpadClicked(view.id)
             }
         }
 
-        btn_equals.setOnClickListener { calc.handleEquals(); checkHaptic(it) }
+        btn_equals.setVibratingOnClick { calc.handleEquals() }
         formula.setOnLongClickListener { copyToClipboard(false) }
         result.setOnLongClickListener { copyToClipboard(true) }
 
@@ -209,5 +209,18 @@ class MainActivity : SimpleActivity(), Calculator {
         }
         calc.updateSeparators(decimalSeparator, groupingSeparator)
         btn_decimal.text = decimalSeparator
+    }
+
+    private fun View.setVibratingOnClick(callback: (view: View) -> Unit) {
+        setOnClickListener {
+            callback(it)
+            checkHaptic(it)
+        }
+    }
+
+    private fun View.setOnClickOperation(operation: String) {
+        setVibratingOnClick {
+            calc.handleOperation(operation)
+        }
     }
 }
