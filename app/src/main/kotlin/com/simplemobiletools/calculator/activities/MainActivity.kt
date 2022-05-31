@@ -46,19 +46,19 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_root.setOnClickOperation(ROOT)
         btn_minus.setOnLongClickListener { calc.turnToNegative() }
 
-        btn_clear.setVibratingOnClick { calc.handleClear() }
+        btn_clear.setVibratingOnClickListener { calc.handleClear() }
         btn_clear.setOnLongClickListener {
             calc.handleReset()
             true
         }
 
         getButtonIds().forEach {
-            it.setVibratingOnClick { view ->
+            it.setVibratingOnClickListener { view ->
                 calc.numpadClicked(view.id)
             }
         }
 
-        btn_equals.setVibratingOnClick { calc.handleEquals() }
+        btn_equals.setVibratingOnClickListener { calc.handleEquals() }
         formula.setOnLongClickListener { copyToClipboard(false) }
         result.setOnLongClickListener { copyToClipboard(true) }
 
@@ -211,7 +211,7 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_decimal.text = decimalSeparator
     }
 
-    private fun View.setVibratingOnClick(callback: (view: View) -> Unit) {
+    private fun View.setVibratingOnClickListener(callback: (view: View) -> Unit) {
         setOnClickListener {
             callback(it)
             checkHaptic(it)
@@ -219,7 +219,7 @@ class MainActivity : SimpleActivity(), Calculator {
     }
 
     private fun View.setOnClickOperation(operation: String) {
-        setVibratingOnClick {
+        setVibratingOnClickListener {
             calc.handleOperation(operation)
         }
     }
