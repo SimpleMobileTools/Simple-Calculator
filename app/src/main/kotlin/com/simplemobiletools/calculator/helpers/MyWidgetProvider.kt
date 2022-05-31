@@ -17,6 +17,9 @@ import com.simplemobiletools.commons.extensions.setText
 class MyWidgetProvider : AppWidgetProvider(), Calculator {
     companion object {
         private var calc: CalculatorImpl? = null
+        private var storedUseCommaAsDecimalMark = false
+        private var decimalSeparator = DOT
+        private var groupingSeparator = COMMA
     }
 
     override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {
@@ -53,6 +56,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
             views.applyColorFilter(R.id.widget_background, config.widgetBgColor)
 
             updateTextColors(views, config.widgetTextColor)
+            setupDecimalSeparator(views, config.useCommaAsDecimalMark)
             appWidgetManager.updateAppWidget(it, views)
         }
     }
@@ -97,7 +101,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
 
     private fun myAction(action: String, context: Context) {
         if (calc == null) {
-            calc = CalculatorImpl(this, context)
+            calc = CalculatorImpl(this, context, decimalSeparator, groupingSeparator)
         }
 
         when (action) {
@@ -140,5 +144,18 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
     override fun onDeleted(context: Context?, appWidgetIds: IntArray?) {
         super.onDeleted(context, appWidgetIds)
         calc = null
+    }
+
+    private fun setupDecimalSeparator(views: RemoteViews, useCommaAsDecimalMark: Boolean) {
+        storedUseCommaAsDecimalMark = useCommaAsDecimalMark
+        if (storedUseCommaAsDecimalMark) {
+            decimalSeparator = COMMA
+            groupingSeparator = DOT
+        } else {
+            decimalSeparator = DOT
+            groupingSeparator = COMMA
+        }
+        calc?.updateSeparators(decimalSeparator, groupingSeparator)
+        views.setTextViewText(R.id.btn_decimal, decimalSeparator)
     }
 }
