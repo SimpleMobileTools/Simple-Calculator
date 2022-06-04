@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.simplemobiletools.calculator.databases.CalculatorDatabase
 import com.simplemobiletools.calculator.helpers.Config
+import com.simplemobiletools.calculator.helpers.MyWidgetProvider
 import com.simplemobiletools.calculator.interfaces.CalculatorDao
 
 val Context.config: Config get() = Config.newInstance(applicationContext)
@@ -28,10 +29,14 @@ fun Context.updateViewColors(viewGroup: ViewGroup, textColor: Int) {
         }
 }
 
-inline fun <reified T> Context.refreshAppWidget() {
-    val intent = Intent(this, T::class.java)
-    intent.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
-    val ids = AppWidgetManager.getInstance(this).getAppWidgetIds(ComponentName(this, T::class.java))
-    intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids)
-    sendBroadcast(intent)
+fun Context.updateWidgets() {
+    val widgetIDs = AppWidgetManager.getInstance(applicationContext)?.getAppWidgetIds(ComponentName(applicationContext, MyWidgetProvider::class.java))
+        ?: return
+    if (widgetIDs.isNotEmpty()) {
+        Intent(applicationContext, MyWidgetProvider::class.java).apply {
+            action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
+            putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, widgetIDs)
+            sendBroadcast(this)
+        }
+    }
 }

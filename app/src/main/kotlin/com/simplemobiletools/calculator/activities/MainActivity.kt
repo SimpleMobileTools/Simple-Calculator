@@ -12,8 +12,8 @@ import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.databases.CalculatorDatabase
 import com.simplemobiletools.calculator.dialogs.HistoryDialog
 import com.simplemobiletools.calculator.extensions.config
-import com.simplemobiletools.calculator.extensions.refreshAppWidget
 import com.simplemobiletools.calculator.extensions.updateViewColors
+import com.simplemobiletools.calculator.extensions.updateWidgets
 import com.simplemobiletools.calculator.helpers.*
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
@@ -84,7 +84,7 @@ class MainActivity : SimpleActivity(), Calculator {
 
         if (storedUseCommaAsDecimalMark != config.useCommaAsDecimalMark) {
             setupDecimalSeparator()
-            refreshAppWidget<MyWidgetProvider>()
+            updateWidgets()
         }
 
         vibrateOnButtonPress = config.vibrateOnButtonPress

@@ -6,8 +6,7 @@ import android.view.Menu
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.calculatorDB
 import com.simplemobiletools.calculator.extensions.config
-import com.simplemobiletools.calculator.extensions.refreshAppWidget
-import com.simplemobiletools.calculator.helpers.MyWidgetProvider
+import com.simplemobiletools.calculator.extensions.updateWidgets
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.IS_CUSTOMIZING_COLORS
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
@@ -105,7 +104,7 @@ class SettingsActivity : SimpleActivity() {
         settings_use_comma_as_decimal_mark_holder.setOnClickListener {
             settings_use_comma_as_decimal_mark.toggle()
             config.useCommaAsDecimalMark = settings_use_comma_as_decimal_mark.isChecked
-            refreshAppWidget<MyWidgetProvider>()
+            updateWidgets()
             ensureBackgroundThread { applicationContext.calculatorDB.deleteHistory() }
         }
     }
