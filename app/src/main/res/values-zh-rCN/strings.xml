@@ -12,7 +12,7 @@
     <string name="history_cleared">已清除历史记录</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">按下按键后震动</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="use_comma_as_decimal_mark">用逗号作小数点</string>
     <!-- FAQ -->
     <string name="faq_1_title">如何使用 C (清除) 按钮？</string>
     <string name="faq_1_text">点按它一次删除一个字母。长按它将立即重置所有字段。</string>

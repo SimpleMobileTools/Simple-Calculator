@@ -12,7 +12,7 @@
     <string name="history_cleared">Geçmiş temizlendi</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Düğmeye basıldığında titret</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="use_comma_as_decimal_mark">Ondalık işareti olarak virgül kullan</string>
     <!-- FAQ -->
     <string name="faq_1_title">C (Temizle) düğmesi nasıl çalışır?</string>
     <string name="faq_1_text">Üzerine dokunmak, bir seferde bir karakteri kaldıracaktır. Uzun basma, tüm alanları bir kerede sıfırlayacaktır.</string>

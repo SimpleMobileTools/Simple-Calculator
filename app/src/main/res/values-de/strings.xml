@@ -12,7 +12,7 @@
     <string name="history_cleared">Verlauf ist gelöscht worden</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="use_comma_as_decimal_mark">Komma als Dezimaltrennzeichen verwenden</string>
     <!-- FAQ -->
     <string name="faq_1_title">Wie funktioniert die C-Taste (Löschen)\?</string>
     <string name="faq_1_text">Bei einmaliger Berührung wird ein Zeichen entfernt. Bei langer Berührung werden alle Felder zurück gesetzt.</string>

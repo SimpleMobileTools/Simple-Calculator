@@ -12,7 +12,7 @@
     <string name="history_cleared">Geschiedenis is geleegd</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Trillen bij het indrukken van toetsen</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="use_comma_as_decimal_mark">Komma als decimaalteken gebruiken</string>
     <!-- FAQ -->
     <string name="faq_1_title">Hoe werkt de knop C (Clear)?</string>
     <string name="faq_1_text">Kort indrukken verwijdert één karakter per keer. Lang drukken wist direct alle velden.</string>
