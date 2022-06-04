@@ -272,11 +272,14 @@ class CalculatorImpl(
                 }
 
                 showNewResult(result.format())
-                baseValue = result
-                val newFormula = expression.replace("sqrt", "√").replace("*", "×").replace("/", "÷")
-                HistoryHelper(context).insertOrUpdateHistoryEntry(History(null, newFormula, result.format(), System.currentTimeMillis()))
-                inputDisplayedFormula = result.format()
+                val newFormula = "${baseValue.format()}$sign${secondValue.format()}"
+                HistoryHelper(context).insertOrUpdateHistoryEntry(
+                    History(id = null, formula = newFormula, result = result.format(), timestamp = System.currentTimeMillis())
+                )
                 showNewFormula(newFormula)
+
+                inputDisplayedFormula = result.format()
+                baseValue = result
             } catch (e: Exception) {
                 context.toast(R.string.unknown_error_occurred)
             }
