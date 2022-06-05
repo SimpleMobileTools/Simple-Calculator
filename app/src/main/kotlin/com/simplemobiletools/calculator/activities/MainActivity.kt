@@ -13,6 +13,7 @@ import com.simplemobiletools.calculator.databases.CalculatorDatabase
 import com.simplemobiletools.calculator.dialogs.HistoryDialog
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.extensions.updateViewColors
+import com.simplemobiletools.calculator.extensions.updateWidgets
 import com.simplemobiletools.calculator.helpers.*
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
@@ -24,8 +25,11 @@ import me.grantland.widget.AutofitHelper
 class MainActivity : SimpleActivity(), Calculator {
     private var storedTextColor = 0
     private var vibrateOnButtonPress = true
+    private var storedUseCommaAsDecimalMark = false
+    private var decimalSeparator = DOT
+    private var groupingSeparator = COMMA
 
-    lateinit var calc: CalculatorImpl
+    private lateinit var calc: CalculatorImpl
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,26 +38,28 @@ class MainActivity : SimpleActivity(), Calculator {
 
         calc = CalculatorImpl(this, applicationContext)
 
-        btn_plus.setOnClickListener { calc.handleOperation(PLUS); checkHaptic(it) }
-        btn_minus.setOnClickListener { calc.handleOperation(MINUS); checkHaptic(it) }
-        btn_multiply.setOnClickListener { calc.handleOperation(MULTIPLY); checkHaptic(it) }
-        btn_divide.setOnClickListener { calc.handleOperation(DIVIDE); checkHaptic(it) }
-        btn_percent.setOnClickListener { calc.handleOperation(PERCENT); checkHaptic(it) }
-        btn_power.setOnClickListener { calc.handleOperation(POWER); checkHaptic(it) }
-        btn_root.setOnClickListener { calc.handleOperation(ROOT); checkHaptic(it) }
+        btn_plus.setOnClickOperation(PLUS)
+        btn_minus.setOnClickOperation(MINUS)
+        btn_multiply.setOnClickOperation(MULTIPLY)
+        btn_divide.setOnClickOperation(DIVIDE)
+        btn_percent.setOnClickOperation(PERCENT)
+        btn_power.setOnClickOperation(POWER)
+        btn_root.setOnClickOperation(ROOT)
+        btn_minus.setOnLongClickListener { calc.turnToNegative() }
 
-        btn_minus.setOnLongClickListener {
-            calc.turnToNegative()
+        btn_clear.setVibratingOnClickListener { calc.handleClear() }
+        btn_clear.setOnLongClickListener {
+            calc.handleReset()
+            true
         }
-
-        btn_clear.setOnClickListener { calc.handleClear(); checkHaptic(it) }
-        btn_clear.setOnLongClickListener { calc.handleReset(); true }
 
         getButtonIds().forEach {
-            it.setOnClickListener { calc.numpadClicked(it.id); checkHaptic(it) }
+            it.setVibratingOnClickListener { view ->
+                calc.numpadClicked(view.id)
+            }
         }
 
-        btn_equals.setOnClickListener { calc.handleEquals(); checkHaptic(it) }
+        btn_equals.setVibratingOnClickListener { calc.handleEquals() }
         formula.setOnLongClickListener { copyToClipboard(false) }
         result.setOnLongClickListener { copyToClipboard(true) }
 
@@ -61,6 +67,7 @@ class MainActivity : SimpleActivity(), Calculator {
         AutofitHelper.create(formula)
         storeStateVariables()
         updateViewColors(calculator_holder, getProperTextColor())
+        setupDecimalSeparator()
         checkWhatsNewDialog()
         checkAppOnSDCard()
     }
@@ -73,6 +80,11 @@ class MainActivity : SimpleActivity(), Calculator {
 
         if (config.preventPhoneFromSleeping) {
             window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
+
+        if (storedUseCommaAsDecimalMark != config.useCommaAsDecimalMark) {
+            setupDecimalSeparator()
+            updateWidgets()
         }
 
         vibrateOnButtonPress = config.vibrateOnButtonPress
@@ -117,6 +129,7 @@ class MainActivity : SimpleActivity(), Calculator {
     private fun storeStateVariables() {
         config.apply {
             storedTextColor = textColor
+            storedUseCommaAsDecimalMark = useCommaAsDecimalMark
         }
     }
 
@@ -185,5 +198,31 @@ class MainActivity : SimpleActivity(), Calculator {
 
     override fun showNewFormula(value: String, context: Context) {
         formula.text = value
+    }
+
+    private fun setupDecimalSeparator() {
+        storedUseCommaAsDecimalMark = config.useCommaAsDecimalMark
+        if (storedUseCommaAsDecimalMark) {
+            decimalSeparator = COMMA
+            groupingSeparator = DOT
+        } else {
+            decimalSeparator = DOT
+            groupingSeparator = COMMA
+        }
+        calc.updateSeparators(decimalSeparator, groupingSeparator)
+        btn_decimal.text = decimalSeparator
+    }
+
+    private fun View.setVibratingOnClickListener(callback: (view: View) -> Unit) {
+        setOnClickListener {
+            callback(it)
+            checkHaptic(it)
+        }
+    }
+
+    private fun View.setOnClickOperation(operation: String) {
+        setVibratingOnClickListener {
+            calc.handleOperation(operation)
+        }
     }
 }

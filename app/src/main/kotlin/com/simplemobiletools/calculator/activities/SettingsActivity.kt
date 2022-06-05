@@ -4,12 +4,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import com.simplemobiletools.calculator.R
+import com.simplemobiletools.calculator.extensions.calculatorDB
 import com.simplemobiletools.calculator.extensions.config
+import com.simplemobiletools.calculator.extensions.updateWidgets
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.IS_CUSTOMIZING_COLORS
+import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import kotlinx.android.synthetic.main.activity_settings.*
 import java.util.*
 import kotlin.system.exitProcess
+
 
 class SettingsActivity : SimpleActivity() {
 
@@ -26,6 +30,7 @@ class SettingsActivity : SimpleActivity() {
         setupUseEnglish()
         setupVibrate()
         setupPreventPhoneFromSleeping()
+        setupUseCommaAsDecimalMark()
         setupCustomizeWidgetColors()
         updateTextColors(settings_scrollview)
 
@@ -91,6 +96,18 @@ class SettingsActivity : SimpleActivity() {
         settings_prevent_phone_from_sleeping_holder.setOnClickListener {
             settings_prevent_phone_from_sleeping.toggle()
             config.preventPhoneFromSleeping = settings_prevent_phone_from_sleeping.isChecked
+        }
+    }
+
+    private fun setupUseCommaAsDecimalMark() {
+        settings_use_comma_as_decimal_mark.isChecked = config.useCommaAsDecimalMark
+        settings_use_comma_as_decimal_mark_holder.setOnClickListener {
+            settings_use_comma_as_decimal_mark.toggle()
+            config.useCommaAsDecimalMark = settings_use_comma_as_decimal_mark.isChecked
+            updateWidgets()
+            ensureBackgroundThread { 
+                applicationContext.calculatorDB.deleteHistory() 
+            }
         }
     }
 

@@ -24,3 +24,9 @@ const val SIX = "six"
 const val SEVEN = "seven"
 const val EIGHT = "eight"
 const val NINE = "nine"
+
+const val DOT = "."
+const val COMMA = ","
+
+// shared prefs
+const val USE_COMMA_AS_DECIMAL_MARK = "use_comma_as_decimal_mark"
