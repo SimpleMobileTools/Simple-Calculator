@@ -105,7 +105,9 @@ class SettingsActivity : SimpleActivity() {
             settings_use_comma_as_decimal_mark.toggle()
             config.useCommaAsDecimalMark = settings_use_comma_as_decimal_mark.isChecked
             updateWidgets()
-            ensureBackgroundThread { applicationContext.calculatorDB.deleteHistory() }
+            ensureBackgroundThread { 
+                applicationContext.calculatorDB.deleteHistory() 
+            }
         }
     }
 
