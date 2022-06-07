@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.8.2 *(2022-06-07)*
+----------------------------
+
+ * Allow toggling between a decimal dot and comma
+ * Added some translation improvements
+
 Version 5.8.1 *(2022-05-20)*
 ----------------------------
 
