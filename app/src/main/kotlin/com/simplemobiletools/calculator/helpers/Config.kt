@@ -9,6 +9,6 @@ class Config(context: Context) : BaseConfig(context) {
     }
 
     var useCommaAsDecimalMark: Boolean
-        get() = prefs.getBoolean(USE_COMMA_AS_DECIMAL_MARK, false)
+        get() = prefs.getBoolean(USE_COMMA_AS_DECIMAL_MARK, getDecimalSeparator() == COMMA)
         set(useCommaAsDecimalMark) = prefs.edit().putBoolean(USE_COMMA_AS_DECIMAL_MARK, useCommaAsDecimalMark).apply()
 }

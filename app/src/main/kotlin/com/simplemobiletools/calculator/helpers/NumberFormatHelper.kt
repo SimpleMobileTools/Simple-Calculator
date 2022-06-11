@@ -29,3 +29,7 @@ class NumberFormatHelper(
         return str.replace(groupingSeparator, "").replace(decimalSeparator, DOT)
     }
 }
+
+fun getDecimalSeparator(): String {
+    return DecimalFormatSymbols.getInstance().decimalSeparator.toString()
+}

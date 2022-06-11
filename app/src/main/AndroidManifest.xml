@@ -80,6 +80,14 @@
                 android:resource="@xml/widget_info" />
         </receiver>
 
+        <receiver
+            android:name=".receivers.LocaleChangeReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
         <activity-alias
             android:name=".activities.SplashActivity.Red"
             android:enabled="false"
