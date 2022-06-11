@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import com.simplemobiletools.calculator.extensions.updateWidgets
 
-
 class LocaleChangeReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
@@ -13,5 +12,4 @@ class LocaleChangeReceiver : BroadcastReceiver() {
             context.updateWidgets()
         }
     }
-
 }
