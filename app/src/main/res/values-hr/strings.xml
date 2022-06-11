@@ -4,18 +4,18 @@
     <string name="app_launcher_name">Kalkulator</string>
     <string name="scientific_calculator">Znanstveni kalkulator</string>
     <!-- Calculator field -->
-    <string name="formula_divide_by_zero_error">Pogreška: podjela prema nuli</string>
+    <string name="formula_divide_by_zero_error">Pogreška: dijeljenje s nulom</string>
     <!-- History -->
     <string name="history">Povijest</string>
     <string name="history_empty">Povijest je prazna</string>
-    <string name="clear_history">Očisti</string>
-    <string name="history_cleared">Povijest je očišćena</string>
+    <string name="clear_history">Izbriši</string>
+    <string name="history_cleared">Povijest je izbrisana</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibriraj prilikom pritiska na gumb</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="use_comma_as_decimal_mark">Koristi zarez kao decimalni znak</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Kako funkcionira gumb C (Očisti)?</string>
-    <string name="faq_1_text">Dodirom C gumba, uklanjate znak jedan po jedan. Dugim pritiskom ne njega resetirati će sva polja.</string>
+    <string name="faq_1_title">Kako funkcionira gumb C (Izbriši)\?</string>
+    <string name="faq_1_text">Dodirom gumba uklanjaju se znakovi jedan po jedan. Dugim pritiskom gumba resetirat će sva polja.</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Jednostavan Kalkulator - Brzo napravite izračune</string>
