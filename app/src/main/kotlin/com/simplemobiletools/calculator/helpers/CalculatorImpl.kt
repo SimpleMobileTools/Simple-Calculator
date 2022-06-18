@@ -332,7 +332,7 @@ class CalculatorImpl(
             }
             val lastValue = newValue.last().toString()
             lastKey = when {
-                operations.contains(lastValue) -> CLEAR
+                operations.contains(lastValue) || newValue == "0" -> CLEAR
                 lastValue == decimalSeparator -> DECIMAL
                 else -> DIGIT
             }
