@@ -1,1 +1,0 @@
-Kalkulator dengan fungsi dasar dan widget yang bisa disesuaikan.
