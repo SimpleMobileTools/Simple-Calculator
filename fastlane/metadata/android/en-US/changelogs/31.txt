@@ -1,2 +1,0 @@
- * Fixed percentage handling
- * Couple UI translation improvements

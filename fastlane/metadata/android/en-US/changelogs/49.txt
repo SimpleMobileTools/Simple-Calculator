@@ -1,1 +1,0 @@
- * Added support for Material You theme on Android 12+

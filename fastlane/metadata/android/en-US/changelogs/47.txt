@@ -1,2 +1,0 @@
- * Fixed some decimal rounding errors at plus and minus operations
- * Added some stability, translation and UX improvements

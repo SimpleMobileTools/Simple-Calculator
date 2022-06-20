@@ -1,2 +1,0 @@
- * Fixed percentage handling with bigger numbers
- * Added some stability and translation improvements

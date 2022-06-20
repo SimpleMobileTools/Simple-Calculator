@@ -1,2 +1,0 @@
- * Use larger precision at calculations (by vyasknellutla)
- * Some translation and UX improvements

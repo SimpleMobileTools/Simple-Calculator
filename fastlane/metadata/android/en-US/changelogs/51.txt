@@ -1,2 +1,0 @@
- * Allow toggling between a decimal dot and comma
- * Added some translation improvements

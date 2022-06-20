@@ -1,2 +1,0 @@
- * Added White theme
- * Show an error at too big or weird results, do not crash

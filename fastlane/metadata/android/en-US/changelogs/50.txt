@@ -1,2 +1,0 @@
- * Added some widget related improvements, but require Simple Thank You for using them
- * Added some stabiliy and translation improvements
