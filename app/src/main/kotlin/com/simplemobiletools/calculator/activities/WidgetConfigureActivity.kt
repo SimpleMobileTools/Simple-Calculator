@@ -12,7 +12,7 @@ import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.helpers.MyWidgetProvider
 import com.simplemobiletools.commons.dialogs.ColorPickerDialog
-import com.simplemobiletools.commons.dialogs.WidgetLockedDialog
+import com.simplemobiletools.commons.dialogs.FeatureLockedDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.IS_CUSTOMIZING_COLORS
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,7 +24,7 @@ class WidgetConfigureActivity : SimpleActivity() {
     private var mBgColor = 0
     private var mTextColor = 0
     private var mBgColorWithoutTransparency = 0
-    private var mWidgetLockedDialog: WidgetLockedDialog? = null
+    private var mFeatureLockedDialog: FeatureLockedDialog? = null
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         useDynamicTheme = false
@@ -48,7 +48,7 @@ class WidgetConfigureActivity : SimpleActivity() {
         config_bg_seekbar.setColors(mTextColor, primaryColor, primaryColor)
 
         if (!isCustomizingColors && !isOrWasThankYouInstalled()) {
-            mWidgetLockedDialog = WidgetLockedDialog(this) {
+            mFeatureLockedDialog = FeatureLockedDialog(this) {
                 if (!isOrWasThankYouInstalled()) {
                     finish()
                 }
@@ -60,8 +60,8 @@ class WidgetConfigureActivity : SimpleActivity() {
         super.onResume()
         window.decorView.setBackgroundColor(0)
 
-        if (mWidgetLockedDialog != null && isOrWasThankYouInstalled()) {
-            mWidgetLockedDialog?.dismissDialog()
+        if (mFeatureLockedDialog != null && isOrWasThankYouInstalled()) {
+            mFeatureLockedDialog?.dismissDialog()
         }
     }
 
