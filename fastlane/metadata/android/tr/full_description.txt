@@ -1,16 +1,30 @@
- Bu şık ve modern hesap makinesi, görmeyi seveceğiniz harika bir kullanıcı deneyimi sunar. Uzun basarak sonucu veya formülü panoya kopyalayabilirsiniz. Uygulama; çarpma, bölme, kökünü ve üssünü alma gibi birçok temel işleve sahip hızlı hesaplamalar için basit bir yardımcıdır.
+Bu şık ve modern hesap makinesi, görmekten hoşlanacağınız harika bir kullanıcı deneyimi sunar. Uzun basarak sonucu veya formülü panoya kopyalayabilirsiniz. Bu hesap makinesini, günlük gelirinizi ve diğer tutarları farklı ülke para birimlerinde hesaplamak için bir para birimi dönüştürücü olarak da kullanabilirsiniz. Gözü rahatlatan koyu tema ile düğmeleri ve sayıları daha kolay görmeniz ve bu hesap makinesini basit hesaplamalar için kullanmanız veya bir para birimi dönüştürücü veya bir hesap makinesi ve grafik hesap makinesi olarak kullanmanız artık çok kolay. Bu matematik hesap makinesini kredi hesaplama makinesi olarak da kullanabilirsiniz
 
-Değerlerinizi girerken emin olmanız için düğmeye basıldığında titretmesini etkinleştirebilirsiniz. Rahat kullanım için uygulamayı kullanırken telefonun uykuya geçmesini önleme seçeneği vardır.
+Uygulama çarpma, bölme, kök alma ve üs hesaplama dahil olmak üzere birçok temel işlevle hızlı hesaplamalar için basit bir yardımcıdır. Ayrıca, bu grafik hesap makinesi ve matematik hesap makinesinde karmaşık hesaplamalarınıza odaklanmanıza yardımcı olamayan farklı hesap makinelerinde sağlanan keskin renkleri kullanmak yerine hesap makinenizin daha pürüzsüz ve kullanımı kolay görünmesini sağlamak üzere bu yeni teknolojiyi kullanabilmeniz için koyu tema ile birlikte gelir.
 
-Yeniden boyutlandırılabilir widget\'ın metin renginin yanı sıra arka planın rengi ve saydamlığı da özelleştirilebilir. Uygulamayı açmak için widget\'taki sonuca veya formüle basın.
+Değerlerinizi girerken kendinize güvenmenizi sağlamak için düğmeye basıldığında titremesini sağlayabilirsiniz. Bu uygulamada kullanılan zarif renkler harika ve gözlere pürüzsüz görünür, böylece tüm düğmeleri kolayca ayırt edebilir ve kolaylıkla hesaplayabilirsiniz. Bu hesap makinesi karmaşık kök problemlerini çözmek için kullanılabileceği gibi para birimi dönüştürücü veya grafik hesap makinesi olarak da kullanılabilir.
 
-Öntanımlı olarak materyal tasarım ve koyu tema ile birlikte gelir, kolay kullanım için harika bir kullanıcı deneyimi sağlar. İnternet erişiminin olmaması size diğer uygulamalardan daha fazla gizlilik, güvenlik ve istikrar sağlar. Reklam veya gereksiz izinler içermez. Tamamen açık kaynaktır, özelleştirilebilir renkler sunar. 
+Rahat kullanım için uygulamayı kullanırken telefonun uyumasını önlemek ve bu para birimi dönüştürücü ve grafik hesap makinesi artı matematik hesap makinesinde karmaşık problemleriniz üzerinde çalışmaya devam etmek için bir ayar seçeneği vardır.
 
-<b>Tüm Basit Araçlar paketini buradan inceleyin:</b>
+Yeniden boyutlandırılabilir widget'ın metin renginin yanı sıra arka planın rengi ve saydamlığı da özelleştirilebilir. Uygulamayı açmak için widget'taki sonuca veya formüle basın. Uygulamayı açtıktan sonra, bu hesap makinesini para birimi dönüştürücü veya grafik hesap makinesi gibi karmaşık sorunlarınız için kullanabilirsiniz.
+
+Öntanımlı olarak material tasarım ve koyu tema ile birlikte gelir, kolay kullanım için harika bir kullanıcı deneyimi sağlar. İnternet erişiminin olmaması size diğer uygulamalardan daha fazla gizlilik, güvenlik ve kararlılık sağlar.
+
+Reklam veya gereksiz izinler içermez. Tamamen açık kaynaklıdır, özelleştirilebilir renkler sağlar.
+
+Özellikler:
+- Kullanımı kolay hesap makinesi.
+- Hesap makinesinin sorunsuz kullanımını sağlamak için koyu tema ile birlikte gelir.
+- Gelirlerinizi ve diğer tutarları hesaplamanıza yardımcı olmak için bir para birimi dönüştürücü olarak çalışır.
+- Grafikleri hızlı bir şekilde hesaplamak için grafik hesap makinesi olarak kullanılabilir.
+- Daha havalı ve ihtiyaçlarınıza göre görünmesini sağlamak için özelleştirilebilir metin rengi.
+- Hesaplamaları daha rahat hale getirmek için ekrana dokunan ortalama parmağa göre boyutlandırılmış düğmeler.
+
+<b>Basit Araçlar paketinin tamamını buradan inceleyin:</b>
 https://www.simplemobiletools.com
 
-<b>Facebook:</b>
+Facebook:
 https://www.facebook.com/simplemobiletools
 
-<b>Reddit:</b>
+Reddit:
 https://www.reddit.com/r/SimpleMobileTools
