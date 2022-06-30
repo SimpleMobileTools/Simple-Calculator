@@ -11,14 +11,14 @@
     <string name="clear_history">Изчистване</string>
     <string name="history_cleared">Историята беше изчистена</string>
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Вибрация при натискане на бутон</string>
+    <string name="vibrate_on_button_press">Вибриране при натискане на бутоните</string>
     <string name="use_comma_as_decimal_mark">Използване на запетая като десетичен знак</string>
     <!-- FAQ -->
     <string name="faq_1_title">Как работи бутонът C (Clear)\?</string>
     <string name="faq_1_text">Натискането му ще премахва по един символ. Дълго натискане ще изчисти наведнъж всички полета.</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Обикновен калкулатор - Бързи изчисления</string>
+    <string name="app_title">Обикновен Калкулатор - Бързи изчисления</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Калкулатор за бързи изчисления с приятен интерфейс и без реклами</string>
     <string name="app_long_description">
