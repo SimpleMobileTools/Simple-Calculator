@@ -20,7 +20,7 @@ Funzionalità:
 - Colore del testo personalizzabile per renderlo più cool e in base alle proprie esigenze.
 - Pulsanti dimensionati in base alla media delle dita che toccano lo schermo per rendere più comodi i calcoli.
 
-<b>Scopri la suite completa di Simple Tools qui:</b>
+Scopri la suite completa di Simple Tools qui:
 https://www.simplemobiletools.com
 
 Facebook:
@@ -28,3 +28,6 @@ https://www.facebook.com/simplemobiletools
 
 Reddit:
 https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools
