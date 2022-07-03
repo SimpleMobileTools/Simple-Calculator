@@ -1,2 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="faq_1_title">How does the C (Clear) button work\?</string>
+    <string name="app_name">Simple Calculator</string>
+    <string name="app_launcher_name">Calculator</string>
+    <string name="scientific_calculator">Scientific Calculator</string>
+    <string name="formula_divide_by_zero_error">Error: division by zero</string>
+    <string name="history">History</string>
+    <string name="history_empty">History is empty</string>
+    <string name="clear_history">Clear</string>
+    <string name="history_cleared">History has been cleared</string>
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
+    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_long_description"> This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it. The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers. You can make it vibrate on button presses to make you confident during inserting your values. There is an option to prevent the phone from sleeping while using the app for comfortable usage. The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app. It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps. Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors. <b>Check out the full suite of Simple Tools here:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
+</resources>
