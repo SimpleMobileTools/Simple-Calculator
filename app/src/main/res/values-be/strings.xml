@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Simple Calculator</string>
-    <string name="app_launcher_name">Calculator</string>
-    <string name="scientific_calculator">Scientific Calculator</string>
-
+    <string name="app_launcher_name">Калькулятар</string>
+    <string name="scientific_calculator">Навуковы калькулятар</string>
     <!-- Calculator field -->
-    <string name="formula_divide_by_zero_error">Error: division by zero</string>
-
+    <string name="formula_divide_by_zero_error">Памылка: дзяленне на нуль</string>
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
-
+    <string name="history">Гісторыя</string>
+    <string name="history_empty">Гісторыя пустая</string>
+    <string name="clear_history">Ачысціць</string>
+    <string name="history_cleared">Гісторыя ачышчана</string>
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
-
+    <string name="vibrate_on_button_press">Вібраваць пры націску на кнопкі</string>
+    <string name="use_comma_as_decimal_mark">Выкарыстоўваць коску ў якасці дзесятковага падзельніка</string>
     <!-- FAQ -->
-    <string name="faq_1_title">How does the C (Clear) button work?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
-
+    <string name="faq_1_title">Як працуе кнопка C (Ачыстка)\?</string>
+    <string name="faq_1_text">Крананне да яе выдаліць адзін сімвал. Націск на яе ачысціць адразу ўсе палі.</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple Calculator - Do your calculations quickly</string>
@@ -50,7 +45,6 @@
         <b>Reddit:</b>
         https://www.reddit.com/r/SimpleMobileTools
     </string>
-
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
