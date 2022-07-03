@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.9.0 *(2022-07-03)*
+----------------------------
+
+ * Added landscape mode
+ * Added some translation, stability and UX improvements
+
 Version 5.8.2 *(2022-06-07)*
 ----------------------------
 
