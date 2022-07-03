@@ -324,8 +324,9 @@ class CalculatorImpl(
         val lastDeletedValue = inputDisplayedFormula.lastOrNull().toString()
 
         var newValue = inputDisplayedFormula.dropLast(1)
-        if (newValue == "") {
+        if (newValue == "" || newValue == "0") {
             newValue = "0"
+            lastKey = CLEAR
         } else {
             if (operations.contains(lastDeletedValue) || lastKey == EQUALS) {
                 lastOperation = ""
