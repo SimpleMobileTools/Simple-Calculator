@@ -30,8 +30,7 @@
 
         <activity
             android:name=".activities.MainActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
 
         <activity
             android:name=".activities.WidgetConfigureActivity"
