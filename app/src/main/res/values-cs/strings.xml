@@ -16,12 +16,6 @@
     <!-- FAQ -->
     <string name="faq_1_title">Jak funguje tlačítko C?</string>
     <string name="faq_1_text">Stisknutím odmažete jeden znak. Dlouhým podržením smažete naráz všechna pole.</string>
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">jednoduchá kalkulačka - Udělejte vaše výpočty rychle</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Kalkulačka pro rychlé a jednoduché výpočty s přívětivým uživatelským rozhraním bez reklam</string>
-    <string name="app_long_description"> Tato stylová moderní kalkulačka nabízí dobrý uživatelský zážitek, který rádi uvidíte. Výsledek nebo vzorec můžete zkopírovat do schránky dlouhým stisknutím. Aplikace je jednoduchý pomocník pro rychlé výpočty s mnoha základními funkcemi, včetně násobení, dělení, mocnin a odmocnin. You can make it vibrate on button presses to make you confident during inserting your values. There is an option to prevent the phone from sleeping while using the app for comfortable usage. The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app. It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps. Neobsahuje žádné reklamy ani nepotřebná oprávnění. Má otevřený zdrojový kód a možnost změny barev. <b>Check out the full suite of Simple Tools here:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

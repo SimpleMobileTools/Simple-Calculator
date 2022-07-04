@@ -16,35 +16,6 @@
     <!-- FAQ -->
     <string name="faq_1_title">Cum funcționează butonul C (Curăță)?</string>
     <string name="faq_1_text">Dacă apăsați pe el, veți elimina câte un caracter pe rând. Apăsarea prelungită a acestuia va reseta toate câmpurile deodată.</string>
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Faceți calculele rapid</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Un calculator rapid și simplu, cu o interfață plăcută și fără reclame</string>
-    <string name="app_long_description">
-        Acest calculator modern și elegant oferă o experiență de utilizare excelentă. Puteți copia rezultatul sau formula în clipboard prin apăsarea lungă a acesteia.
-
-        Aplicația este un ajutor simplu pentru calcule rapide cu multe funcții de bază, inclusiv înmulțirea, împărțirea, rădăcina și puterile.
-
-        Îl puteți face să vibreze la apăsarea butoanelor pentru a fi mai încrezător în timpul introducerii valorilor dumneavoastră.
-
-        Există o opțiune pentru a împiedica ecranul telefonului să se închidă în timpul utilizării aplicației, pentru o utilizare confortabilă.
-
-        Culoarea textului din widgetul redimensionabil poate fi personalizată, precum și culoarea și transparenţa fundalului. Apăsați rezultatul sau formula din widget pentru a deschide aplicația.
-
-        Aplicaţia vine cu design material şi temă întunecată în mod implicit. Limitarea necesităţii accesului la internet vă oferă mai multă intimitate, securitate şi stabilitate decât alte aplicaţii.
-
-        Nu conţine reclame sau permisiuni inutile. Codul sursă este complet open source şi oferă culori personalizabile.
-
-        <b>Consultaţi întreaga suită de aplicaţii Simple Tools aici:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

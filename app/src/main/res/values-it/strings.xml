@@ -16,12 +16,6 @@
     <!-- FAQ -->
     <string name="faq_1_title">Come funziona il tasto C (Cancella)?</string>
     <string name="faq_1_text">Premendo il tasto una volta verrà eliminato un singolo carattere; tenendolo premuto invece eliminerà tutta la stringa.</string>
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Semplice Calcolatrice - Fai i tuoi calcoli</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Una calcolatrice per fare rapidamente dei semplici calcoli senza pubblicità</string>
-    <string name="app_long_description"> Questa elegante calcolatrice moderna offre una grande esperienza utente che vi piacerà. È possibile copiare il risultato o la formula negli appunti premendo a lungo. L\'applicazione è un semplice aiuto per i calcoli veloci con molte funzioni di base tra cui moltiplicazione, divisione, radice e potenze. Puoi farla vibrare quando premi il pulsante per renderti più sicuro durante l\'inserimento dei tuoi valori. C\'è un\'opzione per evitare che il telefono si addormenti mentre si usa l\'applicazione per un uso confortevole. Il colore del testo del widget ridimensionabile può essere personalizzato, così come il colore e l\'alfa dello sfondo. Premi il risultato o la formula nel widget per aprire l\'app. Viene fornito con material design e tema scuro per impostazione predefinita, fornisce una grande esperienza utente per un facile utilizzo. La mancanza di accesso a internet ti dà più privacy, sicurezza e stabilità rispetto ad altre app. Non contiene annunci o permessi inutili. È completamente opensource, fornisce colori personalizzabili. <b> Guarda la suite completa di Simple Tools qui:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b> Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

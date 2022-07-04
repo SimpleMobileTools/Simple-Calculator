@@ -16,12 +16,6 @@
     <!-- FAQ -->
     <string name="faq_1_title">Como funciona o botão C (Clear)?</string>
     <string name="faq_1_text">Ao tocar no botão, os caracteres serão removidos um a um. Um toque longo apaga todos os caracteres ao mesmo tempo.</string>
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Calculadora</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Uma calculadora simples e sem anúncios</string>
-    <string name="app_long_description"> Uma calculadora para operações simples, como multiplicar, dividir, obter a raíz quadrada ou elevar potências. Pode configurá-la para vibrar a cada entrada de um valor para evitar enganos. Prima longamente para copiar o resultado para a a Área de transferência. Tem também a opção de impedir que o ecrã se apague durante a sua utilização. Através de um widget altamente personalizável, desde a cor do texto à do fundo, aceda e controle a calculadora directamente a partir do ecrã inicial. Com design material num tema escuro por definição. Não requer acesso à internet o que lhe confere mais privacidade, segurança e estabilidade. Não contém anúncios nem permissões desnecessárias. É totalmente open source e oferece cores personalizáveis a gosto. <b>Consulte a gama completa de aplicações Simple Tools aqui:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

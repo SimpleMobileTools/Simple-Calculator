@@ -19,37 +19,6 @@
     <!-- FAQ -->
     <string name="faq_1_title">Como funciona o botón C (Borrar)?</string>
     <string name="faq_1_text">Ao tocar o botón, os caracteres serán eliminados un a un. Un toque longo apaga todos os caracteres ao mesmo tempo.</string>
-
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
-    <string name="app_long_description">
-        Esta calculadora ofrece unha boa experiencia a nivel usuario. Con ela, pode copiar o resultado ou fórmula ao portapapeis premendo sobre el por un longo tempo.
-
-        Este aplicativo é un asistente simple para cálculos rápidos con moitas funcións básicas como multiplicar, dividir, raíces e potencias.
-
-        Podes poñerlle vibración aos botóns para cando os premas para sentirte seguro cando estás inserindo os teus valores.
-
-        Hai unha opción para evitar que o teu móbil se apague mentres estás usando este aplicativo.
-
-        Podes personalizar a cor do texto do widget redimensionable e a cor e as letras do fondo. Preme no resultado ou na fórmula do widget para abrir o aplicativo. 
-
-        E, por último, vén cun deseño material e cun tema escuro por defecto, fornece unha boa experiencia de usuario cun uso fácil. Ao non necesitar acceso a Internet, isto dáche máis privacidade, seguridade e estabilidade.
-
-        Non contén anuncios nin permisos innecesarios. Dispón dun tema escuro e é totalmente de código aberto.
-
-        <b>Visita a nosa páxina a través desta ligazón:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
-
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

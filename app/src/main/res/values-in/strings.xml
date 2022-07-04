@@ -16,18 +16,6 @@
     <!-- FAQ -->
     <string name="faq_1_title">Bagaimana tombol C (Clear) bekerja?</string>
     <string name="faq_1_text">Menyentuhnya sekali akan menghapus satu karakter. Menyentuhnya lama akan mengosongkan seluruh ruas sekaligus.</string>
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Lakukan penghitungan cepat</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Sebuah kalkulator untuk penghitungan simpel cepat dengan antarmuka pengguna yang baik dan tanpa iklan</string>
-    <string name="app_long_description"> Kalkulator modern bergaya ini menawarkan pengalaman pengguna yang luar biasa yang akan Anda sukai. Anda dapat menyalin hasil atau rumus ke clipboard dengan menekan lama. Aplikasi ini adalah pembantu sederhana untuk perhitungan cepat dengan banyak fungsi dasar termasuk mengalikan, membagi, akar dan kekuasaan. Anda dapat membuatnya bergetar saat menekan tombol untuk membuat Anda percaya diri saat memasukkan nilai Anda. Ada opsi untuk mencegah ponsel tidur saat menggunakan aplikasi untuk penggunaan yang nyaman. Warna teks widget yang dapat diubah ukurannya dapat disesuaikan, serta warna dan alfa latar belakang. Tekan hasil atau rumus di widget untuk membuka aplikasi.
-\n
-\nMuncul dengan desain material dan tema gelap secara default, memberikan pengalaman pengguna yang luar biasa untuk penggunaan yang mudah. Kurangnya akses internet memberi Anda lebih banyak privasi, keamanan, dan stabilitas daripada aplikasi lain. Tidak mengandung iklan atau izin yang tidak perlu. Ini sepenuhnya sumber-terbuka, menyediakan warna yang dapat disesuaikan.
-\n
-\n<b>Lihat rangkaian lengkap Alat Sederhana di sini:</b> https://www.simplemobiletools.com
-\n<b>Facebook:</b> https://www.facebook.com/simplemobiletools
-\n<b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
