@@ -18,9 +18,9 @@
     <string name="faq_1_text">Крананне да яе выдаліць адзін сімвал. Націск на яе ачысціць адразу ўсе палі.</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple Calculator - Do your calculations quickly</string>
+    <string name="app_title">Simple Calculator - Хуткія вылічэнні</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A calculator for quick simple calculations with a nice user interface and no ads</string>
+    <string name="app_short_description">Калькулятар для хуткіх простых вылічэнняў са зручным інтэрфейсам і без рэкламы</string>
     <string name="app_long_description">
         This stylish modern calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it.
 
