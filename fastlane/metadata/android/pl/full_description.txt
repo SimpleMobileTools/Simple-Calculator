@@ -20,7 +20,7 @@ Cechy:
 - Konfigurowalny kolor tekstu, aby wyglądał fajniej i zgodnie z Twoimi potrzebami.
 - Przyciski o rozmiarze odpowiadającym średniemu stukaniu palcem na ekranie, aby obliczenia były wygodniejsze.
 
-<b>Sprawdź pełen zestaw od Simple Tools tutaj:</b>
+Sprawdź pełen zestaw od Simple Tools tutaj:
 https://www.simplemobiletools.com
 
 Facebook:
@@ -28,3 +28,6 @@ https://www.facebook.com/simplemobiletools
 
 Reddit:
 https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools
