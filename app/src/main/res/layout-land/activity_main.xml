@@ -4,6 +4,7 @@
     android:id="@+id/calculator_holder"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:hapticFeedbackEnabled="true"
     android:orientation="vertical"
     tools:context="com.simplemobiletools.calculator.activities.MainActivity"
     tools:ignore="HardcodedText">
