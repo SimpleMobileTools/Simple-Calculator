@@ -7,14 +7,14 @@
     <string name="formula_divide_by_zero_error">Σφάλμα: διαίρεση με μηδέν</string>
 
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
+    <string name="history">Ιστορικό</string>
+    <string name="history_empty">Το Ιστορικό είναι άδειο</string>
+    <string name="clear_history">Εκκαθάριση</string>
+    <string name="history_cleared">Το Ιστορικό εκκαθαρίστηκε</string>
 
     <!-- Settings -->
     <string name="vibrate_on_button_press">Δόνηση στο πάτημα πλήκτρου</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="use_comma_as_decimal_mark">Χρήση κόμματος ως δεκαδικό σημείο</string>
 
     <!-- FAQ -->
     <string name="faq_1_title">Πώς λειτουργεί το κουμπί C (Καθαρισμός);</string>
