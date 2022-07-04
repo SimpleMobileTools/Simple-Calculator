@@ -20,7 +20,7 @@ Característiques:
 - Color de text personalitzable per fer-lo veure més fresc i ajustat a les vostres necessitats.
 - Botons de mida segons el toc mitjà dels dits a la pantalla per fer els càlculs més còmodes.
 
-<b>Consulteu el conjunt complet d'eines senzilles aquí:</b>
+Consulteu el conjunt complet d'eines senzilles aquí:
 https://www.simplemobiletools.com
 
 Facebook:
@@ -28,3 +28,6 @@ https://www.facebook.com/simplemobiletools
 
 Reddit:
 https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools
