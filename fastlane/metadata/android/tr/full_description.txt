@@ -20,7 +20,7 @@ Reklam veya gereksiz izinler içermez. Tamamen açık kaynaklıdır, özelleşti
 - Daha havalı ve ihtiyaçlarınıza göre görünmesini sağlamak için özelleştirilebilir metin rengi.
 - Hesaplamaları daha rahat hale getirmek için ekrana dokunan ortalama parmağa göre boyutlandırılmış düğmeler.
 
-<b>Basit Araçlar paketinin tamamını buradan inceleyin:</b>
+Basit Araçlar paketinin tamamını buradan inceleyin:
 https://www.simplemobiletools.com
 
 Facebook:
@@ -28,3 +28,6 @@ https://www.facebook.com/simplemobiletools
 
 Reddit:
 https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools
