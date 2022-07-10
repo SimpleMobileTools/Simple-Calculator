@@ -15,7 +15,7 @@
     <string name="use_comma_as_decimal_mark">Выкарыстоўваць коску ў якасці дзесятковага падзельніка</string>
     <!-- FAQ -->
     <string name="faq_1_title">Як працуе кнопка C (Ачыстка)\?</string>
-    <string name="faq_1_text">Крананне да яе выдаліць адзін сімвал. Націск на яе ачысціць адразу ўсе палі.</string>
+    <string name="faq_1_text">Крананне да яе выдаляе адзін сімвал. Доўгае націсканне на яе ачышчае адразу ўсе палі.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
