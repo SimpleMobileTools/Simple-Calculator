@@ -1,7 +1,0 @@
-Does dim trosydd unedau, ond gellir copïo'r canlyniad neu fformiwla i'r clipfwrdd gan ei ddal yn hir.
-
-Gellir addasu lliw testun y teclyn, yn ogystal â lliw ac alffa'r cefndir. Dalia i wasgu'r canlyniad neu fformiwla yn y teclyn i agor yr ap.
-
-Nid yw'n cynnwys hysbysebion nac yn gofyn am ganiatâd yn ddiangen. Mae'n gwbl cod agored a gellir addasu'r lliwiau i dy flas personol.
-
-Mae'r ap hwn yn un ymhlith nifer gan Simple Mobile Tools. Mae rhagor i'w gweld ar https://www.simplemobiletools.com

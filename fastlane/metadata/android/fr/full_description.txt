@@ -1,7 +1,0 @@
-Cette calculatrice ne permet pas de faire des conversions. Le résultat ou l'opération peuvent être copiés dans le presse-papier en effectuant un appui long dessus.
-
-La couleur du texte, du fond et la transparence peuvent être modifiés. Appuyez sur le résultat ou l'opération du widget pour ouvrir l'application.
-
-Aucune publicité ou autorisation inutile. Complètement opensource, elle dispose aussi d'un thème sombre.
-
-Cette application fait partie d'une suite d'applications, disponible sur https://www.simplemobiletools.com

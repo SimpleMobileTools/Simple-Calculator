@@ -1,7 +1,0 @@
-Diese App beinhaltet keinen Einheitenumrechner! Du kannst das Ergebnis oder die Formel durch längeres Drücken in die Zwischenablage kopieren.
-
-Die Textfarbe des Widgets kann angepasst werden sowie die Farbe und Transparenz des Hintergrunds. Tippe auf das Ergebnis oder die Formel im Widget, um die App zu öffnen.
-
-Beinhaltet keine Werbung oder unnötige Berechtigungen. Sie ist komplett Open Source, alle verwendeten Farben sind anpassbar.
-
-Diese App ist nur eine aus einer größeren Serie von schlichten Apps. Der Rest davon findet sich auf https://www.simplemobiletools.com

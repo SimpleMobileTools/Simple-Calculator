@@ -1,0 +1,16 @@
+Denne stilfulde moderne lommeregner tilbyder stor brugeroplevelse, som du vil elske at se. Du kan kopiere resultatet eller formlen til Udklipsholder ved at trykke længe på den. Appen er en simpel hjælper til hurtige beregninger med mange grundlæggende funktioner, herunder multiplicering, opdeling, rod og kræfter. 
+
+Du kan få den til at vibrere på knaptryk for at gøre dig sikker under indsættelsen af dine værdier. Der er en mulighed for at forhindre telefonen i at sove, mens du bruger appen til behagelig brug. Tekstfarven på den resizable widget kan tilpasses, samt farven og alfaen af baggrunden. 
+
+Tryk på resultatet eller formlen i widget\'en for at åbne appen. Det leveres med materialedesign og mørkt tema som standard giver stor brugeroplevelse for nem brug. Manglen på internetadgang giver dig mere privatliv, sikkerhed og stabilitet end andre apps. Indeholder ingen annoncer eller unødvendige tilladelser. 
+
+Det er fuldt opensource, giver tilpassede farver. 
+
+<b> Se hele pakken med enkle værktøjer her:</b>
+https://www.simplemobiletools.com
+
+<b>Facebook:</b>
+https://www.facebook.com/simplemobiletools
+
+<b>Reddit:</b>
+https://www.reddit.com/r/SimpleMobileTools

@@ -1,1 +1,0 @@
-Sade kullanıcı arayüzüyle hızlı basit hesaplamalar için güzel bir hesap makinesi

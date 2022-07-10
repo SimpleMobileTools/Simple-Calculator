@@ -1,1 +1,0 @@
-Ein Taschenrechner mit grundlegenden Funktionen und einem anpassbaren Widget.

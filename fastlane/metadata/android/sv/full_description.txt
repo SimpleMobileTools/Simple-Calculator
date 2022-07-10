@@ -1,7 +1,0 @@
-Appen har ingen enhetsomvandlare. Du kan kopiera resultat och formler till Urklipp genom att trycka länge på dem.
-
-Du kan anpassa widgetens textfärg, bakgrundsfärg och bakgrundsgenomskinlighet. Tryck på resultatet eller formeln i widgeten för att öppna appen.
-
-Innehåller ingen reklam eller onödiga behörigheter. Den har helt öppen källkod och anpassningsbara färger.
-
-Denna app är bara en del av en större serie appar. Du hittar resten av dem på https://www.simplemobiletools.com

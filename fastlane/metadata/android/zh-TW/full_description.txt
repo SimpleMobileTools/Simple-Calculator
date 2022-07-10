@@ -1,0 +1,14 @@
+沒有單位轉換器，你可以長按來複製結果或公式到剪貼簿。
+
+小工具的文字顏色以及背景顏色和透明度，都能夠自訂。按下小工具的結果或公式就能開啟應用程式。
+
+不包含廣告及非必要的權限，而且完全開放原始碼，並提供自訂顏色。
+		
+<b>Check out the full suite of Simple Tools here:</b>
+https://www.simplemobiletools.com
+
+<b>Facebook:</b>
+https://www.facebook.com/simplemobiletools
+
+<b>Reddit:</b>
+https://www.reddit.com/r/SimpleMobileTools
