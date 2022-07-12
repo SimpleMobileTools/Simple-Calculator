@@ -24,7 +24,7 @@ https://www.facebook.com/simplemobiletools
 Reddit:  
 https://www.reddit.com/r/SimpleMobileTools
 
-Telegram:
+Telegram:  
 https://t.me/SimpleMobileTools
 
 <a href='https://play.google.com/store/apps/details?id=com.simplemobiletools.calculator'><img src='https://simplemobiletools.com/images/button-google-play.svg' alt='Get it on Google Play' height=45/></a>
