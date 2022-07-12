@@ -1,26 +1,26 @@
-Ten stylowy, nowoczesny kalkulator naukowy oferuje wspaniałe wrażenia użytkownika, które pokochasz. Możesz skopiować wynik lub formułę do schowka przez długie naciśnięcie. Możesz również użyć tego kalkulatora naukowego jako przelicznika walut, aby obliczyć dzienny dochód i inne kwoty w walucie innego kraju. Dzięki kojącemu oko ciemnemu motywowi możesz teraz łatwiej zobaczyć przyciski i liczby i używać tego kalkulatora naukowego do prostych obliczeń lub używać go jako przelicznika walut lub kalkulatora naukowego i kalkulatora graficznego. Możesz również użyć tego kalkulatora matematycznego jako kalkulatora kredytu hipotecznego
+Ten stylowy, nowoczesny kalkulator oferuje wspaniałe wrażenia użytkownika, które pokochasz. Możesz skopiować wynik lub formułę do schowka przez długie ich naciśnięcie. Dzięki kojącemu oko ciemnemu motywowi możesz teraz łatwiej widzieć przyciski i liczby oraz używać tego kalkulatora do prostych obliczeń albo jako przelicznika walut lub kalkulatora i kalkulatora graficznego. Możesz również użyć tego kalkulatora matematycznego jako kalkulatora kredytu hipotecznego.
 
-Aplikacja jest prostym pomocnikiem do szybkich obliczeń z wieloma podstawowymi funkcjami, w tym mnożeniem, dzieleniem, rootowaniem i potęgami. Jest również wyposażony w ciemny motyw, dzięki czemu możesz użyć tej nowej technologii, aby Twój kalkulator naukowy wyglądał bardziej płynnie i łatwiej w użyciu, zamiast używać ostrych kolorów dostępnych w różnych kalkulatorach, które nie pomogą Ci skoncentrować się na skomplikowanych obliczeniach w tym kalkulatorze graficznym , kalkulator naukowy i kalkulator matematyczny.
+Aplikacja jest prostym pomocnikiem do szybkich obliczeń z wieloma podstawowymi funkcjami, takimi jak mnożenie, dzielenie, pierwiastkowanie i potęgowanie. Jest również wyposażona w ciemny motyw, dzięki czemu możesz użyć tej nowej technologii, aby kalkulator wyglądał bardziej płynnie i był łatwiejszy w użyciu, zamiast używać ostrych kolorów dostępnych w różnych kalkulatorach, które nie mogą pomóc Ci skoncentrować się na złożonych obliczeniach.
 
-Możesz sprawić, by wibrował po naciśnięciu przycisku, abyś był pewny siebie podczas wstawiania wartości. Wspaniałe kolory użyte w tej aplikacji są fajne i gładkie dla oczu, dzięki czemu możesz łatwo rozróżnić wszystkie przyciski i z łatwością obliczyć. Ten kalkulator naukowy może być używany do rozwiązywania złożonych problemów źródłowych lub może być również używany jako przelicznik walut lub kalkulator graficzny.
+Możesz sprawić, że będzie wibrować przy naciśnięciach przycisków, abyś miał(a) pewność podczas wstawiania swoich wartości. Wykwintne kolory używane w tej aplikacji są fajne i wyglądają spokojnie dla oczu, dzięki czemu można łatwo odróżnić wszystkie przyciski i bez trudu wykonywać obliczenia.
 
-Istnieje opcja ustawienia, aby zapobiec zasypianiu telefonu podczas korzystania z aplikacji, aby wygodnie korzystać z aplikacji i kontynuować pracę nad złożonymi problemami w tym przeliczniku walut i kalkulatorze graficznym oraz kalkulatorze matematycznym.
+Istnieje opcja zapobiegania uśpieniu urządzenia podczas korzystania z aplikacji w celu wygodnego użytkowania i kontynuowania pracy nad złożonymi problemami.
 
-Można dostosować kolor tekstu widżetu o zmiennym rozmiarze, a także kolor i alfa tła. Naciśnij wynik lub formułę w widżecie, aby otworzyć aplikację. Po otwarciu aplikacji możesz używać tego kalkulatora do rozwiązywania złożonych problemów, takich jak przelicznik walut, kalkulator graficzny lub kalkulator naukowy.
+Można dostosowywać kolor tekstu widżetu o zmiennym rozmiarze, jak również kolor i przezroczystość tła. Naciśnij wynik lub formułę w widżecie, aby otworzyć aplikację. Po otwarciu aplikacji możesz użyć tego kalkulatora do rozwiązywania złożonych problemów, takich jak przeliczanie walut lub obliczenia graficzne.
 
-Jest domyślnie wyposażony w materiałowy wygląd i ciemny motyw, zapewnia doskonałe wrażenia użytkownika i łatwe użytkowanie. Brak dostępu do Internetu zapewnia większą prywatność, bezpieczeństwo i stabilność niż inne aplikacje.
+Domyślnie jest wyposażony w Material Design i ciemny motyw, zapewniając doskonałe doświadczenie użytkownika dla łatwego użytkowania. Brak dostępu do Internetu zapewnia większą prywatność, bezpieczeństwo i stabilność niż inne aplikacje.
 
-Nie zawiera reklam ani niepotrzebnych uprawnień. Jest w pełni open source, zapewnia konfigurowalne kolory.
+Nie zawiera reklam ani niepotrzebnych uprawnień. Jest w pełni otwartoźródłowy, zapewnia konfigurowalną kolorystykę.
 
-Funkcje:
-- Łatwy w użyciu kalkulator naukowy.
-- Posiada ciemny motyw, aby umożliwić płynne korzystanie z kalkulatora.
-- Działa jako przelicznik walut, aby pomóc Ci obliczyć dochody i inne kwoty.
+Cechy:
+- Łatwy w użyciu.
+- Wyposażony w ciemny motyw, aby umożliwić płynne korzystanie z niego.
+- Działa jako przelicznik walut, aby pomóc Ci obliczyć Twoje dochody i inne kwoty.
 - Może być używany jako kalkulator graficzny do szybkiego obliczania wykresów.
 - Konfigurowalny kolor tekstu, aby wyglądał fajniej i zgodnie z Twoimi potrzebami.
-- Przyciski dopasowane do przeciętnego palca dotykającego ekranu, aby obliczenia były wygodniejsze.
+- Przyciski o rozmiarze odpowiadającym przeciętnemu stukaniu palcem na ekranie, aby obliczanie było wygodniejsze.
 
-Zobacz pełny zestaw prostych narzędzi tutaj:
+Sprawdź pełen zestaw od Simple Tools tutaj:
 https://www.simplemobiletools.com
 
 Facebook:
