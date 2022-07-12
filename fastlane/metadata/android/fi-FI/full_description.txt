@@ -6,11 +6,14 @@ Paina tulosta tai kaavaa pienoissovelluksessa avataksesi sovelluksen. Sovellukse
 
 Sovellus ei sisällä mainoksia eikä se pyydä tarpeettomia käyttöoikeuksia. Se on täysin vapaata lähdekoodia ja tarjoaa mukautettavat sovelluksen värit. 
 
-<b>Luo katsaus koko Simple Tools-sovellusvalikoimaan täällä:</b> 
+Luo katsaus koko Simple Tools-sovellusvalikoimaan täällä:
 https://www.simplemobiletools.com 
 
-<b>Facebook:</b>
+Facebook:
 https://www.facebook.com/simplemobiletools
 
-<b>Reddit:</b>
+Reddit:
 https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

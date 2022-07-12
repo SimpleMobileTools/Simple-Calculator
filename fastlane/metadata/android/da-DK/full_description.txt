@@ -6,11 +6,14 @@ Tryk på resultatet eller formlen i widget\'en for at åbne appen. Det leveres m
 
 Det er fuldt opensource, giver tilpassede farver. 
 
-<b> Se hele pakken med enkle værktøjer her:</b>
+Se hele pakken med enkle værktøjer her:
 https://www.simplemobiletools.com
 
-<b>Facebook:</b>
+Facebook:
 https://www.facebook.com/simplemobiletools
 
-<b>Reddit:</b>
+Reddit:
 https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

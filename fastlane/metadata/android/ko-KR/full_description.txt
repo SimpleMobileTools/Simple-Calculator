@@ -12,11 +12,14 @@
 
 광고를 포함하지 않거나 불필요한 권한이 필요하지 않습니다. 오픈 소스 프로젝트입니다.
 
-<b>우리의 다른 앱이 여기에 찾아서 있습니다:</b>
+우리의 다른 앱이 여기에 찾아서 있습니다:
 https://www.simplemobiletools.com
 
-<b>Facebook:</b>
+Facebook:
 https://www.facebook.com/simplemobiletools
 
-<b>Reddit:</b>
+Reddit:
 https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

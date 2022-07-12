@@ -4,11 +4,14 @@ Barvu textu widgetu lze přizpůsobit, stejně jako barvu a průhlednost pozadí
 
 Neobsahuje žádné reklamy ani nepotřebná oprávnění. Má otevřený zdrojový kód a možnost změny barev.
 
-<b>Check out the full suite of Simple Tools here:</b>
+Check out the full suite of Simple Tools here:
 https://www.simplemobiletools.com
 
-<b>Facebook:</b>
+Facebook:
 https://www.facebook.com/simplemobiletools
 
-<b>Reddit:</b>
+Reddit:
 https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

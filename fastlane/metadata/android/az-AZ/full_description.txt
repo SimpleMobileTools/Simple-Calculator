@@ -4,11 +4,14 @@ Arxa plan alfası və ümumi rəng kimi, vidjet rəngi də dəyişdirilə bilən
 
 Reklam ya da lazımsız icazələr mövcud deyil. Tamamilə açıqlisenziyalıdır və rəng dəyişmə parametrləri var.
 
-<b>Check out the full suite of Simple Tools here:</b>
+Check out the full suite of Simple Tools here:
 https://www.simplemobiletools.com
 
-<b>Facebook:</b>
+Facebook:
 https://www.facebook.com/simplemobiletools
 
-<b>Reddit:</b>
+Reddit:
 https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

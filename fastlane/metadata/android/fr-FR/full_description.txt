@@ -20,5 +20,14 @@ Traits:
 - Couleur du texte personnalisable pour le rendre plus cool et en fonction de vos besoins.
 - Boutons dimensionnés en fonction du doigt moyen tapant sur l'écran pour rendre les calculs plus confortables.
 
-<b> Découvrez la suite complète des outils simples ici: </b>
+Découvrez la suite complète des outils simples ici:
 https://www.simplemobiletools.com
+
+Facebook:
+https://www.facebook.com/simplemobiletools
+
+Reddit:
+https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

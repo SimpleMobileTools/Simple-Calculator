@@ -20,5 +20,14 @@
 - Настраиваемый цвет текста, чтобы он выглядел более круто и в соответствии с вашими потребностями.
 - Размер кнопок соответствует среднему нажатию пальца на экран, чтобы сделать вычисления более удобными.
 
-<b> Ознакомьтесь с полным набором простых инструментов здесь: </b>
+Ознакомьтесь с полным набором простых инструментов здесь:
 https://www.simplemobiletools.com
+
+Facebook:
+https://www.facebook.com/simplemobiletools
+
+Reddit:
+https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

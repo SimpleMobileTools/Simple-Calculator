@@ -4,11 +4,14 @@ Valdiklio teksto spalva gali būti pritaikyta, taip pat pagrindinė ir fono spal
 
 Neturi reklamų ar nereikalingų leidimų. Programėlė visiškai atviro kodo, yra galimybė keisti spalvas.
 
-<b>Check out the full suite of Simple Tools here:</b>
+Check out the full suite of Simple Tools here:
 https://www.simplemobiletools.com
 
-<b>Facebook:</b>
+Facebook:
 https://www.facebook.com/simplemobiletools
 
-<b>Reddit:</b>
+Reddit:
 https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

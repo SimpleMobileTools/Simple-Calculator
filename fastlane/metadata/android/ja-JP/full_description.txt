@@ -20,5 +20,14 @@
 -必要に応じて、よりクールに見えるようにカスタマイズ可能なテキストの色。
 -計算をより快適にするために、画面上での平均的な指のタップに応じたサイズのボタン。
 
-<b>ここでシンプルツールの完全なスイートを確認してください：</ b>
+ここでシンプルツールの完全なスイートを確認してください：
 https://www.simplemobiletools.com
+
+Facebook:
+https://www.facebook.com/simplemobiletools
+
+Reddit:
+https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools
