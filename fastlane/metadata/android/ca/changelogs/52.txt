@@ -1,0 +1,2 @@
+S'ha afegit el mode horitzontal
+S'han afegit millores de traducció, estabilitat i UX
