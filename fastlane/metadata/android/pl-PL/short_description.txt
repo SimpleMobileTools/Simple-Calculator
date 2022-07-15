@@ -1,1 +1,1 @@
-Kalkulator naukowy do szybkich prostych obliczeń płynnym interfejsem użytkownika
+Piękny kalkulator do szybkich, prostych obliczeń z płynnie działającym UI
