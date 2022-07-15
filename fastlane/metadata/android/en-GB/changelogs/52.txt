@@ -1,2 +1,0 @@
-Added landscape mode
-Added some translation, stability and UX improvements
