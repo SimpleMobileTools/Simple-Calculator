@@ -6,14 +6,17 @@ Podeu fer-la vibrar en prémer els botons per estar segur durant la introducció
 
 Hi ha una opció a la configuració per evitar que el telèfon s'adormi mentre utilitza l'aplicació per a un ús còmode i seguir treballant en els problemes complexos en aquest convertidor de divises i calculadora gràfica i calculadora matemàtica.
 
-El color del text del giny redimensionable es pot personalitzar, així com el color i l'alfa del fons. Premeu el resultat o la fórmula al giny per obrir l'aplicació. Després d'obrir l'aplicació, podeu utilitzar aquesta calculadora per als vostres problemes complexos, com ara un convertidor de divises o una calculadora gràfica.
+El color del text del giny redimensionable es pot personalitzar, així com el color i l'alfa del fons. Premeu el resultat o la fórmula al giny per obrir l'aplicació.
 
-Ve amb el Material Design i un tema fosc predeterminat, que proporciona una gran experiència d'usuari per a un ús fàcil. La manca d'accés a Internet us ofereix més privadesa, seguretat i estabilitat que altres aplicacions.
+Podeu accedir a l'historial de les operacions per veure ràpidament els càlculs recents.
+
+Ve amb el «Material design» i un tema fosc predeterminat, que proporciona una gran experiència d'usuari per a un ús fàcil. La manca d'accés a Internet us ofereix més privadesa, seguretat i estabilitat que altres aplicacions.
 
 No conté anuncis ni permisos innecessaris. És totalment de codi obert, proporciona colors personalitzables.
 
 Característiques:
 - Calculadora fàcil d'utilitzar.
+- Historial d'operacions.
 - Ve amb un tema fosc per permetre un ús fluid de la calculadora.
 - Funciona com a convertidor de divises per ajudar-vos a calcular els vostres ingressos i altres quantitats.
 - Es pot utilitzar com a calculadora gràfica per calcular gràfics ràpidament.
