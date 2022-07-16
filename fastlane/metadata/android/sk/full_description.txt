@@ -10,6 +10,8 @@ Farba textu a widget sa dajú prispôsobiť vášmu želaniu, ako aj farba a pri
 
 Apku viete rýchlo spustiť aj kliknutím na výsledok na widgete.
 
+K dispoziící je aj história výpočtov, rýchlo si tak viete prehliadnuť nedávne výpočty.
+
 Poskytuje Material dizajn a štandardne tmavú tému, čo zlepšuje používateľskú skúsenosť.
 
 Chýbajúci prístup na internet poskytuje lepšie súkromie, bezpečnosť a stabilitu ako iné apky.
