@@ -3,6 +3,7 @@ package com.simplemobiletools.calculator.activities
 import android.app.Activity
 import android.appwidget.AppWidgetManager
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
@@ -63,6 +64,7 @@ class WidgetConfigureActivity : SimpleActivity() {
         if (mFeatureLockedDialog != null && isOrWasThankYouInstalled()) {
             mFeatureLockedDialog?.dismissDialog()
         }
+        setupToolbar(config_toolbar)
     }
 
     private fun initVariables() {
@@ -118,6 +120,7 @@ class WidgetConfigureActivity : SimpleActivity() {
         mBgColor = mBgColorWithoutTransparency.adjustAlpha(mBgAlpha)
         widget_background.applyColorFilter(mBgColor)
         config_bg_color.setFillWithStroke(mBgColor, mBgColor)
+        config_save.backgroundTintList = ColorStateList.valueOf(getProperPrimaryColor())
     }
 
     private fun updateTextColor() {
@@ -130,6 +133,7 @@ class WidgetConfigureActivity : SimpleActivity() {
         )
         result.setTextColor(mTextColor)
         formula.setTextColor(mTextColor)
+        config_save.setTextColor(getProperPrimaryColor().getContrastColor())
 
         viewIds.forEach {
             (findViewById<Button>(it)).setTextColor(mTextColor)

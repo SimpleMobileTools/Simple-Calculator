@@ -7,6 +7,7 @@ import com.simplemobiletools.calculator.adapters.HistoryAdapter
 import com.simplemobiletools.calculator.extensions.calculatorDB
 import com.simplemobiletools.calculator.helpers.CalculatorImpl
 import com.simplemobiletools.calculator.models.History
+import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
@@ -18,7 +19,7 @@ class HistoryDialog(activity: SimpleActivity, items: List<History>, calculator: 
     init {
         val view = activity.layoutInflater.inflate(R.layout.dialog_history, null)
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok, null)
             .setNeutralButton(R.string.clear_history) { _, _ ->
                 ensureBackgroundThread {
