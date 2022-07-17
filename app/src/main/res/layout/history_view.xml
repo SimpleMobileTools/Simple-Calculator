@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/medium_margin"
-        android:alpha="0.8"
+        android:alpha="0.6"
         android:ellipsize="end"
         android:maxLines="1"
         android:paddingStart="@dimen/small_margin"
