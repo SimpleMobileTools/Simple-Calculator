@@ -6,7 +6,9 @@ Możesz sprawić, że będzie wibrować przy naciśnięciach przycisków, abyś 
 
 Istnieje opcja zapobiegania uśpieniu urządzenia podczas korzystania z aplikacji w celu wygodnego użytkowania i kontynuowania pracy nad złożonymi problemami.
 
-Można dostosowywać kolor tekstu widżetu o zmiennym rozmiarze, jak również kolor i przezroczystość tła. Naciśnij wynik lub formułę w widżecie, aby otworzyć aplikację. Po otwarciu aplikacji możesz użyć tego kalkulatora do rozwiązywania złożonych problemów, takich jak przeliczanie walut lub obliczenia graficzne.
+Można dostosowywać kolor tekstu widżetu o zmiennym rozmiarze, jak również kolor i przezroczystość tła. Naciśnij wynik lub formułę w widżecie, aby otworzyć aplikację.
+
+Możesz uzyskać dostęp do historii operacji, aby szybko przejrzeć ostatnie obliczenia.
 
 Domyślnie jest wyposażony w Material Design i ciemny motyw, zapewniając doskonałe doświadczenie użytkownika dla łatwego użytkowania. Brak dostępu do Internetu zapewnia większą prywatność, bezpieczeństwo i stabilność niż inne aplikacje.
 
@@ -14,6 +16,7 @@ Nie zawiera reklam ani niepotrzebnych uprawnień. Jest w pełni otwartoźródło
 
 Cechy:
 - Łatwy w użyciu.
+- Zapisuje historię operacji.
 - Wyposażony w ciemny motyw, aby umożliwić płynne korzystanie z niego.
 - Działa jako przelicznik walut, aby pomóc Ci obliczyć Twoje dochody i inne kwoty.
 - Może być używany jako kalkulator graficzny do szybkiego obliczania wykresów.
