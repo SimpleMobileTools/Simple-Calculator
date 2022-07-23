@@ -1,12 +1,14 @@
-Ten stylowy, nowoczesny kalkulator oferuje wspaniałe wrażenia użytkownika, które pokochasz. Możesz skopiować wynik lub formułę do schowka przez długie ich naciśnięcie. Dzięki kojącemu oko ciemnemu motywowi możesz teraz łatwiej widzieć przyciski i liczby oraz używać tego kalkulatora do prostych obliczeń albo jako przelicznika walut lub kalkulatora i kalkulatora graficznego. Możesz również użyć tego kalkulatora matematycznego jako kalkulatora kredytu hipotecznego.
+Ten stylowy, nowoczesny kalkulator oferuje wspaniałe wrażenia użytkownika, które pokochasz. Możesz skopiować wynik lub formułę do schowka przez długie ich naciśnięcie. Dzięki kojącemu oko ciemnemu motywowi możesz teraz łatwiej widzieć przyciski i liczby oraz używać tego kalkulatora do prostych obliczeń albo jako przelicznika walut. Możesz również użyć tego kalkulatora matematycznego jako kalkulatora kredytu hipotecznego.
 
 Aplikacja jest prostym pomocnikiem do szybkich obliczeń z wieloma podstawowymi funkcjami, takimi jak mnożenie, dzielenie, pierwiastkowanie i potęgowanie. Jest również wyposażona w ciemny motyw, dzięki czemu możesz użyć tej nowej technologii, aby kalkulator wyglądał bardziej płynnie i był łatwiejszy w użyciu, zamiast używać ostrych kolorów dostępnych w różnych kalkulatorach, które nie mogą pomóc Ci skoncentrować się na złożonych obliczeniach.
 
 Możesz sprawić, że będzie wibrować przy naciśnięciach przycisków, abyś miał(a) pewność podczas wstawiania swoich wartości. Wykwintne kolory używane w tej aplikacji są fajne i wyglądają spokojnie dla oczu, dzięki czemu można łatwo odróżnić wszystkie przyciski i bez trudu wykonywać obliczenia.
 
-Istnieje opcja zapobiegania uśpieniu urządzenia podczas korzystania z aplikacji w celu wygodnego użytkowania i kontynuowania pracy nad złożonymi problemami.
+Istnieje opcja zapobiegania uśpieniu urządzenia podczas korzystania z aplikacji w celu wygodnego użytkowania.
 
-Można dostosowywać kolor tekstu widżetu o zmiennym rozmiarze, jak również kolor i przezroczystość tła. Naciśnij wynik lub formułę w widżecie, aby otworzyć aplikację. Po otwarciu aplikacji możesz użyć tego kalkulatora do rozwiązywania złożonych problemów, takich jak przeliczanie walut lub obliczenia graficzne.
+Można dostosowywać kolor tekstu widżetu o zmiennym rozmiarze, jak również kolor i przezroczystość tła. Naciśnij wynik lub formułę w widżecie, aby otworzyć aplikację.
+
+Możesz uzyskać dostęp do historii operacji, aby szybko przejrzeć ostatnie obliczenia.
 
 Domyślnie jest wyposażony w Material Design i ciemny motyw, zapewniając doskonałe doświadczenie użytkownika dla łatwego użytkowania. Brak dostępu do Internetu zapewnia większą prywatność, bezpieczeństwo i stabilność niż inne aplikacje.
 
@@ -14,9 +16,9 @@ Nie zawiera reklam ani niepotrzebnych uprawnień. Jest w pełni otwartoźródło
 
 Cechy:
 - Łatwy w użyciu.
+- Zapisuje historię operacji.
 - Wyposażony w ciemny motyw, aby umożliwić płynne korzystanie z niego.
 - Działa jako przelicznik walut, aby pomóc Ci obliczyć Twoje dochody i inne kwoty.
-- Może być używany jako kalkulator graficzny do szybkiego obliczania wykresów.
 - Konfigurowalny kolor tekstu, aby wyglądał fajniej i zgodnie z Twoimi potrzebami.
 - Przyciski o rozmiarze odpowiadającym przeciętnemu stukaniu palcem na ekranie, aby obliczanie było wygodniejsze.
 
