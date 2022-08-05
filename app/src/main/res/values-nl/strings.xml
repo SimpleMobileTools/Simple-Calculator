@@ -9,13 +9,13 @@
     <string name="history">Geschiedenis</string>
     <string name="history_empty">Geschiedenis is leeg</string>
     <string name="clear_history">Legen</string>
-    <string name="history_cleared">Geschiedenis is geleegd</string>
+    <string name="history_cleared">Geschiedenis is gewist</string>
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Trillen bij het indrukken van toetsen</string>
-    <string name="use_comma_as_decimal_mark">Komma als decimaalteken gebruiken</string>
+    <string name="vibrate_on_button_press">Vibratie op knop druk</string>
+    <string name="use_comma_as_decimal_mark">Gebruik komma als decimaalteken</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Hoe werkt de knop C (Clear)?</string>
-    <string name="faq_1_text">Kort indrukken verwijdert één karakter per keer. Lang drukken wist direct alle velden.</string>
+    <string name="faq_1_title">Hoe werkt de C (Clear) knop\?</string>
+    <string name="faq_1_text">Door erop te tikken verwijdert u één teken per keer. Door er lang op te drukken worden alle velden in één keer gereset.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
