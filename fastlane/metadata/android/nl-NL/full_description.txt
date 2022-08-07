@@ -1,14 +1,28 @@
-Deze stijlvolle moderne rekenmachine biedt een goede gebruikerservaring en is een lust voor het oog. De resultaten en de berekening zijn door lang drukken te kopiëren naar het klembord. De app is een eenvoudige hulp bij het doen van snelle berekeningen, zoals vermenigvuldigen, delen, worteltrekken en machtsverheffen.
+Deze stijlvolle moderne rekenmachine biedt een geweldige gebruikerservaring die u graag zult zien. U kunt het resultaat of de formule naar het klembord kopiëren door er lang op te drukken. U kunt deze rekenmachine ook gebruiken als een valuta converter om uw dagelijkse inkomen en andere bedragen in verschillende landen valuta te berekenen. Met het oog kalmerende donkere thema, is het nu gemakkelijk voor u om knoppen en nummers gemakkelijker te zien en deze rekenmachine te gebruiken voor eenvoudige berekeningen of het te gebruiken als een valuta converter. U kunt deze rekenmachine ook gebruiken als een hypotheek rekenmachine.
 
-Om er zeker van te zijn dat een toetsaanslag is geregistreerd, kan de optie om feedback via trillen worden gebruikt. Er is ook een optie om te voorkomen dat het apparaat in slaapstand belandt als de app op de voorgrond staat. 
+De app is een eenvoudige helper voor snelle berekeningen met veel basisfuncties, waaronder vermenigvuldigen, delen, wortel en machten. Het wordt ook geleverd met een donker thema, zodat u deze nieuwe technologie kunt gebruiken om uw rekenmachine er gladder en gebruiksvriendelijker uit te laten zien in plaats van scherpe kleuren te gebruiken in verschillende rekenmachines die u niet kunnen helpen u te concentreren op uw complexe berekeningen in deze wiskunde rekenmachine.
 
-De tekstkleur van de in grootte aan te passen widget kan zelf worden gekozen, evenals de kleur en transparantie van de achtergrond. Druk op het resultaat of de berekening in de widget om de app te openen. 
+U kunt de app laten trillen als u op een knop drukt, zodat u zeker bent dat u uw waarden invoert. De prachtige kleuren die in deze app zijn gebruikt zijn cool en zien er glad voor de ogen, zodat u gemakkelijk onderscheid kunt maken tussen alle knoppen en berekenen met gemak. Deze rekenmachine kan worden gebruikt om complexe wortelproblemen op te lossen, maar kan ook worden gebruikt als valuta-omzetter of grafische rekenmachine.
 
-De app is ontworpen volgens material design en heeft standaard een donker thema. De app heeft geen toegang tot het internet nodig en voorziet van meer privacy, veiligheid en stabiliteit dan andere apps. 
+Er is een optie in de instellingen om te voorkomen dat de telefoon slaapt tijdens het gebruik van de app voor comfortabel gebruik.
 
-Bevat geen advertenties of onnodige machtigingen. Volledig open-source. Kleuren van de app kunnen worden aangepast. 
+De tekstkleur van de aanpasbare widget kan worden aangepast, evenals de kleur en de alpha van de achtergrond. Druk op het resultaat of de formule in de widget om de app te openen.
 
-Probeer ook eens de andere apps van Simple Tools:
+U kunt een geschiedenis van de bewerkingen oproepen om snel recente berekeningen te doorlopen.
+
+Het wordt standaard geleverd met materiaalontwerp en een donker thema dat een geweldige gebruikerservaring biedt voor eenvoudig gebruik. Het ontbreken van internettoegang geeft je meer privacy, veiligheid en stabiliteit dan andere apps.
+
+Bevat geen advertenties of onnodige toestemmingen. Het is volledig opensource, biedt aanpasbare kleuren.
+
+Functies:
+- Gemakkelijk te gebruiken rekenmachine.
+- Geschiedenis van de bewerkingen.
+- Wordt geleverd met donker thema voor een soepel gebruik van de rekenmachine.
+- Werkt als een valuta converter om u te helpen uw inkomens en andere bedragen te berekenen.
+- Aanpasbare tekstkleur om het er cool uit te laten zien en aan te passen aan uw behoeften.
+- De grootte van de knoppen is afgestemd op het gemiddelde aantal vingers dat op het scherm tikt, zodat berekeningen comfortabeler zijn.
+
+Bekijk de volledige suite van Simple Tools hier:
 https://www.simplemobiletools.com
 
 Facebook:
