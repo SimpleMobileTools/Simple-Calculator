@@ -11,7 +11,7 @@
     <string name="clear_history">ക്ലിയർ ചെയുക</string>
     <string name="history_cleared">ഹിസ്റ്ററി മായ്ച്ചു കളഞ്ഞു</string>
     <!-- Settings -->
-    <string name="vibrate_on_button_press">ബട്ടൺ പ്രസ്സിൽ വൈബ്രേറ്റുചെയ്യുക</string>
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
     <string name="use_comma_as_decimal_mark">ദശാംശ ചിഹ്നമായി കോമ(,) ഉപയോഗിക്കുക</string>
     <!-- FAQ -->
     <string name="faq_1_title">C(ക്ലിയർ ) ബട്ടൺ പ്രവർത്തിക്കുന്നത് എങ്ങനെ\?</string>
