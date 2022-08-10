@@ -11,7 +11,7 @@
     <string name="clear_history">Очистить</string>
     <string name="history_cleared">История была очищена</string>
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Вибрация при нажатии кнопки</string>
+    <string name="vibrate_on_button_press">Вибрация при нажатии кнопок</string>
     <string name="use_comma_as_decimal_mark">Используйте запятую в качестве десятичного знака</string>
     <!-- FAQ -->
     <string name="faq_1_title">Как работает кнопка C (Очистить)\?</string>
