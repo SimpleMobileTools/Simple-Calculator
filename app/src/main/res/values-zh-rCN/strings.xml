@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">简易计算器</string>
+    <string name="app_name">简单计算器</string>
     <string name="app_launcher_name">计算器</string>
     <string name="scientific_calculator">科学计算器</string>
     <!-- Calculator field -->

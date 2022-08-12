@@ -1,22 +1,24 @@
-Questa calcolatrice scientifica moderna ed elegante offre un'ottima esperienza utente che adorerai vedere. È possibile copiare il risultato o la formula negli appunti premendo a lungo. Puoi anche utilizzare questo calcolatore scientifico come convertitore di valuta per calcolare il tuo reddito giornaliero e altri importi nella valuta di un paese diverso. Con il tema scuro rilassante per gli occhi, ora è facile vedere pulsanti e numeri più facilmente e utilizzare questa calcolatrice scientifica per calcoli semplici o utilizzarla come convertitore di valuta o come calcolatrice scientifica e calcolatrice grafica. È inoltre possibile utilizzare questo calcolatore di matematica come calcolatore di mutui
+Questa calcolatrice scientifica moderna ed elegante offre un'ottima esperienza utente che adorerai vedere. È possibile copiare il risultato o la formula negli appunti premendo a lungo. Puoi anche utilizzare questo calcolatore scientifico come convertitore di valuta per calcolare il tuo reddito giornaliero e altri importi nella valuta di un paese diverso. Con il tema scuro rilassante per gli occhi, ora è facile vedere pulsanti e numeri più facilmente e utilizzare questa calcolatrice scientifica per calcoli semplici o utilizzarla come convertitore di valuta. È inoltre possibile utilizzare questo calcolatore di matematica come calcolatore di mutui.
 
-L'app è un semplice aiuto per calcoli veloci con molte funzioni di base tra cui moltiplicazione, divisione, radice e poteri. Inoltre viene fornito con un tema scuro in modo che tu possa utilizzare questa nuova tecnologia per rendere la tua calcolatrice scientifica più liscia e facile da usare piuttosto che usare colori nitidi forniti in diverse calcolatrici che non possono aiutarti a concentrarti sui tuoi calcoli complessi in questa calcolatrice grafica , calcolatrice scientifica e calcolatrice matematica.
+L'app è un semplice aiuto per calcoli veloci con molte funzioni di base tra cui moltiplicazione, divisione, radice e poteri. Inoltre viene fornito con un tema scuro in modo che tu possa utilizzare questa nuova tecnologia per rendere la tua calcolatrice scientifica più liscia e facile da usare piuttosto che usare colori nitidi forniti in diverse calcolatrici che non possono aiutarti a concentrarti sui tuoi calcoli complessi in questa calcolatrice matematica.
 
 Puoi farlo vibrare premendo i pulsanti per renderti sicuro durante l'inserimento dei tuoi valori. I colori squisiti utilizzati in questa app sono fantastici e sembrano lisci per gli occhi in modo da poter facilmente distinguere tra tutti i pulsanti e calcolare con facilità. Questa calcolatrice scientifica può essere utilizzata per risolvere complessi problemi di radice oppure può essere utilizzata anche come convertitore di valuta o calcolatrice grafica.
 
-C'è un'opzione nell'impostazione per impedire al telefono di dormire durante l'utilizzo dell'app per un utilizzo confortevole e continuare a lavorare sui tuoi problemi complessi in questo convertitore di valuta e calcolatrice grafica più calcolatrice matematica.
+C'è un'opzione nell'impostazione per impedire al telefono di dormire durante l'utilizzo dell'app per un utilizzo confortevole.
 
-Il colore del testo del widget ridimensionabile può essere personalizzato, così come il colore e l'alfa dello sfondo. Premi il risultato o la formula nel widget per aprire l'app. Dopo aver aperto l'app, puoi utilizzare questa calcolatrice per problemi complessi come un convertitore di valuta, una calcolatrice grafica o una calcolatrice scientifica.
+Il colore del testo del widget ridimensionabile può essere personalizzato, così come il colore e l'alfa dello sfondo. Premi il risultato o la formula nel widget per aprire l'app.
 
-Viene fornito con design dei materiali e tema scuro per impostazione predefinita, offre un'ottima esperienza utente per un facile utilizzo. La mancanza di accesso a Internet ti offre maggiore privacy, sicurezza e stabilità rispetto ad altre app.
+È possibile accedere alla cronologia delle operazioni per scorrere rapidamente i calcoli recenti.
 
-Non contiene pubblicità o autorizzazioni non necessarie. È completamente opensource, fornisce colori personalizzabili.
+È dotato di Material Design e tema scuro, per un'ottima esperienza utente dal facile utilizzo. L'assenza di accesso a Internet offre maggiore privacy, sicurezza e stabilità rispetto ad altre applicazioni.
+
+Non contiene pubblicità o autorizzazioni non necessarie. Il codice sorgente è completamente aperto, fornisce colori personalizzabili.
 
 Caratteristiche:
-- Calcolatrice scientifica facile da usare.
-- Viene fornito con un tema scuro per consentire un utilizzo regolare della calcolatrice.
+- Calcolatrice facile da usare.
+- Cronologia delle operazioni.
+- Viene fornito con un tema scuro per consentire un uso fluido della calcolatrice.
 - Funziona come un convertitore di valuta per aiutarti a calcolare le tue entrate e altri importi.
-- Può essere utilizzato come calcolatrice grafica per calcolare rapidamente i grafici.
 - Colore del testo personalizzabile per renderlo più interessante e in base alle tue esigenze.
 - Pulsanti dimensionati in base al tocco medio del dito sullo schermo per rendere i calcoli più confortevoli.
 
