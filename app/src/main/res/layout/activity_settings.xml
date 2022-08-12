@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/settings_coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -127,6 +128,30 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/use_english_language" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/settings_language_holder"
+                    style="@style/SettingsHolderTextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ripple_background">
+
+                    <com.simplemobiletools.commons.views.MyTextView
+                        android:id="@+id/settings_language_label"
+                        style="@style/SettingsTextLabelStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/language" />
+
+                    <com.simplemobiletools.commons.views.MyTextView
+                        android:id="@+id/settings_language"
+                        style="@style/SettingsTextValueStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/settings_language_label"
+                        tools:text="English" />
 
                 </RelativeLayout>
 

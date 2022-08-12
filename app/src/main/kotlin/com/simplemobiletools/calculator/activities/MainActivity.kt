@@ -3,7 +3,6 @@ package com.simplemobiletools.calculator.activities
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
 import android.view.View
 import android.view.WindowManager
 import com.simplemobiletools.calculator.BuildConfig
