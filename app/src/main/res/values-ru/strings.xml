@@ -9,13 +9,13 @@
     <string name="history">История</string>
     <string name="history_empty">История пуста</string>
     <string name="clear_history">Очистить</string>
-    <string name="history_cleared">История была очищена</string>
+    <string name="history_cleared">История очищена</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Вибрация при нажатии кнопок</string>
-    <string name="use_comma_as_decimal_mark">Используйте запятую в качестве десятичного знака</string>
+    <string name="use_comma_as_decimal_mark">Использовать запятую в качестве десятичного знака</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Как работает кнопка C (Очистить)\?</string>
-    <string name="faq_1_text">При нажатии на нее будет удаляться один символ за раз. Длительное нажатие сбросит сразу все поля.</string>
+    <string name="faq_1_title">Как работает кнопка C (Очистка)\?</string>
+    <string name="faq_1_text">Нажатие на нее удалит один символ. Долгое нажатие сбросит все поля сразу.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
