@@ -1,12 +1,28 @@
-Denne stilfulde moderne lommeregner tilbyder stor brugeroplevelse, som du vil elske at se. Du kan kopiere resultatet eller formlen til Udklipsholder ved at trykke længe på den. Appen er en simpel hjælper til hurtige beregninger med mange grundlæggende funktioner, herunder multiplicering, opdeling, rod og kræfter. 
+Denne stilfulde moderne lommeregner giver en fantastisk brugeroplevelse, som du vil elske at se. Du kan kopiere resultatet eller formlen til udklipsholderen ved at trykke længe på den. Du kan også bruge denne lommeregner som en valutaomregner til at beregne din daglige indkomst og andre beløb i forskellige landes valutaer. Med et øjenberoligende mørkt tema er det nu nemt for dig at se knapper og tal lettere og bruge denne lommeregner til enkle beregninger eller bruge den som valutaomregner. Du kan også bruge denne matematiske regnemaskine som en realkreditberegner.
 
-Du kan få den til at vibrere på knaptryk for at gøre dig sikker under indsættelsen af dine værdier. Der er en mulighed for at forhindre telefonen i at sove, mens du bruger appen til behagelig brug. Tekstfarven på den resizable widget kan tilpasses, samt farven og alfaen af baggrunden. 
+Appen er en simpel hjælper til hurtige beregninger med mange grundlæggende funktioner, herunder multiplikation, division, rodning og potenser. Den leveres også med et mørkt tema, så du kan bruge denne nye teknologi til at få din lommeregner til at se mere glat og let at bruge i stedet for at bruge skarpe farver, der leveres i forskellige lommeregnere, som ikke kan hjælpe dig med at koncentrere dig om dine komplekse beregninger i denne matematiske lommeregner.
 
-Tryk på resultatet eller formlen i widget\'en for at åbne appen. Det leveres med materialedesign og mørkt tema som standard giver stor brugeroplevelse for nem brug. Manglen på internetadgang giver dig mere privatliv, sikkerhed og stabilitet end andre apps. Indeholder ingen annoncer eller unødvendige tilladelser. 
+Du kan få den til at vibrere ved tryk på en knap for at gøre dig sikker under indsættelse af dine værdier. De udsøgte farver, der bruges i denne app, er cool og ser glatte ud for øjnene, så du nemt kan skelne mellem alle knapperne og beregne med lethed. Denne lommeregner kan bruges til at løse komplekse rodproblemer, eller den kan også bruges som valutaomregner eller grafisk lommeregner.
 
-Det er fuldt opensource, giver tilpassede farver. 
+Der er en mulighed i indstillingen for at forhindre telefonen i at sove, mens du bruger appen, så du kan bruge den komfortabelt.
 
-Se hele pakken med enkle værktøjer her:
+Tekstfarven på den resizable widget kan tilpasses, ligesom farven og alfa på baggrunden. Tryk på resultatet eller formlen i widgeten for at åbne appen.
+
+Du kan få adgang til en historik over operationerne for hurtigt at gennemse de seneste beregninger.
+
+Den leveres med et materialedesign og et mørkt tema som standard, hvilket giver en god brugeroplevelse til nem brug. Den manglende internetadgang giver dig mere privatliv, sikkerhed og stabilitet end andre apps.
+
+Indeholder ingen annoncer eller unødvendige tilladelser. Den er fuldt ud open source og giver tilpassede farver.
+
+Funktioner:
+- Let at bruge lommeregner.
+- Operationshistorik.
+- Leveres med et mørkt tema for at tillade glat brug af lommeregneren.
+- Fungerer som en valutaomregner for at hjælpe dig med at beregne dine indkomster og andre beløb.
+- Tilpasbar tekstfarve for at få det til at se sejere ud og i henhold til dine behov.
+- Knapper er dimensioneret efter den gennemsnitlige finger, der trykker på skærmen, for at gøre beregninger mere behagelige.
+
+Se hele pakken af Simple Tools her:
 https://www.simplemobiletools.com
 
 Facebook:
