@@ -1,14 +1,28 @@
-Ovaj elegantni moderni kalkulator nudi izvrsno korisničko iskustvo koje će van se svidjeti. Možete kopirati rezultat ili formulu u međuspremnik dugim pritiskom. 
+Ovaj moderan moderan kalkulator nudi sjajno korisničko iskustvo koje ćete voljeti vidjeti. Rezultat ili formulu možete kopirati na međuspremnik dugim pritiskom. Ovaj kalkulator možete koristiti i kao pretvarač valuta za izračunavanje vašeg dnevnog dohotka i drugih iznosa u valutama različitih država. Budući da je oči umirujuća tamna tema, sada vam je lakše vidjeti gumbe i brojeve te ovaj kalkulator koristiti za jednostavne proračune ili ga koristiti kao pretvarač valute. Ovaj matematički kalkulator možete koristiti i kao hipotekarni kalkulator.
 
-Aplikacija je jednostavan pomoćnik za brze izračune s mnogim osnovnim funkcijama uključujući množenje, dijeljenje, korijen i moći. Možete učiniti da vibrira pri pritisku gumba kako biste bili sigurni tijekom umetanja vrijednosti.
+Aplikacija je jednostavan pomagač za brze proračune s mnogim osnovnim funkcijama, uključujući množenje, dijeljenje, ukorijenjivanje i moći. Također dolazi s mračnom temom tako da možete koristiti ovu novu tehnologiju kako bi vaš kalkulator izgledao glatko i lakše za upotrebu, a ne da koristite oštre boje u različitim kalkulatorima to vam ne može pomoći da se koncentrirate na svoje složene proračune u ovom matematičkom kalkulatoru.
 
-Postoji mogućnost sprječavanja spavanja telefona dok koristite aplikaciju za udobnu upotrebu. Boja teksta widgeta za promjenu veličine može se prilagoditi, kao i boja i alfa pozadine. Pritisnite rezultat ili formulu u widgetu da biste otvorili aplikaciju.
+Možete učiniti da vibrira na prešama s gumbima kako biste bili sigurni tijekom umetanja vrijednosti. Izvrsne boje koje se koriste u ovoj aplikaciji su cool i glatke su oči, tako da lako možete razlikovati sve gumbe i lako ih izračunati. Ovaj se kalkulator može koristiti za rješavanje složenih korijenskih problema ili se može koristiti i kao pretvarač valute ili grafički kalkulator.
 
-Dolazi s materijalnim dizajnom i tamnom temom prema zadanim postavkama, pruža izvrsno korisničko iskustvo za jednostavnu upotrebu.
+U postavci postoji opcija koja sprečava spavanje telefona tijekom korištenja aplikacije za ugodno korištenje.
 
-Nedostatak pristupa internetu daje vam više privatnosti, sigurnosti i stabilnosti od drugih aplikacija. Ne sadrži oglase niti nepotrebna dopuštenja. Potpuno je otvorenog koda, pruža prilagodljive boje.
+Boja teksta u znatnom widgetu može se prilagoditi, kao i boja i alfa pozadine. Pritisnite rezultat ili formulu u widgetu za otvaranje aplikacije.
 
-Pogledajte cijeli paket Simple Tools ovdje:
+Možete pristupiti povijesti operacija kako biste brzo skenirali kroz nedavne proračune.
+
+Dolazi s dizajnom materijala i tamnom temom prema zadanim postavkama, pružajući sjajno korisničko iskustvo za jednostavno korištenje. Nedostatak pristupa internetu daje vam više privatnosti, sigurnosti i stabilnosti od ostalih aplikacija.
+
+Ne sadrži oglase ili nepotrebne dozvole. Potpuno je open-source i pruža prilagođene boje.
+
+Značajke:
+- Jednostavan za upotrebu kalkulatora.
+- Operativna povijest.
+- Dolazi s tamnom temom kako bi se omogućilo nesmetano korištenje kalkulatora.
+- Radi kao pretvarač valuta koji će vam pomoći izračunati prihode i druge iznose.
+- Prilagodljiva boja teksta kako bi izgledala hladnije i prema vašim potrebama.
+- Gumbi se dimenzioniraju prema prosječnom dodiru prsta na ekranu kako bi proračuni bili ugodniji.
+
+Ovdje pogledajte cijeli paket jednostavnih alata:
 https://www.simplemobiletools.com
 
 Facebook:
