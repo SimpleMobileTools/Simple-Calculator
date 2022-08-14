@@ -1,13 +1,29 @@
-Tämä tyylikäs, moderni laskin tarjoaa erinomaisen käyttökokemuksen, jota tulet rakastamaan. Voit kopioida tuloksen tai kaavan leikepöydälle painamalla sitä pitkään. Sovellus on yksinkertainen apuri nopeisiin laskutoimituksiin monilla perustoiminnoilla ml. kerto-, jako-, juuri- ja potenssilaskutoiminnot.
+Tämä tyylikäs ja moderni laskin tarjoaa upean käyttökokemuksen, jota tulet rakastamaan. Voit kopioida tuloksen tai kaavan leikepöydälle painamalla sitä pitkään. Voit käyttää tätä laskinta myös valuuttamuunnin ohjelmana, jolla voit laskea päivittäiset tulosi ja muut summat eri maiden valuutoissa. Silmiä rauhoittavan tumman teeman ansiosta sinun on nyt helppo nähdä painikkeet ja numerot helpommin ja käyttää tätä laskinta yksinkertaisiin laskutoimituksiin tai käyttää sitä valuuttamuuttajana. Voit käyttää tätä matematiikka laskuria myös asuntolainalaskurina.
 
-Voit kytkeä värinän päälle varmistuaksesi painalluksistasi. Sovellus voi myös halutessasi estää puhelimen lepotilan, jotta käyttö olisi mahdollisimman mutkatonta. Kooltaan säädettävän pienoissovelluksen tekstin väriä voi mukauttaa, kuten myös taustavärin ja läpinäkyvyyden. 
+Sovellus on yksinkertainen apuri nopeisiin laskutoimituksiin, joissa on monia perustoimintoja, kuten kertominen, jakaminen, juurruttaminen ja potenssit. Siinä on myös tumma teema, jotta voit käyttää tätä uutta tekniikkaa, jotta laskimesi näyttää tasaisemmalta ja helppokäyttöis emmältä kuin käyttämällä eri laskimissa tarjottuja teräviä värejä, jotka eivät auta sinua keskittymään monimutkaisiin laskutoimituksiin tässä matematiikka laskimessa.
 
-Paina tulosta tai kaavaa pienoissovelluksessa avataksesi sovelluksen. Sovelluksessa on material design- ja tumma teema oletuksena, jotka tarjoavat erinomaisen ja helpon käytön. Sovellus ei käytä internetyhteyttä, joten yksityiseesi, turvallisuutesi ja sovellusten vakaus on varmistettu. 
+Voit saada sen värähtelemään painikkeiden painalluksista, jotta voit luottaa arvojen lisäämisen aikana. Tässä sovelluksessa käytetyt hienot värit ovat viileitä ja näyttävät sileiltä silmille, joten voit helposti erottaa kaikki painikkeet ja laskea helposti. Tätä laskinta voidaan käyttää monimutkaisten juuriongelmien ratkaisemiseen tai sitä voidaan käyttää myös valuuttamuunnin tai graafinen laskin.
 
-Sovellus ei sisällä mainoksia eikä se pyydä tarpeettomia käyttöoikeuksia. Se on täysin vapaata lähdekoodia ja tarjoaa mukautettavat sovelluksen värit. 
+Asetuksissa on mahdollisuus estää puhelinta nukkumasta sovelluksen käytön aikana, jotta käyttö olisi miellyttävää.
 
-Luo katsaus koko Simple Tools-sovellusvalikoimaan täällä:
-https://www.simplemobiletools.com 
+Muunneltavan widgetin tekstin väriä voi mukauttaa, samoin taustan väriä ja alfaa. Avaa sovellus painamalla widgetissä olevaa tulosta tai kaavaa.
+
+Voit käyttää toimintojen historiaa, jotta voit nopeasti selata viimeaikaisia laskutoimituksia.
+
+Mukana on oletusarvoisesti materiaalinen muotoilu ja tumma teema, mikä tarjoaa loistavan käyttökokemuksen helppokäyttöisyyttä varten. Internet-yhteyden puuttuminen antaa sinulle enemmän yksityisyyttä, turvallisuutta ja vakautta kuin muut sovellukset.
+
+Ei sisällä mainoksia tai tarpeettomia käyttöoikeuksia. Se on täysin avointa lähdekoodia ja tarjoaa mukautettavat värit.
+
+Ominaisuudet:
+- Helppokäyttöinen laskin.
+- Toimintohistoria.
+- Mukana tumma teema, joka mahdollistaa laskimen sujuvan käytön.
+- Toimii valuuttamuuttajana, joka auttaa sinua laskemaan tulot ja muut määrät.
+- Mukautettava tekstin väri, jotta se näyttää siistimmältä ja tarpeidesi mukaan.
+- Painikkeet on mitoitettu keskimääräisen sormen napauttamisen mukaan näytöllä, jotta laskeminen olisi mukavampaa.
+
+Tutustu koko Simple Tools -sarjaan täällä:
+https://www.simplemobiletools.com
 
 Facebook:
 https://www.facebook.com/simplemobiletools

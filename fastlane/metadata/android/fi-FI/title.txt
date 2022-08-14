@@ -1,1 +1,1 @@
-Simple Calculator
+Yksinkertainen laskin
