@@ -1,8 +1,26 @@
-Kalkulator modern bergaya ini menawarkan pengalaman pengguna yang luar biasa yang akan Anda sukai. Anda dapat menyalin hasil atau rumus ke clipboard dengan menekan lama. Aplikasi ini adalah pembantu sederhana untuk perhitungan cepat dengan banyak fungsi dasar termasuk mengalikan, membagi, akar dan kekuasaan. 
+Kalkulator modern bergaya ini menawarkan pengalaman pengguna yang luar biasa yang akan Anda sukai. Anda dapat menyalin hasil atau rumus ke clipboard dengan menekan lama. Anda juga dapat menggunakan kalkulator ini sebagai konverter mata uang untuk menghitung pendapatan harian Anda dan jumlah lainnya dalam mata uang negara yang berbeda. Dengan tema gelap yang menenangkan mata, sekarang mudah bagi Anda untuk melihat tombol dan angka dengan lebih mudah dan menggunakan kalkulator ini untuk perhitungan sederhana atau menggunakannya sebagai konverter mata uang. Anda juga dapat menggunakan kalkulator matematika ini sebagai kalkulator hipotek.
 
-Anda dapat membuatnya bergetar saat menekan tombol untuk membuat Anda percaya diri saat memasukkan nilai Anda. Ada opsi untuk mencegah ponsel tidur saat menggunakan aplikasi untuk penggunaan yang nyaman. Warna teks widget yang dapat diubah ukurannya dapat disesuaikan, serta warna dan alfa latar belakang. Tekan hasil atau rumus di widget untuk membuka aplikasi.
+Aplikasi ini adalah penolong sederhana untuk perhitungan cepat dengan banyak fungsi dasar termasuk mengalikan, membagi, root, dan kekuatan. Itu juga dilengkapi dengan tema gelap sehingga Anda dapat menggunakan teknologi baru ini untuk membuat kalkulator Anda terlihat lebih halus dan mudah digunakan daripada menggunakan warna tajam yang disediakan dalam kalkulator berbeda yang tidak dapat membantu Anda berkonsentrasi pada perhitungan kompleks Anda dalam kalkulator matematika ini.
 
-Muncul dengan desain material dan tema gelap secara default, memberikan pengalaman pengguna yang luar biasa untuk penggunaan yang mudah. Kurangnya akses internet memberi Anda lebih banyak privasi, keamanan, dan stabilitas daripada aplikasi lain. Tidak mengandung iklan atau izin yang tidak perlu. Ini sepenuhnya sumber-terbuka, menyediakan warna yang dapat disesuaikan.
+Anda dapat membuatnya bergetar pada penekanan tombol untuk membuat Anda percaya diri selama memasukkan nilai Anda. Warna-warna indah yang digunakan dalam aplikasi ini keren dan terlihat halus di mata sehingga Anda dapat dengan mudah membedakan antara semua tombol dan menghitung dengan mudah. Kalkulator ini dapat digunakan untuk memecahkan masalah akar yang kompleks atau juga dapat digunakan sebagai konverter mata uang atau kalkulator grafik.
+
+Ada opsi dalam pengaturan untuk mencegah ponsel tidur saat menggunakan aplikasi untuk penggunaan yang nyaman.
+
+Warna teks dari widget yang dapat diubah ukurannya dapat disesuaikan, serta warna dan alfa latar belakang. Tekan hasil atau rumus di widget untuk membuka aplikasi.
+
+Anda dapat mengakses riwayat operasi untuk memindai dengan cepat melalui perhitungan terbaru.
+
+Muncul dengan desain material dan tema gelap secara default, memberikan pengalaman pengguna yang luar biasa untuk penggunaan yang mudah. Kurangnya akses internet memberi Anda lebih banyak privasi, keamanan, dan stabilitas daripada aplikasi lain.
+
+Tidak berisi iklan atau izin yang tidak perlu. Ini sepenuhnya open-source dan menyediakan warna yang dapat disesuaikan.
+
+Fitur:
+- Kalkulator yang mudah digunakan.
+- Riwayat operasi.
+- Dilengkapi dengan tema gelap untuk memungkinkan penggunaan kalkulator yang lancar.
+- Berfungsi sebagai konverter mata uang untuk membantu Anda menghitung pendapatan dan jumlah lainnya.
+- Warna teks yang dapat disesuaikan agar terlihat lebih keren dan sesuai dengan kebutuhan Anda.
+- Tombol berukuran sesuai dengan ketukan jari rata-rata pada layar untuk membuat perhitungan lebih nyaman.
 
 Lihat rangkaian lengkap Alat Sederhana di sini:
 https://www.simplemobiletools.com
