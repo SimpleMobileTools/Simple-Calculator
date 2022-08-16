@@ -1,26 +1,28 @@
-This stylish modern scientific calculator offers great user experience that you will love seeing. You can copy the result or formula to clipboard by long pressing it. You can also use this scientific calculator as a currency converter to calculate your daily income and other amount in different country's currency. With eye soothing dark theme, it is now easy for you to see buttons and numbers more easily and use this scientific calculator for simple calculations or use it as a currency converter or as a scientific calculator and graphing calculator. You can  also use this math calculator as a mortgage calculator
+Denne stilige moderne kalkulatoren tilbyr en flott brukeropplevelse som du vil elske å se. Du kan kopiere resultatet eller formelen til utklippstavlen ved å trykke lenge på den. Du kan også bruke denne kalkulatoren som valutakalkulator for å beregne din daglige inntekt og andre beløp i forskjellige land valutaer. Med øye beroligende mørkt tema, er det nå enkelt for deg å se knapper og tall lettere og bruke denne kalkulatoren for enkle beregninger eller bruke den som valutakonverterer. Du kan også bruke denne matematiske kalkulatoren som boliglånskalkulator.
 
-The app is a simple helper for fast calculations with many basic functions including multiplying, dividing, root and powers. It also comes with dark theme so that you can use this new technology to make your scientific calculator look more smooth and easy to use rather than using sharp colors provided in different calculators that can't help you concentrate on your complex calculations in this graphing calculator, scientific calculator, and math calculator.
+Appen er en enkel hjelper for raske beregninger med mange grunnleggende funksjoner, inkludert multiplisering, deling, forankring og krefter. Den leveres også med et mørkt tema, slik at du kan bruke denne nye teknologien til å få kalkulatoren til å se jevnere og enklere å bruke i stedet for å bruke skarpe farger i forskjellige kalkulatorer som ikke kan hjelpe deg med å konsentrere deg om de komplekse beregningene i denne mattekalkulatoren.
 
-You can make it vibrate on button presses to make you confident during inserting your values. The exquisite colors used in this app are cool and look smooth to eyes so you can easily distinguish between all the buttons and calculate with ease. This scientific calculator can be used to solve complex root problems or it can also be used as currency converter or graphing calculator.
+Du kan få den til å vibrere på knappetrykk for å gjøre deg trygg under innsetting av verdiene dine. De utsøkte fargene som brukes i denne appen er kule og ser glatte ut for øynene, slik at du enkelt kan skille mellom alle knappene og beregne med letthet. Denne kalkulatoren kan brukes til å løse komplekse rotproblemer, eller den kan også brukes som valutakonverterer eller grafkalkulator.
 
-There is an option in setting to prevent the phone from sleeping while using the app for comfortable usage and keep working on your complex problems in this currency converter and graphing calculator plus math calculator.
+Det er et alternativ i innstillingen for å forhindre at telefonen sover mens du bruker appen for komfortabel bruk.
 
-The text color of the resizable widget can be customized, as well as the color and the alpha of the background. Press the result or formula in the widget to open the app. After opening the app, you can use this calculator for your complex problems such as a currency converter, graphing calculator, or scientific calculator.
+Tekstfargen på kontrollprogrammet som kan endres, kan tilpasses, i tillegg til fargen og alfaen på bakgrunnen. Trykk på resultatet eller formelen i kontrollprogrammet for å åpne appen.
 
-It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
+Du kan få tilgang til en logg over operasjonene for raskt å skanne gjennom nylige beregninger.
 
-Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
+Den kommer med materialdesign og et mørkt tema som standard, noe som gir en flott brukeropplevelse for enkel bruk. Mangelen på internett-tilgang gir deg mer personvern, sikkerhet og stabilitet enn andre apper.
 
-Features:
-- Easy to use scientific calculator.
-- Comes with dark theme to allow smooth usage of calculator.
-- Works as a currency converter to help you calculate your incomes and other amounts.
-- Can be used as a graphing calculator to calculate graphs quickly.
-- Customizable text color to make it look more cool and according to your needs.
-- Buttons sized according to the average finger tapping on screen to make calculations more comfortable.
+Inneholder ingen annonser eller unødvendige tillatelser. Den er helt åpen kildekode og gir tilpassbare farger.
 
-Check out the full suite of Simple Tools here:
+Funksjoner:
+- Enkel å bruke kalkulator.
+- Operasjonshistorikk.
+- Leveres med et mørkt tema for å tillate jevn bruk av kalkulator.
+- Fungerer som valutakalkulator for å hjelpe deg med å beregne inntekter og andre beløp.
+- Tilpassbar tekstfarge for å få den til å se kjøligere ut og i henhold til dine behov.
+- Knappene er dimensjonert i henhold til gjennomsnittlig fingertrykk på skjermen for å gjøre beregningene mer komfortable.
+
+Sjekk ut hele pakken med enkle verktøy her:
 https://www.simplemobiletools.com
 
 Facebook:
