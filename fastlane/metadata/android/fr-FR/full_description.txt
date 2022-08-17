@@ -4,7 +4,7 @@ L'application est une aide simple pour des calculs rapides avec de nombreuses fo
 
 Vous pouvez le faire vibrer en appuyant sur des boutons pour vous rendre confiant lors de l'insertion de vos valeurs. Les couleurs exquises utilisées dans cette application sont cool et lisses pour les yeux afin que vous puissiez facilement distinguer tous les boutons et calculer facilement. Cette calculatrice scientifique peut être utilisée pour résoudre des problèmes de racine complexes ou elle peut également être utilisée comme convertisseur de devises ou calculatrice graphique.
 
-Il existe une option dans le réglage pour empêcher le téléphone de dormir tout en utilisant l'application pour une utilisation confortable et continuer à travailler sur vos problèmes complexes dans ce convertisseur de devises et cette calculatrice graphique plus calculatrice mathématique.
+Il existe une option dans le réglage pour empêcher le téléphone de dormir tout en utilisant l'application pour une utilisation confortable.
 
 La couleur du texte du widget redimensionnable peut être personnalisée, ainsi que la couleur et l'alpha de l'arrière-plan. Appuyez sur le résultat ou la formule dans le widget pour ouvrir l'application. Après avoir ouvert l'application, vous pouvez utiliser cette calculatrice pour vos problèmes complexes tels qu'un convertisseur de devises, une calculatrice graphique ou une calculatrice scientifique.
 

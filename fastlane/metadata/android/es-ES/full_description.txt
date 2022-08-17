@@ -4,9 +4,11 @@ La aplicación es un ayudante simple para cálculos rápidos con muchas funcione
 
 Puede hacer que vibre al presionar los botones para que se sienta seguro al insertar sus valores. Los exquisitos colores utilizados en esta aplicación son geniales y se ven suaves a los ojos, por lo que puede distinguir fácilmente entre todos los botones y calcular con facilidad. Esta calculadora científica se puede utilizar para resolver problemas de raíz complejos o también se puede utilizar como conversor de divisas o calculadora gráfica.
 
-Hay una opción en la configuración para evitar que el teléfono se duerma mientras usa la aplicación para un uso cómodo y seguir trabajando en sus problemas complejos en este conversor de moneda y calculadora gráfica más calculadora matemática.
+Hay una opción en la configuración para evitar que el teléfono se duerma mientras usa la aplicación para un uso cómodo.
 
-El color del texto del widget redimensionable se puede personalizar, así como el color y el alfa del fondo. Presione el resultado o la fórmula en el widget para abrir la aplicación. Después de abrir la aplicación, puede usar esta calculadora para sus problemas complejos, como un conversor de moneda, una calculadora gráfica o una calculadora científica.
+El color del texto del widget redimensionable se puede personalizar, así como el color y el alfa del fondo. Presione el resultado o la fórmula en el widget para abrir la aplicación. 
+
+Puede acceder a un historial de las operaciones para escanear rápidamente a través de cálculos recientes.
 
 Viene con diseño de material y tema oscuro de forma predeterminada, brinda una excelente experiencia de usuario para un uso fácil. La falta de acceso a Internet le brinda más privacidad, seguridad y estabilidad que otras aplicaciones.
 

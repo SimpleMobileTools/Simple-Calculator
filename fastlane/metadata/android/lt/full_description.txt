@@ -1,10 +1,28 @@
-Neturi matų konvertuoklio, Jūs galite nukopijuoti rezultatą arba formulę į iškarpinę arba ilgu paspaudimu.
+Šis stilingas modernus skaičiuotuvas siūlo puikią naudotojo patirtį, kuri jums patiks. Rezultatą arba formulę galite nukopijuoti į iškarpinę ilgai paspausdami. Šią skaičiuoklę taip pat galite naudoti kaip valiutos konverterį, kad apskaičiuotumėte savo kasdienes pajamas ir kitas sumas įvairių šalių valiutomis. Naudodami akis raminančią tamsią temą, dabar lengviau matysite mygtukus ir skaičius ir galėsite naudoti šį skaičiuotuvą paprastiems skaičiavimams arba naudoti jį kaip valiutos konverterį. Šią matematinę skaičiuoklę taip pat galite naudoti kaip hipotekos skaičiuoklę.
 
-Valdiklio teksto spalva gali būti pritaikyta, taip pat pagrindinė ir fono spalvos. Spauskite rezultatą arba formulę skydelyje, kad atit]darytumėte programėlę.
+Ši programa yra paprastas pagalbininkas greitiems skaičiavimams, turintis daug pagrindinių funkcijų, įskaitant dauginimą, dalijimą, šakojimąsi ir galias. Ji taip pat turi tamsią temą, todėl galite naudoti šią naują technologiją, kad skaičiuotuvas atrodytų sklandžiau ir būtų lengviau naudoti, o ne naudoti aštrias spalvas, pateikiamas įvairiuose skaičiuotuvuose, kurios negali padėti susikoncentruoti į sudėtingus skaičiavimus šioje matematinėje skaičiuoklėje.
 
-Neturi reklamų ar nereikalingų leidimų. Programėlė visiškai atviro kodo, yra galimybė keisti spalvas.
+Galite priversti jį vibruoti paspaudus mygtuką, kad įvesdami reikšmes būtumėte tikri. Šioje programėlėje naudojamos išskirtinės spalvos yra vėsios ir atrodo glotnios akims, todėl galite lengvai atskirti visus mygtukus ir lengvai skaičiuoti. Šį skaičiuotuvą galima naudoti sudėtingiems šaknų uždaviniams spręsti arba jį galima naudoti kaip valiutos konverterį ar grafinį skaičiuotuvą.
 
-Check out the full suite of Simple Tools here:
+Nustatymuose yra parinktis, kad telefonas nemiegotų, kai naudojate programą, kad būtų patogu naudotis.
+
+Keičiamo dydžio valdiklio teksto spalvą, taip pat fono spalvą ir alfa spalvą galima pritaikyti. Paspauskite valdiklyje esantį rezultatą arba formulę, kad atidarytumėte programą.
+
+Galite pasiekti operacijų istoriją, kad greitai peržiūrėtumėte neseniai atliktus skaičiavimus.
+
+Pagal numatytuosius nustatymus įdiegtas materialus dizainas ir tamsi tema, todėl užtikrinama puiki naudotojo patirtis, kad būtų lengva naudotis. Interneto prieigos nebuvimas suteikia daugiau privatumo, saugumo ir stabilumo nei kitos programėlės.
+
+Programoje nėra reklamų ir nereikalingų leidimų. Ji yra visiškai atviro kodo ir suteikia galimybę keisti spalvas.
+
+Funkcijos: Naudokite šią programėlę, kad galėtumėte naudoti savo programinę įrangą:
+- Lengva naudoti skaičiuotuvą.
+- Operacijų istorija.
+- Pridedama tamsi tema, kad būtų galima sklandžiai naudoti skaičiuotuvą.
+- Veikia kaip valiutos konverteris, padedantis apskaičiuoti pajamas ir kitas sumas.
+- Pritaikoma teksto spalva, kad jis atrodytų šauniau ir pagal jūsų poreikius.
+- Mygtukų dydis atitinka vidutinį piršto bakstelėjimą į ekraną, kad skaičiavimai būtų patogesni.
+
+Visą paprastų įrankių rinkinį rasite čia:
 https://www.simplemobiletools.com
 
 Facebook:

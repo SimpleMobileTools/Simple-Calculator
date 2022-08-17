@@ -1,14 +1,17 @@
-Bu şık ve modern hesap makinesi, görmekten hoşlanacağınız harika bir kullanıcı deneyimi sunar. Uzun basarak sonucu veya formülü panoya kopyalayabilirsiniz. Bu hesap makinesini, günlük gelirinizi ve diğer tutarları farklı ülke para birimlerinde hesaplamak için bir para birimi dönüştürücü olarak da kullanabilirsiniz. Gözü rahatlatan koyu tema ile düğmeleri ve sayıları daha kolay görmeniz ve bu hesap makinesini basit hesaplamalar için kullanmanız veya bir para birimi dönüştürücü veya bir hesap makinesi ve grafik hesap makinesi olarak kullanmanız artık çok kolay. Bu matematik hesap makinesini kredi hesaplama makinesi olarak da kullanabilirsiniz
+Bu şık ve modern hesap makinesi, görmekten hoşlanacağınız harika bir kullanıcı deneyimi sunar. Uzun basarak sonucu veya formülü panoya kopyalayabilirsiniz. Bu hesap makinesini, günlük gelirinizi ve diğer tutarları farklı ülke para birimlerinde hesaplamak için bir para birimi dönüştürücü olarak da kullanabilirsiniz. Gözü rahatlatan koyu tema ile düğmeleri ve sayıları daha kolay görmeniz ve bu hesap makinesini basit hesaplamalar için kullanmanız veya bir para birimi dönüştürücü veya bir hesap makinesi. Bu matematik hesap makinesini kredi hesaplama makinesi olarak da kullanabilirsiniz.
 
-Uygulama çarpma, bölme, kök alma ve üs hesaplama dahil olmak üzere birçok temel işlevle hızlı hesaplamalar için basit bir yardımcıdır. Ayrıca, bu grafik hesap makinesi ve matematik hesap makinesinde karmaşık hesaplamalarınıza odaklanmanıza yardımcı olamayan farklı hesap makinelerinde sağlanan keskin renkleri kullanmak yerine hesap makinenizin daha pürüzsüz ve kullanımı kolay görünmesini sağlamak üzere bu yeni teknolojiyi kullanabilmeniz için koyu tema ile birlikte gelir.
+Uygulama çarpma, bölme, kök alma ve üs hesaplama dahil olmak üzere birçok temel işlevle hızlı hesaplamalar için basit bir yardımcıdır. Ayrıca, bu makinesi ve matematik hesap makinesinde karmaşık hesaplamalarınıza odaklanmanıza yardımcı olamayan farklı hesap makinelerinde sağlanan keskin renkleri kullanmak yerine hesap makinenizin daha pürüzsüz ve kullanımı kolay görünmesini sağlamak üzere bu yeni teknolojiyi kullanabilmeniz için koyu tema ile birlikte gelir.
 
 Değerlerinizi girerken kendinize güvenmenizi sağlamak için düğmeye basıldığında titremesini sağlayabilirsiniz. Bu uygulamada kullanılan zarif renkler harika ve gözlere pürüzsüz görünür, böylece tüm düğmeleri kolayca ayırt edebilir ve kolaylıkla hesaplayabilirsiniz. Bu hesap makinesi karmaşık kök problemlerini çözmek için kullanılabileceği gibi para birimi dönüştürücü veya grafik hesap makinesi olarak da kullanılabilir.
 
-Rahat kullanım için uygulamayı kullanırken telefonun uyumasını önlemek ve bu para birimi dönüştürücü ve grafik hesap makinesi artı matematik hesap makinesinde karmaşık problemleriniz üzerinde çalışmaya devam etmek için bir ayar seçeneği vardır.
+Rahat kullanım için uygulamayı kullanırken telefonun uyumasını önlemek.
 
-Yeniden boyutlandırılabilir widget'ın metin renginin yanı sıra arka planın rengi ve saydamlığı da özelleştirilebilir. Uygulamayı açmak için widget'taki sonuca veya formüle basın. Uygulamayı açtıktan sonra, bu hesap makinesini para birimi dönüştürücü veya grafik hesap makinesi gibi karmaşık sorunlarınız için kullanabilirsiniz.
+Yeniden boyutlandırılabilir widget'ın metin renginin yanı sıra arka planın rengi ve saydamlığı da özelleştirilebilir. Uygulamayı açmak için widget'taki sonuca veya formüle basın.
 
 Öntanımlı olarak material tasarım ve koyu tema ile birlikte gelir, kolay kullanım için harika bir kullanıcı deneyimi sağlar. İnternet erişiminin olmaması size diğer uygulamalardan daha fazla gizlilik, güvenlik ve kararlılık sağlar.
+Son hesaplamaları hızlı bir şekilde taramak için işlemlerin geçmişine erişebilirsiniz.
+
+Varsayılan olarak materyal tasarım ve karanlık tema ile birlikte gelir, kolay kullanım için harika bir kullanıcı deneyimi sağlar. İnternet erişiminin olmaması size diğer uygulamalardan daha fazla gizlilik, güvenlik ve kararlılık sağlar.
 
 Reklam veya gereksiz izinler içermez. Tamamen açık kaynaklıdır, özelleştirilebilir renkler sağlar.
 

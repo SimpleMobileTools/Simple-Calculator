@@ -8,6 +8,8 @@ Es gibt eine Option in der Einstellung, die verhindert, dass das Telefon währen
 
 Die Textfarbe des Widgets mit veränderbarer Größe sowie die Farbe und das Alpha des Hintergrunds können angepasst werden. Drücken Sie auf das Ergebnis oder die Formel im Widget, um die App zu öffnen. Nach dem Öffnen der App können Sie diesen Rechner für Ihre komplexen Probleme wie einen Währungsumrechner, einen Grafikrechner oder einen wissenschaftlichen Rechner verwenden.
 
+Die Textfarbe des größenveränderbaren Widgets kann angepasst werden, ebenso wie die Farbe und das Alpha des Hintergrunds. Drücken Sie das Ergebnis oder die Formel im Widget, um die App zu öffnen.
+
 Es wird standardmäßig mit Materialdesign und dunklem Thema geliefert und bietet eine hervorragende Benutzererfahrung für eine einfache Verwendung. Der fehlende Internetzugang bietet Ihnen mehr Privatsphäre, Sicherheit und Stabilität als andere Apps.
 
 Enthält keine Anzeigen oder unnötigen Berechtigungen. Es ist vollständig OpenSource und bietet anpassbare Farben.
