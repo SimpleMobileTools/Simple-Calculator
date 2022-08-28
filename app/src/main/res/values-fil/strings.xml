@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Simpleng Calculator</string>
+    <string name="app_launcher_name">Calculator</string>
+    <string name="scientific_calculator">Scientific Calculator</string>
+    <string name="formula_divide_by_zero_error">Error: paghahati sa zero</string>
+    <string name="history">Nakaraan</string>
+    <string name="history_empty">Walang nakaraan</string>
+    <string name="clear_history">Linisin</string>
+    <string name="history_cleared">Nalinis na ang nakaraan</string>
+    <string name="vibrate_on_button_press">Mag-vibrate sa pagpindot</string>
+    <string name="use_comma_as_decimal_mark">Gumamit ng kuwit bilang decimal mark</string>
+    <string name="faq_1_title">Paano gumagana ang C (Clear) button\?</string>
+    <string name="faq_1_text">Matatanggal ng isang karakter kapag pinindot ito nang isang beses. Ire-reset naman ang lahat ng mga field kapag mahabang pinindot ito.</string>
+</resources>
