@@ -3,13 +3,17 @@
     <string name="app_name">Једноставан калкулатор</string>
     <string name="app_launcher_name">Калкулатор</string>
     <string name="scientific_calculator">Научни калкулатор</string>
-    <string name="use_comma_as_decimal_mark">Коришћење зареза као децималног знака</string>
+    <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Грешка : дељење нулом</string>
+    <!-- History -->
     <string name="history">Историја</string>
     <string name="history_empty">Историја је празна</string>
     <string name="clear_history">Опозовите избор</string>
     <string name="history_cleared">Историја је очишћена</string>
+    <!-- Settings -->
     <string name="vibrate_on_button_press">Вибрирајте притиснути дугметом</string>
+    <string name="use_comma_as_decimal_mark">Коришћење зареза као децималног знака</string>
+    <!-- FAQ -->
     <string name="faq_1_title">Како дугме Ц (Обриши) функционише\?</string>
     <string name="faq_1_text">Додиривање на њега ће уклонити један по један знак. Дуго притискање ће успоставити почетне вредности свих поља одједном.</string>
 </resources>
