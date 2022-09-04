@@ -1,0 +1,35 @@
+Šis stilingas modernus skaičiuotuvas siūlo puikią vartotojo patirtį, kurią jums patiks matyti. Galite nukopijuoti rezultatą arba formulę į mainų sritį ilgai paspausdami. Taip pat šią skaičiuoklę galite naudoti kaip valiutos keitiklį, norėdami apskaičiuoti savo dienos pajamas ir kitas sumas skirtingų šalių valiutomis. Naudodami akis raminančią tamsią temą, dabar galite lengviau matyti mygtukus ir skaičius ir naudoti šį skaičiuotuvą paprastiems skaičiavimams arba naudoti kaip valiutos keitiklį. Taip pat galite naudoti šią matematikos skaičiuoklę kaip hipotekos skaičiuoklę.
+
+Programa yra paprastas greitų skaičiavimų pagalbininkas, turintis daug pagrindinių funkcijų, įskaitant dauginimą, padalijimą, įsišaknijimą ir galias. Jame taip pat yra tamsi tema, kad galėtumėte naudoti šią naują technologiją, kad skaičiuotuvas atrodytų sklandžiau ir lengviau naudojamas, o ne naudoti ryškias spalvas, pateiktas skirtinguose skaičiuotuvuose, kurios negali padėti susikoncentruoti į sudėtingus skaičiavimus naudojant šį matematikos skaičiuotuvą.
+
+Puteți să-l faceți să vibreze pe apăsările de buton pentru a vă face încrezători în timpul introducerii valorilor. Culorile rafinate utilizate în această aplicație sunt reci și arată neted pentru ochi, astfel încât să puteți distinge cu ușurință între toate butoanele și să calculați cu ușurință. Acest calculator poate fi folosit pentru a rezolva probleme complexe rădăcină sau poate fi, de asemenea, utilizat ca un convertor valutar sau calculator grafic.
+
+Există o opțiune în setare pentru a împiedica telefonul să doarmă în timp ce utilizați aplicația pentru o utilizare confortabilă.
+
+Culoarea textului widget-ului redimensionabil poate fi personalizată, precum și culoarea și alfa fundalului. Apăsați rezultatul sau formula din widget pentru a deschide aplicația.
+
+Puteți accesa un istoric al operațiunilor pentru a scana rapid prin calcule recente.
+
+Acesta vine cu un design de materiale și o temă întunecată în mod implicit, oferind o experiență excelentă utilizatorului pentru o utilizare ușoară. Lipsa accesului la internet vă oferă mai multă confidențialitate, securitate și stabilitate decât alte aplicații.
+
+Nu conține anunțuri sau permisiuni inutile. Este complet open-source și oferă culori personalizabile.
+
+Caracteristici:
+- Calculator ușor de utilizat.
+- Istoricul operațiunilor.
+- Vine cu o temă întunecată pentru a permite utilizarea fără probleme a calculatorului.
+- Funcționează ca un convertor valutar pentru a vă ajuta să calculați veniturile și alte sume.
+- Culoare text personalizabilă pentru a-l face să pară mai rece și în funcție de nevoile dvs.
+- Butoanele sunt dimensionate în funcție de degetul mediu care atinge ecranul pentru a face calculele mai confortabile.
+
+Check out suita completă de instrumente simple aici:
+https://www.simplemobiletools.com
+
+Facebook:
+https://www.facebook.com/simplemobiletools
+
+Reddit:
+https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">간단한 계산기</string>
+    <string name="app_launcher_name">계산기</string>
+    <string name="scientific_calculator">과학 계산기</string>
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">오류: 0으로 나누기</string>
+    <!-- History -->
+    <string name="history">있습니다</string>
+    <string name="history_empty">기록이 비어 있습니다</string>
+    <string name="clear_history">선택 취소</string>
+    <string name="history_cleared">기록이 지워졌습니다</string>
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">진동 버튼을 누릅니다</string>
+    <string name="use_comma_as_decimal_mark">쉼표를 소수점으로 사용합니다</string>
+    <!-- FAQ -->
+    <string name="faq_1_title">C(지우기) 버튼은 어떻게 작동합니까\?</string>
+    <string name="faq_1_text">누르면 한 번에 한 문자씩 제거됩니다. 길게 누르면 모든 필드가 한 번에 재설정됩니다.</string>
+</resources>
