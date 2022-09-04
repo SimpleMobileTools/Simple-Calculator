@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Calculator</string>
-    <string name="app_launcher_name">Calculator</string>
-    <string name="scientific_calculator">Scientific Calculator</string>
-    <string name="formula_divide_by_zero_error">Error: division by zero</string>
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
-    <string name="faq_1_title">How does the C (Clear) button work\?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+    <string name="app_name">Едноставен калкулатор</string>
+    <string name="app_launcher_name">Калкулатор</string>
+    <string name="scientific_calculator">Научен калкулатор</string>
+    <string name="formula_divide_by_zero_error">Грешка: поделба по нула</string>
+    <string name="history">Историја</string>
+    <string name="history_empty">Историјата е празна</string>
+    <string name="clear_history">ясно</string>
+    <string name="history_cleared">Историјата е исчистена</string>
+    <string name="vibrate_on_button_press">Вибрирајте на копчето притиснете</string>
+    <string name="use_comma_as_decimal_mark">Користете замена како знак за децимален знак</string>
+    <string name="faq_1_title">Како функционира копчето C (Clear) \?</string>
+    <string name="faq_1_text">Прислушкувањето на него ќе отстрани еден лик во исто време. Долгото притискање ќе ги ресетира сите полиња одеднаш.</string>
 </resources>
