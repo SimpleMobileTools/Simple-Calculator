@@ -3,13 +3,17 @@
     <string name="app_name">Vienkāršs kalkulators</string>
     <string name="app_launcher_name">Kalkulators</string>
     <string name="scientific_calculator">Zinātniskais kalkulators</string>
+    <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Kļūda: dalīšana ar nulli</string>
+    <!-- History -->
     <string name="history">Vēsture</string>
     <string name="history_empty">Vēsture ir tukša</string>
     <string name="clear_history">Skaidrs</string>
     <string name="history_cleared">Vēsture ir dzēsta</string>
+    <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrēšana pēc pogas nospiešanas</string>
     <string name="use_comma_as_decimal_mark">Izmanto komatu kā decimālzīmi</string>
+    <!-- FAQ -->
     <string name="faq_1_title">Kā darbojas poga C (Notīrīt)\?</string>
     <string name="faq_1_text">Pieskarieties tai, lai noņemtu vienu rakstzīmi vienlaikus. Ilgstoši nospiežot to, tiks atiestatīti visi lauki vienlaicīgi.</string>
 </resources>
