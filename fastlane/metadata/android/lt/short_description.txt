@@ -1,1 +1,1 @@
-Gražus greitai atliekamų paprastų skaičiuotuvas su sklandžia naudotojo sąsaja
+Skaičiuotuvas su pagrindinėmis funkcijomis ir pritaikomu skydeliu.

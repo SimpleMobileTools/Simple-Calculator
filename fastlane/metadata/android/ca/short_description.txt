@@ -1,1 +1,1 @@
-Una calculadora per a càlculs ràpids i senzills amb una interfície d'usuari fluïda
+Calculadora agradable per a càlculs senzills amb una interfície d'usuari suau

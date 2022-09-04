@@ -1,1 +1,1 @@
-Kaunis laskin nopeisiin yksinkertaisiin laskutoin sujuvalla käyttöliittymällä
+Laskin nopeita, simppeleitä laskuja varten. Kivalla ulkoasulla, ilman mainoksia

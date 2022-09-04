@@ -1,1 +1,1 @@
-En vakker kalkulator for raske enkle beregninger med jevnt brukergrensesnitt
+En kalkulator for raske utregninger med enkelt grensesnitt, uten reklame
