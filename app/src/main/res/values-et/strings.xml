@@ -12,7 +12,7 @@
     <string name="history_cleared">Ajalugu on kustutatud</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Nupuvajutusel vibreeri</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="use_comma_as_decimal_mark">Kasutage koma kui kümnendmärki</string>
     <!-- FAQ -->
     <string name="faq_1_title">Kuidas C (Clear) nupp toimib\?</string>
     <string name="faq_1_text">Üks klõpsatus kustutab ühe numbri. Pikk vajutus eemaldab kogu sisestuse.</string>
