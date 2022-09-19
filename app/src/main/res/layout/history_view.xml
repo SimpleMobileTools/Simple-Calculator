@@ -12,15 +12,17 @@
 
     <TextView
         android:id="@+id/item_formula"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/medium_margin"
         android:alpha="0.6"
         android:ellipsize="end"
         android:maxLines="1"
         android:paddingStart="@dimen/small_margin"
+        android:paddingEnd="@dimen/small_margin"
+        android:textDirection="ltr"
         android:textSize="@dimen/bigger_text_size"
-        tools:text="2 + 2" />
+        tools:text="4 + 2" />
 
     <TextView
         android:id="@+id/item_result"
@@ -31,7 +33,9 @@
         android:ellipsize="end"
         android:maxLines="1"
         android:paddingStart="@dimen/small_margin"
+        android:paddingEnd="@dimen/small_margin"
+        android:textDirection="ltr"
         android:textSize="@dimen/big_text_size"
-        tools:text="4" />
+        tools:text="-42" />
 
 </RelativeLayout>
