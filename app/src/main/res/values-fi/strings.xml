@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Calculator</string>
+    <string name="app_name">Yksinkertainen laskin</string>
     <string name="app_launcher_name">Laskin</string>
     <string name="scientific_calculator">Tieteellinen laskin</string>
     <!-- Calculator field -->

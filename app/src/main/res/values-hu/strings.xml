@@ -6,13 +6,13 @@
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Hiba: nullával való osztás</string>
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
+    <string name="history">Előzmények</string>
+    <string name="history_empty">Nincsenek előzmények</string>
+    <string name="clear_history">Törlés</string>
+    <string name="history_cleared">Az előzmények törölve lettek</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Rezgés gombnyomáskor</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="use_comma_as_decimal_mark">Tizedesjelként vessző használata</string>
     <!-- FAQ -->
     <string name="faq_1_title">Hogyan működik a C (törlés) gomb\?</string>
     <string name="faq_1_text">A koppintás egyszerre egy karaktert töröl. A hosszú lenyomás egyszerre állítja vissza az összes mezőt.</string>
