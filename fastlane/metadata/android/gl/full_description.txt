@@ -21,18 +21,15 @@ Características
 - Pódese usar como calculadora gráfica para calcular gráficos rapidamente. 
 - Cor de texto personalizable para que pareza máis atractivo e segundo as túas necesidades. 
 - Botóns de tamaño segundo a media dos dedos na pantalla para facer os cálculos máis cómodos. 
- 
+
 Consulte o conxunto completo de Simple Tools aquí: 
 https://www.simplemobiletools.com 
- 
- 
+
 Facebook: 
 https://www.facebook.com/simplemobiletools 
- 
- 
+
 Reddit: 
 https://www.reddit.com/r/SimpleMobileTools 
- 
- 
+
 Telegram: 
 https://t.me/SimpleMobileTools
