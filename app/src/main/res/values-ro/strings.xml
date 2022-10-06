@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Calculator</string>
+    <string name="app_name">Calculator simplu</string>
     <string name="app_launcher_name">Calculator</string>
     <string name="scientific_calculator">Calculator Ştiințific</string>
     <!-- Calculator field -->
@@ -8,14 +8,14 @@
     <!-- History -->
     <string name="history">Istoric</string>
     <string name="history_empty">Istoricul este gol</string>
-    <string name="clear_history">Curăţare</string>
-    <string name="history_cleared">Istoricul a fost curățat</string>
+    <string name="clear_history">Șterge</string>
+    <string name="history_cleared">Istoricul a fost șters</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrează la apăsarea butoanelor</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="use_comma_as_decimal_mark">Utilizează virgula ca separator zecimal</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Cum funcționează butonul C (Curăță)?</string>
-    <string name="faq_1_text">Dacă apăsați pe el, veți elimina câte un caracter pe rând. Apăsarea prelungită a acestuia va reseta toate câmpurile deodată.</string>
+    <string name="faq_1_title">Cum funcționează butonul Ș (Șterge)\?</string>
+    <string name="faq_1_text">Apăsând pe el, veți elimina câte un caracter pe rând. Apăsarea lungă va reseta toate câmpurile deodată.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

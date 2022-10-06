@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Semplice Calcolatrice</string>
+    <string name="app_name">Calcolatrice Semplice</string>
     <string name="app_launcher_name">Calcolatrice</string>
     <string name="scientific_calculator">Calcolatrice scientifica</string>
     <!-- Calculator field -->
