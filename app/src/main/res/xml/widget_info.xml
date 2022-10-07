@@ -8,4 +8,6 @@
     android:minResizeHeight="@dimen/min_widget_height"
     android:previewImage="@drawable/img_widget_preview"
     android:resizeMode="horizontal|vertical"
+    android:targetCellWidth="4"
+    android:targetCellHeight="4"
     android:updatePeriodMillis="36000000" />
