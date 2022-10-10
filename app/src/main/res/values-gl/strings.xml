@@ -11,7 +11,7 @@
     <string name="clear_history">Limpar</string>
     <string name="history_cleared">Borrouse o historial</string>
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Vibrar ao premer o botón</string>
+    <string name="vibrate_on_button_press">Vibrar ao premer nun botón</string>
     <string name="use_comma_as_decimal_mark">Usar cómaa como marca decimal</string>
     <!-- FAQ -->
     <string name="faq_1_title">Como funciona o botón C (Borrar)?</string>
