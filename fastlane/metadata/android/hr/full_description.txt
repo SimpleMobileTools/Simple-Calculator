@@ -1,28 +1,28 @@
-Ovaj moderan moderan kalkulator nudi sjajno korisničko iskustvo koje ćete voljeti vidjeti. Rezultat ili formulu možete kopirati na međuspremnik dugim pritiskom. Ovaj kalkulator možete koristiti i kao pretvarač valuta za izračunavanje vašeg dnevnog dohotka i drugih iznosa u valutama različitih država. Budući da je oči umirujuća tamna tema, sada vam je lakše vidjeti gumbe i brojeve te ovaj kalkulator koristiti za jednostavne proračune ili ga koristiti kao pretvarač valute. Ovaj matematički kalkulator možete koristiti i kao hipotekarni kalkulator.
+Ovaj moderan kalkulator nudi sjajno korisničko iskustvo koje ćete voljeti vidjeti. Rezultat ili formulu kopirate na međuspremnik dugim pritiskom. Kalkulator možete koristiti i kao pretvarač valuta za izračunavanje vašeg dnevnog dohotka i drugih iznosa u valutama različitih država. Budući da je oči umirujuća tamna tema, lakše je vidjeti gumbe i brojeve te ovaj kalkulator koristiti za jednostavne proračune ili ga koristiti kao pretvarač valute. Matematički kalkulator koristite i kao hipotekarni kalkulator.
 
-Aplikacija je jednostavan pomagač za brze proračune s mnogim osnovnim funkcijama, uključujući množenje, dijeljenje, ukorijenjivanje i moći. Također dolazi s mračnom temom tako da možete koristiti ovu novu tehnologiju kako bi vaš kalkulator izgledao glatko i lakše za upotrebu, a ne da koristite oštre boje u različitim kalkulatorima to vam ne može pomoći da se koncentrirate na svoje složene proračune u ovom matematičkom kalkulatoru.
+Aplikacija je jednostavan pomagač za brze proračune s mnogim osnovnim funkcijama, uključujući množenje, dijeljenje, ukorijenjivanje i moći. Također dolazi s mračnom temom i da možete koristiti ovu tehnologiju da bi vaš kalkulator izgledao glatko i lakše, a ne da koristite oštre boje u različitim kalkulatorima to vam ne može pomoći da se koncentrirate na svoje složene proračune u ovom matematičkom kalkulatoru.
 
-Možete učiniti da vibrira na prešama s gumbima kako biste bili sigurni tijekom umetanja vrijednosti. Izvrsne boje koje se koriste u ovoj aplikaciji su cool i glatke su oči, tako da lako možete razlikovati sve gumbe i lako ih izračunati. Ovaj se kalkulator može koristiti za rješavanje složenih korijenskih problema ili se može koristiti i kao pretvarač valute ili grafički kalkulator.
+Možete učiniti da vibrira na prešama s gumbima kako biste bili sigurni tijekom umetanja vrijednosti. Izvrsne boje koje se koriste u ovoj aplikaciji su kul i glatke su oči, tako da lako možete razlikovati sve gumbe i lako ih izračunati. Ovaj se kalkulator može koristiti za rješavanje složenih korijenskih problema ili se koristi i kao pretvarač valute ili grafički kalkulator.
 
 U postavci postoji opcija koja sprečava spavanje telefona tijekom korištenja aplikacije za ugodno korištenje.
 
-Boja teksta u znatnom widgetu može se prilagoditi, kao i boja i alfa pozadine. Pritisnite rezultat ili formulu u widgetu za otvaranje aplikacije.
+Boja teksta u znatnom dodatku može se prilagoditi, kao i boja i alfa pozadine. Pritisnite rezultat ili formulu za otvaranje aplikacije.
 
 Možete pristupiti povijesti operacija kako biste brzo skenirali kroz nedavne proračune.
 
 Dolazi s dizajnom materijala i tamnom temom prema zadanim postavkama, pružajući sjajno korisničko iskustvo za jednostavno korištenje. Nedostatak pristupa internetu daje vam više privatnosti, sigurnosti i stabilnosti od ostalih aplikacija.
 
-Ne sadrži oglase ili nepotrebne dozvole. Potpuno je open-source i pruža prilagođene boje.
+Ne sadrži oglase ili nepotrebne dozvole. Potpuno je otvorena i pruža prilagođene boje.
 
 Značajke:
 - Jednostavan za upotrebu kalkulatora.
 - Operativna povijest.
 - Dolazi s tamnom temom kako bi se omogućilo nesmetano korištenje kalkulatora.
 - Radi kao pretvarač valuta koji će vam pomoći izračunati prihode i druge iznose.
-- Prilagodljiva boja teksta kako bi izgledala hladnije i prema vašim potrebama.
+- Prilagodljiva boja teksta kako bi izgledala hladnije i prema potrebama.
 - Gumbi se dimenzioniraju prema prosječnom dodiru prsta na ekranu kako bi proračuni bili ugodniji.
 
-Ovdje pogledajte cijeli paket jednostavnih alata:
+Ovdje pogledajte cijeli paket alata:
 https://www.simplemobiletools.com
 
 Facebook:
