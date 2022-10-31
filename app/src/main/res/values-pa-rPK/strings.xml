@@ -2,9 +2,9 @@
 <resources>
     <string name="app_name">سادہ کیلکولیٹر</string>
     <string name="app_launcher_name">کیلکولیٹر</string>
-    <string name="scientific_calculator">Scientific Calculator</string>
+    <string name="scientific_calculator">وگیانک کیلکولیٹر</string>
     <!-- Calculator field -->
-    <string name="formula_divide_by_zero_error">Error: division by zero</string>
+    <string name="formula_divide_by_zero_error">غلطی آئی اے، صفر نال ونڈ</string>
     <!-- History -->
     <string name="history">تریخ</string>
     <string name="history_empty">تریخ چ کوئی نہیں اے</string>
