@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Calculator</string>
-    <string name="app_launcher_name">Calculator</string>
-    <string name="scientific_calculator">Scientific Calculator</string>
-    <string name="formula_divide_by_zero_error">Error: division by zero</string>
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
+    <string name="app_name">ಸರಳ ಕ್ಯಾಲ್ಕುಲೇಟರ್</string>
+    <string name="app_launcher_name">ಕ್ಯಾಲ್ಕುಲೇಟರ್</string>
+    <string name="scientific_calculator">ವೈಜ್ಞಾನಿಕ ಕ್ಯಾಲ್ಕುಲೇಟರ್</string>
+    <string name="formula_divide_by_zero_error">ದೋಷ : ಶೂನ್ಯದಿಂದ ವಿಭಜನೆ</string>
+    <string name="history">ಇತಿಹಾಸ</string>
+    <string name="history_empty">ಇತಿಹಾಸ ಖಾಲಿಯಾಗಿದೆ</string>
+    <string name="clear_history">ಸ್ಪಷ್ಟ</string>
+    <string name="history_cleared">ಇತಿಹಾಸವನ್ನು ತೆರವುಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="vibrate_on_button_press">Vibrate on button press</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
-    <string name="faq_1_title">How does the C (Clear) button work\?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+    <string name="use_comma_as_decimal_mark">ಅಲ್ಪವಿರಾಮವನ್ನು ದಶಮಾಂಶ ಚಿಹ್ನೆಯಾಗಿ ಬಳಸಿ</string>
+    <string name="faq_1_title">ಸಿ (ತೆರವುಗೊಳಿಸಿ) ಬಟನ್ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ\?</string>
+    <string name="faq_1_text">ಅದರ ಮೇಲೆ ಟ್ಯಾಪ್ ಮಾಡುವುದರಿಂದ ಒಂದು ಸಮಯದಲ್ಲಿ ಒಂದು ಅಕ್ಷರವನ್ನು ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ. ದೀರ್ಘವಾಗಿ ಒತ್ತಿದರೆ ಎಲ್ಲಾ ಕ್ಷೇತ್ರಗಳನ್ನು ಒಂದೇ ಬಾರಿಗೆ ಮರುಹೊಂದಿಸುತ್ತದೆ.</string>
 </resources>
