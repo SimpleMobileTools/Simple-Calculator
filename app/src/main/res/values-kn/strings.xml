@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ಸರಳ ಕ್ಯಾಲ್ಕುಲೇಟರ್</string>
+    <string name="app_launcher_name">ಕ್ಯಾಲ್ಕುಲೇಟರ್</string>
+    <string name="scientific_calculator">ವೈಜ್ಞಾನಿಕ ಕ್ಯಾಲ್ಕುಲೇಟರ್</string>
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">ದೋಷ : ಶೂನ್ಯದಿಂದ ವಿಭಜನೆ</string>
+    <!-- History -->
+    <string name="history">ಇತಿಹಾಸ</string>
+    <string name="history_empty">ಇತಿಹಾಸ ಖಾಲಿಯಾಗಿದೆ</string>
+    <string name="clear_history">ಸ್ಪಷ್ಟ</string>
+    <string name="history_cleared">ಇತಿಹಾಸವನ್ನು ತೆರವುಗೊಳಿಸಲಾಗಿದೆ</string>
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="use_comma_as_decimal_mark">ಅಲ್ಪವಿರಾಮವನ್ನು ದಶಮಾಂಶ ಚಿಹ್ನೆಯಾಗಿ ಬಳಸಿ</string>
+    <!-- FAQ -->
+    <string name="faq_1_title">ಸಿ (ತೆರವುಗೊಳಿಸಿ) ಬಟನ್ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ\?</string>
+    <string name="faq_1_text">ಅದರ ಮೇಲೆ ಟ್ಯಾಪ್ ಮಾಡುವುದರಿಂದ ಒಂದು ಸಮಯದಲ್ಲಿ ಒಂದು ಅಕ್ಷರವನ್ನು ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ. ದೀರ್ಘವಾಗಿ ಒತ್ತಿದರೆ ಎಲ್ಲಾ ಕ್ಷೇತ್ರಗಳನ್ನು ಒಂದೇ ಬಾರಿಗೆ ಮರುಹೊಂದಿಸುತ್ತದೆ.</string>
+</resources>

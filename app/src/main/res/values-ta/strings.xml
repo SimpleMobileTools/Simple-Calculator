@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">எளிய கால்குலேட்டர்</string>
+    <string name="app_launcher_name">கால்குலேட்டர்</string>
+    <string name="scientific_calculator">அறிவியல் கால்குலேட்டர்</string>
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">பிழை: பூஜ்ஜியத்தால் வகுத்தல்</string>
+    <!-- History -->
+    <string name="history">வரலாறு</string>
+    <string name="history_empty">வரலாறு காலியாக உள்ளது</string>
+    <string name="clear_history">Clear</string>
+    <string name="history_cleared">History has been cleared</string>
+    <!-- Settings -->
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="use_comma_as_decimal_mark">கமாவை தசம குறியாகப் பயன்படுத்தவும்</string>
+    <!-- FAQ -->
+    <string name="faq_1_title">சி (தெளிவு) பொத்தான் எப்படி வேலை செய்கிறது\?</string>
+    <string name="faq_1_text">அதைத் தட்டினால் ஒரு நேரத்தில் ஒரு எழுத்து நீக்கப்படும். நீண்ட நேரம் அழுத்தினால், எல்லாப் புலங்களையும் ஒரே நேரத்தில் மீட்டமைக்கும்.</string>
+</resources>
