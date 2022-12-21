@@ -91,16 +91,14 @@ class MainActivity : SimpleActivity(), Calculator {
 
         vibrateOnButtonPress = config.vibrateOnButtonPress
 
-        val properPrimaryColor = getProperPrimaryColor()
         arrayOf(btn_percent, btn_power, btn_root, btn_clear, btn_reset, btn_divide, btn_multiply, btn_plus, btn_minus, btn_equals, btn_decimal).forEach {
-            it.setTextColor(properPrimaryColor)
             it.background = ResourcesCompat.getDrawable(resources, R.drawable.button_circular_background, theme)
-            it.background?.alpha = 200
+            it.background?.alpha = 90
         }
 
         arrayOf(btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9).forEach {
             it.background = ResourcesCompat.getDrawable(resources, R.drawable.button_circular_background, theme)
-            it.background?.alpha = 80
+            it.background?.alpha = 20
         }
     }
 

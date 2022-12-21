@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="widget_text_size">22</integer>
+    <integer name="widget_text_size">26</integer>
 </resources>

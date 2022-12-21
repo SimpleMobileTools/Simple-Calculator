@@ -56,7 +56,7 @@
             android:layout_weight="2"
             android:orientation="horizontal">
 
-            <Button
+            <TextView
                 android:id="@+id/btn_7"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -64,7 +64,7 @@
                 android:layout_weight="1"
                 android:text="7" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_8"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -72,7 +72,7 @@
                 android:layout_weight="1"
                 android:text="8" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_9"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                 android:layout_weight="1"
                 android:text="9" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_divide"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -88,7 +88,7 @@
                 android:layout_weight="1"
                 android:text="÷" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_clear"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -96,7 +96,7 @@
                 android:layout_weight="1"
                 android:text="C" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_reset"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -113,7 +113,7 @@
             android:layout_weight="2"
             android:orientation="horizontal">
 
-            <Button
+            <TextView
                 android:id="@+id/btn_4"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -121,7 +121,7 @@
                 android:layout_weight="1"
                 android:text="4" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_5"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -129,7 +129,7 @@
                 android:layout_weight="1"
                 android:text="5" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_6"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -137,7 +137,7 @@
                 android:layout_weight="1"
                 android:text="6" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_multiply"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -145,7 +145,7 @@
                 android:layout_weight="1"
                 android:text="×" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_root"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -161,7 +161,7 @@
             android:layout_weight="2"
             android:orientation="horizontal">
 
-            <Button
+            <TextView
                 android:id="@+id/btn_1"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -169,7 +169,7 @@
                 android:layout_weight="1"
                 android:text="1" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_2"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -177,7 +177,7 @@
                 android:layout_weight="1"
                 android:text="2" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_3"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -185,7 +185,7 @@
                 android:layout_weight="1"
                 android:text="3" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_minus"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -193,7 +193,7 @@
                 android:layout_weight="1"
                 android:text="-" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_power"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -209,7 +209,7 @@
             android:layout_weight="2"
             android:orientation="horizontal">
 
-            <Button
+            <TextView
                 android:id="@+id/btn_0"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -217,7 +217,7 @@
                 android:layout_weight="1"
                 android:text="0" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_decimal"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -225,7 +225,7 @@
                 android:layout_weight="1"
                 android:text="." />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_equals"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -233,7 +233,7 @@
                 android:layout_weight="1"
                 android:text="=" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_plus"
                 style="@style/MyButton"
                 android:layout_width="match_parent"
@@ -241,7 +241,7 @@
                 android:layout_weight="1"
                 android:text="+" />
 
-            <Button
+            <TextView
                 android:id="@+id/btn_percent"
                 style="@style/MyButton"
                 android:layout_width="match_parent"

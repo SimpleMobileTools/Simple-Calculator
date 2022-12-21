@@ -5,7 +5,7 @@
         <layer-list>
             <item android:id="@+id/button_circular_background_shape">
                 <shape android:shape="oval">
-                    <solid android:color="@color/divider_grey" />
+                    <solid android:color="?attr/colorPrimary" />
                 </shape>
             </item>
         </layer-list>

@@ -6,9 +6,9 @@ import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
-import android.widget.Button
 import android.widget.RemoteViews
 import android.widget.SeekBar
+import android.widget.TextView
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.helpers.MyWidgetProvider
@@ -140,8 +140,8 @@ class WidgetConfigureActivity : SimpleActivity() {
         config_save.setTextColor(getProperPrimaryColor().getContrastColor())
 
         viewIds.forEach {
-            (findViewById<Button>(it)).setTextColor(mTextColor)
-            (findViewById<Button>(it)).background = null
+            (findViewById<TextView>(it)).setTextColor(mTextColor)
+            (findViewById<TextView>(it)).background = null
         }
     }
 
