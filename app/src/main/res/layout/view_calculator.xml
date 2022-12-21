@@ -65,14 +65,6 @@
             android:text="√" />
 
         <Button
-            android:id="@+id/btn_clear"
-            style="@style/MyButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="C" />
-
-        <Button
             android:id="@+id/btn_reset"
             style="@style/MyButton"
             android:layout_width="match_parent"
@@ -80,6 +72,14 @@
             android:layout_weight="1"
             android:text="AC"
             android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_divide"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="÷" />
 
     </LinearLayout>
 
@@ -114,12 +114,12 @@
             android:text="9" />
 
         <Button
-            android:id="@+id/btn_divide"
+            android:id="@+id/btn_multiply"
             style="@style/MyButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="÷" />
+            android:text="×" />
 
     </LinearLayout>
 
@@ -154,12 +154,12 @@
             android:text="6" />
 
         <Button
-            android:id="@+id/btn_multiply"
+            android:id="@+id/btn_minus"
             style="@style/MyButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="×" />
+            android:text="-" />
 
     </LinearLayout>
 
@@ -194,12 +194,12 @@
             android:text="3" />
 
         <Button
-            android:id="@+id/btn_minus"
+            android:id="@+id/btn_plus"
             style="@style/MyButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="-" />
+            android:text="+" />
 
     </LinearLayout>
 
@@ -226,20 +226,20 @@
             android:text="." />
 
         <Button
+            android:id="@+id/btn_clear"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="C" />
+
+        <Button
             android:id="@+id/btn_equals"
             style="@style/MyButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="=" />
-
-        <Button
-            android:id="@+id/btn_plus"
-            style="@style/MyButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="+" />
 
     </LinearLayout>
 </LinearLayout>
