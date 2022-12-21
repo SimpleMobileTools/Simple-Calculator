@@ -64,7 +64,6 @@ class WidgetConfigureActivity : SimpleActivity() {
         if (mFeatureLockedDialog != null && isOrWasThankYouInstalled()) {
             mFeatureLockedDialog?.dismissDialog()
         }
-        setupToolbar(config_toolbar)
     }
 
     private fun initVariables() {
@@ -78,6 +77,10 @@ class WidgetConfigureActivity : SimpleActivity() {
         updateBackgroundColor()
 
         mTextColor = config.widgetTextColor
+        if (mTextColor == resources.getInteger(R.integer.default_widget_text_color) && config.isUsingSystemTheme) {
+            mTextColor = resources.getColor(R.color.you_primary_color, theme)
+        }
+
         updateTextColor()
 
         formula.text = "15,937*5"
