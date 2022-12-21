@@ -93,6 +93,11 @@ class MainActivity : SimpleActivity(), Calculator {
         val properPrimaryColor = getProperPrimaryColor()
         arrayOf(btn_percent, btn_power, btn_root, btn_clear, btn_reset, btn_divide, btn_multiply, btn_plus, btn_minus, btn_equals, btn_decimal).forEach {
             it.setTextColor(properPrimaryColor)
+            it.background?.alpha = 200
+        }
+
+        arrayOf(btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9).forEach {
+            it.background?.alpha = 80
         }
     }
 
