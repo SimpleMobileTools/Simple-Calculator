@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
+import androidx.core.content.res.ResourcesCompat
 import com.simplemobiletools.calculator.BuildConfig
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.databases.CalculatorDatabase
@@ -93,10 +94,12 @@ class MainActivity : SimpleActivity(), Calculator {
         val properPrimaryColor = getProperPrimaryColor()
         arrayOf(btn_percent, btn_power, btn_root, btn_clear, btn_reset, btn_divide, btn_multiply, btn_plus, btn_minus, btn_equals, btn_decimal).forEach {
             it.setTextColor(properPrimaryColor)
+            it.background = ResourcesCompat.getDrawable(resources, R.drawable.button_circular_background, theme)
             it.background?.alpha = 200
         }
 
         arrayOf(btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9).forEach {
+            it.background = ResourcesCompat.getDrawable(resources, R.drawable.button_circular_background, theme)
             it.background?.alpha = 80
         }
     }

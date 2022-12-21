@@ -3,6 +3,7 @@
     <dimen name="initial_widget_height">250dp</dimen>
     <dimen name="min_widget_width">180dp</dimen>
     <dimen name="min_widget_height">180dp</dimen>
+    <dimen name="button_layout_margin">@dimen/medium_margin</dimen>
 
     <dimen name="button_text_size">34sp</dimen>
     <dimen name="formula_text_size">20sp</dimen>
