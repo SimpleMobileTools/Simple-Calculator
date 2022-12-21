@@ -34,6 +34,7 @@ class MainActivity : SimpleActivity(), Calculator {
         setContentView(R.layout.activity_main)
         appLaunched(BuildConfig.APPLICATION_ID)
         setupOptionsMenu()
+        refreshMenuItems()
 
         calc = CalculatorImpl(this, applicationContext)
 
@@ -114,11 +115,18 @@ class MainActivity : SimpleActivity(), Calculator {
         main_toolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.history -> showHistory()
+                R.id.more_apps_from_us -> launchMoreAppsFromUsIntent()
                 R.id.settings -> launchSettings()
                 R.id.about -> launchAbout()
                 else -> return@setOnMenuItemClickListener false
             }
             return@setOnMenuItemClickListener true
+        }
+    }
+
+    private fun refreshMenuItems() {
+        main_toolbar.menu.apply {
+            findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(R.bool.hide_google_relations)
         }
     }
 
