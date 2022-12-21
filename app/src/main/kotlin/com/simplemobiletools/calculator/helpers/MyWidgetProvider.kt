@@ -13,6 +13,7 @@ import com.simplemobiletools.calculator.activities.MainActivity
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.setText
+import com.simplemobiletools.commons.extensions.setTextSize
 
 class MyWidgetProvider : AppWidgetProvider(), Calculator {
     companion object {
@@ -55,7 +56,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
             views.setViewVisibility(R.id.btn_reset, View.VISIBLE)
             views.applyColorFilter(R.id.widget_background, config.widgetBgColor)
 
-            updateTextColors(views, config.widgetTextColor)
+            updateTextColors(views, config.widgetTextColor, context)
             setupDecimalSeparator(views, config.useCommaAsDecimalMark)
             appWidgetManager.updateAppWidget(it, views)
         }
@@ -77,7 +78,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
         views.setOnClickPendingIntent(id, pendingIntent)
     }
 
-    private fun updateTextColors(views: RemoteViews, color: Int) {
+    private fun updateTextColors(views: RemoteViews, color: Int, context: Context) {
         val viewIds = intArrayOf(
             R.id.formula, R.id.result, R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5, R.id.btn_6,
             R.id.btn_7, R.id.btn_8, R.id.btn_9, R.id.btn_percent, R.id.btn_power, R.id.btn_root, R.id.btn_clear, R.id.btn_reset, R.id.btn_divide,
@@ -86,6 +87,7 @@ class MyWidgetProvider : AppWidgetProvider(), Calculator {
 
         for (i in viewIds) {
             views.setTextColor(i, color)
+            views.setTextSize(i, context.resources.getInteger(R.integer.widget_text_size).toFloat())
         }
     }
 
