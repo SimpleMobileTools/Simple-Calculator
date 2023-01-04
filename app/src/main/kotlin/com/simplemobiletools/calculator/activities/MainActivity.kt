@@ -16,6 +16,8 @@ import com.simplemobiletools.calculator.extensions.updateWidgets
 import com.simplemobiletools.calculator.helpers.*
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
+import com.simplemobiletools.commons.helpers.LOWER_ALPHA_INT
+import com.simplemobiletools.commons.helpers.MEDIUM_ALPHA_INT
 import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.Release
 import kotlinx.android.synthetic.main.activity_main.*
@@ -92,13 +94,13 @@ class MainActivity : SimpleActivity(), Calculator {
         vibrateOnButtonPress = config.vibrateOnButtonPress
 
         arrayOf(btn_percent, btn_power, btn_root, btn_clear, btn_reset, btn_divide, btn_multiply, btn_plus, btn_minus, btn_equals, btn_decimal).forEach {
-            it.background = ResourcesCompat.getDrawable(resources, R.drawable.button_circular_background, theme)
-            it.background?.alpha = 90
+            it.background = ResourcesCompat.getDrawable(resources, R.drawable.pill_background, theme)
+            it.background?.alpha = MEDIUM_ALPHA_INT
         }
 
         arrayOf(btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9).forEach {
-            it.background = ResourcesCompat.getDrawable(resources, R.drawable.button_circular_background, theme)
-            it.background?.alpha = 20
+            it.background = ResourcesCompat.getDrawable(resources, R.drawable.pill_background, theme)
+            it.background?.alpha = LOWER_ALPHA_INT
         }
     }
 

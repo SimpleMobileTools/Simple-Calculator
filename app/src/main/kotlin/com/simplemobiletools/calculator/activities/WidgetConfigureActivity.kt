@@ -77,7 +77,7 @@ class WidgetConfigureActivity : SimpleActivity() {
         updateBackgroundColor()
 
         mTextColor = config.widgetTextColor
-        if (mTextColor == resources.getInteger(R.integer.default_widget_text_color) && config.isUsingSystemTheme) {
+        if (mTextColor == resources.getColor(R.color.default_widget_text_color) && config.isUsingSystemTheme) {
             mTextColor = resources.getColor(R.color.you_primary_color, theme)
         }
 
