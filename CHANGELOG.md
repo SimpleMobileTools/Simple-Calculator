@@ -1,6 +1,11 @@
 Changelog
 ==========
 
+Version 5.11.1 *(2023-01-04)*
+----------------------------
+
+ * Changed the buttons from circles to squircles
+
 Version 5.11.0 *(2022-12-21)*
 ----------------------------
 
