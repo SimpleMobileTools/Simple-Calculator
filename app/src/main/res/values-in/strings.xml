@@ -12,7 +12,7 @@
     <string name="history_cleared">Riwayat telah dihapus</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Getar saat tombol ditekan</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="use_comma_as_decimal_mark">Gunakan koma sebagai tanda desimal</string>
     <!-- FAQ -->
     <string name="faq_1_title">Bagaimana tombol C (Clear) bekerja?</string>
     <string name="faq_1_text">Menyentuhnya sekali akan menghapus satu karakter. Menyentuhnya lama akan mengosongkan seluruh ruas sekaligus.</string>
