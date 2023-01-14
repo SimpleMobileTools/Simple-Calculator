@@ -15,7 +15,7 @@
     <string name="use_comma_as_decimal_mark">Использовать запятую в качестве десятичного знака</string>
     <!-- FAQ -->
     <string name="faq_1_title">Как работает кнопка C (Очистка)\?</string>
-    <string name="faq_1_text">Нажатие на нее удалит один символ. Долгое нажатие сбросит все поля сразу.</string>
+    <string name="faq_1_text">Нажатие на неё удалит один символ. Долгое нажатие сбросит все поля сразу.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

@@ -7,15 +7,15 @@
     <string name="formula_divide_by_zero_error">Erro: divisão por zero</string>
     <!-- History -->
     <string name="history">Histórico</string>
-    <string name="history_empty">Histório vazio</string>
-    <string name="clear_history">Remover</string>
-    <string name="history_cleared">Histórico esvaziado</string>
+    <string name="history_empty">Histórico vazio</string>
+    <string name="clear_history">Limpar</string>
+    <string name="history_cleared">O histórico foi limpo</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrar ao tocar nos botões</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+    <string name="use_comma_as_decimal_mark">Usar vírgula como separador decimal</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Como funciona o botão C (Clear)?</string>
-    <string name="faq_1_text">Ao tocar no botão, os caracteres serão removidos um a um. Um toque longo apaga todos os caracteres ao mesmo tempo.</string>
+    <string name="faq_1_title">Como funciona o botão C (limpar)\?</string>
+    <string name="faq_1_text">Ao tocar uma vez, os caracteres serão apagados um a um. Um toque longo apaga todos os caracteres ao mesmo tempo.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
