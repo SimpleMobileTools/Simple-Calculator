@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Calculator</string>
-    <string name="app_launcher_name">Calculator</string>
-    <string name="scientific_calculator">Scientific Calculator</string>
-    <string name="formula_divide_by_zero_error">Error: division by zero</string>
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
-    <string name="faq_1_title">How does the C (Clear) button work\?</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
+    <string name="app_name">ⵜⴰⵙⵎⵙⵙⵉⴹⵏⵜ ⵜⴰⴼⵔⴰⵔⵜ</string>
+    <string name="app_launcher_name">ⵜⴰⵙⵎⵙⵙⵉⴹⵏⵜ</string>
+    <string name="scientific_calculator">ⵜⴰⵙⵎⵙⵙⵉⴹⵏⵜ ⵜⴰⵎⴰⵙⵙⴰⵏⵜ</string>
+    <string name="formula_divide_by_zero_error">ⵜⴰⵣⴳⵍⵜ: ⴰⴱⵟⵟⵓ ⵅⴼ ⵓⵎⵢⴰ</string>
+    <string name="history">ⴰⵎⵣⵔⵓⵢ</string>
+    <string name="history_empty">ⴰⵎⵣⵔⵓⵢ ⵢⵓⵔⴰ</string>
+    <string name="clear_history">ⴽⴽⵙ</string>
+    <string name="history_cleared">ⵉⵜⵜⵡⴰⴽⴽⵙ ⵓⵎⵣⵔⵓⵢ</string>
+    <string name="vibrate_on_button_press">ⴰⵔⵎⵉⵎⵎⵉ ⴳ ⵡⴰⴱⴱⴰⵥ ⵅⴼ ⵜⴳⵎⵎⵓⵜⵉⵏ</string>
+    <string name="use_comma_as_decimal_mark">ⵙⵎⵔⵙ ⵜⵉⵙⴽⵔⵜ ⴷ ⵜⴰⵎⴰⵜⴰⵔⵜ ⵜⴰⵎⵔⴰⵡⴰⵏⵜ</string>
+    <string name="faq_1_title">ⵎⴰⵎⴽ ⵜⵙⵡⵓⵔⵓⵢ ⵜⴳⵎⵎⵓⵜ C (ⴽⴽⵙ)\?</string>
+    <string name="faq_1_text">ⴰⴱⴱⴰⵥ ⵅⴼ ⵓⵢⵏⵏⴰ ⴰⴷ ⵉⴽⴽⵙ ⵢⴰⵏ ⵓⵙⴽⴽⵉⵍ ⴳ ⵢⴰⵏ ⵓⵣⵎⵣ. ⵎⵛ ⵉⵍⵍⴰ ⵡⴰⴱⴱⴰⵥ ⴰⵙⵓⵍⴰⵏ ⵔⴰⴷ ⵜⵜⵓⵙⵏⴼⵍⵏ ⵎⴰⵕⵕⴰ ⵉⴳⵔⴰⵏ ⴳ ⵢⴰⵏ ⵓⵣⵎⵣ.</string>
 </resources>
