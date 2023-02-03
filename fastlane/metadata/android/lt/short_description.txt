@@ -1,1 +1,1 @@
-Skaičiuotuvas su pagrindinėmis funkcijomis ir pritaikomu skydeliu.
+Skaičiuotuvas su pagrindinėmis funkcijomis ir derinama naudotojo sąsaja
