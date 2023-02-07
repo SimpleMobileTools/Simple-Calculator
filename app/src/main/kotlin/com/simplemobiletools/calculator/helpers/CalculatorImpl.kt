@@ -11,10 +11,18 @@ import java.math.BigDecimal
 class CalculatorImpl(
     calculator: Calculator,
     private val context: Context,
+    //============================================================
+    var res: String,
+    //============================================================
     private var decimalSeparator: String = DOT,
     private var groupingSeparator: String = COMMA
 ) {
     private var callback: Calculator? = calculator
+
+    //============================================================
+    // Trying Fix it
+    public var mResult = res
+    //============================================================
 
     private var baseValue = 0.0
     private var secondValue = 0.0
@@ -30,7 +38,10 @@ class CalculatorImpl(
     )
 
     init {
-        showNewResult("0")
+        //============================================================
+        //showNewResult("0")
+        showNewResult(mResult)
+        //============================================================
     }
 
     private fun addDigit(number: Int) {
@@ -270,6 +281,12 @@ class CalculatorImpl(
                     context.toast(R.string.unknown_error_occurred)
                     return
                 }
+
+                //============================================================
+
+                mResult = result.format()
+
+                //============================================================
 
                 showNewResult(result.format())
                 val newFormula = "${baseValue.format()}$sign${secondValue.format()}"
