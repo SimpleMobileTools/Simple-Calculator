@@ -13,6 +13,7 @@ class CalculatorImpl(
     private val context: Context,
     //============================================================
     var res: String,
+    savedLastOperation: String,
     //============================================================
     private var decimalSeparator: String = DOT,
     private var groupingSeparator: String = COMMA
@@ -22,6 +23,7 @@ class CalculatorImpl(
     //============================================================
     // Trying Fix it
     public var mResult = res
+    public var previousCalculation = savedLastOperation
     //============================================================
 
     private var baseValue = 0.0
@@ -41,6 +43,7 @@ class CalculatorImpl(
         //============================================================
         //showNewResult("0")
         showNewResult(mResult)
+        showNewFormula(previousCalculation)
         //============================================================
     }
 
@@ -294,6 +297,10 @@ class CalculatorImpl(
                     History(id = null, formula = newFormula, result = result.format(), timestamp = System.currentTimeMillis())
                 )
                 showNewFormula(newFormula)
+
+                //============================================================
+                previousCalculation = newFormula
+                //============================================================
 
                 inputDisplayedFormula = result.format()
                 baseValue = result
