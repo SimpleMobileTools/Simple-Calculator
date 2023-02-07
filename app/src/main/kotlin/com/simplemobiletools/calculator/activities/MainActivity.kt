@@ -3,6 +3,7 @@ package com.simplemobiletools.calculator.activities
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import androidx.core.content.res.ResourcesCompat
@@ -30,6 +31,12 @@ class MainActivity : SimpleActivity(), Calculator {
     private var decimalSeparator = DOT
     private var groupingSeparator = COMMA
 
+    //============================================================
+
+    private var savedRes: String = "999"
+
+    //============================================================
+
     private lateinit var calc: CalculatorImpl
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +46,17 @@ class MainActivity : SimpleActivity(), Calculator {
         setupOptionsMenu()
         refreshMenuItems()
 
-        calc = CalculatorImpl(this, applicationContext)
+        //============================================================
+
+        if(savedInstanceState != null) {
+            Log.v("MainActivity", "LOG TEST");
+            savedRes = savedInstanceState?.getCharSequence("res", "123") as String
+
+        }
+        Log.v("MainActivity", "LOG NO IF TEST");
+        calc = CalculatorImpl(this, applicationContext, savedRes)
+
+        //============================================================
 
         btn_plus.setOnClickOperation(PLUS)
         btn_minus.setOnClickOperation(MINUS)
@@ -240,4 +257,14 @@ class MainActivity : SimpleActivity(), Calculator {
             calc.handleOperation(operation)
         }
     }
+
+    //============================================================
+
+    // ****** ADD ONSAVEINSTANCESTATE FUNCTION ******
+    override fun onSaveInstanceState(bundle: Bundle) {
+        super.onSaveInstanceState(bundle)
+        bundle.putString("res", calc.mResult)
+    }
+
+    //============================================================
 }
