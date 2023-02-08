@@ -1,6 +1,7 @@
 package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
+import android.util.Log
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.models.History
 import com.simplemobiletools.commons.extensions.showErrorToast
@@ -11,26 +12,37 @@ import java.math.BigDecimal
 class CalculatorImpl(
     calculator: Calculator,
     private val context: Context,
-    //============================================================
-    var res: String,
-    savedLastOperation: String,
-    //============================================================
+
     private var decimalSeparator: String = DOT,
-    private var groupingSeparator: String = COMMA
+    private var groupingSeparator: String = COMMA,
+
+    //============================================================
+    aRes: String = "123",
+    aSavedLastOperation: String = "",
+    aLastKey: String = "",
+    aLastOperation: String = "",
+    aBaseValue: Double = 0.0,
+    aSecondValue: Double = 99.0
+
+    //============================================================
 ) {
     private var callback: Calculator? = calculator
 
     //============================================================
     // Trying Fix it
-    public var mResult = res
-    public var previousCalculation = savedLastOperation
+    public var mResult = aRes
+    public var previousCalculation = aSavedLastOperation
+    public var lastKey = aLastKey
+    public var lastOperation = aLastOperation
+    public var baseValue = aBaseValue
+    private var secondValue = aSecondValue
     //============================================================
 
-    private var baseValue = 0.0
-    private var secondValue = 0.0
+    //private var baseValue = 0.0
+    //private var secondValue = 0.0
     private var inputDisplayedFormula = "0"
-    private var lastKey = ""
-    private var lastOperation = ""
+    //private var lastKey = ""
+    //private var lastOperation = ""
     private val operations = listOf("+", "-", "×", "÷", "^", "%", "√")
     private val operationsRegex = "[-+×÷^%√]".toPattern()
     private val numbersRegex = "[^0-9,.]".toRegex()
@@ -41,6 +53,8 @@ class CalculatorImpl(
 
     init {
         //============================================================
+        Log.v("BASEVALUE INIT :", baseValue.toString())
+        Log.v("SECONDVALUE INIT :", secondValue.toString())
         //showNewResult("0")
         showNewResult(mResult)
         showNewFormula(previousCalculation)
@@ -210,7 +224,7 @@ class CalculatorImpl(
         lastKey = EQUALS
     }
 
-    private fun getSecondValue(): Double {
+    public fun getSecondValue(): Double {
         val valueToCheck = inputDisplayedFormula.trimStart('-').removeGroupSeparator()
         var value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
         if (value == "") {
@@ -230,6 +244,8 @@ class CalculatorImpl(
             baseValue = 1.0
         }
 
+        Log.v("LASKEY CR :", lastKey)
+
         if (lastKey != EQUALS) {
             val valueToCheck = inputDisplayedFormula.trimStart('-').removeGroupSeparator()
             val parts = valueToCheck.split(operationsRegex).filter { it != "" }
@@ -238,11 +254,14 @@ class CalculatorImpl(
             }
 
             baseValue = parts.first().toDouble()
+
             if (inputDisplayedFormula.startsWith("-")) {
                 baseValue *= -1
             }
 
             secondValue = parts.getOrNull(1)?.toDouble() ?: secondValue
+
+
         }
 
         if (lastOperation != "") {
@@ -287,10 +306,10 @@ class CalculatorImpl(
 
                 //============================================================
 
-                mResult = result.format()
+                //mResult = result.format()
+                Log.v("CalculResult", result.format())
 
                 //============================================================
-
                 showNewResult(result.format())
                 val newFormula = "${baseValue.format()}$sign${secondValue.format()}"
                 HistoryHelper(context).insertOrUpdateHistoryEntry(
@@ -299,7 +318,7 @@ class CalculatorImpl(
                 showNewFormula(newFormula)
 
                 //============================================================
-                previousCalculation = newFormula
+                //previousCalculation = newFormula
                 //============================================================
 
                 inputDisplayedFormula = result.format()
@@ -337,10 +356,16 @@ class CalculatorImpl(
     }
 
     private fun showNewResult(value: String) {
+        //============================================================
+        mResult = value;
+        //============================================================
         callback!!.showNewResult(value, context)
     }
 
     private fun showNewFormula(value: String) {
+        //============================================================
+        previousCalculation = value;
+        //============================================================
         callback!!.showNewFormula(value, context)
     }
 
