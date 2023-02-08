@@ -33,8 +33,12 @@ class MainActivity : SimpleActivity(), Calculator {
 
     //============================================================
 
-    private var savedRes: String = "999"
+    private var savedRes: String = "0"
     private var savedPreviousCalculation = ""
+    private var savedLastKey: String = ""
+    private var savedLastOperation: String = ""
+    private var savedBaseValue : Double= 5.5
+    private var savedSecondValue : Double = 7.5
 
     //============================================================
 
@@ -48,14 +52,38 @@ class MainActivity : SimpleActivity(), Calculator {
         refreshMenuItems()
 
         //============================================================
+        //Log.v("SAVEDRES : ", savedRes)
+        //Log.v("SAVEDPREVIOUS : ", savedPreviousCalculation)
+        //Log.v("SAVEDLASTKEY : ", savedLastKey)
+        //Log.v("SAVEDLASTOP : ", savedLastOperation)
+        //Log.v("DECIMALSEP : ", decimalSeparator)
+        //Log.v("GROUPINGSEP : ", groupingSeparator)
+        //Log.v("BASEVALUE : ", savedBaseValue.toString())
+        //Log.v("SECONDVALUE : ", savedSecondValue.toString())
 
         if(savedInstanceState != null) {
             Log.v("MainActivity", "LOG TEST");
-            savedRes = savedInstanceState?.getCharSequence("res", "123") as String
-            savedPreviousCalculation = savedInstanceState?.getCharSequence("savedPreviousCalculation", "") as String
+            savedRes = savedInstanceState?.getCharSequence("res") as String
+            savedPreviousCalculation = savedInstanceState?.getCharSequence("savedPreviousCalculation") as String
+            savedLastKey = savedInstanceState?.getCharSequence("savedLastKey") as String
+            savedLastOperation = savedInstanceState?.getCharSequence("savedLastOperation") as String
+            savedBaseValue = savedInstanceState.getDouble("savedBaseValue")
+            savedSecondValue = savedInstanceState.getDouble("savedSecondValue")
+
         }
-        Log.v("MainActivity", "LOG NO IF TEST");
-        calc = CalculatorImpl(this, applicationContext, savedRes, savedPreviousCalculation)
+
+        Log.v("SAVEDRES : ", savedRes)
+        Log.v("SAVEDPREVIOUS : ", savedPreviousCalculation)
+        Log.v("SAVEDLASTKEY : ", savedLastKey)
+        Log.v("SAVEDLASTOP : ", savedLastOperation)
+        Log.v("DECIMALSEP : ", decimalSeparator)
+        Log.v("GROUPINGSEP : ", groupingSeparator)
+        Log.v("BASEVALUE : ", savedBaseValue.toString())
+        Log.v("SECONDVALUE : ", savedSecondValue.toString())
+
+
+
+        calc = CalculatorImpl(this, applicationContext,decimalSeparator, groupingSeparator, savedRes, savedPreviousCalculation, savedLastKey, savedLastOperation, savedBaseValue, savedSecondValue)
 
         //============================================================
 
@@ -266,6 +294,10 @@ class MainActivity : SimpleActivity(), Calculator {
         super.onSaveInstanceState(bundle)
         bundle.putString("res", calc.mResult)
         bundle.putString("savedPreviousCalculation", calc.previousCalculation)
+        bundle.putString("savedLastKey", calc.lastKey)
+        bundle.putString("savedLastOperation", calc.lastOperation)
+        bundle.putDouble("savedBaseValue", calc.baseValue)
+        bundle.putDouble("savedSecondValue", calc.getSecondValue())
     }
 
     //============================================================
