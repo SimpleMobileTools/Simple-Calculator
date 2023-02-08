@@ -34,6 +34,7 @@ class MainActivity : SimpleActivity(), Calculator {
     //============================================================
 
     private var savedRes: String = "999"
+    private var savedPreviousCalculation = ""
 
     //============================================================
 
@@ -51,10 +52,10 @@ class MainActivity : SimpleActivity(), Calculator {
         if(savedInstanceState != null) {
             Log.v("MainActivity", "LOG TEST");
             savedRes = savedInstanceState?.getCharSequence("res", "123") as String
-
+            savedPreviousCalculation = savedInstanceState?.getCharSequence("savedPreviousCalculation", "") as String
         }
         Log.v("MainActivity", "LOG NO IF TEST");
-        calc = CalculatorImpl(this, applicationContext, savedRes)
+        calc = CalculatorImpl(this, applicationContext, savedRes, savedPreviousCalculation)
 
         //============================================================
 
@@ -264,6 +265,7 @@ class MainActivity : SimpleActivity(), Calculator {
     override fun onSaveInstanceState(bundle: Bundle) {
         super.onSaveInstanceState(bundle)
         bundle.putString("res", calc.mResult)
+        bundle.putString("savedPreviousCalculation", calc.previousCalculation)
     }
 
     //============================================================
