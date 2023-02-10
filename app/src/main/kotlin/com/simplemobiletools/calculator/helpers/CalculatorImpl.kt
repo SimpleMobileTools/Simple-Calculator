@@ -223,7 +223,12 @@ class CalculatorImpl(
                 return
             }
 
-            baseValue = parts.first().toDouble()
+            try {
+                baseValue = parts.first().toDouble()
+            } catch (e: NumberFormatException) {
+                context.showErrorToast(e)
+            }
+
             if (inputDisplayedFormula.startsWith("-")) {
                 baseValue *= -1
             }
