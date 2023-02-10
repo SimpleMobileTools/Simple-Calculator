@@ -7,7 +7,7 @@
     <string name="formula_divide_by_zero_error">Klaida: dalyba iš nulio</string>
     <!-- History -->
     <string name="history">Istorija</string>
-    <string name="history_empty">Istorija tuščia</string>
+    <string name="history_empty">Istorija yra tuščia</string>
     <string name="clear_history">Išvalyti</string>
     <string name="history_cleared">Istorija išvalyta</string>
     <!-- Settings -->
