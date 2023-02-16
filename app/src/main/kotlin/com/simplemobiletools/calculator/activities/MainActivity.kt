@@ -37,8 +37,9 @@ class MainActivity : SimpleActivity(), Calculator {
     private var savedPreviousCalculation = ""
     private var savedLastKey: String = ""
     private var savedLastOperation: String = ""
-    private var savedBaseValue : Double= 5.5
-    private var savedSecondValue : Double = 7.5
+    private var savedBaseValue : Double= 0.0
+    private var savedSecondValue : Double = 0.0
+    private var savedInputDisplayedFormula : String = "0"
 
     //============================================================
 
@@ -52,14 +53,6 @@ class MainActivity : SimpleActivity(), Calculator {
         refreshMenuItems()
 
         //============================================================
-        //Log.v("SAVEDRES : ", savedRes)
-        //Log.v("SAVEDPREVIOUS : ", savedPreviousCalculation)
-        //Log.v("SAVEDLASTKEY : ", savedLastKey)
-        //Log.v("SAVEDLASTOP : ", savedLastOperation)
-        //Log.v("DECIMALSEP : ", decimalSeparator)
-        //Log.v("GROUPINGSEP : ", groupingSeparator)
-        //Log.v("BASEVALUE : ", savedBaseValue.toString())
-        //Log.v("SECONDVALUE : ", savedSecondValue.toString())
 
         if(savedInstanceState != null) {
             Log.v("MainActivity", "LOG TEST");
@@ -69,6 +62,7 @@ class MainActivity : SimpleActivity(), Calculator {
             savedLastOperation = savedInstanceState?.getCharSequence("savedLastOperation") as String
             savedBaseValue = savedInstanceState.getDouble("savedBaseValue")
             savedSecondValue = savedInstanceState.getDouble("savedSecondValue")
+            savedInputDisplayedFormula = savedInstanceState.getCharSequence("savedInputDisplayedFormula") as String
 
         }
 
@@ -298,6 +292,7 @@ class MainActivity : SimpleActivity(), Calculator {
         bundle.putString("savedLastOperation", calc.lastOperation)
         bundle.putDouble("savedBaseValue", calc.baseValue)
         bundle.putDouble("savedSecondValue", calc.getSecondValue())
+        bundle.putString("savedInputDisplayedFormula", calc.inputDisplayedFormula)
     }
 
     //============================================================
