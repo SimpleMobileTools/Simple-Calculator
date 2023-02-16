@@ -12,7 +12,6 @@ import java.math.BigDecimal
 class CalculatorImpl(
     calculator: Calculator,
     private val context: Context,
-
     private var decimalSeparator: String = DOT,
     private var groupingSeparator: String = COMMA,
 
@@ -22,7 +21,8 @@ class CalculatorImpl(
     aLastKey: String = "",
     aLastOperation: String = "",
     aBaseValue: Double = 0.0,
-    aSecondValue: Double = 99.0
+    aSecondValue: Double = 0.0,
+    aInputDisplayedFormula: String = "0"
 
     //============================================================
 ) {
@@ -36,11 +36,12 @@ class CalculatorImpl(
     public var lastOperation = aLastOperation
     public var baseValue = aBaseValue
     private var secondValue = aSecondValue
+    public var inputDisplayedFormula = aInputDisplayedFormula
     //============================================================
 
     //private var baseValue = 0.0
     //private var secondValue = 0.0
-    private var inputDisplayedFormula = "0"
+    //private var inputDisplayedFormula = "0"
     //private var lastKey = ""
     //private var lastOperation = ""
     private val operations = listOf("+", "-", "×", "÷", "^", "%", "√")
