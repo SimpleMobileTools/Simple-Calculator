@@ -77,7 +77,7 @@ class MainActivity : SimpleActivity(), Calculator {
 
 
 
-        calc = CalculatorImpl(this, applicationContext,decimalSeparator, groupingSeparator, savedRes, savedPreviousCalculation, savedLastKey, savedLastOperation, savedBaseValue, savedSecondValue)
+        calc = CalculatorImpl(this, applicationContext,decimalSeparator, groupingSeparator, savedRes, savedPreviousCalculation, savedLastKey, savedLastOperation, savedBaseValue, savedSecondValue, savedInputDisplayedFormula)
 
         //============================================================
 
