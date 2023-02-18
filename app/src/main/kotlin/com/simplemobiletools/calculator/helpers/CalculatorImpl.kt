@@ -24,12 +24,13 @@ class CalculatorImpl(
     aSecondValue: Double = 0.0,
     aInputDisplayedFormula: String = "0"
 
+
     //============================================================
 ) {
     private var callback: Calculator? = calculator
 
     //============================================================
-    // Trying Fix it
+    // Trying Fix it`
     public var mResult = aRes
     public var previousCalculation = aSavedLastOperation
     public var lastKey = aLastKey
@@ -227,7 +228,10 @@ class CalculatorImpl(
 
     public fun getSecondValue(): Double {
         val valueToCheck = inputDisplayedFormula.trimStart('-').removeGroupSeparator()
+        Log.v("VALUEToCheck GETSV :", valueToCheck)
+
         var value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
+        Log.v("VALUE GETSV :", value)
         if (value == "") {
             value = "0"
         }
@@ -309,6 +313,8 @@ class CalculatorImpl(
 
                 //mResult = result.format()
                 Log.v("CalculResult", result.format())
+                Log.v("BASEVALUE CR :", baseValue.toString())
+                Log.v("SECONDVALUE CR :", secondValue.toString())
 
                 //============================================================
                 showNewResult(result.format())
@@ -366,6 +372,8 @@ class CalculatorImpl(
     private fun showNewFormula(value: String) {
         //============================================================
         previousCalculation = value;
+        Log.v("BASEVALUE SHOWNF :", baseValue.toString())
+        Log.v("SECONDVALUE SHOWNF:", secondValue.toString())
         //============================================================
         callback!!.showNewFormula(value, context)
     }
@@ -466,4 +474,10 @@ class CalculatorImpl(
     private fun Double.format() = formatter.doubleToString(this)
 
     private fun String.removeGroupSeparator() = formatter.removeGroupingSeparator(this)
+
+    public fun getSecondValueV2() : Double
+    {
+        return this.secondValue
+    }
+
 }
