@@ -77,7 +77,7 @@ class MainActivity : SimpleActivity(), Calculator {
 
 
 
-        calc = CalculatorImpl(this, applicationContext,decimalSeparator, groupingSeparator, savedRes, savedPreviousCalculation, savedLastKey, savedLastOperation, savedBaseValue, savedSecondValue)
+        calc = CalculatorImpl(this, applicationContext,decimalSeparator, groupingSeparator, savedRes, savedPreviousCalculation, savedLastKey, savedLastOperation, savedBaseValue, savedSecondValue,  savedInputDisplayedFormula)
 
         //============================================================
 
@@ -291,9 +291,8 @@ class MainActivity : SimpleActivity(), Calculator {
         bundle.putString("savedLastKey", calc.lastKey)
         bundle.putString("savedLastOperation", calc.lastOperation)
         bundle.putDouble("savedBaseValue", calc.baseValue)
-        bundle.putDouble("savedSecondValue", calc.getSecondValue())
+        bundle.putDouble("savedSecondValue", calc.getSecondValueV2())
         bundle.putString("savedInputDisplayedFormula", calc.inputDisplayedFormula)
-    }
 
     //============================================================
 }
