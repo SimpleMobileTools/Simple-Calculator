@@ -297,6 +297,6 @@ class MainActivity : SimpleActivity(), Calculator {
         bundle.putDouble("savedBaseValue", calc.baseValue)
         bundle.putDouble("savedSecondValue", calc.getSecondValueV2())
         bundle.putString("savedInputDisplayedFormula", calc.inputDisplayedFormula)
-
+    }
     //============================================================
 }
