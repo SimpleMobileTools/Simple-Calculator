@@ -2,11 +2,14 @@ package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
 import android.util.Log
+import com.google.gson.JsonObject
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.models.History
 import com.simplemobiletools.commons.extensions.showErrorToast
 import com.simplemobiletools.commons.extensions.toast
 import net.objecthunter.exp4j.ExpressionBuilder
+import org.json.JSONObject
+import org.json.JSONTokener
 import java.math.BigDecimal
 
 class CalculatorImpl(
@@ -14,47 +17,35 @@ class CalculatorImpl(
     private val context: Context,
     private var decimalSeparator: String = DOT,
     private var groupingSeparator: String = COMMA,
-
-    //============================================================
-    aRes: String = "123",
-    aSavedLastOperation: String = "",
-    aLastKey: String = "",
-    aLastOperation: String = "",
-    aBaseValue: Double = 0.0,
-    aSecondValue: Double = 0.0,
-    aInputDisplayedFormula: String = "0"
+    private var json: String = ""
 
 
-    //============================================================
 ) {
     private var callback: Calculator? = calculator
 
     //============================================================
-    // Trying Fix it`
-    public var mResult = aRes
-    public var previousCalculation = aSavedLastOperation
-    public var lastKey = aLastKey
-    public var lastOperation = aLastOperation
-    public var baseValue = aBaseValue
-    private var secondValue = aSecondValue
-    public var inputDisplayedFormula = aInputDisplayedFormula
-    //============================================================
 
-    //private var baseValue = 0.0
-    //private var secondValue = 0.0
-    //private var inputDisplayedFormula = "0"
-    //private var lastKey = ""
-    //private var lastOperation = ""
+    //============================================================
+    private var jsonObj = json
+    private var mResult = "0"
+    private var previousCalculation = ""
+    private var baseValue = 0.0
+    private var secondValue = 0.0
+    private var inputDisplayedFormula = "0"
+    private var lastKey = ""
+    private var lastOperation = ""
     private val operations = listOf("+", "-", "×", "÷", "^", "%", "√")
     private val operationsRegex = "[-+×÷^%√]".toPattern()
     private val numbersRegex = "[^0-9,.]".toRegex()
-
     private val formatter = NumberFormatHelper(
         decimalSeparator = decimalSeparator, groupingSeparator = groupingSeparator
     )
 
     init {
         //============================================================
+        if(jsonObj != "") {
+            setFromSaveInstanceState(jsonObj)
+        }
         Log.v("BASEVALUE INIT :", baseValue.toString())
         Log.v("SECONDVALUE INIT :", secondValue.toString())
         //showNewResult("0")
@@ -484,20 +475,34 @@ class CalculatorImpl(
         return this.secondValue
     }
 
-    //JSON
-    public fun getJson() : String
-    {
-    val jsonObject = buildJsonObject{
-        put("res", mResult)
-        put("savedPreviousCalculation", previousCalculation)
-        put("savedLastKey", lastKey)
-        put("savedLastOperation", lastOperation)
-        put("savedBaseValue", baseValue)
-        put("savedSecondValue", secondValue)
-        put("savedInputDisplayedFormula", inputDisplayedFormula)
-        return jsonObject.toString()
 
+    //JSON
+    public fun getJson() : JSONObject {
+
+        val jsonObj = JSONObject()
+        jsonObj.put("res",mResult)
+        jsonObj.put("previousCalculation", previousCalculation)
+        jsonObj.put("lastKey", lastKey)
+        jsonObj.put("lastOperation", lastOperation)
+        jsonObj.put("baseValue", baseValue)
+        jsonObj.put("secondValue", secondValue)
+        jsonObj.put("inputDisplayedFormula", inputDisplayedFormula)
+
+        return jsonObj
     }
+
+    public fun setFromSaveInstanceState( json: String )
+    {
+        val jsonObject = JSONTokener(json).nextValue() as JSONObject
+        mResult = jsonObject.getString("res")
+        previousCalculation = jsonObject.getString("previousCalculation")
+        baseValue = jsonObject.getDouble("baseValue")
+        secondValue = jsonObject.getDouble("secondValue")
+        inputDisplayedFormula = jsonObject.getString("inputDisplayedFormula")
+        lastKey = jsonObject.getString("lastKey")
+        lastOperation = jsonObject.getString("lastOperation")
     }
+
+
 
 }
