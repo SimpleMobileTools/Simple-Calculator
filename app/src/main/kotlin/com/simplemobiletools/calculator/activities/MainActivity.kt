@@ -3,7 +3,6 @@ package com.simplemobiletools.calculator.activities
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import androidx.core.content.res.ResourcesCompat
@@ -31,18 +30,7 @@ class MainActivity : SimpleActivity(), Calculator {
     private var decimalSeparator = DOT
     private var groupingSeparator = COMMA
 
-    //============================================================
-
-    //private var savedRes: String = "0"
-    //private var savedPreviousCalculation = ""
-    //private var savedLastKey: String = ""
-    //private var savedLastOperation: String = ""
-    //private var savedBaseValue : Double= 0.0
-    //private var savedSecondValue : Double = 0.0
-    //private var savedInputDisplayedFormula : String = "0"
-    private var json: String = ""
-
-    //============================================================
+    private var saveCalculatorState: String = ""
 
     private lateinit var calc: CalculatorImpl
 
@@ -59,34 +47,12 @@ class MainActivity : SimpleActivity(), Calculator {
         updateMaterialActivityViews(main_coordinator, null, useTransparentNavigation = false, useTopSearchMenu = false)
         setupMaterialScrollListener(main_nested_scrollview, main_toolbar)
 
-        //============================================================
-
-
-        //Log.v("SAVEDRES : ", savedRes)
-        //Log.v("SAVEDPREVIOUS : ", savedPreviousCalculation)
-        //Log.v("SAVEDLASTKEY : ", savedLastKey)
-        //Log.v("SAVEDLASTOP : ", savedLastOperation)
-        //Log.v("DECIMALSEP : ", decimalSeparator)
-        //Log.v("GROUPINGSEP : ", groupingSeparator)
-        //Log.v("BASEVALUE : ", savedBaseValue.toString())
-        //Log.v("SECONDVALUE : ", savedSecondValue.toString())
-
-
         if (savedInstanceState != null) {
-            Log.v("MainActivity", "LOG TEST");
-            //savedRes = savedInstanceState?.getCharSequence("res") as String
-            //savedPreviousCalculation = savedInstanceState?.getCharSequence("savedPreviousCalculation") as String
-            //savedLastKey = savedInstanceState?.getCharSequence("savedLastKey") as String
-            //savedLastOperation = savedInstanceState?.getCharSequence("savedLastOperation") as String
-            //savedBaseValue = savedInstanceState.getDouble("savedBaseValue")
-            //savedSecondValue = savedInstanceState.getDouble("savedSecondValue")
-            //savedInputDisplayedFormula = savedInstanceState.getCharSequence("savedInputDisplayedFormula") as String
-            json = savedInstanceState.getCharSequence("myJsonObject") as String
+            saveCalculatorState = savedInstanceState.getCharSequence("calculatorState") as String
         }
 
-        calc = CalculatorImpl(this, applicationContext, decimalSeparator, groupingSeparator, json)
+        calc = CalculatorImpl(this, applicationContext, decimalSeparator, groupingSeparator, saveCalculatorState)
 
-        //============================================================
 
         btn_plus.setOnClickOperation(PLUS)
         btn_minus.setOnClickOperation(MINUS)
@@ -288,21 +254,9 @@ class MainActivity : SimpleActivity(), Calculator {
         }
     }
 
-    //============================================================
-
     override fun onSaveInstanceState(bundle: Bundle) {
         super.onSaveInstanceState(bundle)
-        /*
-        bundle.putString("res", calc.mResult)
-        bundle.putString("savedPreviousCalculation", calc.previousCalculation)
-        bundle.putString("savedLastKey", calc.lastKey)
-        bundle.putString("savedLastOperation", calc.lastOperation)
-        bundle.putDouble("savedBaseValue", calc.baseValue)
-        bundle.putDouble("savedSecondValue", calc.getSecondValueV2())
-        bundle.putString("savedInputDisplayedFormula", calc.inputDisplayedFormula)
-        */
-        //JSON
-        bundle.putString("myJsonObject", calc.getJson().toString())
+
+        bundle.putString("calculatorState", calc.getCalculatorStateJson().toString())
     }
-    //============================================================
 }

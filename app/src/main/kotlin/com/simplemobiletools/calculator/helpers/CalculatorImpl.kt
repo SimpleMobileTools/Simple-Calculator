@@ -1,8 +1,6 @@
 package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
-import android.util.Log
-import com.google.gson.JsonObject
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.models.History
 import com.simplemobiletools.commons.extensions.showErrorToast
@@ -17,17 +15,11 @@ class CalculatorImpl(
     private val context: Context,
     private var decimalSeparator: String = DOT,
     private var groupingSeparator: String = COMMA,
-    private var json: String = ""
-
-
+    calculatorState: String = ""
 ) {
     private var callback: Calculator? = calculator
-
-    //============================================================
-
-    //============================================================
-    private var jsonObj = json
-    private var mResult = "0"
+    private var stateInstance = calculatorState
+    private var currentResult = "0"
     private var previousCalculation = ""
     private var baseValue = 0.0
     private var secondValue = 0.0
@@ -42,16 +34,11 @@ class CalculatorImpl(
     )
 
     init {
-        //============================================================
-        if (jsonObj != "") {
-            setFromSaveInstanceState(jsonObj)
+        if (stateInstance != "") {
+            setFromSaveInstanceState(stateInstance)
         }
-        Log.v("BASEVALUE INIT :", baseValue.toString())
-        Log.v("SECONDVALUE INIT :", secondValue.toString())
-        //showNewResult("0")
-        showNewResult(mResult)
+        showNewResult(currentResult)
         showNewFormula(previousCalculation)
-        //============================================================
     }
 
     private fun addDigit(number: Int) {
@@ -219,10 +206,8 @@ class CalculatorImpl(
 
     private fun getSecondValue(): Double {
         val valueToCheck = inputDisplayedFormula.trimStart('-').removeGroupSeparator()
-        Log.v("VALUEToCheck GETSV :", valueToCheck)
 
         var value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
-        Log.v("VALUE GETSV :", value)
         if (value == "") {
             value = "0"
         }
@@ -239,8 +224,6 @@ class CalculatorImpl(
         if (lastOperation == ROOT && inputDisplayedFormula.startsWith("√")) {
             baseValue = 1.0
         }
-
-        Log.v("LASKEY CR :", lastKey)
 
         if (lastKey != EQUALS) {
             val valueToCheck = inputDisplayedFormula.trimStart('-').removeGroupSeparator()
@@ -304,24 +287,12 @@ class CalculatorImpl(
                     return
                 }
 
-                //============================================================
-
-                //mResult = result.format()
-                Log.v("CalculResult", result.format())
-                Log.v("BASEVALUE CR :", baseValue.toString())
-                Log.v("SECONDVALUE CR :", secondValue.toString())
-
-                //============================================================
                 showNewResult(result.format())
                 val newFormula = "${baseValue.format()}$sign${secondValue.format()}"
                 HistoryHelper(context).insertOrUpdateHistoryEntry(
                     History(id = null, formula = newFormula, result = result.format(), timestamp = System.currentTimeMillis())
                 )
                 showNewFormula(newFormula)
-
-                //============================================================
-                //previousCalculation = newFormula
-                //============================================================
 
                 inputDisplayedFormula = result.format()
                 baseValue = result
@@ -358,18 +329,12 @@ class CalculatorImpl(
     }
 
     private fun showNewResult(value: String) {
-        //============================================================
-        mResult = value
-        //============================================================
+        currentResult = value
         callback!!.showNewResult(value, context)
     }
 
     private fun showNewFormula(value: String) {
-        //============================================================
         previousCalculation = value
-        Log.v("BASEVALUE SHOWNF :", baseValue.toString())
-        Log.v("SECONDVALUE SHOWNF:", secondValue.toString())
-        //============================================================
         callback!!.showNewFormula(value, context)
     }
 
@@ -470,29 +435,23 @@ class CalculatorImpl(
 
     private fun String.removeGroupSeparator() = formatter.removeGroupingSeparator(this)
 
-    fun getSecondValueV2(): Double {
-        return this.secondValue
-    }
 
-
-    //JSON
-    fun getJson(): JSONObject {
+    fun getCalculatorStateJson(): JSONObject {
 
         val jsonObj = JSONObject()
-        jsonObj.put("res", mResult)
+        jsonObj.put("res", currentResult)
         jsonObj.put("previousCalculation", previousCalculation)
         jsonObj.put("lastKey", lastKey)
         jsonObj.put("lastOperation", lastOperation)
         jsonObj.put("baseValue", baseValue)
         jsonObj.put("secondValue", secondValue)
         jsonObj.put("inputDisplayedFormula", inputDisplayedFormula)
-
         return jsonObj
     }
 
     private fun setFromSaveInstanceState(json: String) {
         val jsonObject = JSONTokener(json).nextValue() as JSONObject
-        mResult = jsonObject.getString("res")
+        currentResult = jsonObject.getString("res")
         previousCalculation = jsonObject.getString("previousCalculation")
         baseValue = jsonObject.getDouble("baseValue")
         secondValue = jsonObject.getDouble("secondValue")
@@ -500,6 +459,4 @@ class CalculatorImpl(
         lastKey = jsonObject.getString("lastKey")
         lastOperation = jsonObject.getString("lastOperation")
     }
-
-
 }
