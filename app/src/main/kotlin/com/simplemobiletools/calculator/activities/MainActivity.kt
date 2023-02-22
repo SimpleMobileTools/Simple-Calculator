@@ -40,10 +40,12 @@ class MainActivity : SimpleActivity(), Calculator {
     //private var savedBaseValue : Double= 0.0
     //private var savedSecondValue : Double = 0.0
     //private var savedInputDisplayedFormula : String = "0"
+    private var json: String = ""
 
     //============================================================
 
     private lateinit var calc: CalculatorImpl
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         isMaterialActivity = true
@@ -53,22 +55,13 @@ class MainActivity : SimpleActivity(), Calculator {
         setupOptionsMenu()
         refreshMenuItems()
 
+
         updateMaterialActivityViews(main_coordinator, null, useTransparentNavigation = false, useTopSearchMenu = false)
         setupMaterialScrollListener(main_nested_scrollview, main_toolbar)
 
         //============================================================
 
-        if(savedInstanceState != null) {
-            Log.v("MainActivity", "LOG TEST");
-            //savedRes = savedInstanceState?.getCharSequence("res") as String
-            //savedPreviousCalculation = savedInstanceState?.getCharSequence("savedPreviousCalculation") as String
-            //savedLastKey = savedInstanceState?.getCharSequence("savedLastKey") as String
-            //savedLastOperation = savedInstanceState?.getCharSequence("savedLastOperation") as String
-            //savedBaseValue = savedInstanceState.getDouble("savedBaseValue")
-            //savedSecondValue = savedInstanceState.getDouble("savedSecondValue")
-            //savedInputDisplayedFormula = savedInstanceState.getCharSequence("savedInputDisplayedFormula") as String
 
-        }
 
         //Log.v("SAVEDRES : ", savedRes)
         //Log.v("SAVEDPREVIOUS : ", savedPreviousCalculation)
@@ -81,7 +74,19 @@ class MainActivity : SimpleActivity(), Calculator {
 
 
 
-        calc = CalculatorImpl(this, applicationContext,decimalSeparator, groupingSeparator)
+        if(savedInstanceState != null) {
+            Log.v("MainActivity", "LOG TEST");
+            //savedRes = savedInstanceState?.getCharSequence("res") as String
+            //savedPreviousCalculation = savedInstanceState?.getCharSequence("savedPreviousCalculation") as String
+            //savedLastKey = savedInstanceState?.getCharSequence("savedLastKey") as String
+            //savedLastOperation = savedInstanceState?.getCharSequence("savedLastOperation") as String
+            //savedBaseValue = savedInstanceState.getDouble("savedBaseValue")
+            //savedSecondValue = savedInstanceState.getDouble("savedSecondValue")
+            //savedInputDisplayedFormula = savedInstanceState.getCharSequence("savedInputDisplayedFormula") as String
+            json = savedInstanceState.getCharSequence("myJsonObject") as String
+        }
+
+        calc = CalculatorImpl(this, applicationContext,decimalSeparator, groupingSeparator, json)
 
         //============================================================
 
@@ -300,7 +305,7 @@ class MainActivity : SimpleActivity(), Calculator {
         bundle.putString("savedInputDisplayedFormula", calc.inputDisplayedFormula)
         */
         //JSON
-        bundle.putString("myJsonObject", calc.getjson())
+        bundle.putString("myJsonObject", calc.getJson().toString())
     }
     //============================================================
 }
