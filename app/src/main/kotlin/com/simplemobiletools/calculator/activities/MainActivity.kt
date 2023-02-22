@@ -62,7 +62,6 @@ class MainActivity : SimpleActivity(), Calculator {
         //============================================================
 
 
-
         //Log.v("SAVEDRES : ", savedRes)
         //Log.v("SAVEDPREVIOUS : ", savedPreviousCalculation)
         //Log.v("SAVEDLASTKEY : ", savedLastKey)
@@ -73,8 +72,7 @@ class MainActivity : SimpleActivity(), Calculator {
         //Log.v("SECONDVALUE : ", savedSecondValue.toString())
 
 
-
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             Log.v("MainActivity", "LOG TEST");
             //savedRes = savedInstanceState?.getCharSequence("res") as String
             //savedPreviousCalculation = savedInstanceState?.getCharSequence("savedPreviousCalculation") as String
@@ -86,7 +84,7 @@ class MainActivity : SimpleActivity(), Calculator {
             json = savedInstanceState.getCharSequence("myJsonObject") as String
         }
 
-        calc = CalculatorImpl(this, applicationContext,decimalSeparator, groupingSeparator, json)
+        calc = CalculatorImpl(this, applicationContext, decimalSeparator, groupingSeparator, json)
 
         //============================================================
 
@@ -292,7 +290,6 @@ class MainActivity : SimpleActivity(), Calculator {
 
     //============================================================
 
-    // ****** ADD ONSAVEINSTANCESTATE FUNCTION ******
     override fun onSaveInstanceState(bundle: Bundle) {
         super.onSaveInstanceState(bundle)
         /*
