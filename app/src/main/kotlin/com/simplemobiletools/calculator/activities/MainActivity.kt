@@ -290,6 +290,7 @@ class MainActivity : SimpleActivity(), Calculator {
     // ****** ADD ONSAVEINSTANCESTATE FUNCTION ******
     override fun onSaveInstanceState(bundle: Bundle) {
         super.onSaveInstanceState(bundle)
+        /*
         bundle.putString("res", calc.mResult)
         bundle.putString("savedPreviousCalculation", calc.previousCalculation)
         bundle.putString("savedLastKey", calc.lastKey)
@@ -297,6 +298,9 @@ class MainActivity : SimpleActivity(), Calculator {
         bundle.putDouble("savedBaseValue", calc.baseValue)
         bundle.putDouble("savedSecondValue", calc.getSecondValueV2())
         bundle.putString("savedInputDisplayedFormula", calc.inputDisplayedFormula)
+        */
+        //JSON
+        bundle.putString("myJsonObject", calc.getjson())
     }
     //============================================================
 }
