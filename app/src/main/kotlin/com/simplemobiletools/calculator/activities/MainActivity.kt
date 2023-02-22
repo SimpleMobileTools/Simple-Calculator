@@ -46,11 +46,15 @@ class MainActivity : SimpleActivity(), Calculator {
     private lateinit var calc: CalculatorImpl
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         appLaunched(BuildConfig.APPLICATION_ID)
         setupOptionsMenu()
         refreshMenuItems()
+
+        updateMaterialActivityViews(main_coordinator, null, useTransparentNavigation = false, useTopSearchMenu = false)
+        setupMaterialScrollListener(main_nested_scrollview, main_toolbar)
 
         //============================================================
 
@@ -293,6 +297,6 @@ class MainActivity : SimpleActivity(), Calculator {
         bundle.putDouble("savedBaseValue", calc.baseValue)
         bundle.putDouble("savedSecondValue", calc.getSecondValueV2())
         bundle.putString("savedInputDisplayedFormula", calc.inputDisplayedFormula)
-
+    }
     //============================================================
 }

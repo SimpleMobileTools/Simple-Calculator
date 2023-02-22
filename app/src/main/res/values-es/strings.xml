@@ -2,20 +2,20 @@
 <resources>
     <string name="app_name">Simple Calculator</string>
     <string name="app_launcher_name">Calculadora</string>
-    <string name="scientific_calculator">Calculadora Científica</string>
+    <string name="scientific_calculator">Calculadora científica</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Error: división por cero</string>
     <!-- History -->
     <string name="history">Historial</string>
     <string name="history_empty">El historial está vacío</string>
-    <string name="clear_history">Vaciar</string>
-    <string name="history_cleared">El historial ha sido vaciado</string>
+    <string name="clear_history">Borrar</string>
+    <string name="history_cleared">El historial ha sido borrado</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrar al presionar un botón</string>
-    <string name="use_comma_as_decimal_mark">Usa una coma como marca decimal</string>
+    <string name="use_comma_as_decimal_mark">Usar una coma como marca decimal</string>
     <!-- FAQ -->
-    <string name="faq_1_title">¿Cómo funciona el botón C (Clear: Limpiar)?</string>
-    <string name="faq_1_text">Presionándolo una vez eliminará un solo caracter. Mantenerlo presionado reiniciará todos los campos.</string>
+    <string name="faq_1_title">¿Cómo funciona el botón C (Borrar)\?</string>
+    <string name="faq_1_text">Presionándolo una vez eliminará un solo carácter. Mantenerlo presionado reiniciará todos los campos.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
