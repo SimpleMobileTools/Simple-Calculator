@@ -43,7 +43,7 @@ class CalculatorImpl(
 
     init {
         //============================================================
-        if(jsonObj != "") {
+        if (jsonObj != "") {
             setFromSaveInstanceState(jsonObj)
         }
         Log.v("BASEVALUE INIT :", baseValue.toString())
@@ -359,14 +359,14 @@ class CalculatorImpl(
 
     private fun showNewResult(value: String) {
         //============================================================
-        mResult = value;
+        mResult = value
         //============================================================
         callback!!.showNewResult(value, context)
     }
 
     private fun showNewFormula(value: String) {
         //============================================================
-        previousCalculation = value;
+        previousCalculation = value
         Log.v("BASEVALUE SHOWNF :", baseValue.toString())
         Log.v("SECONDVALUE SHOWNF:", secondValue.toString())
         //============================================================
@@ -470,17 +470,16 @@ class CalculatorImpl(
 
     private fun String.removeGroupSeparator() = formatter.removeGroupingSeparator(this)
 
-    public fun getSecondValueV2() : Double
-    {
+    fun getSecondValueV2(): Double {
         return this.secondValue
     }
 
 
     //JSON
-    public fun getJson() : JSONObject {
+    fun getJson(): JSONObject {
 
         val jsonObj = JSONObject()
-        jsonObj.put("res",mResult)
+        jsonObj.put("res", mResult)
         jsonObj.put("previousCalculation", previousCalculation)
         jsonObj.put("lastKey", lastKey)
         jsonObj.put("lastOperation", lastOperation)
@@ -491,8 +490,7 @@ class CalculatorImpl(
         return jsonObj
     }
 
-    public fun setFromSaveInstanceState( json: String )
-    {
+    private fun setFromSaveInstanceState(json: String) {
         val jsonObject = JSONTokener(json).nextValue() as JSONObject
         mResult = jsonObject.getString("res")
         previousCalculation = jsonObject.getString("previousCalculation")
@@ -502,7 +500,6 @@ class CalculatorImpl(
         lastKey = jsonObject.getString("lastKey")
         lastOperation = jsonObject.getString("lastOperation")
     }
-
 
 
 }
