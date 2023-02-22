@@ -484,4 +484,20 @@ class CalculatorImpl(
         return this.secondValue
     }
 
+    //JSON
+    public fun getJson() : String
+    {
+    val jsonObject = buildJsonObject{
+        put("res", mResult)
+        put("savedPreviousCalculation", previousCalculation)
+        put("savedLastKey", lastKey)
+        put("savedLastOperation", lastOperation)
+        put("savedBaseValue", baseValue)
+        put("savedSecondValue", secondValue)
+        put("savedInputDisplayedFormula", inputDisplayedFormula)
+        return jsonObject.toString()
+
+    }
+    }
+
 }
