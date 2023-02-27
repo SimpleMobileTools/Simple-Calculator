@@ -2,20 +2,20 @@
 <resources>
     <string name="app_name">Yksinkertainen laskin</string>
     <string name="app_launcher_name">Laskin</string>
-    <string name="scientific_calculator">Tieteellinen laskin</string>
+    <string name="scientific_calculator">Funktiolaskin</string>
     <!-- Calculator field -->
-    <string name="formula_divide_by_zero_error">Virhe: jakaminen nollalla</string>
+    <string name="formula_divide_by_zero_error">Virhe: jako nollalla</string>
     <!-- History -->
     <string name="history">Historia</string>
-    <string name="history_empty">Tyhjä historia</string>
+    <string name="history_empty">Historiaa ei ole</string>
     <string name="clear_history">Tyhjennä</string>
     <string name="history_cleared">Historia on tyhjennetty</string>
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Värinä painikkeen painalluksella</string>
+    <string name="vibrate_on_button_press">Värähdä painikkeista</string>
     <string name="use_comma_as_decimal_mark">Käytä pilkkua desimaalierottimena</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Kuinka C (Clear)-painike toimii?</string>
-    <string name="faq_1_text">Napauttaminen poistaa yhden merkin kerrallaan. Pitkä painallus nollaa kaikki kentät kerralla.</string>
+    <string name="faq_1_title">Miten C (Tyhjennä) -painike toimii\?</string>
+    <string name="faq_1_text">Sen napautus poistaa yhden merkin kerrallaan ja pitkä painallus tyhjentää kaikki kentät.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
