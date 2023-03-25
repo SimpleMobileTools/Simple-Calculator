@@ -243,8 +243,6 @@ class CalculatorImpl(
             }
 
             secondValue = parts.getOrNull(1)?.toDouble() ?: secondValue
-
-
         }
 
         if (lastOperation != "") {
@@ -437,15 +435,14 @@ class CalculatorImpl(
 
 
     fun getCalculatorStateJson(): JSONObject {
-
         val jsonObj = JSONObject()
-        jsonObj.put("res", currentResult)
-        jsonObj.put("previousCalculation", previousCalculation)
-        jsonObj.put("lastKey", lastKey)
-        jsonObj.put("lastOperation", lastOperation)
-        jsonObj.put("baseValue", baseValue)
-        jsonObj.put("secondValue", secondValue)
-        jsonObj.put("inputDisplayedFormula", inputDisplayedFormula)
+        jsonObj.put(RES, currentResult)
+        jsonObj.put(PREVIOUS_CALCULATION, previousCalculation)
+        jsonObj.put(LAST_KEY, lastKey)
+        jsonObj.put(LAST_OPERATION, lastOperation)
+        jsonObj.put(BASE_VALUE, baseValue)
+        jsonObj.put(SECOND_VALUE, secondValue)
+        jsonObj.put(INPUT_DISPLAYED_FORMULA, inputDisplayedFormula)
         return jsonObj
     }
 
