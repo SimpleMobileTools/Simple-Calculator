@@ -48,7 +48,7 @@ class MainActivity : SimpleActivity(), Calculator {
         setupMaterialScrollListener(main_nested_scrollview, main_toolbar)
 
         if (savedInstanceState != null) {
-            saveCalculatorState = savedInstanceState.getCharSequence("calculatorState") as String
+            saveCalculatorState = savedInstanceState.getCharSequence(CALCULATOR_STATE) as String
         }
 
         calc = CalculatorImpl(this, applicationContext, decimalSeparator, groupingSeparator, saveCalculatorState)
@@ -256,7 +256,6 @@ class MainActivity : SimpleActivity(), Calculator {
 
     override fun onSaveInstanceState(bundle: Bundle) {
         super.onSaveInstanceState(bundle)
-
-        bundle.putString("calculatorState", calc.getCalculatorStateJson().toString())
+        bundle.putString(CALCULATOR_STATE, calc.getCalculatorStateJson().toString())
     }
 }

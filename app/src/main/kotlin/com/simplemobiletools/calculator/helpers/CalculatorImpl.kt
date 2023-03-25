@@ -448,12 +448,12 @@ class CalculatorImpl(
 
     private fun setFromSaveInstanceState(json: String) {
         val jsonObject = JSONTokener(json).nextValue() as JSONObject
-        currentResult = jsonObject.getString("res")
-        previousCalculation = jsonObject.getString("previousCalculation")
-        baseValue = jsonObject.getDouble("baseValue")
-        secondValue = jsonObject.getDouble("secondValue")
-        inputDisplayedFormula = jsonObject.getString("inputDisplayedFormula")
-        lastKey = jsonObject.getString("lastKey")
-        lastOperation = jsonObject.getString("lastOperation")
+        currentResult = jsonObject.getString(RES)
+        previousCalculation = jsonObject.getString(PREVIOUS_CALCULATION)
+        baseValue = jsonObject.getDouble(BASE_VALUE)
+        secondValue = jsonObject.getDouble(SECOND_VALUE)
+        inputDisplayedFormula = jsonObject.getString(INPUT_DISPLAYED_FORMULA)
+        lastKey = jsonObject.getString(LAST_KEY)
+        lastOperation = jsonObject.getString(LAST_OPERATION)
     }
 }

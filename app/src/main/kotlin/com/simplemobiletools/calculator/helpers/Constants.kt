@@ -38,3 +38,5 @@ const val LAST_OPERATION = "lastOperation"
 const val BASE_VALUE = "baseValue"
 const val SECOND_VALUE = "secondValue"
 const val INPUT_DISPLAYED_FORMULA = "inputDisplayedFormula"
+
+const val CALCULATOR_STATE = "calculatorState"
