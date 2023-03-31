@@ -1,6 +1,7 @@
 package com.simplemobiletools.calculator.helpers
 
 import android.content.Context
+import android.util.Log
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.models.History
 import com.simplemobiletools.commons.extensions.showErrorToast
@@ -110,6 +111,9 @@ class CalculatorImpl(
         if (lastKey == DIGIT || lastKey == DECIMAL) {
             if (lastOperation != "" && operation == PERCENT) {
                 handlePercent()
+            }
+            if (lastOperation == "" && operation == PLUS) {
+                lastOperation = PLUS
             } else {
                 // split to multiple lines just to see when does the crash happen
                 secondValue = when (operation) {
@@ -183,9 +187,12 @@ class CalculatorImpl(
         }
 
         if (lastKey != DIGIT && lastKey != DECIMAL) {
+            if (lastKey == PLUS) {
+                calculateResult()
+                lastKey = EQUALS
+            }
             return
         }
-
         secondValue = getSecondValue()
         calculateResult()
         if ((lastOperation == DIVIDE || lastOperation == PERCENT) && secondValue == 0.0) {
@@ -200,7 +207,7 @@ class CalculatorImpl(
         val valueToCheck = inputDisplayedFormula.trimStart('-').removeGroupSeparator()
         var value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
         if (value == "") {
-            value = "0"
+            value = "0.0"
         }
 
         return try {
@@ -233,7 +240,12 @@ class CalculatorImpl(
                 baseValue *= -1
             }
 
-            secondValue = parts.getOrNull(1)?.toDouble() ?: secondValue
+            if (parts.size <= 1) {
+                secondValue = baseValue
+            } else {
+                secondValue = parts.getOrNull(1)?.toDouble() ?: secondValue
+            }
+
         }
 
         if (lastOperation != "") {
@@ -422,3 +434,4 @@ class CalculatorImpl(
 
     private fun String.removeGroupSeparator() = formatter.removeGroupingSeparator(this)
 }
+
