@@ -6,10 +6,10 @@
     <string name="formula_divide_by_zero_error">Napaka: deljenje z ničlo</string>
     <string name="history">Zgodovina</string>
     <string name="history_empty">Zgodovina je prazna</string>
-    <string name="clear_history">Jasno</string>
+    <string name="clear_history">Počisti</string>
     <string name="history_cleared">Zgodovina je bila izbrisana</string>
     <string name="vibrate_on_button_press">Vibriraj ob pritisku gumba</string>
     <string name="use_comma_as_decimal_mark">Uporabite vejico kot decimalno znamenje</string>
     <string name="faq_1_title">Kako deluje gumb C (Clear)\?</string>
-    <string name="faq_1_text">Če ga tapnete, odstranite po en lik naenkrat. Z dolgim pritiskom nanj boste odstranili vsa polja naenkrat.</string>
+    <string name="faq_1_text">Če ga stisnete, odstranite po en lik naenkrat. Z dolgim pritiskom nanj boste odstranili vsa polja naenkrat.</string>
 </resources>
