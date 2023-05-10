@@ -63,11 +63,11 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.SimpleMobileTools:Simple-Commons:c457573200'
+    implementation 'com.github.SimpleMobileTools:Simple-Commons:94b616f462'
     implementation 'me.grantland:autofittextview:0.2.1'
     implementation 'net.objecthunter:exp4j:0.4.8'
 
-    kapt 'androidx.room:room-compiler:2.5.0'
-    implementation 'androidx.room:room-runtime:2.5.0'
-    annotationProcessor 'androidx.room:room-compiler:2.5.0'
+    kapt 'androidx.room:room-compiler:2.5.1'
+    implementation 'androidx.room:room-runtime:2.5.1'
+    annotationProcessor 'androidx.room:room-compiler:2.5.1'
 }
