@@ -433,7 +433,6 @@ class CalculatorImpl(
 
     private fun String.removeGroupSeparator() = formatter.removeGroupingSeparator(this)
 
-
     fun getCalculatorStateJson(): JSONObject {
         val jsonObj = JSONObject()
         jsonObj.put(RES, currentResult)
