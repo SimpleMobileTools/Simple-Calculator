@@ -449,10 +449,10 @@ class CalculatorImpl(
         val jsonObject = JSONTokener(json).nextValue() as JSONObject
         currentResult = jsonObject.getString(RES)
         previousCalculation = jsonObject.getString(PREVIOUS_CALCULATION)
+        lastKey = jsonObject.getString(LAST_KEY)
+        lastOperation = jsonObject.getString(LAST_OPERATION)
         baseValue = jsonObject.getDouble(BASE_VALUE)
         secondValue = jsonObject.getDouble(SECOND_VALUE)
         inputDisplayedFormula = jsonObject.getString(INPUT_DISPLAYED_FORMULA)
-        lastKey = jsonObject.getString(LAST_KEY)
-        lastOperation = jsonObject.getString(LAST_OPERATION)
     }
 }
