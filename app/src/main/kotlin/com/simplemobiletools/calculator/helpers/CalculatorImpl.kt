@@ -6,16 +6,21 @@ import com.simplemobiletools.calculator.models.History
 import com.simplemobiletools.commons.extensions.showErrorToast
 import com.simplemobiletools.commons.extensions.toast
 import net.objecthunter.exp4j.ExpressionBuilder
+import org.json.JSONObject
+import org.json.JSONTokener
 import java.math.BigDecimal
 
 class CalculatorImpl(
     calculator: Calculator,
     private val context: Context,
     private var decimalSeparator: String = DOT,
-    private var groupingSeparator: String = COMMA
+    private var groupingSeparator: String = COMMA,
+    calculatorState: String = ""
 ) {
     private var callback: Calculator? = calculator
-
+    private var stateInstance = calculatorState
+    private var currentResult = "0"
+    private var previousCalculation = ""
     private var baseValue = 0.0
     private var secondValue = 0.0
     private var inputDisplayedFormula = "0"
@@ -24,13 +29,16 @@ class CalculatorImpl(
     private val operations = listOf("+", "-", "×", "÷", "^", "%", "√")
     private val operationsRegex = "[-+×÷^%√]".toPattern()
     private val numbersRegex = "[^0-9,.]".toRegex()
-
     private val formatter = NumberFormatHelper(
         decimalSeparator = decimalSeparator, groupingSeparator = groupingSeparator
     )
 
     init {
-        showNewResult("0")
+        if (stateInstance != "") {
+            setFromSaveInstanceState(stateInstance)
+        }
+        showNewResult(currentResult)
+        showNewFormula(previousCalculation)
     }
 
     private fun addDigit(number: Int) {
@@ -198,6 +206,7 @@ class CalculatorImpl(
 
     private fun getSecondValue(): Double {
         val valueToCheck = inputDisplayedFormula.trimStart('-').removeGroupSeparator()
+
         var value = valueToCheck.substring(valueToCheck.indexOfAny(operations) + 1)
         if (value == "") {
             value = "0"
@@ -318,10 +327,12 @@ class CalculatorImpl(
     }
 
     private fun showNewResult(value: String) {
+        currentResult = value
         callback!!.showNewResult(value, context)
     }
 
     private fun showNewFormula(value: String) {
+        previousCalculation = value
         callback!!.showNewFormula(value, context)
     }
 
@@ -421,4 +432,27 @@ class CalculatorImpl(
     private fun Double.format() = formatter.doubleToString(this)
 
     private fun String.removeGroupSeparator() = formatter.removeGroupingSeparator(this)
+
+    fun getCalculatorStateJson(): JSONObject {
+        val jsonObj = JSONObject()
+        jsonObj.put(RES, currentResult)
+        jsonObj.put(PREVIOUS_CALCULATION, previousCalculation)
+        jsonObj.put(LAST_KEY, lastKey)
+        jsonObj.put(LAST_OPERATION, lastOperation)
+        jsonObj.put(BASE_VALUE, baseValue)
+        jsonObj.put(SECOND_VALUE, secondValue)
+        jsonObj.put(INPUT_DISPLAYED_FORMULA, inputDisplayedFormula)
+        return jsonObj
+    }
+
+    private fun setFromSaveInstanceState(json: String) {
+        val jsonObject = JSONTokener(json).nextValue() as JSONObject
+        currentResult = jsonObject.getString(RES)
+        previousCalculation = jsonObject.getString(PREVIOUS_CALCULATION)
+        lastKey = jsonObject.getString(LAST_KEY)
+        lastOperation = jsonObject.getString(LAST_OPERATION)
+        baseValue = jsonObject.getDouble(BASE_VALUE)
+        secondValue = jsonObject.getDouble(SECOND_VALUE)
+        inputDisplayedFormula = jsonObject.getString(INPUT_DISPLAYED_FORMULA)
+    }
 }

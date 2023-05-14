@@ -29,7 +29,7 @@ class MainActivity : SimpleActivity(), Calculator {
     private var storedUseCommaAsDecimalMark = false
     private var decimalSeparator = DOT
     private var groupingSeparator = COMMA
-
+    private var saveCalculatorState: String = ""
     private lateinit var calc: CalculatorImpl
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,12 +39,14 @@ class MainActivity : SimpleActivity(), Calculator {
         appLaunched(BuildConfig.APPLICATION_ID)
         setupOptionsMenu()
         refreshMenuItems()
-
         updateMaterialActivityViews(main_coordinator, null, useTransparentNavigation = false, useTopSearchMenu = false)
         setupMaterialScrollListener(main_nested_scrollview, main_toolbar)
 
-        calc = CalculatorImpl(this, applicationContext)
+        if (savedInstanceState != null) {
+            saveCalculatorState = savedInstanceState.getCharSequence(CALCULATOR_STATE) as String
+        }
 
+        calc = CalculatorImpl(this, applicationContext, decimalSeparator, groupingSeparator, saveCalculatorState)
         btn_plus.setOnClickOperation(PLUS)
         btn_minus.setOnClickOperation(MINUS)
         btn_multiply.setOnClickOperation(MULTIPLY)
@@ -53,7 +55,6 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_power.setOnClickOperation(POWER)
         btn_root.setOnClickOperation(ROOT)
         btn_minus.setOnLongClickListener { calc.turnToNegative() }
-
         btn_clear.setVibratingOnClickListener { calc.handleClear() }
         btn_clear.setOnLongClickListener {
             calc.handleReset()
@@ -69,7 +70,6 @@ class MainActivity : SimpleActivity(), Calculator {
         btn_equals.setVibratingOnClickListener { calc.handleEquals() }
         formula.setOnLongClickListener { copyToClipboard(false) }
         result.setOnLongClickListener { copyToClipboard(true) }
-
         AutofitHelper.create(result)
         AutofitHelper.create(formula)
         storeStateVariables()
@@ -121,6 +121,11 @@ class MainActivity : SimpleActivity(), Calculator {
         if (!isChangingConfigurations) {
             CalculatorDatabase.destroyInstance()
         }
+    }
+
+    override fun onSaveInstanceState(bundle: Bundle) {
+        super.onSaveInstanceState(bundle)
+        bundle.putString(CALCULATOR_STATE, calc.getCalculatorStateJson().toString())
     }
 
     private fun setupOptionsMenu() {
