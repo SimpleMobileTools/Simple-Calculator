@@ -123,6 +123,11 @@ class MainActivity : SimpleActivity(), Calculator {
         }
     }
 
+    override fun onSaveInstanceState(bundle: Bundle) {
+        super.onSaveInstanceState(bundle)
+        bundle.putString(CALCULATOR_STATE, calc.getCalculatorStateJson().toString())
+    }
+
     private fun setupOptionsMenu() {
         main_toolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
@@ -243,10 +248,5 @@ class MainActivity : SimpleActivity(), Calculator {
         setVibratingOnClickListener {
             calc.handleOperation(operation)
         }
-    }
-
-    override fun onSaveInstanceState(bundle: Bundle) {
-        super.onSaveInstanceState(bundle)
-        bundle.putString(CALCULATOR_STATE, calc.getCalculatorStateJson().toString())
     }
 }
