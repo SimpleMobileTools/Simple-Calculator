@@ -1,33 +1,82 @@
 package com.simplemobiletools.calculator.activities
 
+import android.app.ActivityManager
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
-import com.simplemobiletools.calculator.R
+import android.view.View
+import androidx.activity.compose.setContent
+import androidx.appcompat.app.AppCompatActivity
+import com.simplemobiletools.calculator.compose.screens.SettingsScreen
+import com.simplemobiletools.calculator.compose.theme.AppThemeSurface
+import com.simplemobiletools.calculator.compose.theme.Theme
+import com.simplemobiletools.calculator.databinding.ActivitySettingsBinding
 import com.simplemobiletools.calculator.extensions.calculatorDB
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.extensions.updateWidgets
+import com.simplemobiletools.calculator.extensions.viewBinding
+import com.simplemobiletools.commons.activities.CustomizationActivity
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.IS_CUSTOMIZING_COLORS
-import com.simplemobiletools.commons.helpers.NavigationIcon
-import com.simplemobiletools.commons.helpers.ensureBackgroundThread
-import com.simplemobiletools.commons.helpers.isTiramisuPlus
-import kotlinx.android.synthetic.main.activity_settings.*
-import java.util.*
+import com.simplemobiletools.commons.helpers.*
+import java.util.Locale
 import kotlin.system.exitProcess
 
-class SettingsActivity : SimpleActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_settings)
+class SettingsActivity : AppCompatActivity() {
 
-        updateMaterialActivityViews(settings_coordinator, settings_holder, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(settings_nested_scrollview, settings_toolbar)
+    private val binding by viewBinding(ActivitySettingsBinding::inflate)
+    private val preferences by lazy { config }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            AppThemeSurface {
+                SettingsScreen(
+                    customizeColors = ::handleCustomizeColorsClick, goBack = ::finish,
+                    backgroundColor = getProperBackgroundColor()
+                )
+            }
+        }
+        val backgroundColor = getProperBackgroundColor()
+        updateStatusbarColor(backgroundColor)
+        updateActionbarColor(backgroundColor)
+
+        //updateMaterialActivityViews(binding.settingsCoordinator, binding.settingsHolder, useTransparentNavigation = true, useTopSearchMenu = false)
+        //setupMaterialScrollListener(binding.settingsNestedScrollview, binding.settingsToolbar)
+    }
+
+    fun updateStatusbarColor(color: Int) {
+        window.statusBarColor = color
+
+        if (color.getContrastColor() == DARK_GREY) {
+            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+        } else {
+            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+        }
+    }
+
+    fun updateActionbarColor(color: Int = getProperStatusBarColor()) {
+        updateStatusbarColor(color)
+        setTaskDescription(ActivityManager.TaskDescription(null, null, color))
+    }
+
+    fun updateNavigationBarColor(color: Int) {
+        window.navigationBarColor = color
+        updateNavigationBarButtons(color)
+    }
+
+    fun updateNavigationBarButtons(color: Int) {
+        if (isOreoPlus()) {
+            if (color.getContrastColor() == DARK_GREY) {
+                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+            } else {
+                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+            }
+        }
     }
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(settings_toolbar, NavigationIcon.Arrow)
+        /*setupToolbar(binding.settingsToolbar, NavigationIcon.Arrow)
 
         setupPurchaseThankYou()
         setupCustomizeColors()
@@ -37,66 +86,76 @@ class SettingsActivity : SimpleActivity() {
         setupPreventPhoneFromSleeping()
         setupUseCommaAsDecimalMark()
         setupCustomizeWidgetColors()
-        updateTextColors(settings_nested_scrollview)
+        updateTextColors(binding.settingsNestedScrollview)
 
-        arrayOf(settings_color_customization_section_label, settings_general_settings_label).forEach {
+        arrayOf(binding.settingsColorCustomizationSectionLabel, binding.settingsGeneralSettingsLabel).forEach {
             it.setTextColor(getProperPrimaryColor())
-        }
+        }*/
     }
 
     private fun setupPurchaseThankYou() {
-        settings_purchase_thank_you_holder.beGoneIf(isOrWasThankYouInstalled())
-        settings_purchase_thank_you_holder.setOnClickListener {
+        binding.settingsPurchaseThankYouHolder.beGoneIf(isOrWasThankYouInstalled())
+        binding.settingsPurchaseThankYouHolder.setOnClickListener {
             launchPurchaseThankYouIntent()
         }
     }
 
     private fun setupCustomizeColors() {
-        settings_color_customization_label.text = getCustomizeColorsString()
-        settings_color_customization_holder.setOnClickListener {
+        binding.settingsWidgetColorCustomizationLabel.text = getCustomizeColorsString()
+        binding.settingsWidgetColorCustomizationHolder.setOnClickListener {
             handleCustomizeColorsClick()
         }
     }
 
+    private fun handleCustomizeColorsClick() {
+        Intent(applicationContext, CustomizationActivity::class.java).apply {
+            /*putExtra(APP_ICON_IDS, getAppIconIDs())
+            putExtra(APP_LAUNCHER_NAME, getAppLauncherName())*/
+            startActivity(this)
+        }
+    }
+
     private fun setupUseEnglish() {
-        settings_use_english_holder.beVisibleIf((config.wasUseEnglishToggled || Locale.getDefault().language != "en") && !isTiramisuPlus())
-        settings_use_english.isChecked = config.useEnglish
-        settings_use_english_holder.setOnClickListener {
-            settings_use_english.toggle()
-            config.useEnglish = settings_use_english.isChecked
+        binding.settingsUseEnglishHolder.beVisibleIf((preferences.wasUseEnglishToggled || Locale.getDefault().language != "en") && !isTiramisuPlus())
+        binding.settingsUseEnglish.isChecked = preferences.useEnglish
+        binding.settingsUseEnglishHolder.setOnClickListener {
+            binding.settingsUseEnglish.toggle()
+            preferences.useEnglish = binding.settingsUseEnglish.isChecked
             exitProcess(0)
         }
     }
 
     private fun setupLanguage() {
-        settings_language.text = Locale.getDefault().displayLanguage
-        settings_language_holder.beVisibleIf(isTiramisuPlus())
-        settings_language_holder.setOnClickListener {
-            launchChangeAppLanguageIntent()
+        binding.settingsLanguage.text = Locale.getDefault().displayLanguage
+        binding.settingsLanguageHolder.beVisibleIf(isTiramisuPlus())
+        binding.settingsLanguageHolder.setOnClickListener {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                // launchChangeAppLanguageIntent()
+            }
         }
     }
 
     private fun setupVibrate() {
-        settings_vibrate.isChecked = config.vibrateOnButtonPress
-        settings_vibrate_holder.setOnClickListener {
-            settings_vibrate.toggle()
-            config.vibrateOnButtonPress = settings_vibrate.isChecked
+        binding.settingsVibrate.isChecked = preferences.vibrateOnButtonPress
+        binding.settingsVibrateHolder.setOnClickListener {
+            binding.settingsVibrate.toggle()
+            preferences.vibrateOnButtonPress = binding.settingsVibrate.isChecked
         }
     }
 
     private fun setupPreventPhoneFromSleeping() {
-        settings_prevent_phone_from_sleeping.isChecked = config.preventPhoneFromSleeping
-        settings_prevent_phone_from_sleeping_holder.setOnClickListener {
-            settings_prevent_phone_from_sleeping.toggle()
-            config.preventPhoneFromSleeping = settings_prevent_phone_from_sleeping.isChecked
+        binding.settingsPreventPhoneFromSleeping.isChecked = preferences.preventPhoneFromSleeping
+        binding.settingsPreventPhoneFromSleepingHolder.setOnClickListener {
+            binding.settingsPreventPhoneFromSleeping.toggle()
+            preferences.preventPhoneFromSleeping = binding.settingsPreventPhoneFromSleeping.isChecked
         }
     }
 
     private fun setupUseCommaAsDecimalMark() {
-        settings_use_comma_as_decimal_mark.isChecked = config.useCommaAsDecimalMark
-        settings_use_comma_as_decimal_mark_holder.setOnClickListener {
-            settings_use_comma_as_decimal_mark.toggle()
-            config.useCommaAsDecimalMark = settings_use_comma_as_decimal_mark.isChecked
+        binding.settingsUseCommaAsDecimalMark.isChecked = preferences.useCommaAsDecimalMark
+        binding.settingsUseCommaAsDecimalMark.setOnClickListener {
+            binding.settingsUseCommaAsDecimalMark.toggle()
+            preferences.useCommaAsDecimalMark = binding.settingsUseCommaAsDecimalMark.isChecked
             updateWidgets()
             ensureBackgroundThread {
                 applicationContext.calculatorDB.deleteHistory()
@@ -105,7 +164,7 @@ class SettingsActivity : SimpleActivity() {
     }
 
     private fun setupCustomizeWidgetColors() {
-        settings_widget_color_customization_holder.setOnClickListener {
+        binding.settingsWidgetColorCustomizationHolder.setOnClickListener {
             Intent(this, WidgetConfigureActivity::class.java).apply {
                 putExtra(IS_CUSTOMIZING_COLORS, true)
                 startActivity(this)

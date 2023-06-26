@@ -1,0 +1,93 @@
+[versions]
+#jetbrains
+kotlin = "1.8.21"
+#KSP
+ksp = "1.8.21-1.0.11"
+#Androidx
+androidx-customView = "1.2.0-alpha02"
+androidx-customViewPooling = "1.0.0"
+#Compose
+composeActivity = "1.8.0-alpha06"
+compose = "1.6.0-alpha01"
+composeCompiler = "1.4.7"
+composeMaterial3 = "1.2.0-alpha03"
+accompanist = "0.31.4-beta"
+#AutoFitTextView
+autofittextview = "0.2.1"
+#exp4j
+exp4j = "0.4.8"
+#Room
+room = "2.5.2"
+#Simple tools
+simple-commons = "4c83ec8740"
+#Gradle
+gradlePlugins-agp = "7.3.1"
+#build
+app-build-compileSDKVersion = "34"
+app-build-targetSDK = "33"
+app-build-minimumSDK = "23"
+app-build-javaVersion = "VERSION_17"
+app-build-kotlinJVMTarget = "17"
+#versioning
+app-version-appId = "com.simplemobiletools.calculator"
+app-version-versionCode = "60"
+app-version-versionName = "5.11.3"
+
+[libraries]
+#Android X
+androidx-customView = { module = "androidx.customview:customview", version.ref = "androidx-customView" }
+androidx-customViewPooling = { module = "androidx.customview:customview-poolingcontainer", version.ref = "androidx-customViewPooling" }
+#Room
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+#Compose
+compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "composeCompiler" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial3" }
+compose-material2 = { module = "androidx.compose.material:material", version.ref = "compose" }
+compose-material-icons = { module = "androidx.compose.material:material-icons-extended", version.ref = "compose" }
+compose-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "compose" }
+compose-uiTooling-debug = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-uiTooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+#UI
+auto-fit-text-view = { module = "me.grantland:autofittextview", version.ref = "autofittextview" }
+#Simple Mobile Tools
+simple-tools-commons = { module = "com.github.SimpleMobileTools:Simple-Commons", version.ref = "simple-commons" }
+#Exp4j
+exp4j = { module = "net.objecthunter:exp4j", version.ref = "exp4j" }
+#Accompanist
+accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
+[bundles]
+compose = [
+    "compose-activity",
+    "compose-animation",
+    "compose-compiler",
+    "compose-foundation",
+    "compose-material-icons",
+    "compose-material3",
+    "compose-runtime",
+    "compose-ui",
+    "compose-uiTooling-preview",
+]
+compose-preview = [
+    "androidx-customView",
+    "androidx-customViewPooling",
+    "compose-uiTooling-debug",
+]
+room = [
+    "androidx-room-ktx",
+    "androidx-room-runtime",
+]
+accompanist = [
+    "accompanist-systemuicontroller",
+]
+
+[plugins]
+android = { id = "com.android.application", version.ref = "gradlePlugins-agp" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+

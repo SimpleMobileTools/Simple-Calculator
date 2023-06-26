@@ -281,7 +281,7 @@ class CalculatorImpl(
                 }
 
                 if (result.isInfinite() || result.isNaN()) {
-                    context.toast(R.string.unknown_error_occurred)
+                    context.toast(com.simplemobiletools.commons.R.string.unknown_error_occurred)
                     return
                 }
 
@@ -295,7 +295,7 @@ class CalculatorImpl(
                 inputDisplayedFormula = result.format()
                 baseValue = result
             } catch (e: Exception) {
-                context.toast(R.string.unknown_error_occurred)
+                context.toast(com.simplemobiletools.commons.R.string.unknown_error_occurred)
             }
         }
     }

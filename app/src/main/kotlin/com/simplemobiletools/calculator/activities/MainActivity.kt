@@ -9,6 +9,7 @@ import androidx.core.content.res.ResourcesCompat
 import com.simplemobiletools.calculator.BuildConfig
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.databases.CalculatorDatabase
+import com.simplemobiletools.calculator.databinding.ActivityMainBinding
 import com.simplemobiletools.calculator.dialogs.HistoryDialog
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.extensions.updateViewColors
@@ -20,7 +21,6 @@ import com.simplemobiletools.commons.helpers.LOWER_ALPHA_INT
 import com.simplemobiletools.commons.helpers.MEDIUM_ALPHA_INT
 import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.Release
-import kotlinx.android.synthetic.main.activity_main.*
 import me.grantland.widget.AutofitHelper
 
 class MainActivity : SimpleActivity(), Calculator {
@@ -32,48 +32,50 @@ class MainActivity : SimpleActivity(), Calculator {
     private var saveCalculatorState: String = ""
     private lateinit var calc: CalculatorImpl
 
+    private val binding by lazy(LazyThreadSafetyMode.NONE) { ActivityMainBinding.inflate(layoutInflater) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         isMaterialActivity = true
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
         setupOptionsMenu()
         refreshMenuItems()
-        updateMaterialActivityViews(main_coordinator, null, useTransparentNavigation = false, useTopSearchMenu = false)
-        setupMaterialScrollListener(main_nested_scrollview, main_toolbar)
+        updateMaterialActivityViews(binding.mainCoordinator, null, useTransparentNavigation = false, useTopSearchMenu = false)
+        setupMaterialScrollListener(binding.mainNestedScrollview, binding.mainToolbar)
 
         if (savedInstanceState != null) {
             saveCalculatorState = savedInstanceState.getCharSequence(CALCULATOR_STATE) as String
         }
 
         calc = CalculatorImpl(this, applicationContext, decimalSeparator, groupingSeparator, saveCalculatorState)
-        btn_plus.setOnClickOperation(PLUS)
-        btn_minus.setOnClickOperation(MINUS)
-        btn_multiply.setOnClickOperation(MULTIPLY)
-        btn_divide.setOnClickOperation(DIVIDE)
-        btn_percent.setOnClickOperation(PERCENT)
-        btn_power.setOnClickOperation(POWER)
-        btn_root.setOnClickOperation(ROOT)
-        btn_minus.setOnLongClickListener { calc.turnToNegative() }
-        btn_clear.setVibratingOnClickListener { calc.handleClear() }
-        btn_clear.setOnLongClickListener {
+        binding.btnPlus?.setOnClickOperation(PLUS)
+        binding.btnMinus?.setOnClickOperation(MINUS)
+        binding.btnMultiply?.setOnClickOperation(MULTIPLY)
+        binding.btnDivide?.setOnClickOperation(DIVIDE)
+        binding.btnPercent?.setOnClickOperation(PERCENT)
+        binding.btnPower?.setOnClickOperation(POWER)
+        binding.btnRoot?.setOnClickOperation(ROOT)
+        binding.btnMinus?.setOnLongClickListener { calc.turnToNegative() }
+        binding.btnClear?.setVibratingOnClickListener { calc.handleClear() }
+        binding.btnClear?.setOnLongClickListener {
             calc.handleReset()
             true
         }
 
         getButtonIds().forEach {
-            it.setVibratingOnClickListener { view ->
+            it?.setVibratingOnClickListener { view ->
                 calc.numpadClicked(view.id)
             }
         }
 
-        btn_equals.setVibratingOnClickListener { calc.handleEquals() }
-        formula.setOnLongClickListener { copyToClipboard(false) }
-        result.setOnLongClickListener { copyToClipboard(true) }
-        AutofitHelper.create(result)
-        AutofitHelper.create(formula)
+        binding.btnEquals?.setVibratingOnClickListener { calc.handleEquals() }
+        binding.formula?.setOnLongClickListener { copyToClipboard(false) }
+        binding.result?.setOnLongClickListener { copyToClipboard(true) }
+        AutofitHelper.create(binding.result)
+        AutofitHelper.create(binding.formula)
         storeStateVariables()
-        updateViewColors(calculator_holder, getProperTextColor())
+        binding.calculatorHolder?.let { updateViewColors(it, getProperTextColor()) }
         setupDecimalSeparator()
         checkWhatsNewDialog()
         checkAppOnSDCard()
@@ -81,9 +83,9 @@ class MainActivity : SimpleActivity(), Calculator {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(main_toolbar)
+        setupToolbar(binding.mainToolbar)
         if (storedTextColor != config.textColor) {
-            updateViewColors(calculator_holder, getProperTextColor())
+            binding.calculatorHolder?.let { updateViewColors(it, getProperTextColor()) }
         }
 
         if (config.preventPhoneFromSleeping) {
@@ -97,14 +99,16 @@ class MainActivity : SimpleActivity(), Calculator {
 
         vibrateOnButtonPress = config.vibrateOnButtonPress
 
-        arrayOf(btn_percent, btn_power, btn_root, btn_clear, btn_reset, btn_divide, btn_multiply, btn_plus, btn_minus, btn_equals, btn_decimal).forEach {
-            it.background = ResourcesCompat.getDrawable(resources, R.drawable.pill_background, theme)
-            it.background?.alpha = MEDIUM_ALPHA_INT
-        }
+        binding.apply {
+            arrayOf(btnPercent, btnPower, btnRoot, btnClear, btnReset, btnDivide, btnMultiply, btnPlus, btnMinus, btnEquals, btnDecimal).forEach {
+                it?.background = ResourcesCompat.getDrawable(resources, com.simplemobiletools.commons.R.drawable.pill_background, theme)
+                it?.background?.alpha = MEDIUM_ALPHA_INT
+            }
 
-        arrayOf(btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9).forEach {
-            it.background = ResourcesCompat.getDrawable(resources, R.drawable.pill_background, theme)
-            it.background?.alpha = LOWER_ALPHA_INT
+            arrayOf(btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9).forEach {
+                it?.background = ResourcesCompat.getDrawable(resources, com.simplemobiletools.commons.R.drawable.pill_background, theme)
+                it?.background?.alpha = LOWER_ALPHA_INT
+            }
         }
     }
 
@@ -129,7 +133,7 @@ class MainActivity : SimpleActivity(), Calculator {
     }
 
     private fun setupOptionsMenu() {
-        main_toolbar.setOnMenuItemClickListener { menuItem ->
+        binding.mainToolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.history -> showHistory()
                 R.id.more_apps_from_us -> launchMoreAppsFromUsIntent()
@@ -142,8 +146,8 @@ class MainActivity : SimpleActivity(), Calculator {
     }
 
     private fun refreshMenuItems() {
-        main_toolbar.menu.apply {
-            findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(R.bool.hide_google_relations)
+        binding.mainToolbar.menu.apply {
+            findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(com.simplemobiletools.commons.R.bool.hide_google_relations)
         }
     }
 
@@ -163,7 +167,7 @@ class MainActivity : SimpleActivity(), Calculator {
     private fun showHistory() {
         HistoryHelper(this).getHistory {
             if (it.isEmpty()) {
-                toast(R.string.history_empty)
+                toast(com.simplemobiletools.calculator.R.string.history_empty)
             } else {
                 HistoryDialog(this, it, calc)
             }
@@ -180,27 +184,29 @@ class MainActivity : SimpleActivity(), Calculator {
 
         val faqItems = arrayListOf(
             FAQItem(R.string.faq_1_title, R.string.faq_1_text),
-            FAQItem(R.string.faq_1_title_commons, R.string.faq_1_text_commons),
-            FAQItem(R.string.faq_4_title_commons, R.string.faq_4_text_commons)
+            FAQItem(com.simplemobiletools.commons.R.string.faq_1_title_commons, com.simplemobiletools.commons.R.string.faq_1_text_commons),
+            FAQItem(com.simplemobiletools.commons.R.string.faq_4_title_commons, com.simplemobiletools.commons.R.string.faq_4_text_commons)
         )
 
-        if (!resources.getBoolean(R.bool.hide_google_relations)) {
-            faqItems.add(FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons))
-            faqItems.add(FAQItem(R.string.faq_6_title_commons, R.string.faq_6_text_commons))
+        if (!resources.getBoolean(com.simplemobiletools.commons.R.bool.hide_google_relations)) {
+            faqItems.add(FAQItem(com.simplemobiletools.commons.R.string.faq_2_title_commons, com.simplemobiletools.commons.R.string.faq_2_text_commons))
+            faqItems.add(FAQItem(com.simplemobiletools.commons.R.string.faq_6_title_commons, com.simplemobiletools.commons.R.string.faq_6_text_commons))
         }
 
         startAboutActivity(R.string.app_name, licenses, BuildConfig.VERSION_NAME, faqItems, true)
     }
 
-    private fun getButtonIds() = arrayOf(btn_decimal, btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9)
+    private fun getButtonIds() = binding.run {
+        arrayOf(btnDecimal, btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9)
+    }
 
     private fun copyToClipboard(copyResult: Boolean): Boolean {
-        var value = formula.value
+        var value = binding.formula?.value
         if (copyResult) {
-            value = result.value
+            value = binding.result?.value
         }
 
-        return if (value.isEmpty()) {
+        return if (value.isNullOrEmpty()) {
             false
         } else {
             copyToClipboard(value)
@@ -209,19 +215,19 @@ class MainActivity : SimpleActivity(), Calculator {
     }
 
     override fun showNewResult(value: String, context: Context) {
-        result.text = value
+        binding.result?.text = value
     }
 
     private fun checkWhatsNewDialog() {
         arrayListOf<Release>().apply {
-            add(Release(18, R.string.release_18))
-            add(Release(28, R.string.release_28))
+            add(Release(18, com.simplemobiletools.calculator.R.string.release_18))
+            add(Release(28, com.simplemobiletools.calculator.R.string.release_28))
             checkWhatsNew(this, BuildConfig.VERSION_CODE)
         }
     }
 
     override fun showNewFormula(value: String, context: Context) {
-        formula.text = value
+        binding.formula?.text = value
     }
 
     private fun setupDecimalSeparator() {
@@ -234,7 +240,7 @@ class MainActivity : SimpleActivity(), Calculator {
             groupingSeparator = COMMA
         }
         calc.updateSeparators(decimalSeparator, groupingSeparator)
-        btn_decimal.text = decimalSeparator
+        binding.btnDecimal?.text = decimalSeparator
     }
 
     private fun View.setVibratingOnClickListener(callback: (view: View) -> Unit) {
