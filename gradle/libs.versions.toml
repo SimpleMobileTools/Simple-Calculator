@@ -21,7 +21,7 @@ room = "2.5.2"
 #Simple tools
 simple-commons = "4c83ec8740"
 #Gradle
-gradlePlugins-agp = "7.3.1"
+gradlePlugins-agp = "8.0.2"
 #build
 app-build-compileSDKVersion = "34"
 app-build-targetSDK = "33"

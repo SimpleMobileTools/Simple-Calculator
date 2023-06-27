@@ -55,6 +55,7 @@ android {
     buildFeatures {
         viewBinding = true
         compose = true
+        buildConfig = true
     }
 
     composeOptions {
@@ -93,6 +94,7 @@ android {
         checkReleaseBuilds = false
         abortOnError = false
     }
+    namespace = "com.simplemobiletools.calculator"
 }
 
 dependencies {

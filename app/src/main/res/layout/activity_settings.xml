@@ -96,6 +96,66 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/settings_purchase_thank_you_holder2"
+                style="@style/SettingsHolderTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/settings_purchase_thank_you2"
+                    style="@style/SettingsTextLabelStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/purchase_simple_thank_you" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/settings_purchase_thank_you_holder3"
+                style="@style/SettingsHolderTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/settings_purchase_thank_you3"
+                    style="@style/SettingsTextLabelStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/purchase_simple_thank_you" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/settings_purchase_thank_you_holder4"
+                style="@style/SettingsHolderTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/settings_purchase_thank_you4"
+                    style="@style/SettingsTextLabelStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/purchase_simple_thank_you" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/settings_purchase_thank_you_holder5"
+                style="@style/SettingsHolderTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/settings_purchase_thank_you5"
+                    style="@style/SettingsTextLabelStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/purchase_simple_thank_you" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:id="@+id/settings_use_english_holder"
                 style="@style/SettingsHolderCheckboxStyle"
                 android:layout_width="match_parent"

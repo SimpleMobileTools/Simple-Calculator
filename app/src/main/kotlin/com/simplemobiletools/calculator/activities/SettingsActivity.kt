@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.graphics.Color
 import com.simplemobiletools.calculator.compose.screens.SettingsScreen
 import com.simplemobiletools.calculator.compose.theme.AppThemeSurface
 import com.simplemobiletools.calculator.compose.theme.Theme
@@ -32,7 +33,7 @@ class SettingsActivity : AppCompatActivity() {
             AppThemeSurface {
                 SettingsScreen(
                     customizeColors = ::handleCustomizeColorsClick, goBack = ::finish,
-                    backgroundColor = getProperBackgroundColor()
+                    backgroundColor = getProperBackgroundColor(),
                 )
             }
         }
