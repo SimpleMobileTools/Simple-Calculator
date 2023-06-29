@@ -9,7 +9,6 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import com.simplemobiletools.calculator.compose.screens.SettingsScreen
 import com.simplemobiletools.calculator.compose.theme.AppThemeSurface
-import com.simplemobiletools.calculator.compose.theme.Theme
 import com.simplemobiletools.calculator.databinding.ActivitySettingsBinding
 import com.simplemobiletools.calculator.extensions.calculatorDB
 import com.simplemobiletools.calculator.extensions.config
@@ -29,71 +28,16 @@ class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AppThemeSurface(
-                theme = Theme.systemDefaultMaterialYou()
-            ) {
+            AppThemeSurface {
                 SettingsScreen(
                     customizeColors = ::handleCustomizeColorsClick, goBack = ::finish,
                     backgroundColor = getProperBackgroundColor(),
                 )
             }
         }
-        val backgroundColor = getProperBackgroundColor()
-        updateStatusbarColor(backgroundColor)
-        updateActionbarColor(backgroundColor)
 
-        //updateMaterialActivityViews(binding.settingsCoordinator, binding.settingsHolder, useTransparentNavigation = true, useTopSearchMenu = false)
-        //setupMaterialScrollListener(binding.settingsNestedScrollview, binding.settingsToolbar)
     }
 
-    fun updateStatusbarColor(color: Int) {
-        window.statusBarColor = color
-
-        if (color.getContrastColor() == DARK_GREY) {
-            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-        } else {
-            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-        }
-    }
-
-    fun updateActionbarColor(color: Int = getProperStatusBarColor()) {
-        updateStatusbarColor(color)
-        setTaskDescription(ActivityManager.TaskDescription(null, null, color))
-    }
-
-    fun updateNavigationBarColor(color: Int) {
-        window.navigationBarColor = color
-        updateNavigationBarButtons(color)
-    }
-
-    fun updateNavigationBarButtons(color: Int) {
-        if (isOreoPlus()) {
-            if (color.getContrastColor() == DARK_GREY) {
-                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
-            } else {
-                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
-            }
-        }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        /*setupToolbar(binding.settingsToolbar, NavigationIcon.Arrow)
-
-        setupPurchaseThankYou()
-        setupCustomizeColors()
-        setupUseEnglish()
-        setupLanguage()
-        setupVibrate()
-        setupPreventPhoneFromSleeping()
-        setupUseCommaAsDecimalMark()
-        setupCustomizeWidgetColors()
-        updateTextColors(binding.settingsNestedScrollview)
-
-        arrayOf(binding.settingsColorCustomizationSectionLabel, binding.settingsGeneralSettingsLabel).forEach {
-            it.setTextColor(getProperPrimaryColor())
-        }*/
-    }
 
     private fun setupPurchaseThankYou() {
         binding.settingsPurchaseThankYouHolder.beGoneIf(isOrWasThankYouInstalled())

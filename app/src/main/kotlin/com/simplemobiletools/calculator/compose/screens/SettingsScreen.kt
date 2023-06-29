@@ -15,14 +15,12 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.core.graphics.toColor
 import com.simplemobiletools.calculator.compose.extensions.MyDevices
 import com.simplemobiletools.calculator.compose.settings.SettingsCheckBoxComponent
 import com.simplemobiletools.calculator.compose.settings.SettingsGroup
 import com.simplemobiletools.calculator.compose.settings.SettingsPreferenceComponent
 import com.simplemobiletools.calculator.compose.settings.SettingsTitleTextComponent
 import com.simplemobiletools.calculator.compose.theme.AppThemeSurface
-import com.simplemobiletools.calculator.compose.theme.primaryColor
 import com.simplemobiletools.commons.R
 
 @Composable
@@ -30,7 +28,7 @@ fun SettingsScreen(
     goBack: () -> Unit,
     customizeColors: () -> Unit,
     backgroundColor: Int,
-    topBarsScrolledContainerColor: Color = primaryColor
+    topBarsScrolledContainerColor: Color = MaterialTheme.colorScheme.primary
 ) {
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     Scaffold(
