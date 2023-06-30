@@ -4,15 +4,14 @@ import android.content.Context
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import com.simplemobiletools.calculator.extensions.config
-import com.simplemobiletools.commons.extensions.getContrastColor
 import com.simplemobiletools.commons.extensions.isBlackAndWhiteTheme
 import com.simplemobiletools.commons.extensions.isWhiteTheme
-import com.simplemobiletools.commons.helpers.DARK_GREY
 
-fun getTheme(showTransparentTop: Boolean = false, context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou): Theme {
+fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou): Theme {
     val baseConfig = context.config
     val primaryColorInt = baseConfig.primaryColor
     val isSystemInDarkTheme = context.isDarkMode()
+    val accentColor = baseConfig.accentColor
 
 
     val backgroundColorTheme = if (baseConfig.isUsingSystemTheme || baseConfig.isUsingAutoTheme) {
@@ -27,57 +26,21 @@ fun getTheme(showTransparentTop: Boolean = false, context: Context, materialYouT
 
     val theme = when {
         baseConfig.isUsingSystemTheme -> materialYouTheme
-        context.isBlackAndWhiteTheme() -> when {//todo fix
-            showTransparentTop -> Theme.BlackAndWhite(
-                accentColor = md_grey_black.toArgb(),
-                primaryColorInt = primaryColorInt,
-                backgroundColorInt = backgroundColor,
-                appIconColorInt = appIconColor,
-                textColorInt = textColor
-            )
+        context.isBlackAndWhiteTheme() -> Theme.BlackAndWhite(
+            accentColor = accentColor,
+            primaryColorInt = primaryColorInt,
+            backgroundColorInt = backgroundColor,
+            appIconColorInt = appIconColor,
+            textColorInt = textColor
+        )
 
-            baseConfig.primaryColor.getContrastColor() == DARK_GREY -> Theme.BlackAndWhite(
-                accentColor = md_grey_black.toArgb(),
-                primaryColorInt = primaryColorInt,
-                backgroundColorInt = backgroundColor,
-                appIconColorInt = appIconColor,
-                textColorInt = theme_dark_background_color.toArgb()
-            )
-
-            else -> Theme.BlackAndWhite(
-                accentColor = md_grey_black.toArgb(),
-                primaryColorInt = primaryColorInt,
-                backgroundColorInt = backgroundColor,
-                appIconColorInt = appIconColor,
-                textColorInt = textColor
-            )
-        }
-
-        context.isWhiteTheme() -> when {//todo fix
-            showTransparentTop -> Theme.White(
-                accentColor = md_grey_white.toArgb(),
-                primaryColorInt = primaryColorInt,
-                backgroundColorInt = backgroundColor,
-                appIconColorInt = appIconColor,
-                textColorInt = theme_dark_background_color.toArgb()
-            )
-
-            baseConfig.primaryColor.getContrastColor() == android.graphics.Color.WHITE -> Theme.White(
-                accentColor = md_grey_white.toArgb(),
-                primaryColorInt = primaryColorInt,
-                backgroundColorInt = backgroundColor,
-                appIconColorInt = appIconColor,
-                textColorInt = theme_light_background_color.toArgb()
-            )
-
-            else -> Theme.White(
-                accentColor = md_grey_white.toArgb(),
-                primaryColorInt = primaryColorInt,
-                backgroundColorInt = backgroundColor,
-                appIconColorInt = appIconColor,
-                textColorInt = theme_dark_background_color.toArgb()
-            )
-        }
+        context.isWhiteTheme() -> Theme.White(
+            accentColor = accentColor,
+            primaryColorInt = primaryColorInt,
+            backgroundColorInt = backgroundColor,
+            appIconColorInt = appIconColor,
+            textColorInt = textColor
+        )
 
         else -> {
             val customPrimaryColor = when (primaryColorInt) {

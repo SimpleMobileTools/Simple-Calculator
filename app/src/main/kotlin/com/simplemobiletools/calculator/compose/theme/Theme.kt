@@ -17,7 +17,6 @@ import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
-import androidx.core.graphics.toColor
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
@@ -30,7 +29,6 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
-import com.simplemobiletools.commons.helpers.DARK_GREY
 import com.simplemobiletools.commons.helpers.HIGHER_ALPHA
 
 private val DarkColorScheme = darkColorScheme(
@@ -40,11 +38,11 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 @get:ReadOnlyComposable
-val disabledTextColor @Composable get() = if (isSystemInDarkTheme() || MaterialTheme.colorScheme.background.luminance() < 0.5) Color.DarkGray else Color.LightGray
+val disabledTextColor @Composable get() = if (isInDarkThemeAndSurfaceIsNotLitWell()) Color.DarkGray else Color.LightGray
 
 @get:ReadOnlyComposable
 val textSubTitleColor
-    @Composable get() = if (isSystemInDarkTheme() || MaterialTheme.colorScheme.background.luminance() < 0.5) {
+    @Composable get() = if (isInDarkThemeAndSurfaceIsNotLitWell()) {
         Color.White.copy(0.5f)
     } else {
         Color.Black.copy(
@@ -60,7 +58,7 @@ fun preferenceSummaryColor(isEnabled: Boolean) =
 
 @Composable
 @ReadOnlyComposable
-fun preferenceTitleColor(isEnabled: Boolean) = if (isEnabled) LocalContentColor.current else disabledTextColor
+fun preferenceTitleColor(isEnabled: Boolean) = if (isEnabled) MaterialTheme.colorScheme.onSurface else disabledTextColor
 
 interface CommonTheme {
     val primaryColorInt: Int
@@ -120,10 +118,14 @@ sealed class Theme : CommonTheme {
             appIconColorInt = LocalContext.current.config.appIconColor,
             primaryColorInt = LocalContext.current.config.primaryColor,
             backgroundColorInt = LocalContext.current.config.backgroundColor,
-            textColorInt = (if (isSystemInDarkTheme() || MaterialTheme.colorScheme.background.luminance() < 0.5) Color.White else Color.Black).toArgb()
+            textColorInt = (if (isInDarkThemeAndSurfaceIsNotLitWell()) Color.White else Color.Black).toArgb()
         )
     }
 }
+
+@Composable
+@ReadOnlyComposable
+private fun isInDarkThemeAndSurfaceIsNotLitWell() = isSystemInDarkTheme() || MaterialTheme.colorScheme.surface.luminance() < 0.5
 
 
 @Composable
@@ -147,15 +149,17 @@ fun Theme(
             onSurface = theme.textColor
         )
 
-        theme is Theme.White -> lightColorScheme(
-            primary = theme.primaryColor,
+        theme is Theme.White -> darkColorScheme(
+            primary = Color(theme.accentColor),
             surface = theme.backgroundColor,
-            tertiary = Color(theme.accentColor),
+            tertiary = theme.primaryColor,
             onSurface = theme.textColor
         )
 
         theme is Theme.BlackAndWhite -> darkColorScheme(
-            primary = theme.primaryColor, surface = theme.backgroundColor, tertiary = Color(theme.accentColor),
+            primary = Color(theme.accentColor),
+            surface = theme.backgroundColor,
+            tertiary = theme.primaryColor,
             onSurface = theme.textColor
         )
 
@@ -240,23 +244,19 @@ fun AppThemeSurface(
     val context = LocalContext.current
     val materialYouTheme = systemDefaultMaterialYou()
     var currentTheme by remember { mutableStateOf(getTheme(context = context, materialYouTheme = materialYouTheme)) }
-    Log.d("Current theme", currentTheme.toString())
-    OnLifecycleEvent {
-        if (it == Lifecycle.Event.ON_RESUME) {
+    OnLifecycleEvent { event ->
+        if (event == Lifecycle.Event.ON_RESUME) {
             currentTheme = getTheme(context = context, materialYouTheme = materialYouTheme)
         }
     }
     Theme(theme = currentTheme) {
-        Surface(
-            modifier = modifier
-                .fillMaxSize()
-        ) {
+        Surface(modifier = modifier.fillMaxSize()) {
             content()
         }
     }
 }
 
-fun Context.isDarkMode(): Boolean {
+internal fun Context.isDarkMode(): Boolean {
     val darkModeFlag = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
     return darkModeFlag == Configuration.UI_MODE_NIGHT_YES
 }

@@ -27,14 +27,12 @@ import com.simplemobiletools.commons.R
 fun SettingsScreen(
     goBack: () -> Unit,
     customizeColors: () -> Unit,
-    backgroundColor: Int,
     topBarsScrolledContainerColor: Color = MaterialTheme.colorScheme.primary
 ) {
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     Scaffold(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(backgroundColor))
             .nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
             TopAppBar(
@@ -91,5 +89,5 @@ fun SettingsScreen(
 @MyDevices
 @Composable
 private fun SettingsScreenPreview() {
-    AppThemeSurface { SettingsScreen(goBack = {}, customizeColors = {}, backgroundColor = MaterialTheme.colorScheme.background.toArgb()) }
+    AppThemeSurface { SettingsScreen(goBack = {}, customizeColors = {}) }
 }

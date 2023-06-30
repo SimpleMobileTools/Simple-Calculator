@@ -30,8 +30,7 @@ class SettingsActivity : AppCompatActivity() {
         setContent {
             AppThemeSurface {
                 SettingsScreen(
-                    customizeColors = ::handleCustomizeColorsClick, goBack = ::finish,
-                    backgroundColor = getProperBackgroundColor(),
+                    customizeColors = ::handleCustomizeColorsClick, goBack = ::finish
                 )
             }
         }
