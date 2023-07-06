@@ -1,11 +1,11 @@
 package com.simplemobiletools.calculator.compose.theme
 
+import android.app.Activity
 import android.app.ActivityManager
 import android.content.Context
 import android.content.res.Configuration
 import android.graphics.BitmapFactory
 import android.os.Build
-import android.util.Log
 import androidx.compose.foundation.LocalOverscrollConfiguration
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
@@ -26,12 +26,12 @@ import com.simplemobiletools.calculator.compose.theme.Theme.Companion.systemDefa
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.helpers.Config
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.extensions.adjustAlpha
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
 import com.simplemobiletools.commons.helpers.HIGHER_ALPHA
 
-private val DarkColorScheme = darkColorScheme(
+private val darkColorScheme = darkColorScheme(
     primary = color_primary,
     secondary = color_primary_dark,
     tertiary = color_accent,
@@ -112,6 +112,7 @@ sealed class Theme : CommonTheme {
         override val textColorInt: Int
     ) : Theme()
 
+
     companion object {
         @Composable
         fun systemDefaultMaterialYou() = SystemDefaultMaterialYou(
@@ -125,7 +126,25 @@ sealed class Theme : CommonTheme {
 
 @Composable
 @ReadOnlyComposable
-private fun isInDarkThemeAndSurfaceIsNotLitWell() = isSystemInDarkTheme() || MaterialTheme.colorScheme.surface.luminance() < 0.5
+fun isInDarkThemeAndSurfaceIsNotLitWell() = isSystemInDarkTheme() || isSurfaceNotLitWell()
+
+private const val LUMINANCE_THRESHOLD = 0.5f
+
+@Composable
+@ReadOnlyComposable
+fun isSurfaceNotLitWell() = MaterialTheme.colorScheme.surface.luminance() < LUMINANCE_THRESHOLD
+
+@Composable
+@ReadOnlyComposable
+fun isSurfaceLitWell() = MaterialTheme.colorScheme.surface.luminance() > LUMINANCE_THRESHOLD
+
+@Composable
+@ReadOnlyComposable
+fun Color.isLitWell() = luminance() > LUMINANCE_THRESHOLD
+
+@Composable
+@ReadOnlyComposable
+fun Color.isNotLitWell() = luminance() < LUMINANCE_THRESHOLD
 
 
 @Composable
@@ -163,7 +182,7 @@ fun Theme(
             onSurface = theme.textColor
         )
 
-        else -> DarkColorScheme
+        else -> darkColorScheme
     }
     LaunchedEffect(Unit) {
         /* if (context.navigationBarHeight > 0 || context.isUsingGestureNavigation() && useTransparentNavigation) {
@@ -205,8 +224,10 @@ fun Theme(
     }
 }
 
-private fun Context.getAppIconIds(): List<Int> = getActivity().intent.getIntegerArrayListExtra(APP_ICON_IDS).orEmpty()
-private fun Context.getAppLauncherName(): String = getActivity().intent.getStringExtra(APP_LAUNCHER_NAME).orEmpty()
+private fun Context.getAppIconIds(): List<Int> = getActivity().getAppIconIds()
+fun Activity.getAppIconIds(): ArrayList<Int> = ArrayList(intent.getIntegerArrayListExtra(APP_ICON_IDS).orEmpty())
+private fun Context.getAppLauncherName(): String = getActivity().getAppLauncherName()
+fun Activity.getAppLauncherName(): String = intent.getStringExtra(APP_LAUNCHER_NAME).orEmpty()
 private fun updateRecentsAppIcon(baseConfig: Config, context: Context) {
     if (baseConfig.isUsingModifiedAppIcon) {
         val appIconIDs = context.getAppIconIds()

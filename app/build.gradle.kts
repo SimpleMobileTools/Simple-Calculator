@@ -101,10 +101,10 @@ dependencies {
     implementation(libs.simple.tools.commons)
     implementation(libs.auto.fit.text.view)
     implementation(libs.exp4j)
-
+    implementation(libs.bundles.lifecycle)
     implementation(libs.bundles.compose)
     implementation(libs.bundles.accompanist)
-    implementation(libs.bundles.compose.preview)
+    debugImplementation(libs.bundles.compose.preview)
 
     implementation(libs.bundles.room)
     ksp(libs.androidx.room.compiler)
