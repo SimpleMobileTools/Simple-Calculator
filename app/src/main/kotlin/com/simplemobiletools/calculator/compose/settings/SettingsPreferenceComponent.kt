@@ -39,7 +39,6 @@ fun SettingsPreferenceComponent(
         Text(
             text = preferenceTitle,
             modifier = Modifier.fillMaxWidth(),
-            fontSize = 16.sp,
             color = preferenceTitleColor(isEnabled = isPreferenceEnabled),
         )
         AnimatedVisibility(visible = !preferenceSummary.isNullOrBlank()) {
@@ -48,7 +47,6 @@ fun SettingsPreferenceComponent(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 4.dp),
-                fontSize = 14.sp,
                 color = preferenceSummaryColor(isEnabled = isPreferenceEnabled),
             )
         }

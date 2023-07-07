@@ -1,5 +1,6 @@
 package com.simplemobiletools.calculator.compose.screens
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -14,6 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.calculator.compose.extensions.MyDevices
@@ -27,7 +29,6 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getCustomizeColorsString
 import com.simplemobiletools.commons.helpers.isTiramisuPlus
 import java.util.Locale
-import kotlin.reflect.KFunction1
 
 @Composable
 fun SettingsScreen(
@@ -49,9 +50,8 @@ fun SettingsScreen(
     onSetupLanguagePress: () -> Unit,
     useCommaAsDecimalMarkFlow: Boolean,
     onUseCommaAsDecimalMarkFlow: (Boolean) -> Unit,
+    lockedCustomizeColorText: String?
 ) {
-    val context = LocalContext.current
-    val lockedCustomizeColorText =  if (isOrWasThankYouInstalled) null else context.getCustomizeColorsString()
     val displayLanguage = remember { Locale.getDefault().displayLanguage }
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     val colorTransitionFraction = scrollBehavior.state.overlappedFraction
@@ -63,8 +63,8 @@ fun SettingsScreen(
     )
     Scaffold(
         modifier = Modifier
-            .fillMaxSize()
-            .nestedScroll(scrollBehavior.nestedScrollConnection),
+            .nestedScroll(scrollBehavior.nestedScrollConnection)
+            .fillMaxSize(),
         topBar = {
             TopAppBar(
                 title = {
@@ -92,62 +92,69 @@ fun SettingsScreen(
             )
         }
     ) { paddingValues ->
-        Column(
-            Modifier
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
                 .padding(paddingValues)
-                .verticalScroll(rememberScrollState())
+                .background(MaterialTheme.colorScheme.surface)
         ) {
-            SettingsGroup(title = {
-                SettingsTitleTextComponent(text = stringResource(id = R.string.color_customization))
-            }) {
-                SettingsPreferenceComponent(
-                    preferenceTitle = stringResource(id = R.string.customize_colors),
-                    doOnPreferenceClick = customizeColors,
-                    isPreferenceEnabled = isOrWasThankYouInstalled,
-                    preferenceSummary = lockedCustomizeColorText
-                )
-                SettingsPreferenceComponent(
-                    preferenceTitle = stringResource(id = R.string.customize_widget_colors),
-                    doOnPreferenceClick = customizeWidgetColors
-                )
-                Spacer(modifier = Modifier.padding(bottom = 16.dp))
-            }
-            Divider()
-            SettingsGroup(title = {
-                SettingsTitleTextComponent(text = stringResource(id = R.string.general_settings))
-            }) {
-                if (!isOrWasThankYouInstalled) {
-                    SettingsPreferenceComponent(preferenceTitle = stringResource(id = R.string.purchase_simple_thank_you), doOnPreferenceClick = onThankYou)
-                }
-                if (isUseEnglishEnabled) {
-                    SettingsCheckBoxComponent(
-                        title = stringResource(id = R.string.use_english_language),
-                        initialValue = isUseEnglishChecked,
-                        onChange = onUseEnglishPress
-                    )
-                }
-                if (isTiramisuPlus()) {
+            Column(
+                Modifier
+                    .matchParentSize()
+                    .verticalScroll(rememberScrollState())
+            ) {
+                SettingsGroup(title = {
+                    SettingsTitleTextComponent(text = stringResource(id = R.string.color_customization))
+                }) {
                     SettingsPreferenceComponent(
-                        preferenceTitle = stringResource(id = R.string.language),
-                        preferenceSummary = displayLanguage,
-                        doOnPreferenceClick = onSetupLanguagePress
+                        preferenceTitle = stringResource(id = R.string.customize_colors),
+                        doOnPreferenceClick = customizeColors,
+                        isPreferenceEnabled = isOrWasThankYouInstalled,
+                        preferenceSummary = lockedCustomizeColorText
+                    )
+                    SettingsPreferenceComponent(
+                        preferenceTitle = stringResource(id = R.string.customize_widget_colors),
+                        doOnPreferenceClick = customizeWidgetColors
+                    )
+                    Spacer(modifier = Modifier.padding(bottom = 16.dp))
+                }
+                Divider()
+                SettingsGroup(title = {
+                    SettingsTitleTextComponent(text = stringResource(id = R.string.general_settings))
+                }) {
+                    if (!isOrWasThankYouInstalled) {
+                        SettingsPreferenceComponent(preferenceTitle = stringResource(id = R.string.purchase_simple_thank_you), doOnPreferenceClick = onThankYou)
+                    }
+                    if (isUseEnglishEnabled) {
+                        SettingsCheckBoxComponent(
+                            title = stringResource(id = R.string.use_english_language),
+                            initialValue = isUseEnglishChecked,
+                            onChange = onUseEnglishPress
+                        )
+                    }
+                    if (isTiramisuPlus()) {
+                        SettingsPreferenceComponent(
+                            preferenceTitle = stringResource(id = R.string.language),
+                            preferenceSummary = displayLanguage,
+                            doOnPreferenceClick = onSetupLanguagePress
+                        )
+                    }
+                    SettingsCheckBoxComponent(
+                        title = stringResource(id = R.string.vibrate_on_button_press),
+                        initialValue = vibrateOnButtonPressFlow,
+                        onChange = onVibrateOnButtonPressFlow
+                    )
+                    SettingsCheckBoxComponent(
+                        title = stringResource(id = R.string.prevent_phone_from_sleeping),
+                        initialValue = preventPhoneFromSleeping,
+                        onChange = onPreventPhoneFromSleeping
+                    )
+                    SettingsCheckBoxComponent(
+                        title = stringResource(id = com.simplemobiletools.calculator.R.string.use_comma_as_decimal_mark),
+                        initialValue = useCommaAsDecimalMarkFlow,
+                        onChange = onUseCommaAsDecimalMarkFlow
                     )
                 }
-                SettingsCheckBoxComponent(
-                    title = stringResource(id = R.string.vibrate_on_button_press),
-                    initialValue = vibrateOnButtonPressFlow,
-                    onChange = onVibrateOnButtonPressFlow
-                )
-                SettingsCheckBoxComponent(
-                    title = stringResource(id = R.string.prevent_phone_from_sleeping),
-                    initialValue = preventPhoneFromSleeping,
-                    onChange = onPreventPhoneFromSleeping
-                )
-                SettingsCheckBoxComponent(
-                    title = stringResource(id = com.simplemobiletools.calculator.R.string.use_comma_as_decimal_mark),
-                    initialValue = useCommaAsDecimalMarkFlow,
-                    onChange = onUseCommaAsDecimalMarkFlow
-                )
             }
         }
     }
@@ -173,7 +180,8 @@ private fun SettingsScreenPreview() {
             isUseEnglishEnabled = false,
             isUseEnglishChecked = false,
             onUseEnglishPress = {},
-            onSetupLanguagePress = {}, useCommaAsDecimalMarkFlow = false, onUseCommaAsDecimalMarkFlow = {}
+            onSetupLanguagePress = {}, useCommaAsDecimalMarkFlow = false, onUseCommaAsDecimalMarkFlow = {},
+            lockedCustomizeColorText = null
         )
     }
 }

@@ -17,6 +17,7 @@ import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.compose.ui.platform.LocalView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
@@ -148,52 +149,55 @@ fun Color.isNotLitWell() = luminance() < LUMINANCE_THRESHOLD
 
 
 @Composable
-fun Theme(
+private fun Theme(
     useTransparentNavigation: Boolean = true,
-    theme: Theme,
+    theme: Theme = systemDefaultMaterialYou(),
     content: @Composable () -> Unit,
 ) {
+    val view = LocalView.current
     val context = LocalContext.current
     val systemUiController = rememberSystemUiController()
-    val window = context.getActivity().window
-    val baseConfig = remember { context.config }
 
-    val colorScheme = when {
-        theme is Theme.SystemDefaultMaterialYou && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            if (isSystemInDarkTheme()) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+    val colorScheme = if (!view.isInEditMode){
+        val baseConfig = remember { context.config }
+
+        val colorScheme = when {
+            theme is Theme.SystemDefaultMaterialYou && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
+                if (isSystemInDarkTheme()) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+            }
+
+            theme is Theme.Custom || theme is Theme.Dark -> darkColorScheme(
+                primary = theme.primaryColor, surface = theme.backgroundColor,
+                onSurface = theme.textColor
+            )
+
+            theme is Theme.White -> darkColorScheme(
+                primary = Color(theme.accentColor),
+                surface = theme.backgroundColor,
+                tertiary = theme.primaryColor,
+                onSurface = theme.textColor
+            )
+
+            theme is Theme.BlackAndWhite -> darkColorScheme(
+                primary = Color(theme.accentColor),
+                surface = theme.backgroundColor,
+                tertiary = theme.primaryColor,
+                onSurface = theme.textColor
+            )
+
+            else -> darkColorScheme
         }
 
-        theme is Theme.Custom || theme is Theme.Dark -> darkColorScheme(
-            primary = theme.primaryColor, surface = theme.backgroundColor,
-            onSurface = theme.textColor
-        )
+        LaunchedEffect(Unit) {
+            /* if (context.navigationBarHeight > 0 || context.isUsingGestureNavigation() && useTransparentNavigation) {
+                 systemUiController.isNavigationBarVisible = false
+             } else {
+                 systemUiController.isNavigationBarVisible = true
+             }*/
 
-        theme is Theme.White -> darkColorScheme(
-            primary = Color(theme.accentColor),
-            surface = theme.backgroundColor,
-            tertiary = theme.primaryColor,
-            onSurface = theme.textColor
-        )
-
-        theme is Theme.BlackAndWhite -> darkColorScheme(
-            primary = Color(theme.accentColor),
-            surface = theme.backgroundColor,
-            tertiary = theme.primaryColor,
-            onSurface = theme.textColor
-        )
-
-        else -> darkColorScheme
-    }
-    LaunchedEffect(Unit) {
-        /* if (context.navigationBarHeight > 0 || context.isUsingGestureNavigation() && useTransparentNavigation) {
-             systemUiController.isNavigationBarVisible = false
-         } else {
-             systemUiController.isNavigationBarVisible = true
-         }*/
-
-        /* if (context.navigationBarHeight > 0 || context.isUsingGestureNavigation()) {
-             window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
-             *//* updateTopBottomInsets(statusBarHeight, navigationBarHeight)
+            /* if (context.navigationBarHeight > 0 || context.isUsingGestureNavigation()) {
+                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
+                 *//* updateTopBottomInsets(statusBarHeight, navigationBarHeight)
              // Don't touch this. Window Inset API often has a domino effect and things will most likely break.
              onApplyWindowInsets {
                  val insets = it.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.ime())
@@ -203,25 +207,26 @@ fun Theme(
             window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
             //updateTopBottomInsets(0, 0)
         }*/
-        systemUiController.setStatusBarColor(
-            color = colorScheme.surface
-        )
-        context.getActivity().setTaskDescription(ActivityManager.TaskDescription(null, null, colorScheme.surface.toArgb()))
-        systemUiController.setNavigationBarColor(Color(theme.backgroundColor.toArgb().adjustAlpha(HIGHER_ALPHA)))
-    }
+            systemUiController.setStatusBarColor(
+                color = colorScheme.surface
+            )
+            context.getActivity().setTaskDescription(ActivityManager.TaskDescription(null, null, colorScheme.surface.toArgb()))
+            systemUiController.setNavigationBarColor(Color(theme.backgroundColor.toArgb().adjustAlpha(HIGHER_ALPHA)))
+        }
 
-    SideEffect {
-        updateRecentsAppIcon(baseConfig, context)
-    }
+        SideEffect {
+            updateRecentsAppIcon(baseConfig, context)
+        }
 
-    CompositionLocalProvider(
-        LocalOverscrollConfiguration provides null,
-    ) {
-        MaterialTheme(
-            colorScheme = colorScheme,
-            content = content,
-        )
-    }
+        colorScheme
+
+    } else darkColorScheme
+
+
+    MaterialTheme(
+        colorScheme = colorScheme,
+        content = content,
+    )
 }
 
 private fun Context.getAppIconIds(): List<Int> = getActivity().getAppIconIds()
@@ -262,11 +267,20 @@ fun AppThemeSurface(
     modifier: Modifier = Modifier,
     content: @Composable () -> Unit,
 ) {
+    val view = LocalView.current
+
     val context = LocalContext.current
     val materialYouTheme = systemDefaultMaterialYou()
-    var currentTheme by remember { mutableStateOf(getTheme(context = context, materialYouTheme = materialYouTheme)) }
+    var currentTheme by remember {
+        mutableStateOf(
+            if (view.isInEditMode) materialYouTheme else getTheme(
+                context = context,
+                materialYouTheme = materialYouTheme
+            )
+        )
+    }
     OnLifecycleEvent { event ->
-        if (event == Lifecycle.Event.ON_RESUME) {
+        if (event == Lifecycle.Event.ON_START && !view.isInEditMode) {
             currentTheme = getTheme(context = context, materialYouTheme = materialYouTheme)
         }
     }

@@ -15,6 +15,7 @@ import com.simplemobiletools.calculator.compose.theme.getAppIconIds
 import com.simplemobiletools.calculator.compose.theme.getAppLauncherName
 import com.simplemobiletools.calculator.extensions.*
 import com.simplemobiletools.commons.activities.CustomizationActivity
+import com.simplemobiletools.commons.extensions.getCustomizeColorsString
 import com.simplemobiletools.commons.extensions.isOrWasThankYouInstalled
 import com.simplemobiletools.commons.extensions.launchPurchaseThankYouIntent
 import com.simplemobiletools.commons.helpers.*
@@ -44,7 +45,7 @@ class SettingsActivity : AppCompatActivity() {
                 var isOrWasThankYouInstalled by remember { mutableStateOf(false) }
 
                 OnLifecycleEvent { event ->
-                    if (event == androidx.lifecycle.Lifecycle.Event.ON_RESUME) {
+                    if (event == androidx.lifecycle.Lifecycle.Event.ON_START) {
                         isOrWasThankYouInstalled = context.isOrWasThankYouInstalled()
                     }
                 }
@@ -73,6 +74,7 @@ class SettingsActivity : AppCompatActivity() {
                             applicationContext.calculatorDB.deleteHistory()
                         }
                     },
+                    lockedCustomizeColorText = if (isOrWasThankYouInstalled) null else getCustomizeColorsString()
                 )
             }
         }
