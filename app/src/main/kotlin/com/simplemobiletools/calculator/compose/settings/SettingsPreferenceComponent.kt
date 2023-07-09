@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -25,6 +26,7 @@ fun SettingsPreferenceComponent(
     isPreferenceEnabled: Boolean = true,
     doOnPreferenceLongClick: (() -> Unit)? = null,
     doOnPreferenceClick: (() -> Unit)? = null,
+    preferenceSummaryColor: Color = preferenceSummaryColor(isEnabled = isPreferenceEnabled)
 ) {
     Column(
         modifier = modifier
@@ -47,7 +49,7 @@ fun SettingsPreferenceComponent(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 4.dp),
-                color = preferenceSummaryColor(isEnabled = isPreferenceEnabled),
+                color = preferenceSummaryColor.copy(alpha = 0.6f),
             )
         }
     }

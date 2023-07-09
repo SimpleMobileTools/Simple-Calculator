@@ -116,7 +116,7 @@ fun SettingsScreen(
                         preferenceTitle = stringResource(id = R.string.customize_widget_colors),
                         doOnPreferenceClick = customizeWidgetColors
                     )
-                    Spacer(modifier = Modifier.padding(bottom = 16.dp))
+                    Spacer(modifier = Modifier.padding(bottom = 8.dp))
                 }
                 Divider()
                 SettingsGroup(title = {
@@ -136,7 +136,8 @@ fun SettingsScreen(
                         SettingsPreferenceComponent(
                             preferenceTitle = stringResource(id = R.string.language),
                             preferenceSummary = displayLanguage,
-                            doOnPreferenceClick = onSetupLanguagePress
+                            doOnPreferenceClick = onSetupLanguagePress,
+                            preferenceSummaryColor = MaterialTheme.colorScheme.onSurface
                         )
                     }
                     SettingsCheckBoxComponent(
