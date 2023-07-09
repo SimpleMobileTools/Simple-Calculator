@@ -116,7 +116,6 @@ fun SettingsScreen(
                         preferenceTitle = stringResource(id = R.string.customize_widget_colors),
                         doOnPreferenceClick = customizeWidgetColors
                     )
-                    Spacer(modifier = Modifier.padding(bottom = 8.dp))
                 }
                 Divider()
                 SettingsGroup(title = {

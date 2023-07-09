@@ -18,7 +18,7 @@ fun SettingsTitleTextComponent(
     modifier: Modifier = Modifier,
     text: String,
 ) {
-    Box(modifier = Modifier.padding(top = 16.dp, bottom = 8.dp)) {
+    Box(modifier = Modifier.padding(vertical = 8.dp)) {
         Text(
             text = text.uppercase(),
             modifier = modifier,
