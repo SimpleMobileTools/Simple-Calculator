@@ -17,24 +17,25 @@ fun SettingsGroup(
     title: @Composable (() -> Unit)? = null,
     content: @Composable ColumnScope.() -> Unit,
 ) {
-    Surface {
-        Column(
-            modifier = modifier.fillMaxWidth(),
-        ) {
-            if (title != null) {
-                SettingsGroupTitle(title)
-            }
-            content()
+
+    Column(
+        modifier = modifier.fillMaxWidth(),
+    ) {
+        if (title != null) {
+            SettingsGroupTitle(title = title)
         }
+        content()
     }
 }
 
 @Composable
-internal fun SettingsGroupTitle(title: @Composable () -> Unit) {
+fun SettingsGroupTitle(
+    modifier: Modifier = Modifier,
+    title: @Composable () -> Unit
+) {
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
-            .height(64.dp)
             .padding(horizontal = 16.dp),
         contentAlignment = Alignment.CenterStart
     ) {

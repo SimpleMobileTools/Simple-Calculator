@@ -10,6 +10,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
@@ -61,6 +62,8 @@ fun SettingsScreen(
         scrolledTextColor,
         fraction
     )
+
+
     Scaffold(
         modifier = Modifier
             .nestedScroll(scrollBehavior.nestedScrollConnection)
@@ -101,7 +104,7 @@ fun SettingsScreen(
             Column(
                 Modifier
                     .matchParentSize()
-                    .verticalScroll(rememberScrollState())
+                    .verticalScroll(rememberScrollState()),
             ) {
                 SettingsGroup(title = {
                     SettingsTitleTextComponent(text = stringResource(id = R.string.color_customization))
@@ -122,13 +125,16 @@ fun SettingsScreen(
                     SettingsTitleTextComponent(text = stringResource(id = R.string.general_settings))
                 }) {
                     if (!isOrWasThankYouInstalled) {
-                        SettingsPreferenceComponent(preferenceTitle = stringResource(id = R.string.purchase_simple_thank_you), doOnPreferenceClick = onThankYou)
+                        SettingsPreferenceComponent(
+                            preferenceTitle = stringResource(id = R.string.purchase_simple_thank_you),
+                            doOnPreferenceClick = onThankYou,
+                        )
                     }
                     if (isUseEnglishEnabled) {
                         SettingsCheckBoxComponent(
                             title = stringResource(id = R.string.use_english_language),
                             initialValue = isUseEnglishChecked,
-                            onChange = onUseEnglishPress
+                            onChange = onUseEnglishPress,
                         )
                     }
                     if (isTiramisuPlus()) {
@@ -136,23 +142,23 @@ fun SettingsScreen(
                             preferenceTitle = stringResource(id = R.string.language),
                             preferenceSummary = displayLanguage,
                             doOnPreferenceClick = onSetupLanguagePress,
-                            preferenceSummaryColor = MaterialTheme.colorScheme.onSurface
+                            preferenceSummaryColor = MaterialTheme.colorScheme.onSurface,
                         )
                     }
                     SettingsCheckBoxComponent(
                         title = stringResource(id = R.string.vibrate_on_button_press),
                         initialValue = vibrateOnButtonPressFlow,
-                        onChange = onVibrateOnButtonPressFlow
+                        onChange = onVibrateOnButtonPressFlow,
                     )
                     SettingsCheckBoxComponent(
                         title = stringResource(id = R.string.prevent_phone_from_sleeping),
                         initialValue = preventPhoneFromSleeping,
-                        onChange = onPreventPhoneFromSleeping
+                        onChange = onPreventPhoneFromSleeping,
                     )
                     SettingsCheckBoxComponent(
                         title = stringResource(id = com.simplemobiletools.calculator.R.string.use_comma_as_decimal_mark),
                         initialValue = useCommaAsDecimalMarkFlow,
-                        onChange = onUseCommaAsDecimalMarkFlow
+                        onChange = onUseCommaAsDecimalMarkFlow,
                     )
                 }
             }

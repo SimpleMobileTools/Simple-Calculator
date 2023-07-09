@@ -31,7 +31,7 @@ fun SettingsCheckBoxComponent(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = { onChange?.invoke(!initialValue) })
-            .padding(vertical = 14.dp, horizontal = 16.dp),
+            .padding(16.dp),
     ) {
         Column(
             modifier = Modifier.weight(1f),
@@ -48,7 +48,6 @@ fun SettingsCheckBoxComponent(
                     text = summary.toString(),
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(vertical = 4.dp)
                         .padding(end = 16.dp),
                     color = preferenceSummaryColor(isEnabled = isPreferenceEnabled),
                 )

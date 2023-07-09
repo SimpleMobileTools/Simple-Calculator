@@ -36,7 +36,7 @@ fun SettingsPreferenceComponent(
                 onClick = { doOnPreferenceClick?.invoke() },
                 onLongClick = { doOnPreferenceLongClick?.invoke() },
             )
-            .padding(vertical = 12.dp, horizontal = 16.dp),
+            .padding(16.dp),
     ) {
         Text(
             text = preferenceTitle,
@@ -47,8 +47,7 @@ fun SettingsPreferenceComponent(
             Text(
                 text = preferenceSummary.toString(),
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 4.dp),
+                    .fillMaxWidth(),
                 color = preferenceSummaryColor.copy(alpha = 0.6f),
             )
         }
