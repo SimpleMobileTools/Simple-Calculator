@@ -6,7 +6,6 @@ import android.content.Context
 import android.content.res.Configuration
 import android.graphics.BitmapFactory
 import android.os.Build
-import androidx.compose.foundation.LocalOverscrollConfiguration
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.*
@@ -27,10 +26,8 @@ import com.simplemobiletools.calculator.compose.theme.Theme.Companion.systemDefa
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.helpers.Config
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.adjustAlpha
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
-import com.simplemobiletools.commons.helpers.HIGHER_ALPHA
 
 private val darkColorScheme = darkColorScheme(
     primary = color_primary,
@@ -150,16 +147,15 @@ fun Color.isNotLitWell() = luminance() < LUMINANCE_THRESHOLD
 
 @Composable
 private fun Theme(
-    useTransparentNavigation: Boolean = true,
     theme: Theme = systemDefaultMaterialYou(),
     content: @Composable () -> Unit,
 ) {
     val view = LocalView.current
     val context = LocalContext.current
     val systemUiController = rememberSystemUiController()
+    val baseConfig = remember { context.config }
 
-    val colorScheme = if (!view.isInEditMode){
-        val baseConfig = remember { context.config }
+    val colorScheme = if (!view.isInEditMode) {
 
         val colorScheme = when {
             theme is Theme.SystemDefaultMaterialYou && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
@@ -188,39 +184,18 @@ private fun Theme(
             else -> darkColorScheme
         }
 
-        LaunchedEffect(Unit) {
-            /* if (context.navigationBarHeight > 0 || context.isUsingGestureNavigation() && useTransparentNavigation) {
-                 systemUiController.isNavigationBarVisible = false
-             } else {
-                 systemUiController.isNavigationBarVisible = true
-             }*/
-
-            /* if (context.navigationBarHeight > 0 || context.isUsingGestureNavigation()) {
-                 window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
-                 *//* updateTopBottomInsets(statusBarHeight, navigationBarHeight)
-             // Don't touch this. Window Inset API often has a domino effect and things will most likely break.
-             onApplyWindowInsets {
-                 val insets = it.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.ime())
-                 updateTopBottomInsets(insets.top, insets.bottom)
-             }*//*
-        } else {
-            window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)
-            //updateTopBottomInsets(0, 0)
-        }*/
-            systemUiController.setStatusBarColor(
-                color = colorScheme.surface
-            )
-            context.getActivity().setTaskDescription(ActivityManager.TaskDescription(null, null, colorScheme.surface.toArgb()))
-            systemUiController.setNavigationBarColor(Color(theme.backgroundColor.toArgb().adjustAlpha(HIGHER_ALPHA)))
-        }
-
-        SideEffect {
-            updateRecentsAppIcon(baseConfig, context)
-        }
-
         colorScheme
 
     } else darkColorScheme
+
+    SideEffect {
+        systemUiController.setNavigationBarColor(colorScheme.surface)
+        systemUiController.setSystemBarsColor(colorScheme.surface)
+    }
+
+    SideEffect {
+        updateRecentsAppIcon(baseConfig, context)
+    }
 
 
     MaterialTheme(

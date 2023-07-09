@@ -2,6 +2,7 @@ package com.simplemobiletools.calculator.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
@@ -15,9 +16,7 @@ import com.simplemobiletools.calculator.compose.theme.getAppIconIds
 import com.simplemobiletools.calculator.compose.theme.getAppLauncherName
 import com.simplemobiletools.calculator.extensions.*
 import com.simplemobiletools.commons.activities.CustomizationActivity
-import com.simplemobiletools.commons.extensions.getCustomizeColorsString
-import com.simplemobiletools.commons.extensions.isOrWasThankYouInstalled
-import com.simplemobiletools.commons.extensions.launchPurchaseThankYouIntent
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.util.Locale
 import kotlin.system.exitProcess
@@ -78,6 +77,10 @@ class SettingsActivity : AppCompatActivity() {
                 )
             }
         }
+    }
+
+    private fun updateStatusbarColor() {
+        window.statusBarColor = Color.TRANSPARENT
     }
 
     private fun handleCustomizeColorsClick() {
