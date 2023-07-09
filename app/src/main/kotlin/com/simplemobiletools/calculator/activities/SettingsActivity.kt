@@ -79,10 +79,6 @@ class SettingsActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateStatusbarColor() {
-        window.statusBarColor = Color.TRANSPARENT
-    }
-
     private fun handleCustomizeColorsClick() {
         Intent(applicationContext, CustomizationActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIds())
