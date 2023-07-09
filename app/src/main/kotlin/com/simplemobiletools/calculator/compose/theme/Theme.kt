@@ -189,7 +189,7 @@ private fun Theme(
     } else darkColorScheme
 
     SideEffect {
-        systemUiController.setNavigationBarColor(colorScheme.surface)
+        systemUiController.setNavigationBarColor(colorScheme.surface, navigationBarContrastEnforced = false)
         systemUiController.setSystemBarsColor(colorScheme.surface)
     }
 
