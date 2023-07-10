@@ -191,6 +191,7 @@ private fun Theme(
     SideEffect {
         systemUiController.setNavigationBarColor(colorScheme.surface, navigationBarContrastEnforced = false)
         systemUiController.setSystemBarsColor(colorScheme.surface)
+        systemUiController.setStatusBarColor(colorScheme.primary)
     }
 
     SideEffect {
