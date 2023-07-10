@@ -25,6 +25,7 @@ import com.simplemobiletools.calculator.compose.settings.SettingsGroup
 import com.simplemobiletools.calculator.compose.settings.SettingsPreferenceComponent
 import com.simplemobiletools.calculator.compose.settings.SettingsTitleTextComponent
 import com.simplemobiletools.calculator.compose.theme.AppThemeSurface
+import com.simplemobiletools.calculator.compose.theme.divider_grey
 import com.simplemobiletools.calculator.compose.theme.isSurfaceLitWell
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getCustomizeColorsString
@@ -120,7 +121,7 @@ fun SettingsScreen(
                         doOnPreferenceClick = customizeWidgetColors
                     )
                 }
-                Divider()
+                Divider(color = divider_grey)
                 SettingsGroup(title = {
                     SettingsTitleTextComponent(text = stringResource(id = R.string.general_settings))
                 }) {
