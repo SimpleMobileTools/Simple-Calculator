@@ -1,5 +1,6 @@
 package com.simplemobiletools.calculator.compose.screens
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -9,11 +10,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
@@ -25,9 +28,7 @@ import com.simplemobiletools.calculator.compose.settings.SettingsCheckBoxCompone
 import com.simplemobiletools.calculator.compose.settings.SettingsGroup
 import com.simplemobiletools.calculator.compose.settings.SettingsPreferenceComponent
 import com.simplemobiletools.calculator.compose.settings.SettingsTitleTextComponent
-import com.simplemobiletools.calculator.compose.theme.AppThemeSurface
-import com.simplemobiletools.calculator.compose.theme.divider_grey
-import com.simplemobiletools.calculator.compose.theme.isSurfaceLitWell
+import com.simplemobiletools.calculator.compose.theme.*
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getCustomizeColorsString
 import com.simplemobiletools.commons.helpers.isTiramisuPlus
@@ -65,19 +66,14 @@ fun SettingsScreen(
         stop = scrolledTextColor,
         fraction = fraction
     )
-    val scrolledColorStatusBar = lerp(
-        start = MaterialTheme.colorScheme.surface,
-        stop = MaterialTheme.colorScheme.primary,
-        fraction = fraction
-    )
-    systemUiController.setStatusBarColor(scrolledColorStatusBar, transformColorForLightContent = {
-        scrolledColor
-    })
+    SideEffect {
+        systemUiController.setStatusBarColor(Color.Transparent, darkIcons = scrolledColor.isNotLitWell())
+    }
 
     Scaffold(
         modifier = Modifier
-            .nestedScroll(scrollBehavior.nestedScrollConnection)
-            .fillMaxSize(),
+            .fillMaxSize()
+            .nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
             TopAppBar(
                 title = {
@@ -102,7 +98,8 @@ fun SettingsScreen(
                 colors = TopAppBarDefaults.largeTopAppBarColors(
                     scrolledContainerColor = topBarsScrolledContainerColor
                 ),
-            )
+
+                )
         }
     ) { paddingValues ->
         Box(

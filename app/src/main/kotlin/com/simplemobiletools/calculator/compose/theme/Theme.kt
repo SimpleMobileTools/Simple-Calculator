@@ -136,12 +136,8 @@ fun isSurfaceNotLitWell() = MaterialTheme.colorScheme.surface.luminance() < LUMI
 @ReadOnlyComposable
 fun isSurfaceLitWell() = MaterialTheme.colorScheme.surface.luminance() > LUMINANCE_THRESHOLD
 
-@Composable
-@ReadOnlyComposable
 fun Color.isLitWell() = luminance() > LUMINANCE_THRESHOLD
 
-@Composable
-@ReadOnlyComposable
 fun Color.isNotLitWell() = luminance() < LUMINANCE_THRESHOLD
 
 
@@ -190,7 +186,6 @@ private fun Theme(
 
     SideEffect {
         systemUiController.setNavigationBarColor(colorScheme.surface, navigationBarContrastEnforced = false)
-        systemUiController.setSystemBarsColor(colorScheme.surface)
     }
 
     SideEffect {

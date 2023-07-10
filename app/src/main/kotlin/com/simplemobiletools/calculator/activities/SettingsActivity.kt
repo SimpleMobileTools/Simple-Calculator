@@ -2,13 +2,14 @@ package com.simplemobiletools.calculator.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
+import androidx.core.view.WindowCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.simplemobiletools.calculator.compose.extensions.TransparentSystemBars
 import com.simplemobiletools.calculator.compose.screens.SettingsScreen
 import com.simplemobiletools.calculator.compose.theme.AppThemeSurface
 import com.simplemobiletools.calculator.compose.theme.OnLifecycleEvent
@@ -28,7 +29,9 @@ class SettingsActivity : AppCompatActivity() {
     @SuppressLint("NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
+            TransparentSystemBars()
             AppThemeSurface {
                 val context = LocalContext.current
                 val preventPhoneFromSleeping by preferences.preventPhoneFromSleepingFlow.collectAsStateWithLifecycle(preferences.preventPhoneFromSleeping)
