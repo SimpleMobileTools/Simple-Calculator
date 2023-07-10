@@ -9,6 +9,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -42,6 +44,9 @@ fun SettingsPreferenceComponent(
             text = preferenceTitle,
             modifier = Modifier.fillMaxWidth(),
             color = preferenceTitleColor(isEnabled = isPreferenceEnabled),
+            fontSize = with(LocalDensity.current) {
+                dimensionResource(id = R.dimen.normal_text_size).toSp()
+            }
         )
         AnimatedVisibility(visible = !preferenceSummary.isNullOrBlank()) {
             Text(
@@ -49,6 +54,9 @@ fun SettingsPreferenceComponent(
                 modifier = Modifier
                     .fillMaxWidth(),
                 color = preferenceSummaryColor.copy(alpha = 0.6f),
+                fontSize = with(LocalDensity.current) {
+                    dimensionResource(id = R.dimen.normal_text_size).toSp()
+                }
             )
         }
     }
