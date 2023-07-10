@@ -6,11 +6,11 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Checkbox
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.simplemobiletools.calculator.compose.extensions.MyDevices
 import com.simplemobiletools.calculator.compose.theme.AppThemeSurface
@@ -25,6 +25,7 @@ fun SettingsCheckBoxComponent(
     initialValue: Boolean = false,
     isPreferenceEnabled: Boolean = true,
     onChange: ((Boolean) -> Unit)? = null,
+    checkboxColor : Color = MaterialTheme.colorScheme.primary
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -57,6 +58,7 @@ fun SettingsCheckBoxComponent(
             checked = initialValue,
             onCheckedChange = { onChange?.invoke(it) },
             enabled = isPreferenceEnabled,
+            colors = CheckboxDefaults.colors(checkedColor = checkboxColor, checkmarkColor = MaterialTheme.colorScheme.surface)
         )
     }
 }
