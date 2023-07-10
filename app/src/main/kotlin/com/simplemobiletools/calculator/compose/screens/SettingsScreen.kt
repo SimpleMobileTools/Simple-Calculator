@@ -19,6 +19,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.simplemobiletools.calculator.compose.extensions.MyDevices
 import com.simplemobiletools.calculator.compose.settings.SettingsCheckBoxComponent
 import com.simplemobiletools.calculator.compose.settings.SettingsGroup
@@ -54,16 +55,24 @@ fun SettingsScreen(
     onUseCommaAsDecimalMarkFlow: (Boolean) -> Unit,
     lockedCustomizeColorText: String?
 ) {
+    val systemUiController = rememberSystemUiController()
     val displayLanguage = remember { Locale.getDefault().displayLanguage }
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     val colorTransitionFraction = scrollBehavior.state.overlappedFraction
     val fraction = if (colorTransitionFraction > 0.01f) 1f else 0f
     val scrolledColor = lerp(
-        nonScrolledTextColor,
-        scrolledTextColor,
-        fraction
+        start = nonScrolledTextColor,
+        stop = scrolledTextColor,
+        fraction = fraction
     )
-
+    val scrolledColorStatusBar = lerp(
+        start = MaterialTheme.colorScheme.surface,
+        stop = MaterialTheme.colorScheme.primary,
+        fraction = fraction
+    )
+    systemUiController.setStatusBarColor(scrolledColorStatusBar, transformColorForLightContent = {
+        scrolledColor
+    })
 
     Scaffold(
         modifier = Modifier
