@@ -1,6 +1,5 @@
 package com.simplemobiletools.calculator.compose.screens
 
-import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -12,14 +11,10 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
-import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.input.nestedscroll.nestedScroll
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
@@ -30,7 +25,6 @@ import com.simplemobiletools.calculator.compose.settings.SettingsPreferenceCompo
 import com.simplemobiletools.calculator.compose.settings.SettingsTitleTextComponent
 import com.simplemobiletools.calculator.compose.theme.*
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.getCustomizeColorsString
 import com.simplemobiletools.commons.helpers.isTiramisuPlus
 import java.util.Locale
 
@@ -41,7 +35,7 @@ fun SettingsScreen(
     customizeWidgetColors: () -> Unit,
     topBarsScrolledContainerColor: Color = MaterialTheme.colorScheme.primary,
     nonScrolledTextColor: Color = if (isSurfaceLitWell()) Color.Black else Color.White,
-    scrolledTextColor: Color = Color.White,
+    scrolledTextColor: Color = if (topBarsScrolledContainerColor.isLitWell()) Color.Black else Color.White,
     preventPhoneFromSleeping: Boolean,
     onPreventPhoneFromSleeping: (Boolean) -> Unit,
     vibrateOnButtonPressFlow: Boolean,
@@ -98,8 +92,7 @@ fun SettingsScreen(
                 colors = TopAppBarDefaults.largeTopAppBarColors(
                     scrolledContainerColor = topBarsScrolledContainerColor
                 ),
-
-                )
+            )
         }
     ) { paddingValues ->
         Box(
@@ -117,6 +110,7 @@ fun SettingsScreen(
                     SettingsTitleTextComponent(text = stringResource(id = R.string.color_customization))
                 }) {
                     SettingsPreferenceComponent(
+                        modifier = Modifier.padding(bottom = 12.dp),
                         preferenceTitle = stringResource(id = R.string.customize_colors),
                         doOnPreferenceClick = customizeColors,
                         isPreferenceEnabled = isOrWasThankYouInstalled,
