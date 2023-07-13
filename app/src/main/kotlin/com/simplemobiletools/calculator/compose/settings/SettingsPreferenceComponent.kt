@@ -13,7 +13,6 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.simplemobiletools.calculator.compose.extensions.MyDevices
 import com.simplemobiletools.calculator.compose.theme.AppThemeSurface
 import com.simplemobiletools.calculator.compose.theme.preferenceSummaryColor
