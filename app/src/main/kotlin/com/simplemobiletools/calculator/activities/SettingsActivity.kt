@@ -6,7 +6,6 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.*
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -53,7 +52,6 @@ class SettingsActivity : AppCompatActivity() {
                     }
                 }
                 SettingsScreen(
-                    topBarsScrolledContainerColor = Color(getColoredMaterialStatusBarColor().getContrastColor()),
                     preventPhoneFromSleeping = preventPhoneFromSleeping,
                     customizeColors = ::handleCustomizeColorsClick,
                     goBack = ::finish,

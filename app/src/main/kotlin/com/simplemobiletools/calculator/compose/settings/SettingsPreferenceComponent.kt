@@ -31,14 +31,15 @@ fun SettingsPreferenceComponent(
     preferenceSummaryColor: Color = preferenceSummaryColor(isEnabled = isPreferenceEnabled)
 ) {
     Column(
-        modifier = modifier
+        modifier = Modifier
             .fillMaxWidth()
             .combinedClickable(
                 enabled = isPreferenceEnabled,
                 onClick = { doOnPreferenceClick?.invoke() },
                 onLongClick = { doOnPreferenceLongClick?.invoke() },
             )
-            .padding(horizontal = 16.dp, vertical = 8.dp),
+            .padding(horizontal = 16.dp, vertical = 8.dp)
+            .then(modifier),
     ) {
         Text(
             text = preferenceTitle,
