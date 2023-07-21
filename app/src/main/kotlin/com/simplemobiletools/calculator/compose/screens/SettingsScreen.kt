@@ -35,7 +35,6 @@ fun SettingsScreen(
     customizeWidgetColors: () -> Unit,
     topBarsScrolledContainerColor: Color = MaterialTheme.colorScheme.primary,
     nonScrolledTextColor: Color = if (isSurfaceLitWell()) Color.Black else Color.White,
-    scrolledTextColor: Color = if (topBarsScrolledContainerColor.isLitWell()) Color.Black else Color.White,
     preventPhoneFromSleeping: Boolean,
     onPreventPhoneFromSleeping: (Boolean) -> Unit,
     vibrateOnButtonPressFlow: Boolean,
@@ -58,7 +57,7 @@ fun SettingsScreen(
     val fraction = if (colorTransitionFraction > 0.01f) 1f else 0f
     val scrolledColor = lerp(
         start = nonScrolledTextColor,
-        stop = scrolledTextColor,
+        stop = topBarsContentColor,
         fraction = fraction
     )
     SideEffect {
@@ -192,7 +191,6 @@ private fun SettingsScreenPreview() {
             customizeWidgetColors = {},
             topBarsScrolledContainerColor = MaterialTheme.colorScheme.primary,
             nonScrolledTextColor = Color.White,
-            scrolledTextColor = Color.Black,
             preventPhoneFromSleeping = false,
             onPreventPhoneFromSleeping = {},
             vibrateOnButtonPressFlow = false,
@@ -202,8 +200,8 @@ private fun SettingsScreenPreview() {
             isUseEnglishEnabled = false,
             isUseEnglishChecked = false,
             onUseEnglishPress = {},
-            onSetupLanguagePress = {}, useCommaAsDecimalMarkFlow = false, onUseCommaAsDecimalMarkFlow = {},
-            lockedCustomizeColorText = null,
+            onSetupLanguagePress = {},
+            useCommaAsDecimalMarkFlow = false, onUseCommaAsDecimalMarkFlow = {}, lockedCustomizeColorText = null,
             topBarsContentColor = MaterialTheme.colorScheme.onPrimary
         )
     }

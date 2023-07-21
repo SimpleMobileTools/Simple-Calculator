@@ -14,7 +14,6 @@ import com.simplemobiletools.calculator.compose.extensions.TransparentSystemBars
 import com.simplemobiletools.calculator.compose.extensions.onEventValue
 import com.simplemobiletools.calculator.compose.screens.SettingsScreen
 import com.simplemobiletools.calculator.compose.theme.AppThemeSurface
-import com.simplemobiletools.calculator.compose.theme.OnLifecycleEvent
 import com.simplemobiletools.calculator.compose.theme.getAppIconIds
 import com.simplemobiletools.calculator.compose.theme.getAppLauncherName
 import com.simplemobiletools.calculator.extensions.*
@@ -47,16 +46,18 @@ class SettingsActivity : AppCompatActivity() {
                     }
                 }
                 val isOrWasThankYouInstalled = onEventValue { context.isOrWasThankYouInstalled() }
+                val lockedCustomizeColorText by remember(isOrWasThankYouInstalled) {
+                    derivedStateOf { if (isOrWasThankYouInstalled) null else getCustomizeColorsString() }
+                }
                 val statusBarColor = onEventValue { context.getColoredMaterialStatusBarColor() }
                 val contrastColor = onEventValue { statusBarColor.getContrastColor() }
 
                 SettingsScreen(
-                    topBarsContentColor = Color(contrastColor),
+                    goBack = ::finish,
+                    customizeColors = ::handleCustomizeColorsClick,
+                    customizeWidgetColors = ::setupCustomizeWidgetColors,
                     topBarsScrolledContainerColor = Color(statusBarColor),
                     preventPhoneFromSleeping = preventPhoneFromSleeping,
-                    customizeColors = ::handleCustomizeColorsClick,
-                    goBack = ::finish,
-                    customizeWidgetColors = ::setupCustomizeWidgetColors,
                     onPreventPhoneFromSleeping = preferences::preventPhoneFromSleeping::set,
                     vibrateOnButtonPressFlow = vibrateOnButtonPressFlow,
                     onVibrateOnButtonPressFlow = preferences::vibrateOnButtonPress::set,
@@ -77,7 +78,8 @@ class SettingsActivity : AppCompatActivity() {
                             applicationContext.calculatorDB.deleteHistory()
                         }
                     },
-                    lockedCustomizeColorText = if (isOrWasThankYouInstalled) null else getCustomizeColorsString()
+                    lockedCustomizeColorText = lockedCustomizeColorText,
+                    topBarsContentColor = Color(contrastColor)
                 )
             }
         }
