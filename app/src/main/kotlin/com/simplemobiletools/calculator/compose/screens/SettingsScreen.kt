@@ -48,7 +48,8 @@ fun SettingsScreen(
     onSetupLanguagePress: () -> Unit,
     useCommaAsDecimalMarkFlow: Boolean,
     onUseCommaAsDecimalMarkFlow: (Boolean) -> Unit,
-    lockedCustomizeColorText: String?
+    lockedCustomizeColorText: String?,
+    topBarsContentColor: Color
 ) {
     val systemUiController = rememberSystemUiController()
     val displayLanguage = remember { Locale.getDefault().displayLanguage }
@@ -91,7 +92,9 @@ fun SettingsScreen(
                 },
                 scrollBehavior = scrollBehavior,
                 colors = TopAppBarDefaults.largeTopAppBarColors(
-                    scrolledContainerColor = topBarsScrolledContainerColor
+                    scrolledContainerColor = topBarsScrolledContainerColor,
+                    containerColor = if (colorTransitionFraction == 1f) topBarsContentColor else MaterialTheme.colorScheme.surface,
+                    navigationIconContentColor = if (colorTransitionFraction == 1f) topBarsContentColor else MaterialTheme.colorScheme.surface
                 ),
             )
         }
@@ -187,20 +190,21 @@ private fun SettingsScreenPreview() {
             goBack = {},
             customizeColors = {},
             customizeWidgetColors = {},
+            topBarsScrolledContainerColor = MaterialTheme.colorScheme.primary,
+            nonScrolledTextColor = Color.White,
+            scrolledTextColor = Color.Black,
             preventPhoneFromSleeping = false,
             onPreventPhoneFromSleeping = {},
             vibrateOnButtonPressFlow = false,
             onVibrateOnButtonPressFlow = {},
             isOrWasThankYouInstalled = false,
             onThankYou = {},
-            topBarsScrolledContainerColor = MaterialTheme.colorScheme.primary,
-            nonScrolledTextColor = Color.White,
-            scrolledTextColor = Color.Black,
             isUseEnglishEnabled = false,
             isUseEnglishChecked = false,
             onUseEnglishPress = {},
             onSetupLanguagePress = {}, useCommaAsDecimalMarkFlow = false, onUseCommaAsDecimalMarkFlow = {},
-            lockedCustomizeColorText = null
+            lockedCustomizeColorText = null,
+            topBarsContentColor = MaterialTheme.colorScheme.onPrimary
         )
     }
 }

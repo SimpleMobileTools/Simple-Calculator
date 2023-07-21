@@ -6,10 +6,12 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.*
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.simplemobiletools.calculator.compose.extensions.TransparentSystemBars
+import com.simplemobiletools.calculator.compose.extensions.onEventValue
 import com.simplemobiletools.calculator.compose.screens.SettingsScreen
 import com.simplemobiletools.calculator.compose.theme.AppThemeSurface
 import com.simplemobiletools.calculator.compose.theme.OnLifecycleEvent
@@ -44,14 +46,13 @@ class SettingsActivity : AppCompatActivity() {
                         (wasUseEnglishToggledFlow || Locale.getDefault().language != "en") && !isTiramisuPlus()
                     }
                 }
-                var isOrWasThankYouInstalled by remember { mutableStateOf(false) }
+                val isOrWasThankYouInstalled = onEventValue { context.isOrWasThankYouInstalled() }
+                val statusBarColor = onEventValue { context.getColoredMaterialStatusBarColor() }
+                val contrastColor = onEventValue { statusBarColor.getContrastColor() }
 
-                OnLifecycleEvent { event ->
-                    if (event == androidx.lifecycle.Lifecycle.Event.ON_START) {
-                        isOrWasThankYouInstalled = context.isOrWasThankYouInstalled()
-                    }
-                }
                 SettingsScreen(
+                    topBarsContentColor = Color(contrastColor),
+                    topBarsScrolledContainerColor = Color(statusBarColor),
                     preventPhoneFromSleeping = preventPhoneFromSleeping,
                     customizeColors = ::handleCustomizeColorsClick,
                     goBack = ::finish,

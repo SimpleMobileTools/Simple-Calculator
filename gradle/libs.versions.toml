@@ -1,8 +1,8 @@
 [versions]
 #jetbrains
-kotlin = "1.8.22"
+kotlin = "1.9.0"
 #KSP
-ksp = "1.8.22-1.0.11"
+ksp = "1.9.0-1.0.12"
 #Androidx
 androidx-customView = "1.2.0-alpha02"
 androidx-customViewPooling = "1.0.0"
@@ -10,9 +10,9 @@ androidx-lifecycle = "2.6.1"
 #Compose
 composeActivity = "1.8.0-alpha06"
 compose = "1.6.0-alpha01"
-composeCompiler = "1.4.8"
+composeCompiler = "1.5.0"
 composeMaterial3 = "1.2.0-alpha03"
-accompanist = "0.31.4-beta"
+accompanist = "0.31.5-beta"
 #AutoFitTextView
 autofittextview = "0.2.1"
 #exp4j
