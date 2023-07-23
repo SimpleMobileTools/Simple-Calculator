@@ -33,7 +33,7 @@ fun SettingsScreen(
     goBack: () -> Unit,
     customizeColors: () -> Unit,
     customizeWidgetColors: () -> Unit,
-    topBarsScrolledContainerColor: Color = MaterialTheme.colorScheme.primary,
+    topBarsScrolledContainerColor: Color,
     nonScrolledTextColor: Color = if (isSurfaceLitWell()) Color.Black else Color.White,
     preventPhoneFromSleeping: Boolean,
     onPreventPhoneFromSleeping: (Boolean) -> Unit,
