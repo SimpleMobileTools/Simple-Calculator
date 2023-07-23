@@ -9,6 +9,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.view.WindowCompat
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.simplemobiletools.calculator.compose.extensions.TransparentSystemBars
 import com.simplemobiletools.calculator.compose.extensions.onEventValue
@@ -50,7 +51,9 @@ class SettingsActivity : AppCompatActivity() {
                     derivedStateOf { if (isOrWasThankYouInstalled) null else getCustomizeColorsString() }
                 }
                 val statusBarColor = onEventValue { context.getColoredMaterialStatusBarColor() }
-                val contrastColor = onEventValue { statusBarColor.getContrastColor() }
+                val contrastColor by remember(statusBarColor) {
+                    derivedStateOf { statusBarColor.getContrastColor() }
+                }
 
                 SettingsScreen(
                     goBack = ::finish,
