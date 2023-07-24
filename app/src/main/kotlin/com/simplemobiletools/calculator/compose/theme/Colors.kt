@@ -2,7 +2,6 @@ package com.simplemobiletools.calculator.compose.theme
 
 import androidx.compose.ui.graphics.Color
 
-
 val color_primary = Color(0xFFF57C00)
 val color_primary_dark = Color(0xFFD76D00)
 val color_accent = color_primary
@@ -18,7 +17,6 @@ val disabled_text_color_highlight = Color(0x00FFFFFF)
 val hint_white = Color(0x99FFFFFF)
 val hint_black = Color(0x66000000)
 val light_grey_stroke = Color(0x40FFFFFF)
-
 
 val thumb_deactivated = Color(0xFFECECEC)
 val track_deactivated = Color(0xFFB2B2B2)

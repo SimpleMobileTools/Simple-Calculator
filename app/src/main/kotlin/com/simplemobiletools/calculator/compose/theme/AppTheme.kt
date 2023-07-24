@@ -10,7 +10,6 @@ import androidx.lifecycle.Lifecycle
 import com.simplemobiletools.calculator.compose.extensions.OnLifecycleEvent
 import com.simplemobiletools.calculator.compose.theme.model.Theme.Companion.systemDefaultMaterialYou
 
-
 @Composable
 fun AppThemeSurface(
     modifier: Modifier = Modifier,
