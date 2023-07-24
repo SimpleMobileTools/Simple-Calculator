@@ -14,7 +14,6 @@ fun Context.getActivity(): Activity {
     return if (this is ContextWrapper) baseContext.getActivity() else getActivity()
 }
 
-
 @Composable
 fun TransparentSystemBars() {
     val systemUiController = rememberSystemUiController()
