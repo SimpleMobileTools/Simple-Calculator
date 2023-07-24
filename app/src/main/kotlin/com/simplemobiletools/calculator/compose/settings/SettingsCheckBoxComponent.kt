@@ -46,7 +46,11 @@ fun SettingsCheckBoxComponent(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
             .fillMaxWidth()
-            .clickable(onClick = { onChange?.invoke(!initialValue) }, interactionSource = interactionSource, indication = indication)
+            .clickable(
+                onClick = { onChange?.invoke(!initialValue) },
+                interactionSource = interactionSource,
+                indication = indication
+            )
             .padding(horizontal = 16.dp, vertical = 6.dp),
     ) {
         Column(
@@ -77,7 +81,10 @@ fun SettingsCheckBoxComponent(
                 checked = initialValue,
                 onCheckedChange = { onChange?.invoke(it) },
                 enabled = isPreferenceEnabled,
-                colors = CheckboxDefaults.colors(checkedColor = checkboxColor, checkmarkColor = MaterialTheme.colorScheme.surface),
+                colors = CheckboxDefaults.colors(
+                    checkedColor = checkboxColor,
+                    checkmarkColor = MaterialTheme.colorScheme.surface
+                ),
                 interactionSource = interactionSource
             )
         }

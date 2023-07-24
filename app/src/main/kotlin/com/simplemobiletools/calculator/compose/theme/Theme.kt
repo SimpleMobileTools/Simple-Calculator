@@ -16,6 +16,7 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.simplemobiletools.calculator.compose.theme.model.Theme
 import com.simplemobiletools.calculator.compose.theme.model.Theme.Companion.systemDefaultMaterialYou
 import com.simplemobiletools.calculator.extensions.config
+import com.simplemobiletools.commons.helpers.isSPlus
 
 @Composable
 internal fun Theme(
@@ -30,7 +31,7 @@ internal fun Theme(
     val colorScheme = if (!view.isInEditMode) {
 
         val colorScheme = when {
-            theme is Theme.SystemDefaultMaterialYou && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
+            theme is Theme.SystemDefaultMaterialYou && isSPlus() -> {
                 if (isSystemInDarkTheme()) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
             }
 
@@ -58,7 +59,9 @@ internal fun Theme(
 
         colorScheme
 
-    } else darkColorScheme
+    } else {
+        darkColorScheme
+    }
 
     SideEffect {
         systemUiController.setNavigationBarColor(colorScheme.surface, navigationBarContrastEnforced = false)
