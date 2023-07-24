@@ -441,3 +441,6 @@ val default_app_icon_color = color_primary
 val default_accent_color = color_primary
 val default_widget_bg_color = Color(0xAA000000)
 val default_widget_text_color = color_primary
+
+val ripple_light = Color(0x1f000000)
+val ripple_dark = Color(0x33ffffff)

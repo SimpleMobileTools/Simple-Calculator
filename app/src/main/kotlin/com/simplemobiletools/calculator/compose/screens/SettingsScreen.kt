@@ -1,17 +1,20 @@
 package com.simplemobiletools.calculator.compose.screens
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.ripple.LocalRippleTheme
+import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.input.nestedscroll.nestedScroll
@@ -67,7 +70,7 @@ fun SettingsScreen(
         systemUiController.setStatusBarColor(Color.Transparent, darkIcons = scrolledColor.isNotLitWell())
     }
     val startingPadding = Modifier.padding(horizontal = 4.dp)
-
+    val navigationIconInteractionSource = remember { MutableInteractionSource() }
     Scaffold(
         modifier = Modifier
             .fillMaxSize()
@@ -87,8 +90,13 @@ fun SettingsScreen(
                     Icon(
                         imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
                         modifier = Modifier
-                            .clickable { goBack() }
-                            .padding(start = 8.dp),
+                            .padding(start = 8.dp)
+                            .clip(RoundedCornerShape(50))
+                            .clickable(
+                                navigationIconInteractionSource, rememberRipple(
+                                    color = MaterialTheme.colorScheme.onSurface
+                                )
+                            ) { goBack() },
                         tint = scrolledColor
                     )
                 },
