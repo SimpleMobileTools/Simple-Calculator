@@ -10,8 +10,11 @@ import androidx.lifecycle.Lifecycle
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 fun Context.getActivity(): Activity {
-    if (this is Activity) return this
-    return if (this is ContextWrapper) baseContext.getActivity() else getActivity()
+    return when (this) {
+        is Activity -> this
+        is ContextWrapper -> baseContext.getActivity()
+        else -> getActivity()
+    }
 }
 
 @Composable
