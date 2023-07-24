@@ -16,7 +16,6 @@ fun SettingsGroup(
     title: @Composable (() -> Unit)? = null,
     content: @Composable ColumnScope.() -> Unit,
 ) {
-
     Column(
         modifier = modifier.fillMaxWidth(),
     ) {
