@@ -1,16 +1,12 @@
 package com.simplemobiletools.calculator.compose.theme
 
 import android.content.Context
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.platform.LocalContext
+import com.simplemobiletools.calculator.compose.theme.model.Theme
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.commons.extensions.isBlackAndWhiteTheme
 import com.simplemobiletools.commons.extensions.isWhiteTheme
-
-@Composable
-fun getCurrentTheme() = getTheme(LocalContext.current, Theme.systemDefaultMaterialYou())
 
 fun getTheme(context: Context, materialYouTheme: Theme.SystemDefaultMaterialYou): Theme {
     val baseConfig = context.config

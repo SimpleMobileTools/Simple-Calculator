@@ -8,7 +8,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.Lifecycle
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
-import com.simplemobiletools.calculator.compose.theme.OnLifecycleEvent
 
 fun Context.getActivity(): Activity {
     if (this is Activity) return this
@@ -21,7 +20,7 @@ fun TransparentSystemBars() {
     val systemUiController = rememberSystemUiController()
     val isSystemInDarkTheme = isSystemInDarkTheme()
     SideEffect {
-        systemUiController.setSystemBarsColor(Color.Transparent, darkIcons = isSystemInDarkTheme)
+        systemUiController.setSystemBarsColor(Color.Transparent, darkIcons = !isSystemInDarkTheme)
     }
 }
 

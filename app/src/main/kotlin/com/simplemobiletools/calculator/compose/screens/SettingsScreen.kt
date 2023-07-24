@@ -23,7 +23,10 @@ import com.simplemobiletools.calculator.compose.settings.SettingsCheckBoxCompone
 import com.simplemobiletools.calculator.compose.settings.SettingsGroup
 import com.simplemobiletools.calculator.compose.settings.SettingsPreferenceComponent
 import com.simplemobiletools.calculator.compose.settings.SettingsTitleTextComponent
-import com.simplemobiletools.calculator.compose.theme.*
+import com.simplemobiletools.calculator.compose.theme.AppThemeSurface
+import com.simplemobiletools.calculator.compose.theme.divider_grey
+import com.simplemobiletools.calculator.compose.theme.isNotLitWell
+import com.simplemobiletools.calculator.compose.theme.isSurfaceLitWell
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.isTiramisuPlus
 import java.util.Locale

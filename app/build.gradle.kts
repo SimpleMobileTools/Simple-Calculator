@@ -18,6 +18,7 @@ android {
     compileSdk = project.libs.versions.app.build.compileSDKVersion.get().toInt()
 
     defaultConfig {
+        applicationId = libs.versions.app.version.appId.get()
         minSdk = project.libs.versions.app.build.minimumSDK.get().toInt()
         targetSdk = project.libs.versions.app.build.targetSDK.get().toInt()
         versionName = project.libs.versions.app.version.versionName.get()
