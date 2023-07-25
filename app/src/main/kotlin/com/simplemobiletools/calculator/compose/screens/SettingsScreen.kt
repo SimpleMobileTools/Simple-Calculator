@@ -82,24 +82,29 @@ fun SettingsScreen(
                     Text(
                         text = stringResource(id = R.string.settings),
                         modifier = Modifier
-                            .padding(start = 16.dp)
+                            .padding(start = 8.dp)
                             .fillMaxWidth(),
                         color = scrolledColor
                     )
                 },
                 navigationIcon = {
-                    Icon(
-                        imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
-                        modifier = Modifier
-                            .padding(start = 8.dp)
+                    Box(
+                        Modifier
                             .clip(RoundedCornerShape(50))
                             .clickable(
                                 navigationIconInteractionSource, rememberRipple(
-                                    color = MaterialTheme.colorScheme.onSurface
+                                    color = MaterialTheme.colorScheme.onSurface,
+                                    bounded = true
                                 )
-                            ) { goBack() },
-                        tint = scrolledColor
-                    )
+                            ) { goBack() }
+                    ) {
+                        Icon(
+                            imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
+                            tint = scrolledColor,
+                            modifier = Modifier.padding(8.dp)
+                        )
+                    }
+
                 },
                 scrollBehavior = scrollBehavior,
                 colors = TopAppBarDefaults.largeTopAppBarColors(
