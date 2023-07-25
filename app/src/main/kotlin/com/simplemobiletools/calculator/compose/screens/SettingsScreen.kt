@@ -90,6 +90,7 @@ fun SettingsScreen(
                 navigationIcon = {
                     Box(
                         Modifier
+                            .padding(start = 3.dp)
                             .clip(RoundedCornerShape(50))
                             .clickable(
                                 navigationIconInteractionSource, rememberRipple(
@@ -101,7 +102,7 @@ fun SettingsScreen(
                         Icon(
                             imageVector = Icons.Filled.ArrowBack, contentDescription = stringResource(id = R.string.back),
                             tint = scrolledColor,
-                            modifier = Modifier.padding(8.dp)
+                            modifier = Modifier.padding(5.dp)
                         )
                     }
 
