@@ -4,13 +4,18 @@ import android.appwidget.AppWidgetManager
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
+import android.os.Build
+import android.provider.Settings
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import com.simplemobiletools.calculator.databases.CalculatorDatabase
 import com.simplemobiletools.calculator.helpers.Config
 import com.simplemobiletools.calculator.helpers.MyWidgetProvider
 import com.simplemobiletools.calculator.interfaces.CalculatorDao
+import com.simplemobiletools.commons.extensions.showErrorToast
 
 val Context.config: Config get() = Config.newInstance(applicationContext)
 
@@ -37,6 +42,25 @@ fun Context.updateWidgets() {
             action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
             putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, widgetIDs)
             sendBroadcast(this)
+        }
+    }
+}
+
+@RequiresApi(Build.VERSION_CODES.TIRAMISU)
+fun Context.launchChangeAppLanguageIntent() {
+    try {
+        Intent(Settings.ACTION_APP_LOCALE_SETTINGS).apply {
+            data = Uri.fromParts("package", packageName, null)
+            startActivity(this)
+        }
+    } catch (e: Exception) {
+        try {
+            Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                data = Uri.fromParts("package", packageName, null)
+                startActivity(this)
+            }
+        } catch (e: Exception) {
+            showErrorToast(e)
         }
     }
 }

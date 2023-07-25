@@ -3,23 +3,21 @@ package com.simplemobiletools.calculator.adapters
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.activities.SimpleActivity
+import com.simplemobiletools.calculator.databinding.HistoryViewBinding
 import com.simplemobiletools.calculator.helpers.CalculatorImpl
 import com.simplemobiletools.calculator.models.History
 import com.simplemobiletools.commons.extensions.copyToClipboard
 import com.simplemobiletools.commons.extensions.getProperTextColor
-import kotlinx.android.synthetic.main.history_view.view.*
 
 class HistoryAdapter(val activity: SimpleActivity, val items: List<History>, val calc: CalculatorImpl, val itemClick: () -> Unit) :
     RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
 
     private var textColor = activity.getProperTextColor()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = activity.layoutInflater.inflate(R.layout.history_view, parent, false)
-        return ViewHolder(view)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
+        ViewHolder(HistoryViewBinding.inflate(activity.layoutInflater, parent, false))
+
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
@@ -28,13 +26,13 @@ class HistoryAdapter(val activity: SimpleActivity, val items: List<History>, val
 
     override fun getItemCount() = items.size
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class ViewHolder(private val binding: HistoryViewBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bindView(item: History): View {
             itemView.apply {
-                item_formula.text = item.formula
-                item_result.text = item.result
-                item_formula.setTextColor(textColor)
-                item_result.setTextColor(textColor)
+                binding.itemFormula.text = item.formula
+                binding.itemResult.text = item.result
+                binding.itemFormula.setTextColor(textColor)
+                binding.itemResult.setTextColor(textColor)
 
                 setOnClickListener {
                     calc.addNumberToFormula(item.result)
