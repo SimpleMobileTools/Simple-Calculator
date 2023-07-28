@@ -90,7 +90,7 @@ fun SettingsScreen(
                 navigationIcon = {
                     Box(
                         Modifier
-                            .padding(start = 12.dp)
+                            .padding(start = 8.dp)
                             .clip(RoundedCornerShape(50))
                             .clickable(
                                 navigationIconInteractionSource, rememberRipple(
