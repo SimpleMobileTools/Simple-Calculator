@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.lifecycle.Lifecycle
-import com.simplemobiletools.calculator.compose.extensions.OnLifecycleEvent
+import androidx.lifecycle.compose.LifecycleEventEffect
 import com.simplemobiletools.calculator.compose.theme.model.Theme.Companion.systemDefaultMaterialYou
 
 @Composable
@@ -27,8 +27,8 @@ fun AppThemeSurface(
             )
         )
     }
-    OnLifecycleEvent { event ->
-        if (event == Lifecycle.Event.ON_START && !view.isInEditMode) {
+    LifecycleEventEffect(event = Lifecycle.Event.ON_START) {
+        if (!view.isInEditMode) {
             currentTheme = getTheme(context = context, materialYouTheme = materialYouTheme)
         }
     }

@@ -7,6 +7,7 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LifecycleEventEffect
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 fun Context.getActivity(): Activity {
@@ -30,10 +31,8 @@ fun TransparentSystemBars() {
 fun <T : Any> onEventValue(event: Lifecycle.Event = Lifecycle.Event.ON_START, value: () -> T): T {
     val rememberLatestUpdateState by rememberUpdatedState(newValue = value)
     var rememberedValue by remember { mutableStateOf(value()) }
-    OnLifecycleEvent { lifecycleEvent ->
-        if (lifecycleEvent == event) {
-            rememberedValue = rememberLatestUpdateState()
-        }
+    LifecycleEventEffect(event = event) {
+        rememberedValue = rememberLatestUpdateState()
     }
     return rememberedValue
 }
