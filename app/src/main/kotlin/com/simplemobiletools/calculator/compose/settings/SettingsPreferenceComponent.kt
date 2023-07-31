@@ -13,11 +13,11 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.simplemobiletools.calculator.compose.extensions.MyDevices
-import com.simplemobiletools.calculator.compose.theme.AppThemeSurface
-import com.simplemobiletools.calculator.compose.theme.preferenceSummaryColor
-import com.simplemobiletools.calculator.compose.theme.preferenceTitleColor
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.preferenceSummaryColor
+import com.simplemobiletools.commons.compose.theme.preferenceTitleColor
 
 @Composable
 fun SettingsPreferenceComponent(
