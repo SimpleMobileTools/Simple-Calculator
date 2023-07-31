@@ -1,21 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Simple Calculator</string>
     <string name="app_launcher_name">Cyfrifiannell</string>
     <string name="scientific_calculator">Cyfrifiannell Gwyddonol</string>
-
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Gwall: rhannu â sero</string>
-
     <!-- History -->
-    <string name="history">History</string>
-    <string name="history_empty">History is empty</string>
-    <string name="clear_history">Clear</string>
-    <string name="history_cleared">History has been cleared</string>
-
+    <string name="history">Hanes</string>
+    <string name="history_empty">Mae\'r hanes yn wag</string>
+    <string name="clear_history">Clirio</string>
+    <string name="history_cleared">Mae\'r hanes wedi cael ei glirio</string>
     <!-- Settings -->
     <string name="vibrate_on_button_press">Dirgrynu wrth wasgu botymau</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
-
+    <string name="use_comma_as_decimal_mark">Defnyddio atalnod fel pwynt degol</string>
     <!-- FAQ -->
     <string name="faq_1_title">Sut mae\'r botwm C (clirio) yn gweithio?</string>
     <string name="faq_1_text">Mae ei dapio yn tynnu un rhif ar y tro. Mae ei dal yn ailosod pob maes gyda\'i gilydd ar unwaith.</string>
