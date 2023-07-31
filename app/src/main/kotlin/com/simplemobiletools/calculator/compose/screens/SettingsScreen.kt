@@ -22,16 +22,16 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
-import com.simplemobiletools.calculator.compose.extensions.MyDevices
 import com.simplemobiletools.calculator.compose.settings.SettingsCheckBoxComponent
 import com.simplemobiletools.calculator.compose.settings.SettingsGroup
 import com.simplemobiletools.calculator.compose.settings.SettingsPreferenceComponent
 import com.simplemobiletools.calculator.compose.settings.SettingsTitleTextComponent
-import com.simplemobiletools.calculator.compose.theme.AppThemeSurface
-import com.simplemobiletools.calculator.compose.theme.divider_grey
-import com.simplemobiletools.calculator.compose.theme.isNotLitWell
-import com.simplemobiletools.calculator.compose.theme.isSurfaceLitWell
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.theme.AppThemeSurface
+import com.simplemobiletools.commons.compose.theme.divider_grey
+import com.simplemobiletools.commons.compose.theme.isNotLitWell
+import com.simplemobiletools.commons.compose.theme.isSurfaceLitWell
 import com.simplemobiletools.commons.helpers.isTiramisuPlus
 import java.util.Locale
 
@@ -147,7 +147,7 @@ fun SettingsScreen(
                         doOnPreferenceClick = customizeWidgetColors
                     )
                 }
-                Divider(color = divider_grey)
+                HorizontalDivider(color = divider_grey)
                 SettingsGroup(title = {
                     SettingsTitleTextComponent(text = stringResource(id = R.string.general_settings), modifier = startingPadding)
                 }) {

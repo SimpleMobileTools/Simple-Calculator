@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.simplemobiletools.calculator.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.extensions.MyDevices
 
 @Composable
 fun SettingsGroup(
