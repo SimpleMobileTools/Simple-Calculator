@@ -1,28 +1,24 @@
-Táto štýlová moderná kalkulačka ponúka skvelé užívateľské skúsenosti, ktoré budete radi vidieť. Môžete skopírovať výsledok alebo vzorec na klipboard dlhým stlačením. Môžete tiež použiť tento kalkulačku ako prevodník meny na výpočet vášho denného príjmu a iného množstva v inej mene krajiny. S očné upokojujúce tmavú tému, je teraz ľahké vidieť tlačidlá a čísla ľahšie a použiť tento kalkulačku pre jednoduché výpočty alebo ho použiť ako prevodník meny. Túto kalkulačku môžete použiť aj ako hypotekárna kalkulačka.
+Táto štýlová a moderná kalkulačka ponúka výborné používateľské rozhranie, ktoré ulahodí každému oku. Dlhým podržaním vzorca, alebo výsledku, ho skopírujete do schránky.
 
-Aplikácia je jednoduchá pomocník pre rýchle výpočty s mnohými základnými funkciami vrátane množenia, delenia, koreňa a právomoci. To tiež prichádza s temnou témou, takže môžete použiť túto novú technológiu, aby vaša kalkulačka vyzerala hladko a ľahko ovládateľný skôr ako pomocou ostrých farieb poskytovaných v rôznych kalkulačiek, ktoré vám nemôžu pomôcť sústrediť sa na vaše komplexné výpočty v tejto kalkulárnej kalkulačky.
+Apka je jednoduchým pomocníkom pre rýchle výpočty s mnohými základnými funkciami vrátane násobenia, delenia a mocnín.
 
-Môžete to vibrovať na tlačidiel, aby ste sa uistili počas vkladanie vašich hodnôt. Vynikajúce farby používané v tejto aplikácii sú chladné a vyzerajú hladko na oči, takže môžete ľahko rozlišovať medzi všetkými tlačidlami a počítať s ľahkosťou. Táto kalkulačka môže byť použitá na vyriešenie komplexných koreňových problémov alebo môže byť tiež použitý ako menový prevodník alebo grafing kalkulačku.
+Zadanie hodnoty môže byť po stlačení potvrdené vibrovaním, aby nedošlo k chybám.
 
-Existuje možnosť nastavenia, aby sa zabránilo telefónu pred spaním pri používaní aplikácie pre pohodlné použitie.
+Ako možnosť máte k dispozícií aj prevenciu vypnutia displeja, ak je apka v popredí.
 
-Textová farba resizable widget môže byť prispôsobená, rovnako ako farbu a alfa pozadia. Stlačte výsledok alebo vzorec v widgetu na otvorenie aplikácie.
+Farba textu a widget sa dajú prispôsobiť vášmu želaniu, ako aj farba a priesvitnosť pozadia widget.
 
-Môžete získať prístup k histórii operácií na rýchle skenovanie cez nedávne výpočty.
+Apku viete rýchlo spustiť aj kliknutím na výsledok na widgete.
 
-Ide o dizajn materiálu a tmavú tému predvolene, poskytuje skvelé užívateľské skúsenosti pre jednoduché použitie. Nedostatok prístupu k internetu vám dáva viac súkromia, bezpečnosti a stability ako iné aplikácie.
+K dispoziící je aj história výpočtov, rýchlo si tak viete prehliadnuť nedávne výpočty.
 
-Neobsahuje žiadne reklamy alebo zbytočné povolenia. Je plne opensource, poskytuje prispôsobiteľné farby.
+Poskytuje Material dizajn a štandardne tmavú tému, čo zlepšuje používateľskú skúsenosť.
 
-Vlastnosti:
-- Jednoduché použitie kalkulačky.
-- História operácií.
-- Prichádza s temnou témou, ktorá umožňuje hladký používanie kalkulačky.
-- Funguje ako prevodník meny, ktorý vám pomôže vypočítať príjem a iné sumy.
-- Prispôsobiteľné textové farby, aby to vyzeralo chladnejšie a podľa vašich potrieb.
-- Tlačidlo veľkosti podľa priemerného prsta na obrazovke, aby výpočty pohodlnejšie.
+Chýbajúci prístup na internet poskytuje lepšie súkromie, bezpečnosť a stabilitu ako iné apky.
 
-Pozrite sa na celú sadu jednoduchých nástrojov tu:
+Neobsahuje žiadne reklamy a nepotrebné oprávnenia. Je opensource, poskytuje možnosť zmeny farieb.
+
+Pozrite si celú sadu aplikácií na:
 https://www.simplemobiletools.com
 
 Facebook:
