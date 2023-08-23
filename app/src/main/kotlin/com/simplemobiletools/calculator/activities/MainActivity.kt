@@ -167,7 +167,7 @@ class MainActivity : SimpleActivity(), Calculator {
     private fun showHistory() {
         HistoryHelper(this).getHistory {
             if (it.isEmpty()) {
-                toast(com.simplemobiletools.calculator.R.string.history_empty)
+                toast(R.string.history_empty)
             } else {
                 HistoryDialog(this, it, calc)
             }
@@ -220,8 +220,8 @@ class MainActivity : SimpleActivity(), Calculator {
 
     private fun checkWhatsNewDialog() {
         arrayListOf<Release>().apply {
-            add(Release(18, com.simplemobiletools.calculator.R.string.release_18))
-            add(Release(28, com.simplemobiletools.calculator.R.string.release_28))
+            add(Release(18, R.string.release_18))
+            add(Release(28, R.string.release_28))
             checkWhatsNew(this, BuildConfig.VERSION_CODE)
         }
     }
