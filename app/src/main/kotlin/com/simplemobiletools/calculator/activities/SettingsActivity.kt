@@ -6,7 +6,6 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.*
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -49,16 +48,10 @@ class SettingsActivity : AppCompatActivity() {
                 val lockedCustomizeColorText by remember(isOrWasThankYouInstalled) {
                     derivedStateOf { if (isOrWasThankYouInstalled) null else getCustomizeColorsString() }
                 }
-                val statusBarColor = onEventValue { context.getColoredMaterialStatusBarColor() }
-                val contrastColor by remember(statusBarColor) {
-                    derivedStateOf { statusBarColor.getContrastColor() }
-                }
-
                 SettingsScreen(
                     goBack = ::finish,
                     customizeColors = ::handleCustomizeColorsClick,
                     customizeWidgetColors = ::setupCustomizeWidgetColors,
-                    topBarsScrolledContainerColor = Color(statusBarColor),
                     preventPhoneFromSleeping = preventPhoneFromSleeping,
                     onPreventPhoneFromSleeping = preferences::preventPhoneFromSleeping::set,
                     vibrateOnButtonPressFlow = vibrateOnButtonPressFlow,
@@ -80,8 +73,7 @@ class SettingsActivity : AppCompatActivity() {
                             applicationContext.calculatorDB.deleteHistory()
                         }
                     },
-                    lockedCustomizeColorText = lockedCustomizeColorText,
-                    topBarsContentColor = Color(contrastColor)
+                    lockedCustomizeColorText = lockedCustomizeColorText
                 )
             }
         }
