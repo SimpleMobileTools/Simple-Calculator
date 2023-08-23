@@ -47,7 +47,7 @@ internal fun SettingsScreen(
         }) {
             SettingsPreferenceComponent(
                 modifier = Modifier
-                    .padding(bottom = 12.dp, top = 8.dp)
+                    .padding(vertical = 12.dp)
                     .then(startingPadding),
                 preferenceTitle = stringResource(id = R.string.customize_colors),
                 doOnPreferenceClick = customizeColors,
@@ -56,7 +56,7 @@ internal fun SettingsScreen(
             )
             SettingsPreferenceComponent(
                 modifier = Modifier
-                    .padding(bottom = 12.dp)
+                    .padding(vertical = 12.dp)
                     .then(startingPadding),
                 preferenceTitle = stringResource(id = R.string.customize_widget_colors),
                 doOnPreferenceClick = customizeWidgetColors
