@@ -9,7 +9,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.simplemobiletools.calculator.compose.screens.SettingsScreen
+import com.simplemobiletools.calculator.compose.SettingsScreen
 import com.simplemobiletools.calculator.extensions.*
 import com.simplemobiletools.commons.activities.CustomizationActivity
 import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars

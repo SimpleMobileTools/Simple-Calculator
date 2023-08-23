@@ -1,4 +1,4 @@
-package com.simplemobiletools.calculator.compose.screens
+package com.simplemobiletools.calculator.compose
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
