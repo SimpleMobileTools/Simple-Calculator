@@ -40,37 +40,29 @@ internal fun SettingsScreen(
     lockedCustomizeColorText: String?,
     displayLanguage: String
 ) {
-    val startingPadding = remember { Modifier.padding(horizontal = 4.dp) }
     SettingsScaffold(title = stringResource(id = R.string.settings), goBack = goBack) { paddingValues ->
         SettingsGroup(title = {
-            SettingsTitleTextComponent(text = stringResource(id = R.string.color_customization), modifier = startingPadding)
+            SettingsTitleTextComponent(text = stringResource(id = R.string.color_customization))
         }) {
             SettingsPreferenceComponent(
-                modifier = Modifier
-                    .padding(vertical = 12.dp)
-                    .then(startingPadding),
                 preferenceTitle = stringResource(id = R.string.customize_colors),
                 doOnPreferenceClick = customizeColors,
                 isPreferenceEnabled = isOrWasThankYouInstalled,
                 preferenceSummary = lockedCustomizeColorText
             )
             SettingsPreferenceComponent(
-                modifier = Modifier
-                    .padding(vertical = 12.dp)
-                    .then(startingPadding),
                 preferenceTitle = stringResource(id = R.string.customize_widget_colors),
                 doOnPreferenceClick = customizeWidgetColors
             )
         }
         HorizontalDivider(color = divider_grey)
         SettingsGroup(title = {
-            SettingsTitleTextComponent(text = stringResource(id = R.string.general_settings), modifier = startingPadding)
+            SettingsTitleTextComponent(text = stringResource(id = R.string.general_settings))
         }) {
             if (!isOrWasThankYouInstalled) {
                 SettingsPreferenceComponent(
                     preferenceTitle = stringResource(id = R.string.purchase_simple_thank_you),
                     doOnPreferenceClick = onThankYou,
-                    modifier = startingPadding,
                 )
             }
             if (isUseEnglishEnabled) {
@@ -78,7 +70,6 @@ internal fun SettingsScreen(
                     title = stringResource(id = R.string.use_english_language),
                     initialValue = isUseEnglishChecked,
                     onChange = onUseEnglishPress,
-                    modifier = startingPadding,
                 )
             }
             if (isTiramisuPlus()) {
@@ -87,26 +78,22 @@ internal fun SettingsScreen(
                     preferenceSummary = displayLanguage,
                     doOnPreferenceClick = onSetupLanguagePress,
                     preferenceSummaryColor = MaterialTheme.colorScheme.onSurface,
-                    modifier = startingPadding,
                 )
             }
             SettingsCheckBoxComponent(
                 title = stringResource(id = R.string.vibrate_on_button_press),
                 initialValue = vibrateOnButtonPressFlow,
                 onChange = onVibrateOnButtonPressFlow,
-                modifier = startingPadding,
             )
             SettingsCheckBoxComponent(
                 title = stringResource(id = R.string.prevent_phone_from_sleeping),
                 initialValue = preventPhoneFromSleeping,
                 onChange = onPreventPhoneFromSleeping,
-                modifier = startingPadding,
             )
             SettingsCheckBoxComponent(
                 title = stringResource(id = com.simplemobiletools.calculator.R.string.use_comma_as_decimal_mark),
                 initialValue = useCommaAsDecimalMarkFlow,
                 onChange = onUseCommaAsDecimalMarkFlow,
-                modifier = startingPadding,
             )
         }
         Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
