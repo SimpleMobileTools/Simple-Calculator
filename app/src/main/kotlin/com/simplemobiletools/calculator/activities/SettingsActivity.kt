@@ -48,7 +48,9 @@ class SettingsActivity : AppCompatActivity() {
                 val lockedCustomizeColorText by remember(isOrWasThankYouInstalled) {
                     derivedStateOf { if (isOrWasThankYouInstalled) null else getCustomizeColorsString() }
                 }
+                val displayLanguage = remember { Locale.getDefault().displayLanguage }
                 SettingsScreen(
+                    displayLanguage = displayLanguage,
                     goBack = ::finish,
                     customizeColors = ::handleCustomizeColorsClick,
                     customizeWidgetColors = ::setupCustomizeWidgetColors,

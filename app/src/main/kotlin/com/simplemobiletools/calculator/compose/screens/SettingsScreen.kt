@@ -1,23 +1,24 @@
 package com.simplemobiletools.calculator.compose.screens
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.simplemobiletools.calculator.compose.settings.SettingsCheckBoxComponent
-import com.simplemobiletools.calculator.compose.settings.SettingsGroup
-import com.simplemobiletools.calculator.compose.settings.SettingsPreferenceComponent
-import com.simplemobiletools.calculator.compose.settings.SettingsTitleTextComponent
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.settings.SettingsCheckBoxComponent
+import com.simplemobiletools.commons.compose.settings.SettingsGroup
+import com.simplemobiletools.commons.compose.settings.SettingsPreferenceComponent
+import com.simplemobiletools.commons.compose.settings.SettingsTitleTextComponent
 import com.simplemobiletools.commons.compose.settings.scaffold.SettingsScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.divider_grey
 import com.simplemobiletools.commons.helpers.isTiramisuPlus
-import java.util.Locale
 
 @Composable
 internal fun SettingsScreen(
@@ -36,10 +37,10 @@ internal fun SettingsScreen(
     onSetupLanguagePress: () -> Unit,
     useCommaAsDecimalMarkFlow: Boolean,
     onUseCommaAsDecimalMarkFlow: (Boolean) -> Unit,
-    lockedCustomizeColorText: String?
+    lockedCustomizeColorText: String?,
+    displayLanguage: String
 ) {
-    val displayLanguage = remember { Locale.getDefault().displayLanguage }
-    val startingPadding = Modifier.padding(horizontal = 4.dp)
+    val startingPadding = remember { Modifier.padding(horizontal = 4.dp) }
     SettingsScaffold(title = stringResource(id = R.string.settings), goBack = goBack) { paddingValues ->
         SettingsGroup(title = {
             SettingsTitleTextComponent(text = stringResource(id = R.string.color_customization), modifier = startingPadding)
@@ -132,7 +133,8 @@ private fun SettingsScreenPreview() {
             onSetupLanguagePress = {},
             useCommaAsDecimalMarkFlow = false,
             onUseCommaAsDecimalMarkFlow = {},
-            lockedCustomizeColorText = null
+            lockedCustomizeColorText = null,
+            displayLanguage = "English"
         )
     }
 }
