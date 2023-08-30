@@ -32,7 +32,7 @@ class MainActivity : SimpleActivity(), Calculator {
     private var saveCalculatorState: String = ""
     private lateinit var calc: CalculatorImpl
 
-    private val binding by lazy(LazyThreadSafetyMode.NONE) { ActivityMainBinding.inflate(layoutInflater) }
+    private val binding by viewBinding(ActivityMainBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         isMaterialActivity = true
