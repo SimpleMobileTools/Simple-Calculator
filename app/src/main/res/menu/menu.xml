@@ -9,6 +9,11 @@
         android:title="@string/history"
         app:showAsAction="always" />
     <item
+        android:id="@+id/unit_converter"
+        android:icon="@drawable/ic_square_foot_vector"
+        android:title="@string/unit_converter"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/settings"
         android:icon="@drawable/ic_settings_cog_vector"
         android:title="@string/settings"

@@ -3,6 +3,7 @@
     <string name="app_name">எளிய கால்குலேட்டர்</string>
     <string name="app_launcher_name">கால்குலேட்டர்</string>
     <string name="scientific_calculator">அறிவியல் கால்குலேட்டர்</string>
+    <string name="unit_converter">Unit converter</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">பிழை: பூஜ்ஜியத்தால் வகுத்தல்</string>
     <!-- History -->
@@ -13,6 +14,48 @@
     <!-- Settings -->
     <string name="vibrate_on_button_press">Vibrate on button press</string>
     <string name="use_comma_as_decimal_mark">கமாவை தசம குறியாகப் பயன்படுத்தவும்</string>
+    <!-- Unit converter -->
+    <string name="unit_length">Length</string>
+    <string name="unit_length_kilometer">Kilometer</string>
+    <string name="unit_length_hectometer">Hectometer</string>
+    <string name="unit_length_decameter">Decameter</string>
+    <string name="unit_length_meter">Meter</string>
+    <string name="unit_length_decimeter">Decimeter</string>
+    <string name="unit_length_centimeter">Centimeter</string>
+    <string name="unit_length_millimeter">Millimeter</string>
+    <string name="unit_length_micrometer">Micrometer</string>
+    <string name="unit_length_nanometer">Nanometer</string>
+    <string name="unit_length_picometer">Picometer</string>
+    <string name="unit_length_angstrom">Angstrom</string>
+    <string name="unit_length_mile">Mile</string>
+    <string name="unit_length_chain">Chain</string>
+    <string name="unit_length_yard">Yard</string>
+    <string name="unit_length_foot">Foot</string>
+    <string name="unit_length_mil">Mil</string>
+    <string name="unit_length_inch">Inch</string>
+    <string name="unit_length_fathom">Fathom</string>
+    <string name="unit_length_cable">Cable</string>
+    <string name="unit_length_nautical_mile">Nautical Mile</string>
+    <string name="unit_length_link">Link</string>
+    <string name="unit_length_rod">Rod</string>
+    <string name="unit_length_astronomical_unit">Astronomical Unit</string>
+    <string name="unit_length_parsec">Parsec</string>
+    <string name="unit_length_light_year">Light Year</string>
+    <string name="unit_area">Area</string>
+    <string name="unit_area_square_kilometer">Square Kilometer</string>
+    <string name="unit_area_square_meter">Square Meter</string>
+    <string name="unit_area_square_centimeter">Square Centimeter</string>
+    <string name="unit_area_square_millimeter">Square Millimeter</string>
+    <string name="unit_area_square_mile">Square Mile</string>
+    <string name="unit_area_square_yard">Square Yard</string>
+    <string name="unit_area_square_mil">Square Mil</string>
+    <string name="unit_area_square_inch">Square Inch</string>
+    <string name="unit_area_square_rod">Square Rod</string>
+    <string name="unit_area_acre">Acre</string>
+    <string name="unit_area_are">Are</string>
+    <string name="unit_area_dunam">Dunam</string>
+    <string name="unit_area_hectare">Hectare</string>
+    <string name="unit_volume">Volume</string>
     <!-- FAQ -->
     <string name="faq_1_title">சி (தெளிவு) பொத்தான் எப்படி வேலை செய்கிறது\?</string>
     <string name="faq_1_text">அதைத் தட்டினால் ஒரு நேரத்தில் ஒரு எழுத்து நீக்கப்படும். நீண்ட நேரம் அழுத்தினால், எல்லாப் புலங்களையும் ஒரே நேரத்தில் மீட்டமைக்கும்.</string>

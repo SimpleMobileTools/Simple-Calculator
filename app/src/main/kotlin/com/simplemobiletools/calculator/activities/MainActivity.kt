@@ -137,6 +137,7 @@ class MainActivity : SimpleActivity(), Calculator {
             when (menuItem.itemId) {
                 R.id.history -> showHistory()
                 R.id.more_apps_from_us -> launchMoreAppsFromUsIntent()
+                R.id.unit_converter -> launchUnitConverter()
                 R.id.settings -> launchSettings()
                 R.id.about -> launchAbout()
                 else -> return@setOnMenuItemClickListener false
@@ -172,6 +173,11 @@ class MainActivity : SimpleActivity(), Calculator {
                 HistoryDialog(this, it, calc)
             }
         }
+    }
+
+    private fun launchUnitConverter() {
+        hideKeyboard()
+        startActivity(Intent(applicationContext, UnitConverterActivity::class.java))
     }
 
     private fun launchSettings() {
