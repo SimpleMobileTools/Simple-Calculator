@@ -134,12 +134,9 @@ class ConverterView @JvmOverloads constructor(
     }
 
     private fun switch() {
-        binding.topUnitText.text.also {
-            binding.topUnitText.text = binding.bottomUnitText.text
-            binding.bottomUnitText.text = it
-        }
-
         ::topUnit.swapWith(::bottomUnit)
+        updateBottomValue()
+        updateUnitLabels()
     }
 
     private fun updateUnitLabels() {
