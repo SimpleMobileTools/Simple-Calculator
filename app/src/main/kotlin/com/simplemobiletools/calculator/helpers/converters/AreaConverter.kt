@@ -4,6 +4,7 @@ import com.simplemobiletools.calculator.R
 
 object AreaConverter : Converter {
     override val nameResId: Int = R.string.unit_area
+    override val imageResId: Int = R.drawable.ic_box_vector
 
     sealed class Unit(nameResId: Int, factor: Double) : Converter.Unit(nameResId, factor) {
         data object SquareKilometer : Unit(

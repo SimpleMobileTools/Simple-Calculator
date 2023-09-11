@@ -4,6 +4,7 @@ import com.simplemobiletools.calculator.R
 
 object VolumeConverter : Converter {
     override val nameResId: Int = R.string.unit_volume
+    override val imageResId: Int = R.drawable.ic_drop_vector
 
     sealed class Unit(nameResId: Int, factor: Double) : Converter.Unit(nameResId, factor) {
         data object SquareKilometer : Unit(

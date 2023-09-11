@@ -10,6 +10,7 @@ interface Converter {
     }
 
     val nameResId: Int
+    val imageResId: Int
     val units: List<Unit>
     val defaultTopUnit: Unit
     val defaultBottomUnit: Unit

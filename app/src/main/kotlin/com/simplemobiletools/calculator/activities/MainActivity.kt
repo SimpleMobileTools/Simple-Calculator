@@ -177,7 +177,7 @@ class MainActivity : SimpleActivity(), Calculator {
 
     private fun launchUnitConverter() {
         hideKeyboard()
-        startActivity(Intent(applicationContext, UnitConverterActivity::class.java))
+        startActivity(Intent(applicationContext, UnitConverterPickerActivity::class.java))
     }
 
     private fun launchSettings() {

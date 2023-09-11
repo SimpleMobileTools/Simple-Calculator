@@ -8,4 +8,6 @@
     <dimen name="button_text_size">34sp</dimen>
     <dimen name="formula_text_size">20sp</dimen>
     <dimen name="display_text_size">40sp</dimen>
+
+    <dimen name="unit_type_size">128dp</dimen>
 </resources>

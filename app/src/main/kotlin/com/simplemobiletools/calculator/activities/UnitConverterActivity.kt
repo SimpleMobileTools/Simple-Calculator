@@ -17,10 +17,13 @@ import com.simplemobiletools.commons.helpers.MEDIUM_ALPHA_INT
 import com.simplemobiletools.commons.helpers.NavigationIcon
 
 class UnitConverterActivity : SimpleActivity() {
+    companion object {
+        const val EXTRA_CONVERTER_ID = "converter_id"
+    }
+
     private val binding by viewBinding(ActivityUnitConverterBinding::inflate)
-    private var storedTextColor = 0
     private var vibrateOnButtonPress = true
-    private var storedUseCommaAsDecimalMark = false
+    private lateinit var converter: Converter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         isMaterialActivity = true
@@ -29,13 +32,15 @@ class UnitConverterActivity : SimpleActivity() {
         appLaunched(BuildConfig.APPLICATION_ID)
         updateMaterialActivityViews(binding.unitConverterCoordinator, null, useTransparentNavigation = false, useTopSearchMenu = false)
         setupMaterialScrollListener(binding.nestedScrollview, binding.unitConverterToolbar)
-        storeStateVariables()
 
-        binding.viewUnitConverter.unitsTabLayout.onTabSelectionChanged(
-            tabSelectedAction = {
-                binding.viewUnitConverter.viewConverter.root.setConverter(Converter.ALL[it.id])
-            }
-        )
+        val converter = Converter.ALL.getOrNull(intent.getIntExtra(EXTRA_CONVERTER_ID, 0))
+
+        if (converter == null) {
+            finish()
+            return
+        }
+        this.converter = converter
+
         binding.viewUnitConverter.btnClear.setVibratingOnClickListener {
             binding.viewUnitConverter.viewConverter.root.clear()
         }
@@ -46,32 +51,21 @@ class UnitConverterActivity : SimpleActivity() {
             }
         }
 
-        Converter.ALL.forEachIndexed { index, converter ->
-            binding.viewUnitConverter.unitsTabLayout.newTab()
-                .setId(index)
-                .setText(converter.nameResId)
-                .apply { binding.viewUnitConverter.unitsTabLayout.addTab(this) }
-        }
-        binding.viewUnitConverter.viewConverter.root.setConverter(Converter.ALL.first())
+        binding.viewUnitConverter.viewConverter.root.setConverter(converter)
     }
 
     override fun onResume() {
         super.onResume()
 
         setupToolbar(binding.unitConverterToolbar, NavigationIcon.Cross)
-        binding.viewUnitConverter.unitsTabLayout.setBackgroundColor(getProperBackgroundColor())
         binding.viewUnitConverter.viewConverter.root.updateColors()
-        if (storedTextColor != config.textColor) {
-            binding.viewUnitConverter.converterHolder.let { updateViewColors(it, getProperTextColor()) }
-        }
+        binding.viewUnitConverter.converterHolder.let { updateViewColors(it, getProperTextColor()) }
 
         if (config.preventPhoneFromSleeping) {
             window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         }
 
-        if (storedUseCommaAsDecimalMark != config.useCommaAsDecimalMark) {
-            setupDecimalSeparator()
-        }
+        setupDecimalSeparator()
 
         vibrateOnButtonPress = config.vibrateOnButtonPress
 
@@ -90,16 +84,8 @@ class UnitConverterActivity : SimpleActivity() {
 
     override fun onPause() {
         super.onPause()
-        storeStateVariables()
         if (config.preventPhoneFromSleeping) {
             window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        }
-    }
-
-    private fun storeStateVariables() {
-        config.apply {
-            storedTextColor = textColor
-            storedUseCommaAsDecimalMark = useCommaAsDecimalMark
         }
     }
 
@@ -121,10 +107,9 @@ class UnitConverterActivity : SimpleActivity() {
     }
 
     private fun setupDecimalSeparator() {
-        var decimalSeparator = DOT
-        var groupingSeparator = COMMA
-        storedUseCommaAsDecimalMark = config.useCommaAsDecimalMark
-        if (storedUseCommaAsDecimalMark) {
+        val decimalSeparator: String
+        val groupingSeparator: String
+        if (config.useCommaAsDecimalMark) {
             decimalSeparator = COMMA
             groupingSeparator = DOT
         } else {

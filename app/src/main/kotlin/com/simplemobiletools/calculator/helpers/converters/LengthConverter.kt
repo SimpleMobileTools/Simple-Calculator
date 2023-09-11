@@ -3,8 +3,8 @@ package com.simplemobiletools.calculator.helpers.converters
 import com.simplemobiletools.calculator.R
 
 object LengthConverter : Converter {
-
     override val nameResId: Int = R.string.unit_length
+    override val imageResId: Int = R.drawable.ic_height_vector
 
     sealed class Unit(nameResId: Int, factor: Double) : Converter.Unit(nameResId, factor) {
         data object Kilometer : Unit(
