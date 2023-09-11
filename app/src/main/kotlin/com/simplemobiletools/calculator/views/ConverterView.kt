@@ -14,9 +14,7 @@ import com.simplemobiletools.calculator.helpers.DOT
 import com.simplemobiletools.calculator.helpers.NumberFormatHelper
 import com.simplemobiletools.calculator.helpers.converters.Converter
 import com.simplemobiletools.commons.dialogs.RadioGroupDialog
-import com.simplemobiletools.commons.extensions.applyColorFilter
-import com.simplemobiletools.commons.extensions.getProperPrimaryColor
-import com.simplemobiletools.commons.extensions.getProperTextColor
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.RadioItem
 import me.grantland.widget.AutofitHelper
 import kotlin.reflect.KMutableProperty0
@@ -46,8 +44,8 @@ class ConverterView @JvmOverloads constructor(
 
         binding.swapButton.setOnClickListener { switch() }
 
-        binding.topUnitName.setClickListenerForUnitSelector(::topUnit, ::bottomUnit)
-        binding.bottomUnitName.setClickListenerForUnitSelector(::bottomUnit, ::topUnit)
+        binding.topUnitHolder.setClickListenerForUnitSelector(::topUnit, ::bottomUnit)
+        binding.bottomUnitHolder.setClickListenerForUnitSelector(::bottomUnit, ::topUnit)
 
         updateColors()
     }
@@ -75,6 +73,7 @@ class ConverterView @JvmOverloads constructor(
             binding.bottomUnitName,
             ColorStateList.valueOf(context.getProperPrimaryColor())
         )
+        binding.topUnitHolder.setBackgroundColor(context.getProperBackgroundColor().lightenColor())
 
         binding.swapButton.applyColorFilter(context.getProperPrimaryColor())
     }
