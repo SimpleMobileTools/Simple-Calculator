@@ -7,87 +7,196 @@ object VolumeConverter : Converter {
     override val imageResId: Int = R.drawable.ic_drop_vector
 
     sealed class Unit(nameResId: Int, factor: Double) : Converter.Unit(nameResId, factor) {
-        data object SquareKilometer : Unit(
-            nameResId = R.string.unit_length_kilometer,
-            factor = 1000000.0
-        )
-
-        data object SquareMeter : Unit(
-            nameResId = R.string.unit_length_meter,
+        data object CubicMeter : Unit(
+            nameResId = R.string.unit_volume_cubic_meter,
             factor = 1.0
         )
 
-        data object SquareCentimeter : Unit(
-            nameResId = R.string.unit_length_centimeter,
-            factor = 0.0001
+        data object CubicDecimeter : Unit(
+            nameResId = R.string.unit_volume_cubic_decimeter,
+            factor = 0.001
         )
 
-        data object SquareMillimeter : Unit(
-            nameResId = R.string.unit_length_millimeter,
+        data object CubicCentimeter : Unit(
+            nameResId = R.string.unit_volume_cubic_centimeter,
             factor = 0.000001
         )
 
-        data object SquareMile : Unit(
-            nameResId = R.string.unit_length_mile,
-            factor = 2_589_988.110336
+        data object CubicMillimeter : Unit(
+            nameResId = R.string.unit_volume_cubic_millimeter,
+            factor = 0.000000001
         )
 
-        data object SquareYard : Unit(
-            nameResId = R.string.unit_length_yard,
-            factor = 0.83612736
+        data object Liter : Unit(
+            nameResId = R.string.unit_volume_liter,
+            factor = 0.001
         )
 
-        data object SquareMil : Unit(
-            nameResId = R.string.unit_length_mil,
-            factor = 0.00000000064516
+        data object Centiliter : Unit(
+            nameResId = R.string.unit_volume_centiliter,
+            factor = 0.0001
         )
 
-        data object SquareInch : Unit(
-            nameResId = R.string.unit_length_inch,
-            factor = 0.00064516
+        data object Deciliter : Unit(
+            nameResId = R.string.unit_volume_deciliter,
+            factor = 0.00001
         )
 
-        data object SquareRod : Unit(
-            nameResId = R.string.unit_length_rod,
-            factor = 25.29285264
+        data object Milliliter : Unit(
+            nameResId = R.string.unit_volume_milliliter,
+            factor = 0.000001
         )
 
-        data object Acre : Unit(
-            nameResId = R.string.unit_length_astronomical_unit,
-            factor = 4_046.8564224
+        data object AcreFoot : Unit(
+            nameResId = R.string.unit_volume_acre_foot,
+            factor = 1_233.48183754752
         )
 
-        data object Are : Unit(
-            nameResId = R.string.unit_length_parsec,
-            factor = 100.0
+        data object CubicYard : Unit(
+            nameResId = R.string.unit_volume_cubic_yard,
+            factor = 0.764554857984
         )
 
-        data object Dunam : Unit(
-            nameResId = R.string.unit_length_parsec,
-            factor = 1000.0
+        data object CubicFoot : Unit(
+            nameResId = R.string.unit_volume_cubic_foot,
+            factor = 0.028316846592
         )
 
-        data object Hectare : Unit(
-            nameResId = R.string.unit_length_light_year,
-            factor = 10_000.0
+        data object CubicInch : Unit(
+            nameResId = R.string.unit_volume_cubic_inch,
+            factor = 0.000016387064
+        )
+
+        data object BarrelUS : Unit(
+            nameResId = R.string.unit_volume_barrel_us,
+            factor = 0.119240471196
+        )
+
+        data object GallonUS : Unit(
+            nameResId = R.string.unit_volume_gallon_us,
+            factor = 0.003785411784
+        )
+
+        data object QuartUS : Unit(
+            nameResId = R.string.unit_volume_quart_us,
+            factor = 0.000946352946
+        )
+
+        data object PintUS : Unit(
+            nameResId = R.string.unit_volume_pint_us,
+            factor = 0.000473176473
+        )
+
+        data object GillUS : Unit(
+            nameResId = R.string.unit_volume_gill_us,
+            factor = 0.00011829411825
+        )
+
+        data object FluidOunceUS : Unit(
+            nameResId = R.string.unit_volume_fluid_ounce_us,
+            factor = 0.00003
+        )
+
+        data object DropUS : Unit(
+            nameResId = R.string.unit_volume_drop_us,
+            factor = 0.00000008214869322916
+        )
+
+        data object TeaspoonUS : Unit(
+            nameResId = R.string.unit_volume_teaspoon_us,
+            factor = 0.000005
+        )
+
+        data object TablespoonUS : Unit(
+            nameResId = R.string.unit_volume_tablespoon_us,
+            factor = 0.000015
+        )
+
+        data object CupUS : Unit(
+            nameResId = R.string.unit_volume_cup_us,
+            factor = 0.00024
+        )
+
+        data object BarrelImperial : Unit(
+            nameResId = R.string.unit_volume_barrel_imperial,
+            factor = 0.16365924
+        )
+
+        data object GallonImperial : Unit(
+            nameResId = R.string.unit_volume_gallon_imperial,
+            factor = 0.00454609
+        )
+
+        data object QuartImperial : Unit(
+            nameResId = R.string.unit_volume_quart_imperial,
+            factor = 0.0011365225
+        )
+
+        data object PintImperial : Unit(
+            nameResId = R.string.unit_volume_pint_imperial,
+            factor = 0.00056826125
+        )
+
+        data object GillImperial : Unit(
+            nameResId = R.string.unit_volume_gill_imperial,
+            factor = 0.0001420653125
+        )
+
+        data object FluidOunceImperial : Unit(
+            nameResId = R.string.unit_volume_fluid_ounce_imperial,
+            factor = 0.0000284130625
+        )
+
+        data object DropImperial : Unit(
+            nameResId = R.string.unit_volume_drop_imperial,
+            factor = 0.0000000986564670138
+        )
+
+        data object TeaspoonImperial : Unit(
+            nameResId = R.string.unit_volume_teaspoon_imperial,
+            factor = 0.00000591938802083
+        )
+
+        data object TablespoonImperial : Unit(
+            nameResId = R.string.unit_volume_tablespoon_imperial,
+            factor = 0.0000177581640625
         )
     }
 
     override val units: List<Unit> = listOf(
-        Unit.SquareKilometer,
-        Unit.SquareMeter,
-        Unit.SquareCentimeter,
-        Unit.SquareMillimeter,
-        Unit.SquareMile,
-        Unit.SquareYard,
-        Unit.SquareMil,
-        Unit.SquareInch,
-        Unit.SquareRod,
-        Unit.Acre,
-        Unit.Are,
-        Unit.Dunam,
-        Unit.Hectare,
+        Unit.CubicMeter,
+        Unit.CubicDecimeter,
+        Unit.CubicCentimeter,
+        Unit.CubicMillimeter,
+        Unit.Liter,
+        Unit.Centiliter,
+        Unit.Deciliter,
+        Unit.Milliliter,
+        Unit.AcreFoot,
+        Unit.CubicYard,
+        Unit.CubicFoot,
+        Unit.CubicInch,
+        Unit.BarrelUS,
+        Unit.GallonUS,
+        Unit.QuartUS,
+        Unit.PintUS,
+        Unit.GillUS,
+        Unit.FluidOunceUS,
+        Unit.DropUS,
+        Unit.TeaspoonUS,
+        Unit.TablespoonUS,
+        Unit.CupUS,
+        Unit.BarrelImperial,
+        Unit.GallonImperial,
+        Unit.QuartImperial,
+        Unit.PintImperial,
+        Unit.GillImperial,
+        Unit.FluidOunceImperial,
+        Unit.DropImperial,
+        Unit.TeaspoonImperial,
+        Unit.TablespoonImperial,
     )
-    override val defaultTopUnit: Unit = Unit.SquareKilometer
-    override val defaultBottomUnit: Unit = Unit.SquareMeter
+
+    override val defaultTopUnit: Unit = Unit.Liter
+    override val defaultBottomUnit: Unit = Unit.CubicMeter
 }
