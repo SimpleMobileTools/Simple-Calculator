@@ -7,7 +7,8 @@ interface Converter {
             AreaConverter,
             VolumeConverter,
             MassConverter,
-            TemperatureConverter
+            TemperatureConverter,
+            TimeConverter
         )
     }
 
