@@ -5,7 +5,8 @@ interface Converter {
         val ALL = listOf(
             LengthConverter,
             AreaConverter,
-            VolumeConverter
+            VolumeConverter,
+            MassConverter
         )
     }
 

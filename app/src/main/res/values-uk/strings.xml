@@ -87,6 +87,21 @@
     <string name="unit_volume_drop_imperial">Drop (Imperial)</string>
     <string name="unit_volume_teaspoon_imperial">Teaspoon (Imperial)</string>
     <string name="unit_volume_tablespoon_imperial">Tablespoon (Imperial)</string>
+    <string name="unit_mass">Mass</string>
+    <string name="unit_mass_gram">Gram</string>
+    <string name="unit_mass_kilogram">Kilogram</string>
+    <string name="unit_mass_milligram">Milligram</string>
+    <string name="unit_mass_microgram">Microgram</string>
+    <string name="unit_mass_tonne">Tonne</string>
+    <string name="unit_mass_pound">Pound</string>
+    <string name="unit_mass_ounce">Ounce</string>
+    <string name="unit_mass_grain">Grain</string>
+    <string name="unit_mass_dram">Dram</string>
+    <string name="unit_mass_stone">Stone</string>
+    <string name="unit_mass_long_ton">Long Ton</string>
+    <string name="unit_mass_short_ton">Short Ton</string>
+    <string name="unit_mass_carat">Carat</string>
+    <string name="unit_mass_carat_metric">Carat (Metric)</string>
     <!-- FAQ -->
     <string name="faq_1_title">Як працює кнопка C (Очистити)?</string>
     <string name="faq_1_text">Короткий натиск видалить один символ за раз. Тривалий натиск одразу очистить всі поля.</string>
