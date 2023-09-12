@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="formula_divide_by_zero_error">Error: division by zero</string>
-    <string name="clear_history">Clear</string>
-    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
-    <string name="app_launcher_name">Calculator</string>
-    <string name="history_empty">History is empty</string>
-    <string name="history_cleared">History has been cleared</string>
-    <string name="scientific_calculator">Scientific Calculator</string>
-    <string name="history">History</string>
-    <string name="faq_1_title">How does the C (Clear) button work\?</string>
-    <string name="app_name">Simple Calculator</string>
-    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="formula_divide_by_zero_error">هەڵە ڕوویدا: سفر دابەش نابێ بەسەر هیچدا</string>
+    <string name="clear_history">سڕینەوە</string>
+    <string name="faq_1_text">دەستدان لێی یەک ژمارە دەسڕێتەوە یەکجار، زیاتر دەسڕاگرتن خانەکە سفر دەکاتەوە.</string>
+    <string name="app_launcher_name">ژمێرەر</string>
+    <string name="history_empty">مێژوو بەتاڵە</string>
+    <string name="history_cleared">مێژوو خاوێنکرایەوە</string>
+    <string name="scientific_calculator">ژمێرەری زانستی</string>
+    <string name="history">مێژوو</string>
+    <string name="faq_1_title">دوگمەی C (سڕینەوە) چۆن کارەکات؟</string>
+    <string name="app_name">ژمێرەر</string>
+    <string name="use_comma_as_decimal_mark">بەکارهێنانی فاریزە وەک نیشانەی دەیان</string>
+    <string name="vibrate_on_button_press">لەرزین لەکاتی دەستنان بە هێماکان</string>
 </resources>
