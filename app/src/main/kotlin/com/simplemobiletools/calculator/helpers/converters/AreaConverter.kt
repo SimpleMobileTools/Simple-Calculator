@@ -37,14 +37,19 @@ object AreaConverter : Converter {
             factor = 0.83612736
         )
 
-        data object SquareMil : Unit(
-            nameResId = R.string.unit_area_square_mil,
-            factor = 0.00000000064516
+        data object SquareFoot : Unit(
+            nameResId = R.string.unit_area_square_foot,
+            factor = 0.09290304
         )
 
         data object SquareInch : Unit(
             nameResId = R.string.unit_area_square_inch,
             factor = 0.00064516
+        )
+
+        data object SquareMil : Unit(
+            nameResId = R.string.unit_area_square_mil,
+            factor = 0.00000000064516
         )
 
         data object SquareRod : Unit(
@@ -80,8 +85,9 @@ object AreaConverter : Converter {
         Unit.SquareMillimeter,
         Unit.SquareMile,
         Unit.SquareYard,
-        Unit.SquareMil,
+        Unit.SquareFoot,
         Unit.SquareInch,
+        Unit.SquareMil,
         Unit.SquareRod,
         Unit.Acre,
         Unit.Are,
