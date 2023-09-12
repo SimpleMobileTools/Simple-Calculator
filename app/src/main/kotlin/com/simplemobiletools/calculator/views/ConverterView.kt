@@ -173,7 +173,7 @@ class ConverterView @JvmOverloads constructor(
             val items = ArrayList(converter!!.units.mapIndexed { index, unit ->
                 RadioItem(index, context.getString(unit.nameResId), unit)
             })
-            RadioGroupDialog(context as Activity, items) {
+            RadioGroupDialog(context as Activity, items, converter!!.units.indexOf(propertyToChange.get())) {
                 val unit = it as Converter.Unit
                 if (unit == otherProperty.get()) {
                     switch()
