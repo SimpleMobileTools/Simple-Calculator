@@ -55,7 +55,7 @@ class ConverterView @JvmOverloads constructor(
         topUnit = converter.defaultTopUnit
         bottomUnit = converter.defaultBottomUnit
 
-        binding.topUnitText.text = "1"
+        binding.topUnitText.text = "0"
         updateBottomValue()
         updateUnitLabels()
     }
