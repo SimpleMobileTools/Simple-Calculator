@@ -102,6 +102,16 @@
     <string name="unit_mass_short_ton">Short Ton</string>
     <string name="unit_mass_carat">Carat</string>
     <string name="unit_mass_carat_metric">Carat (Metric)</string>
+    <string name="unit_temperature">Temperature</string>
+    <string name="unit_temperature_celsius">Celsius</string>
+    <string name="unit_temperature_delisle">Delisle</string>
+    <string name="unit_temperature_fahrenheit">Fahrenheit</string>
+    <string name="unit_temperature_newton">Newton</string>
+    <string name="unit_temperature_rankine">Rankine</string>
+    <string name="unit_temperature_reaumur">Réaumur</string>
+    <string name="unit_temperature_romer">Rømer</string>
+    <string name="unit_temperature_gas_mark">Regulo Gas Mark</string>
+    <string name="unit_temperature_kelvin">Kelvin</string>
     <!-- FAQ -->
     <string name="faq_1_title">C(ക്ലിയർ ) ബട്ടൺ പ്രവർത്തിക്കുന്നത് എങ്ങനെ\?</string>
     <string name="faq_1_text">ടാപ്പ് ചെയ്യുമ്പോൾ ഒരു സമയം ഒരു പ്രതീകത്തെ നീക്കംചെയ്യും. ദീർഘനേരം അമർത്തിയാൽ എല്ലാ ഫീൽഡുകളും പുനഃസജ്ജമാക്കും.</string>

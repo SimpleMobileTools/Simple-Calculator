@@ -6,7 +6,8 @@ interface Converter {
             LengthConverter,
             AreaConverter,
             VolumeConverter,
-            MassConverter
+            MassConverter,
+            TemperatureConverter
         )
     }
 
@@ -17,13 +18,17 @@ interface Converter {
     val defaultBottomUnit: Unit
 
     fun convert(from: ValueWithUnit<Unit>, to: Unit): ValueWithUnit<Unit> {
-        return ValueWithUnit(from.value * from.unit.factor / to.factor, to)
+        return ValueWithUnit(to.fromBase(from.unit.toBase(from.value)), to)
     }
 
     open class Unit(
         val nameResId: Int,
         val factor: Double
     ) {
+
+        open fun toBase(value: Double) = value * factor
+
+        open fun fromBase(value: Double) = value / factor
 
         fun withValue(value: Double) = ValueWithUnit(value, this)
     }
