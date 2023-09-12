@@ -52,12 +52,13 @@ class UnitConverterActivity : SimpleActivity() {
         }
 
         binding.viewUnitConverter.viewConverter.root.setConverter(converter)
+        binding.unitConverterToolbar.setTitle(converter.nameResId)
     }
 
     override fun onResume() {
         super.onResume()
 
-        setupToolbar(binding.unitConverterToolbar, NavigationIcon.Cross)
+        setupToolbar(binding.unitConverterToolbar, NavigationIcon.Arrow)
         binding.viewUnitConverter.viewConverter.root.updateColors()
         binding.viewUnitConverter.converterHolder.let { updateViewColors(it, getProperTextColor()) }
 
