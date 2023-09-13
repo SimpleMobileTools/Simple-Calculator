@@ -6,10 +6,11 @@ object TemperatureConverter : Converter {
     override val nameResId: Int = R.string.unit_temperature
     override val imageResId: Int = R.drawable.ic_thermostat_vector
 
-    sealed class Unit(nameResId: Int, factor: Double) : Converter.Unit(nameResId, factor) {
+    sealed class Unit(nameResId: Int, formatResId: Int, factor: Double) : Converter.Unit(nameResId, formatResId, factor) {
 
         data object Celsius : Unit(
             nameResId = R.string.unit_temperature_celsius,
+            formatResId = R.string.unit_temperature_celsius_format,
             factor = 1.0
         ) {
             const val KELVIN_OFFSET = 273.15
@@ -20,6 +21,7 @@ object TemperatureConverter : Converter {
 
         data object Delisle : Unit(
             nameResId = R.string.unit_temperature_delisle,
+            formatResId = R.string.unit_temperature_delisle_format,
             factor = 2.0 / 3
         ) {
             private const val KELVIN_OFFSET = 373.15
@@ -31,6 +33,7 @@ object TemperatureConverter : Converter {
 
         data object Fahrenheit : Unit(
             nameResId = R.string.unit_temperature_fahrenheit,
+            formatResId = R.string.unit_temperature_fahrenheit_format,
             factor = 9.0 / 5
         ) {
             private const val CELSIUS_OFFSET = 32
@@ -42,6 +45,7 @@ object TemperatureConverter : Converter {
 
         data object Newton : Unit(
             nameResId = R.string.unit_temperature_newton,
+            formatResId = R.string.unit_temperature_newton_format,
             factor = 100.0 / 33
         ) {
             private const val KELVIN_OFFSET = Celsius.KELVIN_OFFSET
@@ -53,11 +57,13 @@ object TemperatureConverter : Converter {
 
         data object Rankine : Unit(
             nameResId = R.string.unit_temperature_rankine,
+            formatResId = R.string.unit_temperature_rankine_format,
             factor = 5.0 / 9
         )
 
         data object Reaumur : Unit(
             nameResId = R.string.unit_temperature_reaumur,
+            formatResId = R.string.unit_temperature_reaumur_format,
             factor =  5.0 / 4
         ) {
             private const val KELVIN_OFFSET = Celsius.KELVIN_OFFSET
@@ -69,6 +75,7 @@ object TemperatureConverter : Converter {
 
         data object Romer : Unit(
             nameResId = R.string.unit_temperature_romer,
+            formatResId = R.string.unit_temperature_romer_format,
             factor = 40.0 / 21
         ) {
             private const val KELVIN_OFFSET = Celsius.KELVIN_OFFSET
@@ -81,6 +88,7 @@ object TemperatureConverter : Converter {
 
         data object GasMark : Unit(
             nameResId = R.string.unit_temperature_gas_mark,
+            formatResId = R.string.unit_temperature_gas_mark_format,
             factor = 25.0
         ) {
             private const val FAHRENHEIT_OFFSET = 250
@@ -92,6 +100,7 @@ object TemperatureConverter : Converter {
 
         data object Kelvin : Unit(
             nameResId = R.string.unit_temperature_kelvin,
+            formatResId = R.string.unit_temperature_kelvin_format,
             factor = 1.0
         )
     }

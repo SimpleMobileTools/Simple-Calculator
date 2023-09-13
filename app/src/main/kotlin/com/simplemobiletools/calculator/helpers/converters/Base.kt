@@ -1,5 +1,8 @@
 package com.simplemobiletools.calculator.helpers.converters
 
+import android.content.Context
+import com.simplemobiletools.calculator.R
+
 interface Converter {
     companion object {
         val ALL = listOf(
@@ -24,6 +27,7 @@ interface Converter {
 
     open class Unit(
         val nameResId: Int,
+        val formatResId: Int,
         val factor: Double
     ) {
 
@@ -32,6 +36,14 @@ interface Converter {
         open fun fromBase(value: Double) = value / factor
 
         fun withValue(value: Double) = ValueWithUnit(value, this)
+
+        fun format(context: Context, value: String) = context.getString(formatResId, value)
+
+        fun getNameWithSymbol(context: Context) = context.getString(
+            R.string.unit_name_with_symbol_format,
+            context.getString(nameResId),
+            format(context, "").trim()
+        )
     }
 }
 
