@@ -51,6 +51,14 @@ class ConverterView @JvmOverloads constructor(
 
         binding.topUnitHolder.setClickListenerForUnitSelector(::topUnit, ::bottomUnit)
         binding.bottomUnitHolder.setClickListenerForUnitSelector(::bottomUnit, ::topUnit)
+        binding.topUnitHolder.setOnLongClickListener {
+            context.copyToClipboard(binding.topUnitText.text.toString())
+            true
+        }
+        binding.bottomUnitHolder.setOnLongClickListener {
+            context.copyToClipboard(binding.bottomUnitText.text.toString())
+            true
+        }
 
         updateColors()
     }
