@@ -10,5 +10,5 @@
     <dimen name="display_text_size">40sp</dimen>
 
     <dimen name="unit_type_size">120dp</dimen>
-    <dimen name="unit_symbol_size">64dp</dimen>
+    <dimen name="unit_symbol_size">48dp</dimen>
 </resources>
