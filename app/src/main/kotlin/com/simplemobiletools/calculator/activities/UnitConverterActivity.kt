@@ -42,7 +42,11 @@ class UnitConverterActivity : SimpleActivity() {
         this.converter = converter
 
         binding.viewUnitConverter.btnClear.setVibratingOnClickListener {
+            binding.viewUnitConverter.viewConverter.root.deleteCharacter()
+        }
+        binding.viewUnitConverter.btnClear.setOnLongClickListener {
             binding.viewUnitConverter.viewConverter.root.clear()
+            true
         }
 
         getButtonIds().forEach {

@@ -9,7 +9,6 @@ import android.graphics.drawable.RippleDrawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.widget.TextViewCompat
 import com.simplemobiletools.calculator.R
@@ -105,6 +104,19 @@ class ConverterView @JvmOverloads constructor(
         binding.bottomUnitText.text = "0"
     }
 
+    fun deleteCharacter() {
+        var newValue = binding.topUnitText.text.dropLast(1)
+        newValue = newValue.trimEnd(groupingSeparator.single())
+        if (newValue == "") {
+            newValue = "0"
+        }
+
+        val value = formatter.removeGroupingSeparator(newValue.toString()).toDouble()
+        binding.topUnitText.text = formatter.doubleToString(value)
+
+        updateBottomValue()
+    }
+
     fun numpadClicked(id: Int) {
         when (id) {
             R.id.btn_decimal -> decimalClicked()
@@ -183,10 +195,6 @@ class ConverterView @JvmOverloads constructor(
             binding.topUnitText.text = "0"
             binding.bottomUnitText.text = "0"
         }
-    }
-
-    private fun TextView.getValue(): Double {
-        return formatter.removeGroupingSeparator(text.toString()).toDouble()
     }
 
     private fun <T> KMutableProperty0<T>.swapWith(other: KMutableProperty0<T>) {
