@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textAlignment="center"
+        android:singleLine="true"
         tools:text="Temperature" />
 
 </LinearLayout>
