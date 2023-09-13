@@ -3,13 +3,11 @@ package com.simplemobiletools.calculator.activities
 import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
-import com.simplemobiletools.calculator.BuildConfig
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.adapters.UnitTypesAdapter
 import com.simplemobiletools.calculator.databinding.ActivityUnitConverterPickerBinding
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.helpers.converters.Converter
-import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.extensions.viewBinding
 import com.simplemobiletools.commons.helpers.NavigationIcon
 import com.simplemobiletools.commons.views.AutoGridLayoutManager
@@ -21,7 +19,6 @@ class UnitConverterPickerActivity : SimpleActivity() {
         isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        appLaunched(BuildConfig.APPLICATION_ID)
         updateMaterialActivityViews(binding.unitConverterPickerCoordinator, null, useTransparentNavigation = false, useTopSearchMenu = false)
         setupMaterialScrollListener(binding.unitTypesGrid, binding.unitConverterPickerToolbar)
 

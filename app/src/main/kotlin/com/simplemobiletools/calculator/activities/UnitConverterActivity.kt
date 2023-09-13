@@ -4,14 +4,15 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import androidx.core.content.res.ResourcesCompat
-import com.simplemobiletools.calculator.BuildConfig
 import com.simplemobiletools.calculator.databinding.ActivityUnitConverterBinding
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.extensions.updateViewColors
 import com.simplemobiletools.calculator.helpers.COMMA
 import com.simplemobiletools.calculator.helpers.DOT
 import com.simplemobiletools.calculator.helpers.converters.Converter
-import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.extensions.getProperTextColor
+import com.simplemobiletools.commons.extensions.performHapticFeedback
+import com.simplemobiletools.commons.extensions.viewBinding
 import com.simplemobiletools.commons.helpers.LOWER_ALPHA_INT
 import com.simplemobiletools.commons.helpers.MEDIUM_ALPHA_INT
 import com.simplemobiletools.commons.helpers.NavigationIcon
@@ -29,7 +30,6 @@ class UnitConverterActivity : SimpleActivity() {
         isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        appLaunched(BuildConfig.APPLICATION_ID)
         updateMaterialActivityViews(binding.unitConverterCoordinator, null, useTransparentNavigation = false, useTopSearchMenu = false)
         setupMaterialScrollListener(binding.nestedScrollview, binding.unitConverterToolbar)
 
