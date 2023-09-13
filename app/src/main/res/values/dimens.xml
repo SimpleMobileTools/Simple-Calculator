@@ -11,4 +11,5 @@
 
     <dimen name="unit_type_size">120dp</dimen>
     <dimen name="unit_symbol_size">48dp</dimen>
+    <dimen name="unit_switch_button_size">64dp</dimen>
 </resources>

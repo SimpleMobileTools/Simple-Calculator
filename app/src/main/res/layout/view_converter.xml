@@ -59,10 +59,9 @@
 
     <ImageView
         android:id="@+id/swap_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/unit_switch_button_size"
+        android:layout_height="@dimen/unit_switch_button_size"
         android:layout_gravity="center"
-        android:importantForAccessibility="no"
         android:padding="@dimen/activity_margin"
         android:layout_weight="0.5"
         android:src="@drawable/ic_swap_vertical_vector" />
