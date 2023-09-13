@@ -61,6 +61,7 @@
         android:id="@+id/swap_button"
         android:layout_width="@dimen/unit_switch_button_size"
         android:layout_height="@dimen/unit_switch_button_size"
+        android:background="@drawable/ripple_all_corners"
         android:layout_gravity="center"
         android:padding="@dimen/activity_margin"
         android:layout_weight="0.5"
