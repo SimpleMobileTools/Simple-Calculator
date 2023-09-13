@@ -3,6 +3,9 @@ package com.simplemobiletools.calculator.views
 import android.app.Activity
 import android.content.Context
 import android.content.res.ColorStateList
+import android.graphics.drawable.GradientDrawable
+import android.graphics.drawable.LayerDrawable
+import android.graphics.drawable.RippleDrawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.LinearLayout
@@ -87,8 +90,12 @@ class ConverterView @JvmOverloads constructor(
         binding.topUnitHolder.setBackgroundColor(context.getProperBackgroundColor().lightenColor())
         binding.swapButton.applyColorFilter(context.getProperPrimaryColor())
 
+        val drawable = ResourcesCompat.getDrawable(resources, com.simplemobiletools.commons.R.drawable.pill_background, context.theme) as RippleDrawable
+        val bgLayerList = drawable.findDrawableByLayerId(com.simplemobiletools.commons.R.id.button_pill_background_holder) as LayerDrawable
+        val bgLayer = bgLayerList.findDrawableByLayerId(com.simplemobiletools.commons.R.id.button_pill_background_shape) as GradientDrawable
+        bgLayer.cornerRadius = context.resources.getDimension(com.simplemobiletools.commons.R.dimen.rounded_corner_radius_big)
         listOf(binding.topUnitSymbol, binding.bottomUnitSymbol).forEach {
-            it.background = ResourcesCompat.getDrawable(resources, com.simplemobiletools.commons.R.drawable.pill_background, context.theme)
+            it.background = drawable
             it.background?.alpha = MEDIUM_ALPHA_INT
         }
     }

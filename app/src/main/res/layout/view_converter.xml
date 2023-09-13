@@ -50,6 +50,7 @@
             android:padding="@dimen/small_margin"
             android:singleLine="true"
             android:textAlignment="gravity"
+            android:textSize="@dimen/big_text_size"
             app:layout_constraintBottom_toBottomOf="@+id/top_unit_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/top_unit_text" />
@@ -110,6 +111,7 @@
             android:padding="@dimen/small_margin"
             android:singleLine="true"
             android:textAlignment="gravity"
+            android:textSize="@dimen/big_text_size"
             app:layout_constraintBottom_toBottomOf="@+id/bottom_unit_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/bottom_unit_text" />
