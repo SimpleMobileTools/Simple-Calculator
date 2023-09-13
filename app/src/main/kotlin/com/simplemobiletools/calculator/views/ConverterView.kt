@@ -89,7 +89,9 @@ class ConverterView @JvmOverloads constructor(
         binding.topUnitHolder.setBackgroundColor(context.getProperBackgroundColor().lightenColor())
         binding.swapButton.applyColorFilter(context.getProperPrimaryColor())
 
-        val drawable = ResourcesCompat.getDrawable(resources, com.simplemobiletools.commons.R.drawable.pill_background, context.theme) as RippleDrawable
+        val drawable = ResourcesCompat.getDrawable(
+            resources, com.simplemobiletools.commons.R.drawable.pill_background, context.theme
+        )?.constantState?.newDrawable()?.mutate() as RippleDrawable
         val bgLayerList = drawable.findDrawableByLayerId(com.simplemobiletools.commons.R.id.button_pill_background_holder) as LayerDrawable
         val bgLayer = bgLayerList.findDrawableByLayerId(com.simplemobiletools.commons.R.id.button_pill_background_shape) as GradientDrawable
         bgLayer.cornerRadius = context.resources.getDimension(com.simplemobiletools.commons.R.dimen.rounded_corner_radius_big)
