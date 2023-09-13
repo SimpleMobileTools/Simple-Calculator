@@ -4,7 +4,7 @@
     android:layout_height="@dimen/unit_type_size"
     android:id="@+id/unit_background"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="@dimen/small_margin"
+    android:layout_marginTop="@dimen/small_margin"
     android:background="@drawable/unit_type_background"
     android:padding="@dimen/normal_margin"
     android:gravity="center"
