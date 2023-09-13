@@ -32,6 +32,8 @@ class UnitConverterPickerActivity : SimpleActivity() {
                 startActivity(this)
             }
         }
+
+        binding.unitConverterPickerToolbar.setTitle(R.string.unit_converter)
     }
 
     override fun onResume() {
