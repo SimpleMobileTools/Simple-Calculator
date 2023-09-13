@@ -27,7 +27,7 @@ interface Converter {
 
     open class Unit(
         val nameResId: Int,
-        val formatResId: Int,
+        val symbolResId: Int,
         val factor: Double
     ) {
 
@@ -37,12 +37,10 @@ interface Converter {
 
         fun withValue(value: Double) = ValueWithUnit(value, this)
 
-        fun format(context: Context, value: String) = context.getString(formatResId, value)
-
         fun getNameWithSymbol(context: Context) = context.getString(
             R.string.unit_name_with_symbol_format,
             context.getString(nameResId),
-            format(context, "").trim()
+            context.getString(symbolResId)
         )
     }
 }

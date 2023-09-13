@@ -6,88 +6,88 @@ object MassConverter : Converter {
     override val nameResId: Int = R.string.unit_mass
     override val imageResId: Int = R.drawable.ic_scale_vector
 
-    sealed class Unit(nameResId: Int, formatResId: Int, factor: Double) : Converter.Unit(nameResId, formatResId, factor) {
+    sealed class Unit(nameResId: Int, symbolResId: Int, factor: Double) : Converter.Unit(nameResId, symbolResId, factor) {
         data object Gram : Unit(
             nameResId = R.string.unit_mass_gram,
-            formatResId = R.string.unit_mass_gram_format,
+            symbolResId = R.string.unit_mass_gram_symbol,
             factor = 0.001
         )
 
         data object Kilogram : Unit(
             nameResId = R.string.unit_mass_kilogram,
-            formatResId = R.string.unit_mass_kilogram_format,
+            symbolResId = R.string.unit_mass_kilogram_symbol,
             factor = 1.0
         )
 
         data object Milligram : Unit(
             nameResId = R.string.unit_mass_milligram,
-            formatResId = R.string.unit_mass_milligram_format,
+            symbolResId = R.string.unit_mass_milligram_symbol,
             factor = 0.000001
         )
 
         data object Microgram : Unit(
             nameResId = R.string.unit_mass_microgram,
-            formatResId = R.string.unit_mass_microgram_format,
+            symbolResId = R.string.unit_mass_microgram_symbol,
             factor = 0.000000001
         )
 
         data object Tonne : Unit(
             nameResId = R.string.unit_mass_tonne,
-            formatResId = R.string.unit_mass_tonne_format,
+            symbolResId = R.string.unit_mass_tonne_symbol,
             factor = 1_000.0
         )
 
         data object Pound : Unit(
             nameResId = R.string.unit_mass_pound,
-            formatResId = R.string.unit_mass_pound_format,
-            factor =  0.45359237
+            symbolResId = R.string.unit_mass_pound_symbol,
+            factor = 0.45359237
         )
 
         data object Ounce : Unit(
             nameResId = R.string.unit_mass_ounce,
-            formatResId = R.string.unit_mass_ounce_format,
+            symbolResId = R.string.unit_mass_ounce_symbol,
             factor = 0.028349523125
         )
 
         data object Grain : Unit(
             nameResId = R.string.unit_mass_grain,
-            formatResId = R.string.unit_mass_grain_format,
+            symbolResId = R.string.unit_mass_grain_symbol,
             factor = 0.00006479891
         )
 
         data object Dram : Unit(
             nameResId = R.string.unit_mass_dram,
-            formatResId = R.string.unit_mass_dram_format,
+            symbolResId = R.string.unit_mass_dram_symbol,
             factor = 0.0017718451953125
         )
 
         data object Stone : Unit(
             nameResId = R.string.unit_mass_stone,
-            formatResId = R.string.unit_mass_stone_format,
+            symbolResId = R.string.unit_mass_stone_symbol,
             factor = 6.35029318
         )
 
         data object LongTon : Unit(
             nameResId = R.string.unit_mass_long_ton,
-            formatResId = R.string.unit_mass_long_ton_format,
+            symbolResId = R.string.unit_mass_long_ton_symbol,
             factor = 1_016.0469088
         )
 
         data object ShortTon : Unit(
             nameResId = R.string.unit_mass_short_ton,
-            formatResId = R.string.unit_mass_short_ton_format,
+            symbolResId = R.string.unit_mass_short_ton_symbol,
             factor = 907.18474
         )
 
         data object Carat : Unit(
             nameResId = R.string.unit_mass_carat,
-            formatResId = R.string.unit_mass_carat_format,
+            symbolResId = R.string.unit_mass_carat_symbol,
             factor = 0.0002051965483
         )
 
         data object CaratMetric : Unit(
             nameResId = R.string.unit_mass_carat_metric,
-            formatResId = R.string.unit_mass_carat_metric_format,
+            symbolResId = R.string.unit_mass_carat_metric_symbol,
             factor = 0.0002
         )
     }
