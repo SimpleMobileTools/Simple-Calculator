@@ -17,7 +17,6 @@ class UnitTypesAdapter (val activity: SimpleActivity, val items: List<Converter>
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         ViewHolder(ItemUnitTypeBinding.inflate(activity.layoutInflater, parent, false))
 
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         holder.bindView(item, position)
