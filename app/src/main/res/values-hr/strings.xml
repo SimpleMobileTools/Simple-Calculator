@@ -93,13 +93,8 @@
     <string name="unit_mass_carat_metric">Karat (Metrični)</string>
     <string name="unit_temperature">Temperatura</string>
     <string name="unit_temperature_celsius">Celzijus</string>
-    <string name="unit_temperature_delisle">Delisle</string>
     <string name="unit_temperature_fahrenheit">Fahrenheit</string>
-    <string name="unit_temperature_newton">Newton</string>
     <string name="unit_temperature_rankine">Rankine</string>
-    <string name="unit_temperature_reaumur">Réaumur</string>
-    <string name="unit_temperature_romer">Rømer</string>
-    <string name="unit_temperature_gas_mark">Regulo Gas Mark</string>
     <string name="unit_temperature_kelvin">Kelvin</string>
     <string name="unit_time">Vrijeme</string>
     <string name="unit_time_hour">Sat</string>

@@ -75,13 +75,8 @@
     <string name="unit_mass_carat_symbol">kt</string>
     <string name="unit_mass_carat_metric_symbol">ct</string>
     <string name="unit_temperature_celsius_symbol">°C</string>
-    <string name="unit_temperature_delisle_symbol">°De</string>
     <string name="unit_temperature_fahrenheit_symbol">°F</string>
-    <string name="unit_temperature_newton_symbol">°N</string>
     <string name="unit_temperature_rankine_symbol">°R</string>
-    <string name="unit_temperature_reaumur_symbol">°Ré</string>
-    <string name="unit_temperature_romer_symbol">°Rø</string>
-    <string name="unit_temperature_gas_mark_symbol">GM</string>
     <string name="unit_temperature_kelvin_symbol">K</string>
     <string name="unit_time_hour_symbol">h</string>
     <string name="unit_time_minute_symbol">m</string>

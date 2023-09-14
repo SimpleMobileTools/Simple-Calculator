@@ -93,13 +93,8 @@
     <string name="unit_mass_carat_metric">Карат (Метричнки)</string>
     <string name="unit_temperature">Температуре</string>
     <string name="unit_temperature_celsius">Целзијус</string>
-    <string name="unit_temperature_delisle">Делил</string>
     <string name="unit_temperature_fahrenheit">Фаренхајт</string>
-    <string name="unit_temperature_newton">Њутн</string>
     <string name="unit_temperature_rankine">Ранкин</string>
-    <string name="unit_temperature_reaumur">Реамур</string>
-    <string name="unit_temperature_romer">Ромер</string>
-    <string name="unit_temperature_gas_mark">Регуло гас марк</string>
     <string name="unit_temperature_kelvin">Келвин</string>
     <string name="unit_time">Време</string>
     <string name="unit_time_hour">Сат</string>
