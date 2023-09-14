@@ -3,6 +3,8 @@ package com.simplemobiletools.calculator.views
 import android.app.Activity
 import android.content.Context
 import android.content.res.ColorStateList
+import android.graphics.BlendMode
+import android.graphics.PorterDuff
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.LayerDrawable
 import android.graphics.drawable.RippleDrawable
@@ -87,7 +89,7 @@ class ConverterView @JvmOverloads constructor(
             )
         }
 
-        binding.topUnitHolder.setBackgroundColor(context.getProperPrimaryColor().lightenColor().adjustAlpha(LOWER_ALPHA))
+        binding.topUnitHolder.backgroundTintList = ColorStateList.valueOf(context.getProperPrimaryColor().lightenColor().adjustAlpha(LOWER_ALPHA))
         binding.swapButton.applyColorFilter(context.getProperPrimaryColor())
 
         val drawable = ResourcesCompat.getDrawable(

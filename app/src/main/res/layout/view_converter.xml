@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:paddingStart="@dimen/activity_margin"
         android:paddingEnd="@dimen/activity_margin"
+        android:background="@drawable/colored_ripple"
         android:orientation="vertical"
         android:layout_weight="3">
 
@@ -72,6 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="@dimen/activity_margin"
+        android:background="@drawable/ripple_background"
         android:paddingEnd="@dimen/activity_margin"
         android:orientation="vertical"
         android:layout_weight="3">
