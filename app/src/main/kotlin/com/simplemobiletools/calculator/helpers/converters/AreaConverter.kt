@@ -55,34 +55,10 @@ object AreaConverter : Converter {
             factor = 0.00064516
         )
 
-        data object SquareMil : Unit(
-            nameResId = R.string.unit_area_square_mil,
-            symbolResId = R.string.unit_area_square_mil_symbol,
-            factor = 0.00000000064516
-        )
-
-        data object SquareRod : Unit(
-            nameResId = R.string.unit_area_square_rod,
-            symbolResId = R.string.unit_area_square_rod_symbol,
-            factor = 25.29285264
-        )
-
         data object Acre : Unit(
             nameResId = R.string.unit_area_acre,
             symbolResId = R.string.unit_area_acre_symbol,
             factor = 4_046.8564224
-        )
-
-        data object Are : Unit(
-            nameResId = R.string.unit_area_are,
-            symbolResId = R.string.unit_area_are_symbol,
-            factor = 100.0
-        )
-
-        data object Dunam : Unit(
-            nameResId = R.string.unit_area_dunam,
-            symbolResId = R.string.unit_area_dunam_symbol,
-            factor = 1000.0
         )
 
         data object Hectare : Unit(
@@ -101,11 +77,7 @@ object AreaConverter : Converter {
         Unit.SquareYard,
         Unit.SquareFoot,
         Unit.SquareInch,
-        Unit.SquareMil,
-        Unit.SquareRod,
         Unit.Acre,
-        Unit.Are,
-        Unit.Dunam,
         Unit.Hectare,
     )
     override val defaultTopUnit: Unit = Unit.SquareKilometer

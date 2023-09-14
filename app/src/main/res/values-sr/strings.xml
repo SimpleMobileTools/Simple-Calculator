@@ -40,12 +40,8 @@
     <string name="unit_area_square_mile">Квадратна милја</string>
     <string name="unit_area_square_yard">Квадратни јард</string>
     <string name="unit_area_square_foot">Квадратна стопа</string>
-    <string name="unit_area_square_mil">Квадратни мил</string>
     <string name="unit_area_square_inch">Квадратни палац</string>
-    <string name="unit_area_square_rod">Квадратна шипка</string>
     <string name="unit_area_acre">Акер</string>
-    <string name="unit_area_are">Ар</string>
-    <string name="unit_area_dunam">Дунам</string>
     <string name="unit_area_hectare">Хектар</string>
     <string name="unit_volume">Запремина</string>
     <string name="unit_volume_cubic_meter">Кубни метар</string>

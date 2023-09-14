@@ -26,12 +26,8 @@
     <string name="unit_area_square_mile_symbol">sq mi</string>
     <string name="unit_area_square_yard_symbol">sq yd</string>
     <string name="unit_area_square_foot_symbol">sq ft</string>
-    <string name="unit_area_square_mil_symbol">sq mil</string>
     <string name="unit_area_square_inch_symbol">sq in</string>
-    <string name="unit_area_square_rod_symbol">sq rd</string>
     <string name="unit_area_acre_symbol">ac</string>
-    <string name="unit_area_are_symbol">a</string>
-    <string name="unit_area_dunam_symbol">dunam</string>
     <string name="unit_area_hectare_symbol">ha</string>
     <string name="unit_volume_cubic_meter_symbol">m³</string>
     <string name="unit_volume_cubic_decimeter_symbol">dm³</string>

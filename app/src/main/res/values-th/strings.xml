@@ -43,12 +43,8 @@
     <string name="unit_area_square_mile">Square Mile</string>
     <string name="unit_area_square_yard">Square Yard</string>
     <string name="unit_area_square_foot">Square Foot</string>
-    <string name="unit_area_square_mil">Square Mil</string>
     <string name="unit_area_square_inch">Square Inch</string>
-    <string name="unit_area_square_rod">Square Rod</string>
     <string name="unit_area_acre">Acre</string>
-    <string name="unit_area_are">Are</string>
-    <string name="unit_area_dunam">Dunam</string>
     <string name="unit_area_hectare">Hectare</string>
     <string name="unit_volume">Volume</string>
     <string name="unit_volume_cubic_meter">Cubic Meter</string>

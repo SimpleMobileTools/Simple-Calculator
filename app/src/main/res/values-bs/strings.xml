@@ -40,12 +40,8 @@
     <string name="unit_area_square_mile">Kvadratna milja</string>
     <string name="unit_area_square_yard">Kvadratni jard</string>
     <string name="unit_area_square_foot">Kvadratna stopa</string>
-    <string name="unit_area_square_mil">Kvadratni Mil</string>
     <string name="unit_area_square_inch">Kvadratni palac</string>
-    <string name="unit_area_square_rod">Kvadratni Rod</string>
     <string name="unit_area_acre">Aker</string>
-    <string name="unit_area_are">Ar</string>
-    <string name="unit_area_dunam">Dunam</string>
     <string name="unit_area_hectare">Hektar</string>
     <string name="unit_volume">Zapremina</string>
     <string name="unit_volume_cubic_meter">Kubni metar</string>
