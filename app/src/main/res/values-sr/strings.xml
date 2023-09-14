@@ -3,7 +3,8 @@
     <string name="app_name">Једноставан калкулатор</string>
     <string name="app_launcher_name">Калкулатор</string>
     <string name="scientific_calculator">Научни калкулатор</string>
-    <string name="unit_converter">Unit converter</string>
+    <string name="unit_converter">Претварач јединица</string>
+    <string name="swap_units">Замијени јединице</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Грешка : дељење нулом</string>
     <!-- History -->

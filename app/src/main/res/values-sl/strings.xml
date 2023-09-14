@@ -4,6 +4,7 @@
     <string name="app_launcher_name">Kalkulator</string>
     <string name="scientific_calculator">Znanstveni kalkulator</string>
     <string name="unit_converter">Unit converter</string>
+    <string name="swap_units">Swap units</string>
     <string name="formula_divide_by_zero_error">Napaka: deljenje z ničlo</string>
     <string name="history">Zgodovina</string>
     <string name="history_empty">Zgodovina je prazna</string>

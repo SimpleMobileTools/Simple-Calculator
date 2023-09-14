@@ -1,9 +1,11 @@
 package com.simplemobiletools.calculator.activities
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import androidx.core.content.res.ResourcesCompat
+import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.databinding.ActivityUnitConverterBinding
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.extensions.updateViewColors
@@ -30,6 +32,12 @@ class UnitConverterActivity : SimpleActivity() {
         isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            binding.unitConverterToolbar.inflateMenu(R.menu.converter_menu)
+            setupOptionsMenu()
+        }
+
         updateMaterialActivityViews(binding.unitConverterCoordinator, null, useTransparentNavigation = false, useTopSearchMenu = false)
         setupMaterialScrollListener(binding.nestedScrollview, binding.unitConverterToolbar)
 
@@ -57,6 +65,16 @@ class UnitConverterActivity : SimpleActivity() {
 
         binding.viewUnitConverter.viewConverter.root.setConverter(converter)
         binding.unitConverterToolbar.setTitle(converter.nameResId)
+    }
+
+    private fun setupOptionsMenu() {
+        binding.unitConverterToolbar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.swap_units -> binding.viewUnitConverter.viewConverter.root.switch()
+                else -> return@setOnMenuItemClickListener false
+            }
+            return@setOnMenuItemClickListener true
+        }
     }
 
     override fun onResume() {

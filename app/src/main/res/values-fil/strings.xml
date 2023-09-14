@@ -4,6 +4,7 @@
     <string name="app_launcher_name">Calculator</string>
     <string name="scientific_calculator">Scientific Calculator</string>
     <string name="unit_converter">Unit converter</string>
+    <string name="swap_units">Swap units</string>
     <string name="formula_divide_by_zero_error">Error: paghahati sa zero</string>
     <string name="history">Nakaraan</string>
     <string name="history_empty">Walang nakaraan</string>

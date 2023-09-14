@@ -4,6 +4,7 @@
     <string name="app_launcher_name">Számológép</string>
     <string name="scientific_calculator">Tudományos számológép</string>
     <string name="unit_converter">Unit converter</string>
+    <string name="swap_units">Swap units</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Hiba: nullával való osztás</string>
     <!-- History -->

@@ -4,6 +4,7 @@
     <string name="app_launcher_name">कैलकुलेटर</string>
     <string name="scientific_calculator">वैज्ञानिक कैलकुलेटर</string>
     <string name="unit_converter">Unit converter</string>
+    <string name="swap_units">Swap units</string>
     <string name="formula_divide_by_zero_error">त्रुटि: शून्य से विभाजन</string>
     <string name="history">इतिहास</string>
     <string name="history_empty">इतिहास खाली है</string>

@@ -4,6 +4,7 @@
     <string name="app_launcher_name">Calculatrice</string>
     <string name="scientific_calculator">Calculatrice scientifique</string>
     <string name="unit_converter">Unit converter</string>
+    <string name="swap_units">Swap units</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Erreur : division par zéro</string>
     <!-- History -->

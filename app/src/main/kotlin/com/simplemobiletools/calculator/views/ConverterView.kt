@@ -48,7 +48,7 @@ class ConverterView @JvmOverloads constructor(
         AutofitHelper.create(binding.topUnitText)
         AutofitHelper.create(binding.bottomUnitText)
 
-        binding.swapButton.setOnClickListener { switch() }
+        binding.swapButton?.setOnClickListener { switch() }
 
         binding.topUnitHolder.setClickListenerForUnitSelector(::topUnit, ::bottomUnit)
         binding.bottomUnitHolder.setClickListenerForUnitSelector(::bottomUnit, ::topUnit)
@@ -86,7 +86,7 @@ class ConverterView @JvmOverloads constructor(
         }
 
         binding.topUnitHolder.backgroundTintList = ColorStateList.valueOf(context.getProperPrimaryColor().lightenColor().adjustAlpha(LOWER_ALPHA))
-        binding.swapButton.applyColorFilter(context.getProperPrimaryColor())
+        binding.swapButton?.applyColorFilter(context.getProperPrimaryColor())
 
         listOf(binding.topUnitSymbol, binding.bottomUnitSymbol).forEach {
             val drawable = ResourcesCompat.getDrawable(
@@ -167,7 +167,7 @@ class ConverterView @JvmOverloads constructor(
         binding.topUnitText.text = value
     }
 
-    private fun switch() {
+    fun switch() {
         ::topUnit.swapWith(::bottomUnit)
         updateBottomValue()
         updateUnitLabelsAndSymbols()

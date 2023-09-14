@@ -4,6 +4,7 @@
     <string name="app_launcher_name">Kalkulators</string>
     <string name="scientific_calculator">Zinātniskais kalkulators</string>
     <string name="unit_converter">Unit converter</string>
+    <string name="swap_units">Swap units</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Kļūda: dalīšana ar nulli</string>
     <!-- History -->

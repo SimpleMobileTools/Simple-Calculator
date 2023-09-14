@@ -4,6 +4,7 @@
     <string name="app_launcher_name">കാൽക്കുലേറ്റർ</string>
     <string name="scientific_calculator">ശാസ്ത്രീയ കാൽക്കുലേറ്റർ</string>
     <string name="unit_converter">Unit converter</string>
+    <string name="swap_units">Swap units</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">പിശക്: 0 കൊണ്ട് ഹരിക്കാനാവില്ല</string>
     <!-- History -->

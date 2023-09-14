@@ -4,6 +4,7 @@
     <string name="app_launcher_name">Rechner</string>ng&gt;
     <string name="scientific_calculator">Wissenschaftlicher Rechner</string>
     <string name="unit_converter">Unit converter</string>
+    <string name="swap_units">Swap units</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Fehler: Division durch Null</string>
     <!-- History -->

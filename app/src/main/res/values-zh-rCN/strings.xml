@@ -4,6 +4,7 @@
     <string name="app_launcher_name">计算器</string>
     <string name="scientific_calculator">科学计算器</string>
     <string name="unit_converter">Unit converter</string>
+    <string name="swap_units">Swap units</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">错误: 被零除</string>
     <!-- History -->

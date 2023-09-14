@@ -9,46 +9,47 @@
         android:id="@+id/top_unit_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/activity_margin"
-        android:paddingEnd="@dimen/activity_margin"
+        android:layout_weight="3"
         android:background="@drawable/colored_ripple"
         android:orientation="vertical"
-        android:layout_weight="3">
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin">
 
         <TextView
             android:id="@+id/top_unit_name"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginTop="@dimen/normal_margin"
-            android:layout_marginBottom="@dimen/small_margin"
             android:layout_marginStart="@dimen/activity_margin"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            android:textAlignment="gravity"
             android:textSize="@dimen/big_text_size"
-            app:drawableEndCompat="@drawable/ic_arrow_drop_down_vector" />
+            app:drawableEndCompat="@drawable/ic_arrow_drop_down_vector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/top_unit_text"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:singleLine="true"
             android:layout_marginEnd="@dimen/normal_margin"
-            android:gravity="end|center_vertical"
             android:layout_weight="2"
+            android:gravity="end|center_vertical"
+            android:singleLine="true"
             android:textAlignment="gravity"
+            android:textSize="@dimen/extra_big_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/top_unit_symbol"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/top_unit_name"
-            android:textSize="@dimen/display_text_size" />
+            app:layout_constraintStart_toEndOf="@+id/top_unit_name"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/top_unit_symbol"
             style="@style/MyButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minHeight="@dimen/unit_symbol_size"
             android:gravity="center"
+            android:minHeight="@dimen/unit_symbol_size"
             android:padding="@dimen/small_margin"
             android:singleLine="true"
             android:textAlignment="gravity"
@@ -59,59 +60,51 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/swap_button"
-        android:layout_width="@dimen/unit_switch_button_size"
-        android:layout_height="@dimen/unit_switch_button_size"
-        android:background="@drawable/ripple_circle_background"
-        android:layout_gravity="center"
-        android:padding="@dimen/activity_margin"
-        android:src="@drawable/ic_swap_vertical_vector" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_unit_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/activity_margin"
+        android:layout_weight="3"
         android:background="@drawable/ripple_background"
-        android:paddingEnd="@dimen/activity_margin"
         android:orientation="vertical"
-        android:layout_weight="3">
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin">
 
         <TextView
             android:id="@+id/bottom_unit_name"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_gravity="start|center_vertical"
-            android:layout_marginTop="@dimen/normal_margin"
             android:layout_marginStart="@dimen/activity_margin"
-            android:layout_marginBottom="@dimen/small_margin"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            android:textAlignment="gravity"
             android:textSize="@dimen/big_text_size"
-            app:drawableEndCompat="@drawable/ic_arrow_drop_down_vector" />
+            app:drawableEndCompat="@drawable/ic_arrow_drop_down_vector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/bottom_unit_text"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:singleLine="true"
             android:layout_marginEnd="@dimen/normal_margin"
             android:gravity="end|center_vertical"
+            android:singleLine="true"
             android:textAlignment="gravity"
+            android:textSize="@dimen/extra_big_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/bottom_unit_symbol"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bottom_unit_name"
-            android:textSize="@dimen/display_text_size" />
+            app:layout_constraintStart_toEndOf="@+id/bottom_unit_name"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/bottom_unit_symbol"
             style="@style/MyButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minHeight="@dimen/unit_symbol_size"
             android:gravity="center"
+            android:minHeight="@dimen/unit_symbol_size"
             android:padding="@dimen/small_margin"
             android:singleLine="true"
             android:textAlignment="gravity"

@@ -7,6 +7,7 @@
     android:hapticFeedbackEnabled="true"
     android:layoutDirection="ltr"
     android:orientation="vertical"
+    android:weightSum="11.5"
     tools:ignore="HardcodedText">
 
     <include

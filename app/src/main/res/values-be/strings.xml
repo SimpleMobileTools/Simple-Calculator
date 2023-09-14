@@ -4,6 +4,7 @@
     <string name="app_launcher_name">Калькулятар</string>
     <string name="scientific_calculator">Навуковы калькулятар</string>
     <string name="unit_converter">Unit converter</string>
+    <string name="swap_units">Swap units</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Памылка: дзяленне на нуль</string>
     <!-- History -->

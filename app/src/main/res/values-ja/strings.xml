@@ -4,6 +4,7 @@
     <string name="app_launcher_name">電卓</string>
     <string name="scientific_calculator">科学計算電卓</string>
     <string name="unit_converter">Unit converter</string>
+    <string name="swap_units">Swap units</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">エラー：ゼロによる除算</string>
     <!-- History -->

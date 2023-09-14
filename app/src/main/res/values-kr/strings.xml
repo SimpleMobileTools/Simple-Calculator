@@ -3,6 +3,7 @@
     <string name="app_launcher_name">계산기</string>
     <string name="scientific_calculator">공학용 계산기</string>
     <string name="unit_converter">Unit converter</string>
+    <string name="swap_units">Swap units</string>
 
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">에러: 공으로 나눌 할수 없어요</string>
