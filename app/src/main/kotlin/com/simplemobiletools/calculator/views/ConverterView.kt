@@ -6,6 +6,7 @@ import android.content.res.ColorStateList
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.LayerDrawable
 import android.graphics.drawable.RippleDrawable
+import android.os.Bundle
 import android.util.AttributeSet
 import android.view.View
 import android.widget.LinearLayout
@@ -13,9 +14,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.widget.TextViewCompat
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.databinding.ViewConverterBinding
-import com.simplemobiletools.calculator.helpers.COMMA
-import com.simplemobiletools.calculator.helpers.DOT
-import com.simplemobiletools.calculator.helpers.NumberFormatHelper
+import com.simplemobiletools.calculator.helpers.*
 import com.simplemobiletools.calculator.helpers.converters.Converter
 import com.simplemobiletools.commons.dialogs.RadioGroupDialog
 import com.simplemobiletools.commons.extensions.*
@@ -241,5 +240,20 @@ class ConverterView @JvmOverloads constructor(
                 updateUnitLabelsAndSymbols()
             }
         }
+    }
+
+    fun saveState(): Bundle = Bundle().apply {
+        putInt(TOP_UNIT, converter!!.units.indexOf(topUnit!!))
+        putInt(BOTTOM_UNIT, converter!!.units.indexOf(bottomUnit!!))
+        putString(CONVERTER_VALUE, binding.topUnitText.text.toString())
+    }
+
+    fun restoreFromSavedState(state: Bundle) {
+        topUnit = converter!!.units[state.getInt(TOP_UNIT)]
+        bottomUnit = converter!!.units[state.getInt(BOTTOM_UNIT)]
+        binding.topUnitText.text = state.getString(CONVERTER_VALUE)
+
+        updateBottomValue()
+        updateUnitLabelsAndSymbols()
     }
 }

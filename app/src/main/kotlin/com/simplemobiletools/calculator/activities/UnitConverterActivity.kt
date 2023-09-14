@@ -10,6 +10,7 @@ import com.simplemobiletools.calculator.databinding.ActivityUnitConverterBinding
 import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.extensions.updateViewColors
 import com.simplemobiletools.calculator.helpers.COMMA
+import com.simplemobiletools.calculator.helpers.CONVERTER_STATE
 import com.simplemobiletools.calculator.helpers.DOT
 import com.simplemobiletools.calculator.helpers.converters.Converter
 import com.simplemobiletools.commons.extensions.getProperTextColor
@@ -65,6 +66,12 @@ class UnitConverterActivity : SimpleActivity() {
 
         binding.viewUnitConverter.viewConverter.root.setConverter(converter)
         binding.unitConverterToolbar.setTitle(converter.nameResId)
+
+        if (savedInstanceState != null) {
+            savedInstanceState.getBundle(CONVERTER_STATE)?.also {
+                binding.viewUnitConverter.viewConverter.root.restoreFromSavedState(it)
+            }
+        }
     }
 
     private fun setupOptionsMenu() {
@@ -110,6 +117,11 @@ class UnitConverterActivity : SimpleActivity() {
         if (config.preventPhoneFromSleeping) {
             window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putBundle(CONVERTER_STATE, binding.viewUnitConverter.viewConverter.root.saveState())
     }
 
     private fun checkHaptic(view: View) {
