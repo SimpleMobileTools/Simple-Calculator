@@ -23,8 +23,9 @@
             android:gravity="center"
             android:textAlignment="gravity"
             android:textSize="@dimen/big_text_size"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/small_margin"
             app:drawableEndCompat="@drawable/ic_arrow_drop_down_vector"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -80,7 +81,8 @@
             android:textAlignment="gravity"
             android:textSize="@dimen/big_text_size"
             app:drawableEndCompat="@drawable/ic_arrow_drop_down_vector"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/small_margin"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
