@@ -17,27 +17,18 @@
     <!-- Unit converter -->
     <string name="unit_length">Дужина</string>
     <string name="unit_length_kilometer">Километар</string>
-    <string name="unit_length_hectometer">Хектометар</string>
-    <string name="unit_length_decameter">Декаметар</string>
     <string name="unit_length_meter">Метар</string>
-    <string name="unit_length_decimeter">Дециметар</string>
     <string name="unit_length_centimeter">Центиметар</string>
     <string name="unit_length_millimeter">Милиметар</string>
     <string name="unit_length_micrometer">Микрометар</string>
     <string name="unit_length_nanometer">Нанометар</string>
-    <string name="unit_length_picometer">Пикометар</string>
     <string name="unit_length_angstrom">Ангстром</string>
     <string name="unit_length_mile">Миља</string>
-    <string name="unit_length_chain">Ланац</string>
     <string name="unit_length_yard">Јард</string>
     <string name="unit_length_foot">Стопа</string>
-    <string name="unit_length_mil">Мил</string>
     <string name="unit_length_inch">Палац</string>
     <string name="unit_length_fathom">Фатом</string>
-    <string name="unit_length_cable">Кабал</string>
     <string name="unit_length_nautical_mile">Наутичка миља</string>
-    <string name="unit_length_link">Карика</string>
-    <string name="unit_length_rod">Шипка</string>
     <string name="unit_length_astronomical_unit">Астрономска јединица</string>
     <string name="unit_length_parsec">Парсек</string>
     <string name="unit_length_light_year">Светлосна година</string>

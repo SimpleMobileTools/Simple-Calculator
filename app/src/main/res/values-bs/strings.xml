@@ -17,27 +17,18 @@
     <!-- Unit converter -->
     <string name="unit_length">Dužina</string>
     <string name="unit_length_kilometer">Kilometar</string>
-    <string name="unit_length_hectometer">Hectometar</string>
-    <string name="unit_length_decameter">Decametar</string>
     <string name="unit_length_meter">Metar</string>
-    <string name="unit_length_decimeter">Decimetar</string>
     <string name="unit_length_centimeter">Centimetar</string>
     <string name="unit_length_millimeter">Milimetar</string>
     <string name="unit_length_micrometer">Mikrometar</string>
     <string name="unit_length_nanometer">Nanometar</string>
-    <string name="unit_length_picometer">Pikometar</string>
     <string name="unit_length_angstrom">Angstrom</string>
     <string name="unit_length_mile">Milja</string>
-    <string name="unit_length_chain">Lanac</string>
     <string name="unit_length_yard">Jard</string>
     <string name="unit_length_foot">Stopa</string>
-    <string name="unit_length_mil">Mil</string>
     <string name="unit_length_inch">Palac</string>
     <string name="unit_length_fathom">Fathom</string>
-    <string name="unit_length_cable">Cable</string>
     <string name="unit_length_nautical_mile">Nautička milja</string>
-    <string name="unit_length_link">Link</string>
-    <string name="unit_length_rod">Šipka</string>
     <string name="unit_length_astronomical_unit">Astronomska jedinica</string>
     <string name="unit_length_parsec">Parsek</string>
     <string name="unit_length_light_year">Svjetlosna godina</string>

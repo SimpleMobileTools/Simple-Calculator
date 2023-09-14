@@ -4,27 +4,18 @@
 
     <string name="unit_name_with_symbol_format">%s (%s)</string>
     <string name="unit_length_kilometer_symbol">km</string>
-    <string name="unit_length_hectometer_symbol">hm</string>
-    <string name="unit_length_decameter_symbol">dam</string>
     <string name="unit_length_meter_symbol">m</string>
-    <string name="unit_length_decimeter_symbol">dm</string>
     <string name="unit_length_centimeter_symbol">cm</string>
     <string name="unit_length_millimeter_symbol">mm</string>
     <string name="unit_length_micrometer_symbol">μm</string>
     <string name="unit_length_nanometer_symbol">nm</string>
-    <string name="unit_length_picometer_symbol">pm</string>
     <string name="unit_length_angstrom_symbol">Å</string>
     <string name="unit_length_mile_symbol">mi</string>
-    <string name="unit_length_chain_symbol">ch</string>
     <string name="unit_length_yard_symbol">yd</string>
     <string name="unit_length_foot_symbol">ft</string>
-    <string name="unit_length_mil_symbol">mil</string>
     <string name="unit_length_inch_symbol">in</string>
     <string name="unit_length_fathom_symbol">fathom</string>
-    <string name="unit_length_cable_symbol">cable</string>
     <string name="unit_length_nautical_mile_symbol">NM</string>
-    <string name="unit_length_link_symbol">lnk</string>
-    <string name="unit_length_rod_symbol">rd</string>
     <string name="unit_length_astronomical_unit_symbol">au</string>
     <string name="unit_length_parsec_symbol">pc</string>
     <string name="unit_length_light_year_symbol">ly</string>

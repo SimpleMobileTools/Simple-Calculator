@@ -13,28 +13,10 @@ object LengthConverter : Converter {
             factor = 1000.0
         )
 
-        data object Hectometer : Unit(
-            nameResId = R.string.unit_length_hectometer,
-            symbolResId = R.string.unit_length_hectometer_symbol,
-            factor = 100.0
-        )
-
-        data object Decameter : Unit(
-            nameResId = R.string.unit_length_decameter,
-            symbolResId = R.string.unit_length_decameter_symbol,
-            factor = 10.0
-        )
-
         data object Meter : Unit(
             nameResId = R.string.unit_length_meter,
             symbolResId = R.string.unit_length_meter_symbol,
             factor = 1.0
-        )
-
-        data object Decimeter : Unit(
-            nameResId = R.string.unit_length_decimeter,
-            symbolResId = R.string.unit_length_decimeter_symbol,
-            factor = 0.1
         )
 
         data object Centimeter : Unit(
@@ -61,12 +43,6 @@ object LengthConverter : Converter {
             factor = 0.000000001
         )
 
-        data object Picometer : Unit(
-            nameResId = R.string.unit_length_picometer,
-            symbolResId = R.string.unit_length_picometer_symbol,
-            factor = 0.000000000001
-        )
-
         data object Angstrom : Unit(
             nameResId = R.string.unit_length_angstrom,
             symbolResId = R.string.unit_length_angstrom_symbol,
@@ -77,12 +53,6 @@ object LengthConverter : Converter {
             nameResId = R.string.unit_length_mile,
             symbolResId = R.string.unit_length_mile_symbol,
             factor = 1_609.344
-        )
-
-        data object Chain : Unit(
-            nameResId = R.string.unit_length_chain,
-            symbolResId = R.string.unit_length_chain_symbol,
-            factor = 20.1168
         )
 
         data object Yard : Unit(
@@ -97,12 +67,6 @@ object LengthConverter : Converter {
             factor = 0.3048
         )
 
-        data object Mil : Unit(
-            nameResId = R.string.unit_length_mil,
-            symbolResId = R.string.unit_length_mil_symbol,
-            factor = 0.0000254
-        )
-
         data object Inch : Unit(
             nameResId = R.string.unit_length_inch,
             symbolResId = R.string.unit_length_inch_symbol,
@@ -115,28 +79,10 @@ object LengthConverter : Converter {
             factor = 1.852
         )
 
-        data object Cable : Unit(
-            nameResId = R.string.unit_length_cable,
-            symbolResId = R.string.unit_length_cable_symbol,
-            factor = 185.2
-        )
-
         data object NauticalMile : Unit(
             nameResId = R.string.unit_length_nautical_mile,
             symbolResId = R.string.unit_length_nautical_mile_symbol,
             factor = 1_852.0
-        )
-
-        data object Link : Unit(
-            nameResId = R.string.unit_length_link,
-            symbolResId = R.string.unit_length_link_symbol,
-            factor = 0.201168
-        )
-
-        data object Rod : Unit(
-            nameResId = R.string.unit_length_rod,
-            symbolResId = R.string.unit_length_rod_symbol,
-            factor = 5.0292
         )
 
         data object AstronomicalUnit : Unit(
@@ -160,27 +106,18 @@ object LengthConverter : Converter {
 
     override val units: List<Unit> = listOf(
         Unit.Kilometer,
-        Unit.Hectometer,
-        Unit.Decameter,
         Unit.Meter,
-        Unit.Decimeter,
         Unit.Centimeter,
         Unit.Millimeter,
         Unit.Micrometer,
         Unit.Nanometer,
-        Unit.Picometer,
         Unit.Angstrom,
         Unit.Mile,
-        Unit.Chain,
         Unit.Yard,
         Unit.Foot,
-        Unit.Mil,
         Unit.Inch,
         Unit.Fathom,
-        Unit.Cable,
         Unit.NauticalMile,
-        Unit.Link,
-        Unit.Rod,
         Unit.AstronomicalUnit,
         Unit.Parsec,
         Unit.LightYear

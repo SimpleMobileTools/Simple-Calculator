@@ -19,27 +19,18 @@
     <!-- Unit converter -->
     <string name="unit_length">Length</string>
     <string name="unit_length_kilometer">Kilometer</string>
-    <string name="unit_length_hectometer">Hectometer</string>
-    <string name="unit_length_decameter">Decameter</string>
     <string name="unit_length_meter">Meter</string>
-    <string name="unit_length_decimeter">Decimeter</string>
     <string name="unit_length_centimeter">Centimeter</string>
     <string name="unit_length_millimeter">Millimeter</string>
     <string name="unit_length_micrometer">Micrometer</string>
     <string name="unit_length_nanometer">Nanometer</string>
-    <string name="unit_length_picometer">Picometer</string>
     <string name="unit_length_angstrom">Angstrom</string>
     <string name="unit_length_mile">Mile</string>
-    <string name="unit_length_chain">Chain</string>
     <string name="unit_length_yard">Yard</string>
     <string name="unit_length_foot">Foot</string>
-    <string name="unit_length_mil">Mil</string>
     <string name="unit_length_inch">Inch</string>
     <string name="unit_length_fathom">Fathom</string>
-    <string name="unit_length_cable">Cable</string>
     <string name="unit_length_nautical_mile">Nautical Mile</string>
-    <string name="unit_length_link">Link</string>
-    <string name="unit_length_rod">Rod</string>
     <string name="unit_length_astronomical_unit">Astronomical Unit</string>
     <string name="unit_length_parsec">Parsec</string>
     <string name="unit_length_light_year">Light Year</string>
