@@ -107,7 +107,7 @@
     <string name="unit_time_millisecond">Microsecond</string>
     <string name="unit_time_day">Day</string>
     <string name="unit_time_week">Week</string>
-    <string name="unit_time_year_gregorian">Year (Gregorian)</string>
+    <string name="unit_time_year">Year</string>
     <!-- FAQ -->
     <string name="faq_1_title">Jak działa przycisk C (Wyczyść)?</string>
     <string name="faq_1_text">Naciśnięcie go usunie jeden znak naraz. Długie naciśnięcie zresetuje wszystkie pola jednocześnie.</string>

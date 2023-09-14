@@ -107,7 +107,7 @@
     <string name="unit_time_millisecond">Milisekunda</string>
     <string name="unit_time_day">Dan</string>
     <string name="unit_time_week">Tjedan</string>
-    <string name="unit_time_year_gregorian">Godina (Gregorijanska)</string>
+    <string name="unit_time_year">Godina</string>
     <!-- FAQ -->
     <string name="faq_1_title">Kako funkcionira gumb C (Izbriši)\?</string>
     <string name="faq_1_text">Dodirom gumba uklanjaju se znakovi jedan po jedan. Dugim pritiskom gumba obnavljaju se sva polja.</string>

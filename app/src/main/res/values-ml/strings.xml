@@ -107,7 +107,7 @@
     <string name="unit_time_millisecond">Microsecond</string>
     <string name="unit_time_day">Day</string>
     <string name="unit_time_week">Week</string>
-    <string name="unit_time_year_gregorian">Year (Gregorian)</string>
+    <string name="unit_time_year">Year</string>
     <!-- FAQ -->
     <string name="faq_1_title">C(ക്ലിയർ ) ബട്ടൺ പ്രവർത്തിക്കുന്നത് എങ്ങനെ\?</string>
     <string name="faq_1_text">ടാപ്പ് ചെയ്യുമ്പോൾ ഒരു സമയം ഒരു പ്രതീകത്തെ നീക്കംചെയ്യും. ദീർഘനേരം അമർത്തിയാൽ എല്ലാ ഫീൽഡുകളും പുനഃസജ്ജമാക്കും.</string>

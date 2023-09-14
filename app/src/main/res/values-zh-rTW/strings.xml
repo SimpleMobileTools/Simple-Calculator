@@ -107,7 +107,7 @@
     <string name="unit_time_millisecond">Microsecond</string>
     <string name="unit_time_day">Day</string>
     <string name="unit_time_week">Week</string>
-    <string name="unit_time_year_gregorian">Year (Gregorian)</string>
+    <string name="unit_time_year">Year</string>
     <!-- FAQ -->
     <string name="faq_1_title">C（清除）按鈕如何使用？</string>
     <string name="faq_1_text">按一次會刪除一個字元。長按會馬上重設全部欄位。</string>

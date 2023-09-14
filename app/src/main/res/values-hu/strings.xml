@@ -107,7 +107,7 @@
     <string name="unit_time_millisecond">Microsecond</string>
     <string name="unit_time_day">Day</string>
     <string name="unit_time_week">Week</string>
-    <string name="unit_time_year_gregorian">Year (Gregorian)</string>
+    <string name="unit_time_year">Year</string>
     <!-- FAQ -->
     <string name="faq_1_title">Hogyan működik a C (törlés) gomb\?</string>
     <string name="faq_1_text">A koppintás egyszerre egy karaktert töröl. A hosszú lenyomás egyszerre állítja vissza az összes mezőt.</string>

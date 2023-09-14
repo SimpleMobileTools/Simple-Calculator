@@ -104,7 +104,7 @@
     <string name="unit_time_millisecond">Microsecond</string>
     <string name="unit_time_day">Day</string>
     <string name="unit_time_week">Week</string>
-    <string name="unit_time_year_gregorian">Year (Gregorian)</string>
+    <string name="unit_time_year">Year</string>
     <string name="faq_1_title">Paano gumagana ang C (Clear) button\?</string>
     <string name="faq_1_text">Matatanggal ng isang karakter kapag pinindot ito nang isang beses. Ire-reset naman ang lahat ng mga field kapag mahabang pinindot ito.</string>
 </resources>

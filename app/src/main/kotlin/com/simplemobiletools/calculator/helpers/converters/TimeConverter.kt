@@ -51,8 +51,8 @@ object TimeConverter : Converter {
         )
 
         data object Year : Unit(
-            nameResId = R.string.unit_time_year_gregorian,
-            symbolResId = R.string.unit_time_year_gregorian_symbol,
+            nameResId = R.string.unit_time_year,
+            symbolResId = R.string.unit_time_year_symbol,
             factor = GREGORIAN_YEAR
         )
     }

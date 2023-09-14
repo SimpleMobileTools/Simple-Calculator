@@ -104,7 +104,7 @@
     <string name="unit_time_millisecond">Microsecond</string>
     <string name="unit_time_day">Day</string>
     <string name="unit_time_week">Week</string>
-    <string name="unit_time_year_gregorian">Year (Gregorian)</string>
+    <string name="unit_time_year">Year</string>
     <string name="faq_1_title">Kako deluje gumb C (Clear)\?</string>
     <string name="faq_1_text">Če ga stisnete, odstranite po en lik naenkrat. Z dolgim pritiskom nanj boste odstranili vsa polja naenkrat.</string>
 </resources>

@@ -107,7 +107,7 @@
     <string name="unit_time_millisecond">Милисекунда</string>
     <string name="unit_time_day">Дан</string>
     <string name="unit_time_week">Седмица</string>
-    <string name="unit_time_year_gregorian">Година (Грегоријанска)</string>
+    <string name="unit_time_year">Година</string>
     <!-- FAQ -->
     <string name="faq_1_title">Како дугме Ц (Обриши) функционише\?</string>
     <string name="faq_1_text">Додиривање на њега ће уклонити један по један знак. Дуго притискање ће успоставити почетне вредности свих поља одједном.</string>

@@ -107,7 +107,7 @@
     <string name="unit_time_millisecond">Microsecond</string>
     <string name="unit_time_day">Day</string>
     <string name="unit_time_week">Week</string>
-    <string name="unit_time_year_gregorian">Year (Gregorian)</string>
+    <string name="unit_time_year">Year</string>
     <!-- FAQ -->
     <string name="faq_1_title">C (క్లియర్) బటన్ ఎలా పని చేస్తుంది\?</string>
     <string name="faq_1_text">దానిపై నొక్కడం ద్వారా ఒక్కో అక్షరం తీసివేయబడుతుంది. ఎక్కువసేపు నొక్కితే, అన్ని ఫీల్డ్‌లు ఒకేసారి రీసెట్ చేయబడతాయి.</string>

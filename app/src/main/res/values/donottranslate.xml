@@ -89,7 +89,7 @@
     <string name="unit_time_millisecond_symbol">ms</string>
     <string name="unit_time_day_symbol">d</string>
     <string name="unit_time_week_symbol">wk</string>
-    <string name="unit_time_year_gregorian_symbol">y</string>
+    <string name="unit_time_year_symbol">y</string>
 
     <!-- Release notes -->
     <string name="release_28">Allow customizing the bottom navigation bar color</string>

@@ -107,7 +107,7 @@
     <string name="unit_time_millisecond">Microsecond</string>
     <string name="unit_time_day">Day</string>
     <string name="unit_time_week">Week</string>
-    <string name="unit_time_year_gregorian">Year (Gregorian)</string>
+    <string name="unit_time_year">Year</string>
     <!-- FAQ -->
     <string name="faq_1_title">ⵎⴰⵎⴽ ⵜⵙⵡⵓⵔⵓⵢ ⵜⴳⵎⵎⵓⵜ C (ⴽⴽⵙ)\?</string>
     <string name="faq_1_text">ⴰⴱⴱⴰⵥ ⵅⴼ ⵓⵢⵏⵏⴰ ⴰⴷ ⵉⴽⴽⵙ ⵢⴰⵏ ⵓⵙⴽⴽⵉⵍ ⴳ ⵢⴰⵏ ⵓⵣⵎⵣ. ⵎⵛ ⵉⵍⵍⴰ ⵡⴰⴱⴱⴰⵥ ⴰⵙⵓⵍⴰⵏ ⵔⴰⴷ ⵜⵜⵓⵙⵏⴼⵍⵏ ⵎⴰⵕⵕⴰ ⵉⴳⵔⴰⵏ ⴳ ⵢⴰⵏ ⵓⵣⵎⵣ.</string>

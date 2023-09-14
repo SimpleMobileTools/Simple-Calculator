@@ -107,7 +107,7 @@
     <string name="unit_time_millisecond">Microsecond</string>
     <string name="unit_time_day">Day</string>
     <string name="unit_time_week">Week</string>
-    <string name="unit_time_year_gregorian">Year (Gregorian)</string>
+    <string name="unit_time_year">Year</string>
     <!-- FAQ -->
     <string name="faq_1_title">Hur funkar C (Rensa) knappen\?</string>
     <string name="faq_1_text">Om du trycker på den tar du bort ett tecken i taget. Om du trycker länge på den återställs alla fält på en gång.</string>

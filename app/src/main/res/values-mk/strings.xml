@@ -107,7 +107,7 @@
     <string name="unit_time_millisecond">Microsecond</string>
     <string name="unit_time_day">Day</string>
     <string name="unit_time_week">Week</string>
-    <string name="unit_time_year_gregorian">Year (Gregorian)</string>
+    <string name="unit_time_year">Year</string>
     <!-- FAQ -->
     <string name="faq_1_title">Како функционира копчето C (Clear) \?</string>
     <string name="faq_1_text">Прислушкувањето на него ќе отстрани еден лик во исто време. Долгото притискање ќе ги ресетира сите полиња одеднаш.</string>

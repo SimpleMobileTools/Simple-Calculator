@@ -107,7 +107,7 @@
     <string name="unit_time_millisecond">Microsecond</string>
     <string name="unit_time_day">Day</string>
     <string name="unit_time_week">Week</string>
-    <string name="unit_time_year_gregorian">Year (Gregorian)</string>
+    <string name="unit_time_year">Year</string>
     <!-- FAQ -->
     <string name="faq_1_title">Sut mae\'r botwm C (clirio) yn gweithio?</string>
     <string name="faq_1_text">Mae ei dapio yn tynnu un rhif ar y tro. Mae ei dal yn ailosod pob maes gyda\'i gilydd ar unwaith.</string>
