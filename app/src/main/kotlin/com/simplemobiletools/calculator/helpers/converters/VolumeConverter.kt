@@ -61,12 +61,6 @@ object VolumeConverter : Converter {
             factor = 1_233.48183754752
         )
 
-        data object CubicYard : Unit(
-            nameResId = R.string.unit_volume_cubic_yard,
-            symbolResId = R.string.unit_volume_cubic_yard_symbol,
-            factor = 0.764554857984
-        )
-
         data object CubicFoot : Unit(
             nameResId = R.string.unit_volume_cubic_foot,
             symbolResId = R.string.unit_volume_cubic_foot_symbol,
@@ -115,30 +109,6 @@ object VolumeConverter : Converter {
             factor = 0.00003
         )
 
-        data object DropUS : Unit(
-            nameResId = R.string.unit_volume_drop_us,
-            symbolResId = R.string.unit_volume_drop_us_symbol,
-            factor = 0.00000008214869322916
-        )
-
-        data object TeaspoonUS : Unit(
-            nameResId = R.string.unit_volume_teaspoon_us,
-            symbolResId = R.string.unit_volume_teaspoon_us_symbol,
-            factor = 0.000005
-        )
-
-        data object TablespoonUS : Unit(
-            nameResId = R.string.unit_volume_tablespoon_us,
-            symbolResId = R.string.unit_volume_tablespoon_us_symbol,
-            factor = 0.000015
-        )
-
-        data object CupUS : Unit(
-            nameResId = R.string.unit_volume_cup_us,
-            symbolResId = R.string.unit_volume_cup_us_symbol,
-            factor = 0.00024
-        )
-
         data object BarrelImperial : Unit(
             nameResId = R.string.unit_volume_barrel_imperial,
             symbolResId = R.string.unit_volume_barrel_imperial_symbol,
@@ -174,24 +144,6 @@ object VolumeConverter : Converter {
             symbolResId = R.string.unit_volume_fluid_ounce_imperial_symbol,
             factor = 0.0000284130625
         )
-
-        data object DropImperial : Unit(
-            nameResId = R.string.unit_volume_drop_imperial,
-            symbolResId = R.string.unit_volume_drop_imperial_symbol,
-            factor = 0.0000000986564670138
-        )
-
-        data object TeaspoonImperial : Unit(
-            nameResId = R.string.unit_volume_teaspoon_imperial,
-            symbolResId = R.string.unit_volume_teaspoon_imperial_symbol,
-            factor = 0.00000591938802083
-        )
-
-        data object TablespoonImperial : Unit(
-            nameResId = R.string.unit_volume_tablespoon_imperial,
-            symbolResId = R.string.unit_volume_tablespoon_imperial_symbol,
-            factor = 0.0000177581640625
-        )
     }
 
     override val units: List<Unit> = listOf(
@@ -204,7 +156,6 @@ object VolumeConverter : Converter {
         Unit.Deciliter,
         Unit.Milliliter,
         Unit.AcreFoot,
-        Unit.CubicYard,
         Unit.CubicFoot,
         Unit.CubicInch,
         Unit.BarrelUS,
@@ -213,19 +164,12 @@ object VolumeConverter : Converter {
         Unit.PintUS,
         Unit.GillUS,
         Unit.FluidOunceUS,
-        Unit.DropUS,
-        Unit.TeaspoonUS,
-        Unit.TablespoonUS,
-        Unit.CupUS,
         Unit.BarrelImperial,
         Unit.GallonImperial,
         Unit.QuartImperial,
         Unit.PintImperial,
         Unit.GillImperial,
         Unit.FluidOunceImperial,
-        Unit.DropImperial,
-        Unit.TeaspoonImperial,
-        Unit.TablespoonImperial,
     )
 
     override val defaultTopUnit: Unit = Unit.Liter

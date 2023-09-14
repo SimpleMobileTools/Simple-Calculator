@@ -54,7 +54,6 @@
     <string name="unit_volume_deciliter">Decilitra</string>
     <string name="unit_volume_milliliter">Mililitra</string>
     <string name="unit_volume_acre_foot">Aker stopa</string>
-    <string name="unit_volume_cubic_yard">Kubični jard</string>
     <string name="unit_volume_cubic_foot">Kubična stopa</string>
     <string name="unit_volume_cubic_inch">Kubični palac</string>
     <string name="unit_volume_barrel_us">Barel (SAD)</string>
@@ -63,19 +62,12 @@
     <string name="unit_volume_pint_us">Pinta (SAD)</string>
     <string name="unit_volume_gill_us">Gill (SAD)</string>
     <string name="unit_volume_fluid_ounce_us">Unca tekuća(SAD)</string>
-    <string name="unit_volume_drop_us">Drop (SAD)</string>
-    <string name="unit_volume_teaspoon_us">Čajna žlica (SAD)</string>
-    <string name="unit_volume_tablespoon_us">Žlica (SAD)</string>
-    <string name="unit_volume_cup_us">Šalica (SAD)</string>
     <string name="unit_volume_barrel_imperial">Barel (Imperijalni)</string>
     <string name="unit_volume_gallon_imperial">Galon (Imperijalni)</string>
     <string name="unit_volume_quart_imperial">Četvrtina (Imperijalna)</string>
     <string name="unit_volume_pint_imperial">Pinta (Imperijalna)</string>
     <string name="unit_volume_gill_imperial">Gill (Imperijalni)</string>
     <string name="unit_volume_fluid_ounce_imperial">Unca tekuća (Imperijalna)</string>
-    <string name="unit_volume_drop_imperial">Drop (Imperijalni)</string>
-    <string name="unit_volume_teaspoon_imperial">Čajna žlica (Imperijalna)</string>
-    <string name="unit_volume_tablespoon_imperial">Žlica (Imperijalna)</string>
     <string name="unit_mass">Masa</string>
     <string name="unit_mass_gram">Gram</string>
     <string name="unit_mass_kilogram">Kilogram</string>

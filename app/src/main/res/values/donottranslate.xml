@@ -38,7 +38,6 @@
     <string name="unit_volume_deciliter_symbol">dL</string>
     <string name="unit_volume_milliliter_symbol">mL</string>
     <string name="unit_volume_acre_foot_symbol">ac ft</string>
-    <string name="unit_volume_cubic_yard_symbol">yd³</string>
     <string name="unit_volume_cubic_foot_symbol">ft³</string>
     <string name="unit_volume_cubic_inch_symbol">in³</string>
     <string name="unit_volume_barrel_us_symbol">fl bl (US)</string>
@@ -47,19 +46,12 @@
     <string name="unit_volume_pint_us_symbol">pt (US fl)</string>
     <string name="unit_volume_gill_us_symbol">gi (US)</string>
     <string name="unit_volume_fluid_ounce_us_symbol">US fl oz</string>
-    <string name="unit_volume_drop_us_symbol">gtt</string>
-    <string name="unit_volume_teaspoon_us_symbol">tsp</string>
-    <string name="unit_volume_tablespoon_us_symbol">tbsp</string>
-    <string name="unit_volume_cup_us_symbol">c (US)</string>
     <string name="unit_volume_barrel_imperial_symbol">bl (imp)</string>
     <string name="unit_volume_gallon_imperial_symbol">gal (imp)</string>
     <string name="unit_volume_quart_imperial_symbol">qt (imp)</string>
     <string name="unit_volume_pint_imperial_symbol">pt (imp)</string>
     <string name="unit_volume_gill_imperial_symbol">gi (imp)</string>
     <string name="unit_volume_fluid_ounce_imperial_symbol">fl oz (imp)</string>
-    <string name="unit_volume_drop_imperial_symbol">gtt</string>
-    <string name="unit_volume_teaspoon_imperial_symbol">tsp</string>
-    <string name="unit_volume_tablespoon_imperial_symbol">tbsp</string>
     <string name="unit_mass_gram_symbol">g</string>
     <string name="unit_mass_kilogram_symbol">kg</string>
     <string name="unit_mass_milligram_symbol">mg</string>

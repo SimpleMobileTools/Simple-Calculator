@@ -54,7 +54,6 @@
     <string name="unit_volume_deciliter">Децилитар</string>
     <string name="unit_volume_milliliter">Милилитар</string>
     <string name="unit_volume_acre_foot">Акер стопа</string>
-    <string name="unit_volume_cubic_yard">Кубни јард</string>
     <string name="unit_volume_cubic_foot">Кубна стопа</string>
     <string name="unit_volume_cubic_inch">Кубни палац</string>
     <string name="unit_volume_barrel_us">Барел (САД)</string>
@@ -63,19 +62,12 @@
     <string name="unit_volume_pint_us">Пинта (САД)</string>
     <string name="unit_volume_gill_us">Гил (САД)</string>
     <string name="unit_volume_fluid_ounce_us">Текућа унца (САД)</string>
-    <string name="unit_volume_drop_us">Дроп (САД)</string>
-    <string name="unit_volume_teaspoon_us">Чајна кашика (САД)</string>
-    <string name="unit_volume_tablespoon_us">Кашика (САД)</string>
-    <string name="unit_volume_cup_us">Шољица (САД)</string>
     <string name="unit_volume_barrel_imperial">Барел (Империјални)</string>
     <string name="unit_volume_gallon_imperial">Галон (Империјални)</string>
     <string name="unit_volume_quart_imperial">Четвртина (Империјални)</string>
     <string name="unit_volume_pint_imperial">Пинта (Империјални)</string>
     <string name="unit_volume_gill_imperial">Гил (Империјални)</string>
     <string name="unit_volume_fluid_ounce_imperial">Текућа унца (Империјални)</string>
-    <string name="unit_volume_drop_imperial">Дроп (Империјални)</string>
-    <string name="unit_volume_teaspoon_imperial">Чајна кашика (Империјални)</string>
-    <string name="unit_volume_tablespoon_imperial">Кашика (Империјални)</string>
     <string name="unit_mass">Маса</string>
     <string name="unit_mass_gram">Грам</string>
     <string name="unit_mass_kilogram">Килограм</string>
