@@ -33,10 +33,10 @@
     <string name="unit_volume_cubic_decimeter_symbol">dm³</string>
     <string name="unit_volume_cubic_centimeter_symbol">cm³</string>
     <string name="unit_volume_cubic_millimeter_symbol">mm³</string>
-    <string name="unit_volume_liter_symbol">l</string>
-    <string name="unit_volume_centiliter_symbol">cl</string>
-    <string name="unit_volume_deciliter_symbol">dl</string>
-    <string name="unit_volume_milliliter_symbol">ml</string>
+    <string name="unit_volume_liter_symbol">L</string>
+    <string name="unit_volume_centiliter_symbol">cL</string>
+    <string name="unit_volume_deciliter_symbol">dL</string>
+    <string name="unit_volume_milliliter_symbol">mL</string>
     <string name="unit_volume_acre_foot_symbol">ac ft</string>
     <string name="unit_volume_cubic_yard_symbol">yd³</string>
     <string name="unit_volume_cubic_foot_symbol">ft³</string>
