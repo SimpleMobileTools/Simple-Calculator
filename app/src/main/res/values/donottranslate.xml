@@ -87,25 +87,9 @@
     <string name="unit_time_minute_symbol">m</string>
     <string name="unit_time_second_symbol">s</string>
     <string name="unit_time_millisecond_symbol">ms</string>
-    <string name="unit_time_microsecond_symbol">µs</string>
-    <string name="unit_time_nanosecond_symbol">ns</string>
-    <string name="unit_time_picosecond_symbol">ps</string>
     <string name="unit_time_day_symbol">d</string>
     <string name="unit_time_week_symbol">wk</string>
-    <string name="unit_time_month_full_symbol">mo</string>
-    <string name="unit_time_month_hollow_symbol">mo</string>
-    <string name="unit_time_month_synodic_symbol">mo</string>
-    <string name="unit_time_month_gregorian_average_symbol">mo</string>
-    <string name="unit_time_year_leap_symbol">y</string>
     <string name="unit_time_year_gregorian_symbol">y</string>
-    <string name="unit_time_year_julian_symbol">y</string>
-    <string name="unit_time_jiffy_symbol">j</string>
-    <string name="unit_time_moment_symbol">moment</string>
-    <string name="unit_time_fortnight_symbol">fn</string>
-    <string name="unit_time_decade_symbol">dec</string>
-    <string name="unit_time_century_symbol">c</string>
-    <string name="unit_time_millennium_symbol">millennium</string>
-    <string name="unit_time_atomic_unit_symbol">a.u.</string>
 
     <!-- Release notes -->
     <string name="release_28">Allow customizing the bottom navigation bar color</string>

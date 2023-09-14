@@ -105,25 +105,9 @@
     <string name="unit_time_minute">Минута</string>
     <string name="unit_time_second">Секунда</string>
     <string name="unit_time_millisecond">Милисекунда</string>
-    <string name="unit_time_microsecond">Микросекунда</string>
-    <string name="unit_time_nanosecond">Наносекунда</string>
-    <string name="unit_time_picosecond">Пикосекунда</string>
     <string name="unit_time_day">Дан</string>
     <string name="unit_time_week">Седмица</string>
-    <string name="unit_time_month_full">Месец (Пуни)</string>
-    <string name="unit_time_month_hollow">Месец (кратки)</string>
-    <string name="unit_time_month_synodic">Месец (Синодички)</string>
-    <string name="unit_time_month_gregorian_average">Месец (Грегоријански просечни)</string>
-    <string name="unit_time_year_leap">Година (Преступна)</string>
     <string name="unit_time_year_gregorian">Година (Грегоријанска)</string>
-    <string name="unit_time_year_julian">Година (Јулијанска)</string>
-    <string name="unit_time_jiffy">Ђифи</string>
-    <string name="unit_time_moment">Момент</string>
-    <string name="unit_time_fortnight">Четрнаест дана</string>
-    <string name="unit_time_decade">Декада</string>
-    <string name="unit_time_century">Стољеће</string>
-    <string name="unit_time_millennium">Милениј</string>
-    <string name="unit_time_atomic_unit">Атомска јединица</string>
     <!-- FAQ -->
     <string name="faq_1_title">Како дугме Ц (Обриши) функционише\?</string>
     <string name="faq_1_text">Додиривање на њега ће уклонити један по један знак. Дуго притискање ће успоставити почетне вредности свих поља одједном.</string>

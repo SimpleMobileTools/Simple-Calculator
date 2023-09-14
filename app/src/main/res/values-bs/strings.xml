@@ -105,25 +105,9 @@
     <string name="unit_time_minute">Minuta</string>
     <string name="unit_time_second">Sekunda</string>
     <string name="unit_time_millisecond">Milisekunda</string>
-    <string name="unit_time_microsecond">Mikrosekunda</string>
-    <string name="unit_time_nanosecond">Nanosekunda</string>
-    <string name="unit_time_picosecond">Pikosekunda</string>
     <string name="unit_time_day">Dan</string>
     <string name="unit_time_week">Sedmica</string>
-    <string name="unit_time_month_full">Mjesec (puni)</string>
-    <string name="unit_time_month_hollow">Mjesec (kratki)</string>
-    <string name="unit_time_month_synodic">Mjesec (sinodički)</string>
-    <string name="unit_time_month_gregorian_average">Mjesec (Gregorijanski prosječni)</string>
-    <string name="unit_time_year_leap">Godina (prijestupna)</string>
     <string name="unit_time_year_gregorian">Godina (Gregorijanska)</string>
-    <string name="unit_time_year_julian">Godina (Julijanska)</string>
-    <string name="unit_time_jiffy">Jiffy</string>
-    <string name="unit_time_moment">Moment</string>
-    <string name="unit_time_fortnight">Četrnaest dana</string>
-    <string name="unit_time_decade">Decenija</string>
-    <string name="unit_time_century">Stoljeće</string>
-    <string name="unit_time_millennium">Milenij</string>
-    <string name="unit_time_atomic_unit">Atomska jedinica</string>
     <!-- FAQ -->
     <string name="faq_1_title">Kako funkcionira gumb C (Izbriši)\?</string>
     <string name="faq_1_text">Dodirom gumba uklanjaju se znakovi jedan po jedan. Dugim pritiskom gumba brišu se svi znakovi.</string>
