@@ -3,8 +3,6 @@ package com.simplemobiletools.calculator.views
 import android.app.Activity
 import android.content.Context
 import android.content.res.ColorStateList
-import android.graphics.BlendMode
-import android.graphics.PorterDuff
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.LayerDrawable
 import android.graphics.drawable.RippleDrawable
@@ -49,8 +47,6 @@ class ConverterView @JvmOverloads constructor(
 
         AutofitHelper.create(binding.topUnitText)
         AutofitHelper.create(binding.bottomUnitText)
-        AutofitHelper.create(binding.topUnitSymbol)
-        AutofitHelper.create(binding.bottomUnitSymbol)
 
         binding.swapButton.setOnClickListener { switch() }
 
@@ -180,8 +176,28 @@ class ConverterView @JvmOverloads constructor(
     private fun updateUnitLabelsAndSymbols() {
         binding.topUnitName.text = topUnit?.nameResId?.let { context.getString(it) }
         binding.bottomUnitName.text = bottomUnit?.nameResId?.let { context.getString(it) }
+
         binding.topUnitSymbol.text = topUnit?.symbolResId?.let { context.getString(it) }
         binding.bottomUnitSymbol.text = bottomUnit?.symbolResId?.let { context.getString(it) }
+
+        binding.topUnitSymbol.layoutParams.width = LayoutParams.WRAP_CONTENT
+        binding.bottomUnitSymbol.layoutParams.width = LayoutParams.WRAP_CONTENT
+
+        val symbolHeight = context.resources.getDimensionPixelSize(R.dimen.unit_symbol_size)
+        binding.topUnitSymbol.measure(
+            MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED),
+            MeasureSpec.makeMeasureSpec(symbolHeight, MeasureSpec.EXACTLY)
+        )
+        binding.bottomUnitSymbol.measure(
+            MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED),
+            MeasureSpec.makeMeasureSpec(symbolHeight, MeasureSpec.EXACTLY)
+        )
+
+        val width = listOf(symbolHeight, binding.topUnitSymbol.measuredWidth, binding.bottomUnitSymbol.measuredWidth).max()
+        binding.topUnitSymbol.layoutParams.width = width
+        binding.bottomUnitSymbol.layoutParams.width = width
+        binding.topUnitSymbol.requestLayout()
+        binding.bottomUnitSymbol.requestLayout()
     }
 
     private fun updateBottomValue() {

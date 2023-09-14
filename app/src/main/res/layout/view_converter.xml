@@ -45,7 +45,7 @@
         <TextView
             android:id="@+id/top_unit_symbol"
             style="@style/MyButton"
-            android:layout_width="@dimen/unit_symbol_size"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/unit_symbol_size"
             android:gravity="center"
             android:padding="@dimen/small_margin"
@@ -108,7 +108,7 @@
         <TextView
             android:id="@+id/bottom_unit_symbol"
             style="@style/MyButton"
-            android:layout_width="@dimen/unit_symbol_size"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/unit_symbol_size"
             android:gravity="center"
             android:padding="@dimen/small_margin"
