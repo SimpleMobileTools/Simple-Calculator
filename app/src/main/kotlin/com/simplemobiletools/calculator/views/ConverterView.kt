@@ -84,7 +84,12 @@ class ConverterView @JvmOverloads constructor(
             )
         }
 
-        binding.topUnitHolder.backgroundTintList = ColorStateList.valueOf(context.getProperPrimaryColor().lightenColor().adjustAlpha(LOWER_ALPHA))
+        val rippleDrawable = ResourcesCompat.getDrawable(
+            resources, R.drawable.colored_ripple, context.theme
+        )?.constantState?.newDrawable()?.mutate() as RippleDrawable
+        val rippleColoredLayer = rippleDrawable.findDrawableByLayerId(R.id.colored_background) as GradientDrawable
+        rippleColoredLayer.applyColorFilter(context.getProperPrimaryColor().lightenColor().adjustAlpha(LOWER_ALPHA))
+        binding.topUnitHolder.background = rippleDrawable
         binding.swapButton?.applyColorFilter(context.getProperPrimaryColor())
 
         listOf(binding.topUnitSymbol, binding.bottomUnitSymbol).forEach {
