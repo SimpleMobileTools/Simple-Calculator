@@ -19,6 +19,7 @@ import com.simplemobiletools.calculator.helpers.NumberFormatHelper
 import com.simplemobiletools.calculator.helpers.converters.Converter
 import com.simplemobiletools.commons.dialogs.RadioGroupDialog
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.LOWER_ALPHA
 import com.simplemobiletools.commons.helpers.MEDIUM_ALPHA_INT
 import com.simplemobiletools.commons.models.RadioItem
 import me.grantland.widget.AutofitHelper
@@ -86,7 +87,7 @@ class ConverterView @JvmOverloads constructor(
             )
         }
 
-        binding.topUnitHolder.setBackgroundColor(context.getProperBackgroundColor().lightenColor())
+        binding.topUnitHolder.setBackgroundColor(context.getProperPrimaryColor().lightenColor().adjustAlpha(LOWER_ALPHA))
         binding.swapButton.applyColorFilter(context.getProperPrimaryColor())
 
         val drawable = ResourcesCompat.getDrawable(
