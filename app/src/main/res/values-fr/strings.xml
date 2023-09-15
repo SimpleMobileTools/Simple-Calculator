@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Calculatrice</string>
+    <string name="app_name">Calculatrice simple</string>
     <string name="app_launcher_name">Calculatrice</string>
     <string name="scientific_calculator">Calculatrice scientifique</string>
     <!-- Calculator field -->
@@ -11,11 +11,11 @@
     <string name="clear_history">Effacer</string>
     <string name="history_cleared">L\'historique a été effacé</string>
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Vibrer lors de l\'appui sur les boutons</string>
+    <string name="vibrate_on_button_press">Vibrer lors de l\'appui sur les touches</string>
     <string name="use_comma_as_decimal_mark">Utiliser la virgule comme séparateur décimal</string>
     <!-- FAQ -->
     <string name="faq_1_title">Comment fonctionne le bouton C (Effacer) \?</string>
-    <string name="faq_1_text">En tapotant dessus, vous retirerez un caractère à la fois. Une pression prolongée sur le bouton réinitialisera tous les champs à la fois.</string>
+    <string name="faq_1_text">En appuyant dessus, vous effacerez un caractère à la fois. Un appui prolongé réinitialisera tous les champs d\'un seul coup.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
