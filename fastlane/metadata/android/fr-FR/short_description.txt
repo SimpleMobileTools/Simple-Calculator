@@ -1,1 +1,1 @@
-Une calculatrice scientifique pour calculs simples rapides interface utilisateur
+Une jolie calculatrice à l'interface fluide pour des calculs simples et rapides
