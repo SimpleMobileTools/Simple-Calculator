@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="formula_divide_by_zero_error">هەڵە ڕوویدا: سفر دابەش نابێ بەسەر هیچدا</string>
-    <string name="clear_history">سڕینەوە</string>
-    <string name="faq_1_text">دەستدان لێی یەک ژمارە دەسڕێتەوە یەکجار، زیاتر دەسڕاگرتن خانەکە سفر دەکاتەوە.</string>
-    <string name="app_launcher_name">ژمێرەر</string>
-    <string name="history_empty">مێژوو بەتاڵە</string>
-    <string name="history_cleared">مێژوو خاوێنکرایەوە</string>
-    <string name="scientific_calculator">ژمێرەری زانستی</string>
-    <string name="history">مێژوو</string>
-    <string name="faq_1_title">دوگمەی C (سڕینەوە) چۆن کارەکات؟</string>
     <string name="app_name">ژمێرەر</string>
-    <string name="use_comma_as_decimal_mark">بەکارهێنانی فاریزە وەک نیشانەی دەیان</string>
+    <string name="app_launcher_name">ژمێرەر</string>
+    <string name="scientific_calculator">ژمێرەری زانستی</string>
+    <!-- Calculator field -->
+    <string name="formula_divide_by_zero_error">هەڵە ڕوویدا: سفر دابەش نابێ بەسەر هیچدا</string>
+    <!-- History -->
+    <string name="history">مێژوو</string>
+    <string name="history_empty">مێژوو بەتاڵە</string>
+    <string name="clear_history">سڕینەوە</string>
+    <string name="history_cleared">مێژوو خاوێنکرایەوە</string>
+    <!-- Settings -->
     <string name="vibrate_on_button_press">لەرزین لەکاتی دەستنان بە هێماکان</string>
+    <string name="use_comma_as_decimal_mark">بەکارهێنانی فاریزە وەک نیشانەی دەیان</string>
+    <!-- FAQ -->
+    <string name="faq_1_text">دەستدان لێی یەک ژمارە دەسڕێتەوە یەکجار، زیاتر دەسڕاگرتن خانەکە سفر دەکاتەوە.</string>
+    <string name="faq_1_title">دوگمەی C (سڕینەوە) چۆن کارەکات؟</string>
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
 </resources>
