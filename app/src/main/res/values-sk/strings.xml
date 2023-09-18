@@ -3,8 +3,8 @@
     <string name="app_name">Jednoduchá kalkulačka</string>
     <string name="app_launcher_name">Kalkulačka</string>
     <string name="scientific_calculator">Vedecká kalkulačka</string>
-    <string name="unit_converter">Unit converter</string>
-    <string name="swap_units">Swap units</string>
+    <string name="unit_converter">Prevodník jednotiek</string>
+    <string name="swap_units">Vymeniť jednotky</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Chyba: delenie nulou</string>
     <!-- History -->
@@ -16,7 +16,7 @@
     <string name="vibrate_on_button_press">Vibrovať pri stlačení tlačidla</string>
     <string name="use_comma_as_decimal_mark">Používať čiarku na oddelenie desatinných čísel</string>
     <!-- Unit converter -->
-    <string name="unit_length">Length</string>
+    <string name="unit_length">Dĺžka</string>
     <string name="unit_length_kilometer">Kilometer</string>
     <string name="unit_length_meter">Meter</string>
     <string name="unit_length_centimeter">Centimeter</string>
@@ -24,24 +24,24 @@
     <string name="unit_length_micrometer">Micrometer</string>
     <string name="unit_length_nanometer">Nanometer</string>
     <string name="unit_length_angstrom">Angstrom</string>
-    <string name="unit_length_mile">Mile</string>
+    <string name="unit_length_mile">Míľa</string>
     <string name="unit_length_yard">Yard</string>
-    <string name="unit_length_foot">Foot</string>
-    <string name="unit_length_inch">Inch</string>
+    <string name="unit_length_foot">Noha</string>
+    <string name="unit_length_inch">Palec</string>
     <string name="unit_length_fathom">Fathom</string>
-    <string name="unit_length_nautical_mile">Nautical Mile</string>
-    <string name="unit_length_astronomical_unit">Astronomical Unit</string>
+    <string name="unit_length_nautical_mile">Námorná míľa</string>
+    <string name="unit_length_astronomical_unit">Astronomická jednotka</string>
     <string name="unit_length_parsec">Parsec</string>
-    <string name="unit_length_light_year">Light Year</string>
-    <string name="unit_area">Area</string>
-    <string name="unit_area_square_kilometer">Square Kilometer</string>
-    <string name="unit_area_square_meter">Square Meter</string>
-    <string name="unit_area_square_centimeter">Square Centimeter</string>
-    <string name="unit_area_square_millimeter">Square Millimeter</string>
-    <string name="unit_area_square_mile">Square Mile</string>
-    <string name="unit_area_square_yard">Square Yard</string>
-    <string name="unit_area_square_foot">Square Foot</string>
-    <string name="unit_area_square_inch">Square Inch</string>
+    <string name="unit_length_light_year">Svetelný rok</string>
+    <string name="unit_area">Plocha</string>
+    <string name="unit_area_square_kilometer">Štvorcový kilometer</string>
+    <string name="unit_area_square_meter">Štvorcový meter</string>
+    <string name="unit_area_square_centimeter">Štvorcový centimeter</string>
+    <string name="unit_area_square_millimeter">Štvorcový milimeter</string>
+    <string name="unit_area_square_mile">Štvorcová míľa</string>
+    <string name="unit_area_square_yard">Štvorcový yard</string>
+    <string name="unit_area_square_foot">Štvorcová noha</string>
+    <string name="unit_area_square_inch">Štvorcový palec</string>
     <string name="unit_area_acre">Acre</string>
     <string name="unit_area_hectare">Hectare</string>
     <string name="unit_volume">Volume</string>
