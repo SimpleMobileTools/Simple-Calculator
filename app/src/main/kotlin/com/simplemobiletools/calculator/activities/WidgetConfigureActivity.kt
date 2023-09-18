@@ -12,7 +12,6 @@ import android.widget.TextView
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.databinding.WidgetConfigBinding
 import com.simplemobiletools.calculator.extensions.config
-import com.simplemobiletools.calculator.extensions.viewBinding
 import com.simplemobiletools.calculator.helpers.MyWidgetProvider
 import com.simplemobiletools.commons.dialogs.ColorPickerDialog
 import com.simplemobiletools.commons.dialogs.FeatureLockedDialog

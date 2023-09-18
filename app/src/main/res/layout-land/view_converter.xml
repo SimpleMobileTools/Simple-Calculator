@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.simplemobiletools.calculator.views.ConverterView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_unit_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:background="@drawable/colored_ripple"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin">
+
+        <TextView
+            android:id="@+id/top_unit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:gravity="center"
+            android:textAlignment="gravity"
+            android:textSize="@dimen/big_text_size"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            app:drawableEndCompat="@drawable/ic_arrow_drop_down_vector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/top_unit_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_weight="2"
+            android:gravity="end|center_vertical"
+            android:singleLine="true"
+            android:textAlignment="gravity"
+            android:textSize="@dimen/extra_big_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/top_unit_symbol"
+            app:layout_constraintStart_toEndOf="@+id/top_unit_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/top_unit_symbol"
+            style="@style/MyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="@dimen/unit_symbol_size"
+            android:padding="@dimen/small_margin"
+            android:singleLine="true"
+            android:textAlignment="gravity"
+            android:textSize="@dimen/big_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/top_unit_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/top_unit_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_unit_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:background="@drawable/ripple_background"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin">
+
+        <TextView
+            android:id="@+id/bottom_unit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:gravity="center"
+            android:textAlignment="gravity"
+            android:textSize="@dimen/big_text_size"
+            app:drawableEndCompat="@drawable/ic_arrow_drop_down_vector"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bottom_unit_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:gravity="end|center_vertical"
+            android:singleLine="true"
+            android:textAlignment="gravity"
+            android:textSize="@dimen/extra_big_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bottom_unit_symbol"
+            app:layout_constraintStart_toEndOf="@+id/bottom_unit_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bottom_unit_symbol"
+            style="@style/MyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="@dimen/unit_symbol_size"
+            android:padding="@dimen/small_margin"
+            android:singleLine="true"
+            android:textAlignment="gravity"
+            android:textSize="@dimen/big_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/bottom_unit_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottom_unit_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.simplemobiletools.calculator.views.ConverterView>

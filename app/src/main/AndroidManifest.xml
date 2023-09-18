@@ -35,6 +35,14 @@
             android:exported="false" />
 
         <activity
+            android:name=".activities.UnitConverterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.UnitConverterPickerActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".activities.WidgetConfigureActivity"
             android:exported="true"
             android:screenOrientation="portrait"

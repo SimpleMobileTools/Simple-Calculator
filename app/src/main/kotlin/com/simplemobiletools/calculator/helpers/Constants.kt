@@ -30,6 +30,8 @@ const val COMMA = ","
 
 // shared prefs
 const val USE_COMMA_AS_DECIMAL_MARK = "use_comma_as_decimal_mark"
+
+// calculator state
 const val RES = "res"
 const val PREVIOUS_CALCULATION = "previousCalculation"
 const val LAST_KEY = "lastKey"
@@ -38,3 +40,9 @@ const val BASE_VALUE = "baseValue"
 const val SECOND_VALUE = "secondValue"
 const val INPUT_DISPLAYED_FORMULA = "inputDisplayedFormula"
 const val CALCULATOR_STATE = "calculatorState"
+
+// converter state
+const val TOP_UNIT = "top_unit"
+const val BOTTOM_UNIT = "bottom_unit"
+const val CONVERTER_VALUE = "converter_value"
+const val CONVERTER_STATE = "converter_state"
