@@ -3,6 +3,8 @@
     <string name="app_name">ژمێرەر</string>
     <string name="app_launcher_name">ژمێرەر</string>
     <string name="scientific_calculator">ژمێرەری زانستی</string>
+    <string name="unit_converter">Unit converter</string>
+    <string name="swap_units">Swap units</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">هەڵە ڕوویدا: سفر دابەش نابێ بەسەر هیچدا</string>
     <!-- History -->
