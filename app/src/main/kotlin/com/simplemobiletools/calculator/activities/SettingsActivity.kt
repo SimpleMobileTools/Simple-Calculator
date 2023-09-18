@@ -7,12 +7,11 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
-import androidx.core.view.WindowCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.simplemobiletools.calculator.compose.SettingsScreen
 import com.simplemobiletools.calculator.extensions.*
 import com.simplemobiletools.commons.activities.CustomizationActivity
-import com.simplemobiletools.commons.compose.extensions.TransparentSystemBars
+import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeSimple
 import com.simplemobiletools.commons.compose.extensions.onEventValue
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.getAppIconIds
@@ -29,9 +28,8 @@ class SettingsActivity : AppCompatActivity() {
     @SuppressLint("NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+        enableEdgeToEdgeSimple()
         setContent {
-            TransparentSystemBars()
             AppThemeSurface {
                 val context = LocalContext.current
                 val preventPhoneFromSleeping by preferences.preventPhoneFromSleepingFlow.collectAsStateWithLifecycle(preferences.preventPhoneFromSleeping)
