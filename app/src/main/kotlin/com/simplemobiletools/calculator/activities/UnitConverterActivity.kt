@@ -71,6 +71,11 @@ class UnitConverterActivity : SimpleActivity() {
             savedInstanceState.getBundle(CONVERTER_STATE)?.also {
                 binding.viewUnitConverter.viewConverter.root.restoreFromSavedState(it)
             }
+        } else {
+            val storedState = config.getLastConverterUnits(converter)
+            if (storedState != null) {
+                binding.viewUnitConverter.viewConverter.root.updateUnits(storedState.topUnit, storedState.bottomUnit)
+            }
         }
     }
 

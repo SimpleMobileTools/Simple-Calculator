@@ -14,6 +14,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.widget.TextViewCompat
 import com.simplemobiletools.calculator.R
 import com.simplemobiletools.calculator.databinding.ViewConverterBinding
+import com.simplemobiletools.calculator.extensions.config
 import com.simplemobiletools.calculator.helpers.*
 import com.simplemobiletools.calculator.helpers.converters.Converter
 import com.simplemobiletools.commons.dialogs.RadioGroupDialog
@@ -243,6 +244,7 @@ class ConverterView @JvmOverloads constructor(
                     updateBottomValue()
                 }
                 updateUnitLabelsAndSymbols()
+                context.config.putLastConverterUnits(converter!!, topUnit!!, bottomUnit!!)
             }
         }
     }
@@ -254,9 +256,15 @@ class ConverterView @JvmOverloads constructor(
     }
 
     fun restoreFromSavedState(state: Bundle) {
-        topUnit = converter!!.units[state.getInt(TOP_UNIT)]
-        bottomUnit = converter!!.units[state.getInt(BOTTOM_UNIT)]
         binding.topUnitText.text = state.getString(CONVERTER_VALUE)
+        val storedTopUnit = converter!!.units[state.getInt(TOP_UNIT)]
+        val storedBottomUnit = converter!!.units[state.getInt(BOTTOM_UNIT)]
+        updateUnits(storedTopUnit, storedBottomUnit)
+    }
+
+    fun updateUnits(newTopUnit: Converter.Unit, newBottomUnit: Converter.Unit) {
+        topUnit = newTopUnit
+        bottomUnit = newBottomUnit
 
         updateBottomValue()
         updateUnitLabelsAndSymbols()
