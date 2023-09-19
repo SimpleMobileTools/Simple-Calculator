@@ -1,14 +1,9 @@
 package com.simplemobiletools.calculator.compose
 
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.settings.SettingsCheckBoxComponent
@@ -40,7 +35,7 @@ internal fun SettingsScreen(
     lockedCustomizeColorText: String?,
     displayLanguage: String
 ) {
-    SettingsScaffold(title = stringResource(id = R.string.settings), goBack = goBack) { paddingValues ->
+    SettingsScaffold(title = stringResource(id = R.string.settings), goBack = goBack) {
         SettingsGroup(title = {
             SettingsTitleTextComponent(text = stringResource(id = R.string.color_customization))
         }) {
@@ -96,7 +91,6 @@ internal fun SettingsScreen(
                 onChange = onUseCommaAsDecimalMarkFlow,
             )
         }
-        Spacer(modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding()))
     }
 }
 
