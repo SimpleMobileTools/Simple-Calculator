@@ -30,6 +30,7 @@ const val COMMA = ","
 
 // shared prefs
 const val USE_COMMA_AS_DECIMAL_MARK = "use_comma_as_decimal_mark"
+const val CONVERTER_UNITS_PREFIX = "converter_last_units"
 
 // calculator state
 const val RES = "res"

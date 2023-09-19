@@ -21,6 +21,8 @@ interface Converter {
     val defaultTopUnit: Unit
     val defaultBottomUnit: Unit
 
+    val key: String
+
     fun convert(from: ValueWithUnit<Unit>, to: Unit): ValueWithUnit<Unit> {
         return ValueWithUnit(to.fromBase(from.unit.toBase(from.value)), to)
     }
@@ -28,7 +30,8 @@ interface Converter {
     open class Unit(
         val nameResId: Int,
         val symbolResId: Int,
-        val factor: Double
+        val factor: Double,
+        val key: String
     ) {
 
         open fun toBase(value: Double) = value * factor
