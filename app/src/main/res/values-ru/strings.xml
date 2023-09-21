@@ -4,7 +4,7 @@
     <string name="app_launcher_name">Калькулятор</string>
     <string name="scientific_calculator">Научный калькулятор</string>
     <string name="unit_converter">Конвертер величин</string>
-    <string name="swap_units">Поменять единицы местами</string>
+    <string name="swap_units">Поменять местами</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Ошибка: деление на ноль</string>
     <!-- History -->
@@ -28,7 +28,7 @@
     <string name="unit_length_yard">Yard</string>
     <string name="unit_length_foot">Фут</string>
     <string name="unit_length_inch">Дюйм</string>
-    <string name="unit_length_fathom">Сажень</string>
+    <string name="unit_length_fathom">Морская сажень</string>
     <string name="unit_length_nautical_mile">Морская миля</string>
     <string name="unit_length_astronomical_unit">Астрономическая единица</string>
     <string name="unit_length_parsec">Парсек</string>
@@ -53,7 +53,7 @@
     <string name="unit_volume_centiliter">Сантилитр</string>
     <string name="unit_volume_deciliter">Децилитр</string>
     <string name="unit_volume_milliliter">Миллилитр</string>
-    <string name="unit_volume_acre_foot">Acre Foot</string>
+    <string name="unit_volume_acre_foot">Акр-фут</string>
     <string name="unit_volume_cubic_foot">Кубический фут</string>
     <string name="unit_volume_cubic_inch">Кубический дюйм</string>
     <string name="unit_volume_barrel_us">Баррель (США)</string>
@@ -76,26 +76,26 @@
     <string name="unit_mass_tonne">Тонна</string>
     <string name="unit_mass_pound">Pound</string>
     <string name="unit_mass_ounce">Унция</string>
-    <string name="unit_mass_grain">Grain</string>
+    <string name="unit_mass_grain">Гран</string>
     <string name="unit_mass_dram">Dram</string>
-    <string name="unit_mass_stone">Stone</string>
-    <string name="unit_mass_long_ton">Long Ton</string>
-    <string name="unit_mass_short_ton">Short Ton</string>
-    <string name="unit_mass_carat">Carat</string>
-    <string name="unit_mass_carat_metric">Carat (Metric)</string>
-    <string name="unit_temperature">Temperature</string>
-    <string name="unit_temperature_celsius">Celsius</string>
-    <string name="unit_temperature_fahrenheit">Fahrenheit</string>
-    <string name="unit_temperature_rankine">Rankine</string>
-    <string name="unit_temperature_kelvin">Kelvin</string>
-    <string name="unit_time">Time</string>
-    <string name="unit_time_hour">Hour</string>
+    <string name="unit_mass_stone">Стон</string>
+    <string name="unit_mass_long_ton">Длинная тонна</string>
+    <string name="unit_mass_short_ton">Короткая тонна</string>
+    <string name="unit_mass_carat">Карат</string>
+    <string name="unit_mass_carat_metric">Карат (метрический)</string>
+    <string name="unit_temperature">Температура</string>
+    <string name="unit_temperature_celsius">Цельсий</string>
+    <string name="unit_temperature_fahrenheit">Фаренгейт</string>
+    <string name="unit_temperature_rankine">Рэнкин</string>
+    <string name="unit_temperature_kelvin">Кельвин</string>
+    <string name="unit_time">Время</string>
+    <string name="unit_time_hour">Час</string>
     <string name="unit_time_minute">Minute</string>
-    <string name="unit_time_second">Second</string>
-    <string name="unit_time_millisecond">Microsecond</string>
+    <string name="unit_time_second">Секунда</string>
+    <string name="unit_time_millisecond">Микросекунда</string>
     <string name="unit_time_day">Day</string>
-    <string name="unit_time_week">Week</string>
-    <string name="unit_time_year">Year</string>
+    <string name="unit_time_week">Неделя</string>
+    <string name="unit_time_year">Год</string>
     <!-- FAQ -->
     <string name="faq_1_title">Как работает кнопка C (Очистка)\?</string>
     <string name="faq_1_text">Нажатие на неё удалит один символ. Долгое нажатие сбросит все поля сразу.</string>
