@@ -13,7 +13,7 @@
     <string name="clear_history">Effacer</string>
     <string name="history_cleared">L\'historique a été effacé</string>
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Vibrer lors de l\'appui sur les touches</string>
+    <string name="vibrate_on_button_press">Vibrer lors de l\'appui sur une touche</string>
     <string name="use_comma_as_decimal_mark">Utiliser la virgule comme séparateur décimal</string>
     <!-- Unit converter -->
     <string name="unit_length">Length</string>
