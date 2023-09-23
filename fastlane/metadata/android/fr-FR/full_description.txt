@@ -12,7 +12,7 @@ Vous avez accès à un historique des opérations pour parcourir rapidement les 
 
 L'application est livrée avec une conception matérielle et un thème sombre par défaut, vous offrant une excellente expérience utilisateur et une utilisation simple. L'absence d'accès à Internet vous offre davantage de confidentialité, de sécurité et de stabilité, en comparaison des autres applications.
 
-Ne contient aucune publicité ni autorisation inutile. Le code source de l'application est entièrement libre. Elle fournit des couleurs personnalisables.
+Ne contient aucune publicité ni autorisation inutile. Le code source de l'application est entièrement ouvert. Elle fournit des couleurs personnalisables.
 
 Caractéristiques :
 

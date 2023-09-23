@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lihtne kalkulaator</string>
-    <string name="app_launcher_name">Kalkulaator</string>
-    <string name="scientific_calculator">Teadusrežiim</string>
+    <string name="app_name">Simple Calculator</string>
+    <string name="app_launcher_name">Calculator</string>
+    <string name="scientific_calculator">Scientific Calculator</string>
     <string name="unit_converter">Unit converter</string>
     <string name="swap_units">Swap units</string>
+
     <!-- Calculator field -->
-    <string name="formula_divide_by_zero_error">Viga: nulliga jagamine</string>
+    <string name="formula_divide_by_zero_error">Error: division by zero</string>
+
     <!-- History -->
-    <string name="history">Ajalugu</string>
-    <string name="history_empty">Ajalugu puudub</string>
-    <string name="clear_history">Kustuta</string>
-    <string name="history_cleared">Ajalugu on kustutatud</string>
+    <string name="history">History</string>
+    <string name="history_empty">History is empty</string>
+    <string name="clear_history">Clear</string>
+    <string name="history_cleared">History has been cleared</string>
+
     <!-- Settings -->
-    <string name="vibrate_on_button_press">Nupuvajutusel vibreeri</string>
-    <string name="use_comma_as_decimal_mark">Kasutage koma kui kümnendmärki</string>
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="use_comma_as_decimal_mark">Use comma as a decimal mark</string>
+
     <!-- Unit converter -->
-    <string name="unit_length">Pikkus</string>
-    <string name="unit_length_kilometer">Kilomeeter</string>
-    <string name="unit_length_meter">Meeter</string>
-    <string name="unit_length_centimeter">Sentimeeter</string>
-    <string name="unit_length_millimeter">Millimeeter</string>
-    <string name="unit_length_micrometer">Mikromeeter</string>
-    <string name="unit_length_nanometer">Nanomeeter</string>
+    <string name="unit_length">Length</string>
+    <string name="unit_length_kilometer">Kilometer</string>
+    <string name="unit_length_meter">Meter</string>
+    <string name="unit_length_centimeter">Centimeter</string>
+    <string name="unit_length_millimeter">Millimeter</string>
+    <string name="unit_length_micrometer">Micrometer</string>
+    <string name="unit_length_nanometer">Nanometer</string>
     <string name="unit_length_angstrom">Angstrom</string>
     <string name="unit_length_mile">Mile</string>
     <string name="unit_length_yard">Yard</string>
@@ -96,9 +100,10 @@
     <string name="unit_time_day">Day</string>
     <string name="unit_time_week">Week</string>
     <string name="unit_time_year">Year</string>
+
     <!-- FAQ -->
-    <string name="faq_1_title">Kuidas C (Clear) nupp toimib\?</string>
-    <string name="faq_1_text">Üks klõpsatus kustutab ühe numbri. Pikk vajutus eemaldab kogu sisestuse.</string>
+    <string name="faq_1_title">How does the C (Clear) button work?</string>
+    <string name="faq_1_text">Tapping on it will remove one character at a time. Long pressing it will reset all fields at once.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
