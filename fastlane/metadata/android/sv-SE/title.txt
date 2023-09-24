@@ -1,1 +1,1 @@
-Simpel kalkylator
+Simple Calculator
