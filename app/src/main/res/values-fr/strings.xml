@@ -72,12 +72,12 @@
     <string name="unit_mass_gram">Gramme</string>
     <string name="unit_mass_kilogram">Kilogramme</string>
     <string name="unit_mass_milligram">Milligramme</string>
-    <string name="unit_mass_microgram">Microgram</string>
+    <string name="unit_mass_microgram">Microgramme</string>
     <string name="unit_mass_tonne">Tonne</string>
-    <string name="unit_mass_pound">Pound</string>
-    <string name="unit_mass_ounce">Ounce</string>
-    <string name="unit_mass_grain">Grain</string>
-    <string name="unit_mass_dram">Dram</string>
+    <string name="unit_mass_pound">Livre avoirdupois</string>
+    <string name="unit_mass_ounce">Once avoirdupois</string>
+    <string name="unit_mass_grain">Grain avoirdupois</string>
+    <string name="unit_mass_dram">Drachme avoirdupois</string>
     <string name="unit_mass_stone">Stone</string>
     <string name="unit_mass_long_ton">Long Ton</string>
     <string name="unit_mass_short_ton">Short Ton</string>
