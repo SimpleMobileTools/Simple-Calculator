@@ -43,9 +43,6 @@ class SettingsActivity : AppCompatActivity() {
                     }
                 }
                 val isOrWasThankYouInstalled = onEventValue { context.isOrWasThankYouInstalled() }
-                val lockedCustomizeColorText by remember(isOrWasThankYouInstalled) {
-                    derivedStateOf { if (isOrWasThankYouInstalled) null else getCustomizeColorsString() }
-                }
                 val displayLanguage = remember { Locale.getDefault().displayLanguage }
                 SettingsScreen(
                     displayLanguage = displayLanguage,
@@ -73,7 +70,7 @@ class SettingsActivity : AppCompatActivity() {
                             applicationContext.calculatorDB.deleteHistory()
                         }
                     },
-                    lockedCustomizeColorText = lockedCustomizeColorText
+                    lockedCustomizeColorText = getCustomizeColorsString()
                 )
             }
         }

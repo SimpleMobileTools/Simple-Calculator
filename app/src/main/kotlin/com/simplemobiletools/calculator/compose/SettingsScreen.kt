@@ -32,7 +32,7 @@ internal fun SettingsScreen(
     onSetupLanguagePress: () -> Unit,
     useCommaAsDecimalMarkFlow: Boolean,
     onUseCommaAsDecimalMarkFlow: (Boolean) -> Unit,
-    lockedCustomizeColorText: String?,
+    lockedCustomizeColorText: String,
     displayLanguage: String
 ) {
     SettingsScaffold(title = stringResource(id = R.string.settings), goBack = goBack) {
@@ -40,10 +40,9 @@ internal fun SettingsScreen(
             SettingsTitleTextComponent(text = stringResource(id = R.string.color_customization))
         }) {
             SettingsPreferenceComponent(
-                preferenceTitle = stringResource(id = R.string.customize_colors),
+                preferenceTitle = lockedCustomizeColorText,
                 doOnPreferenceClick = customizeColors,
                 isPreferenceEnabled = isOrWasThankYouInstalled,
-                preferenceSummary = lockedCustomizeColorText
             )
             SettingsPreferenceComponent(
                 preferenceTitle = stringResource(id = R.string.customize_widget_colors),
@@ -106,7 +105,7 @@ private fun SettingsScreenPreview() {
             onPreventPhoneFromSleeping = {},
             vibrateOnButtonPressFlow = false,
             onVibrateOnButtonPressFlow = {},
-            isOrWasThankYouInstalled = false,
+            isOrWasThankYouInstalled = true,
             onThankYou = {},
             isUseEnglishEnabled = false,
             isUseEnglishChecked = false,
@@ -114,7 +113,7 @@ private fun SettingsScreenPreview() {
             onSetupLanguagePress = {},
             useCommaAsDecimalMarkFlow = false,
             onUseCommaAsDecimalMarkFlow = {},
-            lockedCustomizeColorText = null,
+            lockedCustomizeColorText = "Customize Colors",
             displayLanguage = "English"
         )
     }
