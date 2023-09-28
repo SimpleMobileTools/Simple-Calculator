@@ -1,12 +1,28 @@
-Appen har ingen enhetsomvandlare. Du kan kopiera resultat och formler till Urklipp genom att trycka länge på dem.
+Denna eleganta moderna kalkylator erbjuder en fantastisk användarupplevelse som du kommer att älska att se. Du kan kopiera resultatet eller formeln till urklipp genom att trycka länge på den. Du kan också använda den här kalkylatorn som en valutaomvandlare för att beräkna din dagliga inkomst och andra belopp i olika länders valuta. Med ett lugnande mörkt tema för ögonen är det nu lätt för dig att se knappar och siffror lättare och använda denna kalkylator för enkla beräkningar eller använda den som en valutaomvandlare. Du kan också använda den här matematikkalkylatorn som en bolånekalkylator.
 
-Du kan anpassa widgetens textfärg, bakgrundsfärg och bakgrundsgenomskinlighet. Tryck på resultatet eller formeln i widgeten för att öppna appen.
+Appen är en enkel hjälpreda för snabba beräkningar med många grundläggande funktioner inklusive multiplicera, dividera, rot och potenser. Den kommer också med mörkt tema så att du kan använda den här nya tekniken för att få din miniräknare att se smidigare och mer lättanvänd ut istället för att använda skarpa färger i olika miniräknare som inte kan hjälpa dig att koncentrera dig på dina komplexa beräkningar i den här matematikkalkylatorn.
 
-Den levereras med Material Design och mörkt tema som standard, och ger en bra användarupplevelse för enkel användning. Avsaknaden av internetåtkomst ger dig mer integritet, säkerhet och stabilitet än andra appar.
+Du kan få den att vibrera när du trycker på knapparna för att göra dig säker när du lägger in dina värden. De utsökta färgerna som används i den här appen är coola och ser mjuka ut för ögonen så att du enkelt kan skilja mellan alla knappar och beräkna med lätthet. Denna kalkylator kan användas för att lösa komplexa rotproblem eller den kan också användas som valutaomvandlare eller grafräknare.
 
-Innehåller ingen reklam eller onödiga behörigheter. Den har helt öppen källkod och anpassningsbara färger.
+Det finns ett alternativ i inställningen för att förhindra att telefonen sover medan du använder appen för bekväm användning.
 
-Kolla in hela uppsättningen Simple Tools här:
+Textfärgen på widgeten som kan ändras storlek kan anpassas, såväl som bakgrundens färg och alfa. Tryck på resultatet eller formeln i widgeten för att öppna appen.
+
+Du kan komma åt en historik över operationerna för att snabbt skanna igenom de senaste beräkningarna.
+
+Den kommer med materialdesign och mörkt tema som standard, vilket ger en fantastisk användarupplevelse för enkel användning. Bristen på internetåtkomst ger dig mer integritet, säkerhet och stabilitet än andra appar.
+
+Innehåller inga annonser eller onödiga behörigheter. Det är helt öppen källkod, ger anpassningsbara färger.
+
+Funktioner:
+- Lätt att använda miniräknare.
+- Operationshistorik.
+- Kommer med mörkt tema för att möjliggöra smidig användning av miniräknaren.
+- Fungerar som valutaomvandlare för att hjälpa dig att beräkna dina inkomster och andra belopp.
+- Anpassningsbar textfärg för att få den att se coolare ut och efter dina behov.
+- Knappar storleksanpassade enligt genomsnittligt fingertryck på skärmen för att göra beräkningarna bekvämare.
+
+Kolla in hela sviten av enkla verktyg här:
 https://www.simplemobiletools.com
 
 Facebook:
