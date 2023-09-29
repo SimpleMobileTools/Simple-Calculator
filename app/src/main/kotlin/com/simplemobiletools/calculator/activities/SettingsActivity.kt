@@ -11,11 +11,13 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.simplemobiletools.calculator.compose.SettingsScreen
 import com.simplemobiletools.calculator.extensions.*
 import com.simplemobiletools.commons.activities.CustomizationActivity
+import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.extensions.enableEdgeToEdgeSimple
 import com.simplemobiletools.commons.compose.extensions.onEventValue
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.getAppIconIds
 import com.simplemobiletools.commons.compose.theme.getAppLauncherName
+import com.simplemobiletools.commons.dialogs.FeatureLockedAlertDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.util.Locale
@@ -44,6 +46,13 @@ class SettingsActivity : AppCompatActivity() {
                 }
                 val isOrWasThankYouInstalled = onEventValue { context.isOrWasThankYouInstalled() }
                 val displayLanguage = remember { Locale.getDefault().displayLanguage }
+                val featureLockedDialogState = rememberAlertDialogState().apply {
+                    DialogMember {
+                        FeatureLockedAlertDialog(alertDialogState = this) {
+
+                        }
+                    }
+                }
                 SettingsScreen(
                     displayLanguage = displayLanguage,
                     goBack = ::finish,
@@ -70,7 +79,8 @@ class SettingsActivity : AppCompatActivity() {
                             applicationContext.calculatorDB.deleteHistory()
                         }
                     },
-                    lockedCustomizeColorText = getCustomizeColorsString()
+                    lockedCustomizeColorText = getCustomizeColorsString(),
+                    featureLockedDialogState = featureLockedDialogState
                 )
             }
         }

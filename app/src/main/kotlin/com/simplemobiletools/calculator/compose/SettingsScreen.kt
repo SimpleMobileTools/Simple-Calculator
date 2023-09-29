@@ -5,6 +5,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
+import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.extensions.MyDevices
 import com.simplemobiletools.commons.compose.settings.SettingsCheckBoxComponent
 import com.simplemobiletools.commons.compose.settings.SettingsGroup
@@ -33,7 +35,8 @@ internal fun SettingsScreen(
     useCommaAsDecimalMarkFlow: Boolean,
     onUseCommaAsDecimalMarkFlow: (Boolean) -> Unit,
     lockedCustomizeColorText: String,
-    displayLanguage: String
+    displayLanguage: String,
+    featureLockedDialogState : AlertDialogState
 ) {
     SettingsScaffold(title = stringResource(id = R.string.settings), goBack = goBack) {
         SettingsGroup(title = {
@@ -41,8 +44,13 @@ internal fun SettingsScreen(
         }) {
             SettingsPreferenceComponent(
                 label = lockedCustomizeColorText,
-                doOnPreferenceClick = customizeColors,
-                isPreferenceEnabled = isOrWasThankYouInstalled,
+                doOnPreferenceClick = {
+                    if (isOrWasThankYouInstalled) {
+                        customizeColors()
+                    } else {
+                        featureLockedDialogState.show()
+                    }
+                },
                 preferenceLabelColor = MaterialTheme.colorScheme.onSurface
             )
             SettingsPreferenceComponent(
@@ -115,7 +123,8 @@ private fun SettingsScreenPreview() {
             useCommaAsDecimalMarkFlow = false,
             onUseCommaAsDecimalMarkFlow = {},
             lockedCustomizeColorText = "Customize Colors",
-            displayLanguage = "English"
+            displayLanguage = "English",
+            featureLockedDialogState = rememberAlertDialogState()
         )
     }
 }
