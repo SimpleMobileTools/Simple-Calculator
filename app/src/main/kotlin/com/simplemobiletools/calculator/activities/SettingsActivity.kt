@@ -46,13 +46,7 @@ class SettingsActivity : AppCompatActivity() {
                 }
                 val isOrWasThankYouInstalled = onEventValue { context.isOrWasThankYouInstalled() }
                 val displayLanguage = remember { Locale.getDefault().displayLanguage }
-                val featureLockedDialogState = rememberAlertDialogState().apply {
-                    DialogMember {
-                        FeatureLockedAlertDialog(alertDialogState = this) {
-
-                        }
-                    }
-                }
+                val featureLockedDialogState = getFeatureLockedDialogState()
                 SettingsScreen(
                     displayLanguage = displayLanguage,
                     goBack = ::finish,
@@ -85,6 +79,14 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
     }
+
+    @Composable
+    private fun getFeatureLockedDialogState() =
+        rememberAlertDialogState().apply {
+            DialogMember {
+                FeatureLockedAlertDialog(alertDialogState = this, callback = {})
+            }
+        }
 
     private fun handleCustomizeColorsClick() {
         Intent(applicationContext, CustomizationActivity::class.java).apply {
