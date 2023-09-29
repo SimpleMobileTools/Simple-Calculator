@@ -15,7 +15,6 @@ L'application est livrée avec une conception matérielle et un thème sombre pa
 Ne contient aucune publicité ni autorisation inutile. Le code source de l'application est entièrement ouvert. Elle fournit des couleurs personnalisables.
 
 Caractéristiques :
-
 - Calculatrice simple d'utilisation,
 - Historique des opérations,
 - Livrée avec un thème sombre pour permettre une utilisation fluide de la calculatrice,
