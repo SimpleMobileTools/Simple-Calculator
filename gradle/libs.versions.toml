@@ -8,10 +8,10 @@ androidx-customView = "1.2.0-alpha02"
 androidx-customViewPooling = "1.0.0"
 androidx-lifecycle = "2.7.0-alpha02"
 #Compose
-composeActivity = "1.8.0-beta01"
-compose = "1.6.0-alpha05"
+composeActivity = "1.8.0-rc01"
+compose = "1.6.0-alpha06"
 composeCompiler = "1.5.3"
-composeMaterial3 = "1.2.0-alpha07"
+composeMaterial3 = "1.2.0-alpha08"
 accompanist = "0.33.1-alpha"
 #AutoFitTextView
 autofittextview = "0.2.1"
@@ -20,9 +20,9 @@ exp4j = "0.4.8"
 #Room
 room = "2.5.2"
 #Simple tools
-simple-commons = "fd7f0ed81f"
+simple-commons = "5df1c152c5"
 #Gradle
-gradlePlugins-agp = "8.1.1"
+gradlePlugins-agp = "8.1.2"
 #build
 app-build-compileSDKVersion = "34"
 app-build-targetSDK = "34"

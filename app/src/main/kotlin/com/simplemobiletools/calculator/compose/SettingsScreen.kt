@@ -40,12 +40,13 @@ internal fun SettingsScreen(
             SettingsTitleTextComponent(text = stringResource(id = R.string.color_customization))
         }) {
             SettingsPreferenceComponent(
-                preferenceTitle = lockedCustomizeColorText,
+                label = lockedCustomizeColorText,
                 doOnPreferenceClick = customizeColors,
                 isPreferenceEnabled = isOrWasThankYouInstalled,
+                preferenceLabelColor = MaterialTheme.colorScheme.onSurface
             )
             SettingsPreferenceComponent(
-                preferenceTitle = stringResource(id = R.string.customize_widget_colors),
+                label = stringResource(id = R.string.customize_widget_colors),
                 doOnPreferenceClick = customizeWidgetColors
             )
         }
@@ -55,37 +56,37 @@ internal fun SettingsScreen(
         }) {
             if (!isOrWasThankYouInstalled) {
                 SettingsPreferenceComponent(
-                    preferenceTitle = stringResource(id = R.string.purchase_simple_thank_you),
+                    label = stringResource(id = R.string.purchase_simple_thank_you),
                     doOnPreferenceClick = onThankYou,
                 )
             }
             if (isUseEnglishEnabled) {
                 SettingsCheckBoxComponent(
-                    title = stringResource(id = R.string.use_english_language),
+                    label = stringResource(id = R.string.use_english_language),
                     initialValue = isUseEnglishChecked,
                     onChange = onUseEnglishPress,
                 )
             }
             if (isTiramisuPlus()) {
                 SettingsPreferenceComponent(
-                    preferenceTitle = stringResource(id = R.string.language),
-                    preferenceSummary = displayLanguage,
+                    label = stringResource(id = R.string.language),
+                    value = displayLanguage,
                     doOnPreferenceClick = onSetupLanguagePress,
-                    preferenceSummaryColor = MaterialTheme.colorScheme.onSurface,
+                    preferenceValueColor = MaterialTheme.colorScheme.onSurface,
                 )
             }
             SettingsCheckBoxComponent(
-                title = stringResource(id = R.string.vibrate_on_button_press),
+                label = stringResource(id = R.string.vibrate_on_button_press),
                 initialValue = vibrateOnButtonPressFlow,
                 onChange = onVibrateOnButtonPressFlow,
             )
             SettingsCheckBoxComponent(
-                title = stringResource(id = R.string.prevent_phone_from_sleeping),
+                label = stringResource(id = R.string.prevent_phone_from_sleeping),
                 initialValue = preventPhoneFromSleeping,
                 onChange = onPreventPhoneFromSleeping,
             )
             SettingsCheckBoxComponent(
-                title = stringResource(id = com.simplemobiletools.calculator.R.string.use_comma_as_decimal_mark),
+                label = stringResource(id = com.simplemobiletools.calculator.R.string.use_comma_as_decimal_mark),
                 initialValue = useCommaAsDecimalMarkFlow,
                 onChange = onUseCommaAsDecimalMarkFlow,
             )
