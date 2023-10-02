@@ -111,7 +111,6 @@ dependencies {
     implementation(libs.exp4j)
     implementation(libs.bundles.lifecycle)
     implementation(libs.bundles.compose)
-    implementation(libs.bundles.accompanist)
     debugImplementation(libs.bundles.compose.preview)
 
     implementation(libs.bundles.room)
