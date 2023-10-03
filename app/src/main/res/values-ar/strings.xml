@@ -3,8 +3,8 @@
     <string name="app_name">الحاسبة البسيطة</string>
     <string name="app_launcher_name">الحاسبة</string>
     <string name="scientific_calculator">الحاسبة العلمية</string>
-    <string name="unit_converter">Unit converter</string>
-    <string name="swap_units">Swap units</string>
+    <string name="unit_converter">محول الوحدة</string>
+    <string name="swap_units">تبديل الوحدات</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">خطأ: القسمة على صفر</string>
     <!-- History -->
@@ -16,26 +16,26 @@
     <string name="vibrate_on_button_press">الاهتزاز عند الضغط على الازرار</string>
     <string name="use_comma_as_decimal_mark">استخدام الفاصلة كعلامة عشرية</string>
     <!-- Unit converter -->
-    <string name="unit_length">Length</string>
-    <string name="unit_length_kilometer">Kilometer</string>
-    <string name="unit_length_meter">Meter</string>
-    <string name="unit_length_centimeter">Centimeter</string>
-    <string name="unit_length_millimeter">Millimeter</string>
-    <string name="unit_length_micrometer">Micrometer</string>
-    <string name="unit_length_nanometer">Nanometer</string>
+    <string name="unit_length">المدى</string>
+    <string name="unit_length_kilometer">كيلوميتر</string>
+    <string name="unit_length_meter">متر</string>
+    <string name="unit_length_centimeter">السنتيمتر</string>
+    <string name="unit_length_millimeter">ملليمتر</string>
+    <string name="unit_length_micrometer">اصغر متر</string>
+    <string name="unit_length_nanometer">جزى الثانية</string>
     <string name="unit_length_angstrom">Angstrom</string>
     <string name="unit_length_mile">Mile</string>
     <string name="unit_length_yard">Yard</string>
-    <string name="unit_length_foot">Foot</string>
-    <string name="unit_length_inch">Inch</string>
+    <string name="unit_length_foot">قدم</string>
+    <string name="unit_length_inch">انش</string>
     <string name="unit_length_fathom">Fathom</string>
     <string name="unit_length_nautical_mile">Nautical Mile</string>
-    <string name="unit_length_astronomical_unit">Astronomical Unit</string>
+    <string name="unit_length_astronomical_unit">الوحدة الفلكية</string>
     <string name="unit_length_parsec">Parsec</string>
-    <string name="unit_length_light_year">Light Year</string>
+    <string name="unit_length_light_year">سنة ضوئية</string>
     <string name="unit_area">Area</string>
     <string name="unit_area_square_kilometer">Square Kilometer</string>
-    <string name="unit_area_square_meter">Square Meter</string>
+    <string name="unit_area_square_meter">متر مربع</string>
     <string name="unit_area_square_centimeter">Square Centimeter</string>
     <string name="unit_area_square_millimeter">Square Millimeter</string>
     <string name="unit_area_square_mile">Square Mile</string>
@@ -43,9 +43,9 @@
     <string name="unit_area_square_foot">Square Foot</string>
     <string name="unit_area_square_inch">Square Inch</string>
     <string name="unit_area_acre">Acre</string>
-    <string name="unit_area_hectare">Hectare</string>
+    <string name="unit_area_hectare">هكتار</string>
     <string name="unit_volume">Volume</string>
-    <string name="unit_volume_cubic_meter">Cubic Meter</string>
+    <string name="unit_volume_cubic_meter">متر مكعب</string>
     <string name="unit_volume_cubic_decimeter">Cubic Decimeter</string>
     <string name="unit_volume_cubic_centimeter">Cubic Centimeter</string>
     <string name="unit_volume_cubic_millimeter">Cubic Millimeter</string>
@@ -94,8 +94,8 @@
     <string name="unit_time_second">Second</string>
     <string name="unit_time_millisecond">Microsecond</string>
     <string name="unit_time_day">Day</string>
-    <string name="unit_time_week">Week</string>
-    <string name="unit_time_year">Year</string>
+    <string name="unit_time_week">أسبوع</string>
+    <string name="unit_time_year">السنة</string>
     <!-- FAQ -->
     <string name="faq_1_title">كيف يعمل الزر C (مسح)؟</string>
     <string name="faq_1_text">النقر على ذلك سوف يزيل حرف واحد في وقت واحد. الضغط لفترة طويلة سوف إعادة تعيين جميع الحقول في وقت واحد.</string>

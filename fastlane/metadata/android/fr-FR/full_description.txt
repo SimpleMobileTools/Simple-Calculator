@@ -15,11 +15,11 @@ L'application est livrée avec une conception matérielle et un thème sombre pa
 Ne contient aucune publicité ni autorisation inutile. Le code source de l'application est entièrement ouvert. Elle fournit des couleurs personnalisables.
 
 Caractéristiques :
-- Calculatrice simple d'utilisation,
-- Historique des opérations,
-- Livrée avec un thème sombre pour permettre une utilisation fluide de la calculatrice,
-- Fonctionne comme un convertisseur de devises pour vous aider à calculer vos revenus et autres montants,
-- Couleur du texte personnalisable pour le rendre plus sympathique, selon vos besoins,
+- Calculatrice simple d'utilisation ;
+- Historique des opérations ;
+- Livrée avec un thème sombre pour permettre une utilisation fluide de la calculatrice ;
+- Fonctionne comme un convertisseur de devises pour vous aider à calculer vos revenus et autres montants ;
+- Couleur du texte personnalisable pour le rendre plus sympathique, selon vos besoins ;
 - Boutons dimensionnés en fonction de la pression moyenne du doigt sur l'écran pour rendre les calculs plus confortables.
 
 Découvrez la suite complète d’outils simples à cette adresse web :
