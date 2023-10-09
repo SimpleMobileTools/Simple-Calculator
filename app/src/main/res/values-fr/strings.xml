@@ -97,7 +97,7 @@
     <string name="unit_time_week">Semaine</string>
     <string name="unit_time_year">Année</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Comment fonctionne le bouton C (Effacer) \?</string>
+    <string name="faq_1_title">Comment le bouton C (Effacer) fonctionne-t-il \?</string>
     <string name="faq_1_text">En appuyant dessus, vous effacerez un caractère à la fois. Un appui prolongé réinitialisera tous les champs d\'un seul coup.</string>
     <!--
         Haven't found some strings? There's more at
