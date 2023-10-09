@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simpel kalkylator</string>
+    <string name="app_name">Simple Calculator</string>
     <string name="app_launcher_name">Kalkylator</string>
     <string name="scientific_calculator">Avancerad kalkylator</string>
     <string name="unit_converter">Enhetskonverterare</string>
