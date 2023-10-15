@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simpel kalkylator</string>
+    <string name="app_name">Simple Calculator</string>
     <string name="app_launcher_name">Kalkylator</string>
     <string name="scientific_calculator">Avancerad kalkylator</string>
     <string name="unit_converter">Enhetskonverterare</string>
@@ -9,7 +9,7 @@
     <string name="formula_divide_by_zero_error">Fel: delning med noll</string>
     <!-- History -->
     <string name="history">Historik</string>
-    <string name="history_empty">Historik är tom</string>
+    <string name="history_empty">Historiken är tom</string>
     <string name="clear_history">Rensa</string>
     <string name="history_cleared">Historiken har rensats</string>
     <!-- Settings -->
@@ -28,8 +28,8 @@
     <string name="unit_length_yard">Yard</string>
     <string name="unit_length_foot">Fot</string>
     <string name="unit_length_inch">Tum</string>
-    <string name="unit_length_fathom">Fathom</string>
-    <string name="unit_length_nautical_mile">Nautisk Mil</string>
+    <string name="unit_length_fathom">Famn</string>
+    <string name="unit_length_nautical_mile">Sjömil</string>
     <string name="unit_length_astronomical_unit">Astronomisk Enhet</string>
     <string name="unit_length_parsec">Parsec</string>
     <string name="unit_length_light_year">Ljusår</string>
@@ -56,7 +56,7 @@
     <string name="unit_volume_acre_foot">Acre Foot</string>
     <string name="unit_volume_cubic_foot">Kubikfot</string>
     <string name="unit_volume_cubic_inch">Kubiktum</string>
-    <string name="unit_volume_barrel_us">Barrel (US)</string>
+    <string name="unit_volume_barrel_us">Fat (US)</string>
     <string name="unit_volume_gallon_us">Gallon (US)</string>
     <string name="unit_volume_quart_us">Quart (US)</string>
     <string name="unit_volume_pint_us">Pint (US)</string>

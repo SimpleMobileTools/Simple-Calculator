@@ -3,8 +3,8 @@
     <string name="app_name">Simple Calculator</string>
     <string name="app_launcher_name">Calculadora</string>
     <string name="scientific_calculator">Calculadora científica</string>
-    <string name="unit_converter">Unit converter</string>
-    <string name="swap_units">Swap units</string>
+    <string name="unit_converter">Conversor de unidades</string>
+    <string name="swap_units">Trocar unidades</string>
     <!-- Calculator field -->
     <string name="formula_divide_by_zero_error">Erro: divisão por zero</string>
     <!-- History -->
@@ -16,20 +16,20 @@
     <string name="vibrate_on_button_press">Vibrar ao tocar nos botões</string>
     <string name="use_comma_as_decimal_mark">Usar vírgula como separador decimal</string>
     <!-- Unit converter -->
-    <string name="unit_length">Length</string>
-    <string name="unit_length_kilometer">Kilometer</string>
-    <string name="unit_length_meter">Meter</string>
-    <string name="unit_length_centimeter">Centimeter</string>
-    <string name="unit_length_millimeter">Millimeter</string>
+    <string name="unit_length">Comprimento</string>
+    <string name="unit_length_kilometer">Quilómetros</string>
+    <string name="unit_length_meter">Metros</string>
+    <string name="unit_length_centimeter">Centímetros</string>
+    <string name="unit_length_millimeter">Milímetros</string>
     <string name="unit_length_micrometer">Micrometer</string>
     <string name="unit_length_nanometer">Nanometer</string>
     <string name="unit_length_angstrom">Angstrom</string>
     <string name="unit_length_mile">Mile</string>
     <string name="unit_length_yard">Yard</string>
-    <string name="unit_length_foot">Foot</string>
-    <string name="unit_length_inch">Inch</string>
+    <string name="unit_length_foot">Pés</string>
+    <string name="unit_length_inch">Polegadas</string>
     <string name="unit_length_fathom">Fathom</string>
-    <string name="unit_length_nautical_mile">Nautical Mile</string>
+    <string name="unit_length_nautical_mile">Milhas náuticas</string>
     <string name="unit_length_astronomical_unit">Astronomical Unit</string>
     <string name="unit_length_parsec">Parsec</string>
     <string name="unit_length_light_year">Light Year</string>
@@ -45,14 +45,14 @@
     <string name="unit_area_acre">Acre</string>
     <string name="unit_area_hectare">Hectare</string>
     <string name="unit_volume">Volume</string>
-    <string name="unit_volume_cubic_meter">Cubic Meter</string>
-    <string name="unit_volume_cubic_decimeter">Cubic Decimeter</string>
+    <string name="unit_volume_cubic_meter">Metro cúbico</string>
+    <string name="unit_volume_cubic_decimeter">Decímetro cúbico</string>
     <string name="unit_volume_cubic_centimeter">Cubic Centimeter</string>
     <string name="unit_volume_cubic_millimeter">Cubic Millimeter</string>
-    <string name="unit_volume_liter">Liter</string>
-    <string name="unit_volume_centiliter">Centiliter</string>
-    <string name="unit_volume_deciliter">Deciliter</string>
-    <string name="unit_volume_milliliter">Milliliter</string>
+    <string name="unit_volume_liter">Litro</string>
+    <string name="unit_volume_centiliter">Centilitro</string>
+    <string name="unit_volume_deciliter">Decilitro</string>
+    <string name="unit_volume_milliliter">Mililitro</string>
     <string name="unit_volume_acre_foot">Acre Foot</string>
     <string name="unit_volume_cubic_foot">Cubic Foot</string>
     <string name="unit_volume_cubic_inch">Cubic Inch</string>
