@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.12.0 *(2023-10-16)*
+----------------------------
+
+ * Added a Unit converter
+ * Added some UI, translation and stability improvements
+
 Version 5.11.3 *(2023-05-10)*
 ----------------------------
 
