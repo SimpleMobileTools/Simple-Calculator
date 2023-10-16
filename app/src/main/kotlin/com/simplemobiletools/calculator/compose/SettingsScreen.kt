@@ -8,11 +8,11 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.compose.alert_dialog.AlertDialogState
 import com.simplemobiletools.commons.compose.alert_dialog.rememberAlertDialogState
 import com.simplemobiletools.commons.compose.extensions.MyDevices
+import com.simplemobiletools.commons.compose.lists.SimpleColumnScaffold
 import com.simplemobiletools.commons.compose.settings.SettingsCheckBoxComponent
 import com.simplemobiletools.commons.compose.settings.SettingsGroup
 import com.simplemobiletools.commons.compose.settings.SettingsPreferenceComponent
 import com.simplemobiletools.commons.compose.settings.SettingsTitleTextComponent
-import com.simplemobiletools.commons.compose.settings.scaffold.SettingsScaffold
 import com.simplemobiletools.commons.compose.theme.AppThemeSurface
 import com.simplemobiletools.commons.compose.theme.divider_grey
 import com.simplemobiletools.commons.helpers.isTiramisuPlus
@@ -38,7 +38,7 @@ internal fun SettingsScreen(
     displayLanguage: String,
     featureLockedDialogState : AlertDialogState
 ) {
-    SettingsScaffold(title = stringResource(id = R.string.settings), goBack = goBack) {
+    SimpleColumnScaffold(title = stringResource(id = R.string.settings), goBack = goBack) {
         SettingsGroup(title = {
             SettingsTitleTextComponent(text = stringResource(id = R.string.color_customization))
         }) {

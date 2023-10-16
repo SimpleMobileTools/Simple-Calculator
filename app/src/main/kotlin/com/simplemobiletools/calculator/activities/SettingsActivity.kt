@@ -84,7 +84,7 @@ class SettingsActivity : AppCompatActivity() {
     private fun getFeatureLockedDialogState() =
         rememberAlertDialogState().apply {
             DialogMember {
-                FeatureLockedAlertDialog(alertDialogState = this, callback = {})
+                FeatureLockedAlertDialog(alertDialogState = this, cancelCallback = {})
             }
         }
 
