@@ -19,7 +19,7 @@ exp4j = "0.4.8"
 #Room
 room = "2.5.2"
 #Simple tools
-simple-commons = "fd497d3719"
+simple-commons = "6a7777d740"
 #Gradle
 gradlePlugins-agp = "8.1.2"
 #build
