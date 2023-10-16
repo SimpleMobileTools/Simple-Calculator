@@ -8,11 +8,10 @@ androidx-customView = "1.2.0-alpha02"
 androidx-customViewPooling = "1.0.0"
 androidx-lifecycle = "2.7.0-alpha02"
 #Compose
-composeActivity = "1.8.0-beta01"
-compose = "1.6.0-alpha05"
+composeActivity = "1.8.0"
+compose = "1.6.0-alpha07"
 composeCompiler = "1.5.3"
-composeMaterial3 = "1.2.0-alpha07"
-accompanist = "0.33.1-alpha"
+composeMaterial3 = "1.2.0-alpha09"
 #AutoFitTextView
 autofittextview = "0.2.1"
 #exp4j
@@ -20,9 +19,9 @@ exp4j = "0.4.8"
 #Room
 room = "2.5.2"
 #Simple tools
-simple-commons = "fd7f0ed81f"
+simple-commons = "fd497d3719"
 #Gradle
-gradlePlugins-agp = "8.1.1"
+gradlePlugins-agp = "8.1.2"
 #build
 app-build-compileSDKVersion = "34"
 app-build-targetSDK = "34"
@@ -65,8 +64,6 @@ auto-fit-text-view = { module = "me.grantland:autofittextview", version.ref = "a
 simple-tools-commons = { module = "com.github.SimpleMobileTools:Simple-Commons", version.ref = "simple-commons" }
 #Exp4j
 exp4j = { module = "net.objecthunter:exp4j", version.ref = "exp4j" }
-#Accompanist
-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
 [bundles]
 compose = [
     "compose-activity",
@@ -87,9 +84,6 @@ compose-preview = [
 room = [
     "androidx-room-ktx",
     "androidx-room-runtime",
-]
-accompanist = [
-    "accompanist-systemuicontroller",
 ]
 lifecycle = [
     "androidx-lifecycle-compose",

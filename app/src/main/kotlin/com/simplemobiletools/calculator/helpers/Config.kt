@@ -37,9 +37,7 @@ class Config(context: Context) : BaseConfig(context) {
         prefs.edit().putString("$CONVERTER_UNITS_PREFIX.${converter.key}", "${topUnit.key},${bottomUnit.key}").apply()
     }
 
-    val preventPhoneFromSleepingFlow: Flow<Boolean> = prefs.run { sharedPreferencesCallback { preventPhoneFromSleeping } }.filterNotNull()
-    val vibrateOnButtonPressFlow: Flow<Boolean> = prefs.run { sharedPreferencesCallback { vibrateOnButtonPress } }.filterNotNull()
-    val wasUseEnglishToggledFlow: Flow<Boolean> = prefs.run { sharedPreferencesCallback { wasUseEnglishToggled } }.filterNotNull()
-    val useEnglishFlow: Flow<Boolean> = prefs.run { sharedPreferencesCallback { useEnglish } }.filterNotNull()
-    val useCommaAsDecimalMarkFlow: Flow<Boolean> = prefs.run { sharedPreferencesCallback { useCommaAsDecimalMark } }.filterNotNull()
+    val preventPhoneFromSleepingFlow: Flow<Boolean> = ::preventPhoneFromSleeping.asFlowNonNull()
+    val vibrateOnButtonPressFlow: Flow<Boolean> = ::vibrateOnButtonPress.asFlowNonNull()
+    val useCommaAsDecimalMarkFlow: Flow<Boolean> = ::useCommaAsDecimalMark.asFlowNonNull()
 }
