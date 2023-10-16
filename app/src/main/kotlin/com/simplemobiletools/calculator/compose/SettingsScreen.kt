@@ -80,7 +80,6 @@ internal fun SettingsScreen(
                     label = stringResource(id = R.string.language),
                     value = displayLanguage,
                     doOnPreferenceClick = onSetupLanguagePress,
-                    preferenceValueColor = MaterialTheme.colorScheme.onSurface,
                 )
             }
             SettingsCheckBoxComponent(
