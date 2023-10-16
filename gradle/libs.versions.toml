@@ -30,8 +30,8 @@ app-build-javaVersion = "VERSION_17"
 app-build-kotlinJVMTarget = "17"
 #versioning
 app-version-appId = "com.simplemobiletools.calculator"
-app-version-versionCode = "60"
-app-version-versionName = "5.11.3"
+app-version-versionCode = "61"
+app-version-versionName = "5.12.0"
 
 [libraries]
 #Android X
