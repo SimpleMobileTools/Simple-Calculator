@@ -33,7 +33,7 @@
     <string name="unit_length_astronomical_unit">Астрономическая единица</string>
     <string name="unit_length_parsec">Парсек</string>
     <string name="unit_length_light_year">Световой год</string>
-    <string name="unit_area">Area</string>
+    <string name="unit_area">Площадь</string>
     <string name="unit_area_square_kilometer">Квадратный километр</string>
     <string name="unit_area_square_meter">Квадратный метр</string>
     <string name="unit_area_square_centimeter">Квадратный сантиметр</string>
@@ -44,7 +44,7 @@
     <string name="unit_area_square_inch">Квадратный дюйм</string>
     <string name="unit_area_acre">Acre</string>
     <string name="unit_area_hectare">Гектар</string>
-    <string name="unit_volume">Volume</string>
+    <string name="unit_volume">Объём</string>
     <string name="unit_volume_cubic_meter">Кубический метр</string>
     <string name="unit_volume_cubic_decimeter">Кубический дециметр</string>
     <string name="unit_volume_cubic_centimeter">Кубический сантиметр</string>
