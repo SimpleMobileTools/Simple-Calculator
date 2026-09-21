@@ -328,12 +328,12 @@ class CalculatorImpl(
 
     private fun showNewResult(value: String) {
         currentResult = value
-        callback!!.showNewResult(value, context)
+        callback?.showNewResult(value, context)
     }
 
     private fun showNewFormula(value: String) {
         previousCalculation = value
-        callback!!.showNewFormula(value, context)
+        callback?.showNewFormula(value, context)
     }
 
     fun handleClear() {
